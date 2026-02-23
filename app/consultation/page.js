@@ -41,10 +41,6 @@ export default function ConsultationPage() {
             <a href={`mailto:${site.email}`} className="btn-outline">이메일</a>
             <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-outline">전화</a>
           </div>
-          <p style={{ marginTop: 24, color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-            또는 기존 상담 신청 폼을 사용하시려면{' '}
-            <a href="https://reumlab.com/consultation/" style={{ color: 'var(--accent-cyan)' }}>정적 페이지</a>를 참고하세요.
-          </p>
         </div>
       </section>
       <footer>
