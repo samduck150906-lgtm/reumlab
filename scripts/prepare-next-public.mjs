@@ -1,6 +1,7 @@
 /**
  * Next.js 빌드 전에 public/에서 Next가 생성할 경로 제거 (덮어쓰기 방지)
- * 유지: assets/, og-default.png, *verification*.html, google*.html, naver*.html, consultation/ (Netlify 폼용 정적 HTML)
+ * 유지: assets/, og-default.png, *verification*.html, google*.html, naver*.html
+ * consultation/ 제거 → app/consultation/ (Next+Netlify 폼) 사용
  */
 import fs from 'fs';
 import path from 'path';
@@ -17,7 +18,7 @@ const removeIfExists = (p) => {
 };
 
 removeIfExists(path.join(publicDir, 'index.html'));
-// consultation/ 유지 → 정적 export 후 out/에 복사되어 Netlify 폼 페이지로 사용
+removeIfExists(path.join(publicDir, 'consultation'));
 removeIfExists(path.join(publicDir, 'vvip'));
 removeIfExists(path.join(publicDir, 'h'));
 removeIfExists(path.join(publicDir, 'l'));

@@ -1,41 +1,84 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
+export default function Nav({ site }) {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-export default function Nav({ site, extraLinks = [] }) {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-  const links = [
-    { href: '/', label: '홈' },
-    ...extraLinks,
-    { href: '/#faq', label: 'FAQ' },
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const closeMobile = () => setMobileOpen(false);
+
+  const navLinks = [
+    { href: '/#services', label: '서비스' },
+    { href: '/#app-portfolio', label: '앱' },
+    { href: '/#web-portfolio', label: '웹' },
+    { href: '/#production', label: '창업 프로덕션' },
+    { href: '/#bootcamp', label: '부트캠프' },
+    { href: '/vvip/', label: 'VVIP 신청' },
+    { href: '/#pricing', label: '가격' },
   ];
 
   return (
     <>
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: 'rgba(13, 6, 18, 0.9)', backdropFilter: 'blur(12px)',
-        padding: '14px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        borderBottom: '1px solid var(--border-subtle)',
-      }}>
-        <Link href="/" className="logo">REUMLAB</Link>
-        <ul className="nav-links main-nav" style={{ listStyle: 'none' }}>
-          {links.map((l) => (
-            <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
-          ))}
-        </ul>
-        {site?.kakao && (
-          <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="contact-btn main-btn">문의하기</a>
-        )}
-        <button type="button" className="hamburger" onClick={() => setOpen(!open)} aria-label="메뉴">
-          <span /><span /><span />
-        </button>
+      <nav className={`nav ${scrolled ? 'scrolled' : ''}`} id="nav">
+        <div className="container">
+          <div className="nav-inner">
+            <Link href="/" className="nav-logo en">
+              <span>REUMLAB</span>
+            </Link>
+            <ul className="nav-links">
+              {navLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href}>{l.label}</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/consultation/" className="nav-cta">
+                  📋 상담 신청
+                </Link>
+              </li>
+            </ul>
+            <button
+              type="button"
+              className="hamburger"
+              onClick={() => setMobileOpen(true)}
+              aria-label="메뉴"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
+        </div>
       </nav>
+
+      <div className={`mobile-menu ${mobileOpen ? 'open' : ''}`} id="mobileMenu">
+        <button
+          type="button"
+          className="mobile-close"
+          onClick={closeMobile}
+          aria-label="닫기"
+        >
+          ✕
+        </button>
+        <Link href="/#services" onClick={closeMobile}>서비스</Link>
+        <Link href="/#app-portfolio" onClick={closeMobile}>앱 포트폴리오</Link>
+        <Link href="/#web-portfolio" onClick={closeMobile}>웹 포트폴리오</Link>
+        <Link href="/#production" onClick={closeMobile}>창업 프로덕션</Link>
+        <Link href="/#bootcamp" onClick={closeMobile}>부트캠프</Link>
+        <Link href="/vvip/" onClick={closeMobile}>VVIP 신청</Link>
+        <Link href="/#pricing" onClick={closeMobile}>가격</Link>
+        <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>
+          📋 상담 신청
+        </Link>
+      </div>
     </>
   );
 }

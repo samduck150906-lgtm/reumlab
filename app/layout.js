@@ -1,4 +1,6 @@
 import './globals.css';
+import Nav from '../components/Nav';
+import { getSite } from '../lib/data';
 
 export const metadata = {
   metadataBase: new URL('https://reumlab.com'),
@@ -15,9 +17,23 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const site = getSite();
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <meta name="theme-color" content="#162b1e" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      </head>
+      <body>
+        <Nav site={site} />
+        {children}
+      </body>
     </html>
   );
 }
