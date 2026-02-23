@@ -1,0 +1,627 @@
+{
+  "app-dev": {
+    "id": "app-dev",
+    "type": "service",
+    "ko": "앱 개발",
+    "slug": "app-dev",
+    "landings": [
+      "app-dev-cost",
+      "app-dev-quote",
+      "app-dev-price",
+      "app-dev-production-cost",
+      "app-dev-dev-cost",
+      "app-dev-quote-inquiry",
+      "app-dev-cost-consult",
+      "app-dev-out-source-cost"
+    ]
+  },
+  "homepage-dev": {
+    "id": "homepage-dev",
+    "type": "service",
+    "ko": "홈페이지 제작",
+    "slug": "homepage-dev",
+    "landings": [
+      "homepage-dev-cost",
+      "homepage-dev-quote",
+      "homepage-dev-price",
+      "homepage-dev-production-cost",
+      "homepage-dev-dev-cost",
+      "homepage-dev-quote-inquiry",
+      "homepage-dev-cost-consult",
+      "homepage-dev-out-source-cost"
+    ]
+  },
+  "web-dev": {
+    "id": "web-dev",
+    "type": "service",
+    "ko": "웹 개발",
+    "slug": "web-dev",
+    "landings": [
+      "web-dev-cost",
+      "web-dev-quote",
+      "web-dev-price",
+      "web-dev-production-cost",
+      "web-dev-dev-cost",
+      "web-dev-quote-inquiry",
+      "web-dev-cost-consult",
+      "web-dev-out-source-cost"
+    ]
+  },
+  "landing-page": {
+    "id": "landing-page",
+    "type": "service",
+    "ko": "랜딩페이지 제작",
+    "slug": "landing-page",
+    "landings": [
+      "landing-page-cost",
+      "landing-page-quote",
+      "landing-page-price",
+      "landing-page-production-cost",
+      "landing-page-dev-cost",
+      "landing-page-quote-inquiry",
+      "landing-page-cost-consult",
+      "landing-page-out-source-cost"
+    ]
+  },
+  "mvp-dev": {
+    "id": "mvp-dev",
+    "type": "service",
+    "ko": "MVP 개발",
+    "slug": "mvp-dev",
+    "landings": [
+      "mvp-dev-cost",
+      "mvp-dev-quote",
+      "mvp-dev-price",
+      "mvp-dev-production-cost",
+      "mvp-dev-dev-cost",
+      "mvp-dev-quote-inquiry",
+      "mvp-dev-cost-consult",
+      "mvp-dev-out-source-cost"
+    ]
+  },
+  "shopping-mall": {
+    "id": "shopping-mall",
+    "type": "service",
+    "ko": "쇼핑몰 제작",
+    "slug": "shopping-mall",
+    "landings": [
+      "shopping-mall-cost",
+      "shopping-mall-quote",
+      "shopping-mall-price",
+      "shopping-mall-production-cost",
+      "shopping-mall-dev-cost",
+      "shopping-mall-quote-inquiry",
+      "shopping-mall-cost-consult",
+      "shopping-mall-out-source-cost"
+    ]
+  },
+  "app-dev-out": {
+    "id": "app-dev-out",
+    "type": "service",
+    "ko": "앱 개발 외주",
+    "slug": "app-dev-out",
+    "landings": [
+      "app-dev-out-cost",
+      "app-dev-out-quote",
+      "app-dev-out-price",
+      "app-dev-out-production-cost",
+      "app-dev-out-dev-cost",
+      "app-dev-out-quote-inquiry",
+      "app-dev-out-cost-consult",
+      "app-dev-out-out-source-cost"
+    ]
+  },
+  "website-dev": {
+    "id": "website-dev",
+    "type": "service",
+    "ko": "웹사이트 제작",
+    "slug": "website-dev",
+    "landings": [
+      "website-dev-cost",
+      "website-dev-quote",
+      "website-dev-price",
+      "website-dev-production-cost",
+      "website-dev-dev-cost",
+      "website-dev-quote-inquiry",
+      "website-dev-cost-consult",
+      "website-dev-out-source-cost"
+    ]
+  },
+  "service-plan": {
+    "id": "service-plan",
+    "type": "service",
+    "ko": "서비스 기획",
+    "slug": "service-plan",
+    "landings": [
+      "service-plan-cost",
+      "service-plan-quote",
+      "service-plan-price",
+      "service-plan-production-cost",
+      "service-plan-dev-cost",
+      "service-plan-quote-inquiry",
+      "service-plan-cost-consult",
+      "service-plan-out-source-cost"
+    ]
+  },
+  "responsive-web": {
+    "id": "responsive-web",
+    "type": "service",
+    "ko": "반응형 웹 제작",
+    "slug": "responsive-web",
+    "landings": [
+      "responsive-web-cost",
+      "responsive-web-quote",
+      "responsive-web-price",
+      "responsive-web-production-cost",
+      "responsive-web-dev-cost",
+      "responsive-web-quote-inquiry",
+      "responsive-web-cost-consult",
+      "responsive-web-out-source-cost"
+    ]
+  },
+  "mobile-app": {
+    "id": "mobile-app",
+    "type": "service",
+    "ko": "모바일 앱 개발",
+    "slug": "mobile-app",
+    "landings": [
+      "mobile-app-cost",
+      "mobile-app-quote",
+      "mobile-app-price",
+      "mobile-app-production-cost",
+      "mobile-app-dev-cost",
+      "mobile-app-quote-inquiry",
+      "mobile-app-cost-consult",
+      "mobile-app-out-source-cost"
+    ]
+  },
+  "web-dev-simple": {
+    "id": "web-dev-simple",
+    "type": "service",
+    "ko": "웹 제작",
+    "slug": "web-dev-simple",
+    "landings": [
+      "web-dev-simple-cost",
+      "web-dev-simple-quote",
+      "web-dev-simple-price",
+      "web-dev-simple-production-cost",
+      "web-dev-simple-dev-cost",
+      "web-dev-simple-quote-inquiry",
+      "web-dev-simple-cost-consult",
+      "web-dev-simple-out-source-cost"
+    ]
+  },
+  "suwon": {
+    "id": "suwon",
+    "type": "region",
+    "ko": "수원",
+    "slug": "suwon",
+    "landings": [
+      "suwon-app-dev",
+      "suwon-homepage-dev",
+      "suwon-web-dev",
+      "suwon-landing-page",
+      "suwon-mvp-dev",
+      "suwon-shopping-mall",
+      "suwon-app-dev-out",
+      "suwon-website-dev",
+      "suwon-app-dev-cost",
+      "suwon-app-dev-quote",
+      "suwon-homepage-dev-cost",
+      "suwon-homepage-dev-quote",
+      "suwon-web-dev-cost",
+      "suwon-web-dev-quote",
+      "suwon-landing-page-cost",
+      "suwon-landing-page-quote"
+    ]
+  },
+  "gangnam": {
+    "id": "gangnam",
+    "type": "region",
+    "ko": "강남",
+    "slug": "gangnam",
+    "landings": [
+      "gangnam-app-dev",
+      "gangnam-homepage-dev",
+      "gangnam-web-dev",
+      "gangnam-landing-page",
+      "gangnam-mvp-dev",
+      "gangnam-shopping-mall",
+      "gangnam-app-dev-out",
+      "gangnam-website-dev",
+      "gangnam-app-dev-cost",
+      "gangnam-app-dev-quote",
+      "gangnam-homepage-dev-cost",
+      "gangnam-homepage-dev-quote",
+      "gangnam-web-dev-cost",
+      "gangnam-web-dev-quote",
+      "gangnam-landing-page-cost",
+      "gangnam-landing-page-quote"
+    ]
+  },
+  "pangyo": {
+    "id": "pangyo",
+    "type": "region",
+    "ko": "판교",
+    "slug": "pangyo",
+    "landings": [
+      "pangyo-app-dev",
+      "pangyo-homepage-dev",
+      "pangyo-web-dev",
+      "pangyo-landing-page",
+      "pangyo-mvp-dev",
+      "pangyo-shopping-mall",
+      "pangyo-app-dev-out",
+      "pangyo-website-dev",
+      "pangyo-app-dev-cost",
+      "pangyo-app-dev-quote",
+      "pangyo-homepage-dev-cost",
+      "pangyo-homepage-dev-quote",
+      "pangyo-web-dev-cost",
+      "pangyo-web-dev-quote",
+      "pangyo-landing-page-cost",
+      "pangyo-landing-page-quote"
+    ]
+  },
+  "bundang": {
+    "id": "bundang",
+    "type": "region",
+    "ko": "분당",
+    "slug": "bundang",
+    "landings": [
+      "bundang-app-dev",
+      "bundang-homepage-dev",
+      "bundang-web-dev",
+      "bundang-landing-page",
+      "bundang-mvp-dev",
+      "bundang-shopping-mall",
+      "bundang-app-dev-out",
+      "bundang-website-dev",
+      "bundang-app-dev-cost",
+      "bundang-app-dev-quote",
+      "bundang-homepage-dev-cost",
+      "bundang-homepage-dev-quote",
+      "bundang-web-dev-cost",
+      "bundang-web-dev-quote",
+      "bundang-landing-page-cost",
+      "bundang-landing-page-quote"
+    ]
+  },
+  "ilsan": {
+    "id": "ilsan",
+    "type": "region",
+    "ko": "일산",
+    "slug": "ilsan",
+    "landings": [
+      "ilsan-app-dev",
+      "ilsan-homepage-dev",
+      "ilsan-web-dev",
+      "ilsan-landing-page",
+      "ilsan-mvp-dev",
+      "ilsan-shopping-mall",
+      "ilsan-app-dev-out",
+      "ilsan-website-dev",
+      "ilsan-app-dev-cost",
+      "ilsan-app-dev-quote",
+      "ilsan-homepage-dev-cost",
+      "ilsan-homepage-dev-quote",
+      "ilsan-web-dev-cost",
+      "ilsan-web-dev-quote",
+      "ilsan-landing-page-cost",
+      "ilsan-landing-page-quote"
+    ]
+  },
+  "bucheon": {
+    "id": "bucheon",
+    "type": "region",
+    "ko": "부천",
+    "slug": "bucheon",
+    "landings": [
+      "bucheon-app-dev",
+      "bucheon-homepage-dev",
+      "bucheon-web-dev",
+      "bucheon-landing-page",
+      "bucheon-mvp-dev",
+      "bucheon-shopping-mall",
+      "bucheon-app-dev-out",
+      "bucheon-website-dev",
+      "bucheon-app-dev-cost",
+      "bucheon-app-dev-quote",
+      "bucheon-homepage-dev-cost",
+      "bucheon-homepage-dev-quote",
+      "bucheon-web-dev-cost",
+      "bucheon-web-dev-quote",
+      "bucheon-landing-page-cost",
+      "bucheon-landing-page-quote"
+    ]
+  },
+  "anyang": {
+    "id": "anyang",
+    "type": "region",
+    "ko": "안양",
+    "slug": "anyang",
+    "landings": [
+      "anyang-app-dev",
+      "anyang-homepage-dev",
+      "anyang-web-dev",
+      "anyang-landing-page",
+      "anyang-mvp-dev",
+      "anyang-shopping-mall",
+      "anyang-app-dev-out",
+      "anyang-website-dev",
+      "anyang-app-dev-cost",
+      "anyang-app-dev-quote",
+      "anyang-homepage-dev-cost",
+      "anyang-homepage-dev-quote",
+      "anyang-web-dev-cost",
+      "anyang-web-dev-quote",
+      "anyang-landing-page-cost",
+      "anyang-landing-page-quote"
+    ]
+  },
+  "seongnam": {
+    "id": "seongnam",
+    "type": "region",
+    "ko": "성남",
+    "slug": "seongnam",
+    "landings": [
+      "seongnam-app-dev",
+      "seongnam-homepage-dev",
+      "seongnam-web-dev",
+      "seongnam-landing-page",
+      "seongnam-mvp-dev",
+      "seongnam-shopping-mall",
+      "seongnam-app-dev-out",
+      "seongnam-website-dev",
+      "seongnam-app-dev-cost",
+      "seongnam-app-dev-quote",
+      "seongnam-homepage-dev-cost",
+      "seongnam-homepage-dev-quote",
+      "seongnam-web-dev-cost",
+      "seongnam-web-dev-quote",
+      "seongnam-landing-page-cost",
+      "seongnam-landing-page-quote"
+    ]
+  },
+  "yongin": {
+    "id": "yongin",
+    "type": "region",
+    "ko": "용인",
+    "slug": "yongin",
+    "landings": [
+      "yongin-app-dev",
+      "yongin-homepage-dev",
+      "yongin-web-dev",
+      "yongin-landing-page",
+      "yongin-mvp-dev",
+      "yongin-shopping-mall",
+      "yongin-app-dev-out",
+      "yongin-website-dev",
+      "yongin-app-dev-cost",
+      "yongin-app-dev-quote",
+      "yongin-homepage-dev-cost",
+      "yongin-homepage-dev-quote",
+      "yongin-web-dev-cost",
+      "yongin-web-dev-quote",
+      "yongin-landing-page-cost",
+      "yongin-landing-page-quote"
+    ]
+  },
+  "incheon": {
+    "id": "incheon",
+    "type": "region",
+    "ko": "인천",
+    "slug": "incheon",
+    "landings": [
+      "incheon-app-dev",
+      "incheon-homepage-dev",
+      "incheon-web-dev",
+      "incheon-landing-page",
+      "incheon-mvp-dev",
+      "incheon-shopping-mall",
+      "incheon-app-dev-out",
+      "incheon-website-dev",
+      "incheon-app-dev-cost",
+      "incheon-app-dev-quote",
+      "incheon-homepage-dev-cost",
+      "incheon-homepage-dev-quote",
+      "incheon-web-dev-cost",
+      "incheon-web-dev-quote",
+      "incheon-landing-page-cost",
+      "incheon-landing-page-quote"
+    ]
+  },
+  "startup": {
+    "id": "startup",
+    "type": "industry",
+    "ko": "스타트업",
+    "slug": "startup",
+    "landings": [
+      "startup-app-dev",
+      "startup-homepage-dev",
+      "startup-web-dev",
+      "startup-landing-page",
+      "startup-mvp-dev",
+      "startup-shopping-mall",
+      "startup-app-dev-out",
+      "startup-website-dev"
+    ]
+  },
+  "cafe": {
+    "id": "cafe",
+    "type": "industry",
+    "ko": "카페",
+    "slug": "cafe",
+    "landings": [
+      "cafe-app-dev",
+      "cafe-homepage-dev",
+      "cafe-web-dev",
+      "cafe-landing-page",
+      "cafe-mvp-dev",
+      "cafe-shopping-mall",
+      "cafe-app-dev-out",
+      "cafe-website-dev"
+    ]
+  },
+  "restaurant": {
+    "id": "restaurant",
+    "type": "industry",
+    "ko": "식당",
+    "slug": "restaurant",
+    "landings": [
+      "restaurant-app-dev",
+      "restaurant-homepage-dev",
+      "restaurant-web-dev",
+      "restaurant-landing-page",
+      "restaurant-mvp-dev",
+      "restaurant-shopping-mall",
+      "restaurant-app-dev-out",
+      "restaurant-website-dev"
+    ]
+  },
+  "academy": {
+    "id": "academy",
+    "type": "industry",
+    "ko": "학원",
+    "slug": "academy",
+    "landings": [
+      "academy-app-dev",
+      "academy-homepage-dev",
+      "academy-web-dev",
+      "academy-landing-page",
+      "academy-mvp-dev",
+      "academy-shopping-mall",
+      "academy-app-dev-out",
+      "academy-website-dev"
+    ]
+  },
+  "hospital": {
+    "id": "hospital",
+    "type": "industry",
+    "ko": "병원",
+    "slug": "hospital",
+    "landings": [
+      "hospital-app-dev",
+      "hospital-homepage-dev",
+      "hospital-web-dev",
+      "hospital-landing-page",
+      "hospital-mvp-dev",
+      "hospital-shopping-mall",
+      "hospital-app-dev-out",
+      "hospital-website-dev"
+    ]
+  },
+  "shopping": {
+    "id": "shopping",
+    "type": "industry",
+    "ko": "쇼핑몰",
+    "slug": "shopping",
+    "landings": [
+      "shopping-app-dev",
+      "shopping-homepage-dev",
+      "shopping-web-dev",
+      "shopping-landing-page",
+      "shopping-mvp-dev",
+      "shopping-shopping-mall",
+      "shopping-app-dev-out",
+      "shopping-website-dev"
+    ]
+  },
+  "realestate": {
+    "id": "realestate",
+    "type": "industry",
+    "ko": "부동산",
+    "slug": "realestate",
+    "landings": [
+      "realestate-app-dev",
+      "realestate-homepage-dev",
+      "realestate-web-dev",
+      "realestate-landing-page",
+      "realestate-mvp-dev",
+      "realestate-shopping-mall",
+      "realestate-app-dev-out",
+      "realestate-website-dev"
+    ]
+  },
+  "gym": {
+    "id": "gym",
+    "type": "industry",
+    "ko": "헬스장",
+    "slug": "gym",
+    "landings": [
+      "gym-app-dev",
+      "gym-homepage-dev",
+      "gym-web-dev",
+      "gym-landing-page",
+      "gym-mvp-dev",
+      "gym-shopping-mall",
+      "gym-app-dev-out",
+      "gym-website-dev"
+    ]
+  },
+  "lodging": {
+    "id": "lodging",
+    "type": "industry",
+    "ko": "숙박",
+    "slug": "lodging",
+    "landings": [
+      "lodging-app-dev",
+      "lodging-homepage-dev",
+      "lodging-web-dev",
+      "lodging-landing-page",
+      "lodging-mvp-dev",
+      "lodging-shopping-mall",
+      "lodging-app-dev-out",
+      "lodging-website-dev"
+    ]
+  },
+  "app-dev-cost": {
+    "id": "app-dev-cost",
+    "type": "composite",
+    "ko": "앱개발 비용",
+    "slug": "app-dev-cost",
+    "landings": []
+  },
+  "homepage-quote": {
+    "id": "homepage-quote",
+    "type": "composite",
+    "ko": "홈페이지제작 견적",
+    "slug": "homepage-quote",
+    "landings": []
+  },
+  "web-dev-cost": {
+    "id": "web-dev-cost",
+    "type": "composite",
+    "ko": "웹개발 비용",
+    "slug": "web-dev-cost",
+    "landings": []
+  },
+  "landing-page-cost": {
+    "id": "landing-page-cost",
+    "type": "composite",
+    "ko": "랜딩페이지 제작비",
+    "slug": "landing-page-cost",
+    "landings": []
+  },
+  "suwon-app-dev": {
+    "id": "suwon-app-dev",
+    "type": "composite",
+    "ko": "수원 앱개발",
+    "slug": "suwon-app-dev",
+    "landings": []
+  },
+  "gangnam-homepage": {
+    "id": "gangnam-homepage",
+    "type": "composite",
+    "ko": "강남 홈페이지제작",
+    "slug": "gangnam-homepage",
+    "landings": []
+  },
+  "startup-app-dev": {
+    "id": "startup-app-dev",
+    "type": "composite",
+    "ko": "스타트업 앱개발",
+    "slug": "startup-app-dev",
+    "landings": []
+  }
+}

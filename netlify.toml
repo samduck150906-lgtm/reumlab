@@ -1,0 +1,4 @@
+# reumlab.netlify.app 배포 설정 (SEO 랜딩 시스템)
+[build]
+  command = "npm run build"
+  publish = "public"
