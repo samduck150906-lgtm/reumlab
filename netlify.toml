@@ -1,4 +1,4 @@
-# reumlab.netlify.app 배포 설정 (SEO 랜딩 시스템)
+# Next.js 정적 내보내기 → out/ 배포
 [build]
   command = "npm run build"
-  publish = "public"
+  publish = "out"
