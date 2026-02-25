@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
     title: 'AI 앱 부트캠프',
     description: '문과 학점 2.8, 코딩 1도 모르는 비전공자가 AI만으로 대기업 경력직 서류 합격. 4주 만에 나만의 앱을 완성하는 소수정예 그룹과외. 1기 모집중.',
     openGraph: {
-      title: 'AI 앱 부트캠프 | 럼랩 REUMLAB',
+      title: 'AI 앱 부트캠프 | 름랩 REUMLAB',
       description: '코딩 몰라도 4주만에 내 앱 완성. 대표가 직접 진행하는 소수정예 온라인 그룹과외.',
       url,
       images: ['/og-default.png'],
