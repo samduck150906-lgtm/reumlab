@@ -887,7 +887,7 @@ export default function HomePage({ site }) {
       <footer className="footer">
         <div className="container">
           <p className="footer-info">
-            사업자명: {site?.company || '이터널식스'} <span>|</span> 사업자등록번호: 303-28-65658 <span>|</span> 대표: 성아름 <span>|</span> 주소: 경기도 수원시 영통구 삼성로 186 4층 <span>|</span> 이메일: <a href={`mailto:${site?.email || 'ceo@eternalsix.com'}`} style={{ color: 'var(--text-dim)' }}>{site?.email || 'ceo@eternalsix.com'}</a>
+            사업자명: {site?.company || '이터널식스'} <span>|</span> 사업자등록번호: 303-28-65658 <span>|</span> 대표: 성아름 <span>|</span> 주소: 경기도 수원시 영통구 삼성로 186 4층 <span>|</span> 이메일: <a href={`mailto:${site?.email || 'ceo@eternalsix'}`} style={{ color: 'var(--text-dim)' }}>{site?.email || 'ceo@eternalsix'}</a>
           </p>
         </div>
       </footer>

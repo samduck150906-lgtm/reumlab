@@ -278,7 +278,7 @@ export default function BootcampLanding({ kakaoUrl }) {
             사업자명: 이터널식스 | 사업자등록번호: 303-28-65658 | 대표: 성아름
             <br />
             주소: 경기도 수원시 영통구 삼성로 186 4층 | 이메일:{' '}
-            <a href="mailto:cori@eternalsix.kr">cori@eternalsix.kr</a>
+            <a href="mailto:ceo@eternalsix">ceo@eternalsix</a>
             <br />
             <br />
             © 2026 이터널식스 (REUMLAB). All Rights Reserved.
