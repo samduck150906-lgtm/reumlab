@@ -20,7 +20,7 @@ export default function Nav({ site }) {
     { href: '/#app-portfolio', label: '앱' },
     { href: '/#web-portfolio', label: '웹' },
     { href: '/#production', label: '창업 프로덕션' },
-    { href: '/#bootcamp', label: '부트캠프' },
+    { href: '/bootcamp/', label: '부트캠프' },
     { href: '/vvip/', label: 'VVIP 신청' },
     { href: '/#pricing', label: '가격' },
   ];
@@ -72,7 +72,7 @@ export default function Nav({ site }) {
         <Link href="/#app-portfolio" onClick={closeMobile}>앱 포트폴리오</Link>
         <Link href="/#web-portfolio" onClick={closeMobile}>웹 포트폴리오</Link>
         <Link href="/#production" onClick={closeMobile}>창업 프로덕션</Link>
-        <Link href="/#bootcamp" onClick={closeMobile}>부트캠프</Link>
+        <Link href="/bootcamp/" onClick={closeMobile}>부트캠프</Link>
         <Link href="/vvip/" onClick={closeMobile}>VVIP 신청</Link>
         <Link href="/#pricing" onClick={closeMobile}>가격</Link>
         <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>

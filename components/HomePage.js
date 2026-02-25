@@ -112,7 +112,7 @@ export default function HomePage({ site }) {
               <li><a href="#app-portfolio">앱</a></li>
               <li><a href="#web-portfolio">웹</a></li>
               <li><a href="#production">창업 프로덕션</a></li>
-              <li><a href="#bootcamp">부트캠프</a></li>
+              <li><a href="/bootcamp/">부트캠프</a></li>
               <li><Link href="/vvip/">VVIP 신청</Link></li>
               <li><a href="#pricing">가격</a></li>
               <li><Link href="/consultation/" className="nav-cta">📋 상담 신청</Link></li>
@@ -130,7 +130,7 @@ export default function HomePage({ site }) {
         <a href="#app-portfolio" onClick={closeMobile}>앱 포트폴리오</a>
         <a href="#web-portfolio" onClick={closeMobile}>웹 포트폴리오</a>
         <a href="#production" onClick={closeMobile}>창업 프로덕션</a>
-        <a href="#bootcamp" onClick={closeMobile}>부트캠프</a>
+        <a href="/bootcamp/" onClick={closeMobile}>부트캠프</a>
         <Link href="/vvip/" onClick={closeMobile}>VVIP 신청</Link>
         <a href="#pricing" onClick={closeMobile}>가격</a>
         <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>📋 상담 신청</Link>
@@ -712,7 +712,10 @@ export default function HomePage({ site }) {
                 <li>커뮤니티 참여권</li>
                 <li>부트캠프 수강자 외주 10% 할인</li>
               </ul>
-              <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ marginTop: 24, fontSize: 14, padding: '14px 28px' }}>부트캠프 상담 →</a>
+              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
+                <Link href="/bootcamp/" className="btn-primary" style={{ fontSize: 14, padding: '14px 28px' }}>부트캠프 상세 보기 →</Link>
+                <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-light" style={{ fontSize: 14, padding: '14px 28px' }}>카카오톡 상담</a>
+              </div>
             </div>
           </div>
         </div>

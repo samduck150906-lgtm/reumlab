@@ -8,6 +8,7 @@ export default function sitemap() {
     { url: BASE + '/', lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: BASE + '/consultation/', lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: BASE + '/vvip/', lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+    { url: BASE + '/bootcamp/ai-app/', lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     ...Object.keys(getClusters()).map((hubSlug) => ({
       url: `${BASE}/h/${hubSlug}/`,
       lastModified: now,
