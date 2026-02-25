@@ -119,7 +119,7 @@ function landingHtml(landing) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '럼랩', item: BASE + '/' },
+      { '@type': 'ListItem', position: 1, name: '름랩', item: BASE + '/' },
       { '@type': 'ListItem', position: 2, name: landing.keyword, item: url },
     ],
   };
@@ -280,7 +280,7 @@ function landingHtml(landing) {
     </ul>
     <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="contact-btn drawer-btn" data-cta="kakao">문의하기</a>
   </aside>
-  <p class="breadcrumb"><a href="${BASE}/">럼랩</a> &gt; ${escapeHtml(landing.keyword)}</p>
+  <p class="breadcrumb"><a href="${BASE}/">름랩</a> &gt; ${escapeHtml(landing.keyword)}</p>
   <section class="hero">
     <div class="hero-inner">
       <span class="hero-tag">${escapeHtml(landing.keyword)}</span>

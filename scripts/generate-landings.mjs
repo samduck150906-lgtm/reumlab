@@ -70,8 +70,8 @@ function buildServiceIntentLandings() {
       list.push({
         slug,
         keyword,
-        title: `${keyword} | 럼랩 REUMLAB`,
-        description: `${keyword} 문의하세요. ${svc.koFull} 견적·상담 - 이터널식스 럼랩.`,
+        title: `${keyword} | 름랩 REUMLAB`,
+        description: `${keyword} 문의하세요. ${svc.koFull} 견적·상담 - 이터널식스 름랩.`,
         pattern: 'service_intent',
         serviceKey: svc.key,
         intentKey: intent.key,
@@ -93,8 +93,8 @@ function buildRegionServiceLandings() {
       list.push({
         slug,
         keyword,
-        title: `${keyword} | 럼랩 REUMLAB`,
-        description: `${region.ko} ${svc.koFull} 견적·외주 - 럼랩. 원격 진행 가능.`,
+        title: `${keyword} | 름랩 REUMLAB`,
+        description: `${region.ko} ${svc.koFull} 견적·외주 - 름랩. 원격 진행 가능.`,
         pattern: 'region_service',
         regionKey: region.key,
         serviceKey: svc.key,
@@ -116,7 +116,7 @@ function buildIndustryServiceLandings() {
       list.push({
         slug,
         keyword,
-        title: `${keyword} | 럼랩 REUMLAB`,
+        title: `${keyword} | 름랩 REUMLAB`,
         description: `${ind.ko} ${svc.koFull} - ${ind.desc || ''} 견적 문의.`,
         pattern: 'industry_service',
         industryKey: ind.key,
@@ -141,8 +141,8 @@ function buildRegionServiceIntentLandings() {
         list.push({
           slug,
           keyword,
-          title: `${keyword} | 럼랩 REUMLAB`,
-          description: `${region.ko} ${svc.koFull} ${intent.ko} - 럼랩 견적 상담.`,
+          title: `${keyword} | 름랩 REUMLAB`,
+          description: `${region.ko} ${svc.koFull} ${intent.ko} - 름랩 견적 상담.`,
           pattern: 'region_service_intent',
           regionKey: region.key,
           serviceKey: svc.key,

@@ -12,7 +12,7 @@ export default function HubPage({ hubSlug }) {
 
   return (
     <>
-      <p className="breadcrumb"><Link href="/">럼랩</Link> &gt; {hub.ko}</p>
+      <p className="breadcrumb"><Link href="/">름랩</Link> &gt; {hub.ko}</p>
       <section className="hero">
         <div className="hero-inner">
           <h1><span className="g">{hub.ko}</span></h1>

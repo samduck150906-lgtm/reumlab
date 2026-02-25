@@ -3,11 +3,11 @@ import { getSite } from '../../lib/data';
 import ConsultationForm from '../../components/ConsultationForm';
 
 export const metadata = {
-  title: '상담 신청 | 럼랩 REUMLAB',
-  description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 럼랩 REUMLAB.',
+  title: '상담 신청 | 름랩 REUMLAB',
+  description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 름랩 REUMLAB.',
   openGraph: {
-    title: '상담 신청 | 럼랩 REUMLAB',
-    description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 럼랩 REUMLAB.',
+    title: '상담 신청 | 름랩 REUMLAB',
+    description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 름랩 REUMLAB.',
     url: 'https://reumlab.com/consultation/',
     images: ['/og-default.png'],
   },

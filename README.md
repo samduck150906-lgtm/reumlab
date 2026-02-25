@@ -1,4 +1,4 @@
-# 럼랩 REUMLAB — SEO 키워드 랜딩 자동생성 시스템
+# 름랩 REUMLAB — SEO 키워드 랜딩 자동생성 시스템
 
 앱·웹 개발 외주 키워드 랜딩 **328개** + 허브 **38개**를 자동 생성하고,  
 네이버·구글 검색에서 자연 유입을 극대화하는 시스템입니다.
@@ -26,7 +26,7 @@
 ```
 reumlab-main/
 ├── content/
-│   ├── templates.json      # 럼랩 기본 데이터 (서비스/가격/FAQ/후기)
+│   ├── templates.json      # 름랩 기본 데이터 (서비스/가격/FAQ/후기)
 │   ├── landings.json       # [자동생성] 328개 랜딩 데이터
 │   └── clusters.json       # [자동생성] 38개 허브-랜딩 클러스터 매핑
 ├── scripts/
@@ -37,12 +37,12 @@ reumlab-main/
 │   ├── generate-sitemaps.mjs    # sitemap.xml (367개 URL)
 │   └── generate-robots.mjs     # robots.txt
 ├── public/                      # [자동생성] Netlify에서 서빙하는 폴더
-│   ├── index.html               # 메인 럼랩 사이트
+│   ├── index.html               # 메인 름랩 사이트
 │   ├── l/{slug}/index.html     # 키워드 랜딩 328개
 │   ├── h/{hub}/index.html      # 허브 페이지 38개
 │   ├── sitemap.xml
 │   └── robots.txt
-├── index.html                   # 기존 럼랩 메인 페이지 원본
+├── index.html                   # 기존 름랩 메인 페이지 원본
 ├── netlify.toml                 # Netlify 빌드·배포 설정
 ├── package.json
 └── README.md

@@ -32,14 +32,14 @@ function escapeHtml(s) {
 function hubHtml(hubSlug, hub) {
   const url = `${BASE}/h/${hubSlug}/`;
   const hubLandings = (hub.landings || []).slice(0, 50);
-  const bodyTemplate = hubBodyTemplates[hub.type] || hubBodyTemplates.service || '럼랩은 앱·웹·기획 외주를 진행합니다. 견적·상담은 카카오톡·이메일·전화로 문의해 주세요.';
+  const bodyTemplate = hubBodyTemplates[hub.type] || hubBodyTemplates.service || '름랩은 앱·웹·기획 외주를 진행합니다. 견적·상담은 카카오톡·이메일·전화로 문의해 주세요.';
   const hubBody = bodyTemplate.replace(/\s+/g, ' ').trim();
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: '럼랩', item: BASE + '/' },
+      { '@type': 'ListItem', position: 1, name: '름랩', item: BASE + '/' },
       { '@type': 'ListItem', position: 2, name: hub.ko, item: url },
     ],
   };
@@ -49,10 +49,10 @@ function hubHtml(hubSlug, hub) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${escapeHtml(hub.ko)} | 럼랩 REUMLAB</title>
-  <meta name="description" content="${escapeHtml(hub.ko)} 견적·외주 - 럼랩 앱·웹 개발. 키워드별 상담 페이지 모음.">
-  <meta property="og:title" content="${escapeHtml(hub.ko)} | 럼랩 REUMLAB">
-  <meta property="og:description" content="${escapeHtml(hub.ko)} 견적·외주 - 럼랩 앱·웹 개발. 키워드별 상담 페이지 모음.">
+  <title>${escapeHtml(hub.ko)} | 름랩 REUMLAB</title>
+  <meta name="description" content="${escapeHtml(hub.ko)} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.">
+  <meta property="og:title" content="${escapeHtml(hub.ko)} | 름랩 REUMLAB">
+  <meta property="og:description" content="${escapeHtml(hub.ko)} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.">
   <meta property="og:url" content="${url}">
   ${OG_IMAGE ? `<meta property="og:image" content="${escapeHtml(OG_IMAGE)}">` : ''}
   <link rel="canonical" href="${url}">
@@ -120,7 +120,7 @@ function hubHtml(hubSlug, hub) {
     </ul>
     <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="contact-btn">문의하기</a>
   </nav>
-  <p class="breadcrumb"><a href="${BASE}/">럼랩</a> &gt; ${escapeHtml(hub.ko)}</p>
+  <p class="breadcrumb"><a href="${BASE}/">름랩</a> &gt; ${escapeHtml(hub.ko)}</p>
   <section class="hero">
     <div class="hero-inner">
       <h1><span class="g">${escapeHtml(hub.ko)}</span></h1>

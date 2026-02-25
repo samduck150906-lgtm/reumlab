@@ -3,10 +3,10 @@ import { getSite } from '../../lib/data';
 import VvipForm from '../../components/VvipForm';
 
 export const metadata = {
-  title: 'VVIP 1:1 AI 컨설팅 신청 | 럼랩 REUMLAB',
+  title: 'VVIP 1:1 AI 컨설팅 신청 | 름랩 REUMLAB',
   description: '대표님의 사업에 맞춤 AI 전략을 설계하고 함께 실행합니다. 교육공학 석사 + 12년 교육 경력의 1:1 VVIP 컨설팅.',
   openGraph: {
-    title: 'VVIP 1:1 AI 컨설팅 신청 | 럼랩 REUMLAB',
+    title: 'VVIP 1:1 AI 컨설팅 신청 | 름랩 REUMLAB',
     description: 'AI를 도입이 아닌 내재화하도록. 맞춤 AI 전략 설계와 핸즈온 실행을 함께합니다.',
     url: 'https://reumlab.com/vvip/',
     images: ['/og-default.png'],
@@ -117,7 +117,7 @@ export default function VvipPage() {
       <section className="trust">
         <div className="container">
           <div className="trust-center">
-            <h2 className="trust-title">왜 럼랩인가</h2>
+            <h2 className="trust-title">왜 름랩인가</h2>
             <p className="trust-sub">실무 경험과 교육 전문성이 결합된 컨설팅</p>
           </div>
           <div className="trust-grid">

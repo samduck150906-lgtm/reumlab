@@ -19,7 +19,7 @@ export default function LandingPage({ slug }) {
 
   return (
     <>
-      <p className="breadcrumb"><Link href="/">럼랩</Link> &gt; {landing.keyword}</p>
+      <p className="breadcrumb"><Link href="/">름랩</Link> &gt; {landing.keyword}</p>
       <section className="hero">
         <div className="hero-inner">
           <span className="hero-tag">{landing.keyword}</span>

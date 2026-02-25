@@ -11,9 +11,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const hub = getHubBySlug(params.hubSlug);
-  if (!hub) return { title: '럼랩 REUMLAB' };
-  const title = `${hub.ko} | 럼랩 REUMLAB`;
-  const description = `${hub.ko} 견적·외주 - 럼랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
+  if (!hub) return { title: '름랩 REUMLAB' };
+  const title = `${hub.ko} | 름랩 REUMLAB`;
+  const description = `${hub.ko} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
   const url = `${BASE}/h/${params.hubSlug}/`;
   return {
     title,
