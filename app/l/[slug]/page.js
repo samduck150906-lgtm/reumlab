@@ -33,19 +33,16 @@ export default function LandingRoute({ params }) {
 
   return (
     <>
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-        background: 'rgba(13, 6, 18, 0.9)', backdropFilter: 'blur(12px)',
-        padding: '14px 5%', display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        borderBottom: '1px solid var(--border-subtle)',
-      }}>
-        <Link href="/" className="logo">REUMLAB</Link>
-        <ul className="nav-links">
-          <li><Link href="/">홈</Link></li>
-          <li><Link href={`/h/${landing.hubId}/`}>더보기</Link></li>
-          <li><Link href="/#faq">FAQ</Link></li>
-        </ul>
-        <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="contact-btn">문의하기</a>
+      <nav className="dynamic-nav">
+        <div className="dynamic-nav-inner">
+          <Link href="/" className="logo">REUMLAB</Link>
+          <ul className="nav-links">
+            <li><Link href="/">홈</Link></li>
+            <li><Link href={`/h/${landing.hubId}/`}>더보기</Link></li>
+            <li><Link href="/#faq">FAQ</Link></li>
+          </ul>
+          <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="contact-btn">문의하기</a>
+        </div>
       </nav>
       <LandingPage slug={params.slug} />
     </>

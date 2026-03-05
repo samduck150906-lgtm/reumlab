@@ -18,7 +18,7 @@ export default function LandingPage({ slug }) {
   const pricingSnippet = getPricingSnippet(landing);
 
   return (
-    <>
+    <div className="dynamic-page">
       <p className="breadcrumb"><Link href="/">름랩</Link> &gt; {landing.keyword}</p>
       <section className="hero">
         <div className="hero-inner">
@@ -86,6 +86,6 @@ export default function LandingPage({ slug }) {
           <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

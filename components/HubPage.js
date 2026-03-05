@@ -11,17 +11,20 @@ export default function HubPage({ hubSlug }) {
   const landings = (hub.landings || []).slice(0, 50);
 
   return (
-    <>
+    <div className="dynamic-page">
       <p className="breadcrumb"><Link href="/">름랩</Link> &gt; {hub.ko}</p>
       <section className="hero">
         <div className="hero-inner">
           <h1><span className="g">{hub.ko}</span></h1>
-          <p className="hero-desc">관련 키워드 랜딩에서 견적·상담을 받아 보세요.</p>
+          <p className="hero-desc">
+            {bodyText || '관련 키워드 랜딩에서 견적·상담을 받아 보세요.'}
+          </p>
         </div>
       </section>
-      <section>
+      <section className="sec sec-warm">
         <div className="section-inner">
-          <h2 className="section-title">관련 페이지</h2>
+          <span className="section-tag">키워드별 상담</span>
+          <h2 className="section-title">{hub.ko} 관련 견적·상담 페이지</h2>
           <div className="link-grid">
             {landings.map((slug) => (
               <Link key={slug} href={`/l/${slug}/`}>{getKeywordBySlug(slug)}</Link>
@@ -30,12 +33,23 @@ export default function HubPage({ hubSlug }) {
         </div>
       </section>
       <section className="cta">
-        <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="btn-primary">카카오톡 상담</a>
-        <Link href="/" className="btn-outline" style={{ marginLeft: 8 }}>메인으로</Link>
+        <div className="section-inner">
+          <h2>{hub.ko} 견적 문의</h2>
+          <p className="hero-desc">카카오톡으로 편하게 상담받아 보세요.</p>
+          <div className="cta-buttons">
+            <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="btn-primary">카카오톡 상담</a>
+            <Link href="/" className="btn-outline">메인으로</Link>
+          </div>
+        </div>
       </section>
       <footer>
         <p>© 2026 {site.company} (REUMLAB). All Rights Reserved.</p>
+        <div className="footer-links">
+          <a href={`mailto:${site.email}`}>이메일</a>
+          <a href={`tel:${site.tel}`}>전화</a>
+          <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a>
+        </div>
       </footer>
-    </>
+    </div>
   );
 }
