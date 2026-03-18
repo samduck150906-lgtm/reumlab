@@ -61,6 +61,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         <meta name="theme-color" content="#162b1e" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="름랩 REUMLAB RSS"
+          href={`${SITE.domain}/feed.xml`}
+        />
       </head>
       <body>
         <Nav site={site} />

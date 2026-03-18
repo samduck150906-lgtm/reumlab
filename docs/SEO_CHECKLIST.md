@@ -5,6 +5,7 @@
 - [ ] JSON-LD: 홈·서비스 URL·포트폴리오에 Organization + Breadcrumb 적용됨
 - [ ] `.env.local`에 `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`, `NEXT_PUBLIC_NAVER_SITE_VERIFICATION` 설정
 - [ ] Search Console / 네이버 서치어드바이저에 `sitemap.xml` 제출
+- [ ] (선택) RSS: `https://reumlab.com/feed.xml` — 빌드 시 `scripts/generate-feed.mjs`로 생성
 - [ ] 모바일 속도·Core Web Vitals 점검
 
 ## 라우트 요약

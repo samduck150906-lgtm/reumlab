@@ -6,7 +6,8 @@
   "scripts": {
     "prebuild": "node scripts/generate-landings.mjs",
     "dev": "next dev",
-    "build": "npm run prebuild && node scripts/prepare-next-public.mjs && next build",
+    "gen:feed": "node scripts/generate-feed.mjs",
+    "build": "npm run prebuild && node scripts/generate-feed.mjs && node scripts/prepare-next-public.mjs && next build",
     "start": "next start",
     "gen:landings": "node scripts/generate-landings.mjs",
     "build:legacy": "npm run prebuild && npm run build:hubs && npm run build:landings && npm run copy:main && npm run gen:sitemaps && npm run gen:robots",
