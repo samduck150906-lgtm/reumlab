@@ -23,6 +23,6 @@
 - [ ] **웹 페이지 수집 요청** — [요청] → [웹 페이지 수집]에 각각 제출  
   - `https://reumlab.com/` (메인 설명 변경 시 필수)  
   - `https://reumlab.com/솔루션SaaS/` (신규 전략 페이지)
-- [ ] **구 URL 리다이렉트** — 예전 `/AI서비스개발/` 링크는 `/솔루션SaaS/`로 이동  
-  - 정적 배포: `public/AI서비스개발/index.html`, `public/_redirects`  
-  - Node 호스팅 시: `next.config.mjs`의 `redirects`도 설정됨
+- [ ] **구 URL 리다이렉트** — 예전 `/AI서비스개발/` → `/솔루션SaaS/`  
+  - **정적 export(현재)**: `public/AI서비스개발/index.html`(canonical+즉시 이동), Netlify 등은 `public/_redirects`  
+  - **Node 서버 배포 시**: `next.config.mjs` 상단 주석의 `redirects` 예시를 복사해 활성화
