@@ -4,10 +4,10 @@ import ConsultationForm from '../../components/ConsultationForm';
 
 export const metadata = {
   title: '상담 신청 | 름랩 REUMLAB',
-  description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 름랩 REUMLAB.',
+  description: '앱·웹 개발 상담 신청. 프로젝트 견적·일정 문의 - 름랩 REUMLAB.',
   openGraph: {
     title: '상담 신청 | 름랩 REUMLAB',
-    description: 'AI 전략 가능성 진단 및 맞춤 상담 신청. 앱·웹 제작, VVIP 컨설팅 문의 - 름랩 REUMLAB.',
+    description: '앱·웹 개발 상담 신청. 프로젝트 견적·일정 문의 - 름랩 REUMLAB.',
     url: 'https://reumlab.com/consultation/',
     images: ['/og-default.png'],
   },
@@ -27,7 +27,6 @@ export default function ConsultationPage() {
             </Link>
             <ul className="nav-links">
               <li><Link href="/">홈</Link></li>
-              <li><Link href="/vvip/">VVIP</Link></li>
               <li><Link href="/#faq">FAQ</Link></li>
               <li><a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a></li>
               <li><Link href="/consultation/" className="nav-cta">📋 상담 신청</Link></li>
@@ -43,7 +42,7 @@ export default function ConsultationPage() {
               <span className="gradient-text">상담 신청</span>
             </h1>
             <p className="hero-sub">
-              AI 전략 가능성 진단 및 맞춤 상담을 위해 내용을 남겨 주시면 빠르게 연락드립니다.
+              앱·웹 개발 문의를 남겨 주시면 빠르게 연락드립니다.
             </p>
           </div>
         </div>

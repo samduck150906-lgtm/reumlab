@@ -111,9 +111,6 @@ export default function HomePage({ site }) {
               <li><a href="#services">서비스</a></li>
               <li><a href="#app-portfolio">앱</a></li>
               <li><a href="#web-portfolio">웹</a></li>
-              <li><a href="#production">창업 프로덕션</a></li>
-              <li><a href="/bootcamp/">부트캠프</a></li>
-              <li><Link href="/vvip/">VVIP 신청</Link></li>
               <li><a href="#pricing">가격</a></li>
               <li><Link href="/consultation/" className="nav-cta">📋 상담 신청</Link></li>
             </ul>
@@ -129,9 +126,6 @@ export default function HomePage({ site }) {
         <a href="#services" onClick={closeMobile}>서비스</a>
         <a href="#app-portfolio" onClick={closeMobile}>앱 포트폴리오</a>
         <a href="#web-portfolio" onClick={closeMobile}>웹 포트폴리오</a>
-        <a href="#production" onClick={closeMobile}>창업 프로덕션</a>
-        <a href="/bootcamp/" onClick={closeMobile}>부트캠프</a>
-        <Link href="/vvip/" onClick={closeMobile}>VVIP 신청</Link>
         <a href="#pricing" onClick={closeMobile}>가격</a>
         <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>📋 상담 신청</Link>
       </div>
@@ -153,16 +147,13 @@ export default function HomePage({ site }) {
               <span className="outline">현실로</span>
             </h1>
             <p className="hero-sub">
-              어떤 <strong>웹사이트</strong>든, 어떤 <strong>앱</strong>이든.
+              어떤 <strong>웹</strong>이든, 어떤 <strong>앱</strong>이든.
               <br />
-              기획부터 디자인, 개발, <strong>창업 프로덕션</strong>까지 원스톱으로 만들어드립니다.
+              기획부터 디자인, 개발, 배포까지 <strong>맞춤 외주</strong>로 만들어드립니다.
             </p>
             <div className="hero-tags">
               <span className="hero-tag">📱 앱 개발</span>
-              <span className="hero-tag">🌐 웹사이트</span>
-              <span className="hero-tag">🏗️ 창업 프로덕션</span>
-              <span className="hero-tag">🎓 AI 부트캠프</span>
-              <span className="hero-tag">👑 VVIP 컨설팅</span>
+              <span className="hero-tag">🌐 웹 개발</span>
             </div>
             <div className="hero-btns">
               <Link href="/consultation/" className="btn-primary">📋 사이트에서 바로 신청</Link>
@@ -178,15 +169,15 @@ export default function HomePage({ site }) {
           <div className="about-grid">
             <div className="about-text rv">
               <div className="sec-label">ABOUT US</div>
-              <h2 className="sec-title">개발만 하는 곳이<br />아닙니다</h2>
-              <p>기획부터 마케팅까지 올인원. 단순히 만들어만 주는 외주와는 다릅니다.</p>
-              <p>마케팅 실무 경력을 바탕으로, <span className="hl">고객이 찾아오는 구조까지 설계</span>합니다.</p>
-              <p>기획 → 디자인 → 개발 → SEO/마케팅 세팅까지 한 번에.</p>
+              <h2 className="sec-title">앱·웹 개발에<br />집중합니다</h2>
+              <p>기획·디자인·개발·배포까지 한 팀에서 책임집니다.</p>
+              <p>단순 제작이 아니라 <span className="hl">서비스에 맞는 구조와 UX</span>를 함께 설계합니다.</p>
+              <p>MVP부터 정식 런칭까지, 규모에 맞춰 진행합니다.</p>
             </div>
             <div className="stats-grid rv rv-d2">
               <div className="stat-card">
                 <div className="stat-num"><span className="counter" data-target="5">0</span>+</div>
-                <div className="stat-label">기획/개발/마케팅<br />경력 (년)</div>
+                <div className="stat-label">앱·웹 개발<br />경력 (년)</div>
               </div>
               <div className="stat-card">
                 <div className="stat-num"><span className="counter" data-target="15">0</span>+</div>
@@ -205,7 +196,7 @@ export default function HomePage({ site }) {
         <div className="container">
           <div className="sec-center">
             <div className="sec-label rv">SERVICES</div>
-            <h2 className="sec-title rv rv-d1">뭐든지 만들어드립니다</h2>
+            <h2 className="sec-title rv rv-d1">앱 개발 · 웹 개발</h2>
           </div>
           <div className="services-grid">
             <div className="svc rv">
@@ -217,43 +208,19 @@ export default function HomePage({ site }) {
                 <li>크로스플랫폼 (Flutter / React Native)</li>
                 <li>소셜 로그인 · 결제 시스템 연동</li>
                 <li>대용량 DB · 검색/필터 고급 기능</li>
-                <li>런칭 지원 + 유지보수</li>
+                <li>맞춤 UI/UX · 런칭 지원 · 유지보수</li>
               </ul>
             </div>
             <div className="svc rv rv-d1">
               <div className="svc-icon">🌐</div>
-              <h3 className="svc-title">웹사이트 제작</h3>
+              <h3 className="svc-title">웹 개발</h3>
               <div className="svc-sub">Web Development</div>
-              <p className="svc-desc">랜딩페이지, 브랜드 사이트, 예약 시스템까지. 기획·디자인·SEO 최적화 포함.</p>
+              <p className="svc-desc">랜딩·브랜드 사이트·예약/결제까지. 기획·디자인·반응형·SEO 기본 포함.</p>
               <ul className="svc-list">
-                <li>기업/브랜드 홈페이지</li>
+                <li>기업/브랜드 홈페이지 · 멀티페이지</li>
                 <li>전환 최적화 랜딩페이지</li>
-                <li>예약/결제 시스템 연동</li>
-                <li>SEO + 애널리틱스 기본 세팅</li>
-              </ul>
-            </div>
-            <div className="svc rv rv-d2">
-              <div className="svc-icon">🎨</div>
-              <h3 className="svc-title">UI/UX 디자인</h3>
-              <div className="svc-sub">Design</div>
-              <p className="svc-desc">사용자 경험을 최우선으로 한 인터페이스 디자인. 반응형 설계 기본 포함.</p>
-              <ul className="svc-list">
-                <li>모바일 퍼스트 반응형 설계</li>
-                <li>프로토타입 · 와이어프레임</li>
-                <li>브랜드 아이덴티티 반영</li>
-                <li>사용성 테스트 기반 개선</li>
-              </ul>
-            </div>
-            <div className="svc rv rv-d3">
-              <div className="svc-icon">📈</div>
-              <h3 className="svc-title">마케팅 세팅</h3>
-              <div className="svc-sub">Marketing</div>
-              <p className="svc-desc">만들고 끝이 아닙니다. 고객이 찾아오는 구조까지 함께 설계합니다.</p>
-              <ul className="svc-list">
-                <li>SEO 최적화 + 메타태그 세팅</li>
-                <li>Google Analytics · Search Console</li>
-                <li>카카오톡 채널 연동</li>
-                <li>전환율 최적화 (CRO)</li>
+                <li>예약/결제·관리자 연동</li>
+                <li>SEO · 애널리틱스 기본 세팅</li>
               </ul>
             </div>
           </div>
@@ -362,29 +329,29 @@ export default function HomePage({ site }) {
               <div className="app-card-head">
                 <div className="app-card-emoji">🔍</div>
                 <div>
-                  <h3 className="app-card-title">초개인화 아카이빙 플랫폼</h3>
-                  <div className="app-card-subtitle">Semantic Search SaaS</div>
+                  <h3 className="app-card-title">콘텐츠 검색·아카이빙 SaaS</h3>
+                  <div className="app-card-subtitle">Search &amp; Archive Platform</div>
                 </div>
               </div>
               <div className="app-card-tags">
                 <span className="app-tag">Flutter</span>
                 <span className="app-tag">Supabase</span>
-                <span className="app-tag">GPT-4o API</span>
+                <span className="app-tag">Edge Functions</span>
                 <span className="app-tag">SaaS</span>
               </div>
               <p className="app-card-desc">
-                GPT-4o API 시맨틱 검색 SaaS. Vision API 자동 태그 분류, Embedding 벡터 문맥 검색, Edge Function 서버리스 처리 0.5초 이내 응답. 구독형 빌링 + 1,000명 동시 접속 아키텍처.
+                풀텍스트·메타 검색, 이미지 OCR 기반 태그, 벡터 DB 연동 문맥 검색, Edge Function 서버리스로 0.5초대 응답. 구독형 빌링 + 대규모 동시 접속 구조.
               </p>
               <div className="app-features">
                 <div className="app-feature">
                   <div className="app-feature-icon">🗣️</div>
-                  <div className="app-feature-title">시맨틱 검색</div>
-                  <div className="app-feature-desc">자연어 질문으로 문맥 파악 후 정확한 정보 검색</div>
+                  <div className="app-feature-title">시맨틱 검색·아카이빙</div>
+                  <div className="app-feature-desc">벡터 데이터베이스 및 시맨틱 검색 기반의 지식 아카이빙 솔루션</div>
                 </div>
                 <div className="app-feature">
                   <div className="app-feature-icon">🖼️</div>
-                  <div className="app-feature-title">이미지→텍스트 변환</div>
-                  <div className="app-feature-desc">사진 업로드 시 자동 태그 분류 (OCR/Vision)</div>
+                  <div className="app-feature-title">문서 자동 분류</div>
+                  <div className="app-feature-desc">Edge Functions 및 OCR 엔진 기반의 실시간 문서 자동 분류 시스템</div>
                 </div>
                 <div className="app-feature">
                   <div className="app-feature-icon">⚡</div>
@@ -526,7 +493,7 @@ export default function HomePage({ site }) {
         <div className="container">
           <div className="sec-center">
             <div className="sec-label rv">WEB PORTFOLIO</div>
-            <h2 className="sec-title rv rv-d1">웹사이트 포트폴리오</h2>
+            <h2 className="sec-title rv rv-d1">웹 개발 포트폴리오</h2>
             <p className="sec-desc rv rv-d2">실제 제작한 사이트의 구성과 기술 구현입니다.</p>
           </div>
           <div className="web-grid">
@@ -644,114 +611,6 @@ export default function HomePage({ site }) {
         </div>
       </section>
 
-      <section className="sec sec-dark" id="production">
-        <div className="container">
-          <div className="rv">
-            <div className="sec-label">STARTUP PRODUCTION</div>
-            <h2 className="sec-title">아이디어 → 시장 검증 → MVP → 투자 유치</h2>
-            <p className="sec-desc">창업에 필요한 모든 프로덕션을 AI로 가속합니다.</p>
-          </div>
-          <div className="prod-grid">
-            <div className="rv">
-              <div className="prod-info">
-                <h3>만들기만 하는 게 아니라,<br />되게 만들어 드립니다</h3>
-                <p>아이디어 검증부터 MVP 앱 개발, IR 덱 제작, 브랜딩, 마케팅 전략까지 — 창업 프로덕션의 전 과정을 원스톱으로 실행합니다.</p>
-                <p>AI 기반 초고속 개발로 일반 에이전시 대비 3~5배 빠른 속도와 결과물을 제공합니다.</p>
-                <div className="prod-highlights">
-                  <div className="prod-hl"><div className="prod-hl-val">7일</div><div className="prod-hl-label">MVP 개발</div></div>
-                  <div className="prod-hl"><div className="prod-hl-val">14일</div><div className="prod-hl-label">풀버전+마케팅</div></div>
-                  <div className="prod-hl"><div className="prod-hl-val">원스톱</div><div className="prod-hl-label">기획~배포~마케팅</div></div>
-                </div>
-              </div>
-            </div>
-            <div className="rv rv-d2">
-              <ul className="prod-steps">
-                <li className="prod-step"><div className="prod-step-num">01</div><div><div className="prod-step-title">아이디어 검증 &amp; 시장 분석</div><div className="prod-step-desc">경쟁 리서치, TAM/SAM/SOM, 비즈니스 모델 설계</div></div></li>
-                <li className="prod-step"><div className="prod-step-num">02</div><div><div className="prod-step-title">MVP 앱 + 랜딩페이지</div><div className="prod-step-desc">Flutter 크로스플랫폼, 전환 최적화 랜딩, SEO</div></div></li>
-                <li className="prod-step"><div className="prod-step-num">03</div><div><div className="prod-step-title">IR 덱 &amp; 투자 소개서</div><div className="prod-step-desc">투자자 관점 스토리라인, 재무 모델, 시장 기회</div></div></li>
-                <li className="prod-step"><div className="prod-step-num">04</div><div><div className="prod-step-title">브랜딩 &amp; 마케팅 런칭</div><div className="prod-step-desc">브랜드 아이덴티티, AI 콘텐츠 파이프라인</div></div></li>
-                <li className="prod-step"><div className="prod-step-num">05</div><div><div className="prod-step-title">그로스 &amp; 스케일링</div><div className="prod-step-desc">데이터 기반 그로스, A/B 테스트, 전환 퍼널</div></div></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sec" id="bootcamp">
-        <div className="container">
-          <div className="rv">
-            <div className="sec-label">AI APP BOOTCAMP</div>
-            <h2 className="sec-title">AI 창업 부트캠프</h2>
-            <p className="sec-desc">코딩 경험 없어도, 4주 만에 나만의 앱을 만들고 배포합니다.</p>
-          </div>
-          <div className="boot-layout">
-            <div className="boot-visual rv">
-              <ul className="boot-curriculum">
-                <li className="boot-week"><div className="boot-week-num">W1</div><div><div className="boot-week-title">AI 도구 &amp; 기획</div><div className="boot-week-desc">Cursor, Claude, ChatGPT 세팅 → 앱 기획서 → 와이어프레임</div></div></li>
-                <li className="boot-week"><div className="boot-week-num">W2</div><div><div className="boot-week-title">Flutter 기초 &amp; UI</div><div className="boot-week-desc">Flutter 환경 → AI 코딩으로 화면 제작 → 네비게이션</div></div></li>
-                <li className="boot-week"><div className="boot-week-num">W3</div><div><div className="boot-week-title">백엔드 &amp; API 연동</div><div className="boot-week-desc">Supabase DB → 인증 → 결제/지도 등 외부 API</div></div></li>
-                <li className="boot-week"><div className="boot-week-num">W4</div><div><div className="boot-week-title">배포 &amp; 런칭</div><div className="boot-week-desc">QA → 앱스토어 배포 → 마케팅 기초 → 데모데이</div></div></li>
-              </ul>
-            </div>
-            <div className="boot-info rv rv-d1">
-              <h3>AI로 앱을 만드는<br />가장 빠른 방법</h3>
-              <p>12년 교육 경력 + AI 도구 전문성을 결합한 실전형 커리큘럼. 매 주차 결과물을 만드는 프로젝트 기반 수업입니다.</p>
-              <div className="boot-price" style={{ margin: '20px 0', padding: '16px 20px', background: 'rgba(0,0,0,.06)', borderRadius: 12 }}>
-                <div style={{ fontWeight: 600, marginBottom: 8 }}>💰 가격</div>
-                <div style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--green)' }}>1기 얼리버드: 490,000원</div>
-                <div style={{ fontSize: '0.95rem', color: 'var(--text-dim)', marginTop: 4 }}>정가: 790,000원 (2기부터 인상)</div>
-              </div>
-              <div style={{ fontWeight: 600, marginBottom: 8 }}>📦 구성</div>
-              <ul className="svc-list" style={{ marginBottom: 16 }}>
-                <li>4주 실전 과정</li>
-                <li>주 1회 라이브 코칭 (주 90분)</li>
-                <li>AI 절대 프롬프트 패키지 제공</li>
-                <li>MVP 기획 템플릿 제공</li>
-                <li>로그인·DB·결제·배포 실습</li>
-                <li>개인 서비스 1개 완성 목표</li>
-                <li>커뮤니티 참여권</li>
-                <li>부트캠프 수강자 외주 10% 할인</li>
-              </ul>
-              <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 24 }}>
-                <Link href="/bootcamp/" className="btn-primary" style={{ fontSize: 14, padding: '14px 28px' }}>부트캠프 상세 보기 →</Link>
-                <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-light" style={{ fontSize: 14, padding: '14px 28px' }}>카카오톡 상담</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sec sec-dark2" id="vvip">
-        <div className="container">
-          <div className="rv"><div className="sec-label">VVIP CONSULTING</div><h2 className="sec-title">VVIP 1:1 AI 컨설팅</h2><p className="sec-desc">대표님의 사업에 맞춤 AI 전략을 설계하고 함께 실행합니다.</p></div>
-          <div className="vvip-layout">
-            <div className="vvip-info rv">
-              <h3>AI를 &apos;도입&apos;이 아닌<br />&apos;내재화&apos;하도록</h3>
-              <p>대표님의 업무 프로세스를 분석하고, AI를 통합하는 구체적인 워크플로우를 설계하고, 직접 핸즈온으로 실행까지 함께합니다.</p>
-              <p>교육공학 석사 + 12년 교육 경력으로, 어떤 수준의 분이든 이해할 수 있도록 설명합니다.</p>
-              <Link href="/vvip/" className="btn-primary" style={{ marginTop: 20 }}>VVIP 전용 페이지에서 신청 →</Link>
-              <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-light" style={{ marginTop: 12, marginLeft: 0 }}>카카오톡 상담</a>
-            </div>
-            <div className="vvip-tiers rv rv-d1">
-              <div className="vvip-tier gold" style={{ maxWidth: '100%' }}>
-                <div className="vvip-tier-header"><span className="vvip-tier-name">👑 월간 1:1 VVIP</span><span className="vvip-tier-price">1,200,000원/월</span></div>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', margin: '8px 0 12px' }}>정원: 3명 제한</p>
-                <div style={{ fontWeight: 600, marginBottom: 8 }}>📦 구성</div>
-                <ul className="vvip-tier-list">
-                  <li>주 1회 1:1 Zoom 세션 (60~90분)</li>
-                  <li>무제한 카톡 피드백</li>
-                  <li>아이디어 → MVP 구조 설계</li>
-                  <li>AI 개발 환경 세팅</li>
-                  <li>서비스 출시 전략 동행</li>
-                  <li>외주 없이 제작 가능한 구조 설계</li>
-                  <li>컨설팅 수강 시 외주 비용 10% 할인</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="sec sec-warm" id="pricing">
         <div className="container">
           <div className="sec-center">
@@ -761,7 +620,7 @@ export default function HomePage({ site }) {
           </div>
           <div className="pricing-tabs rv">
             <button type="button" className={`pricing-tab ${pricingTab === 'app' ? 'active' : ''}`} onClick={() => setPricingTab('app')}>📱 앱 개발</button>
-            <button type="button" className={`pricing-tab ${pricingTab === 'web' ? 'active' : ''}`} onClick={() => setPricingTab('web')}>🌐 웹사이트</button>
+            <button type="button" className={`pricing-tab ${pricingTab === 'web' ? 'active' : ''}`} onClick={() => setPricingTab('web')}>🌐 웹 개발</button>
           </div>
           <div className={`pricing-content ${pricingTab === 'app' ? 'active' : ''}`} id="app-pricing">
             <div className="pricing-grid">
@@ -837,7 +696,7 @@ export default function HomePage({ site }) {
           <div className="process-grid">
             <div className="process-step rv"><div className="process-num en">01</div><h3 className="process-step-title">무료 상담</h3><p className="process-step-desc">아이디어 공유 &amp; 요구사항 분석</p></div>
             <div className="process-step rv rv-d1"><div className="process-num en">02</div><h3 className="process-step-title">기획 &amp; 견적</h3><p className="process-step-desc">맞춤 제안서 &amp; 기술 스택 선정</p></div>
-            <div className="process-step rv rv-d2"><div className="process-num en">03</div><h3 className="process-step-title">디자인 &amp; 개발</h3><p className="process-step-desc">실시간 피드백 &amp; AI 초고속 빌드</p></div>
+            <div className="process-step rv rv-d2"><div className="process-num en">03</div><h3 className="process-step-title">디자인 &amp; 개발</h3><p className="process-step-desc">실시간 피드백 반영·단계별 검수</p></div>
             <div className="process-step rv rv-d3"><div className="process-num en">04</div><h3 className="process-step-title">완성 &amp; 배포</h3><p className="process-step-desc">검수 → 런칭 → 유지보수</p></div>
           </div>
         </div>
@@ -853,7 +712,7 @@ export default function HomePage({ site }) {
             <div className="faq-item rv"><div className="faq-q">기획서가 없어도 되나요?</div><p className="faq-a">네, 아이디어만 말씀해주시면 기획부터 정리해서 진행합니다.</p></div>
             <div className="faq-item rv rv-d1"><div className="faq-q">결제는 어떻게 하나요?</div><p className="faq-a">계약서 작성 후 선금 50% → 완료 후 잔금 50%. 세금계산서 가능.</p></div>
             <div className="faq-item rv rv-d2"><div className="faq-q">수정은 몇 번까지 가능한가요?</div><p className="faq-a">패키지별 수정 횟수가 다르며, 추가 수정은 협의 후 진행 가능합니다.</p></div>
-            <div className="faq-item rv rv-d3"><div className="faq-q">부트캠프는 코딩 경험이 없어도?</div><p className="faq-a">네, 완전 초보자 대상 커리큘럼입니다. AI 도구가 코딩을 도와줍니다.</p></div>
+            <div className="faq-item rv rv-d3"><div className="faq-q">앱과 웹을 같이 만들 수 있나요?</div><p className="faq-a">네. 동일 백엔드로 앱·웹을 함께 구축하는 경우도 많습니다. 상담 시 일정과 견적을 안내드립니다.</p></div>
           </div>
         </div>
       </section>
@@ -862,7 +721,7 @@ export default function HomePage({ site }) {
         <div className="container">
           <div className="apply-inner rv">
             <h2 className="apply-title">사이트에서 바로 상담 신청</h2>
-            <p className="apply-sub">AI 전략 가능성 진단 폼으로 이동해 간단히 작성해 주시면 빠르게 연락드립니다.</p>
+            <p className="apply-sub">앱·웹 개발 상담 폼으로 이동해 간단히 작성해 주시면 빠르게 연락드립니다.</p>
             <div style={{ textAlign: 'center', marginTop: 28 }}>
               <Link href="/consultation/" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>신청 보내기</Link>
             </div>
@@ -876,7 +735,7 @@ export default function HomePage({ site }) {
         <div className="cta-glow cta-glow-2" />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <h2 className="cta-title rv"><span className="gradient-text">아이디어</span>만 있으면<br />나머지는 저희가 합니다</h2>
-          <p className="cta-sub rv rv-d1">앱 외주, 창업 프로덕션, 부트캠프, 컨설팅 — 무엇이든 편하게 상담하세요.</p>
+          <p className="cta-sub rv rv-d1">앱·웹 개발 문의는 언제든 편하게 상담하세요.</p>
           <div className="hero-btns rv rv-d2" style={{ justifyContent: 'center', gap: 14 }}>
             <Link href="/consultation/" className="btn-primary" style={{ fontSize: 18, padding: '20px 42px' }}>📋 사이트에서 바로 신청</Link>
             <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: 16, padding: '18px 36px' }}>💬 카카오톡 상담</a>

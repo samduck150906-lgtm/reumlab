@@ -72,11 +72,7 @@ export default function ConsultationForm({ site }) {
           <select id="service" name="service">
             <option value="">선택해 주세요</option>
             <option value="앱 개발">앱 개발</option>
-            <option value="웹/랜딩 제작">웹/랜딩 제작</option>
-            <option value="창업 프로덕션">창업 프로덕션</option>
-            <option value="부트캠프">부트캠프</option>
-            <option value="VVIP 컨설팅">VVIP 컨설팅</option>
-            <option value="기타">기타</option>
+            <option value="웹 개발">웹 개발</option>
           </select>
         </div>
         <div className="field">
