@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import './globals.css';
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import { getSite } from '../lib/data';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
 const home = PAGE_SEO_MAP[''];
 
 const googleVer = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-/** 네이버 서치어드바이저 사이트 소유 확인 */
+/** ?ㅼ씠踰??쒖튂?대뱶諛붿씠? ?ъ씠???뚯쑀 ?뺤씤 */
 const NAVER_SITE_VERIFICATION = 'ce34d37949725f395c5091f3180d4eb36befb0d9';
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="름랩 REUMLAB RSS"
+          title="由꾨옪 REUMLAB RSS"
           href={`${SITE.domain}/feed.xml`}
         />
       </head>
@@ -75,3 +76,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
