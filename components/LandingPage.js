@@ -4,8 +4,7 @@ import {
   getLandingBySlug,
   pickFaqs,
   pickReviews,
-  getPricingSnippet,
-} from '../lib/data';
+  getPricingSnippet } from '../lib/data';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
