@@ -2,24 +2,41 @@
 
 import { useState } from 'react';
 
-export default function ConsultationForm({ site }) {
+const NOTIFY_EMAIL = 'samduck150906@gmail.com';
+
+function buildMailtoConsultation(fd) {
+  const name = fd.get('name') || '';
+  const email = fd.get('email') || '';
+  const phone = fd.get('phone') || '';
+  const service = fd.get('service') || '';
+  const message = fd.get('message') || '';
+  const subject = `[상담 신청] ${name}`.trim() || '[상담 신청]';
+  const body = [
+    '— 름랩 상담 신청 —',
+    '',
+    `이름/담당자: ${name}`,
+    `회신 이메일: ${email}`,
+    `연락처: ${phone}`,
+    `문의 유형: ${service}`,
+    '',
+    '문의 내용:',
+    message,
+  ].join('\n');
+  return `mailto:${NOTIFY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+export default function ConsultationForm() {
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
+    if (!form.reportValidity()) return;
     setSubmitting(true);
     try {
-      const formData = new FormData(form);
-      const response = await fetch('/consultation/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString(),
-      });
-      if (response.ok) setSuccess(true);
-      else setSuccess(true);
-    } catch {
+      const fd = new FormData(form);
+      window.location.href = buildMailtoConsultation(fd);
       setSuccess(true);
     } finally {
       setSubmitting(false);
@@ -30,8 +47,10 @@ export default function ConsultationForm({ site }) {
     return (
       <div className="apply-success show">
         <div className="success-icon">✓</div>
-        <h2 className="success-title">접수되었습니다</h2>
-        <p className="success-desc">빠른 시일 내에 연락드리겠습니다.</p>
+        <h2 className="success-title">메일 작성 화면을 열었습니다</h2>
+        <p className="success-desc">
+          기본 메일 앱에서 <strong>보내기</strong>를 눌러 {NOTIFY_EMAIL}으로 전송을 완료해 주세요.
+        </p>
         <p style={{ marginTop: 16 }}>
           <a href="/">홈으로</a>
         </p>
@@ -41,20 +60,7 @@ export default function ConsultationForm({ site }) {
 
   return (
     <div id="formWrap" className="form-card apply-form" style={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: '36px 32px', boxShadow: '0 8px 32px rgba(58,140,92,.06)', marginBottom: 0 }}>
-      <form
-        name="consultation"
-        className="apply-form"
-        method="POST"
-        action="/consultation/"
-        data-netlify="true"
-        netlify-honeypot="bot"
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="form-name" value="consultation" />
-        <p className="hidden" style={{ position: 'absolute', left: -9999 }}>
-          <label>비어 두세요: <input name="bot" /></label>
-        </p>
-
+      <form className="apply-form" onSubmit={handleSubmit}>
         <div className="field">
           <label htmlFor="name">이름 / 담당자 *</label>
           <input type="text" id="name" name="name" required placeholder="이름 또는 회사명" />
@@ -81,7 +87,7 @@ export default function ConsultationForm({ site }) {
         </div>
         <div className="submit-wrap">
           <button type="submit" className="btn-submit" disabled={submitting}>
-            {submitting ? '전송 중…' : '보내기'}
+            {submitting ? '열리는 중…' : '보내기 (메일 앱)'}
           </button>
         </div>
       </form>

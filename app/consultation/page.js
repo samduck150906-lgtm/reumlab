@@ -52,7 +52,7 @@ export default function ConsultationPage() {
       <section className="sec apply-section" id="apply" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="apply-inner" style={{ maxWidth: 720 }}>
-            <ConsultationForm site={site} />
+            <ConsultationForm />
             <p className="apply-alt" style={{ marginTop: 24 }}>
               바로 상담을 원하시면 · <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a> · <a href={`mailto:${bizEmail}`}>이메일</a> · <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
             </p>
