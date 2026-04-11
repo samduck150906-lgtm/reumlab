@@ -4,6 +4,8 @@ import './globals.css';
 import './reum-sales.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import { Analytics } from '../components/Analytics';
+import { AnalyticsDataLayer } from '../components/AnalyticsDataLayer';
 import { getSite } from '../lib/data';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
@@ -71,6 +73,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
+        <Analytics />
+        <AnalyticsDataLayer />
         <Nav site={site} />
         {children}
       </body>

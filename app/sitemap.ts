@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { PAGE_SEO_MAP, PORTFOLIO_SEO, SITE } from '@/lib/seo';
 import { getLandings, getClusters } from '../lib/data';
+import { BLOG_POSTS, blogCanonical } from '@/lib/blog-posts';
+import { PORTFOLIO_CASES, portfolioCanonical } from '@/lib/portfolio-cases';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -16,11 +18,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   out.push({
-    url: PORTFOLIO_SEO.canonical,
+    url: `${PORTFOLIO_SEO.canonical}/`,
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.9,
   });
+
+  for (const p of PORTFOLIO_CASES) {
+    out.push({
+      url: portfolioCanonical(p.slug),
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.72,
+    });
+  }
+
+  out.push({
+    url: `${SITE.domain}/blog/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.78,
+  });
+
+  for (const b of BLOG_POSTS) {
+    out.push({
+      url: blogCanonical(b.slug),
+      lastModified: new Date(b.publishedAt),
+      changeFrequency: 'monthly',
+      priority: 0.68,
+    });
+  }
 
   out.push({
     url: `${SITE.domain}/consultation/`,

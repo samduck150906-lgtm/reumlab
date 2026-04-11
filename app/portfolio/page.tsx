@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PORTFOLIO_SEO, SITE } from '@/lib/seo';
+import { PORTFOLIO_CASES } from '@/lib/portfolio-cases';
 import { OrganizationJsonLd, BreadcrumbJsonLdCustom } from '@/components/JsonLd';
 
 const naver = process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION;
@@ -29,17 +30,8 @@ export const metadata: Metadata = {
   ...(naver ? { other: { 'naver-site-verification': naver } } : {}),
 };
 
-const APP_ITEMS = [
-  { t: '교육 추천 슈퍼앱', d: 'PostgreSQL RPC 대규모 매칭 · Flutter · Supabase' },
-  { t: '제휴 서비스 플랫폼', d: 'RN(Expo) + Next.js + Supabase 트리플 플랫폼' },
-  { t: '콘텐츠 검색·SaaS', d: 'Flutter · Supabase · 구독형 서비스' },
-];
-
-const WEB_ITEMS = [
-  { t: '개인 브랜딩 포트폴리오', d: '스크롤 애니메이션 · 반응형 갤러리' },
-  { t: 'D2C 랜딩페이지', d: 'AIDA 카피 · CTA 최적화 · SEO' },
-  { t: '예약·결제 통합 사이트', d: '타임슬롯 · PG 연동 · 카카오 알림' },
-];
+const APP_SLUGS = ['gyoyug-chucheon-syupeo-eib', 'jehyu-seobiseu-peulraespom', 'koneten-chu-sa-saas'] as const;
+const WEB_SLUGS = ['gaein-beuraending-peutpolrio', 'd2c-raending-peiji', 'yeyag-gyeolje-tonghab'] as const;
 
 export default function PortfolioPage() {
   return (
@@ -56,7 +48,7 @@ export default function PortfolioPage() {
               {PORTFOLIO_SEO.description}
             </p>
             <div className="hero-btns" style={{ marginTop: 28 }}>
-              <Link href="/consultation/" className="btn-primary">
+              <Link href="/consultation/" className="btn-primary" data-analytics="cta_portfolio_index_consult">
                 프로젝트 상담
               </Link>
               <Link href="/" className="btn-secondary">
@@ -71,14 +63,21 @@ export default function PortfolioPage() {
             <div className="sec-label">APP</div>
             <h2 className="sec-title">앱 개발 레퍼런스</h2>
             <div className="services-grid" style={{ marginTop: 32 }}>
-              {APP_ITEMS.map((x) => (
-                <div key={x.t} className="svc rv">
-                  <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
-                    {x.t}
-                  </h3>
-                  <p className="svc-desc">{x.d}</p>
-                </div>
-              ))}
+              {APP_SLUGS.map((slug) => {
+                const c = PORTFOLIO_CASES.find((x) => x.slug === slug);
+                if (!c) return null;
+                return (
+                  <Link key={slug} href={`/portfolio/${slug}/`} className="svc rv" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                    <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
+                      {c.title}
+                    </h3>
+                    <p className="svc-desc">{c.summary}</p>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--green)' }}>
+                      상세 보기 →
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
             <p style={{ marginTop: 24, textAlign: 'center' }}>
               <Link href="/앱개발/">앱 개발 서비스 상세 →</Link>
@@ -91,14 +90,21 @@ export default function PortfolioPage() {
             <div className="sec-label">WEB</div>
             <h2 className="sec-title">웹 개발 레퍼런스</h2>
             <div className="services-grid" style={{ marginTop: 32 }}>
-              {WEB_ITEMS.map((x) => (
-                <div key={x.t} className="svc rv">
-                  <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
-                    {x.t}
-                  </h3>
-                  <p className="svc-desc">{x.d}</p>
-                </div>
-              ))}
+              {WEB_SLUGS.map((slug) => {
+                const c = PORTFOLIO_CASES.find((x) => x.slug === slug);
+                if (!c) return null;
+                return (
+                  <Link key={slug} href={`/portfolio/${slug}/`} className="svc rv" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                    <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
+                      {c.title}
+                    </h3>
+                    <p className="svc-desc">{c.summary}</p>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--green)' }}>
+                      상세 보기 →
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
             <p style={{ marginTop: 24, textAlign: 'center' }}>
               <Link href="/웹개발/">웹 개발 서비스 상세 →</Link>

@@ -233,12 +233,14 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             <Link
               href="/consultation/"
               className="inline-flex min-h-[48px] w-full max-w-xs items-center justify-center rounded-xl bg-white px-8 py-3.5 text-center font-display text-sm font-semibold text-navy-900 shadow-lg transition hover:bg-slate-100 sm:w-auto"
+              data-analytics="cta_hero_consult"
             >
               아이디어 무료 상담하기
             </Link>
             <Link
               href="/portfolio/"
               className="inline-flex min-h-[48px] w-full max-w-xs items-center justify-center rounded-xl border border-white/25 bg-white/5 px-8 py-3.5 text-center font-display text-sm font-semibold text-white backdrop-blur transition hover:bg-white/10 sm:w-auto"
+              data-analytics="cta_hero_portfolio"
             >
               포트폴리오 보기
             </Link>
@@ -447,6 +449,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                         ? 'bg-accent text-white hover:bg-accent-deep'
                         : 'bg-white text-navy-900 hover:bg-slate-100'
                     }`}
+                    data-analytics={`cta_pricing_checkout_${pkg.checkoutKey}`}
                   >
                     {formatKrw(pkg.priceWon)} 결제하기
                   </Link>
@@ -455,6 +458,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                     className={`inline-flex min-h-[44px] w-full items-center justify-center rounded-xl px-5 py-3 text-center font-display text-xs font-semibold text-slate-300 underline-offset-2 transition hover:text-white sm:text-sm ${
                       pkg.featured ? 'hover:underline' : 'border border-white/15 hover:border-white/25'
                     }`}
+                    data-analytics="cta_pricing_consult"
                   >
                     상담만 받기
                   </Link>
@@ -512,6 +516,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             <Link
               href="/consultation/"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-white px-8 py-3.5 font-display text-sm font-semibold text-navy-900 transition hover:bg-slate-100"
+              data-analytics="cta_pricing_section_consult"
             >
               패키지 상담 요청하기
             </Link>
@@ -576,6 +581,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             <Link
               href="/consultation/"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-navy-900 px-8 py-3.5 font-display text-sm font-semibold text-white transition hover:bg-navy-950"
+              data-analytics="cta_strip_consult"
             >
               아이디어 무료 상담하기
             </Link>
@@ -584,6 +590,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl border border-slate-300 bg-white px-8 py-3.5 font-display text-sm font-semibold text-navy-900 transition hover:border-slate-400"
+              data-analytics="cta_strip_kakao"
             >
               카카오톡으로 연결
             </a>
@@ -601,11 +608,15 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             </a>
           </p>
           <p className="mt-2">
-            <Link href="/portfolio/" className="text-accent-deep underline-offset-2 hover:underline">
+            <Link href="/portfolio/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_portfolio">
               포트폴리오
             </Link>
             <span className="mx-2 text-slate-300">|</span>
-            <Link href="/consultation/" className="text-accent-deep underline-offset-2 hover:underline">
+            <Link href="/blog/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_blog">
+              블로그
+            </Link>
+            <span className="mx-2 text-slate-300">|</span>
+            <Link href="/consultation/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_consult">
               상담 신청
             </Link>
           </p>

@@ -1,4 +1,6 @@
 import type { PageSeo } from '@/lib/seo';
+import type { BlogPost } from '@/lib/blog-posts';
+import type { PortfolioCase } from '@/lib/portfolio-cases';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
 export function OrganizationJsonLd() {
@@ -65,6 +67,105 @@ export function BreadcrumbJsonLd({ slug }: { slug: string }) {
 }
 
 /** /portfolio 등 PAGE_SEO_MAP 밖 페이지 */
+/** 홈: Organization + LocalBusiness + 교육/개발 서비스(ProfessionalService) 그래프 */
+export function ReumHomeGraphJsonLd() {
+  const home = PAGE_SEO_MAP[''];
+  const graph = [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE.domain}/#organization`,
+      name: SITE.name,
+      alternateName: SITE.nameEn,
+      url: SITE.domain + '/',
+      logo: SITE.defaultOgImage,
+      description: home.description,
+      sameAs: [SITE.kakao],
+    },
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${SITE.domain}/#localbusiness`,
+      name: SITE.company,
+      image: SITE.defaultOgImage,
+      telephone: SITE.phone,
+      email: SITE.email,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '삼성로 186-1 4층',
+        addressLocality: '수원시 영통구',
+        addressRegion: '경기도',
+        addressCountry: 'KR',
+      },
+      url: SITE.domain + '/',
+      priceRange: '₩₩',
+    },
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE.domain}/#service`,
+      name: `${SITE.name} 앱·웹 개발 및 유지보수 교육`,
+      image: SITE.defaultOgImage,
+      url: SITE.domain + '/',
+      telephone: SITE.phone,
+      description:
+        'AI 보조 개발과 1:1 교육으로 비전공자 대표도 앱·웹을 직접 운영·수정할 수 있도록 돕는 개발 에이전시 서비스.',
+      areaServed: 'KR',
+      provider: { '@id': `${SITE.domain}/#organization` },
+    },
+  ];
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+    />
+  );
+}
+
+export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
+    author: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.domain + '/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      logo: { '@type': 'ImageObject', url: SITE.defaultOgImage },
+    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    keywords: post.keywords.join(', '),
+    inLanguage: 'ko-KR',
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+  );
+}
+
+export function PortfolioCreativeWorkJsonLd({ item, url }: { item: PortfolioCase; url: string }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: item.title,
+    description: item.summary,
+    url,
+    inLanguage: 'ko-KR',
+    keywords: item.stack.join(', '),
+    creator: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.domain + '/',
+    },
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+  );
+}
+
 export function BreadcrumbJsonLdCustom({ seo }: { seo: PageSeo }) {
   const homeUrl = SITE.domain + '/';
   const data = {
@@ -80,5 +181,23 @@ export function BreadcrumbJsonLdCustom({ seo }: { seo: PageSeo }) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
+  );
+}
+
+type Crumb = { name: string; url: string };
+
+export function BreadcrumbJsonLdTrail({ items }: { items: Crumb[] }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((c, i) => ({
+      '@type': 'ListItem' as const,
+      position: i + 1,
+      name: c.name,
+      item: c.url,
+    })),
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
