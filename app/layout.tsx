@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import './globals.css';
+import './reum-sales.css';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { getSite } from '../lib/data';
@@ -60,7 +61,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
-        <meta name="theme-color" content="#162b1e" />
+        <meta name="theme-color" content="#0f1f3a" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link
           rel="alternate"

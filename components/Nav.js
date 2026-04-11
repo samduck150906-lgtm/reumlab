@@ -16,11 +16,12 @@ export default function Nav({ site }) {
   const closeMobile = () => setMobileOpen(false);
 
   const navLinks = [
-    { href: '/#services', label: '서비스' },
+    { href: '/#solution', label: '특징' },
+    { href: '/#process', label: '진행' },
+    { href: '/#pricing', label: '패키지' },
+    { href: '/#prepare', label: '준비' },
     { href: '/portfolio/', label: '포트폴리오' },
-    { href: '/#app-portfolio', label: '앱' },
-    { href: '/#web-portfolio', label: '웹' },
-    { href: '/#pricing', label: '가격' },
+    { href: '/#faq', label: 'FAQ' },
   ];
 
   return (
@@ -66,11 +67,12 @@ export default function Nav({ site }) {
         >
           ✕
         </button>
-        <Link href="/#services" onClick={closeMobile}>서비스</Link>
+        <Link href="/#solution" onClick={closeMobile}>특징</Link>
+        <Link href="/#process" onClick={closeMobile}>진행 절차</Link>
+        <Link href="/#pricing" onClick={closeMobile}>패키지</Link>
+        <Link href="/#prepare" onClick={closeMobile}>준비사항</Link>
         <Link href="/portfolio/" onClick={closeMobile}>포트폴리오</Link>
-        <Link href="/#app-portfolio" onClick={closeMobile}>앱 포트폴리오</Link>
-        <Link href="/#web-portfolio" onClick={closeMobile}>웹 포트폴리오</Link>
-        <Link href="/#pricing" onClick={closeMobile}>가격</Link>
+        <Link href="/#faq" onClick={closeMobile}>FAQ</Link>
         <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>
           📋 상담 신청
         </Link>

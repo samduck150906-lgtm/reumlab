@@ -1,4 +1,4 @@
-import HomePage from '../components/HomePage';
+import ReumSalesLanding from '../components/ReumSalesLanding';
 import { getSite } from '../lib/data';
 import { OrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <OrganizationJsonLd />
       <BreadcrumbJsonLd slug="" />
-      <HomePage site={site} />
+      <ReumSalesLanding site={site} />
     </>
   );
 }
