@@ -29,7 +29,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   '': {
     title: 'AI 기반 앱·웹 개발 & 자체 유지보수 교육 | 름랩 Reum Lab',
     description:
-      '비전공자 대표도 직접 수정·관리할 수 있도록. Flutter MVP와 1:1 유지보수 전수 교육을 함께하는 림랩(Reum Lab) 파트너 랜딩입니다.',
+      'VAT 포함 패키지 149만~799만원. 비전공자 대표도 직접 수정·관리할 수 있도록 AI 기반 웹·앱 개발과 온라인 유지보수 교육을 함께하는 림랩(Reum Lab)입니다.',
     keywords: [
       '앱 개발',
       '웹 개발',
@@ -44,7 +44,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ],
     ogTitle: '론칭 다음 날도 주도하는 IT, 림랩 Reum Lab',
     ogDescription:
-      'AI 보조 개발과 1:1 맞춤 교육으로 유지보수 비용을 줄이고 IT 자생력을 키우는 앱·웹 개발 파트너.',
+      'VAT 포함 정액 패키지(웹·앱·고도화)와 온라인 전수 교육. AI 보조 개발로 유지보수 비용을 줄이고 IT 자생력을 키우는 파트너.',
     h1: 'AI 기반 앱·웹 개발과 자체 유지보수까지, 림랩과 함께',
     canonical: 'https://reumlab.com',
   },

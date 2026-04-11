@@ -131,14 +131,46 @@ const PROCESS_STEPS = [
   },
 ] as const;
 
-const PRICING_ROWS = [
-  { label: '작업 기간', std: '협의', deluxe: '협의', premium: '협의' },
-  { label: '수정 횟수', std: '기본', deluxe: '확대', premium: '맞춤' },
-  { label: '기능 범위', std: 'MVP 중심', deluxe: '확장형', premium: '엔터프라이즈급' },
-  { label: '맞춤 디자인', std: '템플릿 기반', deluxe: '브랜드 반영', premium: '풀 커스텀' },
-  { label: '스토어 등록 지원', std: '가이드', deluxe: '협업 등록', premium: '대행 포함' },
-  { label: '유지보수 교육', std: '기본', deluxe: '심화', premium: '전담 커리큘럼' },
+const PACKAGES = [
+  {
+    tier: 'STANDARD',
+    title: '웹 개발 + 강의',
+    bullets: [
+      '간단한 웹 개발 진행',
+      'AI로 웹 만드는 방법, 이후 유지보수하는 방법 온라인으로 알려드립니다.',
+    ],
+    priceWon: 1_490_000,
+    durationDays: 14,
+    featured: false,
+  },
+  {
+    tier: 'DELUXE',
+    title: '앱 개발 + 강의',
+    bullets: [
+      '간단한 앱 개발 진행',
+      'AI로 앱 만드는 방법, 이후 유지보수하는 방법 온라인으로 알려드립니다.',
+    ],
+    priceWon: 4_990_000,
+    durationDays: 21,
+    featured: true,
+    badge: '가장 인기 있는 패키지',
+  },
+  {
+    tier: 'PREMIUM',
+    title: '고도화된 앱 또는 웹 개발 + 강의',
+    bullets: [
+      '복잡한 앱 또는 웹 개발 진행',
+      'AI로 앱 또는 웹 만드는 방법, 이후 유지보수법 온라인티칭',
+    ],
+    priceWon: 7_990_000,
+    durationDays: 30,
+    featured: false,
+  },
 ] as const;
+
+function formatKrw(n: number) {
+  return `${n.toLocaleString('ko-KR')}원`;
+}
 
 const FAQ_ITEMS = [
   {
@@ -150,8 +182,8 @@ const FAQ_ITEMS = [
     a: '앱은 Flutter 크로스플랫폼을 권장하며, 웹·랜딩은 프로젝트 성격에 맞는 스택으로 함께 설계합니다. 상담 시 최적 조합을 제안드립니다.',
   },
   {
-    q: '금액은 언제 확정되나요?',
-    a: '범위와 일정이 정리된 뒤 견적서로 확정합니다. 패키지 표의 금액 칸은 맞춤 견적을 위해 비워 두었습니다.',
+    q: '금액과 VAT는 어떻게 되나요?',
+    a: '패키지 금액은 부가세(VAT)가 포함된 금액입니다. 범위가 패키지 설명을 넘어서는 경우에는 상담 후 추가 견적이 필요할 수 있습니다.',
   },
   {
     q: '납품 후에도 문의할 수 있나요?',
@@ -358,80 +390,114 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         </div>
       </section>
 
-      {/* Pricing table */}
+      {/* Pricing */}
       <section id="pricing" className="scroll-mt-24 bg-navy-950 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <SectionHeading
             dark
-            eyebrow="Pricing &amp; Packages"
-            title="패키지 비교"
-            description="금액은 프로젝트 범위에 따라 산정됩니다. 아래 표로 차이를 먼저 가늠해 보세요."
+            eyebrow="Pricing & Packages"
+            title="패키지 요금"
+            description="VAT가 포함된 정액 패키지입니다. 진행 범위는 상담 시 함께 확정하며, 표준 패키지를 넘는 요구는 별도 협의할 수 있습니다."
           />
-          <div className="mt-12 overflow-x-auto rounded-2xl border border-white/10 bg-navy-900/60 shadow-xl backdrop-blur">
-            <table className="w-full min-w-[640px] border-collapse text-left text-sm">
-              <caption className="sr-only">Standard, Deluxe, Premium 패키지 비교</caption>
-              <thead>
-                <tr className="border-b border-white/10">
-                  <th scope="col" className="px-4 py-4 font-display font-semibold text-slate-400 sm:px-6 sm:py-5">
-                    항목
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-4 py-4 font-display text-base font-bold text-white sm:px-6 sm:py-5"
-                  >
-                    Standard
-                  </th>
-                  <th
-                    scope="col"
-                    className="bg-accent/15 px-4 py-4 font-display text-base font-bold text-sky-100 sm:px-6 sm:py-5"
-                  >
-                    Deluxe
-                    <span className="ml-2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
-                      추천
-                    </span>
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-4 py-4 font-display text-base font-bold text-white sm:px-6 sm:py-5"
-                  >
-                    Premium
-                  </th>
-                </tr>
-                <tr className="border-b border-white/10 bg-navy-850/80">
-                  <th scope="row" className="px-4 py-3 text-slate-500 sm:px-6">
-                    프로젝트 금액 (VAT 별도)
-                  </th>
-                  {['std', 'deluxe', 'premium'].map((key) => (
-                    <td key={key} className="px-4 py-3 font-display text-lg font-semibold text-slate-200 sm:px-6">
-                      <span className="text-slate-500">₩</span>{' '}
-                      <span className="inline-block min-w-[4.5rem] border-b border-dashed border-slate-500/60 pb-0.5 text-center text-slate-400">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      </span>
-                    </td>
+
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {PACKAGES.map((pkg) => (
+              <article
+                key={pkg.tier}
+                className={`relative flex h-full flex-col rounded-2xl border bg-navy-900/70 p-6 pb-8 shadow-xl backdrop-blur sm:p-8 ${
+                  pkg.featured
+                    ? 'border-accent/50 pt-11 ring-2 ring-accent/40 sm:pt-12 lg:scale-[1.02] lg:-translate-y-1'
+                    : 'border-white/10'
+                }`}
+              >
+                {pkg.featured && pkg.badge ? (
+                  <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-3 py-1 font-display text-[11px] font-bold text-white shadow-lg sm:text-xs">
+                    {pkg.badge}
+                  </div>
+                ) : null}
+                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sky-200/80">
+                  {pkg.tier}
+                </p>
+                <h3 className="mt-3 font-display text-lg font-bold leading-snug text-white sm:text-xl">
+                  {pkg.title}
+                </h3>
+                <p className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-[2rem]">
+                  {formatKrw(pkg.priceWon)}
+                </p>
+                <p className="mt-1 text-sm text-slate-400">VAT 포함</p>
+                <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-slate-200 ring-1 ring-white/10">
+                  <span className="font-display text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    작업 기간
+                  </span>
+                  <span className="font-semibold text-white">{pkg.durationDays}일</span>
+                </p>
+                <ol className="mt-6 flex-1 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-slate-300 sm:text-[15px]">
+                  {pkg.bullets.map((line) => (
+                    <li key={line}>{line}</li>
                   ))}
+                </ol>
+                <div className="mt-8">
+                  <Link
+                    href="/consultation/"
+                    className={`inline-flex min-h-[48px] w-full items-center justify-center rounded-xl px-5 py-3.5 text-center font-display text-sm font-semibold transition ${
+                      pkg.featured
+                        ? 'bg-white text-navy-900 hover:bg-slate-100'
+                        : 'border border-white/20 bg-transparent text-white hover:bg-white/10'
+                    }`}
+                  >
+                    이 패키지로 상담하기
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10 bg-navy-900/40">
+            <table className="w-full min-w-[600px] border-collapse text-left text-sm text-slate-200">
+              <caption className="sr-only">패키지별 금액 및 작업 기간 비교</caption>
+              <thead>
+                <tr className="border-b border-white/10 bg-navy-850/60">
+                  <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
+                    패키지
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
+                    제목
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
+                    금액 (VAT 포함)
+                  </th>
+                  <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
+                    작업 기간
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {PRICING_ROWS.map((row) => (
-                  <tr key={row.label} className="border-b border-white/5 last:border-0">
-                    <th
-                      scope="row"
-                      className="whitespace-nowrap px-4 py-4 font-medium text-slate-300 sm:px-6 sm:py-4"
-                    >
-                      {row.label}
+                {PACKAGES.map((pkg) => (
+                  <tr
+                    key={pkg.tier}
+                    className={`border-b border-white/5 last:border-0 ${pkg.featured ? 'bg-accent/10' : ''}`}
+                  >
+                    <th scope="row" className="whitespace-nowrap px-4 py-3.5 font-display font-bold text-white sm:px-5">
+                      {pkg.tier}
+                      {pkg.featured ? (
+                        <span className="ml-2 align-middle text-[10px] font-semibold text-sky-200">★ 인기</span>
+                      ) : null}
                     </th>
-                    <td className="px-4 py-4 text-slate-400 sm:px-6 sm:py-4">{row.std}</td>
-                    <td className="bg-accent/10 px-4 py-4 text-slate-200 sm:px-6 sm:py-4">{row.deluxe}</td>
-                    <td className="px-4 py-4 text-slate-400 sm:px-6 sm:py-4">{row.premium}</td>
+                    <td className="max-w-[220px] px-4 py-3.5 text-slate-300 sm:px-5">{pkg.title}</td>
+                    <td className="whitespace-nowrap px-4 py-3.5 font-semibold text-white sm:px-5">
+                      {formatKrw(pkg.priceWon)}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-3.5 text-slate-300 sm:px-5">{pkg.durationDays}일</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+
           <p className="mt-6 text-center text-xs text-slate-500 sm:text-sm">
-            정확한 견적은 상담 후 산출물 범위와 일정에 따라 안내드립니다.
+            패키지 외 범위·고도화가 필요하면 상담 후 맞춤 견적을 안내드립니다.
           </p>
-          <div className="mt-10 flex justify-center">
+          <div className="mt-8 flex justify-center">
             <Link
               href="/consultation/"
               className="inline-flex min-h-[48px] items-center justify-center rounded-xl bg-white px-8 py-3.5 font-display text-sm font-semibold text-navy-900 transition hover:bg-slate-100"
