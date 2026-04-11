@@ -607,19 +607,6 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               </a>
             </p>
           </div>
-          <p className="mt-5">
-            <Link href="/portfolio/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_portfolio">
-              포트폴리오
-            </Link>
-            <span className="mx-2 text-slate-300">|</span>
-            <Link href="/blog/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_blog">
-              블로그
-            </Link>
-            <span className="mx-2 text-slate-300">|</span>
-            <Link href="/consultation/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_consult">
-              상담 신청
-            </Link>
-          </p>
         </div>
       </footer>
     </main>

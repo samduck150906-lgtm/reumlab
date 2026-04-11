@@ -93,7 +93,7 @@ export default function BlogIndexPage() {
           </div>
         </section>
       </main>
-      <BusinessFooter withNavLinks />
+      <BusinessFooter />
     </>
   );
 }
