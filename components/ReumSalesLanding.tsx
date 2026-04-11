@@ -55,27 +55,17 @@ function SectionHeading({
   dark?: boolean;
 }) {
   return (
-    <div className="mx-auto max-w-3xl text-center">
-      <p
-        className={`font-display text-xs font-semibold uppercase tracking-[0.2em] ${
-          dark ? 'text-sky-200/90' : 'text-accent-deep'
-        }`}
-      >
+    <div
+      className={`reum-section-head mx-auto max-w-3xl text-center ${dark ? 'reum-section-head--dark' : 'reum-section-head--light'}`}
+    >
+      <p className={`reum-section-eyebrow font-display text-xs font-semibold uppercase tracking-[0.2em] ${dark ? '' : 'text-accent-deep'}`}>
         {eyebrow}
       </p>
-      <h2
-        className={`mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl ${
-          dark ? 'text-white' : 'text-navy-900'
-        }`}
-      >
+      <h2 className={`reum-section-title mt-3 font-display text-3xl font-bold tracking-tight sm:text-4xl ${dark ? 'text-white' : 'text-navy-900'}`}>
         {title}
       </h2>
       {description ? (
-        <p
-          className={`mt-4 text-base leading-relaxed sm:text-lg ${
-            dark ? 'text-slate-300' : 'text-slate-600'
-          }`}
-        >
+        <p className={`reum-section-desc mt-4 text-base leading-relaxed sm:text-lg ${dark ? 'text-slate-200' : 'text-slate-700'}`}>
           {description}
         </p>
       ) : null}
@@ -97,8 +87,8 @@ function FeatureCard({
       <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent-deep transition-colors duration-300 group-hover:bg-accent-deep group-hover:text-white">
         {icon}
       </div>
-      <h3 className="font-display text-lg font-bold text-navy-900">{title}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-[15px]">{children}</p>
+      <h3 className="reum-card-title font-display text-lg font-bold text-navy-900">{title}</h3>
+      <p className="reum-card-body mt-3 text-sm leading-relaxed text-slate-700 sm:text-[15px]">{children}</p>
     </div>
   );
 }
@@ -200,7 +190,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
   const company = site?.company || '이터널식스';
 
   return (
-    <main className="bg-white text-slate-800 antialiased">
+    <main className="reum-landing bg-white text-slate-800 antialiased">
       {/* Hero */}
       <section
         id="top"
@@ -273,7 +263,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
           <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-10">
             <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
               <h3 className="font-display text-lg font-bold text-navy-900">공감하는 순간들</h3>
-              <ul className="mt-5 space-y-4 text-sm leading-relaxed text-slate-600 sm:text-[15px]">
+              <ul className="reum-card-body mt-5 space-y-4 text-sm leading-relaxed text-slate-700 sm:text-[15px]">
                 <li className="flex gap-3">
                   <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-50 text-xs font-bold text-red-600">
                     !
@@ -299,7 +289,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               <p className="mt-3 text-lg font-semibold leading-snug text-white">
                 외주는 &apos;맡기고 끝&apos;이 아니라, 대표님이 주도하는 IT 운영의 시작점이어야 합니다.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-400">
+              <p className="mt-4 text-sm leading-relaxed text-slate-200">
                 림랩은 납품 후에도 대표님이 스스로 고칠 수 있는 체계를 함께 만듭니다. 유지보수 비용을 줄이고,
                 반복되는 소통 비용 대신 성장에 쓸 시간을 되돌려 드리는 것이 목표입니다.
               </p>
@@ -386,7 +376,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                   <div>
                     <p className="font-display text-xs font-semibold text-accent-deep sm:hidden">{item.step}</p>
                     <h3 className="mt-1 font-display text-lg font-bold text-navy-900">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
+                    <p className="reum-card-body mt-2 text-sm leading-relaxed text-slate-700">{item.desc}</p>
                   </div>
                 </div>
               </li>
@@ -420,7 +410,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                     {pkg.badge}
                   </div>
                 ) : null}
-                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sky-200/80">
+                <p className="font-display text-xs font-bold uppercase tracking-[0.18em] text-sky-100">
                   {pkg.tier}
                 </p>
                 <h3 className="mt-3 font-display text-lg font-bold leading-snug text-white sm:text-xl">
@@ -429,14 +419,14 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 <p className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-[2rem]">
                   {formatKrw(pkg.priceWon)}
                 </p>
-                <p className="mt-1 text-sm text-slate-400">VAT 포함</p>
-                <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-slate-200 ring-1 ring-white/10">
-                  <span className="font-display text-xs font-semibold uppercase tracking-wider text-slate-400">
+                  <p className="mt-1 text-sm text-slate-200">VAT 포함</p>
+                <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm text-slate-100 ring-1 ring-white/20">
+                  <span className="font-display text-xs font-semibold uppercase tracking-wider text-slate-200">
                     작업 기간
                   </span>
                   <span className="font-semibold text-white">{pkg.durationDays}일</span>
                 </p>
-                <ol className="mt-6 flex-1 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-slate-300 sm:text-[15px]">
+                <ol className="mt-6 flex-1 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-slate-100 sm:text-[15px]">
                   {pkg.bullets.map((line) => (
                     <li key={line}>{line}</li>
                   ))}
@@ -455,7 +445,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                   </Link>
                   <Link
                     href="/consultation/"
-                    className={`inline-flex min-h-[44px] w-full items-center justify-center rounded-xl px-5 py-3 text-center font-display text-xs font-semibold text-slate-300 underline-offset-2 transition hover:text-white sm:text-sm ${
+                    className={`inline-flex min-h-[44px] w-full items-center justify-center rounded-xl px-5 py-3 text-center font-display text-xs font-semibold text-white underline-offset-2 ring-1 ring-white/30 transition hover:bg-white/10 sm:text-sm ${
                       pkg.featured ? 'hover:underline' : 'border border-white/15 hover:border-white/25'
                     }`}
                     data-analytics="cta_pricing_consult"
@@ -542,7 +532,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               ].map((item) => (
                 <li key={item.title} className="border-l-4 border-accent pl-5">
                   <h3 className="font-display font-bold text-navy-900">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.desc}</p>
+                  <p className="reum-card-body mt-2 text-sm leading-relaxed text-slate-700">{item.desc}</p>
                 </li>
               ))}
             </ul>

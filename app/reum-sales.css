@@ -1,2 +1,225 @@
 @tailwind components;
 @tailwind utilities;
+
+/* ── 랜딩 가독성 폴백: Tailwind 유틸이 빠져도 배경·본문 대비 유지 ── */
+.reum-landing {
+  --reum-ink: #0f172a;
+  --reum-ink-muted: #334155;
+  --reum-body: #1e293b;
+  --reum-canvas: #f1f5f9;
+  background-color: #ffffff;
+  color: var(--reum-body);
+}
+
+.reum-landing #top {
+  background: linear-gradient(180deg, #0a1628 0%, #0f1f3a 42%, #152a45 100%);
+  color: #e2e8f0;
+}
+
+.reum-landing #top h1 {
+  color: #ffffff;
+}
+
+.reum-landing #top .text-slate-200,
+.reum-landing #top .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.reum-landing #top .text-sky-300 {
+  color: #7dd3fc !important;
+}
+
+.reum-landing #top .text-sky-200\/80,
+.reum-landing #top [class*='text-sky-200'] {
+  color: rgba(186, 230, 253, 0.92) !important;
+}
+
+.reum-landing #top strong {
+  color: #ffffff;
+}
+
+.reum-landing #top dt,
+.reum-landing #top .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.reum-landing #top dd,
+.reum-landing #top .text-white {
+  color: #ffffff !important;
+}
+
+.reum-landing #pain,
+.reum-landing #audience {
+  background-color: #f1f5f9 !important;
+  color: var(--reum-body);
+}
+
+.reum-landing #pain h3,
+.reum-landing #audience h2,
+.reum-landing #solution h2,
+.reum-landing #process h2,
+.reum-landing #prepare h2 {
+  color: var(--reum-ink);
+}
+
+.reum-landing #pain .rounded-2xl.border.border-slate-200,
+.reum-landing #solution .group.rounded-2xl,
+.reum-landing #process .rounded-2xl.border.border-slate-200,
+.reum-landing #audience ul.rounded-2xl,
+.reum-landing #prepare .rounded-2xl,
+.reum-landing #faq .rounded-xl {
+  background-color: #ffffff !important;
+  color: var(--reum-body);
+  border-color: #cbd5e1 !important;
+}
+
+.reum-landing #pain .rounded-2xl.border.border-navy-800 {
+  background-color: #0f1f3a !important;
+  border-color: #1e3a5f !important;
+  color: #e2e8f0 !important;
+}
+
+.reum-landing #pain .border-navy-800 .text-white {
+  color: #ffffff !important;
+}
+
+.reum-landing #pain .border-navy-800 .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.reum-landing #solution,
+.reum-landing #process,
+.reum-landing #prepare {
+  background-color: #f8fafc;
+  color: var(--reum-body);
+}
+
+.reum-landing #pricing {
+  background-color: #0a1628 !important;
+  color: #e2e8f0;
+}
+
+.reum-landing #pricing h2,
+.reum-landing #pricing h3,
+.reum-landing #pricing .text-white {
+  color: #ffffff !important;
+}
+
+.reum-landing #pricing .text-slate-300,
+.reum-landing #pricing .text-slate-200,
+.reum-landing #pricing td {
+  color: #cbd5e1 !important;
+}
+
+.reum-landing #pricing .text-slate-400,
+.reum-landing #pricing th {
+  color: #94a3b8 !important;
+}
+
+.reum-landing #pricing table {
+  color: #e2e8f0;
+}
+
+.reum-landing #pricing .text-slate-500 {
+  color: #64748b !important;
+}
+
+.reum-landing section.border-t.border-slate-200.bg-slate-50 {
+  background-color: #f1f5f9 !important;
+  color: var(--reum-body);
+}
+
+.reum-landing section.border-t.border-slate-200.bg-slate-50 h2 {
+  color: var(--reum-ink);
+}
+
+.reum-landing footer.border-t {
+  background-color: #ffffff !important;
+  color: #475569;
+}
+
+.reum-landing footer .text-navy-900 {
+  color: var(--reum-ink) !important;
+}
+
+/* 섹션 제목·부제: Tailwind 없어도 명확한 대비 */
+.reum-landing .reum-section-head--light .reum-section-eyebrow {
+  color: #1d4ed8 !important;
+}
+
+.reum-landing .reum-section-head--light .reum-section-title {
+  color: #0f172a !important;
+}
+
+.reum-landing .reum-section-head--light .reum-section-desc {
+  color: #334155 !important;
+}
+
+.reum-landing .reum-section-head--dark .reum-section-eyebrow {
+  color: #bae6fd !important;
+}
+
+.reum-landing .reum-section-head--dark .reum-section-title {
+  color: #ffffff !important;
+}
+
+.reum-landing .reum-section-head--dark .reum-section-desc {
+  color: #e2e8f0 !important;
+}
+
+.reum-landing .reum-card-title {
+  color: #0f172a !important;
+}
+
+.reum-landing .reum-card-body {
+  color: #334155 !important;
+}
+
+/* 홈일 때 상단 네비: 다크 히어로와 대비 (크림 네비 + 연한 링크 제거) */
+body:has(.reum-landing) #nav {
+  background: rgba(15, 31, 58, 0.92) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+body:has(.reum-landing) #nav.scrolled {
+  background: rgba(10, 22, 40, 0.97) !important;
+}
+
+body:has(.reum-landing) #nav .nav-links a {
+  color: #e2e8f0 !important;
+}
+
+body:has(.reum-landing) #nav .nav-links a:hover {
+  color: #7dd3fc !important;
+}
+
+body:has(.reum-landing) #nav .nav-logo {
+  color: #f8fafc;
+}
+
+body:has(.reum-landing) #nav .nav-logo span {
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  color: #f8fafc !important;
+  background-clip: unset !important;
+}
+
+body:has(.reum-landing) #nav .hamburger span {
+  background: #f1f5f9 !important;
+}
+
+body:has(.reum-landing) .mobile-menu {
+  background: rgba(15, 31, 58, 0.98) !important;
+}
+
+body:has(.reum-landing) .mobile-menu a {
+  color: #e2e8f0 !important;
+}
+
+body:has(.reum-landing) .mobile-menu a:hover {
+  color: #7dd3fc !important;
+}
+
+body:has(.reum-landing) .mobile-close {
+  color: #f1f5f9 !important;
+}
