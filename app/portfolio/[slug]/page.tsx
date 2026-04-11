@@ -8,6 +8,7 @@ import {
 } from '@/lib/portfolio-cases';
 import { PORTFOLIO_SEO, SITE } from '@/lib/seo';
 import { BreadcrumbJsonLdTrail, PortfolioCreativeWorkJsonLd } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 type Props = { params: { slug: string } };
 
@@ -112,13 +113,7 @@ export default function PortfolioCasePage({ params }: Props) {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <div className="container">
-          <p className="footer-info">
-            <Link href="/portfolio/">← 포트폴리오</Link>
-          </p>
-        </div>
-      </footer>
+      <BusinessFooter topExtra={<Link href="/portfolio/">← 포트폴리오</Link>} />
     </>
   );
 }

@@ -9,6 +9,7 @@ import {
 } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
 import { ArticleJsonLd, BreadcrumbJsonLdTrail } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 type Props = { params: { slug: string } };
 
@@ -108,13 +109,7 @@ export default function BlogPostPage({ params }: Props) {
           </div>
         </article>
       </main>
-      <footer className="footer">
-        <div className="container">
-          <p className="footer-info">
-            <Link href="/blog/">← 블로그 목록</Link>
-          </p>
-        </div>
-      </footer>
+      <BusinessFooter topExtra={<Link href="/blog/">← 블로그 목록</Link>} />
     </>
   );
 }

@@ -74,10 +74,13 @@ export default function SeoServicePage({ seo }: { seo: PageSeo }) {
       <footer className="footer" style={{ marginTop: 48 }}>
         <div className="container">
           <p className="footer-info">
-            사업자명: {SITE.company} <span>|</span> 사업자등록번호: {SITE.bizNo} <span>|</span> 대표: {SITE.representative}{' '}
-            <span>|</span> {SITE.address} <span>|</span>{' '}
+            {SITE.company} <span>|</span> 대표자: {SITE.representative} <span>|</span> 사업자등록번호: {SITE.bizNo}
+            <br />
+            통신판매업: {SITE.mailOrderSalesNo} <span>|</span> 연락처: {SITE.phone}
+            <br />
+            주소: {SITE.address} <span>|</span>{' '}
             <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>
-              {SITE.email}
+              이메일: {SITE.email}
             </a>
           </p>
         </div>

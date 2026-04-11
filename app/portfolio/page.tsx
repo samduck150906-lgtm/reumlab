@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PORTFOLIO_SEO, SITE } from '@/lib/seo';
 import { PORTFOLIO_CASES } from '@/lib/portfolio-cases';
 import { OrganizationJsonLd, BreadcrumbJsonLdCustom } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 const naver = process.env.NEXT_PUBLIC_NAVER_SITE_VERIFICATION;
 
@@ -112,14 +113,7 @@ export default function PortfolioPage() {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <div className="container">
-          <p className="footer-info">
-            {SITE.address} · {SITE.phone} ·{' '}
-            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
-          </p>
-        </div>
-      </footer>
+      <BusinessFooter />
     </>
   );
 }

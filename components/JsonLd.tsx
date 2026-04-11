@@ -23,7 +23,7 @@ export function OrganizationJsonLd() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: '삼성로 186-1 4층',
-      addressLocality: '영통구 수원시',
+      addressLocality: '수원시 영통구',
       addressRegion: '경기도',
       addressCountry: 'KR',
     },
@@ -97,6 +97,11 @@ export function ReumHomeGraphJsonLd() {
       },
       url: SITE.domain + '/',
       priceRange: '₩₩',
+      identifier: {
+        '@type': 'PropertyValue',
+        name: '사업자등록번호',
+        value: SITE.bizNo,
+      },
     },
     {
       '@type': 'ProfessionalService',

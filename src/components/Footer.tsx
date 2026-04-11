@@ -12,9 +12,9 @@ function Footer() {
         </div>
         <div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', color: '#6b7280' }}>
-            <span>상호명: 이터널식스 | 대표자: 성아름 | 사업자등록번호: 303-28-65658</span>
-            <span>통신판매업: 제 2025-수원영통-1499호 | 주소: 경기도 수원시 영통구 삼성로 186-1 4층</span>
-            <span>연락처: 010-8111-9370 | 이메일: ceo@eternalsix.kr</span>
+            <span>이터널식스 | 대표자: 성아름 | 사업자등록번호: 303-28-65658</span>
+            <span>통신판매업: 제 2025-수원영통-1499호 | 연락처: 010-8111-9370</span>
+            <span>주소: 경기도 수원시 영통구 삼성로 186-1 4층 | 이메일: ceo@eternalsix.kr</span>
           </div>
         </div>
         <div style={{ marginTop: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

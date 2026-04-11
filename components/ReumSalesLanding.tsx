@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { SITE } from '@/lib/seo';
 
 type Site = {
   kakao?: string;
@@ -185,9 +186,8 @@ const FAQ_ITEMS = [
 ] as const;
 
 export default function ReumSalesLanding({ site }: { site: Site }) {
-  const kakao = site?.kakao || 'https://open.kakao.com/o/sNAsri4h';
-  const email = site?.email || 'ceo@eternalsix.kr';
-  const company = site?.company || '이터널식스';
+  const kakao = site?.kakao || SITE.kakao;
+  const email = site?.email || SITE.email;
 
   return (
     <main className="reum-landing bg-white text-slate-800 antialiased">
@@ -589,15 +589,25 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
       </section>
 
       <footer className="border-t border-slate-200 bg-white py-10">
-        <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-slate-500 sm:px-6 lg:px-8 sm:text-sm">
+        <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-slate-600 sm:px-6 lg:px-8 sm:text-sm">
           <p className="font-display font-semibold text-navy-900">REUMLAB · 름랩</p>
-          <p className="mt-3">
-            사업자명: {company} · 이메일:{' '}
-            <a className="text-accent-deep underline-offset-2 hover:underline" href={`mailto:${email}`}>
-              {email}
-            </a>
-          </p>
-          <p className="mt-2">
+          <div className="mt-4 space-y-1.5 text-[13px] leading-relaxed sm:text-sm">
+            <p>
+              <span className="font-semibold text-navy-900">{SITE.company}</span>
+            </p>
+            <p>대표자: {SITE.representative}</p>
+            <p>사업자등록번호: {SITE.bizNo}</p>
+            <p>통신판매업: {SITE.mailOrderSalesNo}</p>
+            <p>연락처: {SITE.phone}</p>
+            <p>주소: {SITE.address}</p>
+            <p>
+              이메일:{' '}
+              <a className="text-accent-deep underline-offset-2 hover:underline" href={`mailto:${SITE.email}`}>
+                {SITE.email}
+              </a>
+            </p>
+          </div>
+          <p className="mt-5">
             <Link href="/portfolio/" className="text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_footer_portfolio">
               포트폴리오
             </Link>

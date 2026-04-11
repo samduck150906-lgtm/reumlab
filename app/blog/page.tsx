@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { BLOG_POSTS } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
 import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 const canonical = `${SITE.domain}/blog/`;
 
@@ -92,15 +93,7 @@ export default function BlogIndexPage() {
           </div>
         </section>
       </main>
-      <footer className="footer">
-        <div className="container">
-          <p className="footer-info">
-            <Link href="/">홈</Link>
-            <span> · </span>
-            <Link href="/portfolio/">포트폴리오</Link>
-          </p>
-        </div>
-      </footer>
+      <BusinessFooter withNavLinks />
     </>
   );
 }

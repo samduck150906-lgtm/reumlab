@@ -11,6 +11,8 @@ export const SITE = {
   company: '이터널식스',
   representative: '성아름',
   bizNo: '303-28-65658',
+  /** 통신판매업 신고 */
+  mailOrderSalesNo: '제 2025-수원영통-1499호',
 };
 
 export interface PageSeo {

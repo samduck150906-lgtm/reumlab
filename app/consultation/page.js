@@ -16,6 +16,7 @@ export const metadata = {
 
 export default function ConsultationPage() {
   const site = getSite();
+  const bizEmail = site.email && String(site.email).includes('@') ? site.email : 'ceo@eternalsix.kr';
 
   return (
     <>
@@ -53,7 +54,7 @@ export default function ConsultationPage() {
           <div className="apply-inner" style={{ maxWidth: 720 }}>
             <ConsultationForm site={site} />
             <p className="apply-alt" style={{ marginTop: 24 }}>
-              바로 상담을 원하시면 · <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a> · <a href={`mailto:${site.email}`}>이메일</a> · <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
+              바로 상담을 원하시면 · <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a> · <a href={`mailto:${bizEmail}`}>이메일</a> · <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
             </p>
           </div>
         </div>
@@ -61,7 +62,18 @@ export default function ConsultationPage() {
 
       <footer className="footer">
         <div className="container">
-          <p className="footer-info">© 2026 {site.company} (REUMLAB). All Rights Reserved.</p>
+          <p className="footer-info" style={{ lineHeight: 1.85 }}>
+            {site.company}
+            <br />
+            대표자: 성아름 · 사업자등록번호: 303-28-65658
+            <br />
+            통신판매업: 제 2025-수원영통-1499호 · 연락처: {site.tel}
+            <br />
+            주소: 경기도 수원시 영통구 삼성로 186-1 4층 · 이메일:{' '}
+            <a href={`mailto:${bizEmail}`} style={{ color: 'var(--text-dim)' }}>
+              {bizEmail}
+            </a>
+          </p>
         </div>
       </footer>
     </>
