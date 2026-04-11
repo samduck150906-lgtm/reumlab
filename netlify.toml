@@ -1,4 +1,7 @@
 # 결제 승인: Netlify 환경 변수 TOSS_SECRET_KEY (시크릿 키는 저장소에 커밋하지 마세요).
+# 폼 알림: submission-created 함수 → 기본 samduck150906@gmail.com
+#   · 선택: FORM_NOTIFICATION_EMAIL (다른 수신 주소)
+#   · 선택: RESEND_API_KEY (있으면 Resend로 발송, 없으면 FormSubmit AJAX)
 
 # Next.js 정적보내기 → out/ 배포
 [build]
