@@ -9,3 +9,6 @@ node_modules
 out
 # 빌드 시 재생성 (랜딩 수만큼 커짐)
 public/feed.xml
+
+# Local Netlify folder
+.netlify
