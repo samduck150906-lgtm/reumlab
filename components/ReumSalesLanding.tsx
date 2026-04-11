@@ -290,7 +290,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 외주는 &apos;맡기고 끝&apos;이 아니라, 대표님이 주도하는 IT 운영의 시작점이어야 합니다.
               </p>
               <p className="mt-4 text-sm leading-relaxed text-slate-200">
-                림랩은 납품 후에도 대표님이 스스로 고칠 수 있는 체계를 함께 만듭니다. 유지보수 비용을 줄이고,
+                름랩은 납품 후에도 대표님이 스스로 고칠 수 있는 체계를 함께 만듭니다. 유지보수 비용을 줄이고,
                 반복되는 소통 비용 대신 성장에 쓸 시간을 되돌려 드리는 것이 목표입니다.
               </p>
             </div>
@@ -328,7 +328,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Target Audience"
-            title="이런 대표님께 림랩을 권합니다"
+            title="이런 대표님께 름랩을 권합니다"
           />
           <ul className="mx-auto mt-12 max-w-3xl divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white shadow-sm">
             {[
@@ -562,7 +562,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
       <section className="border-t border-slate-200 bg-slate-50 py-16">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-6 px-5 text-center sm:px-6 lg:px-8">
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
-            림랩과 함께, IT 주도권을 되찾을 준비가 되셨나요?
+            름랩과 함께, IT 주도권을 되찾을 준비가 되셨나요?
           </h2>
           <p className="max-w-xl text-sm text-slate-600 sm:text-base">
             무료 상담으로 아이디어를 말씀해 주시면, 가능한 접근과 교육·개발 로드맵을 솔직하게 안내드립니다.
@@ -590,7 +590,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
 
       <footer className="border-t border-slate-200 bg-white py-10">
         <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-slate-500 sm:px-6 lg:px-8 sm:text-sm">
-          <p className="font-display font-semibold text-navy-900">REUMLAB · 림랩</p>
+          <p className="font-display font-semibold text-navy-900">REUMLAB · 름랩</p>
           <p className="mt-3">
             사업자명: {company} · 이메일:{' '}
             <a className="text-accent-deep underline-offset-2 hover:underline" href={`mailto:${email}`}>

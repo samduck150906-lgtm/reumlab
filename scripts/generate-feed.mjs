@@ -73,7 +73,7 @@ const STATIC_PAGES = [
   {
     url: `${DOMAIN}/consultation/`,
     title: '프로젝트 상담 신청 | 름랩 (REUMLAB)',
-    description: '웹·앱 개발 상담 및 견적 문의. 림랩에 프로젝트를 맡겨 주세요.',
+    description: '웹·앱 개발 상담 및 견적 문의. 름랩에 프로젝트를 맡겨 주세요.',
   },
 ];
 

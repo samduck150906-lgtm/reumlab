@@ -10,20 +10,20 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
   title: '블로그·칼럼 | 비전공자 창업·MVP·외주 인사이트 | 름랩',
   description:
-    '앱 개발 비용 절감, 외주 실패 방지, MVP 범위, 유지보수 등 롱테일 키워드를 다룬 실무 칼럼. 림랩 Reum Lab.',
+    '앱 개발 비용 절감, 외주 실패 방지, MVP 범위, 유지보수 등 롱테일 키워드를 다룬 실무 칼럼. 름랩 Reum Lab.',
   alternates: { canonical },
   openGraph: {
     type: 'website',
     locale: 'ko_KR',
     url: canonical,
     siteName: SITE.nameEn,
-    title: '창업자를 위한 앱·웹·외주 인사이트 | 림랩',
+    title: '창업자를 위한 앱·웹·외주 인사이트 | 름랩',
     description: '비전공 대표도 읽을 수 있는 개발·운영 칼럼. 검색 유입용 롱테일 주제를 꾸준히 확장합니다.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: 'Reum Lab 블로그' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '창업자를 위한 앱·웹·외주 인사이트 | 림랩',
+    title: '창업자를 위한 앱·웹·외주 인사이트 | 름랩',
     description: 'MVP·외주·유지보수 실무 칼럼.',
     images: [SITE.defaultOgImage],
   },
