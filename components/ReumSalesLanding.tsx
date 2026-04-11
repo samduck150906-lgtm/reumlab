@@ -134,6 +134,7 @@ const PROCESS_STEPS = [
 const PACKAGES = [
   {
     tier: 'STANDARD',
+    checkoutKey: 'standard' as const,
     title: '웹 개발 + 강의',
     bullets: [
       '간단한 웹 개발 진행',
@@ -145,6 +146,7 @@ const PACKAGES = [
   },
   {
     tier: 'DELUXE',
+    checkoutKey: 'deluxe' as const,
     title: '앱 개발 + 강의',
     bullets: [
       '간단한 앱 개발 진행',
@@ -157,6 +159,7 @@ const PACKAGES = [
   },
   {
     tier: 'PREMIUM',
+    checkoutKey: 'premium' as const,
     title: '고도화된 앱 또는 웹 개발 + 강의',
     bullets: [
       '복잡한 앱 또는 웹 개발 진행',
@@ -436,16 +439,24 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                     <li key={line}>{line}</li>
                   ))}
                 </ol>
-                <div className="mt-8">
+                <div className="mt-8 flex flex-col gap-2">
                   <Link
-                    href="/consultation/"
+                    href={`/checkout-reum.html?package=${pkg.checkoutKey}`}
                     className={`inline-flex min-h-[48px] w-full items-center justify-center rounded-xl px-5 py-3.5 text-center font-display text-sm font-semibold transition ${
                       pkg.featured
-                        ? 'bg-white text-navy-900 hover:bg-slate-100'
-                        : 'border border-white/20 bg-transparent text-white hover:bg-white/10'
+                        ? 'bg-accent text-white hover:bg-accent-deep'
+                        : 'bg-white text-navy-900 hover:bg-slate-100'
                     }`}
                   >
-                    이 패키지로 상담하기
+                    {formatKrw(pkg.priceWon)} 결제하기
+                  </Link>
+                  <Link
+                    href="/consultation/"
+                    className={`inline-flex min-h-[44px] w-full items-center justify-center rounded-xl px-5 py-3 text-center font-display text-xs font-semibold text-slate-300 underline-offset-2 transition hover:text-white sm:text-sm ${
+                      pkg.featured ? 'hover:underline' : 'border border-white/15 hover:border-white/25'
+                    }`}
+                  >
+                    상담만 받기
                   </Link>
                 </div>
               </article>

@@ -1,4 +1,6 @@
-# Next.js 정적 내보내기 → out/ 배포
+# 결제 승인: Netlify 환경 변수 TOSS_SECRET_KEY (시크릿 키는 저장소에 커밋하지 마세요).
+
+# Next.js 정적보내기 → out/ 배포
 [build]
   command = "npm run build"
   publish = "out"
