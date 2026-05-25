@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { SITE } from '@/lib/seo';
+import { TESTIMONIALS } from '@/lib/testimonials';
+import { PORTFOLIO_CASES } from '@/lib/portfolio-cases';
 
 type Site = {
   kakao?: string;
@@ -122,6 +124,8 @@ const PROCESS_STEPS = [
   },
 ] as const;
 
+// 런칭 프로모션 할인율은 originalPriceWon vs priceWon으로 자동 계산됩니다.
+// 프로모션 종료 시 originalPriceWon을 priceWon과 동일하게 두거나 필드를 제거하세요.
 const PACKAGES = [
   {
     tier: 'STANDARD',
@@ -132,6 +136,7 @@ const PACKAGES = [
       'AI로 웹 만드는 방법, 이후 유지보수하는 방법 온라인으로 알려드립니다.',
     ],
     priceWon: 1_490_000,
+    originalPriceWon: 1_990_000,
     durationDays: 14,
     featured: false,
   },
@@ -144,6 +149,7 @@ const PACKAGES = [
       'AI로 앱 만드는 방법, 이후 유지보수하는 방법 온라인으로 알려드립니다.',
     ],
     priceWon: 4_990_000,
+    originalPriceWon: 6_490_000,
     durationDays: 21,
     featured: true,
     badge: '가장 인기 있는 패키지',
@@ -157,6 +163,7 @@ const PACKAGES = [
       'AI로 앱 또는 웹 만드는 방법, 이후 유지보수법 온라인티칭',
     ],
     priceWon: 7_990_000,
+    originalPriceWon: 9_990_000,
     durationDays: 30,
     featured: false,
   },
@@ -164,6 +171,11 @@ const PACKAGES = [
 
 function formatKrw(n: number) {
   return `${n.toLocaleString('ko-KR')}원`;
+}
+
+function discountPercent(original: number, current: number) {
+  if (!original || original <= current) return 0;
+  return Math.round(((original - current) / original) * 100);
 }
 
 const FAQ_ITEMS = [
@@ -385,14 +397,122 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         </div>
       </section>
 
+      {/* Social Proof: Testimonials + Portfolio preview */}
+      <section id="proof" className="scroll-mt-24 border-y border-slate-100 bg-slate-50 py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+          <SectionHeading
+            eyebrow="Customer Voice"
+            title="름랩을 거쳐간 대표님들의 변화"
+            description="개발이 끝난 뒤에도 스스로 운영하는 흐름이 만들어졌는지를 가장 중요한 기준으로 봅니다."
+          />
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {TESTIMONIALS.map((t) => (
+              <article
+                key={`${t.name}-${t.role}`}
+                className="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-card sm:p-7"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="font-display text-sm font-bold text-navy-900">{t.name}</span>
+                  <span className="text-xs text-slate-500">· {t.role}</span>
+                  {t.verified ? (
+                    <span
+                      className="ml-auto inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 ring-1 ring-emerald-200"
+                      title="실명·연락처 확인된 후기"
+                    >
+                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
+                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                      인증
+                    </span>
+                  ) : null}
+                </div>
+                <blockquote className="reum-card-body mt-4 flex-1 text-sm leading-relaxed text-slate-700 sm:text-[15px]">
+                  “{t.quote}”
+                </blockquote>
+                {t.result ? (
+                  <p className="mt-5 inline-flex items-center gap-2 rounded-lg bg-accent-soft px-3 py-2 text-xs font-semibold text-accent-deep">
+                    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                      <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {t.result}
+                  </p>
+                ) : null}
+              </article>
+            ))}
+          </div>
+
+          {/* Portfolio preview */}
+          <div className="mt-20">
+            <SectionHeading
+              eyebrow="Portfolio Preview"
+              title="실제로 함께 만든 결과물"
+              description="아이디어가 실제 동작하는 제품으로 이어진 사례입니다. 자세한 구조와 의사결정은 포트폴리오 페이지에서 확인하실 수 있습니다."
+            />
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {PORTFOLIO_CASES.slice(0, 3).map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/portfolio/${c.slug}/`}
+                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-accent/40 hover:shadow-card-hover"
+                  data-analytics="proof_portfolio_card"
+                >
+                  <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-accent-deep">
+                    {c.role}
+                  </p>
+                  <h3 className="mt-3 font-display text-lg font-bold leading-snug text-navy-900">
+                    {c.title}
+                  </h3>
+                  <p className="reum-card-body mt-3 flex-1 text-sm leading-relaxed text-slate-700">
+                    {c.summary}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {c.stack.map((s) => (
+                      <span
+                        key={s}
+                        className="inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-700"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="mt-5 inline-flex items-center gap-1 font-display text-xs font-semibold text-accent-deep transition group-hover:gap-2">
+                    사례 자세히 보기
+                    <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                      <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Link
+                href="/portfolio/"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 bg-white px-6 py-3 font-display text-sm font-semibold text-navy-900 transition hover:border-slate-400"
+                data-analytics="proof_portfolio_all"
+              >
+                전체 포트폴리오 보기
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="scroll-mt-24 bg-navy-950 py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <SectionHeading
             dark
             eyebrow="Pricing & Packages"
-            title="패키지 요금"
-            description="VAT가 포함된 정액 패키지입니다. 진행 범위는 상담 시 함께 확정하며, 표준 패키지를 넘는 요구는 별도 협의할 수 있습니다."
+            title={(
+              <>
+                패키지 요금{' '}
+                <span className="ml-1 align-middle text-base font-bold text-amber-300 sm:text-lg">
+                  · 런칭 프로모션 진행 중
+                </span>
+              </>
+            )}
+            description="VAT가 포함된 정액 패키지입니다. 진행 범위는 상담 시 함께 확정하며, 표준 패키지를 넘는 요구는 별도 협의할 수 있습니다. 프로모션가는 사전 예고 없이 종료될 수 있습니다."
           />
 
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -416,10 +536,20 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 <h3 className="mt-3 font-display text-lg font-bold leading-snug text-white sm:text-xl">
                   {pkg.title}
                 </h3>
-                <p className="mt-5 font-display text-3xl font-bold tracking-tight text-white sm:text-[2rem]">
+                {pkg.originalPriceWon && pkg.originalPriceWon > pkg.priceWon ? (
+                  <div className="mt-5 flex items-baseline gap-2">
+                    <span className="font-display text-base text-slate-400 line-through sm:text-lg">
+                      {formatKrw(pkg.originalPriceWon)}
+                    </span>
+                    <span className="inline-flex items-center rounded-md bg-amber-400/15 px-2 py-0.5 font-display text-xs font-bold text-amber-300 ring-1 ring-amber-300/30">
+                      {discountPercent(pkg.originalPriceWon, pkg.priceWon)}% OFF
+                    </span>
+                  </div>
+                ) : null}
+                <p className={`font-display text-3xl font-bold tracking-tight text-white sm:text-[2rem] ${pkg.originalPriceWon && pkg.originalPriceWon > pkg.priceWon ? 'mt-1' : 'mt-5'}`}>
                   {formatKrw(pkg.priceWon)}
                 </p>
-                  <p className="mt-1 text-sm text-slate-200">VAT 포함</p>
+                  <p className="mt-1 text-sm text-slate-200">VAT 포함 · 런칭 프로모션가</p>
                 <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/10 px-3 py-2 text-sm text-slate-100 ring-1 ring-white/20">
                   <span className="font-display text-xs font-semibold uppercase tracking-wider text-slate-200">
                     작업 기간
@@ -469,7 +599,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                     제목
                   </th>
                   <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
-                    금액 (VAT 포함)
+                    금액 (VAT 포함, 프로모션가)
                   </th>
                   <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
                     작업 기간
@@ -490,6 +620,11 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                     </th>
                     <td className="max-w-[220px] px-4 py-3.5 text-slate-300 sm:px-5">{pkg.title}</td>
                     <td className="whitespace-nowrap px-4 py-3.5 font-semibold text-white sm:px-5">
+                      {pkg.originalPriceWon && pkg.originalPriceWon > pkg.priceWon ? (
+                        <span className="mr-2 text-xs font-normal text-slate-500 line-through">
+                          {formatKrw(pkg.originalPriceWon)}
+                        </span>
+                      ) : null}
                       {formatKrw(pkg.priceWon)}
                     </td>
                     <td className="whitespace-nowrap px-4 py-3.5 text-slate-300 sm:px-5">{pkg.durationDays}일</td>

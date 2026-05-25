@@ -12,3 +12,6 @@ public/feed.xml
 
 # Local Netlify folder
 .netlify
+
+# TypeScript build cache
+tsconfig.tsbuildinfo
