@@ -16,7 +16,8 @@ export const metadata = {
 
 export default function ConsultationPage() {
   const site = getSite();
-  const bizEmail = site.email && String(site.email).includes('@') ? site.email : 'ceo@eternalsix.kr';
+  const bizEmail = site.email && String(site.email).includes('@') ? site.email : 'ceo@eternalsix.com';
+  const telHref = `tel:${String(site.tel || '010-8111-9370').replace(/-/g, '')}`;
 
   return (
     <>
@@ -29,8 +30,8 @@ export default function ConsultationPage() {
             <ul className="nav-links">
               <li><Link href="/">홈</Link></li>
               <li><Link href="/#faq">FAQ</Link></li>
-              <li><a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a></li>
-              <li><Link href="/consultation/" className="nav-cta">📋 상담 신청</Link></li>
+              <li><a href={telHref}>전화</a></li>
+              <li><a href={`mailto:${bizEmail}`} className="nav-cta">✉️ 이메일 문의</a></li>
             </ul>
           </div>
         </div>
@@ -54,7 +55,7 @@ export default function ConsultationPage() {
           <div className="apply-inner" style={{ maxWidth: 720 }}>
             <ConsultationForm />
             <p className="apply-alt" style={{ marginTop: 24 }}>
-              바로 상담을 원하시면 · <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a> · <a href={`mailto:${bizEmail}`}>이메일</a> · <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
+              바로 연결을 원하시면 · <a href={telHref}>전화 {site.tel}</a> · <a href={`mailto:${bizEmail}`}>이메일 {bizEmail}</a>
             </p>
           </div>
         </div>
@@ -65,14 +66,15 @@ export default function ConsultationPage() {
           <p className="footer-info" style={{ lineHeight: 1.85 }}>
             {site.company}
             <br />
-            대표자: 성아름 · 사업자등록번호: 303-28-65658
+            대표자: 성아름 · 사업자등록번호: 793-12-03247
             <br />
-            통신판매업: 제 2025-수원영통-1499호 · 연락처: {site.tel}
-            <br />
-            주소: 경기도 수원시 영통구 삼성로 186-1 4층 · 이메일:{' '}
+            연락처:{' '}
+            <a href={telHref} style={{ color: 'var(--text-dim)' }}>{site.tel}</a> · 이메일:{' '}
             <a href={`mailto:${bizEmail}`} style={{ color: 'var(--text-dim)' }}>
               {bizEmail}
             </a>
+            <br />
+            주소: 경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동)
           </p>
         </div>
       </footer>

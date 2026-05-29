@@ -25,9 +25,8 @@ export default function LandingPage({ slug }) {
           <h1><span className="g">{landing.keyword}</span><br />견적·상담 문의</h1>
           <p className="hero-desc">{landing.description}</p>
           <div className="hero-cta">
-            <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="btn-primary">카카오톡 상담</a>
+            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-primary">{site.tel} 전화 상담</a>
             <a href={`mailto:${site.email}`} className="btn-outline">이메일 문의</a>
-            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-outline">전화 문의</a>
           </div>
         </div>
       </section>
@@ -69,11 +68,10 @@ export default function LandingPage({ slug }) {
       <section className="cta">
         <div className="section-inner">
           <h2><span className="g">{landing.keyword}</span> 견적 문의</h2>
-          <p className="hero-desc">카카오톡·이메일·전화로 편하게 문의해 주세요.</p>
+          <p className="hero-desc">전화·이메일로 편하게 문의해 주세요.</p>
           <div className="cta-buttons">
-            <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="btn-primary">카카오톡 상담</a>
-            <a href={`mailto:${site.email}`} className="btn-outline">이메일</a>
-            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-outline">전화</a>
+            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-primary">{site.tel} 전화 상담</a>
+            <a href={`mailto:${site.email}`} className="btn-outline">이메일 문의</a>
           </div>
         </div>
       </section>
@@ -81,8 +79,7 @@ export default function LandingPage({ slug }) {
         <p>© 2026 {site.company} (REUMLAB). All Rights Reserved.</p>
         <div className="footer-links">
           <a href={`mailto:${site.email}`}>이메일</a>
-          <a href={`tel:${site.tel}`}>전화</a>
-          <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a>
+          <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
         </div>
       </footer>
     </div>

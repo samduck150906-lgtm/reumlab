@@ -35,10 +35,10 @@ export default function HubPage({ hubSlug }) {
       <section className="cta">
         <div className="section-inner">
           <h2>{hub.ko} 견적 문의</h2>
-          <p className="hero-desc">카카오톡으로 편하게 상담받아 보세요.</p>
+          <p className="hero-desc">전화·이메일로 편하게 상담받아 보세요.</p>
           <div className="cta-buttons">
-            <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="btn-primary">카카오톡 상담</a>
-            <Link href="/" className="btn-outline">메인으로</Link>
+            <a href={`tel:${String(site.tel || '').replace(/-/g, '')}`} className="btn-primary">{site.tel} 전화 상담</a>
+            <a href={`mailto:${site.email}`} className="btn-outline">이메일 문의</a>
           </div>
         </div>
       </section>
@@ -46,8 +46,7 @@ export default function HubPage({ hubSlug }) {
         <p>© 2026 {site.company} (REUMLAB). All Rights Reserved.</p>
         <div className="footer-links">
           <a href={`mailto:${site.email}`}>이메일</a>
-          <a href={`tel:${site.tel}`}>전화</a>
-          <a href={site.kakao} target="_blank" rel="noopener noreferrer">카카오톡</a>
+          <a href={`tel:${String(site.tel || '').replace(/-/g, '')}`}>전화</a>
         </div>
       </footer>
     </div>

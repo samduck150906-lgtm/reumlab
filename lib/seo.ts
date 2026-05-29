@@ -4,15 +4,14 @@ export const SITE = {
   domain: 'https://reumlab.com',
   defaultOgImage: 'https://reumlab.com/og-image.jpg',
   phone: '010-8111-9370',
-  address: '경기도 수원시 영통구 삼성로 186-1 4층',
-  email: 'ceo@eternalsix.kr',
-  /** 푸터·Organization JSON-LD */
-  kakao: 'https://open.kakao.com/o/sNAsri4h',
-  company: '이터널식스',
+  /** tel: 링크용 (하이픈 제거) */
+  phoneHref: 'tel:01081119370',
+  address: '경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동)',
+  email: 'ceo@eternalsix.com',
+  /** 문의는 전화·이메일로만 받습니다 */
+  company: '앱·웹개발 스튜디오 름랩',
   representative: '성아름',
-  bizNo: '303-28-65658',
-  /** 통신판매업 신고 */
-  mailOrderSalesNo: '제 2025-수원영통-1499호',
+  bizNo: '793-12-03247',
 };
 
 export interface PageSeo {

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const NOTIFY_EMAIL = 'samduck150906@gmail.com';
+const NOTIFY_EMAIL = 'ceo@eternalsix.com';
 
 function buildMailtoConsultation(fd) {
   const name = fd.get('name') || '';

@@ -16,12 +16,16 @@ export default function BusinessFooter({ topExtra }: Props) {
           <br />
           대표자: {SITE.representative} · 사업자등록번호: {SITE.bizNo}
           <br />
-          통신판매업: {SITE.mailOrderSalesNo} · 연락처: {SITE.phone}
-          <br />
-          주소: {SITE.address} · 이메일:{' '}
+          연락처:{' '}
+          <a href={SITE.phoneHref} style={{ color: 'var(--text-dim)' }}>
+            {SITE.phone}
+          </a>{' '}
+          · 이메일:{' '}
           <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>
             {SITE.email}
           </a>
+          <br />
+          주소: {SITE.address}
         </p>
       </div>
     </footer>

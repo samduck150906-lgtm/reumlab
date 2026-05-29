@@ -629,7 +629,7 @@ export default function HomePage({ site }) {
                 <div className="price-amount">300만원~</div>
                 <div className="price-period">약 7~10일</div>
                 <ul className="price-features">
-                  <li>로그인 / 회원가입</li><li>데이터베이스 설계</li><li>핵심 기능 1~3개 개발</li><li>기본 UI 제작</li><li>결제 연동 (Toss 등)</li><li>도메인 연결 &amp; 배포</li><li>2회 수정 포함</li>
+                  <li>로그인 / 회원가입</li><li>데이터베이스 설계</li><li>핵심 기능 1~3개 개발</li><li>기본 UI 제작</li><li>결제 연동</li><li>도메인 연결 &amp; 배포</li><li>2회 수정 포함</li>
                 </ul>
                 <Link href="/consultation/" className="price-btn price-btn-fill">상담하기</Link>
               </div>
@@ -746,12 +746,12 @@ export default function HomePage({ site }) {
       <footer className="footer">
         <div className="container">
           <p className="footer-info">
-            {site?.company || '이터널식스'} <span>|</span> 대표자: 성아름 <span>|</span> 사업자등록번호: 303-28-65658
+            {site?.company || '앱·웹개발 스튜디오 름랩'} <span>|</span> 대표자: 성아름 <span>|</span> 사업자등록번호: 793-12-03247
             <br />
-            통신판매업: 제 2025-수원영통-1499호 <span>|</span> 연락처: 010-8111-9370
+            연락처: 010-8111-9370
             <br />
-            주소: 경기도 수원시 영통구 삼성로 186-1 4층 <span>|</span> 이메일:{' '}
-            <a href="mailto:ceo@eternalsix.kr" style={{ color: 'var(--text-dim)' }}>ceo@eternalsix.kr</a>
+            주소: 경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동) <span>|</span> 이메일:{' '}
+            <a href="mailto:ceo@eternalsix.com" style={{ color: 'var(--text-dim)' }}>ceo@eternalsix.com</a>
           </p>
         </div>
       </footer>

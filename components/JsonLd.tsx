@@ -22,13 +22,13 @@ export function OrganizationJsonLd() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '삼성로 186-1 4층',
-      addressLocality: '수원시 영통구',
+      streetAddress: '인계로124번길 19, 12층 1208호',
+      addressLocality: '수원시 팔달구',
       addressRegion: '경기도',
       addressCountry: 'KR',
     },
     description: home.description,
-    sameAs: [SITE.kakao],
+    sameAs: [],
   };
 
   return (
@@ -79,7 +79,7 @@ export function ReumHomeGraphJsonLd() {
       url: SITE.domain + '/',
       logo: SITE.defaultOgImage,
       description: home.description,
-      sameAs: [SITE.kakao],
+      sameAs: [],
     },
     {
       '@type': 'LocalBusiness',

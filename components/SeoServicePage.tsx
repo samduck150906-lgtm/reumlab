@@ -36,11 +36,11 @@ export default function SeoServicePage({ seo }: { seo: PageSeo }) {
             ))}
           </div>
           <div className="hero-btns" style={{ flexWrap: 'wrap' }}>
-            <Link href="/consultation/" className="btn-primary">
-              📋 무료 상담 신청
-            </Link>
-            <a href={SITE.kakao} target="_blank" rel="noopener noreferrer" className="btn-secondary">
-              💬 카카오톡 문의
+            <a href={SITE.phoneHref} className="btn-primary">
+              📞 {SITE.phone} 전화 상담
+            </a>
+            <a href={`mailto:${SITE.email}`} className="btn-secondary">
+              ✉️ 이메일 문의
             </a>
             <Link href="/portfolio/" className="btn-secondary">
               포트폴리오 보기
@@ -76,12 +76,12 @@ export default function SeoServicePage({ seo }: { seo: PageSeo }) {
           <p className="footer-info">
             {SITE.company} <span>|</span> 대표자: {SITE.representative} <span>|</span> 사업자등록번호: {SITE.bizNo}
             <br />
-            통신판매업: {SITE.mailOrderSalesNo} <span>|</span> 연락처: {SITE.phone}
+            연락처:{' '}
+            <a href={SITE.phoneHref} style={{ color: 'var(--text-dim)' }}>{SITE.phone}</a> <span>|</span>{' '}
+            이메일:{' '}
+            <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>{SITE.email}</a>
             <br />
-            주소: {SITE.address} <span>|</span>{' '}
-            <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>
-              이메일: {SITE.email}
-            </a>
+            주소: {SITE.address}
           </p>
         </div>
       </footer>

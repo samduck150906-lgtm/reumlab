@@ -41,7 +41,7 @@ export default function LandingRoute({ params }) {
             <li><Link href={`/h/${landing.hubId}/`}>더보기</Link></li>
             <li><Link href="/#faq">FAQ</Link></li>
           </ul>
-          <a href={site.kakao} target="_blank" rel="noopener noreferrer" className="contact-btn">문의하기</a>
+          <a href={`tel:${String(site.tel || '').replace(/-/g, '')}`} className="contact-btn">전화 문의</a>
         </div>
       </nav>
       <LandingPage slug={params.slug} />
