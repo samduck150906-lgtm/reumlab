@@ -13,7 +13,7 @@ const home = PAGE_SEO_MAP[''];
 
 const googleVer = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 /** ?ㅼ씠踰??쒖튂?대뱶諛붿씠? ?ъ씠???뚯쑀 ?뺤씤 */
-const NAVER_SITE_VERIFICATION = 'ce34d37949725f395c5091f3180d4eb36befb0d9';
+const NAVER_SITE_VERIFICATION = '651783cd19f26e41ad3c77876597082cd6ec823e';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
