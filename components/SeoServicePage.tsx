@@ -42,9 +42,6 @@ export default function SeoServicePage({ seo }: { seo: PageSeo }) {
             <a href={`mailto:${SITE.email}`} className="btn-secondary">
               ✉️ 이메일 문의
             </a>
-            <Link href="/portfolio/" className="btn-secondary">
-              포트폴리오 보기
-            </Link>
           </div>
         </div>
       </section>

@@ -20,7 +20,6 @@ export default function Nav({ site }) {
     { href: '/#process', label: '진행', a: 'nav_process' },
     { href: '/#pricing', label: '패키지', a: 'nav_pricing' },
     { href: '/#prepare', label: '준비', a: 'nav_prepare' },
-    { href: '/portfolio/', label: '포트폴리오', a: 'nav_portfolio' },
     { href: '/blog/', label: '블로그', a: 'nav_blog' },
     { href: '/#faq', label: 'FAQ', a: 'nav_faq' },
   ];
@@ -72,7 +71,6 @@ export default function Nav({ site }) {
         <Link href="/#process" onClick={closeMobile} data-analytics="nav_m_process">진행 절차</Link>
         <Link href="/#pricing" onClick={closeMobile} data-analytics="nav_m_pricing">패키지</Link>
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
-        <Link href="/portfolio/" onClick={closeMobile} data-analytics="nav_m_portfolio">포트폴리오</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
         <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_consult">

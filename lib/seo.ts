@@ -160,18 +160,6 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
 
 export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter((s) => s !== '');
 
-/** 정적 라우트 /portfolio 전용 */
-export const PORTFOLIO_SEO: PageSeo = {
-  title: '개발 포트폴리오·레퍼런스 | 름랩 (REUMLAB)',
-  description:
-    '앱·웹 개발 레퍼런스. Flutter, React Native, Next.js 기반 대규모 매칭·SaaS·예약 시스템 등 실제 프로젝트 사례.',
-  keywords: ['개발 포트폴리오', '앱 포트폴리오', '웹 제작 사례', '외주 레퍼런스', '름랩'],
-  ogTitle: '개발 포트폴리오 | 름랩',
-  ogDescription: '앱·웹 실전 프로젝트 레퍼런스를 확인하세요.',
-  h1: '앱·웹 개발 포트폴리오',
-  canonical: 'https://reumlab.com/portfolio',
-};
-
 export function getSeoBySlug(slug: string): PageSeo | undefined {
   return PAGE_SEO_MAP[slug];
 }

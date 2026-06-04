@@ -310,10 +310,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             <ContactButtons variant="dark" mailSubject="[름랩] 앱·웹 개발 문의" />
           </div>
           <p className="mt-5 text-center text-xs text-slate-400">
-            상담은 무료입니다 · 평일 10:00–18:00 ·{' '}
-            <Link href="/portfolio/" className="text-sky-300 underline-offset-2 hover:underline" data-analytics="cta_hero_portfolio">
-              먼저 포트폴리오부터 보기
-            </Link>
+            상담은 무료입니다 · 평일 10:00–18:00
           </p>
           <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-4 border-t border-white/10 pt-10 sm:grid-cols-4 sm:gap-6">
             <div className="text-center sm:text-left">

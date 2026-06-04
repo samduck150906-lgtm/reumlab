@@ -1,6 +1,5 @@
 import type { PageSeo } from '@/lib/seo';
 import type { BlogPost } from '@/lib/blog-posts';
-import type { PortfolioCase } from '@/lib/portfolio-cases';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
 export function OrganizationJsonLd() {
@@ -66,7 +65,7 @@ export function BreadcrumbJsonLd({ slug }: { slug: string }) {
   );
 }
 
-/** /portfolio 등 PAGE_SEO_MAP 밖 페이지 */
+/** PAGE_SEO_MAP 밖 페이지 */
 /** 홈: Organization + LocalBusiness + 교육/개발 서비스(ProfessionalService) 그래프 */
 export function ReumHomeGraphJsonLd() {
   const home = PAGE_SEO_MAP[''];
@@ -145,26 +144,6 @@ export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     keywords: post.keywords.join(', '),
     inLanguage: 'ko-KR',
-  };
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
-  );
-}
-
-export function PortfolioCreativeWorkJsonLd({ item, url }: { item: PortfolioCase; url: string }) {
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'CreativeWork',
-    name: item.title,
-    description: item.summary,
-    url,
-    inLanguage: 'ko-KR',
-    keywords: item.stack.join(', '),
-    creator: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.domain + '/',
-    },
   };
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />

@@ -17,7 +17,6 @@ const clusters = JSON.parse(fs.readFileSync(path.join(contentDir, 'clusters.json
 const { site } = templates;
 const faqPool = templates.faqPool || [];
 const reviewPool = templates.reviewPool || [];
-const portfolioPool = templates.portfolioPool || [];
 const pricingSnippets = templates.pricingSnippets || {};
 const BASE = site.url;
 const OG_IMAGE = site.ogImage || '';
@@ -57,24 +56,6 @@ function pickReviews(slug, n = 3) {
   return [...new Set(indices)].slice(0, n).map((i) => reviewPool[i]).filter(Boolean);
 }
 
-function pickPortfolios(landing, n = 3) {
-  if (!portfolioPool.length) return [];
-  const serviceType = landing.serviceKey && SERVICE_TO_PRICING_KEY[landing.serviceKey] || null;
-  const hub = clusters[landing.hubId];
-  const industry = hub && hub.type === 'industry' ? landing.hubId : null;
-  let pool = portfolioPool.filter((p) => p.serviceType === serviceType);
-  if (industry && pool.length > 0) {
-    const byIndustry = pool.filter((p) => p.industry === industry || !p.industry);
-    if (byIndustry.length > 0) pool = byIndustry;
-  }
-  if (pool.length === 0) pool = portfolioPool.filter((p) => p.serviceType === serviceType || !p.serviceType);
-  if (pool.length === 0) pool = portfolioPool;
-  const h = hash(landing.slug + 'p');
-  const indices = [];
-  for (let i = 0; i < n; i++) indices.push((h + i * 13) % pool.length);
-  return [...new Set(indices)].slice(0, n).map((i) => pool[i]).filter(Boolean);
-}
-
 function escapeHtml(s) {
   if (!s) return '';
   return String(s)
@@ -88,7 +69,6 @@ function landingHtml(landing) {
   const url = `${BASE}/l/${landing.slug}/`;
   const faqs = pickFaqs(landing.slug);
   const reviews = pickReviews(landing.slug);
-  const portfolios = pickPortfolios(landing, 3);
   const pricingSnippet = getPricingSnippet(landing);
 
   const jsonLd = {
@@ -224,13 +204,6 @@ function landingHtml(landing) {
     .review { background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; margin-bottom: 12px; border: 1px solid var(--border-subtle); }
     .review p { color: var(--text-secondary); margin-bottom: 8px; }
     .review .author { font-size: 0.85rem; color: var(--text-muted); }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-    .portfolio-card { background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle); }
-    .portfolio-image { aspect-ratio: 16/9; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; }
-    .portfolio-image img { width: 100%; height: 100%; object-fit: cover; }
-    .portfolio-placeholder { font-size: 0.85rem; color: var(--text-muted); }
-    .portfolio-title { font-size: 1rem; font-weight: 600; padding: 14px 16px 0; margin-bottom: 6px; }
-    .portfolio-desc { font-size: 0.9rem; color: var(--text-secondary); padding: 0 16px 16px; line-height: 1.5; }
     .cta { text-align: center; padding: 60px 5%; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%); }
     .cta h2 { font-size: clamp(1.25rem, 4vw, 1.5rem); margin-bottom: 12px; }
     .cta .g { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }

@@ -65,12 +65,6 @@ const STATIC_PAGES = [
       'CRM, 사내 시스템, 관리자 웹 고도화. 기존 데이터를 통합하여 업무 효율을 혁신합니다.',
   },
   {
-    url: `${DOMAIN}/portfolio/`,
-    title: '개발 포트폴리오·레퍼런스 | 름랩 (REUMLAB)',
-    description:
-      '앱·웹 개발 레퍼런스. Flutter, React Native, Next.js 기반 대규모 매칭·SaaS·예약 시스템 등 실제 프로젝트 사례.',
-  },
-  {
     url: `${DOMAIN}/consultation/`,
     title: '프로젝트 상담 신청 | 름랩 (REUMLAB)',
     description: '웹·앱 개발 상담 및 견적 문의. 름랩에 프로젝트를 맡겨 주세요.',
@@ -124,7 +118,7 @@ function main() {
 
   const channelTitle = '름랩 REUMLAB';
   const channelDesc =
-    '웹·앱 개발 전문 에이전시 름랩의 서비스 페이지, SEO 랜딩, 포트폴리오 갱신 피드입니다.';
+    '웹·앱 개발 전문 에이전시 름랩의 서비스 페이지, SEO 랜딩 갱신 피드입니다.';
   const channelLink = `${DOMAIN}/`;
 
   const itemXml = items
