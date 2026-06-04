@@ -7,6 +7,7 @@ Thumbs.db
 node_modules
 .next
 out
+tsconfig.tsbuildinfo
 # 빌드 시 재생성 (랜딩 수만큼 커짐)
 public/feed.xml
 
