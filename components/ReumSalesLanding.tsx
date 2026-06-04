@@ -297,14 +297,14 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             Reum Lab · 름랩
           </p>
           <h1 className="mx-auto mt-6 max-w-4xl text-center font-display text-[1.7rem] font-bold leading-snug tracking-tight text-white sm:text-4xl sm:leading-tight lg:text-[2.7rem]">
-            앱·웹은 만드는 것보다
+            예산 안에서, 빠르게 MVP.
             <span className="mt-2 block text-slate-200 sm:mt-3">
-              <span className="text-sky-300">끌려다니지 않고 굴리는 것</span>이 더 어렵습니다.
+              <span className="text-sky-300">소스코드는 통째로</span> 대표님 것입니다.
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-slate-300 sm:text-lg">
-            글자 하나 바꾸는 데 외주사 회신만 며칠. 름랩은 만들어 드리는 데서 끝내지 않고,
-            <strong className="font-semibold text-white"> 대표님이 직접 수정·운영하는 법까지 1:1로 가르칩니다.</strong>
+            Flutter로 iOS·안드로이드를 한 번에. 가격은 먼저 공개하고, 결과물은 소스코드까지 전부 넘깁니다.
+            <strong className="font-semibold text-white"> 게다가 직접 수정·운영하는 법까지 1:1로 알려드립니다.</strong>
           </p>
           <div className="mt-10 flex justify-center">
             <ContactButtons variant="dark" mailSubject="[름랩] 앱·웹 개발 문의" />
@@ -315,18 +315,22 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               먼저 포트폴리오부터 보기
             </Link>
           </p>
-          <dl className="mx-auto mt-16 grid max-w-3xl grid-cols-1 gap-4 border-t border-white/10 pt-10 sm:grid-cols-3 sm:gap-6">
+          <dl className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-4 border-t border-white/10 pt-10 sm:grid-cols-4 sm:gap-6">
             <div className="text-center sm:text-left">
-              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">납품 방식</dt>
+              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">개발</dt>
+              <dd className="mt-1 text-sm font-medium text-white">Flutter로 iOS·안드로이드 동시</dd>
+            </div>
+            <div className="text-center sm:text-left">
+              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">납품</dt>
               <dd className="mt-1 text-sm font-medium text-white">소스코드 전체 이관</dd>
             </div>
             <div className="text-center sm:text-left">
-              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">교육</dt>
-              <dd className="mt-1 text-sm font-medium text-white">교육공학 석사 대표 직강</dd>
+              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">가격</dt>
+              <dd className="mt-1 text-sm font-medium text-white">VAT 포함 정액 선공개</dd>
             </div>
             <div className="text-center sm:text-left">
-              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">개발</dt>
-              <dd className="mt-1 text-sm font-medium text-white">Flutter · AI 보조 개발</dd>
+              <dt className="font-display text-xs font-medium uppercase tracking-wider text-slate-400">보너스</dt>
+              <dd className="mt-1 text-sm font-medium text-white">직접 수정 1:1 교육</dd>
             </div>
           </dl>
         </div>
@@ -383,21 +387,21 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="름랩이 다른 점"
-            title="‘만들어 드립니다’가 아니라 ‘직접 굴리게 해드립니다’"
-            description="기술을 대신 떠안는 팀이 아니라, 대표님의 서비스가 스스로 돌아가는 상태를 만들어 두고 떠나는 팀입니다."
+            title="빠른 MVP, 통째로 넘기는 소스코드 — 그리고 보너스"
+            description="같은 예산으로 더 빨리 출시하고, 결과물의 소유권은 처음부터 대표님께 둡니다. 직접 운영하는 법까지 가르치는 건 덤입니다."
           />
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            <FeatureCard icon={<IconGraduate className="h-6 w-6" />} title="교육공학 석사가 직접 가르칩니다">
-              ‘가르치는 일’을 전공한 대표가 직접 진행합니다. 코딩을 몰라도 AI 도구를 보조 개발자처럼 부리고,
-              말로 코드를 고치는 흐름을 — 암기가 아니라 ‘운영 감각’으로 익히게 합니다.
-            </FeatureCard>
-            <FeatureCard icon={<IconDevices className="h-6 w-6" />} title="한 번에 안드로이드 · iOS">
+            <FeatureCard icon={<IconDevices className="h-6 w-6" />} title="한 번에 안드로이드 · iOS, 빠른 MVP">
               Flutter로 두 플랫폼을 한 코드로 만듭니다. 시장 검증에 필요한 핵심 기능부터 단단하게 잡아,
-              같은 예산으로 더 빠르고 안정적인 MVP를 완성합니다.
+              같은 예산으로 더 빠르고 안정적으로 출시합니다.
             </FeatureCard>
-            <FeatureCard icon={<IconShield className="h-6 w-6" />} title="매달 나가던 수정비를 0에 가깝게">
-              글자·이미지 교체, 간단한 오류 대응을 직접 하실 수 있게 됩니다. 외주 의존도가 내려가는 만큼
-              고정비가 줄고, 대표님은 비즈니스 본질에만 집중할 수 있습니다.
+            <FeatureCard icon={<IconShield className="h-6 w-6" />} title="소스코드를 통째로, 권한은 대표님 것">
+              결과물만이 아니라 소스코드 전체를 넘깁니다. 다른 곳에 맡기든 직접 고치든, 처음부터 대표님 자산입니다.
+              외주에 묶이지 않습니다.
+            </FeatureCard>
+            <FeatureCard icon={<IconGraduate className="h-6 w-6" />} title="게다가, 직접 고치는 법까지 1:1로">
+              교육공학 석사 대표가 직접 가르칩니다. 코딩을 몰라도 AI 도구를 보조 개발자처럼 부려 글자·이미지 교체부터
+              간단한 수정까지 직접 — 매달 나가던 수정비를 0에 가깝게 줄입니다.
             </FeatureCard>
           </div>
         </div>
@@ -615,6 +619,13 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             상담은 무료이고, 영업 전화로 괴롭히지 않습니다.
           </p>
           <ContactButtons mailSubject="[름랩] 앱·웹 개발 문의" />
+          <p className="text-sm text-slate-600">
+            통화가 부담되시면{' '}
+            <Link href="/consultation/" className="font-semibold text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_strip_form">
+              상담 신청서를 남겨 주세요
+            </Link>
+            . 영업일 기준 24시간 내 연락드립니다.
+          </p>
           <p className="text-xs text-slate-500">전화 {SITE.phone} · 이메일 {SITE.email} · 평일 10:00–18:00</p>
         </div>
       </section>

@@ -56,6 +56,31 @@ export default function PortfolioPage() {
                 메인으로
               </Link>
             </div>
+            <ul
+              style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: '36px 0 0',
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '12px 28px',
+              }}
+            >
+              {[
+                ['납품', '소스코드 전체 이관'],
+                ['개발', 'Flutter · iOS·안드로이드 동시'],
+                ['가격', 'VAT 포함 정액 선공개'],
+                ['보안', 'NDA 준수 · 클라이언트명 비공개'],
+              ].map(([k, v]) => (
+                <li key={k} style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span className="mono" style={{ fontSize: 11, color: 'var(--green)' }}>{k}</span>
+                  <span style={{ fontSize: 14, fontWeight: 600 }}>{v}</span>
+                </li>
+              ))}
+            </ul>
+            <p style={{ marginTop: 16, fontSize: 12, color: 'var(--text-dim)', maxWidth: 620 }}>
+              ※ 클라이언트와의 비밀유지(NDA)로 실명·로고는 비공개합니다. 정량 성과 지표는 고객 동의 후 순차 공개 예정입니다.
+            </p>
           </div>
         </section>
 
@@ -69,7 +94,10 @@ export default function PortfolioPage() {
                 if (!c) return null;
                 return (
                   <Link key={slug} href={`/portfolio/${slug}/`} className="svc rv" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                    <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--text-dim)' }}>
+                      {c.clientLabel}
+                    </span>
+                    <h3 className="svc-title" style={{ fontSize: '1.15rem', marginTop: 6 }}>
                       {c.title}
                     </h3>
                     <p className="svc-desc">{c.summary}</p>
@@ -96,7 +124,10 @@ export default function PortfolioPage() {
                 if (!c) return null;
                 return (
                   <Link key={slug} href={`/portfolio/${slug}/`} className="svc rv" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-                    <h3 className="svc-title" style={{ fontSize: '1.15rem' }}>
+                    <span className="mono" style={{ fontSize: 11, color: 'var(--text-dim)' }}>
+                      {c.clientLabel}
+                    </span>
+                    <h3 className="svc-title" style={{ fontSize: '1.15rem', marginTop: 6 }}>
                       {c.title}
                     </h3>
                     <p className="svc-desc">{c.summary}</p>

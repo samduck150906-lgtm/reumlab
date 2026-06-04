@@ -6,6 +6,7 @@ import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import { Analytics } from '../components/Analytics';
 import { AnalyticsDataLayer } from '../components/AnalyticsDataLayer';
+import FloatingContact from '../components/FloatingContact';
 import { getSite } from '../lib/data';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <AnalyticsDataLayer />
         <Nav site={site} />
         {children}
+        <FloatingContact />
       </body>
     </html>
   );

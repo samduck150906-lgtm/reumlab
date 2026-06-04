@@ -80,7 +80,7 @@ export default function PortfolioCasePage({ params }: Props) {
               {item.summary}
             </p>
             <p className="mono" style={{ marginTop: 12, fontSize: 12, color: 'var(--green)' }}>
-              {item.role}
+              {item.role} · {item.clientLabel}
             </p>
             <ul className="web-card-taglist" style={{ marginTop: 16 }}>
               {item.stack.map((t) => (
@@ -95,7 +95,37 @@ export default function PortfolioCasePage({ params }: Props) {
         <section className="sec sec-cream">
           <div className="container">
             <div className="section-inner">
-              <h2 className="section-title">상세</h2>
+              <dl style={{ display: 'grid', gap: 20, marginBottom: 8 }}>
+                <div>
+                  <dt className="mono" style={{ fontSize: 12, color: 'var(--green)', marginBottom: 6 }}>문제</dt>
+                  <dd className="hub-intro" style={{ margin: 0 }}>{item.problem}</dd>
+                </div>
+                <div>
+                  <dt className="mono" style={{ fontSize: 12, color: 'var(--green)', marginBottom: 6 }}>우리가 만든 것</dt>
+                  <dd className="hub-intro" style={{ margin: 0 }}>{item.built}</dd>
+                </div>
+                <div>
+                  <dt className="mono" style={{ fontSize: 12, color: 'var(--green)', marginBottom: 6 }}>결과</dt>
+                  <dd className="hub-intro" style={{ margin: 0 }}>{item.result}</dd>
+                </div>
+              </dl>
+
+              {item.clientNote ? (
+                <blockquote
+                  style={{
+                    margin: '24px 0 0',
+                    padding: '16px 20px',
+                    borderLeft: '3px solid var(--green)',
+                    background: 'rgba(58,140,92,.06)',
+                    borderRadius: 8,
+                    fontStyle: 'italic',
+                  }}
+                >
+                  “{item.clientNote}”
+                </blockquote>
+              ) : null}
+
+              <h2 className="section-title" style={{ marginTop: 36 }}>상세</h2>
               {item.paragraphs.map((p, i) => (
                 <p key={i} className="hub-intro" style={{ marginTop: 16 }}>
                   {p}
