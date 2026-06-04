@@ -13,7 +13,7 @@ import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 const home = PAGE_SEO_MAP[''];
 
 const googleVer = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-/** ?ㅼ씠踰??쒖튂?대뱶諛붿씠? ?ъ씠???뚯쑀 ?뺤씤 */
+/** 네이버 서치어드바이저 사이트 소유 확인 */
 const NAVER_SITE_VERIFICATION = '651783cd19f26e41ad3c77876597082cd6ec823e';
 
 export const metadata: Metadata = {
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="由꾨옪 REUMLAB RSS"
+          title="름랩 REUMLAB RSS"
           href={`${SITE.domain}/feed.xml`}
         />
       </head>

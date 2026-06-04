@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { getLandings, getLandingBySlug, getSite } from '../../../lib/data';
+import { getLandings, getLandingBySlug, getHubBySlug, getSite } from '../../../lib/data';
 import LandingPage from '../../../components/LandingPage';
+import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -31,8 +32,22 @@ export default function LandingRoute({ params }) {
   const landing = getLandingBySlug(params.slug);
   if (!landing) return null;
 
+  const url = `${BASE}/l/${params.slug}/`;
+  const hub = landing.hubId ? getHubBySlug(landing.hubId) : null;
+  const crumbs = [
+    { name: '홈', url: `${BASE}/` },
+    ...(hub ? [{ name: hub.ko, url: `${BASE}/h/${landing.hubId}/` }] : []),
+    { name: landing.keyword || landing.title, url },
+  ];
+
   return (
     <>
+      <LandingServiceJsonLd
+        name={landing.title}
+        description={landing.description}
+        url={url}
+        crumbs={crumbs}
+      />
       <nav className="dynamic-nav">
         <div className="dynamic-nav-inner">
           <Link href="/" className="logo">REUMLAB</Link>

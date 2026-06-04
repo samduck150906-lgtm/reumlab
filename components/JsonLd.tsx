@@ -89,8 +89,8 @@ export function ReumHomeGraphJsonLd() {
       email: SITE.email,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '삼성로 186-1 4층',
-        addressLocality: '수원시 영통구',
+        streetAddress: '인계로124번길 19, 12층 1208호',
+        addressLocality: '수원시 팔달구',
         addressRegion: '경기도',
         addressCountry: 'KR',
       },
@@ -164,6 +164,58 @@ export function BreadcrumbJsonLdCustom({ seo }: { seo: PageSeo }) {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+/** 프로그래매틱 랜딩·허브 페이지용 ProfessionalService + BreadcrumbList 그래프 */
+export function LandingServiceJsonLd({
+  name,
+  description,
+  url,
+  crumbs,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  crumbs: { name: string; url: string }[];
+}) {
+  const graph = [
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${url}#service`,
+      name,
+      description,
+      url,
+      image: SITE.defaultOgImage,
+      telephone: SITE.phone,
+      email: SITE.email,
+      areaServed: 'KR',
+      priceRange: '₩₩',
+      provider: { '@id': `${SITE.domain}/#organization` },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '인계로124번길 19, 12층 1208호',
+        addressLocality: '수원시 팔달구',
+        addressRegion: '경기도',
+        addressCountry: 'KR',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    },
+  ];
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }

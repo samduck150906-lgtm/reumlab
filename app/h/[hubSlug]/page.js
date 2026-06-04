@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getClusters, getHubBySlug, getSite } from '../../../lib/data';
 import HubPage from '../../../components/HubPage';
+import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -30,8 +31,21 @@ export async function generateMetadata({ params }) {
 
 export default function HubRoute({ params }) {
   const site = getSite();
+  const hub = getHubBySlug(params.hubSlug);
+  const url = `${BASE}/h/${params.hubSlug}/`;
   return (
     <>
+      {hub ? (
+        <LandingServiceJsonLd
+          name={`${hub.ko} | 름랩 REUMLAB`}
+          description={`${hub.ko} 견적·외주 - 름랩 앱·웹 개발 전문. 키워드별 상담 페이지 모음.`}
+          url={url}
+          crumbs={[
+            { name: '홈', url: `${BASE}/` },
+            { name: hub.ko, url },
+          ]}
+        />
+      ) : null}
       <nav className="dynamic-nav">
         <div className="dynamic-nav-inner">
           <Link href="/" className="logo">REUMLAB</Link>
