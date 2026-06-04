@@ -2,516 +2,457 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>름랩 (REUMLAB) | 프리미엄 웹·앱 에이전시</title>
-<meta name="description" content="고난도 앱 개발, 비즈니스 웹사이트, 서비스 기획부터 배포까지. 실력 있는 개발 에이전시 름랩입니다.">
-<meta property="og:title" content="름랩 (REUMLAB) | 프리미엄 웹·앱 에이전시">
-<meta property="og:description" content="고난도 앱 개발, 비즈니스 웹사이트, 서비스 기획부터 배포까지. 실력 있는 개발 에이전시 름랩입니다.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://reumlab.com/">
-<meta property="og:image" content="https://reumlab.com/og-default.png">
-<meta name="theme-color" content="#162b1e">
-<link rel="canonical" href="https://reumlab.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f4f1e8;--bg-warm:#faf7ef;--bg-cream:#fdf9f0;--bg-card:#fff;--bg-card-alt:#eee9dc;
-  --bg-dark:#162b1e;--bg-dark2:#1e3828;--bg-dark-card:#24422e;
-  --green:#3a8c5c;--green-light:#5aad7a;--green-deep:#1f5c38;--green-dim:rgba(58,140,92,.08);--green-glow:rgba(58,140,92,.14);
-  --pearl:#7ec49a;--pearl-light:#a8d8b8;--pearl-soft:#d0ecda;
-  --sun:#dbc06e;--sun-warm:#e8d48a;--sun-dim:rgba(219,192,110,.1);
-  --beige:#ddd0b5;--beige-warm:#c8b899;
-  --text:#1a2e20;--text-sub:#4a6050;--text-dim:#7a9080;
-  --text-light:#eaf2ec;--text-light-sub:rgba(234,242,236,.7);
-  --border:rgba(58,140,92,.1);--border-hover:rgba(58,140,92,.25);
-  --radius:20px;--radius-sm:12px;
-  --grad:linear-gradient(135deg,#3a8c5c,#5aad7a,#7ec49a);
-  --grad-warm:linear-gradient(135deg,#3a8c5c,#dbc06e);
-}
-a:focus-visible,button:focus-visible{outline:2px solid var(--green);outline-offset:3px}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{font-family:'Noto Sans KR','Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-::selection{background:var(--green);color:#fff}
-a{color:inherit;text-decoration:none}
-.en{font-family:'Plus Jakarta Sans','Noto Sans KR',sans-serif}
-.mono{font-family:'JetBrains Mono',monospace}
-.container{max-width:1200px;margin:0 auto;padding:0 28px}
-.rv{opacity:0;transform:translateY(36px);transition:all .8s cubic-bezier(.16,1,.3,1)}.rv.vis{opacity:1;transform:none}
-.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}
-.sec{padding:120px 0;position:relative}
-.sec-dark{background:var(--bg-dark);color:var(--text-light)}
-.sec-dark2{background:var(--bg-dark2);color:var(--text-light)}
-.sec-warm{background:var(--bg-warm)}
-.sec-cream{background:var(--bg-cream)}
-.sec-label{font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:inline-flex;align-items:center;gap:10px}
-.sec-label::before{content:'';width:24px;height:1.5px;background:var(--green)}
-.sec-dark .sec-label,.sec-dark2 .sec-label{color:var(--pearl-light)}
-.sec-dark .sec-label::before,.sec-dark2 .sec-label::before{background:var(--pearl-light)}
-.sec-title{font-family:'Plus Jakarta Sans','Noto Sans KR',sans-serif;font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-1.5px;line-height:1.15;margin-bottom:18px}
-.sec-dark .sec-title,.sec-dark2 .sec-title{color:var(--text-light)}
-.sec-desc{font-size:17px;color:var(--text-sub);max-width:560px;line-height:1.8}
-.sec-dark .sec-desc,.sec-dark2 .sec-desc{color:var(--text-light-sub)}
-.sec-center{text-align:center}.sec-center .sec-desc{margin:0 auto}
-.gradient-text{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--grad);color:#fff;font-size:16px;font-weight:700;padding:18px 38px;border-radius:14px;transition:all .4s;box-shadow:0 12px 36px rgba(58,140,92,.2);border:none;cursor:pointer;font-family:inherit}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(58,140,92,.3)}
-.btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;border:2px solid var(--green);color:var(--green);font-size:16px;font-weight:600;padding:16px 36px;border-radius:14px;transition:all .3s;cursor:pointer;font-family:inherit}
-.btn-secondary:hover{background:var(--green-dim);border-color:var(--green-deep)}
-.btn-light{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;font-size:15px;font-weight:600;padding:15px 32px;border-radius:14px;display:inline-flex;align-items:center;gap:10px;transition:all .3s;cursor:pointer;font-family:inherit}
-.btn-light:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.3)}
-
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:18px 0;transition:all .4s;background:rgba(244,241,232,.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent}
-.nav.scrolled{padding:12px 0;background:rgba(244,241,232,.95);border-color:var(--border)}
-.nav-inner{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:24px;font-weight:800;letter-spacing:-1px}
-.nav-logo span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
-.nav-links a{color:var(--text-sub);font-size:13px;font-weight:500;transition:color .3s}
-.nav-links a:hover{color:var(--green)}
-.nav-cta{background:var(--grad)!important;color:#fff!important;padding:10px 22px;border-radius:100px;font-weight:700!important;font-size:12px!important;transition:all .3s}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(58,140,92,.25)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px}
-.mobile-menu{display:none;position:fixed;inset:0;background:rgba(244,241,232,.98);z-index:2000;flex-direction:column;align-items:center;justify-content:center;gap:26px}
-.mobile-menu.open{display:flex}
-.mobile-menu a{font-size:20px;font-weight:700;color:var(--text-sub)}.mobile-menu a:hover{color:var(--green)}
-.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;font-size:32px;cursor:pointer;color:var(--text)}
-
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 80px;background:linear-gradient(170deg,#f4f1e8 0%,#e8f0e0 25%,#dce9d0 50%,#d0e2c4 80%,#c8ddb8 100%)}
-.hero-glow{position:absolute;border-radius:50%;filter:blur(120px);pointer-events:none}
-.hero-glow-1{width:600px;height:600px;background:radial-gradient(circle,rgba(58,140,92,.1),transparent 70%);top:-10%;right:-8%;animation:gF 22s ease-in-out infinite}
-.hero-glow-2{width:400px;height:400px;background:radial-gradient(circle,rgba(219,192,110,.1),transparent 70%);bottom:0;left:-5%;animation:gF 22s ease-in-out infinite -8s}
-.hero-glow-3{width:280px;height:280px;background:radial-gradient(circle,rgba(126,196,154,.07),transparent 70%);top:35%;left:40%;animation:gF 22s ease-in-out infinite -15s}
-@keyframes gF{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-25px) scale(1.04)}66%{transform:translate(-12px,15px) scale(.96)}}
-.hero-leaf{position:absolute;opacity:.12;animation:leafD linear infinite}
-@keyframes leafD{0%{transform:translateY(-20px) rotate(0deg);opacity:0}10%{opacity:.12}90%{opacity:.08}100%{transform:translateY(100vh) rotate(360deg);opacity:0}}
-.hero-content{position:relative;z-index:10;text-align:center;max-width:840px;margin:0 auto}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.6);border:1px solid rgba(58,140,92,.12);padding:10px 22px;border-radius:100px;font-size:13px;font-weight:600;color:var(--green);margin-bottom:28px;backdrop-filter:blur(8px)}
-.hero-badge-dot{width:7px;height:7px;background:var(--green-light);border-radius:50%;animation:dotP 2.5s infinite}
-@keyframes dotP{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.4)}}
-.hero-title{font-family:'Plus Jakarta Sans','Noto Sans KR',sans-serif;font-size:clamp(42px,8vw,86px);font-weight:800;line-height:1.08;letter-spacing:-3px;margin-bottom:24px;color:var(--bg-dark)}
-.hero-title .outline{-webkit-text-stroke:1.5px var(--green);-webkit-text-fill-color:transparent}
-.hero-sub{font-size:clamp(16px,2.2vw,20px);color:var(--text-sub);margin-bottom:36px;line-height:1.75}
-.hero-sub strong{color:var(--green-deep);font-weight:700}
-.hero-tags{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-.hero-tag{background:rgba(255,255,255,.6);border:1px solid var(--border);padding:12px 22px;border-radius:100px;font-size:14px;font-weight:500;color:var(--text-sub);transition:all .35s;backdrop-filter:blur(8px)}
-.hero-tag:hover{background:var(--green-dim);border-color:var(--green);color:var(--green);transform:translateY(-3px)}
-.hero-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about-text h3{font-size:26px;font-weight:700;margin-bottom:16px;line-height:1.4;color:var(--bg-dark)}
-.about-text p{color:var(--text-sub);font-size:15px;line-height:1.85;margin-bottom:12px}
-.about-text .hl{color:var(--green);font-weight:700}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.stat-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 18px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
-.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0;transition:opacity .3s}
-.stat-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 14px 36px rgba(58,140,92,.07)}.stat-card:hover::before{opacity:1}
-.stat-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;margin-bottom:4px}
-.stat-num .counter{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat-label{font-size:12px;color:var(--text-dim)}
-
-/* SERVICES */
-.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
-.svc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:38px;position:relative;overflow:hidden;transition:all .4s}
-.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0;transition:opacity .3s}
-.svc:hover{transform:translateY(-5px);border-color:var(--border-hover);box-shadow:0 20px 48px rgba(58,140,92,.08)}.svc:hover::before{opacity:1}
-.svc-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:18px;background:var(--green-dim)}
-.svc-title{font-size:20px;font-weight:800;margin-bottom:4px;color:var(--bg-dark)}
-.svc-sub{font-size:11px;color:var(--green);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
-.svc-desc{color:var(--text-sub);font-size:14px;line-height:1.8;margin-bottom:18px}
-.svc-list{list-style:none}.svc-list li{display:flex;align-items:center;gap:9px;color:var(--text-sub);font-size:13px;padding:5px 0}.svc-list li::before{content:'✓';color:var(--green);font-weight:700}
-
-/* APP PORTFOLIO */
-.app-cards{display:flex;flex-direction:column;gap:24px;margin-top:52px}
-.app-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:40px;transition:all .4s;position:relative;overflow:hidden}
-.app-card::after{content:'';position:absolute;top:0;right:0;width:220px;height:220px;border-radius:50%;filter:blur(90px);opacity:0;transition:opacity .5s;pointer-events:none;background:rgba(58,140,92,.05)}
-.app-card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:0 20px 48px rgba(58,140,92,.07)}.app-card:hover::after{opacity:1}
-.app-card-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
-.app-card-emoji{font-size:36px;flex-shrink:0}
-.app-card-title{font-size:20px;font-weight:800;margin-bottom:3px;color:var(--bg-dark)}
-.app-card-subtitle{font-size:11px;color:var(--text-dim);font-family:'JetBrains Mono',monospace}
-.app-card-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
-.app-tag{background:var(--green-dim);border:1px solid rgba(58,140,92,.1);padding:4px 13px;border-radius:100px;font-size:11px;font-weight:600;color:var(--green);font-family:'JetBrains Mono',monospace}
-.app-card-desc{color:var(--text-sub);font-size:14px;line-height:1.8;margin-bottom:22px}
-.app-features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.app-feature{background:var(--bg-warm);border:1px solid var(--border);border-radius:var(--radius-sm);padding:18px;transition:all .3s}
-.app-feature:hover{border-color:var(--border-hover);background:var(--bg-cream)}
-.app-feature-icon{font-size:20px;margin-bottom:6px}
-.app-feature-title{font-size:13px;font-weight:700;margin-bottom:4px;color:var(--bg-dark)}
-.app-feature-desc{font-size:12px;color:var(--text-dim);line-height:1.55}
-.app-card-stats{display:flex;gap:18px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
-.app-stat{font-size:12px;color:var(--green);font-weight:600;font-family:'JetBrains Mono',monospace}
-
-/* WEB PORTFOLIO */
-.web-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:52px}
-.web-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .5s}
-.web-card:hover{transform:translateY(-5px);border-color:var(--border-hover);box-shadow:0 24px 52px rgba(58,140,92,.07)}
-.web-mockup{position:relative;height:210px;overflow:hidden}
-.web-mockup-bar{background:var(--bg-card-alt);padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
-.dots{display:flex;gap:5px}.dot{width:9px;height:9px;border-radius:50%}.dot.r{background:#f87171}.dot.y{background:#fbbf24}.dot.g{background:var(--green-light)}
-.web-card-info{padding:22px 24px 26px}
-.web-card-cat{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:5px}
-.web-card-title{font-size:18px;font-weight:800;margin-bottom:7px;color:var(--bg-dark)}
-.web-card-desc{font-size:13px;color:var(--text-dim);margin-bottom:12px;line-height:1.65}
-.web-card-features{list-style:none;margin-bottom:14px}.web-card-features li{font-size:12px;color:var(--text-sub);padding:3px 0}.web-card-features li::before{content:'✓ ';color:var(--green);font-weight:700}
-.web-card-taglist{display:flex;flex-wrap:wrap;gap:5px}.web-card-taglist span{background:var(--green-dim);border:1px solid rgba(58,140,92,.1);padding:3px 10px;border-radius:100px;font-size:10px;color:var(--green);font-weight:600}
-
-/* PRODUCTION */
-.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:52px;align-items:center}
-.prod-steps{list-style:none}
-.prod-step{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06)}.prod-step:last-child{border-bottom:none}
-.prod-step-num{width:42px;height:42px;border-radius:12px;background:rgba(126,196,154,.12);display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:var(--pearl-light);flex-shrink:0}
-.prod-step-title{font-size:15px;font-weight:700;margin-bottom:2px;color:var(--text-light)}
-.prod-step-desc{font-size:12px;color:var(--text-light-sub);line-height:1.55}
-.prod-info h3{font-size:26px;font-weight:800;margin-bottom:16px;line-height:1.35;color:var(--text-light)}
-.prod-info p{font-size:14px;color:var(--text-light-sub);line-height:1.85;margin-bottom:12px}
-.prod-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-.prod-hl{padding:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;text-align:center}
-.prod-hl-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:700;color:var(--pearl-light);margin-bottom:2px}
-.prod-hl-label{font-size:10px;color:var(--text-light-sub)}
-
-/* BOOTCAMP */
-.boot-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:52px;align-items:center}
-.boot-curriculum{list-style:none}
-.boot-week{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)}.boot-week:last-child{border-bottom:none}
-.boot-week-num{width:40px;height:40px;border-radius:12px;background:var(--green-dim);display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:14px;font-weight:700;color:var(--green);flex-shrink:0}
-.boot-week-title{font-size:14px;font-weight:700;margin-bottom:2px;color:var(--bg-dark)}
-.boot-week-desc{font-size:12px;color:var(--text-dim)}
-.boot-visual{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px 28px}
-.boot-info h3{font-size:26px;font-weight:800;margin-bottom:16px;line-height:1.35;color:var(--bg-dark)}
-.boot-info p{font-size:14px;color:var(--text-sub);line-height:1.85;margin-bottom:12px}
-.boot-hls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
-.boot-hl{padding:14px;background:var(--green-dim);border-radius:14px}
-.boot-hl-val{font-family:'Plus Jakarta Sans',sans-serif;font-size:17px;font-weight:700;color:var(--green);margin-bottom:1px}
-.boot-hl-label{font-size:10px;color:var(--text-dim)}
-
-/* VVIP */
-.vvip-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:52px;align-items:center}
-.vvip-info h3{font-size:26px;font-weight:800;margin-bottom:16px;line-height:1.35;color:var(--text-light)}
-.vvip-info p{font-size:14px;color:var(--text-light-sub);line-height:1.85;margin-bottom:12px}
-.vvip-tiers{display:flex;flex-direction:column;gap:12px}
-.vvip-tier{padding:24px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);transition:all .3s}
-.vvip-tier:hover{border-color:rgba(126,196,154,.25)}
-.vvip-tier.gold{border-color:rgba(219,192,110,.3);background:linear-gradient(135deg,rgba(219,192,110,.06),rgba(255,255,255,.02))}
-.vvip-tier-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-.vvip-tier-name{font-size:15px;font-weight:700;color:var(--text-light)}
-.vvip-tier-price{font-family:'Plus Jakarta Sans',sans-serif;font-size:19px;font-weight:700;color:var(--pearl-light)}
-.vvip-tier-list{list-style:none;display:flex;flex-wrap:wrap;gap:5px}
-.vvip-tier-list li{padding:4px 11px;background:rgba(255,255,255,.05);border-radius:8px;font-size:11px;color:var(--text-light-sub)}
-
-/* PRICING */
-.pricing-tabs{display:flex;justify-content:center;gap:4px;margin:44px auto 48px;background:var(--bg-card-alt);padding:5px;border-radius:14px;width:fit-content;border:1px solid var(--border)}
-.pricing-tab{padding:13px 32px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:all .3s;color:var(--text-sub);background:transparent;border:none;font-family:inherit}
-.pricing-tab.active{background:var(--grad);color:#fff;box-shadow:0 6px 20px rgba(58,140,92,.2)}
-.pricing-content{display:none}.pricing-content.active{display:block}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.price-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:34px 26px;text-align:center;transition:all .4s;position:relative}
-.price-card.featured{border-color:rgba(58,140,92,.25);background:linear-gradient(180deg,rgba(58,140,92,.03) 0%,var(--bg-card) 100%)}
-.price-card.featured::before{content:'인기';position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--grad);padding:4px 18px;border-radius:100px;font-size:11px;font-weight:700;color:#fff}
-.price-card:hover{transform:translateY(-4px);border-color:var(--border-hover);box-shadow:0 16px 40px rgba(58,140,92,.07)}
-.price-tier{font-size:12px;font-weight:700;color:var(--green);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
-.price-amount{font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;margin-bottom:4px;color:var(--bg-dark);letter-spacing:-1px}
-.price-period{font-size:13px;color:var(--text-dim);margin-bottom:22px}
-.price-features{list-style:none;text-align:left;margin-bottom:26px}
-.price-features li{font-size:13px;color:var(--text-sub);padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
-.price-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:11px}
-.price-btn{display:block;width:100%;padding:14px;border-radius:var(--radius-sm);font-size:14px;font-weight:700;border:none;cursor:pointer;transition:all .3s;font-family:inherit}
-.price-btn-fill{background:var(--grad);color:#fff}.price-btn-fill:hover{box-shadow:0 10px 28px rgba(58,140,92,.25);transform:translateY(-2px)}
-.price-btn-outline{background:transparent;border:2px solid var(--border);color:var(--text-sub)}.price-btn-outline:hover{border-color:var(--green);color:var(--green)}
-
-/* PROCESS */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:52px}
-.process-step{text-align:center;padding:28px 14px;position:relative}
-.process-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:44px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;line-height:1}
-.process-step-title{font-size:16px;font-weight:700;margin-bottom:5px;color:var(--bg-dark)}
-.process-step-desc{font-size:12px;color:var(--text-dim)}
-.process-step:not(:last-child)::after{content:'→';position:absolute;right:-14px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--beige-warm)}
-
-/* FAQ */
-.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px}
-.faq-item{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:26px;transition:all .3s}.faq-item:hover{border-color:var(--border-hover)}
-.faq-q{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;align-items:flex-start;gap:10px;color:var(--bg-dark)}.faq-q::before{content:'Q.';color:var(--green);font-weight:800;flex-shrink:0}
-.faq-a{font-size:13px;color:var(--text-sub);line-height:1.8;padding-left:28px}
-
-/* APPLY FORM */
-.apply-section{background:var(--bg-warm);padding:100px 0 120px}
-.apply-inner{max-width:560px;margin:0 auto}
-.apply-title{font-family:'Plus Jakarta Sans','Noto Sans KR',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;margin-bottom:10px;color:var(--bg-dark)}
-.apply-sub{font-size:15px;color:var(--text-sub);margin-bottom:32px}
-.apply-form{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:36px 32px;box-shadow:0 12px 40px rgba(58,140,92,.06)}
-.apply-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.apply-form label{display:block;font-size:13px;font-weight:600;color:var(--text);margin-bottom:8px}
-.apply-form input,.apply-form select,.apply-form textarea{width:100%;padding:14px 18px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:15px;font-family:inherit;color:var(--text);background:var(--bg-card);transition:border-color .25s}
-.apply-form input:focus,.apply-form select:focus,.apply-form textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-dim)}
-.apply-form input::placeholder,.apply-form textarea::placeholder{color:var(--text-dim)}
-.apply-form .field{margin-bottom:20px}
-.apply-form .field.full{grid-column:1/-1}
-.apply-form textarea{min-height:120px;resize:vertical}
-.apply-form .submit-wrap{margin-top:28px;grid-column:1/-1}
-.apply-form .btn-submit{width:100%;padding:18px;background:var(--grad);color:#fff;border:none;border-radius:var(--radius-sm);font-size:16px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .3s}
-.apply-form .btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(58,140,92,.25)}
-.apply-form .btn-submit:disabled{opacity:.7;cursor:not-allowed;transform:none}
-.apply-success{display:none;text-align:center;padding:48px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)}
-.apply-success.show{display:block}
-.apply-success .success-icon{font-size:48px;margin-bottom:16px}
-.apply-success .success-title{font-size:20px;font-weight:800;color:var(--green);margin-bottom:8px}
-.apply-success .success-desc{font-size:15px;color:var(--text-sub)}
-.apply-alt{margin-top:20px;font-size:13px;color:var(--text-dim);text-align:center}
-.apply-alt a{color:var(--green);font-weight:600}
-#apply{scroll-margin-top:80px}
-@media(max-width:600px){.apply-form .form-row{grid-template-columns:1fr}.apply-form{padding:24px 20px}}
-/* CTA */
-.cta-section{text-align:center;padding:120px 0;position:relative;overflow:hidden;background:linear-gradient(170deg,#dce9d0 0%,#d0e2c4 40%,#c8ddb8 100%)}
-.cta-glow{position:absolute;width:450px;height:450px;border-radius:50%;filter:blur(120px);pointer-events:none}
-.cta-glow-1{background:radial-gradient(circle,rgba(58,140,92,.1),transparent);top:-20%;right:-8%}
-.cta-glow-2{background:radial-gradient(circle,rgba(219,192,110,.08),transparent);bottom:-20%;left:-8%}
-.cta-title{font-family:'Plus Jakarta Sans','Noto Sans KR',sans-serif;font-size:clamp(28px,4.5vw,48px);font-weight:800;letter-spacing:-1.5px;margin-bottom:16px;line-height:1.2;color:var(--bg-dark)}
-.cta-sub{font-size:17px;color:var(--text-sub);margin-bottom:32px}
-.cta-contact{margin-top:18px;font-size:14px;color:var(--text-dim)}.cta-contact a{color:var(--green);font-weight:600}
-
-/* FOOTER */
-.footer{padding:32px 0;border-top:1px solid var(--border);background:var(--bg)}.footer-info{font-size:12px;color:var(--text-dim);text-align:center;line-height:2}.footer-info span{margin:0 8px;opacity:.3}
-
-/* FLOAT */
-.float-btns{position:fixed;bottom:24px;right:24px;display:flex;flex-direction:column;gap:10px;z-index:900}
-.float-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;border:none;transition:all .3s;box-shadow:0 6px 20px rgba(0,0,0,.1)}.float-btn:hover{transform:translateY(-3px)}
-.float-kakao{background:#fee500;color:#3c1e1e}
-.float-top{background:var(--bg-card);border:1px solid var(--border);color:var(--text-dim);opacity:0;pointer-events:none;transition:all .3s}.float-top.show{opacity:1;pointer-events:auto}
-
-/* RESPONSIVE */
-@media(max-width:1024px){.services-grid,.web-grid,.pricing-grid,.faq-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}.process-step:nth-child(2)::after{display:none}.prod-grid,.boot-layout,.vvip-layout,.about-grid{grid-template-columns:1fr}}
-@media(max-width:768px){.sec{padding:80px 0}.nav-links{display:none}.hamburger{display:flex}.stats-grid{grid-template-columns:repeat(3,1fr);gap:8px}.stat-card{padding:20px 12px}.stat-num{font-size:30px}.services-grid,.web-grid,.faq-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr;max-width:360px;margin-left:auto;margin-right:auto}.process-grid{grid-template-columns:1fr 1fr}.process-step::after{display:none!important}.app-features{grid-template-columns:1fr}.app-card{padding:26px 20px}.hero-btns{flex-direction:column;align-items:center}.btn-primary,.btn-secondary,.btn-light{width:100%;justify-content:center;max-width:300px}.web-mockup{height:180px}.prod-highlights{grid-template-columns:1fr 1fr}.boot-hls{grid-template-columns:1fr}}
-@media(max-width:480px){.container{padding:0 18px}.stats-grid{gap:6px}.stat-card{padding:16px 8px}.stat-num{font-size:24px}.stat-label{font-size:10px}.process-grid{grid-template-columns:1fr}.hero-tags{gap:7px}.hero-tag{padding:9px 16px;font-size:12px}.prod-highlights{grid-template-columns:1fr}}
-</style>
-
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>름랩 — 예산 안에서, 빠르게 MVP. 소스코드는 통째로 대표님 것입니다.</title>
+<meta name="theme-color" content="#0f1f3a">
+<meta name="description" content="앱·웹개발 스튜디오 름랩. Flutter로 iOS·안드로이드를 한 번에. 가격은 먼저 공개하고, 결과물은 소스코드까지 전부 넘깁니다.">
+<link rel="stylesheet" href="reum.css">
 </head>
 <body>
 
-<nav class="nav" id="nav"><div class="container"><div class="nav-inner">
-  <a href="/" class="nav-logo en"><span>REUMLAB</span></a>
-  <ul class="nav-links">
-    <li><a href="#services">서비스</a></li>
-    <li><a href="#app-portfolio">앱 포트폴리오</a></li>
-    <li><a href="#web-portfolio">웹 포트폴리오</a></li>
-    <li><a href="#production">프로덕션 프로세스</a></li>
-    <li><a href="#pricing">가격 정책</a></li>
-    <li><a href="/consultation/" class="nav-cta">📋 무료 상담 신청</a></li>
-  </ul>
-  <button class="hamburger" id="hamburgerBtn" aria-label="메뉴"><span></span><span></span><span></span></button>
-</div></div></nav>
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" data-analytics="nav_logo">
+      <span class="mark"><b>R</b></span>
+      <span>REUMLAB<small>름랩</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#solution">특징</a>
+      <a href="#process">진행</a>
+      <a href="#pricing">패키지</a>
+      <a href="#prepare">준비</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm nav-cta" href="#consult" data-analytics="nav_cta_consult">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>
+      상담 신청
+    </a>
+    <button class="nav-burger" aria-label="메뉴 열기"><span></span></button>
+  </div>
+</header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose">✕</button>
-  <a href="#services" onclick="closeMobile()">서비스</a>
-  <a href="#app-portfolio" onclick="closeMobile()">앱 포트폴리오</a>
-  <a href="#web-portfolio" onclick="closeMobile()">웹 포트폴리오</a>
-  <a href="#production" onclick="closeMobile()">프로덕션 프로세스</a>
-  <a href="#pricing" onclick="closeMobile()">가격 정책</a>
-  <a href="/consultation/" class="btn-primary" style="font-size:15px;padding:13px 28px" onclick="closeMobile()">📋 상담 신청</a>
+<!-- ===================== MOBILE MENU ===================== -->
+<div class="mmenu">
+  <div class="wrap" style="padding:0">
+    <div class="mmenu-top">
+      <a class="brand" href="#top"><span class="mark"><b>R</b></span><span>REUMLAB</span></a>
+      <button class="mmenu-close" aria-label="닫기">✕</button>
+    </div>
+    <nav class="mmenu-links">
+      <a href="#solution"><span>특징</span><span class="idx">01</span></a>
+      <a href="#process"><span>진행</span><span class="idx">02</span></a>
+      <a href="#pricing"><span>패키지</span><span class="idx">03</span></a>
+      <a href="#prepare"><span>준비</span><span class="idx">04</span></a>
+      <a href="#faq"><span>FAQ</span><span class="idx">05</span></a>
+    </nav>
+    <div class="mmenu-foot">
+      <a class="btn btn-primary btn-block" href="#consult">📋 상담 신청하기</a>
+      <span class="line">010-8111-9370 · 평일 10:00–18:00</span>
+    </div>
+  </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-glow hero-glow-1"></div><div class="hero-glow hero-glow-2"></div><div class="hero-glow hero-glow-3"></div>
-  <div id="leafC"></div>
-  <div class="container"><div class="hero-content">
-    <div class="hero-badge"><span class="hero-badge-dot"></span> 신규 프로젝트 상담 가능</div>
-    <h1 class="hero-title"><span class="gradient-text">비즈니스를</span><br><span class="outline">완성합니다</span></h1>
-    <p class="hero-sub">아이디어 그 이상의 가치를 만듭니다.<br>기획부터 디자인, 고난도 개발까지 <strong>프리미엄 원스톱 에이전시</strong> 름랩.</p>
-    <div class="hero-tags"><span class="hero-tag">📱 모바일 앱 개발</span><span class="hero-tag">🌐 기업형 웹사이트</span><span class="hero-tag">🏗️ 서비스 기획/설계</span><span class="hero-tag">🎨 UI/UX 디자인</span></div>
-    <div class="hero-btns"><a href="tel:01081119370" class="btn-primary">📞 010-8111-9370 전화 상담</a><a href="mailto:ceo@eternalsix.com" class="btn-secondary">✉️ 이메일 문의</a><a href="#app-portfolio" class="btn-secondary">포트폴리오 확인 →</a></div>
-  </div></div>
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="blueprint"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow on-dark" data-reveal>Reum Lab · 름랩 — 앱·웹 개발 스튜디오</span>
+      <h1 data-reveal data-delay="1">
+        예산 안에서, 빠르게 MVP.<br>
+        <span class="hl">소스코드는 통째로</span> 대표님 것입니다.
+      </h1>
+      <p class="sub" data-reveal data-delay="2">
+        Flutter로 iOS·안드로이드를 한 번에. 가격은 먼저 공개하고,<br>결과물은 소스코드까지 전부 넘깁니다.<br>직접 수정·운영하는 법까지 1:1로 알려드립니다.
+      </p>
+      <div class="hero-cta" data-reveal data-delay="2">
+        <a class="btn btn-primary" href="tel:01081119370" data-analytics="cta_call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          010-8111-9370 전화 상담
+        </a>
+        <a class="btn btn-on-dark-ghost" href="mailto:ceo@eternalsix.com" data-analytics="cta_mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          이메일로 문의하기
+        </a>
+      </div>
+      <p class="hero-meta" data-reveal data-delay="3">
+        <span>상담은 무료입니다</span><i class="dot"></i><span>평일 10:00–18:00</span>
+      </p>
+    </div>
+
+    <!-- blueprint spec card -->
+    <aside class="spec" data-reveal data-delay="2">
+      <div class="spec-head">
+        <span>PROJECT SPEC</span>
+        <span class="live"><i></i>OPEN</span>
+      </div>
+      <div class="spec-row">
+        <span class="k">개발</span>
+        <span class="v">Flutter 단일 코드베이스<small>iOS · 안드로이드 동시 출시</small></span>
+      </div>
+      <div class="spec-row">
+        <span class="k">납품</span>
+        <span class="v">소스코드 전체 이관<small>저장소·계정·권한까지 대표님 소유</small></span>
+      </div>
+      <div class="spec-row">
+        <span class="k">가격</span>
+        <span class="v">VAT 포함 정액 선공개<small>견적 후 금액이 바뀌지 않습니다</small></span>
+      </div>
+      <div class="spec-row">
+        <span class="k">보너스</span>
+        <span class="v">직접 수정·운영 1:1 교육<small>론칭 뒤에도 혼자 굴릴 수 있게</small></span>
+      </div>
+    </aside>
+  </div>
+
+  <!-- trust bar -->
+  <div class="trust">
+    <div class="wrap trust-grid">
+      <div class="trust-cell" data-reveal><div class="k">개발</div><div class="v">Flutter로 iOS·안드로이드 동시</div></div>
+      <div class="trust-cell" data-reveal data-delay="1"><div class="k">납품</div><div class="v">소스코드 전체 이관</div></div>
+      <div class="trust-cell" data-reveal data-delay="2"><div class="k">가격</div><div class="v">VAT 포함 정액 선공개</div></div>
+      <div class="trust-cell" data-reveal data-delay="3"><div class="k">보너스</div><div class="v">직접 수정 1:1 교육</div></div>
+    </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="sec sec-warm" id="about"><div class="container"><div class="about-grid">
-  <div class="about-text rv">
-    <div class="sec-label">ABOUT US</div>
-    <h2 class="sec-title">개발만 하는 곳이<br>아닙니다</h2>
-    <p>기획부터 마케팅까지 올인원. 단순히 만들어만 주는 외주와는 다릅니다.</p>
-    <p>마케팅 실무 경력을 바탕으로, <span class="hl">고객이 찾아오는 구조까지 설계</span>합니다.</p>
-    <p>기획 → 디자인 → 개발 → SEO/마케팅 세팅까지 한 번에.</p>
+<!-- ===================== PAIN ===================== -->
+<section class="sec pain" id="pain">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">혹시 이런 적 있으신가요</span>
+      <h2 class="h-sec">작은 수정 하나에<br>며칠씩 묶여본 적,<br>있으시죠?</h2>
+      <p class="lede">론칭하고 나면 진짜 일이 시작됩니다. 문구 한 줄, 이미지 한 장 바꾸자고 매번 견적을 받고 일정을 기다리는 구조 — 그게 정상은 아닙니다.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card" data-reveal>
+        <h3>아마 익숙하실 장면들</h3>
+        <div class="pain-list">
+          <div class="pain-item"><span class="pain-ico">!</span><p>단순 텍스트 한 줄 고치는데 "견적 다시 잡아야 한다"는 답이 돌아온다.</p></div>
+          <div class="pain-item"><span class="pain-ico">!</span><p>이미지 한 장 교체에 며칠이 걸려, 결국 캠페인 타이밍을 놓쳤다.</p></div>
+          <div class="pain-item"><span class="pain-ico">!</span><p>소스코드도 권한도 내 손에 없어, 정작 '내 서비스'가 내 것 같지 않다.</p></div>
+        </div>
+      </div>
+      <div class="pain-card pain-dark" data-reveal data-delay="1">
+        <span class="eyebrow">름랩의 입장</span>
+        <p class="quote">외주는 '맡기고 끝'이 아니라,<br><em>대표님이 직접 굴리기 시작하는</em> 출발점이어야 합니다.</p>
+        <p>그래서 결과물의 소스코드를 통째로 넘기고,<br>론칭 뒤 직접 수정·운영하는 법까지 1:1로 알려드립니다.<br>다음 수정 때 다시 외주를 찾지 않도록.</p>
+      </div>
+    </div>
   </div>
-  <div class="stats-grid rv rv-d2">
-    <div class="stat-card"><div class="stat-num"><span class="counter" data-target="5">0</span>+</div><div class="stat-label">기획/개발/마케팅<br>경력 (년)</div></div>
-    <div class="stat-card"><div class="stat-num"><span class="counter" data-target="15">0</span>+</div><div class="stat-label">프로젝트<br>완료</div></div>
-    <div class="stat-card"><div class="stat-num"><span class="counter" data-target="100">0</span>%</div><div class="stat-label">맞춤<br>기획</div></div>
+</section>
+
+<!-- ===================== SOLUTION ===================== -->
+<section class="sec solution" id="solution">
+  <div class="wrap">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow center">름랩이 다른 점</span>
+      <h2 class="h-sec">빠른 MVP, 통째로 넘기는 소스코드<br>— 그리고 보너스</h2>
+    </div>
+    <div class="cards-3">
+      <article class="feat" data-reveal>
+        <span class="num">01</span>
+        <div class="feat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="11" rx="1.5"/><path d="M2 14h14"/><rect x="17" y="6" width="5" height="15" rx="1.5"/><path d="M19.5 18h.01"/></svg>
+        </div>
+        <h3>한 번에 안드로이드·iOS,<br>빠른 MVP</h3>
+        <p>Flutter 단일 코드베이스로 두 플랫폼을 동시에 만듭니다. 같은 일을 두 번 하지 않으니, 시장에 더 빨리 내놓을 수 있습니다.</p>
+      </article>
+      <article class="feat" data-reveal data-delay="1">
+        <span class="num">02</span>
+        <div class="feat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3>소스코드를 통째로,<br>권한은 대표님 것</h3>
+        <p>저장소·배포 계정·도메인까지 처음부터 대표님 명의로. 결과물의 소유권이 시작부터 끝까지 온전히 고객의 것입니다.</p>
+      </article>
+      <article class="feat" data-reveal data-delay="2">
+        <span class="num">03</span>
+        <div class="feat-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg>
+        </div>
+        <h3>직접 고치는 법까지<br>1:1로</h3>
+        <p>교육공학 석사 대표가 직접,<br>스스로 수정하는 방법을 알려드립니다.<br>다음 수정엔 외주가 필요 없도록.</p>
+      </article>
+    </div>
   </div>
-</div></div></section>
+</section>
 
-<!-- SERVICES -->
-<section class="sec" id="services"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">SERVICES</div><h2 class="sec-title rv rv-d1">뭐든지 만들어드립니다</h2></div>
-  <div class="services-grid">
-    <div class="svc rv"><div class="svc-icon">📱</div><h3 class="svc-title">앱 개발</h3><div class="svc-sub">App Development</div><p class="svc-desc">iOS·Android 동시 개발. MVP부터 정식 서비스 런칭까지 책임집니다.</p><ul class="svc-list"><li>크로스플랫폼 (Flutter / React Native)</li><li>소셜 로그인 · 결제 시스템 연동</li><li>대용량 DB · 검색/필터 고급 기능</li><li>런칭 지원 + 유지보수</li></ul></div>
-    <div class="svc rv rv-d1"><div class="svc-icon">🌐</div><h3 class="svc-title">웹사이트 제작</h3><div class="svc-sub">Web Development</div><p class="svc-desc">랜딩페이지, 브랜드 사이트, 예약 시스템까지. 기획·디자인·SEO 최적화 포함.</p><ul class="svc-list"><li>기업/브랜드 홈페이지</li><li>전환 최적화 랜딩페이지</li><li>예약/결제 시스템 연동</li><li>SEO + 애널리틱스 기본 세팅</li></ul></div>
-    <div class="svc rv rv-d2"><div class="svc-icon">🎨</div><h3 class="svc-title">UI/UX 디자인</h3><div class="svc-sub">Design</div><p class="svc-desc">사용자 경험을 최우선으로 한 인터페이스 디자인. 반응형 설계 기본 포함.</p><ul class="svc-list"><li>모바일 퍼스트 반응형 설계</li><li>프로토타입 · 와이어프레임</li><li>브랜드 아이덴티티 반영</li><li>사용성 테스트 기반 개선</li></ul></div>
-    <div class="svc rv rv-d3"><div class="svc-icon">📈</div><h3 class="svc-title">마케팅 세팅</h3><div class="svc-sub">Marketing</div><p class="svc-desc">만들고 끝이 아닙니다. 고객이 찾아오는 구조까지 함께 설계합니다.</p><ul class="svc-list"><li>SEO 최적화 + 메타태그 세팅</li><li>Google Analytics · Search Console</li><li>카카오톡 채널 연동</li><li>전환율 최적화 (CRO)</li></ul></div>
+<!-- ===================== AUDIENCE ===================== -->
+<section class="sec aud" id="audience">
+  <div class="wrap aud-wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">이런 대표님이라면</span>
+      <h2 class="h-sec">통화 한 번,<br>해보시길 추천합니다</h2>
+      <p class="lede">다음 셋 중 하나라도 해당된다면, 름랩이 정답입니다.</p>
+    </div>
+    <div class="aud-list">
+      <div class="aud-row" data-reveal>
+        <span class="aud-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <p>빠르게 MVP를 띄우고 싶은 분<small>아이디어를 시장에서 먼저 검증하고 싶을 때</small></p>
+      </div>
+      <div class="aud-row" data-reveal data-delay="1">
+        <span class="aud-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <p>수정 외주비가 아까운 분<small>작은 변경마다 견적·대기에 지치셨다면</small></p>
+      </div>
+      <div class="aud-row" data-reveal data-delay="2">
+        <span class="aud-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <p>직접 운영할 힘을 갖추고 싶은 분<small>내 서비스를 내 손으로 굴리고 싶을 때</small></p>
+      </div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<!-- APP PORTFOLIO -->
-<section class="sec sec-cream" id="app-portfolio"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">APP PORTFOLIO</div><h2 class="sec-title rv rv-d1">앱 개발 포트폴리오</h2><p class="sec-desc rv rv-d2">대규모 데이터 처리부터 복잡한 비즈니스 로직까지, 앱 개발의 모든 것을 구현합니다.</p></div>
-  <div class="app-cards">
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">📚</div><div><h3 class="app-card-title">교육 추천 슈퍼앱</h3><div class="app-card-subtitle">Cross-Platform Matching Platform</div></div></div><div class="app-card-tags"><span class="app-tag">Flutter</span><span class="app-tag">Node.js</span><span class="app-tag">Supabase</span><span class="app-tag">PostgreSQL RPC</span></div><p class="app-card-desc">130,000건 이상의 데이터를 PostgreSQL RPC로 처리하는 대규모 매칭 플랫폼. Haversine 공식 기반 위치 검색, 6가지 가중치 스코어링 알고리즘, 역할 기반 UX 분기(GoRouter redirect guard), 실시간 리뷰 집계 시스템을 구현했습니다.</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">🎯</div><div class="app-feature-title">프로필 기반 추천 엔진</div><div class="app-feature-desc">거리·과목·목표·예산·평점 등 6가지 가중치 기반 스코어링</div></div><div class="app-feature"><div class="app-feature-icon">📍</div><div class="app-feature-title">위치 기반 검색</div><div class="app-feature-desc">GPS + 3단계 행정구역 드릴다운, Haversine 반경 검색</div></div><div class="app-feature"><div class="app-feature-icon">👤</div><div class="app-feature-title">역할 기반 UX 분기</div><div class="app-feature-desc">완전히 분리된 UX 플로우, 역할별 대시보드</div></div><div class="app-feature"><div class="app-feature-icon">⭐</div><div class="app-feature-title">리뷰 & 상담 시스템</div><div class="app-feature-desc">별점+텍스트+이미지 리뷰, 상담 요청, 통계</div></div></div><div class="app-card-stats"><span class="app-stat">24,000+ Lines</span><span class="app-stat">17 API Endpoints</span><span class="app-stat">13 DB Tables</span></div></div>
-
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">🏠</div><div><h3 class="app-card-title">제휴 서비스 플랫폼</h3><div class="app-card-subtitle">B2B2C Triple Platform</div></div></div><div class="app-card-tags"><span class="app-tag">React Native (Expo)</span><span class="app-tag">Next.js 14</span><span class="app-tag">Supabase</span><span class="app-tag">TypeScript</span></div><p class="app-card-desc">React Native(Expo) + Next.js 14 + Supabase로 구축한 트리플 플랫폼 아키텍처. 관리자 대시보드(Next.js SSR), 전용 모바일 앱(Expo), 고객 랜딩을 단일 Supabase 인스턴스에서 운용. RLS 기반 다중 역할 인증, 카카오 알림톡 API + SMS 폴백, 다자간 정산 로직 2주 내 MVP 완성.</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">📊</div><div class="app-feature-title">관리자 대시보드</div><div class="app-feature-desc">실시간 통계, 서비스 요청 관리, 정산 처리 통합</div></div><div class="app-feature"><div class="app-feature-icon">🔐</div><div class="app-feature-title">다중 역할 인증</div><div class="app-feature-desc">관리자/스태프/중개사/제휴업체별 접근 권한 분리</div></div><div class="app-feature"><div class="app-feature-icon">💰</div><div class="app-feature-title">정산 시스템</div><div class="app-feature-desc">다자간 정산, 추천 가입 수수료 적립, 만료일 자동 관리</div></div><div class="app-feature"><div class="app-feature-icon">📩</div><div class="app-feature-title">알림 자동화</div><div class="app-feature-desc">카카오 알림톡 + SMS 자동 대체 발송</div></div></div><div class="app-card-stats"><span class="app-stat">2주 MVP</span><span class="app-stat">트리플 플랫폼</span></div></div>
-
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">🔍</div><div><h3 class="app-card-title">초개인화 아카이빙 플랫폼</h3><div class="app-card-subtitle">Semantic Search SaaS</div></div></div><div class="app-card-tags"><span class="app-tag">Flutter</span><span class="app-tag">Supabase</span><span class="app-tag">GPT-4o API</span><span class="app-tag">SaaS</span></div><p class="app-card-desc">GPT-4o API 시맨틱 검색 SaaS. Vision API 자동 태그 분류, Embedding 벡터 문맥 검색, Edge Function 서버리스 처리 0.5초 이내 응답. 구독형 빌링 + 1,000명 동시 접속 아키텍처.</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">🗣️</div><div class="app-feature-title">시맨틱 검색</div><div class="app-feature-desc">자연어 질문으로 문맥 파악 후 정확한 정보 검색</div></div><div class="app-feature"><div class="app-feature-icon">🖼️</div><div class="app-feature-title">이미지→텍스트 변환</div><div class="app-feature-desc">사진 업로드 시 자동 태그 분류 (OCR/Vision)</div></div><div class="app-feature"><div class="app-feature-icon">⚡</div><div class="app-feature-title">초경량 DB</div><div class="app-feature-desc">0.5초 이내 처리, 서버 비용 최소화</div></div><div class="app-feature"><div class="app-feature-icon">📈</div><div class="app-feature-title">확장성 확보</div><div class="app-feature-desc">1,000명 동시접속, 구독형 수익 모델</div></div></div><div class="app-card-stats"><span class="app-stat">4주 MVP</span><span class="app-stat">SaaS 모델</span></div></div>
-
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">⚡</div><div><h3 class="app-card-title">초단위 반응형 캐주얼 게임</h3><div class="app-card-subtitle">Ultra-Lightweight Casual Game</div></div></div><div class="app-card-tags"><span class="app-tag">Flutter</span><span class="app-tag">Firebase</span><span class="app-tag">Cross-Platform</span></div><p class="app-card-desc">고정밀 타이머(microseconds) 반응속도 측정, Firestore 실시간 리더보드, 진입→플레이→결과 3초 이내 UX 플로우.</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">🎮</div><div class="app-feature-title">3초 UX 플로우</div><div class="app-feature-desc">극한의 짧은 사이클로 중독성 확보</div></div><div class="app-feature"><div class="app-feature-icon">🏆</div><div class="app-feature-title">랭킹 시스템</div><div class="app-feature-desc">일간/주간 리더보드, 경쟁 심리 리텐션</div></div><div class="app-feature"><div class="app-feature-icon">📊</div><div class="app-feature-title">반응속도 분석</div><div class="app-feature-desc">사용자별 데이터 수집 및 통계 시각화</div></div><div class="app-feature"><div class="app-feature-icon">🎯</div><div class="app-feature-title">브랜드 확장</div><div class="app-feature-desc">기업 이벤트·프로모션 연동 구조</div></div></div></div>
-
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">📋</div><div><h3 class="app-card-title">일정 선택·확정 투표 앱</h3><div class="app-card-subtitle">Group Scheduling Helper</div></div></div><div class="app-card-tags"><span class="app-tag">Flutter</span><span class="app-tag">Supabase Realtime</span></div><p class="app-card-desc">UUID 링크 공유 Zero-Hurdle UX, Realtime Subscription 실시간 투표, Edge Function 크론잡 자동 마감 + 확정 알림.</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">🔗</div><div class="app-feature-title">로그인 불필요</div><div class="app-feature-desc">링크만으로 즉시 참여, 제로 허들</div></div><div class="app-feature"><div class="app-feature-icon">⏰</div><div class="app-feature-title">자동 마감·확정</div><div class="app-feature-desc">기한 도래 시 최다 득표 자동 확정</div></div><div class="app-feature"><div class="app-feature-icon">📊</div><div class="app-feature-title">실시간 시각화</div><div class="app-feature-desc">참여 현황 라이브 + 미응답자 리마인드</div></div><div class="app-feature"><div class="app-feature-icon">📱</div><div class="app-feature-title">알림 연동</div><div class="app-feature-desc">카카오톡·SMS 알림으로 참여율 극대화</div></div></div></div>
-
-    <div class="app-card rv"><div class="app-card-head"><div class="app-card-emoji">🤝</div><div><h3 class="app-card-title">만남 성사 확인 앱</h3><div class="app-card-subtitle">Privacy-First Mutual Matching</div></div></div><div class="app-card-tags"><span class="app-tag">Flutter</span><span class="app-tag">Supabase RLS</span><span class="app-tag">FCM</span></div><p class="app-card-desc">Supabase RLS로 비대칭 노출 완전 차단, 양방향 수락 시에만 결과 공개. 단일 목적 UX, FCM 조건부 푸시(성사 시에만).</p><div class="app-features"><div class="app-feature"><div class="app-feature-icon">🔒</div><div class="app-feature-title">비대칭 노출 방지</div><div class="app-feature-desc">RLS로 상대 수락 전 선택 비공개</div></div><div class="app-feature"><div class="app-feature-icon">💡</div><div class="app-feature-title">부담 제로 UX</div><div class="app-feature-desc">거절 상황 자체가 발생하지 않는 구조</div></div><div class="app-feature"><div class="app-feature-icon">🎯</div><div class="app-feature-title">단일 목적</div><div class="app-feature-desc">프로필·채팅 없이 핵심 기능 집중</div></div><div class="app-feature"><div class="app-feature-icon">🔔</div><div class="app-feature-title">조건부 알림</div><div class="app-feature-desc">양방향 성사 시에만 푸시, 불필요 알림 제로</div></div></div></div>
+<!-- ===================== PROCESS ===================== -->
+<section class="sec proc" id="process">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">진행 방식</span>
+      <h2 class="h-sec">전화 한 통에서 시작해,<br>혼자 굴릴 수 있을 때까지</h2>
+    </div>
+    <div class="proc-line">
+      <div class="proc-step" data-reveal>
+        <div class="proc-node">1</div>
+        <div class="proc-body"><h3>먼저 전화로 30분, 솔직하게</h3><p>무엇을 만들고 싶은지, 예산은 어느 정도인지 솔직하게 이야기합니다.<br>안 맞으면 안 맞다고 말씀드립니다.</p></div>
+      </div>
+      <div class="proc-step" data-reveal>
+        <div class="proc-node">2</div>
+        <div class="proc-body"><h3>화면부터 맞추고 시작</h3><p>코드를 짜기 전에 화면 구성을 먼저 맞춥니다.<br>완성된 모습을 함께 그려보고 시작합니다.</p></div>
+      </div>
+      <div class="proc-step" data-reveal>
+        <div class="proc-node">3</div>
+        <div class="proc-body"><h3>만드는 과정을 같이 봅니다</h3><p>진행 상황을 중간중간 공유합니다.<br>완성된 뒤에야 결과를 보는 게 아니라, 만들어지는 걸 함께 봅니다.</p></div>
+      </div>
+      <div class="proc-step" data-reveal>
+        <div class="proc-node">4</div>
+        <div class="proc-body"><h3>소스코드까지 통째로 드립니다</h3><p>완성물뿐 아니라 소스코드·계정·권한을 모두 이관합니다.<br>이 시점부터 결과물은 온전히 대표님 것입니다.</p></div>
+      </div>
+      <div class="proc-step" data-reveal>
+        <div class="proc-node">5</div>
+        <div class="proc-body"><h3>직접 고치는 법을 가르칩니다</h3><p>문구·이미지·간단한 기능을 스스로 바꾸는 법을 1:1로 알려드립니다.<br>다음 수정에 외주를 찾지 않도록.</p></div>
+      </div>
+    </div>
   </div>
-</div></section>
+</section>
 
-<!-- WEB PORTFOLIO -->
-<section class="sec sec-warm" id="web-portfolio"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">WEB PORTFOLIO</div><h2 class="sec-title rv rv-d1">웹사이트 포트폴리오</h2><p class="sec-desc rv rv-d2">실제 제작한 사이트의 구성과 기술 구현입니다.</p></div>
-  <div class="web-grid">
-    <div class="web-card rv"><div class="web-mockup"><div class="web-mockup-bar"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div></div><div style="background:linear-gradient(180deg,#0a0a0a,#1a1a1a);display:flex;align-items:center;justify-content:center;height:100%"><div style="text-align:center"><div style="font-size:7px;letter-spacing:4px;color:rgba(255,255,255,.4);margin-bottom:6px">PERSONAL BRAND</div><div style="font-size:20px;font-weight:200;color:#fff;letter-spacing:8px">PORTFOLIO</div><div style="width:32px;height:1px;background:rgba(255,255,255,.2);margin:10px auto"></div><div style="font-size:7px;color:rgba(255,255,255,.3)">시네마틱 감성</div></div></div></div><div class="web-card-info"><div class="web-card-cat">포트폴리오</div><h3 class="web-card-title">개인 브랜딩 포트폴리오</h3><p class="web-card-desc">Intersection Observer 스크롤 애니메이션 + CSS 라이트박스 갤러리</p><ul class="web-card-features"><li>반응형 레이아웃 (모바일/태블릿/PC)</li><li>이미지 갤러리 + 라이트박스</li><li>CSS-only 스크롤 애니메이션</li></ul><div class="web-card-taglist"><span>반응형</span><span>갤러리</span><span>CSS Animation</span></div></div></div>
+<!-- ===================== PRICING ===================== -->
+<section class="sec pricing" id="pricing">
+  <div class="blueprint" style="mask-image:radial-gradient(120% 90% at 20% 0%,#000 25%,transparent 72%);-webkit-mask-image:radial-gradient(120% 90% at 20% 0%,#000 25%,transparent 72%)"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="sec-head center" data-reveal>
+      <span class="eyebrow on-dark center">패키지와 금액</span>
+      <h2 class="h-sec" style="color:#fff">가격을 먼저 공개합니다</h2>
+      <p class="lede">모두 VAT 포함 정액입니다. 견적 이후 금액이 바뀌지 않습니다.</p>
+    </div>
 
-    <div class="web-card rv rv-d1"><div class="web-mockup"><div class="web-mockup-bar"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div></div><div style="background:linear-gradient(180deg,#0d1b2a,#1b263b,#415a77);display:flex;align-items:center;justify-content:center;height:100%"><div style="text-align:center"><div style="font-size:7px;letter-spacing:3px;color:#7dd3fc;margin-bottom:6px">PREMIUM PRODUCT</div><div style="font-size:14px;font-weight:800;color:#fff;line-height:1.3">최상의 경험을<br>설계합니다</div><div style="display:flex;gap:5px;justify-content:center;margin-top:10px"><div style="padding:4px 10px;background:#3b82f6;border-radius:4px;font-size:7px;color:#fff;font-weight:600">구매하기</div><div style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:4px;font-size:7px;color:#fff">상담</div></div></div></div></div><div class="web-card-info"><div class="web-card-cat">브랜드 랜딩</div><h3 class="web-card-title">D2C 전환 최적화 랜딩페이지</h3><p class="web-card-desc">AIDA 구조 카피라이팅 + CTA A/B 테스트 + SEO 메타태그</p><ul class="web-card-features"><li>AIDA 구조 기반 세일즈 카피라이팅</li><li>CTA 버튼 A/B 테스트 배치</li><li>카카오톡 채널 + SEO 연동</li></ul><div class="web-card-taglist"><span>전환 최적화</span><span>SEO</span><span>카카오</span></div></div></div>
+    <div class="pricing-grid">
+      <article class="tier" data-reveal>
+        <span class="tname">Standard</span>
+        <h3>웹사이트 + 직접 운영 교육</h3>
+        <p class="tsum">랜딩·소개·예약 웹부터 시작하고 싶은 분</p>
+        <div class="price">149<span class="won">만원</span></div>
+        <div class="term">VAT 포함 · 약 14일</div>
+        <ul class="feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>랜딩·소개·예약 웹사이트</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>소스코드 전체 이관</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>직접 운영 1:1 교육</li>
+        </ul>
+        <div class="tcta">
+          <a class="btn btn-on-dark-ghost btn-sm" href="tel:01081119370" data-analytics="cta_pkg_call">전화 문의</a>
+          <a class="btn btn-on-dark-ghost btn-sm" href="mailto:ceo@eternalsix.com" data-analytics="cta_pkg_mail">견적 요청</a>
+        </div>
+      </article>
 
-    <div class="web-card rv"><div class="web-mockup"><div class="web-mockup-bar"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div></div><div style="background:linear-gradient(180deg,#162b1e,#1e3828);display:flex;align-items:center;justify-content:center;height:100%"><div style="text-align:center"><div style="font-size:7px;letter-spacing:3px;color:#a8d8b8;margin-bottom:6px">RESERVATION SYSTEM</div><div style="font-size:14px;font-weight:800;color:#fff;line-height:1.3">특별한 순간을<br>특별한 공간에서</div><div style="display:flex;gap:5px;justify-content:center;margin-top:10px"><div style="padding:4px 10px;background:#3a8c5c;border-radius:4px;font-size:7px;color:#fff;font-weight:600">예약</div><div style="padding:4px 10px;background:rgba(255,255,255,.1);border-radius:4px;font-size:7px;color:#fff">둘러보기</div></div></div></div></div><div class="web-card-info"><div class="web-card-cat">비즈니스</div><h3 class="web-card-title">예약·결제 통합 사이트</h3><p class="web-card-desc">타임슬롯 가격 로직 + PG사 결제 API + 자동 예약 확인 알림</p><ul class="web-card-features"><li>시간대별 가격 + 실시간 예약</li><li>카카오 예약 알림 + 지도 API</li><li>공간별 상세 + 이미지 갤러리</li></ul><div class="web-card-taglist"><span>예약 시스템</span><span>결제 API</span><span>카카오</span></div></div></div>
+      <article class="tier pop" data-reveal data-delay="1">
+        <span class="tier-badge">⭐ 인기</span>
+        <span class="tname">Deluxe</span>
+        <h3>모바일 앱 + 직접 운영 교육</h3>
+        <p class="tsum">앱으로 시장 반응을 보고 싶은 분</p>
+        <div class="price">499<span class="won">만원</span></div>
+        <div class="term">VAT 포함 · 약 21일</div>
+        <ul class="feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>iOS·안드로이드 동시 앱</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>소스코드 전체 이관</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>직접 운영 1:1 교육</li>
+        </ul>
+        <div class="tcta">
+          <a class="btn btn-primary btn-sm" href="tel:01081119370" data-analytics="cta_pkg_call">전화 문의</a>
+          <a class="btn btn-on-dark-ghost btn-sm" href="mailto:ceo@eternalsix.com" data-analytics="cta_pkg_mail">견적 요청</a>
+        </div>
+      </article>
 
-    <div class="web-card rv rv-d1"><div class="web-mockup"><div class="web-mockup-bar"><div class="dots"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div></div><div style="background:linear-gradient(180deg,#fef9c3,#fef08a);display:flex;align-items:center;justify-content:center;height:100%"><div style="text-align:center"><div style="font-size:28px;margin-bottom:4px">🤝</div><div style="font-size:14px;font-weight:800;color:#78350f;line-height:1.3">함께 나누는<br>따뜻한 커뮤니티</div><div style="display:flex;gap:5px;justify-content:center;margin-top:10px"><div style="padding:4px 10px;background:#f59e0b;border-radius:100px;font-size:7px;color:#fff;font-weight:600">가입</div><div style="padding:4px 10px;background:rgba(245,158,11,.2);border-radius:100px;font-size:7px;color:#92400e">활동</div></div></div></div></div><div class="web-card-info"><div class="web-card-cat">커뮤니티</div><h3 class="web-card-title">커뮤니티 홍보 & 가입 사이트</h3><p class="web-card-desc">감성 일러스트 + Warm Color + 모바일 퍼스트 + OG 메타태그</p><ul class="web-card-features"><li>감성 일러스트 + Warm Color 파레트</li><li>갤러리 · 간편 가입 폼</li><li>반응형 + OG 메타태그 최적화</li></ul><div class="web-card-taglist"><span>감성 디자인</span><span>전환 최적화</span><span>반응형</span></div></div></div>
+      <article class="tier" data-reveal data-delay="2">
+        <span class="tname">Premium</span>
+        <h3>고도화 앱·웹 + 교육</h3>
+        <p class="tsum">복잡한 서비스를 제대로 만들고 싶은 분</p>
+        <div class="price">799<span class="won">만원</span></div>
+        <div class="term">VAT 포함 · 약 30일</div>
+        <ul class="feats">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>고도화 앱·웹 통합 개발</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>소스코드 전체 이관</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>직접 운영 1:1 교육</li>
+        </ul>
+        <div class="tcta">
+          <a class="btn btn-on-dark-ghost btn-sm" href="tel:01081119370" data-analytics="cta_pkg_call">전화 문의</a>
+          <a class="btn btn-on-dark-ghost btn-sm" href="mailto:ceo@eternalsix.com" data-analytics="cta_pkg_mail">견적 요청</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- compare table -->
+    <div class="compare" data-reveal>
+      <table>
+        <thead>
+          <tr><th>패키지</th><th>내용</th><th>금액</th><th>작업 기간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>STANDARD</td><td>웹사이트 + 직접 운영 교육</td><td class="amt">1,490,000원</td><td class="term">약 14일</td></tr>
+          <tr class="is-pop"><td>DELUXE</td><td>모바일 앱 + 직접 운영 교육</td><td class="amt">4,990,000원</td><td class="term">약 21일</td></tr>
+          <tr><td>PREMIUM</td><td>고도화 앱·웹 + 교육</td><td class="amt">7,990,000원</td><td class="term">약 30일</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pricing-foot" data-reveal>
+      <a class="btn btn-primary" href="#consult" data-analytics="cta_pkg_consult">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        상담 신청서로 견적 받기
+      </a>
+      <a class="btn btn-on-dark-ghost" href="tel:01081119370" data-analytics="cta_pkg_call">전화로 바로 문의</a>
+    </div>
   </div>
-</div></section>
+</section>
 
-<!-- STARTUP PRODUCTION -->
-<section class="sec sec-dark" id="production"><div class="container">
-  <div class="rv"><div class="sec-label">STARTUP PRODUCTION</div><h2 class="sec-title">아이디어 → 시장 검증 → MVP → 투자 유치</h2><p class="sec-desc">창업에 필요한 모든 프로덕션을 AI로 가속합니다.</p></div>
-  <div class="prod-grid">
-    <div class="rv">
-      <div class="prod-info">
-        <h3>만들기만 하는 게 아니라,<br>되게 만들어 드립니다</h3>
-        <p>아이디어 검증부터 MVP 앱 개발, IR 덱 제작, 브랜딩, 마케팅 전략까지 — 창업 프로덕션의 전 과정을 원스톱으로 실행합니다.</p>
-        <p>AI 기반 초고속 개발로 일반 에이전시 대비 3~5배 빠른 속도와 결과물을 제공합니다.</p>
-        <div class="prod-highlights">
-          <div class="prod-hl"><div class="prod-hl-val">7일</div><div class="prod-hl-label">MVP 개발</div></div>
-          <div class="prod-hl"><div class="prod-hl-val">14일</div><div class="prod-hl-label">풀버전+마케팅</div></div>
-          <div class="prod-hl"><div class="prod-hl-val">원스톱</div><div class="prod-hl-label">기획~배포~마케팅</div></div>
+<!-- ===================== PREPARE + FAQ ===================== -->
+<section class="sec prepare" id="prepare" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <span class="eyebrow">통화 전 준비하면 좋은 것</span>
+      <h2 class="h-sec">이 4가지만 있으면<br>이야기가 훨씬 빨라집니다</h2>
+    </div>
+    <div class="prep-grid">
+      <div class="prep-card" data-reveal><span class="pnum">01</span><h4>꼭 필요한 기능</h4><p>'이건 없으면 안 된다' 싶은 핵심 기능 한두 가지면 충분합니다.</p></div>
+      <div class="prep-card" data-reveal data-delay="1"><span class="pnum">02</span><h4>참고할 서비스</h4><p>'이거랑 비슷했으면' 하는 앱·사이트가 있으면 알려주세요.</p></div>
+      <div class="prep-card" data-reveal data-delay="2"><span class="pnum">03</span><h4>대략의 화면 구성</h4><p>손그림이나 메모 수준이어도 좋습니다. 함께 다듬어 갑니다.</p></div>
+      <div class="prep-card" data-reveal data-delay="3"><span class="pnum">04</span><h4>브랜드 자료</h4><p>로고·색·폰트가 있으면 공유해 주세요. 없어도 괜찮습니다.</p></div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq" id="faq">
+      <div class="faq-head" data-reveal>
+        <h2 class="h-sec">자주 묻는 질문</h2>
+        <a class="linkly" href="#consult" data-analytics="cta_faq_consult">더 궁금하면 바로 물어보기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q">코딩을 전혀 몰라도 직접 운영 교육이 가능한가요?<span class="faq-toggle"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">네.<br>교육공학을 전공한 대표가 비전공자 기준에 맞춰 1:1로 알려드립니다.<br>코드를 새로 짜는 게 아니라, 문구·이미지·간단한 설정을 스스로 바꾸는 데 필요한 만큼만 다룹니다.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">왜 Flutter로 만드나요?<span class="faq-toggle"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">하나의 코드로 iOS와 안드로이드를 함께 만들 수 있어, 시간과 비용을 아끼면서 빠르게 MVP를 띄울 수 있기 때문입니다.<br>초기 검증 단계에 특히 잘 맞습니다.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">공개된 가격은 VAT가 포함된 금액인가요?<span class="faq-toggle"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">네.<br>모든 패키지 금액은 VAT 포함 정액입니다.<br>견적 이후에 금액이 바뀌지 않도록, 처음부터 최종 금액을 공개합니다.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">납품 후에 연락이 끊기진 않나요?<span class="faq-toggle"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">소스코드와 권한을 모두 넘겨드리기 때문에, 대표님이 직접 운영할 수 있는 상태로 마무리합니다.<br>그 위에서 직접 수정·운영하는 법을 1:1로 교육해, 다음 수정 때 다시 외주를 찾지 않으셔도 됩니다.</div></div>
         </div>
       </div>
     </div>
-    <div class="rv rv-d2">
-      <ul class="prod-steps">
-        <li class="prod-step"><div class="prod-step-num">01</div><div><div class="prod-step-title">아이디어 검증 & 시장 분석</div><div class="prod-step-desc">경쟁 리서치, TAM/SAM/SOM, 비즈니스 모델 설계</div></div></li>
-        <li class="prod-step"><div class="prod-step-num">02</div><div><div class="prod-step-title">MVP 앱 + 랜딩페이지</div><div class="prod-step-desc">Flutter 크로스플랫폼, 전환 최적화 랜딩, SEO</div></div></li>
-        <li class="prod-step"><div class="prod-step-num">03</div><div><div class="prod-step-title">IR 덱 & 투자 소개서</div><div class="prod-step-desc">투자자 관점 스토리라인, 재무 모델, 시장 기회</div></div></li>
-        <li class="prod-step"><div class="prod-step-num">04</div><div><div class="prod-step-title">브랜딩 & 마케팅 런칭</div><div class="prod-step-desc">브랜드 아이덴티티, AI 콘텐츠 파이프라인</div></div></li>
-        <li class="prod-step"><div class="prod-step-num">05</div><div><div class="prod-step-title">그로스 & 스케일링</div><div class="prod-step-desc">데이터 기반 그로스, A/B 테스트, 전환 퍼널</div></div></li>
-      </ul>
-    </div>
   </div>
-</div></section>
+</section>
 
-<!-- BOOTCAMP & VVIP sections removed for rebranding -->
-
-<!-- PRICING -->
-<section class="sec sec-warm" id="pricing"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">PRICING</div><h2 class="sec-title rv rv-d1">투명한 가격 정책</h2><p class="sec-desc rv rv-d2">숨겨진 비용 없이, 처음 안내드린 금액 그대로.</p></div>
-  <div class="pricing-tabs rv"><button class="pricing-tab active" data-tab="app">📱 앱 개발</button><button class="pricing-tab" data-tab="web">🌐 웹사이트</button></div>
-  <div class="pricing-content active" id="app-pricing"><div class="pricing-grid">
-    <div class="price-card featured rv"><div class="price-tier">개발 외주 패키지</div><div class="price-amount">300만원~</div><div class="price-period">약 7~10일</div><ul class="price-features"><li>로그인 / 회원가입</li><li>데이터베이스 설계</li><li>핵심 기능 1~3개 개발</li><li>기본 UI 제작</li><li>결제 연동</li><li>도메인 연결 &amp; 배포</li><li>2회 수정 포함</li></ul><a href="/consultation/" class="price-btn price-btn-fill">상담하기</a></div>
-    <div class="price-card rv rv-d1"><div class="price-tier">Standard</div><div class="price-amount">499만원~</div><div class="price-period">3~5주</div><ul class="price-features"><li>풀 기능 + 맞춤 UI/UX</li><li>소셜 로그인 + 결제</li><li>관리자 대시보드</li><li>유지보수 1개월</li></ul><a href="/consultation/" class="price-btn price-btn-outline">상담하기</a></div>
-    <div class="price-card rv rv-d2"><div class="price-tier">Enterprise</div><div class="price-amount">별도 협의</div><div class="price-period">협의</div><ul class="price-features"><li>복합 플랫폼 (웹+앱)</li><li>대용량 아키텍처</li><li>외부 API 다중 연동</li><li>장기 유지보수</li></ul><a href="/consultation/" class="price-btn price-btn-outline">상담하기</a></div>
-  </div></div>
-  <div class="pricing-content" id="web-pricing"><div class="pricing-grid">
-    <div class="price-card rv"><div class="price-tier">Basic</div><div class="price-amount">99만원~</div><div class="price-period">7일</div><ul class="price-features"><li>원페이지 랜딩</li><li>반응형 디자인</li><li>기본 SEO</li><li>수정 2회 + 호스팅 1년</li></ul><a href="/consultation/" class="price-btn price-btn-outline">상담하기</a></div>
-    <div class="price-card featured rv rv-d1"><div class="price-tier">Standard</div><div class="price-amount">199만원~</div><div class="price-period">10~14일</div><ul class="price-features"><li>멀티페이지 (5P)</li><li>맞춤 UI/UX</li><li>고급 SEO + 애널리틱스</li><li>수정 5회 + 유지보수 1개월</li></ul><a href="/consultation/" class="price-btn price-btn-fill">상담하기</a></div>
-    <div class="price-card rv rv-d2"><div class="price-tier">Premium</div><div class="price-amount">399만원~</div><div class="price-period">협의</div><ul class="price-features"><li>풀커스텀 디자인+기능</li><li>결제/예약 시스템</li><li>관리자 페이지 + API</li><li>수정 무제한 + 유지보수 3개월</li></ul><a href="/consultation/" class="price-btn price-btn-outline">상담하기</a></div>
-  </div></div>
-</div></section>
-
-<!-- PROCESS -->
-<section class="sec" id="process"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">PROCESS</div><h2 class="sec-title rv rv-d1">진행 과정</h2></div>
-  <div class="process-grid">
-    <div class="process-step rv"><div class="process-num en">01</div><h3 class="process-step-title">무료 상담</h3><p class="process-step-desc">아이디어 공유 & 요구사항 분석</p></div>
-    <div class="process-step rv rv-d1"><div class="process-num en">02</div><h3 class="process-step-title">기획 & 견적</h3><p class="process-step-desc">맞춤 제안서 & 기술 스택 선정</p></div>
-    <div class="process-step rv rv-d2"><div class="process-num en">03</div><h3 class="process-step-title">디자인 & 개발</h3><p class="process-step-desc">실시간 피드백 & AI 초고속 빌드</p></div>
-    <div class="process-step rv rv-d3"><div class="process-num en">04</div><h3 class="process-step-title">완성 & 배포</h3><p class="process-step-desc">검수 → 런칭 → 유지보수</p></div>
-  </div>
-</div></section>
-
-<!-- FAQ -->
-<section class="sec sec-cream" id="faq"><div class="container">
-  <div class="sec-center"><div class="sec-label rv">FAQ</div><h2 class="sec-title rv rv-d1">자주 묻는 질문</h2></div>
-  <div class="faq-grid">
-    <div class="faq-item rv"><div class="faq-q">결제 연동이 까다롭지 않나요?</div><p class="faq-a">서비스에 맞는 국내 주요 PG사 결제 연동을 함께 검토하고, 계약부터 적용까지 체계적으로 도와드립니다.</p></div>
-    <div class="faq-item rv rv-d1"><div class="faq-q">기획서가 없어도 되나요?</div><p class="faq-a">네, 아이디어만 말씀해주시면 기획부터 정리해서 진행합니다.</p></div>
-    <div class="faq-item rv rv-d2"><div class="faq-q">결제는 어떻게 진행되나요?</div><p class="faq-a">계약서 작성 후 선금 50% → 완료 후 잔금 50%로 진행하며, 세금계산서 발행 가능합니다.</p></div>
-    <div class="faq-item rv rv-d3"><div class="faq-q">수정은 몇 번까지 가능한가요?</div><p class="faq-a">기본적으로 패키지별 수정 횟수가 있으나, 합리적인 범위 내에서는 유연하게 조정해 드립니다.</p></div>
-  </div>
-</div></section>
-
-<!-- 상담 신청 CTA -->
-<section class="sec apply-section" id="apply">
-  <div class="container">
-    <div class="apply-inner rv">
-      <h2 class="apply-title">사이트에서 바로 상담 신청</h2>
-      <p class="apply-sub">AI 전략 가능성 진단 폼으로 이동해 간단히 작성해 주시면 빠르게 연락드립니다.</p>
-      <div style="text-align:center;margin-top:28px">
-        <a href="/consultation/" class="btn-submit" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer">신청 보내기</a>
+<!-- ===================== CTA STRIP ===================== -->
+<section class="sec-tight ctastrip" id="consult">
+  <div class="wrap">
+    <div class="cta-card" data-reveal>
+      <div class="blueprint" style="mask-image:radial-gradient(100% 120% at 50% 0%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(100% 120% at 50% 0%,#000 30%,transparent 75%)"></div>
+      <div style="position:relative;z-index:2">
+        <span class="eyebrow on-dark center">상담은 무료입니다</span>
+        <h2 class="h-sec" style="margin-top:16px">고민만 하다 타이밍 놓치기 전에,<br>름랩에게 문의하세요</h2>
+        <p class="sub">통화가 부담되시면 상담 신청서를 남겨 주세요.<br>영업일 기준 24시간 내 연락드립니다.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:01081119370" data-analytics="cta_strip_call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            010-8111-9370 전화 상담
+          </a>
+          <a class="btn btn-on-dark-ghost" href="#consult" data-analytics="cta_strip_form">상담 신청서 남기기</a>
+        </div>
+        <p class="contact-line">010-8111-9370 · ceo@eternalsix.com · 평일 10:00–18:00</p>
       </div>
-      <p class="apply-alt">바로 연결을 원하시면 · <a href="tel:01081119370">전화 010-8111-9370</a> · <a href="mailto:ceo@eternalsix.com">이메일 ceo@eternalsix.com</a></p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="cta-glow cta-glow-1"></div><div class="cta-glow cta-glow-2"></div>
-  <div class="container" style="position:relative;z-index:1">
-    <h2 class="cta-title rv"><span class="gradient-text">확실한 결과물</span>이 필요하다면<br>지금 바로 시작하세요</h2>
-    <p class="cta-sub rv rv-d1">앱 개발, 웹 제작, 서비스 고도화 — 름랩이 해결해 드립니다.</p>
-    <div class="hero-btns rv rv-d2" style="justify-content:center;gap:14px">
-      <a href="tel:01081119370" class="btn-primary" style="font-size:18px;padding:20px 42px">📞 010-8111-9370 전화 상담</a>
-      <a href="mailto:ceo@eternalsix.com" class="btn-secondary" style="font-size:16px;padding:18px 36px">✉️ 이메일 문의</a>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <a class="brand" href="#top"><span class="mark"><b>R</b></span><span>REUMLAB</span></a>
+        <p class="foot-bio">앱·웹개발 스튜디오 름랩.<br>예산 안에서 빠르게 MVP를 만들고, 소스코드까지 통째로 넘깁니다.</p>
+      </div>
+      <div class="foot-col">
+        <h5>둘러보기</h5>
+        <a href="#solution">특징</a>
+        <a href="#process">진행</a>
+        <a href="#pricing">패키지</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h5>상담</h5>
+        <a href="tel:01081119370">010-8111-9370</a>
+        <a href="mailto:ceo@eternalsix.com">ceo@eternalsix.com</a>
+        <p>평일 10:00–18:00</p>
+        <a href="#consult">상담 신청하기</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div class="foot-biz">
+        앱·웹개발 스튜디오 름랩 · 대표 성아름 · 사업자등록번호 793-12-03247<br>
+        경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동)
+      </div>
+      <div class="foot-legal">
+        <a href="terms.html">이용약관</a>
+        <a href="privacy.html">개인정보처리방침</a>
+        <a href="refund.html">취소 및 환불 안내</a>
+        <span style="color:rgba(255,255,255,.3)">© 2026 REUMLAB</span>
+      </div>
     </div>
   </div>
-</section>
+</footer>
 
-<footer class="footer"><div class="container">
-  <p class="footer-info">사업자명: 름랩 (REUMLAB) <span>|</span> 사업자등록번호: 793-12-03247 <span>|</span> 대표: 성아름</p>
-  <p class="footer-info">주소: 경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동) <span>|</span> 이메일: <a href="mailto:ceo@eternalsix.com" style="color:var(--text-dim)">ceo@eternalsix.com</a></p>
-  <p class="footer-info" style="margin-top:10px;">
-    <a href="/terms.html" style="color:var(--text-sub);">이용약관</a> <span style="margin:0 12px;">|</span>
-    <a href="/privacy.html" style="color:var(--text-sub);font-weight:700;">개인정보처리방침</a> <span style="margin:0 12px;">|</span>
-    <a href="/refund.html" style="color:var(--text-sub);">환불정책</a>
-  </p>
-</div></footer>
-
-<div class="float-btns">
-  <a href="tel:01081119370" class="float-btn float-kakao" title="전화 상담">📞</a>
-  <button class="float-btn float-top" id="scrollTopBtn" title="맨 위로">↑</button>
+<!-- ===================== FLOATING CONTACT ===================== -->
+<div class="float">
+  <div class="float-menu">
+    <a class="float-item" href="tel:01081119370" data-analytics="float_call">
+      <span class="fico" style="background:var(--navy-900)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+      <span>전화 상담<small>010-8111-9370</small></span>
+    </a>
+    <a class="float-item" href="#consult" data-analytics="float_form">
+      <span class="fico" style="background:var(--accent)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+      <span>상담 신청서 작성<small>24시간 내 연락</small></span>
+    </a>
+    <a class="float-item" href="mailto:ceo@eternalsix.com" data-analytics="float_mail">
+      <span class="fico" style="background:var(--navy-700)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+      <span>이메일 문의<small>ceo@eternalsix.com</small></span>
+    </a>
+  </div>
+  <button class="float-toggle" data-analytics="float_toggle">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="ftxt">빠른 상담</span>
+  </button>
 </div>
 
-<script>
-document.getElementById('hamburgerBtn').addEventListener('click',()=>document.getElementById('mobileMenu').classList.add('open'));
-document.getElementById('mobileClose').addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open'));
-function closeMobile(){document.getElementById('mobileMenu').classList.remove('open')}
-window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60);document.getElementById('scrollTopBtn').classList.toggle('show',window.scrollY>600)});
-document.getElementById('scrollTopBtn').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-document.querySelectorAll('.pricing-tab').forEach(tab=>{tab.addEventListener('click',()=>{document.querySelectorAll('.pricing-tab').forEach(t=>t.classList.remove('active'));tab.classList.add('active');document.querySelectorAll('.pricing-content').forEach(c=>c.classList.remove('active'));document.getElementById(tab.dataset.tab+'-pricing').classList.add('active')})});
-const obs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('vis')})},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-const cObs=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting){const el=en.target,t=+el.dataset.target,d=1800,s=performance.now(),a=n=>{const p=Math.min((n-s)/d,1),v=1-Math.pow(1-p,3);el.textContent=Math.floor(v*t);p<1?requestAnimationFrame(a):el.textContent=t};requestAnimationFrame(a);cObs.unobserve(el)}})},{threshold:.5});
-document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
-const lc=document.getElementById('leafC'),lv=['🍃','🌿','☘️','🌱'];
-for(let i=0;i<12;i++){const l=document.createElement('div');l.className='hero-leaf';l.textContent=lv[Math.floor(Math.random()*lv.length)];l.style.left=Math.random()*100+'%';l.style.animationDuration=(10+Math.random()*15)+'s';l.style.animationDelay=Math.random()*12+'s';l.style.fontSize=(14+Math.random()*10)+'px';l.style.position='absolute';lc.appendChild(l)}
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
-</script>
+<script src="reum.js"></script>
 </body>
 </html>
