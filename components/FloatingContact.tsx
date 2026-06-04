@@ -3,9 +3,7 @@
 import { useState } from 'react';
 import { SITE } from '@/lib/seo';
 
-const KAKAO_URL = process.env.NEXT_PUBLIC_KAKAO_CHANNEL_URL || '';
-
-/** 우하단 플로팅 상담 버튼: 전화·이메일·(설정 시) 카카오톡 채널 */
+/** 우하단 플로팅 상담 버튼: 전화·이메일 */
 export default function FloatingContact() {
   const [open, setOpen] = useState(false);
 
@@ -43,17 +41,6 @@ export default function FloatingContact() {
           >
             📞 전화 상담 {SITE.phone}
           </a>
-          {KAKAO_URL ? (
-            <a
-              href={KAKAO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-analytics="float_kakao"
-              style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, background: '#FEE500', color: '#191600', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}
-            >
-              💬 카카오톡 상담
-            </a>
-          ) : null}
           <a
             href="/consultation/"
             data-analytics="float_form"

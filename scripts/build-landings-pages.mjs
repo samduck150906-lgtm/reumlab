@@ -150,7 +150,6 @@ function landingHtml(landing) {
   <link rel="canonical" href="${url}">
   ${NAVER_VERIFY ? `<meta name="naver-site-verification" content="${escapeHtml(NAVER_VERIFY)}">` : ''}
   <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://pf.kakao.com">
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
@@ -268,7 +267,7 @@ function landingHtml(landing) {
       <li><a href="${BASE}/h/${landing.hubId}/">더보기</a></li>
       <li><a href="${BASE}/#faq">FAQ</a></li>
     </ul>
-    <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="contact-btn" data-cta="kakao">문의하기</a>
+    <a href="tel:${site.tel.replace(/-/g, '')}" class="contact-btn" data-cta="tel">전화 문의</a>
     <button class="hamburger" id="hamburger" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
   </nav>
   <div class="drawer-overlay" id="drawerOverlay"></div>
@@ -278,7 +277,7 @@ function landingHtml(landing) {
       <li><a href="${BASE}/h/${landing.hubId}/">더보기</a></li>
       <li><a href="${BASE}/#faq">FAQ</a></li>
     </ul>
-    <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="contact-btn drawer-btn" data-cta="kakao">문의하기</a>
+    <a href="tel:${site.tel.replace(/-/g, '')}" class="contact-btn drawer-btn" data-cta="tel">전화 문의</a>
   </aside>
   <p class="breadcrumb"><a href="${BASE}/">름랩</a> &gt; ${escapeHtml(landing.keyword)}</p>
   <section class="hero">
@@ -287,9 +286,8 @@ function landingHtml(landing) {
       <h1><span class="g">${escapeHtml(landing.keyword)}</span><br>견적·상담 문의</h1>
       <p class="hero-desc">${escapeHtml(landing.description)}</p>
       <div class="hero-cta">
-        <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="btn-primary" data-cta="kakao">카카오톡 상담</a>
+        <a href="tel:${site.tel.replace(/-/g, '')}" class="btn-primary" data-cta="tel">전화 문의</a>
         <a href="mailto:${site.email}" class="btn-outline" data-cta="email">이메일 문의</a>
-        <a href="tel:${site.tel.replace(/-/g, '')}" class="btn-outline" data-cta="tel">전화 문의</a>
       </div>
     </div>
   </section>
@@ -321,11 +319,10 @@ function landingHtml(landing) {
   <section class="cta">
     <div class="section-inner">
       <h2><span class="g">${escapeHtml(landing.keyword)}</span> 견적 문의</h2>
-      <p class="hero-desc">카카오톡·이메일·전화로 편하게 문의해 주세요.</p>
+      <p class="hero-desc">이메일·전화로 편하게 문의해 주세요.</p>
       <div class="cta-buttons">
-        <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="btn-primary" data-cta="kakao">카카오톡 상담</a>
+        <a href="tel:${site.tel.replace(/-/g, '')}" class="btn-primary" data-cta="tel">전화 상담</a>
         <a href="mailto:${site.email}" class="btn-outline" data-cta="email">이메일</a>
-        <a href="tel:${site.tel.replace(/-/g, '')}" class="btn-outline" data-cta="tel">전화</a>
       </div>
     </div>
   </section>
@@ -334,7 +331,6 @@ function landingHtml(landing) {
     <div class="footer-links">
       <a href="mailto:${site.email}">이메일</a>
       <a href="tel:${site.tel}">전화</a>
-      <a href="${site.kakao}" target="_blank" rel="noopener noreferrer">카카오톡</a>
     </div>
   </footer>
   <script>

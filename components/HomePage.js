@@ -3,16 +3,12 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
-const KAKAO_OPEN = 'https://open.kakao.com/o/sF0lmnhi';
-
 export default function HomePage({ site }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [pricingTab, setPricingTab] = useState('app');
   const [navScrolled, setNavScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const leafContainerRef = useRef(null);
-
-  const kakaoUrl = site?.kakao || KAKAO_OPEN;
 
   useEffect(() => {
     const onScroll = () => {
@@ -157,7 +153,6 @@ export default function HomePage({ site }) {
             </div>
             <div className="hero-btns">
               <Link href="/consultation/" className="btn-primary">📋 사이트에서 바로 신청</Link>
-              <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary">💬 카카오톡 상담</a>
               <a href="#app-portfolio" className="btn-secondary">포트폴리오 보기 →</a>
             </div>
           </div>
@@ -725,7 +720,7 @@ export default function HomePage({ site }) {
             <div style={{ textAlign: 'center', marginTop: 28 }}>
               <Link href="/consultation/" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>신청 보내기</Link>
             </div>
-            <p className="apply-alt">바로 상담을 원하시면 · <a href={kakaoUrl} target="_blank" rel="noopener noreferrer">카카오톡</a></p>
+            <p className="apply-alt">바로 상담을 원하시면 · <a href="tel:01081119370">전화 010-8111-9370</a></p>
           </div>
         </div>
       </section>
@@ -738,7 +733,7 @@ export default function HomePage({ site }) {
           <p className="cta-sub rv rv-d1">앱·웹 개발 문의는 언제든 편하게 상담하세요.</p>
           <div className="hero-btns rv rv-d2" style={{ justifyContent: 'center', gap: 14 }}>
             <Link href="/consultation/" className="btn-primary" style={{ fontSize: 18, padding: '20px 42px' }}>📋 사이트에서 바로 신청</Link>
-            <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: 16, padding: '18px 36px' }}>💬 카카오톡 상담</a>
+            <a href="tel:01081119370" className="btn-secondary" style={{ fontSize: 16, padding: '18px 36px' }}>📞 전화 상담</a>
           </div>
         </div>
       </section>
@@ -757,7 +752,7 @@ export default function HomePage({ site }) {
       </footer>
 
       <div className="float-btns">
-        <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="float-btn float-kakao" title="카카오톡 상담">💬</a>
+        <a href="tel:01081119370" className="float-btn float-call" title="전화 상담">📞</a>
         <button type="button" className={`float-btn float-top ${showScrollTop ? 'show' : ''}`} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} title="맨 위로">↑</button>
       </div>
     </>

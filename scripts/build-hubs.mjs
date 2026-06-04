@@ -32,7 +32,7 @@ function escapeHtml(s) {
 function hubHtml(hubSlug, hub) {
   const url = `${BASE}/h/${hubSlug}/`;
   const hubLandings = (hub.landings || []).slice(0, 50);
-  const bodyTemplate = hubBodyTemplates[hub.type] || hubBodyTemplates.service || '름랩은 앱·웹·기획 외주를 진행합니다. 견적·상담은 카카오톡·이메일·전화로 문의해 주세요.';
+  const bodyTemplate = hubBodyTemplates[hub.type] || hubBodyTemplates.service || '름랩은 앱·웹·기획 외주를 진행합니다. 견적·상담은 이메일·전화로 문의해 주세요.';
   const hubBody = bodyTemplate.replace(/\s+/g, ' ').trim();
 
   const breadcrumbSchema = {
@@ -118,7 +118,7 @@ function hubHtml(hubSlug, hub) {
       <li><a href="${BASE}/#services">서비스</a></li>
       <li><a href="${BASE}/#faq">FAQ</a></li>
     </ul>
-    <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="contact-btn">문의하기</a>
+    <a href="tel:${String(site.tel || '').replace(/-/g, '')}" class="contact-btn">전화 문의</a>
   </nav>
   <p class="breadcrumb"><a href="${BASE}/">름랩</a> &gt; ${escapeHtml(hub.ko)}</p>
   <section class="hero">
@@ -136,7 +136,7 @@ function hubHtml(hubSlug, hub) {
     </div>
   </section>
   <section class="cta">
-    <a href="${site.kakao}" target="_blank" rel="noopener noreferrer" class="btn-primary">카카오톡 상담</a>
+    <a href="tel:${String(site.tel || '').replace(/-/g, '')}" class="btn-primary">전화 상담</a>
     <a href="${BASE}/">메인으로</a>
   </section>
   <footer>
