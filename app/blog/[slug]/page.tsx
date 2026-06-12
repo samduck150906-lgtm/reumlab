@@ -8,7 +8,7 @@ import {
   getBlogPostBySlug,
 } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
-import { ArticleJsonLd, BreadcrumbJsonLdTrail } from '@/components/JsonLd';
+import { ArticleJsonLd, BreadcrumbJsonLdTrail, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
 type Props = { params: { slug: string } };
@@ -56,6 +56,7 @@ export default function BlogPostPage({ params }: Props) {
   return (
     <>
       <ArticleJsonLd post={post} url={url} />
+      {post.faqs && post.faqs.length > 0 && <FAQPageJsonLd items={post.faqs} />}
       <BreadcrumbJsonLdTrail
         items={[
           { name: '홈', url: `${SITE.domain}/` },
@@ -85,11 +86,18 @@ export default function BlogPostPage({ params }: Props) {
             </p>
 
             <div style={{ marginTop: 28 }}>
-              {post.paragraphs.map((para, i) => (
-                <p key={i} className="hub-intro" style={{ marginTop: 18 }}>
-                  {para}
-                </p>
-              ))}
+              {post.htmlBody ? (
+                <div
+                  className="blog-body hub-intro"
+                  dangerouslySetInnerHTML={{ __html: post.htmlBody }}
+                />
+              ) : (
+                post.paragraphs.map((para, i) => (
+                  <p key={i} className="hub-intro" style={{ marginTop: 18 }}>
+                    {para}
+                  </p>
+                ))
+              )}
             </div>
 
             <div className="cta" style={{ marginTop: 40 }}>
