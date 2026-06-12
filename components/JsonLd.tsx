@@ -96,6 +96,8 @@ export function ReumHomeGraphJsonLd() {
       },
       url: SITE.domain + '/',
       priceRange: '₩₩',
+      openingHours: ['Mo-Fr 10:00-18:00'],
+      areaServed: ['KR', '서울', '경기', '수원', '화성', '용인', '동탄'],
       identifier: {
         '@type': 'PropertyValue',
         name: '사업자등록번호',
@@ -217,6 +219,43 @@ export function LandingServiceJsonLd({
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
+  );
+}
+
+export function WebSiteJsonLd() {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE.domain}/#website`,
+    name: SITE.name,
+    alternateName: SITE.nameEn,
+    url: SITE.domain + '/',
+    inLanguage: 'ko-KR',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE.domain}/blog?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+  );
+}
+
+type FaqItem = { q: string; a: string };
+
+export function FAQPageJsonLd({ items }: { items: FaqItem[] }) {
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  };
+  return (
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
 
