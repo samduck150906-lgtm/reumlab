@@ -72,6 +72,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           title="름랩 REUMLAB RSS"
           href={`${SITE.domain}/feed.xml`}
         />
+        <link rel="alternate" hrefLang="ko" href={SITE.domain + '/'} />
+        <link rel="alternate" hrefLang="x-default" href={SITE.domain + '/'} />
       </head>
       <body>
         <Analytics />

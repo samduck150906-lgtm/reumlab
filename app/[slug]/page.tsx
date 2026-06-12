@@ -78,7 +78,7 @@ export default function SeoSlugPage({ params }: Props) {
     <>
       <OrganizationJsonLd />
       <BreadcrumbJsonLd slug={slug} />
-      <SeoServicePage seo={seo} />
+      <SeoServicePage seo={seo} pageSlug={slug} />
     </>
   );
 }

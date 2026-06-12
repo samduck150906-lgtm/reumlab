@@ -28,20 +28,20 @@ export interface PageSeo {
 export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   // ─── 메인 (에이전시 정체성) ───
   '': {
-    title: '름랩 REUMLAB | 앱·웹 MVP 개발, AI 외주개발, Flutter 앱개발',
+    title: '름랩 REUMLAB | Flutter 앱개발, 랜딩페이지 제작, MVP 외주개발 — 수원 개발 스튜디오',
     description:
-      '름랩은 앱·웹 MVP 개발, AI 기능 개발, Flutter 앱개발, 소스코드 이관, AI 직접 운영 교육을 함께 제공하는 외주개발 스튜디오입니다. 예산 안에서 빠르게 만들고 직접 운영할 수 있게 돕습니다.',
+      '수원 인계동 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. VAT 포함 499만 원부터.',
     keywords: [
       '외주개발',
       '앱개발 외주',
-      'AI 외주개발',
-      'AI 개발 교육',
       'Flutter 앱개발',
       'MVP 개발',
-      '웹사이트 제작',
+      '랜딩페이지 제작',
+      '홈페이지 제작',
+      '수원 앱개발',
+      '수원 외주개발',
       '소스코드 이관',
       '스타트업 MVP',
-      '비개발자 창업 앱개발',
     ],
     ogTitle: '외주 맡긴 앱, 다시는 외주에 묶이지 않게. | 름랩 REUMLAB',
     ogDescription:

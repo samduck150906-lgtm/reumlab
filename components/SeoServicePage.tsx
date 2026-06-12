@@ -2,7 +2,18 @@ import Link from 'next/link';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
 
-export default function SeoServicePage({ seo }: { seo: PageSeo }) {
+const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
+  { match: /app-dev|앱개발|앱-개발|app-gaebal/, slug: 'app-gaebal-biyong-julineun-bab', title: '앱 개발 비용 총정리 (2026): 범위별 견적과 줄이는 법' },
+  { match: /mvp/, slug: 'mvp-gaebal-biyong-gigan', title: 'MVP 개발 비용과 기간: 3주 만에 시장 검증이 가능한 이유' },
+  { match: /flutter/, slug: 'flutter-oeju-jangdanjeom', title: 'Flutter 앱개발 외주, 장단점 솔직 정리' },
+  { match: /suwon|수원/, slug: 'suwon-app-gaebal-upche', title: '수원 앱개발 업체 고르는 법' },
+  { match: /landing|homepage|홈페이지|랜딩/, slug: 'homepage-jejak-biyong', title: '홈페이지 제작 비용 총정리 (2026)' },
+];
+
+export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSlug?: string }) {
+  const related = pageSlug
+    ? RELATED_BLOG.find((r) => r.match.test(pageSlug))
+    : undefined;
   return (
     <main className="seo-landing">
       <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 64px' }}>
@@ -60,6 +71,14 @@ export default function SeoServicePage({ seo }: { seo: PageSeo }) {
             <li>견적·일정 투명 안내 · 대표 직접 커뮤니케이션</li>
             <li>사업자 {SITE.company} · 대표 {SITE.representative} · {SITE.phone}</li>
           </ul>
+          {related && (
+            <div style={{ marginTop: 32, padding: '20px 24px', background: 'rgba(255,255,255,0.04)', borderRadius: 12, borderLeft: '3px solid var(--accent, #2f6bff)' }}>
+              <p style={{ fontSize: 13, color: 'var(--text-dim)', marginBottom: 8 }}>관련 글</p>
+              <Link href={`/blog/${related.slug}/`} style={{ fontWeight: 600, textDecoration: 'none' }}>
+                {related.title} →
+              </Link>
+            </div>
+          )}
           <div style={{ marginTop: 40 }}>
             <Link href="/" className="btn-light">
               ← 메인으로
