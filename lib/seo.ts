@@ -28,31 +28,31 @@ export interface PageSeo {
 export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   // ─── 메인 (에이전시 정체성) ───
   '': {
-    title: 'AI 기반 앱·웹 개발 & 자체 유지보수 교육 | 름랩 Reum Lab',
+    title: '름랩 REUMLAB | 앱·웹 MVP 개발, AI 외주개발, Flutter 앱개발',
     description:
-      'VAT 포함 패키지 149만~799만원. 비전공자 대표도 직접 수정·관리할 수 있도록 AI 기반 웹·앱 개발과 온라인 유지보수 교육을 함께하는 름랩(Reum Lab)입니다.',
+      '름랩은 앱·웹 MVP 개발, AI 기능 개발, Flutter 앱개발, 소스코드 이관, AI 직접 운영 교육을 함께 제공하는 외주개발 스튜디오입니다. 예산 안에서 빠르게 만들고 직접 운영할 수 있게 돕습니다.',
     keywords: [
-      '앱 개발',
-      '웹 개발',
-      'Flutter',
-      'MVP',
-      '유지보수 교육',
-      'AI 개발',
-      '비전공자 대표',
-      '외주 개발',
-      '름랩',
-      'Reum Lab',
+      '외주개발',
+      '앱개발 외주',
+      'AI 외주개발',
+      'AI 개발 교육',
+      'Flutter 앱개발',
+      'MVP 개발',
+      '웹사이트 제작',
+      '소스코드 이관',
+      '스타트업 MVP',
+      '비개발자 창업 앱개발',
     ],
-    ogTitle: '론칭 다음 날도 주도하는 IT, 름랩 Reum Lab',
+    ogTitle: '외주 맡긴 앱, 다시는 외주에 묶이지 않게. | 름랩 REUMLAB',
     ogDescription:
-      'VAT 포함 정액 패키지(웹·앱·고도화)와 온라인 전수 교육. AI 보조 개발로 유지보수 비용을 줄이고 IT 자생력을 키우는 파트너.',
-    h1: 'AI 기반 앱·웹 개발과 자체 유지보수까지, 름랩과 함께',
+      '앱·웹 MVP 개발 + AI 직접 운영 교육. Flutter 앱·웹 MVP를 빠르게 만들고 소스코드·권한을 통째로 넘깁니다.',
+    h1: '외주 맡긴 앱, 다시는 외주에 묶이지 않게',
     canonical: 'https://reumlab.com',
   },
 
   // ─── 서비스별 페이지 (AI 단어 제거) ───
   웹개발: {
-    title: '웹 개발 & 홈페이지 제작 | 름랩 (REUMLAB)',
+    title: '웹·앱 MVP 개발 외주 | 름랩 (REUMLAB)',
     description:
       '기업용 웹사이트, 고성능 랜딩페이지 제작. 최신 기술 스택 기반의 반응형 웹 개발을 제공합니다.',
     keywords: [
@@ -83,7 +83,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ],
     ogTitle: '사용자가 만족하는 모바일 앱 개발 | 름랩',
     ogDescription: '기획부터 스토어 등록까지, 완벽한 모바일 비즈니스 앱 구축.',
-    h1: '비즈니스 경쟁력을 높이는 모바일 앱 개발',
+    h1: '비즈니스 경쟁력을 높이는 Flutter 앱 MVP 개발',
     canonical: 'https://reumlab.com/앱개발',
   },
 
