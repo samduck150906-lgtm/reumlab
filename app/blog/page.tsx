@@ -9,9 +9,9 @@ const canonical = `${SITE.domain}/blog/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '블로그·칼럼 | 비전공자 창업·MVP·외주 인사이트 | 름랩',
+  title: '블로그 | 앱개발 비용·MVP·Flutter·홈페이지 제작 실무 칼럼 | 름랩',
   description:
-    '앱 개발 비용 절감, 외주 실패 방지, MVP 범위, 유지보수 등 롱테일 키워드를 다룬 실무 칼럼. 름랩 Reum Lab.',
+    '앱 개발 비용, MVP 개발 기간, Flutter 외주, 랜딩페이지 제작 비용 등 창업자가 궁금한 개발·외주 주제를 정리한 름랩 칼럼입니다.',
   alternates: { canonical },
   openGraph: {
     type: 'website',
@@ -43,14 +43,13 @@ export default function BlogIndexPage() {
       <main>
         <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 40px' }}>
           <div className="container">
-            <p className="section-tag">Blog · Programmatic SEO</p>
+            <p className="section-tag">Blog</p>
             <h1 className="hero-title" style={{ fontSize: 'clamp(28px, 4vw, 40px)' }}>
-              롱테일 키워드 기반 칼럼
+              앱·웹 개발 실무 칼럼
             </h1>
             <p className="hero-desc" style={{ maxWidth: 720 }}>
-              스타트업 대표·비전공 창업자가 검색하는 주제별로 URL을 나누어{' '}
-              <strong>프로그래매틱 SEO</strong> 구조를 갖췄습니다. CMS나 노션으로 본문만 바꿔 같은 패턴으로
-              페이지를 늘리면 됩니다.
+              앱개발 비용, MVP 개발 기간, Flutter 외주, 홈페이지 제작 비용 등{' '}
+              창업자·소상공인이 자주 묻는 주제를 솔직하게 정리합니다.
             </p>
           </div>
         </section>
