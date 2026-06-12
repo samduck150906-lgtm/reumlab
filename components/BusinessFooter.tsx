@@ -26,6 +26,15 @@ export default function BusinessFooter({ topExtra }: Props) {
           </a>
           <br />
           주소: {SITE.address}
+          <br />
+          <a
+            href="https://naver.me/FORRCoFc"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--text-dim)' }}
+          >
+            네이버 플레이스 보기
+          </a>
         </p>
       </div>
     </footer>

@@ -423,6 +423,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <li><strong>가격 선공개</strong>: 웹사이트 149만 원 / Flutter 앱 499만 원 / 고도화 799만 원 (모두 VAT 포함 정액)</li>
 <li><strong>납품 방식</strong>: 소스코드 전체 이관 + 직접 수정·운영 1:1 교육 포함</li>
 <li><strong>상담</strong>: 평일 10:00–18:00, 무료 (010-8111-9370)</li>
+<li><strong>네이버 플레이스</strong>: <a href="https://naver.me/FORRCoFc" target="_blank" rel="noopener noreferrer">naver.me/FORRCoFc</a></li>
 </ul>
 <p>수원·화성·용인·오산 등 경기남부는 대면 미팅으로, 그 외 지역은 화상으로 동일하게 진행합니다.</p>
 
