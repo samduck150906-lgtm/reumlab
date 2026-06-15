@@ -156,6 +156,82 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     h1: '기업 환경에 최적화된 맞춤형 ERP 및 관리 시스템',
     canonical: 'https://reumlab.com/기업용ERP',
   },
+
+  // ─── 영문 서비스 URL (구글 광고 랜딩 + 영문 검색) ───
+  'app-development': {
+    title: 'App Development Outsourcing Korea | Flutter MVP | REUMLAB',
+    description:
+      'Flutter app development studio in Suwon, Korea. iOS + Android in one codebase. MVP in ~21 days. Full source code handover + 1:1 operation training. From ₩4,990,000 VAT incl.',
+    keywords: [
+      '앱개발 외주',
+      'Flutter 앱개발',
+      'app development Korea',
+      'Flutter MVP',
+      '앱개발 견적',
+      'mobile app outsourcing',
+    ],
+    ogTitle: 'Flutter App Development | MVP in 21 Days | REUMLAB Korea',
+    ogDescription: 'One codebase, iOS + Android. Full source handover. Suwon-based studio serving all of Korea.',
+    h1: '앱개발 외주 · App Development',
+    serviceDesc: '름랩은 Flutter로 iOS·Android 앱을 한 번에 만듭니다. VAT 포함 499만 원, 약 21일, 소스코드 전체 이관. 구글 광고·영문 검색으로 유입된 고객도 동일한 조건으로 상담합니다.',
+    canonical: 'https://reumlab.com/app-development',
+  },
+
+  'web-development': {
+    title: 'Web Development & Landing Page Korea | REUMLAB',
+    description:
+      'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩1,490,000 VAT incl. Suwon studio.',
+    keywords: [
+      '홈페이지 제작',
+      '랜딩페이지 제작',
+      'web development Korea',
+      'landing page Korea',
+      '웹사이트 제작',
+      'Next.js development',
+    ],
+    ogTitle: 'Website & Landing Page Development | REUMLAB Korea',
+    ogDescription: 'Custom web development with full source handover. No monthly fees. SEO-ready from day one.',
+    h1: '웹사이트·랜딩페이지 제작 · Web Development',
+    serviceDesc: '름랩 STANDARD 패키지는 VAT 포함 149만 원, 약 14일입니다. 맞춤 제작, 소스코드 전체 이관, 월 관리비 없음. SEO 기본기(메타·구조화 데이터·사이트맵)가 기본 포함됩니다.',
+    canonical: 'https://reumlab.com/web-development',
+  },
+
+  'mvp-development': {
+    title: 'MVP Development Korea | 3-Week Launch | REUMLAB',
+    description:
+      'Startup MVP development in Korea. Flutter cross-platform, 3-week turnaround, full source handover. Validate your idea before scaling. From ₩4,990,000.',
+    keywords: [
+      'MVP 개발',
+      'MVP 외주',
+      'startup MVP Korea',
+      'MVP development',
+      '스타트업 앱개발',
+      'rapid prototyping',
+    ],
+    ogTitle: 'Startup MVP Development in 3 Weeks | REUMLAB Korea',
+    ogDescription: 'Cross-platform Flutter MVP. Full source ownership. Validate your market in 21 days.',
+    h1: 'MVP 개발 · Startup MVP Development',
+    serviceDesc: '검증에 필요한 최소 기능만 빠르게 만듭니다. Flutter로 iOS·Android 동시 출시, 소스코드 전체 이관, 직접 운영 교육 포함. VAT 포함 499만 원, 약 21일.',
+    canonical: 'https://reumlab.com/mvp-development',
+  },
+
+  'flutter-development': {
+    title: 'Flutter App Development Studio Korea | REUMLAB',
+    description:
+      'Flutter specialist studio in Suwon Korea. One codebase for iOS and Android. 50–70% cost vs native. Full source handover + operation training.',
+    keywords: [
+      'Flutter 개발',
+      'Flutter 앱개발',
+      'Flutter development Korea',
+      '크로스플랫폼 개발',
+      'Flutter 외주',
+    ],
+    ogTitle: 'Flutter App Development | iOS + Android | REUMLAB',
+    ogDescription: 'Flutter specialist studio. One code, two platforms. Cheaper to build, cheaper to maintain.',
+    h1: 'Flutter 앱개발 · Flutter Development',
+    serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 499만 원.',
+    canonical: 'https://reumlab.com/flutter-development',
+  },
 };
 
 export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter((s) => s !== '');
