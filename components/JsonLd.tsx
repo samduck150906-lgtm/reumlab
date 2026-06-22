@@ -260,6 +260,209 @@ export function FAQPageJsonLd({ items }: { items: FaqItem[] }) {
   );
 }
 
+/** 지역×서비스 페이지: LocalBusiness + Service + FAQPage + BreadcrumbList 그래프 */
+export function RegionServiceJsonLd({
+  serviceName,
+  regionName,
+  description,
+  url,
+  faqs,
+  crumbs,
+}: {
+  serviceName: string;
+  regionName: string;
+  description: string;
+  url: string;
+  faqs: { q: string; a: string }[];
+  crumbs: { name: string; url: string }[];
+}) {
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'LocalBusiness',
+      '@id': `${url}#localbusiness`,
+      name: `${SITE.company} — ${regionName} ${serviceName}`,
+      image: SITE.defaultOgImage,
+      url,
+      telephone: SITE.phone,
+      email: SITE.email,
+      priceRange: '₩₩',
+      openingHours: ['Mo-Fr 10:00-18:00'],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '인계로124번길 19, 12층 1208호',
+        addressLocality: '수원시 팔달구',
+        addressRegion: '경기도',
+        addressCountry: 'KR',
+      },
+      areaServed: { '@type': 'Place', name: regionName },
+      sameAs: ['https://naver.me/FORRCoFc'],
+      identifier: {
+        '@type': 'PropertyValue',
+        name: '사업자등록번호',
+        value: SITE.bizNo,
+      },
+    },
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name: `${regionName} ${serviceName}`,
+      serviceType: serviceName,
+      description,
+      url,
+      areaServed: { '@type': 'Place', name: regionName },
+      provider: { '@id': `${SITE.domain}/#organization` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    },
+  ];
+  if (faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+    />
+  );
+}
+
+/** 업종×앱개발 페이지: Service + FAQPage + BreadcrumbList 그래프 */
+export function IndustryServiceJsonLd({
+  name,
+  description,
+  url,
+  faqs,
+  crumbs,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  faqs: { q: string; a: string }[];
+  crumbs: { name: string; url: string }[];
+}) {
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'Service',
+      '@id': `${url}#service`,
+      name,
+      serviceType: name,
+      description,
+      url,
+      areaServed: 'KR',
+      provider: { '@id': `${SITE.domain}/#organization` },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    },
+  ];
+  if (faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+    />
+  );
+}
+
+/** 가이드·비교 페이지: Article (+ FAQPage) + BreadcrumbList 그래프 */
+export function GuideArticleJsonLd({
+  title,
+  description,
+  url,
+  publishedAt,
+  keywords,
+  faqs,
+  crumbs,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  publishedAt: string;
+  keywords: string[];
+  faqs?: { q: string; a: string }[];
+  crumbs: { name: string; url: string }[];
+}) {
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'Article',
+      '@id': `${url}#article`,
+      headline: title,
+      description,
+      datePublished: publishedAt,
+      dateModified: publishedAt,
+      author: { '@type': 'Organization', name: SITE.name, url: SITE.domain + '/' },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE.name,
+        logo: { '@type': 'ImageObject', url: SITE.defaultOgImage },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      keywords: keywords.join(', '),
+      inLanguage: 'ko-KR',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${url}#breadcrumb`,
+      itemListElement: crumbs.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.name,
+        item: c.url,
+      })),
+    },
+  ];
+  if (faqs && faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+    />
+  );
+}
+
 type Crumb = { name: string; url: string };
 
 export function BreadcrumbJsonLdTrail({ items }: { items: Crumb[] }) {

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
+import { getService, REGIONS } from '@/lib/pseo';
 
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
   { match: /app-dev|앱개발|앱-개발|app-gaebal/, slug: 'app-gaebal-biyong-julineun-bab', title: '앱 개발 비용 총정리 (2026): 범위별 견적과 줄이는 법' },
@@ -14,6 +15,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
   const related = pageSlug
     ? RELATED_BLOG.find((r) => r.match.test(pageSlug))
     : undefined;
+  // 지역×서비스 허브(app-development, web-development, mvp, flutter, ai-development)면
+  // 지역 스포크 페이지로 내부링크를 노출 (허브-스포크 클러스터링)
+  const regionService = pageSlug ? getService(pageSlug) : undefined;
   return (
     <main className="seo-landing">
       <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 64px' }}>
@@ -71,6 +75,20 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             <li>견적·일정 투명 안내 · 대표 직접 커뮤니케이션</li>
             <li>사업자 {SITE.company} · 대표 {SITE.representative} · {SITE.phone}</li>
           </ul>
+          {regionService && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
+                지역별 {regionService.short}
+              </h2>
+              <div className="link-grid">
+                {REGIONS.map((r) => (
+                  <Link key={r.slug} href={`/${regionService.slug}/${r.slug}/`}>
+                    {r.full} {regionService.short}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
           {related && (
             <div style={{ marginTop: 32, padding: '20px 24px', background: 'rgba(255,255,255,0.04)', borderRadius: 12, borderLeft: '3px solid var(--accent, #2f6bff)' }}>
               <p style={{ fontSize: 13, color: 'var(--text-dim)', marginBottom: 8 }}>관련 글</p>

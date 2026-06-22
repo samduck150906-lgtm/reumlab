@@ -232,6 +232,46 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 499만 원.',
     canonical: 'https://reumlab.com/flutter-development',
   },
+
+  // ─── 지역×서비스(pSEO) 허브 — 한글 서비스 슬러그 ───
+  mvp: {
+    title: 'MVP 개발 외주 | 지역별 스타트업 MVP — 름랩 REUMLAB',
+    description:
+      '검증에 필요한 핵심 기능부터 빠르게 출시하는 MVP 개발. Flutter 크로스플랫폼, 14~30일, VAT 포함 499만 원부터. 소스코드 전체 이관 + 직접 운영 교육. 수원 거점, 경기·서울 대면, 전국 비대면.',
+    keywords: ['MVP 개발', 'MVP 외주', '스타트업 MVP', '최소 기능 제품', 'Lean MVP', '앱개발 외주'],
+    ogTitle: 'MVP 개발 외주 | 핵심 기능부터 빠르게 — 름랩',
+    ogDescription: '시장 검증에 필요한 핵심 기능부터 Lean MVP로. 소스코드 전체 이관 + 직접 운영 교육.',
+    h1: 'MVP 개발 외주',
+    serviceDesc:
+      '시장 검증에 필요한 핵심 기능부터 만드는 Lean MVP. 화면 흐름 설계 → 중간 확인 → 소스코드 이관 순서로 진행합니다. VAT 포함 499만 원부터, 약 14~30일. 지역별 대면 상담도 가능합니다.',
+    canonical: 'https://reumlab.com/mvp',
+  },
+
+  flutter: {
+    title: 'Flutter 앱개발 외주 | iOS·안드로이드 동시 — 름랩 REUMLAB',
+    description:
+      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 499만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 수원 거점, 전국 비대면.',
+    keywords: ['Flutter 앱개발', 'Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주', 'iOS 안드로이드 앱'],
+    ogTitle: 'Flutter 앱개발 외주 | 하나의 코드로 두 플랫폼 — 름랩',
+    ogDescription: '하나의 코드로 iOS·Android 동시 제작. MVP 단계 시간·비용을 줄이는 Flutter 앱개발.',
+    h1: 'Flutter 앱개발 외주',
+    serviceDesc:
+      'Flutter 크로스플랫폼으로 iOS·Android를 한 번에 만듭니다. 네이티브 2벌 대비 비용 50~70% 절감, 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 포함 499만 원부터.',
+    canonical: 'https://reumlab.com/flutter',
+  },
+
+  'ai-development': {
+    title: 'AI 외주개발 | 챗봇·상담 자동화 실전형 — 름랩 REUMLAB',
+    description:
+      '거창한 AI가 아니라 운영에 필요한 기능부터. 고객문의 자동화 챗봇·문서 요약·상담 자동화·추천을 최소 기능으로 설계하고, AI를 직접 지시·운영하도록 1:1 교육. 소스코드·API 키 직접 보유. 전국 비대면.',
+    keywords: ['AI 외주개발', 'AI 챗봇 개발', '상담 자동화', '업무 자동화', 'AI 기능 개발', 'AI 외주'],
+    ogTitle: 'AI 외주개발 | 작게 시작하는 상담 자동화 — 름랩',
+    ogDescription: '운영에 필요한 AI 기능부터 최소 단위로. 직접 지시·운영 교육 포함, 소스코드·API 키 직접 보유.',
+    h1: 'AI 외주개발',
+    serviceDesc:
+      '챗봇·자동응답·문서요약·추천·상담 자동화 등 운영에 필요한 AI 기능부터 설계합니다. 최소 기능으로 시작해 효과를 확인한 뒤 단계적으로 확장합니다. 소스코드·API 키를 직접 보유하도록 이관하고, AI 직접 운영 교육을 제공합니다.',
+    canonical: 'https://reumlab.com/ai-development',
+  },
 };
 
 export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter((s) => s !== '');
