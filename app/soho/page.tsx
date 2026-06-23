@@ -128,7 +128,7 @@ export default function SohoPage() {
 
       <main className="soho">
         {/* ── HERO ── */}
-        <section className="s-sec s-hero">
+        <section className="s-sec s-hero t-dark acc-green">
           <div className="s-wrap">
             <nav className="s-crumb" aria-label="breadcrumb">
               <Link href="/">홈</Link>
@@ -171,7 +171,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 검색에 안 보이는 업장 ── */}
-        <section className="s-sec" style={{ background: 'var(--s-bg2)' }}>
+        <section className="s-sec t-ink2 acc-coral">
           <div className="s-wrap">
             <p className="s-label">VISIBILITY</p>
             <h2 className="s-h">
@@ -203,7 +203,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 모든 검색어에 광고를 걸 수는 없습니다 ── */}
-        <section className="s-sec">
+        <section className="s-sec t-light">
           <div className="s-wrap">
             <p className="s-label">SEARCH BEHAVIOR</p>
             <h2 className="s-h">
@@ -221,7 +221,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 키워드 조합으로 노출 ── */}
-        <section className="s-sec" style={{ background: 'var(--s-bg2)' }}>
+        <section className="s-sec t-dark acc-teal">
           <div className="s-wrap">
             <p className="s-label">KEYWORD STRATEGY</p>
             <h2 className="s-h">
@@ -262,20 +262,20 @@ export default function SohoPage() {
           </div>
         </section>
 
-        {/* ── 24시간 일하는 영업사원 ── */}
-        <section className="s-sec">
+        {/* ── 24시간 일하는 영업사원 (그라데이션 배너) ── */}
+        <section className="s-sec s-band t-band">
           <div className="s-wrap">
-            <p className="s-label">WHY A WEBSITE</p>
+            <span className="s-band-badge">24/7 ALWAYS ON</span>
             <h2 className="s-h">
               홈페이지는 한 번 쓰는 비용이 아니라<br />
               <span className="s-g">24시간 일하는 영업사원</span>입니다
             </h2>
-            <p className="s-lead">잘 만든 홈페이지는, 자는 동안에도 손님을 데려옵니다.</p>
+            <p className="s-lead">잘 만든 홈페이지는, 사장님이 자는 동안에도 손님을 데려옵니다.</p>
           </div>
         </section>
 
         {/* ── 사장님의 말로 ── */}
-        <section className="s-sec" style={{ background: 'var(--s-bg2)' }}>
+        <section className="s-sec t-light2">
           <div className="s-wrap">
             <p className="s-label">EASY COMMUNICATION</p>
             <h2 className="s-h">
@@ -294,7 +294,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 4 강점 ── */}
-        <section className="s-sec">
+        <section className="s-sec t-dark">
           <div className="s-wrap">
             <p className="s-label">WHY REUMLAB</p>
             <h2 className="s-h">
@@ -314,7 +314,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 가격 ── */}
-        <section className="s-sec" style={{ background: 'var(--s-bg2)' }} id="price">
+        <section className="s-sec t-ink2 acc-gold" id="price">
           <div className="s-wrap">
             <p className="s-label">TRANSPARENT PRICE</p>
             <h2 className="s-h">
@@ -370,7 +370,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="s-sec">
+        <section className="s-sec t-light">
           <div className="s-wrap">
             <p className="s-label">FAQ</p>
             <h2 className="s-h">자주 묻는 질문</h2>
@@ -386,7 +386,7 @@ export default function SohoPage() {
         </section>
 
         {/* ── 최종 CTA ── */}
-        <section className="s-sec s-final">
+        <section className="s-sec s-final t-band">
           <div className="s-wrap">
             <p className="s-cap">고민만 하기엔, 손님은 지금도 검색 중입니다</p>
             <h2 className="s-h">
@@ -405,8 +405,6 @@ export default function SohoPage() {
               REUMLAB — 내 업장 홈페이지 제작은 름랩
               <br />
               <Link href="/">← 름랩 메인으로</Link>
-              {'  ·  '}
-              <Link href="/blog/homepage-jejak-biyong/">홈페이지 제작 비용 글 보기</Link>
             </p>
           </div>
         </section>
