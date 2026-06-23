@@ -99,6 +99,13 @@ const FAQS = [
   },
 ];
 
+const NP_POINTS = [
+  { title: '영업시간·휴무 표기', desc: '24시간 영업, 연중무휴, 브레이크타임까지 업장에 맞게' },
+  { title: '예약 혜택·할인 쿠폰', desc: '네이버 예약 시 10,000원 할인 같은 혜택 문구를 직접 설정' },
+  { title: '전화·톡톡·예약 버튼', desc: '손님이 바로 연락·예약하도록 행동 버튼 배치' },
+  { title: '위치·길찾기·대표 사진', desc: '주소·찾아오는 길·매장 분위기 사진까지 맞춤 노출' },
+];
+
 const SearchIcon = () => (
   <svg className="s-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
     <circle cx="11" cy="11" r="7" />
@@ -258,6 +265,75 @@ export default function SohoPage() {
                 <span className="s-up-desc">지역 업종 검색 노출 선정 — 신규 유입을 끌어오는 곳</span>
                 <span className="s-up-badge">↑ UP</span>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 맞춤 노출 (네이버 플레이스 카드) ── */}
+        <section className="s-sec t-light">
+          <div className="s-wrap">
+            <p className="s-label">CUSTOMIZED EXPOSURE</p>
+            <h2 className="s-h">
+              사장님 업장에 딱 맞게,<br />
+              <span className="s-g">노출 정보까지 맞춤</span> 설계합니다
+            </h2>
+            <p className="s-lead">
+              영업시간·예약 혜택·전화·예약 버튼·위치까지, 검색 결과에 보이는 모든 정보를 사장님 업장 상황에 맞춰 구성합니다.
+            </p>
+
+            <div className="s-np-grid">
+              {/* 네이버 플레이스 카드 목업 */}
+              <div className="np-card" aria-label="네이버 플레이스 노출 예시 카드">
+                <div className="np-head">
+                  <div className="np-head-main">
+                    <p className="np-title">○○스튜디오 파티룸 모임 공간 수원점</p>
+                    <p className="np-meta">
+                      <span className="np-bdg npay"><i>N</i> pay</span>
+                      <span className="np-bdg talk">톡톡</span>
+                      <span className="np-more">···</span>
+                    </p>
+                  </div>
+                  <div className="np-thumb" aria-hidden="true" />
+                </div>
+                <div className="np-rows">
+                  <div className="np-row np-phone">
+                    <svg className="np-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    전화번호 보기
+                    <span style={{ color: '#b0b5ad' }}>ⓘ</span>
+                  </div>
+                  <div className="np-row np-open">
+                    <b>24시간 영업</b>
+                    <span>· 연중무휴</span>
+                  </div>
+                  <div className="np-coupon">
+                    🎟️ 네이버 예약 시 <b>10,000원</b> 할인 쿠폰
+                  </div>
+                  <div className="np-row np-dist">
+                    <svg className="np-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    21km · 경기 수원시 영통구 매탄동
+                    <span className="np-chev">⌄</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* 맞춤 체크리스트 */}
+              <ul className="np-points">
+                <li className="np-points-h">사장님이 직접 정하는 노출 정보</li>
+                {NP_POINTS.map((p) => (
+                  <li className="np-point" key={p.title}>
+                    <span className="np-ck" aria-hidden="true">✓</span>
+                    <div>
+                      <b>{p.title}</b>
+                      <span>{p.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>

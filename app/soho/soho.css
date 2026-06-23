@@ -540,6 +540,107 @@
 .soho .s-final-foot { margin-top: 30px; font-size: 13px; color: var(--c-dim); }
 .soho .s-final-foot a { color: var(--c-text); font-weight: 600; }
 
+/* ── 네이버 플레이스 카드 (맞춤 노출) ── */
+.soho .s-np-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: clamp(24px, 4vw, 44px);
+  align-items: center;
+}
+.soho .np-card {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border: 1px solid #e6e9e4;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 20px 54px rgba(20, 40, 28, 0.14);
+  color: #1a1d1a;
+  font-size: 14px;
+}
+.soho .np-head { display: flex; gap: 12px; align-items: flex-start; }
+.soho .np-head-main { flex: 1; min-width: 0; }
+.soho .np-title { font-size: 16px; font-weight: 800; line-height: 1.35; color: #17211b; }
+.soho .np-meta { margin-top: 6px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12.5px; color: #6a6f68; }
+.soho .np-bdg {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+.soho .np-bdg.npay { background: #03c75a; color: #fff; }
+.soho .np-bdg.npay i { font-style: normal; font-weight: 900; }
+.soho .np-bdg.talk { background: #ffe14d; color: #3b2f00; }
+.soho .np-more { color: #b0b5ad; font-weight: 700; }
+.soho .np-thumb {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+  flex: none;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 214, 170, 0.6), transparent 45%),
+    linear-gradient(140deg, #b5532f 0%, #7a3550 55%, #3a2342 100%);
+}
+.soho .np-thumb::after {
+  content: '1 / 24';
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+.soho .np-rows { margin-top: 14px; display: flex; flex-direction: column; gap: 9px; }
+.soho .np-row { display: flex; align-items: center; gap: 7px; font-size: 13.5px; color: #4a4f48; }
+.soho .np-row .np-ico { width: 15px; height: 15px; flex: none; color: #9aa099; }
+.soho .np-phone { color: #5a6f9c; }
+.soho .np-open b { color: #03c75a; font-weight: 800; }
+.soho .np-open span { color: #8a8f88; }
+.soho .np-coupon {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #eafff1;
+  border: 1px solid #b9efce;
+  color: #0a7a3c;
+  border-radius: 9px;
+  padding: 9px 11px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.soho .np-coupon b { color: #06170d; }
+.soho .np-dist { color: #9aa099; font-size: 12.5px; }
+.soho .np-dist .np-chev { margin-left: auto; color: #c2c7bf; }
+
+/* 우측 맞춤 체크리스트 */
+.soho .np-points { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.soho .np-points-h { font-size: 16px; font-weight: 800; margin-bottom: 4px; color: var(--c-text); }
+.soho .np-point { display: flex; gap: 12px; align-items: flex-start; }
+.soho .np-ck {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 900;
+  color: #06170d;
+  background: linear-gradient(120deg, var(--green-bright), var(--teal));
+}
+.soho .np-point b { display: block; font-size: 14.5px; color: var(--c-text); margin-bottom: 2px; }
+.soho .np-point span { font-size: 13px; color: var(--c-sub); line-height: 1.6; }
+
 /* breadcrumb */
 .soho .s-crumb { font-size: 13px; color: var(--c-dim); margin-bottom: 22px; }
 .soho .s-crumb a:hover { color: var(--mint); }
@@ -553,4 +654,6 @@
   .soho .s-combo-x { justify-content: center; }
   .soho .s-rank-name { width: 78px; font-size: 12px; }
   .soho .s-bubble { max-width: 92%; }
+  .soho .s-np-grid { grid-template-columns: 1fr; justify-items: center; }
+  .soho .np-points { width: 100%; }
 }
