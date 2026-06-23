@@ -100,10 +100,10 @@ const FAQS = [
 ];
 
 const NP_POINTS = [
-  { title: '내 영업시간 그대로', desc: '24시간 영업, 연중무휴, 브레이크타임까지 내가 정한 대로 노출돼요' },
-  { title: '예약 혜택도 내 맘대로', desc: '‘네이버 예약 시 10,000원 할인’ 같은 혜택 문구를 내가 직접 걸 수 있어요' },
-  { title: '손님이 바로 연락 오게', desc: '전화·톡톡·예약 버튼을 내 업장에 맞게 배치할 수 있어요' },
-  { title: '내 매장 분위기 그대로', desc: '주소·찾아오는 길·대표 사진까지 내가 고른 모습으로 보여줘요' },
+  { title: '검색에 안 보이면 없는 가게나 마찬가지', desc: '직접 매장을 운영하며 가장 먼저 부딪힌 벽이었습니다' },
+  { title: '광고비만 매달 빠져나가는 부담', desc: '광고를 멈추면 손님도 끊기는 구조, 직접 겪어봤습니다' },
+  { title: '바빠서 홈페이지까지 챙길 시간이 없음', desc: '장사하면서 관리까지 하는 게 얼마나 버거운지 압니다' },
+  { title: '어려운 개발 용어는 하나도 안 와닿음', desc: '사장님 언어로 설명하고, 직접 고치기 쉽게 만듭니다' },
 ];
 
 const SearchIcon = () => (
@@ -272,30 +272,33 @@ export default function SohoPage() {
         {/* ── 맞춤 노출 (네이버 플레이스 카드) ── */}
         <section className="s-sec t-light">
           <div className="s-wrap">
-            <p className="s-label">OWNER FIRST</p>
+            <p className="s-label">FELLOW OWNER</p>
             <h2 className="s-h">
-              내 업장이 어떻게 보일지,<br />
-              <span className="s-g">내가 직접</span> 정합니다
+              직접 장사해본 개발자가,<br />
+              <span className="s-g">사장님 마음</span>으로 만듭니다
             </h2>
             <p className="s-lead">
-              영업시간도, 예약 혜택도, 전화·예약 버튼도, 위치도 — 손님이 검색에서 보는 내 업장의 모든 정보를 사장님이 원하는 대로 정할 수 있게 만들어 드립니다.
+              옆의 네이버 플레이스, 제가 직접 운영하는 매장 ‘우트스튜디오’입니다. 저도 같은 자영업자라 검색에 안 보이는 답답함도, 광고비 부담도 직접 겪어봤습니다. 그래서 사장님 입장에서 꼭 필요한 것만 챙겨 만듭니다.
             </p>
 
             <div className="s-np-grid">
-              {/* 네이버 플레이스 검색 결과 스크린샷 */}
-              <div className="np-shot">
-                <img
-                  src="/soho/naver-place.png"
-                  alt="네이버 플레이스 검색 결과 노출 예시 — 우트스튜디오 파티룸 수원점 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
-                  width={416}
-                  height={207}
-                  loading="lazy"
-                />
+              {/* 네이버 플레이스 검색 결과 스크린샷 (개발자 본인 매장) */}
+              <div className="np-shot-wrap">
+                <div className="np-shot">
+                  <img
+                    src="/soho/naver-place.png"
+                    alt="제가 직접 운영하는 우트스튜디오 파티룸 수원점 네이버 플레이스 노출 화면 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
+                    width={416}
+                    height={207}
+                    loading="lazy"
+                  />
+                </div>
+                <p className="np-cap">↑ 제가 직접 운영하는 ‘우트스튜디오’ — 검색 노출을 직접 만들어 본 매장입니다</p>
               </div>
 
               {/* 맞춤 체크리스트 */}
               <ul className="np-points">
-                <li className="np-points-h">내 업장, 이렇게 보이게 할 수 있어요</li>
+                <li className="np-points-h">그래서, 사장님 마음을 압니다</li>
                 {NP_POINTS.map((p) => (
                   <li className="np-point" key={p.title}>
                     <span className="np-ck" aria-hidden="true">✓</span>
