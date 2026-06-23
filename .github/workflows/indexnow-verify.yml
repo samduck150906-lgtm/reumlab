@@ -28,14 +28,19 @@ jobs:
           curl -s -o /dev/null -w "  https://reumlab.com/soho/ -> HTTP %{http_code}\n" \
             https://reumlab.com/soho/
           echo
-          echo "===== 4) IndexNow 제출 (Bing + 네이버) ====="
+          echo "===== 4) IndexNow 제출 (중립 api + Bing + 네이버, 단일 URL GET 교차검증 포함) ====="
           BODY='{"host":"reumlab.com","key":"reumlab2026indexnow9370","keyLocation":"https://reumlab.com/reumlab2026indexnow9370.txt","urlList":["https://reumlab.com/","https://reumlab.com/soho/","https://reumlab.com/web-development/"]}'
-          for H in www.bing.com searchadvisor.naver.com; do
-            CODE=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST "https://$H/IndexNow" \
+          for EP in "https://api.indexnow.org/indexnow" "https://www.bing.com/indexnow" "https://searchadvisor.naver.com/indexnow"; do
+            CODE=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST "$EP" \
               -H "Content-Type: application/json; charset=utf-8" -d "$BODY")
-            echo "  [IndexNow] $H -> HTTP $CODE"
+            echo "  [POST] $EP -> HTTP $CODE"
             BODYTXT=$(head -c 400 /tmp/resp.txt)
-            [ -n "$BODYTXT" ] && echo "    response body: $BODYTXT"
+            [ -n "$BODYTXT" ] && echo "    body: $BODYTXT"
           done
           echo
-          echo "===== 판정 기준: 1)=200 & content 일치, 3)=200, 4)=200 또는 202 이면 정상 ====="
+          echo "  --- 단일 URL GET 방식 (key+keyLocation 쿼리) ---"
+          GETURL="https://api.indexnow.org/indexnow?url=https://reumlab.com/soho/&key=reumlab2026indexnow9370&keyLocation=https://reumlab.com/reumlab2026indexnow9370.txt"
+          CODE=$(curl -s -o /tmp/resp2.txt -w "%{http_code}" "$GETURL")
+          echo "  [GET api.indexnow.org] -> HTTP $CODE  body: $(head -c 300 /tmp/resp2.txt)"
+          echo
+          echo "===== 판정: api.indexnow.org=200/202 이면 키 유효(전파됨), 403이면 키 검증 자체 실패 ====="
