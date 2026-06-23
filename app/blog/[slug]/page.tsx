@@ -53,6 +53,8 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound();
   const url = blogCanonical(post.slug);
 
+  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+
   return (
     <>
       <ArticleJsonLd post={post} url={url} />
@@ -114,6 +116,30 @@ export default function BlogPostPage({ params }: Props) {
                 </Link>
               </div>
             </div>
+
+            {related.length > 0 && (
+              <div style={{ marginTop: 48, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 32 }}>
+                <p className="section-tag" style={{ marginBottom: 16 }}>관련 글</p>
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                  {related.map((r) => (
+                    <li key={r.slug}>
+                      <Link
+                        href={`/blog/${r.slug}/`}
+                        style={{ display: 'block', padding: '14px 18px', background: 'rgba(255,255,255,0.04)', borderRadius: 10, textDecoration: 'none' }}
+                        data-analytics="cta_blog_related"
+                      >
+                        <span className="hub-intro" style={{ fontWeight: 600, color: 'var(--text-main, #fff)' }}>
+                          {r.title}
+                        </span>
+                        <span style={{ display: 'block', fontSize: 12, color: 'var(--text-dim)', marginTop: 4 }}>
+                          {r.publishedAt} · 약 {r.readingMinutes}분
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </article>
       </main>

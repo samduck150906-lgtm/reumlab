@@ -47,7 +47,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogDescription:
       '앱·웹 MVP 개발 + AI 직접 운영 교육. Flutter 앱·웹 MVP를 빠르게 만들고 소스코드·권한을 통째로 넘깁니다.',
     h1: '외주 맡긴 앱, 다시는 외주에 묶이지 않게',
-    canonical: 'https://reumlab.com',
+    canonical: 'https://reumlab.com/',
   },
 
   // ─── 서비스별 페이지 (AI 단어 제거) ───
