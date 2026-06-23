@@ -33,6 +33,7 @@ const CORE_URLS = [
   `${SITE}/`,
   `${SITE}/blog/`,
   `${SITE}/consultation/`,
+  `${SITE}/soho/`, // 소상공인·자영업자 홈페이지제작 전용 랜딩
   `${SITE}/app-development/`,
   `${SITE}/web-development/`,
   `${SITE}/mvp-development/`,
