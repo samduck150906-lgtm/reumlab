@@ -282,43 +282,15 @@ export default function SohoPage() {
             </p>
 
             <div className="s-np-grid">
-              {/* 네이버 플레이스 카드 목업 */}
-              <div className="np-card" aria-label="네이버 플레이스 노출 예시 카드">
-                <div className="np-head">
-                  <div className="np-head-main">
-                    <p className="np-title">우트스튜디오 파티룸 모임 공간 수원점</p>
-                    <p className="np-meta">
-                      <span className="np-bdg npay"><i>N</i> pay</span>
-                      <span className="np-bdg talk">톡톡</span>
-                      <span className="np-more">···</span>
-                    </p>
-                  </div>
-                  <div className="np-thumb" aria-hidden="true" />
-                </div>
-                <div className="np-rows">
-                  <div className="np-row np-phone">
-                    <svg className="np-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
-                    전화번호 보기
-                    <span style={{ color: '#b0b5ad' }}>ⓘ</span>
-                  </div>
-                  <div className="np-row np-open">
-                    <b>24시간 영업</b>
-                    <span>· 연중무휴</span>
-                  </div>
-                  <div className="np-coupon">
-                    🎟️ 네이버 예약 시 <b>10,000원</b> 할인 쿠폰
-                  </div>
-                  <div className="np-row np-dist">
-                    <svg className="np-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    21km · 경기 수원시 영통구 매탄동
-                    <span className="np-chev">⌄</span>
-                  </div>
-                </div>
+              {/* 네이버 플레이스 검색 결과 스크린샷 */}
+              <div className="np-shot">
+                <img
+                  src="/soho/naver-place.png"
+                  alt="네이버 플레이스 검색 결과 노출 예시 — 우트스튜디오 파티룸 수원점 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
+                  width={416}
+                  height={207}
+                  loading="lazy"
+                />
               </div>
 
               {/* 맞춤 체크리스트 */}
