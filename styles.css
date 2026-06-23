@@ -105,6 +105,11 @@ p { margin: 0; }
   text-wrap: pretty;
 }
 
+/* forced line break on desktop; collapses to a space on mobile so copy
+   never breaks awkwardly on narrow screens */
+br.br-pc { display: inline; }
+@media (max-width: 720px) { br.br-pc { display: none; } }
+
 .lead { color: var(--ink-2); }
 
 /* ---------- buttons ---------- */
