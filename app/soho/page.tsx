@@ -100,10 +100,10 @@ const FAQS = [
 ];
 
 const NP_POINTS = [
-  { title: '영업시간·휴무 표기', desc: '24시간 영업, 연중무휴, 브레이크타임까지 업장에 맞게' },
-  { title: '예약 혜택·할인 쿠폰', desc: '네이버 예약 시 10,000원 할인 같은 혜택 문구를 직접 설정' },
-  { title: '전화·톡톡·예약 버튼', desc: '손님이 바로 연락·예약하도록 행동 버튼 배치' },
-  { title: '위치·길찾기·대표 사진', desc: '주소·찾아오는 길·매장 분위기 사진까지 맞춤 노출' },
+  { title: '내 영업시간 그대로', desc: '24시간 영업, 연중무휴, 브레이크타임까지 내가 정한 대로 노출돼요' },
+  { title: '예약 혜택도 내 맘대로', desc: '‘네이버 예약 시 10,000원 할인’ 같은 혜택 문구를 내가 직접 걸 수 있어요' },
+  { title: '손님이 바로 연락 오게', desc: '전화·톡톡·예약 버튼을 내 업장에 맞게 배치할 수 있어요' },
+  { title: '내 매장 분위기 그대로', desc: '주소·찾아오는 길·대표 사진까지 내가 고른 모습으로 보여줘요' },
 ];
 
 const SearchIcon = () => (
@@ -272,13 +272,13 @@ export default function SohoPage() {
         {/* ── 맞춤 노출 (네이버 플레이스 카드) ── */}
         <section className="s-sec t-light">
           <div className="s-wrap">
-            <p className="s-label">CUSTOMIZED EXPOSURE</p>
+            <p className="s-label">OWNER FIRST</p>
             <h2 className="s-h">
-              사장님 업장에 딱 맞게,<br />
-              <span className="s-g">노출 정보까지 맞춤</span> 설계합니다
+              내 업장이 어떻게 보일지,<br />
+              <span className="s-g">내가 직접</span> 정합니다
             </h2>
             <p className="s-lead">
-              영업시간·예약 혜택·전화·예약 버튼·위치까지, 검색 결과에 보이는 모든 정보를 사장님 업장 상황에 맞춰 구성합니다.
+              영업시간도, 예약 혜택도, 전화·예약 버튼도, 위치도 — 손님이 검색에서 보는 내 업장의 모든 정보를 사장님이 원하는 대로 정할 수 있게 만들어 드립니다.
             </p>
 
             <div className="s-np-grid">
@@ -295,7 +295,7 @@ export default function SohoPage() {
 
               {/* 맞춤 체크리스트 */}
               <ul className="np-points">
-                <li className="np-points-h">사장님이 직접 정하는 노출 정보</li>
+                <li className="np-points-h">내 업장, 이렇게 보이게 할 수 있어요</li>
                 {NP_POINTS.map((p) => (
                   <li className="np-point" key={p.title}>
                     <span className="np-ck" aria-hidden="true">✓</span>
