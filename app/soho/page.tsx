@@ -267,7 +267,7 @@ export default function SohoPage() {
           <div className="s-wrap">
             <span className="s-band-badge">24/7 ALWAYS ON</span>
             <h2 className="s-h">
-              홈페이지는 한 번 쓰는 비용이 아니라<br />
+              <span className="s-nowrap">홈페이지는 한 번 쓰는 비용이 아니라</span><br />
               <span className="s-g">24시간 일하는 영업사원</span>입니다
             </h2>
             <p className="s-lead">잘 만든 홈페이지는, 사장님이 자는 동안에도 손님을 데려옵니다.</p>

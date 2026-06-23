@@ -361,8 +361,9 @@
 .soho .s-up-badge { flex: none; font-size: 13px; font-weight: 800; color: var(--c-accent); }
 
 /* ── 배너(영업사원) ── */
-.soho .s-band .s-wrap { max-width: 760px; text-align: center; }
-.soho .s-band .s-h { font-size: clamp(28px, 6.4vw, 50px); }
+.soho .s-band .s-wrap { max-width: 820px; text-align: center; }
+.soho .s-band .s-h { font-size: clamp(21px, 4.7vw, 38px); }
+.soho .s-nowrap { white-space: nowrap; }
 .soho .s-band .s-lead { margin: 0 auto; }
 .soho .s-band-badge {
   display: inline-block;

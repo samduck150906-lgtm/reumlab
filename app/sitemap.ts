@@ -37,13 +37,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   out.push({
-    url: `${SITE.domain}/consultation/`,
-    lastModified: now,
-    changeFrequency: 'monthly',
-    priority: 0.85,
-  });
-
-  out.push({
     url: `${SITE.domain}/soho/`,
     lastModified: now,
     changeFrequency: 'monthly',

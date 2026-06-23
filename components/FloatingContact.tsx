@@ -42,13 +42,6 @@ export default function FloatingContact() {
             📞 전화 상담 {SITE.phone}
           </a>
           <a
-            href="/consultation/"
-            data-analytics="float_form"
-            style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, background: '#f1f5f9', color: '#0f1f3a', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}
-          >
-            ✍️ 상담 신청서 작성
-          </a>
-          <a
             href={`mailto:${SITE.email}`}
             data-analytics="float_mail"
             style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, background: '#f1f5f9', color: '#0f1f3a', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}

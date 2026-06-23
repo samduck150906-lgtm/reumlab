@@ -644,11 +644,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
           </p>
           <ContactButtons mailSubject="[름랩] 앱·웹 개발 문의" />
           <p className="text-sm text-slate-600">
-            통화가 부담되시면{' '}
-            <Link href="/consultation/" className="font-semibold text-accent-deep underline-offset-2 hover:underline" data-analytics="cta_strip_form">
-              상담 신청서를 남겨 주세요
-            </Link>
-            . 영업일 기준 24시간 내 연락드립니다.
+            통화가 부담되시면 이메일로 문의 주세요. 영업일 기준 24시간 내 연락드립니다.
           </p>
           <p className="text-xs text-slate-500">전화 {SITE.phone} · 이메일 {SITE.email} · 평일 10:00–18:00</p>
         </div>
