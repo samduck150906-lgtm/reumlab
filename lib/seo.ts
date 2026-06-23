@@ -12,6 +12,19 @@ export const SITE = {
   company: '앱·웹개발 스튜디오 름랩',
   representative: '성아름',
   bizNo: '793-12-03247',
+  /**
+   * 외부 채널 — 엔티티(신뢰) 신호용 sameAs 단일 출처.
+   * 채널을 실제로 개설한 뒤 여기에만 실 URL을 추가하면 전 페이지 JSON-LD에 반영됩니다.
+   * 가짜/추정 URL 금지 — 실제로 존재하는 채널만 등록.
+   */
+  sameAs: [
+    'https://naver.me/FORRCoFc', // 네이버 플레이스
+    // 'https://blog.naver.com/...',     // 네이버 블로그
+    // 'https://www.instagram.com/...',  // 인스타그램
+    // 'https://www.youtube.com/@...',   // 유튜브
+    // 'https://github.com/...',         // GitHub / 포트폴리오
+    // 'https://www.google.com/maps/...',// 구글 비즈니스 프로필
+  ] as string[],
 };
 
 export interface PageSeo {

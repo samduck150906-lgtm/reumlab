@@ -55,7 +55,7 @@ export function OrganizationJsonLd() {
       addressCountry: 'KR',
     },
     description: home.description,
-    sameAs: ['https://naver.me/FORRCoFc'],
+    sameAs: SITE.sameAs,
   };
 
   return (
@@ -106,7 +106,7 @@ export function ReumHomeGraphJsonLd() {
       url: SITE.domain + '/',
       logo: SITE.defaultOgImage,
       description: home.description,
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
     },
     {
       '@type': 'LocalBusiness',
@@ -127,7 +127,7 @@ export function ReumHomeGraphJsonLd() {
       makesOffer: PACKAGE_OFFERS,
       openingHours: ['Mo-Fr 10:00-18:00'],
       areaServed: ['KR', '서울', '경기', '수원', '화성', '용인', '동탄'],
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
       identifier: {
         '@type': 'PropertyValue',
         name: '사업자등록번호',
@@ -324,7 +324,7 @@ export function RegionServiceJsonLd({
         addressCountry: 'KR',
       },
       areaServed: { '@type': 'Place', name: regionName },
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
       identifier: {
         '@type': 'PropertyValue',
         name: '사업자등록번호',
