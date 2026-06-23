@@ -124,7 +124,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   솔루션SaaS: {
-    title: 'B2B 솔루션 & SaaS 개발 | 름랩 (REUMLAB)',
+    title: 'B2B 솔루션·SaaS 개발 외주 | 구독·관리자·결제 연동 — 름랩 REUMLAB',
     description:
       '벡터 DB·OCR 기반의 데이터 아카이빙, 업무 자동화 SaaS 구축. 확장성 높은 클라우드 아키텍처.',
     keywords: [
@@ -143,7 +143,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   플랫폼개발: {
-    title: '플랫폼 및 O2O 시스템 구축 | 름랩 (REUMLAB)',
+    title: '플랫폼·O2O 앱 개발 외주 | 매칭·예약·정산 시스템 — 름랩 REUMLAB',
     description:
       '매칭·예약 플랫폼, O2O 서비스 전문 개발. 복잡한 비즈니스 로직을 안정적으로 구현합니다.',
     keywords: [
@@ -160,7 +160,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   기업용ERP: {
-    title: '맞춤형 ERP & 인트라넷 개발 | 름랩 (REUMLAB)',
+    title: '맞춤형 ERP·관리자 시스템 개발 외주 | 업무 자동화 — 름랩 REUMLAB',
     description:
       'CRM, 사내 시스템, 관리자 웹 고도화. 기존 데이터를 통합하여 업무 효율을 혁신합니다.',
     keywords: [
