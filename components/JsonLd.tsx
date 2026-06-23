@@ -39,6 +39,7 @@ export function OrganizationJsonLd() {
     alternateName: SITE.nameEn,
     url: SITE.domain + '/',
     logo: SITE.defaultOgImage,
+    founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: SITE.phone,
@@ -105,6 +106,7 @@ export function ReumHomeGraphJsonLd() {
       alternateName: SITE.nameEn,
       url: SITE.domain + '/',
       logo: SITE.defaultOgImage,
+      founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
       description: home.description,
       sameAs: SITE.sameAs,
     },

@@ -109,14 +109,14 @@ npx serve public -l 3000
 
 1. [Google Search Console](https://search.google.com/search-console) 접속  
 2. "URL 접두어" → 사이트 URL 입력 후 소유권 확인  
-3. **Sitemaps** → `https://reumlab.netlify.app/sitemap.xml` 제출  
+3. **Sitemaps** → `https://reumlab.com/sitemap.xml` 제출  
 4. **URL 검사** → 메인 URL 및 주요 랜딩 5~10개 색인 생성 요청  
 
 ### STEP 2: 네이버 서치어드바이저
 
 1. [네이버 서치어드바이저](https://searchadvisor.naver.com) 접속  
 2. 사이트 등록 후 소유권 확인 (HTML 파일 또는 메타태그)  
-3. **사이트맵 제출** → `https://reumlab.netlify.app/sitemap.xml`  
+3. **사이트맵 제출** → `https://reumlab.com/sitemap.xml`  
 4. **웹 페이지 수집** → 주요 URL 수동 요청  
 
 ### STEP 3: 색인 모니터링
