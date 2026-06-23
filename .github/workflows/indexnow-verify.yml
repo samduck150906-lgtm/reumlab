@@ -1,0 +1,41 @@
+name: IndexNow Verify
+
+# 일회성 검증 워크플로 — GitHub 러너에서 라이브 키 파일/페이지 상태와
+# IndexNow 제출 응답코드를 직접 확인한다. (키 값은 이미 공개된 IndexNow 공개키)
+on:
+  push:
+    branches: [claude/admiring-bell-kwdqo7]
+    paths: ['.github/workflows/indexnow-verify.yml']
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify key file, /soho/, and IndexNow submission
+        run: |
+          set +e
+          echo "===== 1) IndexNow 키 파일 (표준 위치) ====="
+          curl -s -o /tmp/key.txt -w "  https://reumlab.com/reumlab2026indexnow9370.txt -> HTTP %{http_code}\n" \
+            https://reumlab.com/reumlab2026indexnow9370.txt
+          echo "  content: [$(cat /tmp/key.txt)]"
+          echo
+          echo "===== 2) 구 키 파일 (404 기대) ====="
+          curl -s -o /dev/null -w "  https://reumlab.com/reumlab-indexnow-key.txt -> HTTP %{http_code}\n" \
+            https://reumlab.com/reumlab-indexnow-key.txt
+          echo
+          echo "===== 3) /soho/ 페이지 ====="
+          curl -s -o /dev/null -w "  https://reumlab.com/soho/ -> HTTP %{http_code}\n" \
+            https://reumlab.com/soho/
+          echo
+          echo "===== 4) IndexNow 제출 (Bing + 네이버) ====="
+          BODY='{"host":"reumlab.com","key":"reumlab2026indexnow9370","keyLocation":"https://reumlab.com/reumlab2026indexnow9370.txt","urlList":["https://reumlab.com/","https://reumlab.com/soho/","https://reumlab.com/web-development/"]}'
+          for H in www.bing.com searchadvisor.naver.com; do
+            CODE=$(curl -s -o /tmp/resp.txt -w "%{http_code}" -X POST "https://$H/IndexNow" \
+              -H "Content-Type: application/json; charset=utf-8" -d "$BODY")
+            echo "  [IndexNow] $H -> HTTP $CODE"
+            BODYTXT=$(head -c 400 /tmp/resp.txt)
+            [ -n "$BODYTXT" ] && echo "    response body: $BODYTXT"
+          done
+          echo
+          echo "===== 판정 기준: 1)=200 & content 일치, 3)=200, 4)=200 또는 202 이면 정상 ====="
