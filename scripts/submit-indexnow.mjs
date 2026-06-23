@@ -4,7 +4,8 @@
  * Naver(searchadvisor.naver.com)와 Bing(www.bing.com)에 동시 제출
  *
  * 네이버 IndexNow 등록: https://searchadvisor.naver.com/indexnow
- * 키 파일: public/reumlab-indexnow-key.txt (= out/reumlab-indexnow-key.txt)
+ * 키 파일: public/reumlab2026indexnow9370.txt (= 표준 위치 https://reumlab.com/{key}.txt)
+ *   → 파일명 = 키 값과 동일해야 IndexNow 키 검증을 통과(403 방지)한다.
  */
 import fs from 'fs';
 import path from 'path';
