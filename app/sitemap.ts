@@ -43,6 +43,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   });
 
+  out.push({
+    url: `${SITE.domain}/soho/`,
+    lastModified: now,
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  });
+
   // 프로그래매틱 1축 — 지역×서비스
   for (const { slug, region } of allRegionServiceParams()) {
     out.push({

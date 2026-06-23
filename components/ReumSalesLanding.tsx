@@ -564,6 +564,33 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         </div>
       </section>
 
+      {/* 소상공인 특가 배너 */}
+      <section className="border-y border-amber-100 bg-amber-50 py-14 sm:py-16">
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <span className="inline-block rounded-full bg-amber-200 px-3 py-1 text-xs font-bold uppercase tracking-widest text-amber-800 mb-3">
+                소상공인 · 자영업자 특가
+              </span>
+              <h2 className="font-display text-xl font-bold tracking-tight text-navy-900 sm:text-2xl">
+                홈페이지가 필요하신가요?<br />
+                <span className="text-amber-700">VAT 포함 49만원</span>으로 만들어드립니다
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 max-w-lg">
+                음식점·카페·학원·뷰티 등 단일 브랜드 자영업자 전용. 모바일 반응형 · 소스코드 전체 이관 · 월 관리비 없음.
+              </p>
+            </div>
+            <Link
+              href="/soho/"
+              className="shrink-0 inline-flex items-center justify-center gap-2 rounded-xl bg-amber-500 px-7 py-4 text-sm font-bold text-white shadow-md transition-all hover:bg-amber-600 hover:shadow-lg"
+              data-analytics="cta_soho_banner"
+            >
+              특가 패키지 보기 →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Prep + FAQ */}
       <section id="prepare" className="scroll-mt-24 py-20 sm:py-24">
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
