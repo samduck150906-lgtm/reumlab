@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import Link from 'next/link';
 import { SITE } from '@/lib/seo';
 
 type Props = {
@@ -11,6 +12,14 @@ export default function BusinessFooter({ topExtra }: Props) {
     <footer className="footer">
       <div className="container">
         {topExtra ? <p className="footer-info" style={{ marginBottom: 12 }}>{topExtra}</p> : null}
+        <nav className="footer-info" aria-label="주요 서비스" style={{ marginBottom: 14, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
+          <Link href="/mvp/">앱 MVP 개발</Link>
+          <Link href="/flutter/">Flutter 앱개발</Link>
+          <Link href="/ai-development/">AI 외주개발</Link>
+          <Link href="/source-handover/">소스코드 이관</Link>
+          <Link href="/web-development/">웹사이트 제작</Link>
+          <Link href="/blog/">블로그</Link>
+        </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
           {SITE.company}
           <br />

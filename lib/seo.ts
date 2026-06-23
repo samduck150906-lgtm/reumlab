@@ -71,7 +71,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
 
   // ─── 서비스별 페이지 (AI 단어 제거) ───
   웹개발: {
-    title: '웹·앱 MVP 개발 외주 | 름랩 (REUMLAB)',
+    title: '웹사이트 제작 외주 | 반응형 웹 MVP 149만원 정액 — 름랩 REUMLAB',
     description:
       '기업용 웹사이트, 고성능 랜딩페이지 제작. 최신 기술 스택 기반의 반응형 웹 개발을 제공합니다.',
     keywords: [
@@ -89,7 +89,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   앱개발: {
-    title: '모바일 앱 개발 전문 | 름랩 (REUMLAB)',
+    title: '앱개발 외주 | Flutter iOS·안드로이드 MVP 499만원 정액 — 름랩',
     description:
       'iOS·Android 네이티브 및 하이브리드 앱 제작. 안정적인 성능과 최적의 UX를 구현합니다.',
     keywords: [
@@ -107,7 +107,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   스타트업MVP: {
-    title: '스타트업 MVP 개발 외주 | 름랩 (REUMLAB)',
+    title: '스타트업 MVP 개발 외주 | 3주 출시·소스코드 이관 — 름랩 REUMLAB',
     description:
       '가장 빠른 시장 검증을 위한 MVP 기획 및 개발. 불필요한 비용 없이 핵심 가치를 구축합니다.',
     keywords: [

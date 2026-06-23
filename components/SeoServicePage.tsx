@@ -138,6 +138,24 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             </div>
           )}
           <div style={{ marginTop: 40 }}>
+            <p className="section-tag" style={{ marginBottom: 12 }}>주요 서비스</p>
+            <div className="link-grid">
+              {[
+                { href: '/mvp/', label: '앱 MVP 개발' },
+                { href: '/flutter/', label: 'Flutter 앱개발' },
+                { href: '/ai-development/', label: 'AI 외주개발' },
+                { href: '/source-handover/', label: '소스코드 이관' },
+                { href: '/web-development/', label: '웹사이트 제작' },
+                { href: '/blog/', label: '블로그' },
+              ]
+                .filter((s) => !pageSlug || !s.href.includes(`/${pageSlug}/`))
+                .map((s) => (
+                  <Link key={s.href} href={s.href}>{s.label}</Link>
+                ))}
+            </div>
+          </div>
+
+          <div style={{ marginTop: 40 }}>
             <Link href="/" className="btn-light">
               ← 메인으로
             </Link>
