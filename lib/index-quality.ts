@@ -33,7 +33,7 @@ export interface IndexSignals {
   hasConsultCta: boolean;
   /** 본문에 의사결정 정보(가격/기간/산출물/프로세스/적합성)가 있는가 */
   hasDecisionInfo: boolean;
-  /** 지역 페이지일 때: 실제 접근성/대면·비대면 동선 정보가 있는가 */
+  /** 지역 페이지일 때: 지역 상권 등 그 지역 고유 정보가 있는가 */
   hasLocalAccessInfo?: boolean;
   /** 페이지 고유 이미지/스크린샷(alt 포함)이 1개 이상 있는가 */
   hasUniqueMedia?: boolean;
