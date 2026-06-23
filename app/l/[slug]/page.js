@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { getLandings, getLandingBySlug, getHubBySlug, getSite } from '../../../lib/data';
+import { getLandings, getLandingBySlug, getHubBySlug } from '../../../lib/data';
 import LandingPage from '../../../components/LandingPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
@@ -28,7 +27,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default function LandingRoute({ params }) {
-  const site = getSite();
   const landing = getLandingBySlug(params.slug);
   if (!landing) return null;
 
@@ -48,17 +46,6 @@ export default function LandingRoute({ params }) {
         url={url}
         crumbs={crumbs}
       />
-      <nav className="dynamic-nav">
-        <div className="dynamic-nav-inner">
-          <Link href="/" className="logo">REUMLAB</Link>
-          <ul className="nav-links">
-            <li><Link href="/">홈</Link></li>
-            <li><Link href={`/h/${landing.hubId}/`}>더보기</Link></li>
-            <li><Link href="/#faq">FAQ</Link></li>
-          </ul>
-          <a href={`tel:${String(site.tel || '').replace(/-/g, '')}`} className="contact-btn">전화 문의</a>
-        </div>
-      </nav>
       <LandingPage slug={params.slug} />
     </>
   );

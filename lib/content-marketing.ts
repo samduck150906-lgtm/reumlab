@@ -20,7 +20,7 @@ export type LongTailSlug = (typeof LONG_TAIL_KEYWORDS)[number]['slug'];
 export const PROGRAMMATIC_SEO_PLAN = {
   template: 'URL 패턴 /blog/[slug] + generateStaticParams로 전 칼럼 정적 생성',
   dataSource: 'lib/blog-posts.ts (CMS·노션 API로 교체 가능)',
-  internalLinking: '홈 패키지·/consultation·관련 서비스 페이지(/앱개발 등)로 상호 링크',
+  internalLinking: '홈 패키지·관련 서비스 페이지(/앱개발 등)로 상호 링크',
   freshness: '월 1~2편 갱신 시 lastModified 반영 → sitemap priority 조정',
   avoidThinContent: '본문 최소 800자, FAQ 1블록, CTA 2곳 이상',
 } as const;

@@ -85,9 +85,9 @@ export default function BlogIndexPage() {
               ))}
             </ul>
             <p style={{ marginTop: 32, textAlign: 'center' }}>
-              <Link href="/consultation/" className="btn-primary" data-analytics="cta_blog_index_consult">
-                상담 신청하기
-              </Link>
+              <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_blog_index_call">
+                📞 {SITE.phone} 전화 상담
+              </a>
             </p>
           </div>
         </section>

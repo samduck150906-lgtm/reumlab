@@ -39,9 +39,9 @@ export default function Nav({ site }) {
                 </li>
               ))}
               <li>
-                <Link href="/consultation/" className="nav-cta" data-analytics="nav_cta_consult">
-                  📋 상담 신청
-                </Link>
+                <a href="tel:01081119370" className="nav-cta" data-analytics="nav_cta_call">
+                  📞 전화 상담
+                </a>
               </li>
             </ul>
             <button
@@ -73,9 +73,9 @@ export default function Nav({ site }) {
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
-        <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_consult">
-          📋 상담 신청
-        </Link>
+        <a href="tel:01081119370" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_call">
+          📞 전화 상담
+        </a>
       </div>
     </>
   );

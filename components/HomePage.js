@@ -106,7 +106,7 @@ export default function HomePage({ site }) {
             <ul className="nav-links">
               <li><a href="#services">서비스</a></li>
               <li><a href="#pricing">가격</a></li>
-              <li><Link href="/consultation/" className="nav-cta">📋 상담 신청</Link></li>
+              <li><Link href="tel:01081119370" className="nav-cta">📋 상담 신청</Link></li>
             </ul>
             <button type="button" className="hamburger" id="hamburgerBtn" aria-label="메뉴" onClick={() => setMobileMenuOpen(true)}>
               <span /><span /><span />
@@ -119,7 +119,7 @@ export default function HomePage({ site }) {
         <button type="button" className="mobile-close" id="mobileClose" onClick={() => setMobileMenuOpen(false)} aria-label="닫기">✕</button>
         <a href="#services" onClick={closeMobile}>서비스</a>
         <a href="#pricing" onClick={closeMobile}>가격</a>
-        <Link href="/consultation/" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>📋 상담 신청</Link>
+        <Link href="tel:01081119370" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile}>📋 상담 신청</Link>
       </div>
 
       <section className="hero">
@@ -148,7 +148,7 @@ export default function HomePage({ site }) {
               <span className="hero-tag">🌐 웹 개발</span>
             </div>
             <div className="hero-btns">
-              <Link href="/consultation/" className="btn-primary">📋 사이트에서 바로 신청</Link>
+              <Link href="tel:01081119370" className="btn-primary">📋 사이트에서 바로 신청</Link>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>로그인 / 회원가입</li><li>데이터베이스 설계</li><li>핵심 기능 1~3개 개발</li><li>기본 UI 제작</li><li>결제 연동</li><li>도메인 연결 &amp; 배포</li><li>2회 수정 포함</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-fill">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-fill">상담하기</Link>
               </div>
               <div className="price-card rv rv-d1">
                 <div className="price-tier">Standard</div>
@@ -246,7 +246,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>풀 기능 + 맞춤 UI/UX</li><li>소셜 로그인 + 결제</li><li>관리자 대시보드</li><li>유지보수 1개월</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-outline">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-outline">상담하기</Link>
               </div>
               <div className="price-card rv rv-d2">
                 <div className="price-tier">Enterprise</div>
@@ -255,7 +255,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>복합 플랫폼 (웹+앱)</li><li>대용량 아키텍처</li><li>외부 API 다중 연동</li><li>장기 유지보수</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-outline">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-outline">상담하기</Link>
               </div>
             </div>
           </div>
@@ -268,7 +268,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>원페이지 랜딩</li><li>반응형 디자인</li><li>기본 SEO</li><li>수정 2회 + 호스팅 1년</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-outline">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-outline">상담하기</Link>
               </div>
               <div className="price-card featured rv rv-d1">
                 <div className="price-tier">Standard</div>
@@ -277,7 +277,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>멀티페이지 (5P)</li><li>맞춤 UI/UX</li><li>고급 SEO + 애널리틱스</li><li>수정 5회 + 유지보수 1개월</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-fill">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-fill">상담하기</Link>
               </div>
               <div className="price-card rv rv-d2">
                 <div className="price-tier">Premium</div>
@@ -286,7 +286,7 @@ export default function HomePage({ site }) {
                 <ul className="price-features">
                   <li>풀커스텀 디자인+기능</li><li>결제/예약 시스템</li><li>관리자 페이지 + API</li><li>수정 무제한 + 유지보수 3개월</li>
                 </ul>
-                <Link href="/consultation/" className="price-btn price-btn-outline">상담하기</Link>
+                <Link href="tel:01081119370" className="price-btn price-btn-outline">상담하기</Link>
               </div>
             </div>
           </div>
@@ -329,7 +329,7 @@ export default function HomePage({ site }) {
             <h2 className="apply-title">사이트에서 바로 상담 신청</h2>
             <p className="apply-sub">앱·웹 개발 상담 폼으로 이동해 간단히 작성해 주시면 빠르게 연락드립니다.</p>
             <div style={{ textAlign: 'center', marginTop: 28 }}>
-              <Link href="/consultation/" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>신청 보내기</Link>
+              <Link href="tel:01081119370" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>신청 보내기</Link>
             </div>
             <p className="apply-alt">바로 상담을 원하시면 · <a href="tel:01081119370">전화 010-8111-9370</a></p>
           </div>
@@ -343,7 +343,7 @@ export default function HomePage({ site }) {
           <h2 className="cta-title rv"><span className="gradient-text">아이디어</span>만 있으면<br />나머지는 저희가 합니다</h2>
           <p className="cta-sub rv rv-d1">앱·웹 개발 문의는 언제든 편하게 상담하세요.</p>
           <div className="hero-btns rv rv-d2" style={{ justifyContent: 'center', gap: 14 }}>
-            <Link href="/consultation/" className="btn-primary" style={{ fontSize: 18, padding: '20px 42px' }}>📋 사이트에서 바로 신청</Link>
+            <Link href="tel:01081119370" className="btn-primary" style={{ fontSize: 18, padding: '20px 42px' }}>📋 사이트에서 바로 신청</Link>
             <a href="tel:01081119370" className="btn-secondary" style={{ fontSize: 16, padding: '18px 36px' }}>📞 전화 상담</a>
           </div>
         </div>

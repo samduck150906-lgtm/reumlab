@@ -1,25 +1,28 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/seo';
-import { LandingServiceJsonLd } from '@/components/JsonLd';
+import { LandingServiceJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import './soho.css';
 
 const PAGE_URL = `${SITE.domain}/soho/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '소상공인·자영업자 홈페이지 특가 49만원 | 름랩 REUMLAB',
+  title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB',
   description:
-    '소상공인·자영업자 전용 홈페이지 제작 특가 VAT 포함 49만원. 모바일 반응형, 소스코드 전체 이관, 월 관리비 없음. 수원 거점 · 전국 비대면 상담.',
+    '광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음. 수원 거점 · 전국 비대면 상담.',
   keywords: [
     '소상공인 홈페이지',
     '자영업자 홈페이지 제작',
+    '검색 노출 홈페이지',
+    '검색 최적화 홈페이지',
     '소상공인 특가',
     '홈페이지 49만원',
+    '지역 검색 노출',
     '저렴한 홈페이지 제작',
     '랜딩페이지 소상공인',
     '수원 홈페이지 제작',
-    '저가 홈페이지',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -27,40 +30,64 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: PAGE_URL,
     siteName: SITE.nameEn,
-    title: '소상공인·자영업자 홈페이지 특가 49만원 | 름랩',
-    description: '소상공인·자영업자 전용 홈페이지 제작 특가 VAT 포함 49만원. 모바일 반응형, 소스코드 전체 이관.',
-    images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '소상공인 홈페이지 특가 49만원' }],
+    title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩',
+    description:
+      '광고비 0원으로도 손님이 먼저 찾아오는 검색 최적화 홈페이지. 49만원부터 · 소스코드 전체 이관 · 월 관리비 없음.',
+    images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '검색 노출 소상공인 홈페이지 49만원' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '소상공인·자영업자 홈페이지 특가 49만원 | 름랩',
-    description: '소상공인·자영업자 전용 홈페이지 제작 특가 VAT 포함 49만원.',
+    title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩',
+    description: '광고비 0원으로도 손님이 먼저 찾아오는 검색 최적화 홈페이지. 49만원부터.',
     images: [SITE.defaultOgImage],
   },
   robots: { index: true, follow: true },
 };
 
+const FEATURES = [
+  {
+    no: '강점 01',
+    title: '강력한 검색 노출 설계',
+    desc: '네이버·구글·AI 검색까지 고려한 구조로, 손님이 쓰는 키워드 조합에 내 업장이 먼저 노출되도록 설계합니다.',
+  },
+  {
+    no: '강점 02',
+    title: '쉬운 소통',
+    desc: '어려운 개발 용어 없이 사장님의 언어로 설명합니다. 모르는 단어를 외울 필요가 없습니다.',
+  },
+  {
+    no: '강점 03',
+    title: '간편한 수정·관리',
+    desc: '제작 후에도 AI 도구로 직접 수정이 가능해 운영 부담이 적습니다. 수정마다 비용이 청구되지 않습니다.',
+  },
+  {
+    no: '강점 04',
+    title: '합리적 가격',
+    desc: '검색 경쟁력은 갖추되 비용은 낮춥니다. 1회성 제작비만, 숨은 월정액 없이 투명하게.',
+  },
+];
+
 const INCLUDES = [
-  { icon: '📱', title: '모바일 반응형 완전 지원', desc: '스마트폰·태블릿·PC 화면에서 모두 깔끔하게' },
-  { icon: '🔍', title: 'SEO 기본 세팅 포함', desc: '메타 태그·구조화 데이터·사이트맵 기본 적용' },
-  { icon: '📦', title: '소스코드 전체 이관', desc: '완료 후 GitHub 저장소 + 소스코드 100% 넘겨드림' },
-  { icon: '💸', title: '월 관리비 없음', desc: '호스팅·도메인 비용 외 별도 월정액 없음' },
-  { icon: '✏️', title: '직접 수정 교육 1회', desc: '텍스트·이미지·연락처 직접 바꾸는 법 안내' },
+  { icon: '📱', title: '모바일 반응형 완전 지원', desc: '스마트폰·태블릿·PC에서 모두 깔끔하게' },
+  { icon: '🔍', title: '검색 노출 기본 세팅', desc: '메타 태그·구조화 데이터·사이트맵 기본 적용' },
+  { icon: '📦', title: '소스코드 전체 이관', desc: '완료 후 GitHub 저장소 + 소스코드 100% 이관' },
+  { icon: '💸', title: '월 관리비 없음', desc: '호스팅·도메인 외 별도 월정액 없음' },
+  { icon: '✏️', title: '직접 수정 교육 1회', desc: '텍스트·이미지·연락처 바꾸는 법 안내' },
   { icon: '🚀', title: '약 14일 납기', desc: '콘텐츠 확정 후 2주 내 오픈 목표' },
 ];
 
 const FAQS = [
   {
     q: '49만원에 정말 다 포함되나요?',
-    a: '네. VAT(부가세) 포함 490,000원입니다. 페이지 제작비·기본 디자인·소스코드 이관·직접 수정 교육 1회가 포함됩니다. 호스팅·도메인은 실비로 별도이며 월 1~2만원 수준입니다.',
+    a: '490,000원입니다. 페이지 제작비·기본 디자인·검색 노출 기본 세팅·소스코드 이관·직접 수정 교육 1회가 포함됩니다. 호스팅·도메인은 실비로 별도이며 월 1~2만원 수준입니다.',
+  },
+  {
+    q: '98만원 마케팅 패키지는 무엇이 다른가요?',
+    a: '기본 49만원 홈페이지에 더해, 지역·업종·분위기·가격 등 손님이 실제로 검색하는 키워드 조합을 분석해 검색 노출을 적극적으로 설계해 드립니다. 광고비 없이도 검색으로 손님이 찾아오는 구조를 한 번에 갖추고 싶은 분께 적합합니다.',
   },
   {
     q: '어떤 업종에 적합한가요?',
-    a: '음식점, 카페, 미용실, 학원, 필라테스·PT·운동시설, 공방, 네일·뷰티, 인테리어, 소규모 쇼핑몰 등 단일 브랜드를 운영하는 자영업자·소상공인에게 적합합니다.',
-  },
-  {
-    q: '기존 블로그나 스마트스토어와 연결할 수 있나요?',
-    a: '네, 네이버 블로그·인스타그램·카카오채널·스마트스토어 링크를 홈페이지에 삽입할 수 있습니다. 별도 연동 개발이 필요한 기능(예약 시스템, 결제)은 추가 견적이 발생할 수 있습니다.',
+    a: '음식점, 카페, 미용실, 학원, 필라테스·PT·운동시설, 인테리어, 네일·뷰티, 공방, 소규모 쇼핑몰 등 단일 브랜드를 운영하는 자영업자·소상공인에게 적합합니다.',
   },
   {
     q: '직접 내용을 수정할 수 있나요?',
@@ -72,219 +99,363 @@ const FAQS = [
   },
 ];
 
+const NP_POINTS = [
+  { title: '검색에 안 보이면 없는 가게나 마찬가지', desc: '직접 매장을 운영하며 가장 먼저 부딪힌 벽이었습니다' },
+  { title: '광고비만 매달 빠져나가는 부담', desc: '광고를 멈추면 손님도 끊기는 구조, 직접 겪어봤습니다' },
+  { title: '바빠서 홈페이지까지 챙길 시간이 없음', desc: '장사하면서 관리까지 하는 게 얼마나 버거운지 압니다' },
+  { title: '어려운 개발 용어는 하나도 안 와닿음', desc: '사장님 언어로 설명하고, 직접 고치기 쉽게 만듭니다' },
+];
+
+const SearchIcon = () => (
+  <svg className="s-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+  </svg>
+);
+const QIcon = () => (
+  <svg className="s-qico" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+    <circle cx="11" cy="11" r="7" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+  </svg>
+);
+
 export default function SohoPage() {
   return (
     <>
       <LandingServiceJsonLd
-        name="소상공인·자영업자 홈페이지 특가 제작"
-        description="소상공인·자영업자 전용 홈페이지 제작 특가 VAT 포함 49만원. 모바일 반응형, 소스코드 전체 이관, 월 관리비 없음."
+        name="검색 노출되는 소상공인·자영업자 홈페이지 제작"
+        description="광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음."
         url={PAGE_URL}
         crumbs={[
           { name: '홈', url: `${SITE.domain}/` },
           { name: '소상공인 특가', url: PAGE_URL },
         ]}
       />
+      <FAQPageJsonLd items={FAQS.map((f) => ({ q: f.q, a: f.a }))} />
 
-      <main className="seo-landing">
+      <main className="soho">
         {/* ── HERO ── */}
-        <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 64px' }}>
-          <div className="container">
-            <nav
-              className="seo-breadcrumb"
-              aria-label="breadcrumb"
-              style={{ marginBottom: 24, fontSize: 14, color: 'var(--text-dim)' }}
-            >
+        <section className="s-sec s-hero t-dark acc-green">
+          <div className="s-wrap">
+            <nav className="s-crumb" aria-label="breadcrumb">
               <Link href="/">홈</Link>
               <span style={{ margin: '0 8px' }}>/</span>
               <span>소상공인·자영업자 특가</span>
             </nav>
 
-            <p className="sec-label">SPECIAL PRICE</p>
-            <h1
-              className="hero-title"
-              style={{ fontSize: 'clamp(28px, 5vw, 48px)', lineHeight: 1.2, marginBottom: 16 }}
-            >
-              소상공인·자영업자<br />
-              홈페이지 특가{' '}
-              <span className="gradient-text">49만원</span>
+            <p className="s-brand">REUMLAB</p>
+            <h1 className="s-h s-hero-h">
+              언제까지 광고로만<br />
+              <span className="s-g">손님을 데려오실</span> 건가요?
             </h1>
-            <p className="hero-sub" style={{ maxWidth: 640, marginBottom: 12 }}>
-              VAT 포함 490,000원 · 모바일 반응형 · 소스코드 전체 이관 · 월 관리비 없음
-            </p>
-            <p style={{ fontSize: 14, color: 'var(--text-dim)', marginBottom: 32 }}>
-              음식점·카페·학원·뷰티·운동시설 등 단일 브랜드를 운영하는 자영업자를 위한 전용 패키지입니다.
+            <p className="s-lead">
+              광고비 0원으로도 손님이 스스로 찾아오는 구조,<br />
+              검색 최적화 홈페이지에서 시작됩니다.
             </p>
 
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 36 }}>
-              {['소상공인 전용', 'VAT 포함 49만원', '14일 납기', '소스코드 이관', '월 관리비 없음'].map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    padding: '6px 14px',
-                    borderRadius: 999,
-                    background: 'rgba(58,140,92,.12)',
-                    color: 'var(--green)',
-                    fontSize: 13,
-                    fontWeight: 600,
-                  }}
-                >
-                  {tag}
-                </span>
+            <div className="s-search" aria-hidden="true">
+              <SearchIcon />
+              <span className="s-search-txt">
+                수원 인테리어 업체<span className="s-cursor" />
+              </span>
+            </div>
+
+            <div className="s-chips">
+              {['소상공인 전용', '49만원 특가', '검색 노출 설계', '소스코드 이관', '월 관리비 없음'].map((t) => (
+                <span key={t} className="s-chip">{t}</span>
               ))}
             </div>
 
-            <div className="hero-btns" style={{ flexWrap: 'wrap' }}>
-              <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_soho_phone">
-                📞 {SITE.phone} 전화 상담
+            <div className="s-btns">
+              <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_hero_phone">
+                📞 내 업장 맞춤 상담받기
               </a>
-              <a href={`mailto:${SITE.email}`} className="btn-secondary" data-analytics="cta_soho_email">
+              <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_email">
                 ✉️ 이메일 문의
               </a>
             </div>
           </div>
         </section>
 
-        {/* ── 가격 박스 ── */}
-        <section className="sec sec-warm" style={{ padding: '72px 0' }}>
-          <div className="container" style={{ maxWidth: 800 }}>
-            <div
-              style={{
-                background: 'var(--bg-card)',
-                borderRadius: 24,
-                padding: 'clamp(28px, 5vw, 48px)',
-                boxShadow: '0 8px 40px rgba(58,140,92,0.10)',
-                border: '1.5px solid var(--border)',
-                textAlign: 'center',
-              }}
-            >
-              <p className="sec-label" style={{ justifyContent: 'center' }}>소상공인 특가 패키지</p>
-              <div style={{ fontSize: 'clamp(52px, 10vw, 80px)', fontWeight: 900, color: 'var(--green)', lineHeight: 1, margin: '16px 0 8px' }}>
-                49만원
+        {/* ── 검색에 안 보이는 업장 ── */}
+        <section className="s-sec t-ink2 acc-coral">
+          <div className="s-wrap">
+            <p className="s-label">VISIBILITY</p>
+            <h2 className="s-h">
+              검색에 안 보이는 업장은<br />
+              <span className="s-g">간판 없는 업장</span>입니다
+            </h2>
+            <p className="s-lead">아무리 잘 만들어도, 안 보이면 없는 것과 같습니다.</p>
+
+            <div className="s-ranks">
+              {[
+                { no: '1위', w: '88%', name: '경쟁 업장 A' },
+                { no: '2위', w: '72%', name: '경쟁 업장 B' },
+                { no: '3위', w: '58%', name: '경쟁 업장 C' },
+              ].map((r) => (
+                <div className="s-rank" key={r.no}>
+                  <span className="s-rank-no">{r.no}</span>
+                  <span className="s-rank-bar"><span style={{ width: r.w }} /></span>
+                  <span className="s-rank-name">{r.name}</span>
+                </div>
+              ))}
+              <div className="s-dots">· · ·</div>
+              <div className="s-rank is-us">
+                <span className="s-rank-no">48위</span>
+                <span className="s-rank-bar"><span style={{ width: '10%' }} /></span>
+                <span className="s-rank-name">우리 업장</span>
               </div>
-              <p style={{ color: 'var(--text-dim)', fontSize: 15, marginBottom: 28 }}>VAT 포함 · 1회성 · 호스팅·도메인 별도</p>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                  gap: 16,
-                  marginBottom: 32,
-                  textAlign: 'left',
-                }}
-              >
-                {INCLUDES.map((item) => (
-                  <div
-                    key={item.title}
-                    style={{
-                      padding: '18px 20px',
-                      background: 'var(--bg-warm)',
-                      borderRadius: 14,
-                      border: '1px solid var(--border)',
-                    }}
-                  >
-                    <div style={{ fontSize: 24, marginBottom: 8 }}>{item.icon}</div>
-                    <p style={{ fontWeight: 700, fontSize: 15, marginBottom: 4 }}>{item.title}</p>
-                    <p style={{ fontSize: 13, color: 'var(--text-dim)', lineHeight: 1.55 }}>{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-              <a href={SITE.phoneHref} className="btn-primary" style={{ fontSize: 17 }} data-analytics="cta_soho_price_phone">
-                지금 바로 상담 신청 · {SITE.phone}
-              </a>
             </div>
           </div>
         </section>
 
-        {/* ── 왜 름랩인가 ── */}
-        <section className="sec sec-cream" style={{ padding: '72px 0' }}>
-          <div className="container" style={{ maxWidth: 800 }}>
-            <h2
-              className="sec-title"
-              style={{ fontSize: 'clamp(22px, 3vw, 30px)', marginBottom: 12 }}
-            >
-              왜 름랩 소상공인 패키지인가요?
+        {/* ── 모든 검색어에 광고를 걸 수는 없습니다 ── */}
+        <section className="s-sec t-light">
+          <div className="s-wrap">
+            <p className="s-label">SEARCH BEHAVIOR</p>
+            <h2 className="s-h">
+              손님의 <span className="s-g">모든 검색어</span>에<br />
+              광고를 걸 수는 없습니다
             </h2>
-            <p style={{ color: 'var(--text-sub)', marginBottom: 32, lineHeight: 1.8 }}>
-              외주 제작 후 수정 한 번에 몇 만원씩 청구되거나, 월 관리비가 계속 나가는 구조는 소상공인에게 부담입니다.
-              름랩은 1회 제작비만 받고, 소스코드를 통째로 넘깁니다. 이후 수정은 AI 도구로 직접 하실 수 있습니다.
-            </p>
-            <ul className="svc-list">
-              <li>대형 에이전시처럼 팀 영업 없이 — 대표 1인이 직접 소통</li>
-              <li>추가 비용 청구 없는 투명한 1회성 계약</li>
-              <li>소스코드 이관으로 외주사 종속 없음</li>
-              <li>사업자: {SITE.company} · 대표: {SITE.representative} · {SITE.phone}</li>
-            </ul>
+            <p className="s-lead">손님은 업종, 지역, 분위기, 가격 등 다양한 조합으로 검색을 합니다.</p>
 
-            <div
-              style={{
-                marginTop: 36,
-                padding: '20px 24px',
-                background: 'rgba(58,140,92,0.07)',
-                borderRadius: 14,
-                borderLeft: '3px solid var(--green)',
-              }}
-            >
-              <p style={{ fontSize: 13, color: 'var(--text-dim)', marginBottom: 6 }}>관련 글</p>
-              <Link
-                href="/blog/homepage-jejak-biyong/"
-                style={{ fontWeight: 600, textDecoration: 'none', color: 'var(--text)' }}
-              >
-                홈페이지 제작 비용 총정리 (2026) →
-              </Link>
+            <div className="s-queries">
+              <div className="s-query is-dim"><QIcon />“○○카페”라고 검색</div>
+              <div className="s-query"><QIcon />“강남 분위기 좋은 카페”</div>
+              <div className="s-query"><QIcon />“가성비 좋은 강남 카페”</div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 키워드 조합으로 노출 ── */}
+        <section className="s-sec t-dark acc-teal">
+          <div className="s-wrap">
+            <p className="s-label">KEYWORD STRATEGY</p>
+            <h2 className="s-h">
+              검색 키워드 조합으로<br />
+              <span className="s-g">노출 범위를 넓힙니다</span>
+            </h2>
+            <p className="s-lead">어떤 상황에서도 내 업장이 먼저 노출됩니다.</p>
+
+            <div className="s-combo">
+              <div className="s-combo-col">
+                <h4>지역</h4>
+                <p>관악구<br />은평구</p>
+              </div>
+              <div className="s-combo-x">×</div>
+              <div className="s-combo-col">
+                <h4>분야</h4>
+                <p>인테리어<br />데코타일</p>
+              </div>
+              <div className="s-combo-x">×</div>
+              <div className="s-combo-col is-out">
+                <h4>의도</h4>
+                <p>견적<br />업체</p>
+              </div>
+            </div>
+
+            <div className="s-up">
+              <div className="s-up-row">
+                <span className="s-up-tag">AI 검색</span>
+                <span className="s-up-desc">챗봇이 추천하는 업장으로 — 손님이 많이 묻는 곳</span>
+                <span className="s-up-badge">↑ UP</span>
+              </div>
+              <div className="s-up-row">
+                <span className="s-up-tag">구글·네이버</span>
+                <span className="s-up-desc">지역 업종 검색 노출 선정 — 신규 유입을 끌어오는 곳</span>
+                <span className="s-up-badge">↑ UP</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 맞춤 노출 (네이버 플레이스 카드) ── */}
+        <section className="s-sec t-light">
+          <div className="s-wrap">
+            <p className="s-label">FELLOW OWNER</p>
+            <h2 className="s-h">
+              직접 장사해본 개발자가,<br />
+              <span className="s-g">사장님 마음</span>으로 만듭니다
+            </h2>
+            <p className="s-lead">
+              옆의 네이버 플레이스, 제가 직접 운영하는 매장 ‘우트스튜디오’입니다. 저도 같은 자영업자라 검색에 안 보이는 답답함도, 광고비 부담도 직접 겪어봤습니다. 그래서 사장님 입장에서 꼭 필요한 것만 챙겨 만듭니다.
+            </p>
+
+            <div className="s-np-grid">
+              {/* 네이버 플레이스 검색 결과 스크린샷 (개발자 본인 매장) */}
+              <div className="np-shot-wrap">
+                <div className="np-shot">
+                  <img
+                    src="/soho/naver-place.png"
+                    alt="제가 직접 운영하는 우트스튜디오 파티룸 수원점 네이버 플레이스 노출 화면 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
+                    width={416}
+                    height={207}
+                    loading="lazy"
+                  />
+                </div>
+                <p className="np-cap">↑ 제가 직접 운영하는 ‘우트스튜디오’ — 검색 노출을 직접 만들어 본 매장입니다</p>
+              </div>
+
+              {/* 맞춤 체크리스트 */}
+              <ul className="np-points">
+                <li className="np-points-h">그래서, 사장님 마음을 압니다</li>
+                {NP_POINTS.map((p) => (
+                  <li className="np-point" key={p.title}>
+                    <span className="np-ck" aria-hidden="true">✓</span>
+                    <div>
+                      <b>{p.title}</b>
+                      <span>{p.desc}</span>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 24시간 일하는 영업사원 (그라데이션 배너) ── */}
+        <section className="s-sec s-band t-band">
+          <div className="s-wrap">
+            <span className="s-band-badge">24/7 ALWAYS ON</span>
+            <h2 className="s-h">
+              <span className="s-nowrap">홈페이지는 한 번 쓰는 비용이 아니라</span><br />
+              <span className="s-g">24시간 일하는 영업사원</span>입니다
+            </h2>
+            <p className="s-lead">잘 만든 홈페이지는, 사장님이 자는 동안에도 손님을 데려옵니다.</p>
+          </div>
+        </section>
+
+        {/* ── 사장님의 말로 ── */}
+        <section className="s-sec t-light2">
+          <div className="s-wrap">
+            <p className="s-label">EASY COMMUNICATION</p>
+            <h2 className="s-h">
+              개발 용어 대신,<br />
+              <span className="s-g">사장님의 말로</span>
+            </h2>
+            <p className="s-lead">모르는 단어를 외울 필요가 없습니다.</p>
+
+            <div className="s-chat">
+              <div className="s-bubble left">“반응형이요? 도메인이요…?”</div>
+              <div className="s-bubble right">“휴대폰에서도 잘 보이게 하고, 가게 주소처럼 쓰는 인터넷 주소예요.”</div>
+              <div className="s-bubble left">“수정은 제가 못 하는데…”</div>
+              <div className="s-bubble right">“사진 한 장 바꾸듯 쉽게 고치실 수 있어요.”</div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 4 강점 ── */}
+        <section className="s-sec t-dark">
+          <div className="s-wrap">
+            <p className="s-label">WHY REUMLAB</p>
+            <h2 className="s-h">
+              름랩은 업장 특성에 맞는<br />
+              <span className="s-g">홈페이지</span>를 만듭니다
+            </h2>
+            <div className="s-grid">
+              {FEATURES.map((f) => (
+                <div className="s-feat" key={f.no}>
+                  <div className="s-feat-no">{f.no}</div>
+                  <h3>{f.title}</h3>
+                  <p>{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 가격 ── */}
+        <section className="s-sec t-ink2 acc-gold" id="price">
+          <div className="s-wrap">
+            <p className="s-label">TRANSPARENT PRICE</p>
+            <h2 className="s-h">
+              필요한 만큼만,<br />
+              숨은 비용 없는 <span className="s-g">투명한 가격</span>
+            </h2>
+
+            <div className="s-prices">
+              <div className="s-price">
+                <span className="s-price-tag">기본</span>
+                <h3>홈페이지 제작</h3>
+                <p className="s-price-sub">검색에 잘 잡히는 기본 웹사이트</p>
+                <div className="s-price-amt">
+                  <span className="s-price-was">50만원</span>
+                  <span className="s-price-now">49<small>만원</small></span>
+                </div>
+                <p className="s-price-note">1회성 · 호스팅·도메인 별도</p>
+              </div>
+
+              <div className="s-price is-feature">
+                <span className="s-price-tag">마케팅 패키지</span>
+                <h3>홈페이지 + 검색 노출 설계</h3>
+                <p className="s-price-sub">네이버·구글·AI 검색까지 함께</p>
+                <div className="s-price-amt">
+                  <span className="s-price-was">100만원</span>
+                  <span className="s-price-now">98<small>만원</small></span>
+                </div>
+                <p className="s-price-note">기본 대비 +49만원으로 노출까지 한 번에</p>
+              </div>
+            </div>
+
+            <div className="s-incl">
+              {INCLUDES.map((it) => (
+                <div className="s-incl-item" key={it.title}>
+                  <span className="s-incl-ico">{it.icon}</span>
+                  <div>
+                    <b>{it.title}</b>
+                    <span>{it.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="s-btns" style={{ marginTop: 32 }}>
+              <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_price_phone">
+                📞 {SITE.phone} 상담 신청
+              </a>
+              <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_price_email">
+                ✉️ 이메일 문의
+              </a>
             </div>
           </div>
         </section>
 
         {/* ── FAQ ── */}
-        <section className="sec sec-warm" style={{ padding: '72px 0' }}>
-          <div className="container" style={{ maxWidth: 800 }}>
-            <h2 className="sec-title" style={{ fontSize: 'clamp(22px, 3vw, 30px)', marginBottom: 32 }}>
-              자주 묻는 질문
-            </h2>
-            <dl style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              {FAQS.map((faq) => (
-                <div
-                  key={faq.q}
-                  style={{
-                    padding: '22px 24px',
-                    background: 'var(--bg-card)',
-                    borderRadius: 16,
-                    border: '1px solid var(--border)',
-                  }}
-                >
-                  <dt style={{ fontWeight: 700, fontSize: 16, marginBottom: 10, color: 'var(--text)' }}>
-                    Q. {faq.q}
-                  </dt>
-                  <dd style={{ color: 'var(--text-sub)', lineHeight: 1.75, fontSize: 15 }}>
-                    {faq.a}
-                  </dd>
-                </div>
+        <section className="s-sec t-light">
+          <div className="s-wrap">
+            <p className="s-label">FAQ</p>
+            <h2 className="s-h">자주 묻는 질문</h2>
+            <div className="s-faq">
+              {FAQS.map((f) => (
+                <details key={f.q}>
+                  <summary>{f.q}</summary>
+                  <div className="s-faq-a">{f.a}</div>
+                </details>
               ))}
-            </dl>
+            </div>
           </div>
         </section>
 
         {/* ── 최종 CTA ── */}
-        <section className="sec" style={{ padding: '72px 0', textAlign: 'center' }}>
-          <div className="container" style={{ maxWidth: 640 }}>
-            <h2 className="sec-title" style={{ fontSize: 'clamp(22px, 3vw, 30px)', marginBottom: 16 }}>
-              지금 바로 상담하세요
+        <section className="s-sec s-final t-band">
+          <div className="s-wrap">
+            <p className="s-cap">고민만 하기엔, 손님은 지금도 검색 중입니다</p>
+            <h2 className="s-h">
+              이제는 <span className="s-g">손님이 먼저 찾는</span><br />
+              업장을 만드세요
             </h2>
-            <p style={{ color: 'var(--text-sub)', marginBottom: 32, lineHeight: 1.8 }}>
-              견적·일정 문의는 전화 또는 이메일로 연결해 드립니다.<br />
-              수원 대면 상담 · 전국 비대면 상담 모두 가능합니다.
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 14, justifyContent: 'center' }}>
-              <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_soho_bottom_phone">
-                📞 {SITE.phone} 전화 상담
+            <div className="s-btns">
+              <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_bottom_phone">
+                📞 내 업장 맞춤 상담받기
               </a>
-              <a href={`mailto:${SITE.email}`} className="btn-secondary" data-analytics="cta_soho_bottom_email">
+              <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_bottom_email">
                 ✉️ 이메일 문의
               </a>
             </div>
-            <p style={{ marginTop: 24, fontSize: 13, color: 'var(--text-dim)' }}>
+            <p className="s-final-foot">
+              REUMLAB — 내 업장 홈페이지 제작은 름랩
+              <br />
               <Link href="/">← 름랩 메인으로</Link>
-              {'  ·  '}
-              <Link href="/blog/homepage-jejak-biyong/">홈페이지 제작 비용 글 보기</Link>
             </p>
           </div>
         </section>

@@ -1,10 +1,7 @@
 import Link from 'next/link';
-import {
-  getSite,
-  getLandingBySlug,
-  pickFaqs,
-  pickReviews,
-  getPricingSnippet } from '../lib/data';
+import { getSite, getLandingBySlug, getHubBySlug } from '../lib/data';
+import { buildLandingContent } from '../lib/landing-content';
+import BusinessFooter from './BusinessFooter';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -12,76 +9,237 @@ export default function LandingPage({ slug }) {
   const site = getSite();
   const landing = getLandingBySlug(slug);
   if (!landing) return null;
-  const faqs = pickFaqs(landing.slug);
-  const reviews = pickReviews(landing.slug);
-  const pricingSnippet = getPricingSnippet(landing);
+
+  const c = buildLandingContent(landing);
+  const kw = landing.keyword;
+  const tel = `tel:${String(site.tel || '').replace(/-/g, '')}`;
+  const mail = `mailto:${site.email}`;
+  const hub = landing.hubId ? getHubBySlug(landing.hubId) : null;
+
+  const stats = [
+    ['100%', '소스코드 이관'],
+    ['0원', '월 관리비'],
+    ['1:1', '대표 직접 소통'],
+    ['전국', '비대면 상담'],
+  ];
 
   return (
-    <div className="dynamic-page">
-      <p className="breadcrumb"><Link href="/">름랩</Link> &gt; {landing.keyword}</p>
-      <section className="hero">
-        <div className="hero-inner">
-          <span className="hero-tag">{landing.keyword}</span>
-          <h1><span className="g">{landing.keyword}</span><br />견적·상담 문의</h1>
-          <p className="hero-desc">{landing.description}</p>
-          <div className="hero-cta">
-            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-primary">{site.tel} 전화 상담</a>
-            <a href={`mailto:${site.email}`} className="btn-outline">이메일 문의</a>
+    <div className="bg-white font-sans text-slate-800">
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 px-5 pb-20 pt-28 sm:px-6 sm:pb-24 sm:pt-32">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-accent/20 blur-3xl"
+        />
+        <div className="relative mx-auto max-w-4xl text-center">
+          <nav className="mb-6 text-sm text-slate-400">
+            <Link href="/" className="hover:text-slate-200">홈</Link>
+            <span className="mx-2">/</span>
+            {hub ? (
+              <>
+                <Link href={`/h/${landing.hubId}/`} className="hover:text-slate-200">{hub.ko}</Link>
+                <span className="mx-2">/</span>
+              </>
+            ) : null}
+            <span className="text-slate-300">{kw}</span>
+          </nav>
+
+          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-sky-300 ring-1 ring-white/15">
+            {c.badge}
+          </span>
+          <h1 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl">
+            {kw}
+          </h1>
+          <p className="mt-3 text-lg font-semibold text-sky-300">{c.serviceLabel} 견적·상담</p>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+            {c.heroSub}
+          </p>
+
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-deep">
+              📞 {site.tel} 전화 상담
+            </a>
+            <a href={mail} className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-7 py-4 text-base font-bold text-white ring-1 ring-white/20 transition-all hover:bg-white/15">
+              ✉️ 이메일 문의
+            </a>
           </div>
+
+          <dl className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-4 border-t border-white/10 pt-8 sm:grid-cols-4 sm:gap-6">
+            {stats.map(([n, l]) => (
+              <div key={l} className="text-center">
+                <dt className="font-display text-2xl font-bold text-white sm:text-3xl">{n}</dt>
+                <dd className="mt-1 text-xs text-slate-400 sm:text-sm">{l}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
-      {pricingSnippet && (
-        <section className="pricing-guide">
-          <div className="section-inner">
-            <span className="section-tag">가격 가이드</span>
-            <h2 className="section-title">{landing.keyword} 견적 안내</h2>
-            <p className="pricing-desc">{pricingSnippet} 정확한 견적은 요구사항을 알려주시면 상담 후 안내드립니다.</p>
-          </div>
-        </section>
-      )}
-      {reviews.length > 0 && (
-        <section className="reviews">
-          <div className="section-inner">
-            <span className="section-tag">후기</span>
-            <h2 className="section-title">고객 후기</h2>
-            {reviews.map((r, i) => (
-              <div key={i} className="review">
-                <p>{r.text}</p>
-                <span className="author">{r.author}</span>
+
+      {/* ── 인트로 ── */}
+      <section className="px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <span className="text-sm font-bold uppercase tracking-wide text-accent">{c.serviceLabel}</span>
+          <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+            {kw}, 이렇게 도와드립니다
+          </h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-slate-600 sm:text-base">{c.intro}</p>
+        </div>
+      </section>
+
+      {/* ── 포함 항목 ── */}
+      <section className="border-y border-slate-100 bg-slate-50 px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+            {c.serviceLabel}에 포함되는 것
+          </h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {c.deliverables.map((d) => (
+              <div key={d.t} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent-soft text-accent">✓</div>
+                <h3 className="mt-4 text-base font-bold text-navy-900">{d.t}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{d.d}</p>
               </div>
             ))}
           </div>
-        </section>
-      )}
-      <section className="faq">
-        <div className="section-inner">
-          <span className="section-tag">FAQ</span>
-          <h2 className="section-title">자주 묻는 질문</h2>
-          {faqs.map((f, i) => (
-            <article key={i} className="faq-item">
-              <div className="faq-q">{f.q}</div>
-              <div className="faq-a">{f.a}</div>
-            </article>
-          ))}
         </div>
       </section>
-      <section className="cta">
-        <div className="section-inner">
-          <h2><span className="g">{landing.keyword}</span> 견적 문의</h2>
-          <p className="hero-desc">전화·이메일로 편하게 문의해 주세요.</p>
-          <div className="cta-buttons">
-            <a href={`tel:${site.tel.replace(/-/g, '')}`} className="btn-primary">{site.tel} 전화 상담</a>
-            <a href={`mailto:${site.email}`} className="btn-outline">이메일 문의</a>
+
+      {/* ── 인텐트 앵글 ── */}
+      <section className="px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+            {c.angle.title}
+          </h2>
+          <p className="mt-5 text-[15px] leading-relaxed text-slate-600 sm:text-base">{c.angle.body}</p>
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            {c.angle.points.map((p) => (
+              <li key={p} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 shadow-sm">
+                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-accent text-[11px] font-bold text-white">✓</span>
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── 가격 가이드 ── */}
+      <section className="bg-navy-950 px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <h2 className="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              {c.serviceLabel} 가격 가이드
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">{c.pricing.note}</p>
+          </div>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
+            {c.pricing.tiers.map((t) => (
+              <div
+                key={t.tier}
+                className={`rounded-2xl p-7 ${
+                  t.featured
+                    ? 'bg-white text-navy-900 shadow-card-hover ring-2 ring-accent'
+                    : 'bg-navy-850/60 text-slate-200 ring-1 ring-white/10'
+                }`}
+              >
+                {t.featured ? (
+                  <span className="mb-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">추천</span>
+                ) : null}
+                <h3 className={`text-sm font-bold ${t.featured ? 'text-accent-deep' : 'text-sky-300'}`}>{t.tier}</h3>
+                <p className={`mt-2 font-display text-3xl font-bold ${t.featured ? 'text-navy-900' : 'text-white'}`}>{t.price}</p>
+                <p className={`mt-1 text-xs ${t.featured ? 'text-slate-500' : 'text-slate-400'}`}>{t.period}</p>
+                <ul className="mt-5 space-y-2 text-sm">
+                  {t.features.map((f) => (
+                    <li key={f} className={`flex items-start gap-2 ${t.featured ? 'text-slate-700' : 'text-slate-300'}`}>
+                      <span className={t.featured ? 'text-accent' : 'text-sky-300'}>·</span>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      <footer>
-        <p>© 2026 {site.company} (REUMLAB). All Rights Reserved.</p>
-        <div className="footer-links">
-          <a href={`mailto:${site.email}`}>이메일</a>
-          <a href={`tel:${site.tel.replace(/-/g, '')}`}>전화</a>
+
+      {/* ── 진행 과정 ── */}
+      <section className="px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">진행 과정</h2>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {c.process.map((s) => (
+              <div key={s.step} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
+                <div className="font-display text-2xl font-bold text-accent">{s.step}</div>
+                <h3 className="mt-3 text-base font-bold text-navy-900">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </footer>
+      </section>
+
+      {/* ── 이런 분께 ── */}
+      <section className="border-y border-slate-100 bg-slate-50 px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+            이런 분께 추천합니다
+          </h2>
+          <ul className="mt-8 divide-y divide-slate-200 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            {c.audience.map((a) => (
+              <li key={a} className="flex items-start gap-3 px-6 py-4 text-[15px] text-slate-700">
+                <span className="mt-0.5 flex h-6 w-6 flex-none items-center justify-center rounded-full bg-accent-soft text-accent">✓</span>
+                {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── FAQ ── */}
+      <section className="px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">자주 묻는 질문</h2>
+          <div className="mt-8 space-y-3">
+            {c.faqs.map((f) => (
+              <details key={f.q} className="group rounded-2xl border border-slate-200 bg-white shadow-sm">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-[15px] font-bold text-navy-900">
+                  {f.q}
+                  <span className="flex-none text-xl font-normal text-accent transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="px-6 pb-5 text-sm leading-relaxed text-slate-600">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 최종 CTA ── */}
+      <section className="bg-gradient-to-br from-accent to-accent-deep px-5 py-16 text-center sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-2xl">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            {kw} 견적, 지금 받아보세요
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-white/85 sm:text-base">
+            가능한지, 얼마쯤 드는지, 더 나은 방법은 없는지 — 솔직하게 안내드립니다. 상담은 무료입니다.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-white px-7 py-4 text-base font-bold text-accent-deep shadow-lg transition-transform hover:-translate-y-0.5">
+              📞 {site.tel} 전화 상담
+            </a>
+            <a href={mail} className="inline-flex items-center gap-2 rounded-xl bg-white/15 px-7 py-4 text-base font-bold text-white ring-1 ring-white/40 transition-all hover:bg-white/25">
+              ✉️ 이메일 문의
+            </a>
+          </div>
+          {hub ? (
+            <p className="mt-6 text-sm text-white/80">
+              <Link href={`/h/${landing.hubId}/`} className="font-semibold underline-offset-2 hover:underline">
+                {hub.ko} 관련 다른 키워드 보기 →
+              </Link>
+            </p>
+          ) : null}
+        </div>
+      </section>
+
+      <BusinessFooter />
     </div>
   );
 }

@@ -108,9 +108,9 @@ export default function BlogPostPage({ params }: Props) {
               </h2>
               <p className="hub-intro">패키지·일정이 궁금하시면 상담으로 연결해 드립니다.</p>
               <div className="cta-buttons">
-                <Link href="/consultation/" className="btn-primary" data-analytics="cta_blog_post_consult">
-                  무료 상담
-                </Link>
+                <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_blog_post_call">
+                  📞 무료 상담
+                </a>
                 <Link href="/#pricing" className="btn-outline" data-analytics="cta_blog_post_pricing">
                   패키지 요금 보기
                 </Link>
