@@ -8,6 +8,7 @@
  *  - 페이지 본문 = 지역 고유 단락 + 서비스 고유 단락 + 고유 FAQ 3개 + 내부링크
  */
 import { SITE } from './seo';
+import { scoreIndexability, fingerprint, type IndexDecision } from './index-quality';
 
 export interface RegionDef {
   /** 로마자 슬러그 (URL) */
@@ -450,4 +451,45 @@ export function siblingRegions(serviceSlug: string, regionSlug: string, n = 6): 
 
 export function regionServiceCanonical(serviceSlug: string, regionSlug: string): string {
   return `${SITE.domain}/${serviceSlug}/${regionSlug}/`;
+}
+
+/**
+ * 지역×서비스 페이지의 색인 자격 판정 (페이지 robots + 사이트맵 동기화용).
+ * 현재 22개 지역은 모두 고유 intro/scene/FAQ를 가져 80점↑로 통과한다.
+ * 미래에 얇은/중복 지역이 추가되면 자동으로 noindex + 사이트맵 제외된다.
+ */
+export function regionServiceDecision(
+  serviceSlug: string,
+  regionSlug: string,
+): IndexDecision | null {
+  const service = getService(serviceSlug);
+  const region = getRegion(regionSlug);
+  if (!service || !region) return null;
+
+  const combinedQ = `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`;
+  return scoreIndexability({
+    title: `${region.full} ${service.ko} | 소스코드 이관·정액 패키지 — 름랩`,
+    description: `${region.full} ${service.ko}. ${region.access} ${service.priceLine}. 소스코드 전체 이관과 직접 운영 교육 포함.`,
+    h1: `${region.full} ${service.ko}`,
+    uniqueBodyText: [
+      region.intro,
+      region.access,
+      region.scene,
+      service.intro,
+      service.priceLine,
+      ...service.deliverables,
+      region.faq.a,
+      service.faq.a,
+    ].join(' '),
+    faqQuestions: [region.faq.q, service.faq.q, combinedQ],
+    internalLinks: 8,
+    hasConsultCta: true,
+    hasDecisionInfo: true,
+    hasLocalAccessInfo: Boolean(region.access),
+    hasUniqueMedia: false,
+    // 지역 고유성(상권)만 비교 — 서비스 공통 단락은 제외해 정상 페이지가 오탐되지 않게 한다
+    peerFingerprints: REGIONS.filter((r) => r.slug !== region.slug).map((r) =>
+      fingerprint(`${r.intro} ${r.scene}`),
+    ),
+  });
 }

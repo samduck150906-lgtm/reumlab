@@ -9,7 +9,9 @@ import {
   getRegion,
   siblingRegions,
   regionServiceCanonical,
+  regionServiceDecision,
 } from '@/lib/pseo';
+import { robotsFor } from '@/lib/index-quality';
 import { RegionServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
@@ -31,6 +33,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${region.full} ${service.ko} | 소스코드 이관·정액 패키지 — 름랩`;
   const description = `${region.full} ${service.ko}. ${region.access} ${service.priceLine}. 소스코드 전체 이관과 직접 운영 교육 포함.`;
   const canonical = regionServiceCanonical(service.slug, region.slug);
+
+  // 색인 품질 게이트: 고유성 80점↑만 index + 사이트맵 포함 (사이트맵과 동일 판정)
+  const decision = regionServiceDecision(service.slug, region.slug);
 
   return {
     metadataBase: new URL(SITE.domain),
@@ -55,7 +60,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: title }],
     },
     twitter: { card: 'summary_large_image', title, description, images: [SITE.defaultOgImage] },
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
+    robots: decision ? robotsFor(decision) : { index: true, follow: true },
   };
 }
 

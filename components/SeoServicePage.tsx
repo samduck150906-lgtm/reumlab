@@ -4,6 +4,7 @@ import { SITE } from '@/lib/seo';
 import { getService, REGIONS } from '@/lib/pseo';
 
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
+  { match: /source-handover|소스코드|이관/, slug: 'oeju-gaebal-silphae-an-haneun-bab', title: '외주 개발 실패 안 하는 법: 명세·일정·소유권 3종 세트' },
   { match: /app-dev|앱개발|앱-개발|app-gaebal/, slug: 'app-gaebal-biyong-julineun-bab', title: '앱 개발 비용 총정리 (2026): 범위별 견적과 줄이는 법' },
   { match: /mvp/, slug: 'mvp-gaebal-biyong-gigan', title: 'MVP 개발 비용과 기간: 3주 만에 시장 검증이 가능한 이유' },
   { match: /flutter/, slug: 'flutter-oeju-jangdanjeom', title: 'Flutter 앱개발 외주, 장단점 솔직 정리' },

@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 import { getLandings, getClusters } from '../lib/data';
 import { BLOG_POSTS, blogCanonical } from '@/lib/blog-posts';
-import { allRegionServiceParams, regionServiceCanonical } from '@/lib/pseo';
+import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical } from '@/lib/industries';
 import { GUIDES, guideCanonical } from '@/lib/guides';
 import { COMPARES, compareCanonical } from '@/lib/compare';
@@ -43,8 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   });
 
-  // 프로그래매틱 1축 — 지역×서비스
+  // 프로그래매틱 1축 — 지역×서비스 (색인 게이트 통과분만 포함)
   for (const { slug, region } of allRegionServiceParams()) {
+    const decision = regionServiceDecision(slug, region);
+    if (decision && !decision.inSitemap) continue;
     out.push({
       url: regionServiceCanonical(slug, region),
       lastModified: now,
