@@ -49,7 +49,9 @@ async function submitToHost(host) {
     urlList: CORE_URLS,
   });
 
-  const url = `https://${host}/IndexNow`;
+  // 경로는 반드시 소문자 /indexnow — 네이버는 대소문자를 구분하며
+  // /IndexNow(대문자)는 웹앱으로 라우팅돼 "invalid csrf token" 403을 반환한다.
+  const url = `https://${host}/indexnow`;
   try {
     const res = await fetch(url, {
       method: 'POST',
@@ -57,6 +59,10 @@ async function submitToHost(host) {
       body,
     });
     console.log(`[IndexNow] ${host} → HTTP ${res.status} (${CORE_URLS.length} URLs)`);
+    if (res.status >= 400) {
+      const text = await res.text().catch(() => '');
+      if (text) console.log(`[IndexNow] ${host} 응답: ${text.slice(0, 300)}`);
+    }
   } catch (e) {
     console.warn(`[IndexNow] ${host} 실패:`, e.message);
   }
