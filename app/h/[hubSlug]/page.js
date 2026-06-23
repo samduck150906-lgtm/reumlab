@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { getClusters, getHubBySlug, getSite } from '../../../lib/data';
+import { getClusters, getHubBySlug } from '../../../lib/data';
 import HubPage from '../../../components/HubPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
@@ -30,7 +29,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default function HubRoute({ params }) {
-  const site = getSite();
   const hub = getHubBySlug(params.hubSlug);
   const url = `${BASE}/h/${params.hubSlug}/`;
   return (
@@ -46,17 +44,6 @@ export default function HubRoute({ params }) {
           ]}
         />
       ) : null}
-      <nav className="dynamic-nav">
-        <div className="dynamic-nav-inner">
-          <Link href="/" className="logo">REUMLAB</Link>
-          <ul className="nav-links">
-            <li><Link href="/">홈</Link></li>
-            <li><Link href="/#services">서비스</Link></li>
-            <li><Link href="/#faq">FAQ</Link></li>
-          </ul>
-          <a href={`tel:${String(site.tel || '').replace(/-/g, '')}`} className="contact-btn">전화 문의</a>
-        </div>
-      </nav>
       <HubPage hubSlug={params.hubSlug} />
     </>
   );
