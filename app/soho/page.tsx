@@ -286,7 +286,7 @@ export default function SohoPage() {
               <div className="np-card" aria-label="네이버 플레이스 노출 예시 카드">
                 <div className="np-head">
                   <div className="np-head-main">
-                    <p className="np-title">○○스튜디오 파티룸 모임 공간 수원점</p>
+                    <p className="np-title">우트스튜디오 파티룸 모임 공간 수원점</p>
                     <p className="np-meta">
                       <span className="np-bdg npay"><i>N</i> pay</span>
                       <span className="np-bdg talk">톡톡</span>
