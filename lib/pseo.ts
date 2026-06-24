@@ -444,9 +444,15 @@ export function allRegionServiceParams(): { slug: string; region: string }[] {
   return out;
 }
 
-/** 같은 서비스의 다른 지역 (내부링크 스포크) */
+/** 같은 서비스의 다른 지역 (내부링크 스포크) — 같은 group(상권 클러스터) 우선 노출.
+ *  모든 페이지가 동일한 6개만 링크하던 문제를 해결해 꼬리 지역까지 내부링크가 고루 분산된다. */
 export function siblingRegions(serviceSlug: string, regionSlug: string, n = 6): RegionDef[] {
-  return REGIONS.filter((r) => r.slug !== regionSlug).slice(0, n);
+  const self = REGION_BY_SLUG[regionSlug];
+  const others = REGIONS.filter((r) => r.slug !== regionSlug);
+  if (!self) return others.slice(0, n);
+  const sameGroup = others.filter((r) => r.group === self.group);
+  const rest = others.filter((r) => r.group !== self.group);
+  return [...sameGroup, ...rest].slice(0, n);
 }
 
 export function regionServiceCanonical(serviceSlug: string, regionSlug: string): string {
