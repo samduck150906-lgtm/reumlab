@@ -2,8 +2,10 @@ import Link from 'next/link';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
 import { getService, REGIONS } from '@/lib/pseo';
+import { FAQPageJsonLd } from '@/components/JsonLd';
 
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
+  { match: /source-handover|소스코드|이관/, slug: 'oeju-gaebal-silphae-an-haneun-bab', title: '외주 개발 실패 안 하는 법: 명세·일정·소유권 3종 세트' },
   { match: /app-dev|앱개발|앱-개발|app-gaebal/, slug: 'app-gaebal-biyong-julineun-bab', title: '앱 개발 비용 총정리 (2026): 범위별 견적과 줄이는 법' },
   { match: /mvp/, slug: 'mvp-gaebal-biyong-gigan', title: 'MVP 개발 비용과 기간: 3주 만에 시장 검증이 가능한 이유' },
   { match: /flutter/, slug: 'flutter-oeju-jangdanjeom', title: 'Flutter 앱개발 외주, 장단점 솔직 정리' },
@@ -19,7 +21,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
   // 지역 스포크 페이지로 내부링크를 노출 (허브-스포크 클러스터링)
   const regionService = pageSlug ? getService(pageSlug) : undefined;
   return (
-    <main className="seo-landing">
+    <>
+      {seo.faqs && seo.faqs.length > 0 ? <FAQPageJsonLd items={seo.faqs} /> : null}
+      <main className="seo-landing">
       <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 64px' }}>
         <div className="container">
           <nav className="seo-breadcrumb" aria-label="breadcrumb" style={{ marginBottom: 24, fontSize: 14, color: 'var(--text-dim)' }}>
@@ -70,11 +74,31 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             {seo.description}
           </p>
           <ul className="svc-list" style={{ marginTop: 24 }}>
-            <li>기획·디자인·개발·배포까지 원스톱</li>
-            <li>Flutter, React Native, Next.js 등 최신 스택</li>
-            <li>견적·일정 투명 안내 · 대표 직접 커뮤니케이션</li>
-            <li>사업자 {SITE.company} · 대표 {SITE.representative} · {SITE.phone}</li>
+            {(seo.whyPoints && seo.whyPoints.length > 0
+              ? seo.whyPoints
+              : [
+                  '기획·디자인·개발·배포까지 원스톱',
+                  'Flutter, React Native, Next.js 등 최신 스택',
+                  '견적·일정 투명 안내 · 대표 직접 커뮤니케이션',
+                  `사업자 ${SITE.company} · 대표 ${SITE.representative} · ${SITE.phone}`,
+                ]
+            ).map((pt) => (
+              <li key={pt}>{pt}</li>
+            ))}
           </ul>
+
+          {seo.sections && seo.sections.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              {seo.sections.map((s) => (
+                <div key={s.h2} style={{ marginBottom: 26 }}>
+                  <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 12 }}>
+                    {s.h2}
+                  </h2>
+                  <p style={{ lineHeight: 1.75 }}>{s.body}</p>
+                </div>
+              ))}
+            </div>
+          )}
           {regionService && (
             <div style={{ marginTop: 36 }}>
               <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
@@ -89,6 +113,22 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               </div>
             </div>
           )}
+          {seo.faqs && seo.faqs.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
+                자주 묻는 질문
+              </h2>
+              <div className="faq-grid">
+                {seo.faqs.map((f) => (
+                  <div className="faq-item" key={f.q}>
+                    <p className="faq-q">{f.q}</p>
+                    <p className="faq-a">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {related && (
             <div style={{ marginTop: 32, padding: '20px 24px', background: 'rgba(255,255,255,0.04)', borderRadius: 12, borderLeft: '3px solid var(--accent, #2f6bff)' }}>
               <p style={{ fontSize: 13, color: 'var(--text-dim)', marginBottom: 8 }}>관련 글</p>
@@ -97,6 +137,24 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               </Link>
             </div>
           )}
+          <div style={{ marginTop: 40 }}>
+            <p className="section-tag" style={{ marginBottom: 12 }}>주요 서비스</p>
+            <div className="link-grid">
+              {[
+                { href: '/mvp/', label: '앱 MVP 개발' },
+                { href: '/flutter/', label: 'Flutter 앱개발' },
+                { href: '/ai-development/', label: 'AI 외주개발' },
+                { href: '/source-handover/', label: '소스코드 이관' },
+                { href: '/web-development/', label: '웹사이트 제작' },
+                { href: '/blog/', label: '블로그' },
+              ]
+                .filter((s) => !pageSlug || !s.href.includes(`/${pageSlug}/`))
+                .map((s) => (
+                  <Link key={s.href} href={s.href}>{s.label}</Link>
+                ))}
+            </div>
+          </div>
+
           <div style={{ marginTop: 40 }}>
             <Link href="/" className="btn-light">
               ← 메인으로
@@ -120,5 +178,6 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
         </div>
       </footer>
     </main>
+    </>
   );
 }

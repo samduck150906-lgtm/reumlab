@@ -2,7 +2,7 @@
    REUMLAB · 름랩 — premium B2B dev-studio landing
    ============================================================ */
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+/* Pretendard는 index.html <head>의 <link>에서 로드 (CSS @import 직렬화 제거로 LCP 개선) */
 
 :root {
   /* color */
