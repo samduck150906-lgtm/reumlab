@@ -22,4 +22,7 @@ removeIfExists(path.join(publicDir, 'consultation'));
 removeIfExists(path.join(publicDir, 'vvip'));
 removeIfExists(path.join(publicDir, 'h'));
 removeIfExists(path.join(publicDir, 'l'));
+// 사이트맵·robots 단일화: 정적 파일 제거 → app/sitemap.ts(색인 게이트 반영)·app/robots.ts 가 단일 출처
+removeIfExists(path.join(publicDir, 'sitemap.xml'));
+removeIfExists(path.join(publicDir, 'robots.txt'));
 console.log('prepare-next-public: done');

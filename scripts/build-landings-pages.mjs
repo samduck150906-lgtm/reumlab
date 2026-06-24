@@ -16,7 +16,6 @@ const templates = JSON.parse(fs.readFileSync(path.join(contentDir, 'templates.js
 const clusters = JSON.parse(fs.readFileSync(path.join(contentDir, 'clusters.json'), 'utf8'));
 const { site } = templates;
 const faqPool = templates.faqPool || [];
-const reviewPool = templates.reviewPool || [];
 const pricingSnippets = templates.pricingSnippets || {};
 const BASE = site.url;
 const OG_IMAGE = site.ogImage || '';
@@ -49,13 +48,6 @@ function pickFaqs(slug, n = 4) {
   return [...new Set(indices)].slice(0, n).map((i) => faqPool[i]).filter(Boolean);
 }
 
-function pickReviews(slug, n = 3) {
-  const h = hash(slug + 'r');
-  const indices = [];
-  for (let i = 0; i < n; i++) indices.push((h + i * 11) % reviewPool.length);
-  return [...new Set(indices)].slice(0, n).map((i) => reviewPool[i]).filter(Boolean);
-}
-
 function escapeHtml(s) {
   if (!s) return '';
   return String(s)
@@ -68,7 +60,6 @@ function escapeHtml(s) {
 function landingHtml(landing) {
   const url = `${BASE}/l/${landing.slug}/`;
   const faqs = pickFaqs(landing.slug);
-  const reviews = pickReviews(landing.slug);
   const pricingSnippet = getPricingSnippet(landing);
 
   const jsonLd = {
@@ -201,9 +192,6 @@ function landingHtml(landing) {
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-q { font-weight: 600; cursor: pointer; }
     .faq-a { color: var(--text-secondary); font-size: 0.95rem; padding-top: 10px; }
-    .review { background: var(--bg-card); border-radius: var(--radius-md); padding: 20px; margin-bottom: 12px; border: 1px solid var(--border-subtle); }
-    .review p { color: var(--text-secondary); margin-bottom: 8px; }
-    .review .author { font-size: 0.85rem; color: var(--text-muted); }
     .cta { text-align: center; padding: 60px 5%; background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(6, 182, 212, 0.15) 100%); }
     .cta h2 { font-size: clamp(1.25rem, 4vw, 1.5rem); margin-bottom: 12px; }
     .cta .g { background: var(--gradient-main); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -270,15 +258,6 @@ function landingHtml(landing) {
       <span class="section-tag">가격 가이드</span>
       <h2 class="section-title">${escapeHtml(landing.keyword)} 견적 안내</h2>
       <p class="pricing-desc">${escapeHtml(pricingSnippet)} 정확한 견적은 요구사항을 알려주시면 상담 후 안내드립니다.</p>
-    </div>
-  </section>
-  ` : ''}
-  ${reviews.length ? `
-  <section class="reviews">
-    <div class="section-inner">
-      <span class="section-tag">후기</span>
-      <h2 class="section-title">고객 후기</h2>
-      ${reviews.map((r) => `<div class="review"><p>${escapeHtml(r.text)}</p><span class="author">${escapeHtml(r.author)}</span></div>`).join('')}
     </div>
   </section>
   ` : ''}

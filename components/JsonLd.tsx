@@ -2,6 +2,34 @@ import type { PageSeo } from '@/lib/seo';
 import type { BlogPost } from '@/lib/blog-posts';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
+/** VAT 포함 정액 패키지 — 화면 표기와 1:1 일치 (price rich result 대응) */
+const PACKAGE_OFFERS = [
+  {
+    '@type': 'Offer',
+    name: 'STANDARD — 웹 MVP 패키지',
+    price: '1490000',
+    priceCurrency: 'KRW',
+    description: '반응형 웹 MVP · 약 14일 · 소스코드 전체 이관 · VAT 포함 정액',
+    itemOffered: { '@type': 'Service', name: '웹 MVP 개발', serviceType: '웹사이트·랜딩페이지 제작' },
+  },
+  {
+    '@type': 'Offer',
+    name: 'DELUXE — 앱 MVP 패키지',
+    price: '4990000',
+    priceCurrency: 'KRW',
+    description: 'Flutter iOS·Android 앱 MVP · 약 21일 · 소스코드 전체 이관 · VAT 포함 정액',
+    itemOffered: { '@type': 'Service', name: '앱 MVP 개발', serviceType: 'Flutter 앱개발' },
+  },
+  {
+    '@type': 'Offer',
+    name: 'PREMIUM — AI·고도화 패키지',
+    price: '7990000',
+    priceCurrency: 'KRW',
+    description: 'AI 기능 개발·자동화·고도화 · 약 30일 · 소스코드 전체 이관 + 직접 운영 교육 · VAT 포함 정액',
+    itemOffered: { '@type': 'Service', name: 'AI 외주개발·고도화', serviceType: 'AI 기능 개발' },
+  },
+];
+
 export function OrganizationJsonLd() {
   const home = PAGE_SEO_MAP[''];
   const data = {
@@ -11,6 +39,7 @@ export function OrganizationJsonLd() {
     alternateName: SITE.nameEn,
     url: SITE.domain + '/',
     logo: SITE.defaultOgImage,
+    founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: SITE.phone,
@@ -27,7 +56,7 @@ export function OrganizationJsonLd() {
       addressCountry: 'KR',
     },
     description: home.description,
-    sameAs: ['https://naver.me/FORRCoFc'],
+    sameAs: SITE.sameAs,
   };
 
   return (
@@ -77,8 +106,9 @@ export function ReumHomeGraphJsonLd() {
       alternateName: SITE.nameEn,
       url: SITE.domain + '/',
       logo: SITE.defaultOgImage,
+      founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
       description: home.description,
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
     },
     {
       '@type': 'LocalBusiness',
@@ -96,9 +126,10 @@ export function ReumHomeGraphJsonLd() {
       },
       url: SITE.domain + '/',
       priceRange: '₩₩',
+      makesOffer: PACKAGE_OFFERS,
       openingHours: ['Mo-Fr 10:00-18:00'],
       areaServed: ['KR', '서울', '경기', '수원', '화성', '용인', '동탄'],
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
       identifier: {
         '@type': 'PropertyValue',
         name: '사업자등록번호',
@@ -295,7 +326,7 @@ export function RegionServiceJsonLd({
         addressCountry: 'KR',
       },
       areaServed: { '@type': 'Place', name: regionName },
-      sameAs: ['https://naver.me/FORRCoFc'],
+      sameAs: SITE.sameAs,
       identifier: {
         '@type': 'PropertyValue',
         name: '사업자등록번호',

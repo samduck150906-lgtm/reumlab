@@ -73,6 +73,10 @@ export default function Nav({ site }) {
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
+        <Link href="/mvp/" onClick={closeMobile} data-analytics="nav_m_mvp">앱 MVP 개발</Link>
+        <Link href="/flutter/" onClick={closeMobile} data-analytics="nav_m_flutter">Flutter 앱개발</Link>
+        <Link href="/ai-development/" onClick={closeMobile} data-analytics="nav_m_ai">AI 외주개발</Link>
+        <Link href="/source-handover/" onClick={closeMobile} data-analytics="nav_m_handover">소스코드 이관</Link>
         <a href="tel:01081119370" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_call">
           📞 전화 상담
         </a>
