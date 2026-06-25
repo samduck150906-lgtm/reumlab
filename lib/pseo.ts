@@ -56,7 +56,7 @@ export const SERVICES: ServiceDef[] = [
     slug: 'app-development',
     ko: '앱개발 외주',
     short: '앱개발',
-    priceLine: 'Flutter 앱 MVP · VAT 포함 499만 원부터 · 약 21일',
+    priceLine: 'Flutter 앱 MVP · VAT 포함 290만 원부터 · 약 14~21일',
     intro:
       '름랩은 Flutter 하나로 iOS·Android 앱을 동시에 만듭니다. 기획서가 없어도 아이디어와 꼭 필요한 기능 한두 가지만 있으면 화면 흐름부터 함께 정리해 드립니다. 완성 후에는 소스코드·GitHub 저장소·배포 권한을 통째로 넘기고, 대표님이 간단한 수정은 직접 하실 수 있도록 1:1 운영 교육까지 제공합니다.',
     deliverables: [
@@ -76,7 +76,7 @@ export const SERVICES: ServiceDef[] = [
     slug: 'web-development',
     ko: '웹사이트 제작',
     short: '웹사이트',
-    priceLine: '반응형 웹 MVP · VAT 포함 149만 원부터 · 약 14일',
+    priceLine: '반응형 웹 · VAT 포함 49만 원부터 · 약 5~14일',
     intro:
       '랜딩페이지·회사소개·예약/문의 CTA를 갖춘 반응형 웹사이트를 정액으로 제작합니다. 검색엔진이 바로 읽도록 메타·구조화 데이터·사이트맵이 기본 포함되고, 월 관리비 없이 소스코드를 통째로 넘겨 드립니다. AI 도구로 문구·이미지를 직접 바꾸는 교육도 함께 진행합니다.',
     deliverables: [
@@ -96,7 +96,7 @@ export const SERVICES: ServiceDef[] = [
     slug: 'mvp',
     ko: 'MVP 개발',
     short: 'MVP',
-    priceLine: 'Lean MVP · VAT 포함 499만 원부터 · 약 14~30일',
+    priceLine: 'Lean MVP · VAT 포함 290만 원부터 · 약 14~30일',
     intro:
       'MVP 개발은 아이디어를 시장에서 빠르게 검증하기 위해 핵심 기능부터 먼저 만드는 방식입니다. 투자·영업·사용자 테스트에 필요한 최소 기능을 예산 안에서 정하고, 화면 흐름 설계 → 중간 확인 → 소스코드 이관 순서로 진행합니다. 검증 후 확장은 같은 코드 위에서 단계적으로 이어 갑니다.',
     deliverables: [
@@ -116,7 +116,7 @@ export const SERVICES: ServiceDef[] = [
     slug: 'flutter',
     ko: 'Flutter 앱개발',
     short: 'Flutter 앱',
-    priceLine: 'Flutter 크로스플랫폼 · VAT 포함 499만 원부터',
+    priceLine: 'Flutter 크로스플랫폼 · VAT 포함 290만 원부터',
     intro:
       'Flutter는 하나의 코드로 iOS·Android 앱을 동시에 만드는 크로스플랫폼 프레임워크입니다. 네이티브를 두 벌 만드는 것보다 개발 비용을 50~70% 줄이고, 유지보수도 구조적으로 절반입니다. 름랩은 Flutter 전문 스튜디오로서 MVP 단계에 가장 적합한 구성으로 빠르게 출시합니다.',
     deliverables: [

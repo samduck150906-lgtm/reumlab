@@ -427,6 +427,15 @@ br.br-pc { display: inline; }
 .price-incl li svg { width: 19px; height: 19px; flex: none; color: var(--accent); margin-top: 2px; }
 .price-card.featured .price-incl li svg { color: var(--lime); }
 .price-card .btn { margin-top: 26px; }
+
+/* 가격 라인(웹/앱) 2그룹 + 4열 그리드 */
+.price-line + .price-line { margin-top: 42px; }
+.price-line__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-bottom: 18px; }
+.price-line__head h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.01em; color: var(--ink); }
+.price-line__head span { font-size: 14px; color: var(--ink-3); }
+.price-grid--4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; align-items: stretch; }
+@media (max-width: 920px) { .price-grid--4 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 720px) { .price-grid--4 { grid-template-columns: 1fr; } }
 .price-foot {
   margin-top: 30px; text-align: center; font-size: 15.5px; color: var(--ink-2);
   background: var(--accent-soft); border: 1px solid #d3e0ff; border-radius: 14px; padding: 20px 24px; line-height: 1.65;

@@ -241,7 +241,7 @@ export default function HomePage({ site }) {
               </div>
               <div className="price-card rv rv-d1">
                 <div className="price-tier">Standard</div>
-                <div className="price-amount">499만원~</div>
+                <div className="price-amount">490만원~</div>
                 <div className="price-period">3~5주</div>
                 <ul className="price-features">
                   <li>풀 기능 + 맞춤 UI/UX</li><li>소셜 로그인 + 결제</li><li>관리자 대시보드</li><li>유지보수 1개월</li>
