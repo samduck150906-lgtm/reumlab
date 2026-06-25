@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { SITE } from '@/lib/seo';
+import { PORTFOLIO, hasPortfolio, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 
 type Site = {
   email?: string;
@@ -403,6 +404,51 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
           </div>
         </div>
       </section>
+
+      {/* Portfolio / 진행 사례 */}
+      {hasPortfolio ? (
+        <section id="work" className="scroll-mt-24 border-t border-slate-100 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+            <SectionHeading
+              eyebrow="진행 사례"
+              title="말보다, 만든 것으로 보여드립니다"
+              description="실제로 만든 앱·웹·AI 사례입니다. 문제 → 해결 → 결과 → 산출물(소스코드·권한 이관)까지 사례 페이지에 그대로 정리했습니다."
+            />
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              {PORTFOLIO.map((p) => (
+                <Link
+                  key={p.slug}
+                  href={portfolioCanonical(p.slug).replace(SITE.domain, '')}
+                  className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition hover:border-slate-300 hover:shadow-card-hover"
+                  data-analytics="cta_home_portfolio_item"
+                >
+                  <span className="font-display text-xs font-semibold uppercase tracking-wider text-accent-deep">
+                    {portfolioCategoryLabel(p.category)} 개발 사례
+                  </span>
+                  <h3 className="mt-2 font-display text-lg font-bold text-navy-900 group-hover:text-accent-deep">
+                    {p.title}
+                  </h3>
+                  <p className="reum-card-body mt-3 flex-1 text-sm leading-relaxed text-slate-700">{p.summary}</p>
+                  <span className="mt-4 font-mono text-[11px] text-slate-400">{p.stack.join(' · ')}</span>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent-deep">
+                    사례 자세히 보기
+                    <span aria-hidden className="transition group-hover:translate-x-0.5">→</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-10 text-center">
+              <Link
+                href="/portfolio/"
+                className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-7 py-3.5 font-display text-sm font-semibold text-navy-900 transition hover:border-slate-400"
+                data-analytics="cta_home_portfolio_all"
+              >
+                전체 포트폴리오 보기 →
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* Audience */}
       <section id="audience" className="scroll-mt-24 border-y border-slate-100 bg-slate-50 py-20 sm:py-24">

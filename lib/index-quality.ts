@@ -62,8 +62,8 @@ const STOPWORDS = new Set([
 
 /** 한글/영문/숫자 토큰화 → 2자 이상, 불용어 제외 */
 export function tokenize(text: string): string[] {
-  return (text.toLowerCase().match(/[a-z0-9]+|[가-힣]+/g) || [])
-    .filter((t) => t.length >= 2 && !STOPWORDS.has(t));
+  const matched: string[] = text.toLowerCase().match(/[a-z0-9]+|[가-힣]+/g) ?? [];
+  return matched.filter((t) => t.length >= 2 && !STOPWORDS.has(t));
 }
 
 /** 본문 토큰 집합 = 중복 검사용 지문 */

@@ -2,16 +2,27 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
 import { SITE } from '@/lib/seo';
-import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';
+import { BreadcrumbJsonLdTrail, PortfolioCollectionJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
 const canonical = `${SITE.domain}/portfolio/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '포트폴리오 · 진행 사례 | 앱·웹 MVP 개발 — 름랩 REUMLAB',
+  // 브랜드명이 이미 title 에 포함됨 → 레이아웃 템플릿의 "| 름랩" 중복 방지
+  title: { absolute: '포트폴리오 · 진행 사례 | 앱·웹·AI 개발 — 름랩 REUMLAB' },
   description:
-    '름랩이 실제로 진행한 앱·웹·AI 개발 사례. 문제 → 해결 → 결과 → 산출물(소스코드·저장소·권한 이관)까지 투명하게 정리합니다.',
+    '름랩이 실제로 진행한 앱·웹·AI 개발 사례. 학원 검색·결제 앱, 무인 렌탈스튜디오 랜딩, AI 프롬프트 엔진 앱, 마케터 매칭 플랫폼까지 — 문제 → 해결 → 결과 → 산출물(소스코드·저장소·권한 이관)을 투명하게 정리합니다.',
+  keywords: [
+    '앱 개발 사례',
+    '웹 개발 포트폴리오',
+    'MVP 개발 사례',
+    'Flutter 앱개발 사례',
+    'AI 앱 개발 사례',
+    '매칭 플랫폼 개발',
+    '학원 앱 개발',
+    '소스코드 이관',
+  ],
   alternates: { canonical },
   openGraph: {
     type: 'website',
@@ -39,6 +50,16 @@ export default function PortfolioIndexPage() {
           { name: '포트폴리오', url: canonical },
         ]}
       />
+      {hasPortfolio ? (
+        <PortfolioCollectionJsonLd
+          url={canonical}
+          items={PORTFOLIO.map((p) => ({
+            name: p.title,
+            url: portfolioCanonical(p.slug),
+            description: p.summary,
+          }))}
+        />
+      ) : null}
       <main>
         <section className="hero" style={{ minHeight: 'auto', padding: '120px 0 40px' }}>
           <div className="container">
@@ -83,6 +104,22 @@ export default function PortfolioIndexPage() {
                 </p>
               </div>
             )}
+
+            {hasPortfolio ? (
+              <div style={{ marginTop: 40 }}>
+                <h2 className="section-title" style={{ fontSize: '1.15rem', textAlign: 'center' }}>
+                  서비스별로 더 보기
+                </h2>
+                <div className="link-grid" style={{ marginTop: 12 }}>
+                  <Link href="/mvp/">앱 MVP 개발</Link>
+                  <Link href="/flutter/">Flutter 앱개발</Link>
+                  <Link href="/web-development/">웹사이트·랜딩 제작</Link>
+                  <Link href="/ai-development/">AI 외주개발</Link>
+                  <Link href="/soho/">소상공인 홈페이지 49만원</Link>
+                  <Link href="/source-handover/">소스코드 이관</Link>
+                </div>
+              </div>
+            ) : null}
 
             <p style={{ marginTop: 32, textAlign: 'center' }}>
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_portfolio_call">

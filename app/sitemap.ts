@@ -6,6 +6,7 @@ import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision }
 import { INDUSTRIES, industryCanonical } from '@/lib/industries';
 import { GUIDES, guideCanonical } from '@/lib/guides';
 import { COMPARES, compareCanonical } from '@/lib/compare';
+import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -42,6 +43,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.85,
   });
+
+  // 포트폴리오 — 실제 진행 사례가 있을 때만 색인 (빈 목록은 noindex)
+  if (hasPortfolio) {
+    out.push({
+      url: `${SITE.domain}/portfolio/`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    });
+    for (const p of PORTFOLIO) {
+      out.push({
+        url: portfolioCanonical(p.slug),
+        lastModified: new Date(p.publishedAt),
+        changeFrequency: 'monthly',
+        priority: 0.72,
+      });
+    }
+  }
 
   // 프로그래매틱 1축 — 지역×서비스 (색인 게이트 통과분만 포함)
   for (const { slug, region } of allRegionServiceParams()) {

@@ -293,7 +293,12 @@ export default function SohoPage() {
                     loading="lazy"
                   />
                 </div>
-                <p className="np-cap">↑ 제가 직접 운영하는 ‘우트스튜디오’ — 검색 노출을 직접 만들어 본 매장입니다</p>
+                <p className="np-cap">
+                  ↑ 제가 직접 운영하는 ‘우트스튜디오’ — 검색 노출을 직접 만들어 본 매장입니다.{' '}
+                  <Link href="/portfolio/ute-studio-rental/" style={{ textDecoration: 'underline' }}>
+                    우트스튜디오 제작 사례 보기 →
+                  </Link>
+                </p>
               </div>
 
               {/* 맞춤 체크리스트 */}
@@ -455,6 +460,8 @@ export default function SohoPage() {
             <p className="s-final-foot">
               REUMLAB — 내 업장 홈페이지 제작은 름랩
               <br />
+              <Link href="/portfolio/">진행 사례(포트폴리오) 보기</Link>
+              {' · '}
               <Link href="/">← 름랩 메인으로</Link>
             </p>
           </div>
