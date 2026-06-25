@@ -5,8 +5,17 @@ import { SITE } from '@/lib/seo';
 import { INDUSTRIES, getIndustry, industryCanonical } from '@/lib/industries';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 
 type Props = { params: { industry: string } };
+
+/** 업종 → 관련 포트폴리오 사례 (업종 페이지 → 사례 내부링크) */
+const INDUSTRY_CASES: Record<string, string[]> = {
+  academy: ['academy-matching-app'],
+  marketplace: ['marbee-marketer-matching', 'academy-matching-app'],
+  booking: ['ute-studio-rental', 'academy-matching-app'],
+  community: ['marbee-marketer-matching'],
+};
 
 export function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ industry: i.slug }));
@@ -53,6 +62,9 @@ export default function IndustryPage({ params }: Props) {
     { name: ind.keyword, url: canonical },
   ];
   const others = INDUSTRIES.filter((i) => i.slug !== ind.slug).slice(0, 8);
+  const relatedCases = (INDUSTRY_CASES[ind.slug] ?? [])
+    .map((s) => getPortfolioBySlug(s))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -119,6 +131,20 @@ export default function IndustryPage({ params }: Props) {
               ))}
             </div>
           </div>
+
+          {relatedCases.length > 0 && (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 진행 사례</h2>
+              <div className="link-grid">
+                {relatedCases.map((p) => (
+                  <Link key={p.slug} href={portfolioCanonical(p.slug).replace(SITE.domain, '')}>
+                    [{portfolioCategoryLabel(p.category)}] {p.title}
+                  </Link>
+                ))}
+                <Link href="/portfolio/">전체 포트폴리오 보기</Link>
+              </div>
+            </div>
+          )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 업종 앱개발</h2>

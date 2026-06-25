@@ -3,6 +3,7 @@ import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
 import { getService, REGIONS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
+import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
   { match: /source-handover|소스코드|이관/, slug: 'oeju-gaebal-silphae-an-haneun-bab', title: '외주 개발 실패 안 하는 법: 명세·일정·소유권 3종 세트' },
@@ -13,6 +14,24 @@ const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
   { match: /landing|homepage|홈페이지|랜딩/, slug: 'homepage-jejak-biyong', title: '홈페이지 제작 비용 총정리 (2026)' },
 ];
 
+/** 서비스 슬러그 → 관련 포트폴리오 사례 (허브 → 사례 내부링크 / 토픽 클러스터) */
+const RELATED_CASES: { match: RegExp; slugs: string[] }[] = [
+  { match: /ai-development|솔루션SaaS|솔루션|saas/i, slugs: ['ai-handler', 'academy-matching-app'] },
+  { match: /플랫폼개발|platform|기업용ERP|erp/i, slugs: ['marbee-marketer-matching', 'academy-matching-app'] },
+  { match: /web-development|웹개발|homepage|홈페이지|landing|랜딩/i, slugs: ['ute-studio-rental', 'marbee-marketer-matching'] },
+  { match: /flutter/i, slugs: ['academy-matching-app', 'ai-handler'] },
+  { match: /mvp|스타트업/i, slugs: ['academy-matching-app', 'marbee-marketer-matching'] },
+  { match: /앱개발|app-development|app-dev/i, slugs: ['academy-matching-app', 'ai-handler'] },
+  { match: /source-handover|소스코드|이관/i, slugs: ['academy-matching-app', 'marbee-marketer-matching'] },
+];
+
+function relatedCasesFor(pageSlug?: string) {
+  if (!pageSlug) return [];
+  const hit = RELATED_CASES.find((r) => r.match.test(pageSlug));
+  if (!hit) return [];
+  return hit.slugs.map((s) => getPortfolioBySlug(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
+}
+
 export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSlug?: string }) {
   const related = pageSlug
     ? RELATED_BLOG.find((r) => r.match.test(pageSlug))
@@ -20,6 +39,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
   // 지역×서비스 허브(app-development, web-development, mvp, flutter, ai-development)면
   // 지역 스포크 페이지로 내부링크를 노출 (허브-스포크 클러스터링)
   const regionService = pageSlug ? getService(pageSlug) : undefined;
+  const relatedCases = relatedCasesFor(pageSlug);
   return (
     <>
       {seo.faqs && seo.faqs.length > 0 ? <FAQPageJsonLd items={seo.faqs} /> : null}
@@ -125,6 +145,22 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                     <p className="faq-a">{f.a}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          )}
+
+          {relatedCases.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
+                관련 진행 사례
+              </h2>
+              <div className="link-grid">
+                {relatedCases.map((p) => (
+                  <Link key={p.slug} href={portfolioCanonical(p.slug).replace(SITE.domain, '')}>
+                    [{portfolioCategoryLabel(p.category)}] {p.title}
+                  </Link>
+                ))}
+                <Link href="/portfolio/">전체 포트폴리오 보기</Link>
               </div>
             </div>
           )}
