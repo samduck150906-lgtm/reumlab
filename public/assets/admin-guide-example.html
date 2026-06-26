@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>관리자 운영 가이드</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; background: #f4f4f0; color: #1a1a1a; }
+
+  .top-bar { background: #16181D; color: #fff; padding: 18px 24px; display: flex; align-items: center; gap: 12px; position: sticky; top: 0; z-index: 100; }
+  .top-bar h1 { font-size: 16px; font-weight: 800; letter-spacing: -0.3px; }
+  .top-bar .badge { background: #9A8A2E; color: #fff; font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 20px; }
+
+  .nav-tabs { display: flex; gap: 0; background: #fff; border-bottom: 2px solid #e8e8e8; overflow-x: auto; padding: 0 24px; position: sticky; top: 57px; z-index: 90; }
+  .nav-tab { padding: 14px 20px; font-size: 13px; font-weight: 600; color: #888; cursor: pointer; white-space: nowrap; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .nav-tab.active { color: #16181D; border-bottom-color: #9A8A2E; }
+  .nav-tab:hover:not(.active) { color: #444; }
+
+  .section { display: none; padding: 28px 24px; max-width: 820px; margin: 0 auto; }
+  .section.active { display: block; }
+
+  .card { background: #fff; border-radius: 10px; padding: 22px 24px; margin-bottom: 16px; border: 1px solid #e8e8e8; }
+  .card-title { font-size: 14px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap-8px; }
+  .card-title .num { background: #16181D; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; margin-right: 8px; flex-shrink: 0; }
+  .card-title .num.gold { background: #9A8A2E; }
+  .card-title .num.red { background: #e53e3e; }
+
+  .star-card { border: 2px solid #9A8A2E; background: #fefdf5; }
+  .star-badge { background: #9A8A2E; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+
+  .flow { display: flex; gap: 0; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+  .flow-step { background: #f0f0ec; border-radius: 6px; padding: 8px 14px; font-size: 12px; font-weight: 600; position: relative; }
+  .flow-arrow { color: #9A8A2E; font-size: 16px; font-weight: 700; margin: 0 6px; }
+  .flow-step.result { background: #9A8A2E; color: #fff; }
+
+  .collection-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .collection-table th { background: #16181D; color: #fff; padding: 10px 14px; text-align: left; font-size: 12px; }
+  .collection-table td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; vertical-align: top; line-height: 1.5; }
+  .collection-table tr:hover td { background: #fafaf8; }
+  .collection-table tr.important td { background: #fefdf5; }
+  .collection-table .num-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #16181D; color: #fff; font-size: 10px; font-weight: 700; }
+
+  .step-list { counter-reset: step; list-style: none; }
+  .step-list li { counter-increment: step; display: flex; gap: 14px; margin-bottom: 14px; align-items: flex-start; }
+  .step-list li::before { content: counter(step); background: #9A8A2E; color: #fff; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .step-list li .step-body { font-size: 13px; line-height: 1.7; }
+  .step-list li .step-body strong { font-weight: 700; }
+  .step-list li .step-body .url { font-size: 11px; color: #9A8A2E; font-family: monospace; background: #f7f7f4; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 4px; word-break: break-all; }
+
+  .url-btn { display: inline-flex; align-items: center; gap: 6px; background: #16181D; color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; text-decoration: none; margin: 4px 4px 4px 0; cursor: pointer; border: none; transition: background 0.2s; }
+  .url-btn:hover { background: #9A8A2E; }
+  .url-btn.outline { background: transparent; border: 1.5px solid #16181D; color: #16181D; }
+  .url-btn.outline:hover { background: #16181D; color: #fff; }
+
+  .tip { background: #f0f7ff; border-left: 3px solid #3b82f6; padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 12px; line-height: 1.7; margin: 10px 0; color: #1e40af; }
+  .warn { background: #fff7ed; border-left: 3px solid #f97316; padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 12px; line-height: 1.7; margin: 10px 0; color: #9a3412; }
+
+  .checklist { list-style: none; margin: 10px 0; }
+  .checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; line-height: 1.6; }
+  .checklist li:last-child { border-bottom: none; }
+  .check-icon { width: 20px; height: 20px; border-radius: 4px; background: #f0f0ec; border: 1.5px solid #ddd; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer; margin-top: 2px; font-size: 12px; transition: all 0.2s; }
+  .check-icon.done { background: #9A8A2E; border-color: #9A8A2E; color: #fff; }
+
+  .platform-card { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0; }
+  .p-card { flex: 1; min-width: 200px; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px; }
+  .p-card h4 { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+  .p-card .p-logo { font-size: 20px; margin-bottom: 8px; }
+  .p-card ul { font-size: 12px; line-height: 1.8; color: #555; padding-left: 16px; }
+  .p-card.google { border-top: 3px solid #4285f4; }
+  .p-card.naver { border-top: 3px solid #03c75a; }
+
+  .section-label { font-size: 11px; font-weight: 700; color: #9A8A2E; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 14px; }
+
+  .quick-action { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; margin: 14px 0; }
+  .qa-btn { background: #f7f7f4; border: 1.5px solid #e8e8e8; border-radius: 8px; padding: 14px; cursor: pointer; transition: all 0.2s; text-align: left; }
+  .qa-btn:hover { border-color: #9A8A2E; background: #fefdf5; }
+  .qa-btn .qa-icon { font-size: 20px; margin-bottom: 6px; }
+  .qa-btn .qa-title { font-size: 12px; font-weight: 700; }
+  .qa-btn .qa-sub { font-size: 11px; color: #888; margin-top: 2px; }
+
+  .deploy-notice { background: #16181D; color: #fff; border-radius: 8px; padding: 16px 20px; display: flex; align-items: center; gap: 14px; margin: 14px 0; }
+  .deploy-notice .icon { font-size: 28px; }
+  .deploy-notice .text h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .deploy-notice .text p { font-size: 12px; color: #aaa; line-height: 1.6; }
+
+  code { background: #f0f0ec; padding: 1px 6px; border-radius: 4px; font-size: 12px; font-family: monospace; }
+
+  @media (max-width: 600px) {
+    .nav-tab { padding: 12px 14px; font-size: 12px; }
+    .section { padding: 20px 16px; }
+    .collection-table { font-size: 12px; }
+    .flow { gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div>
+    <div style="font-size:10px;color:#888;margin-bottom:2px">클라이언트</div>
+    <h1>관리자 운영 가이드</h1>
+  </div>
+  <div class="badge">v5 · CMS</div>
+</div>
+
+<div class="nav-tabs">
+  <div class="nav-tab active" onclick="showTab('home')">🏠 홈</div>
+  <div class="nav-tab" onclick="showTab('admin')">✏️ 내용 편집</div>
+  <div class="nav-tab" onclick="showTab('deploy')">🚀 배포</div>
+  <div class="nav-tab" onclick="showTab('index')">🔍 색인 제출</div>
+  <div class="nav-tab" onclick="showTab('analytics')">📊 현황 확인</div>
+</div>
+
+<!-- 홈 -->
+<div class="section active" id="tab-home">
+  <div class="section-label">빠른 시작</div>
+
+  <div class="card star-card">
+    <div class="card-title">
+      <span class="num gold">★</span>
+      작업 사례 사진 = 구글 노출 페이지 <span class="star-badge">가장 중요</span>
+    </div>
+    <div class="flow" style="margin-bottom:14px">
+      <div class="flow-step">사진 업로드</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><strong>지역</strong> + <strong>작업 종류</strong> 입력</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step result">해당 페이지 구글 색인 자동 승격</div>
+    </div>
+    <div class="tip">예시: 지역 = <strong>○○구</strong>, 작업 종류 = <strong>○○작업</strong><br>
+    → <code>your-domain.kr/○○구-○○작업</code> 페이지가 숨김에서 <strong>상위노출 대상</strong>으로 전환<br>
+    📌 <strong>사례 1건 = 진짜 페이지 1개.</strong> 사진 쌓을수록 색인 페이지가 늘어납니다.</div>
+  </div>
+
+  <div class="section-label" style="margin-top:24px">자주 하는 작업</div>
+  <div class="quick-action">
+    <div class="qa-btn" onclick="showTab('admin')">
+      <div class="qa-icon">📝</div>
+      <div class="qa-title">내용 수정</div>
+      <div class="qa-sub">전화번호·문구 변경</div>
+    </div>
+    <div class="qa-btn" onclick="showTab('admin');setTimeout(()=>scrollToId('gallery-section'),100)">
+      <div class="qa-icon">📸</div>
+      <div class="qa-title">작업 사례 등록</div>
+      <div class="qa-sub">사진 업로드</div>
+    </div>
+    <div class="qa-btn" onclick="showTab('deploy')">
+      <div class="qa-icon">🔄</div>
+      <div class="qa-title">사이트 재빌드</div>
+      <div class="qa-sub">수정 후 반드시</div>
+    </div>
+    <div class="qa-btn" onclick="showTab('index')">
+      <div class="qa-icon">🗺️</div>
+      <div class="qa-title">사이트맵 제출</div>
+      <div class="qa-sub">색인 추가 시</div>
+    </div>
+  </div>
+
+  <div class="deploy-notice">
+    <div class="icon">⏱</div>
+    <div class="text">
+      <h4>저장 후 약 2~3분 소요</h4>
+      <p>어드민에서 저장하면 Netlify 자동 빌드가 시작됩니다.<br>빌드가 완료되어야 사이트에 반영됩니다.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-title"><span class="num">👤</span> 관리자 계정 추가·삭제</div>
+    <p style="font-size:13px;margin-bottom:12px">직원 계정 추가 또는 삭제는 아래 Netlify Identity 페이지에서 합니다.</p>
+    <a class="url-btn" href="https://app.netlify.com/projects/○○○○○○-○○○○-○○○○○○/configuration/identity#emails" target="_blank">
+      Netlify Identity 열기 →
+    </a>
+    <div class="warn" style="margin-top:10px">현재 제 이메일이 임시 등록되어 있습니다. 확인 후 삭제하셔도 됩니다.</div>
+  </div>
+</div>
+
+<!-- 내용 편집 -->
+<div class="section" id="tab-admin">
+  <div class="section-label">어드민 접속</div>
+  <div class="card">
+    <a class="url-btn" href="https://your-domain.kr/admin/" target="_blank">your-domain.kr/admin/ 열기 →</a>
+    <p style="font-size:12px;color:#888;margin-top:8px">이메일 + 비밀번호로 로그인</p>
+  </div>
+
+  <div class="section-label" style="margin-top:24px">컬렉션 목록</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="collection-table">
+      <thead>
+        <tr>
+          <th style="width:44px">번호</th>
+          <th>메뉴</th>
+          <th>수정할 수 있는 것</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="important">
+          <td><span class="num-badge" style="background:#9A8A2E">⑩</span></td>
+          <td><strong>작업 사례(사진)</strong> ★</td>
+          <td>갤러리 사진 업로드 → <strong>지역·작업 종류 정확히</strong> 입력 필수</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">①</span></td>
+          <td>사이트 설정 (연락처·SEO)</td>
+          <td>전화번호, 카카오 링크, 업체명, 경력 연수</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">②</span></td>
+          <td>업체 정보 (서비스·강점·과정)</td>
+          <td>강점 6개, 서비스 항목, 작업 과정, 차별화 문구</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">③</span></td>
+          <td>메인 페이지 (홈 문구)</td>
+          <td>히어로 제목, 통계 숫자, 섹션별 소제목</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">④</span></td>
+          <td>공통 UI (헤더·푸터·페이지)</td>
+          <td>상단 메뉴, 하단 푸터, 각 페이지 제목 문구</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">⑤</span></td>
+          <td>견적·CTA 문구</td>
+          <td>견적 안내 문구, 버튼 텍스트, 신뢰 문구</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">⑥</span></td>
+          <td>비용 참고표</td>
+          <td>품목별 평당 단가 범위</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">⑦</span></td>
+          <td>자주 묻는 질문 (FAQ)</td>
+          <td>Q&amp;A 추가·수정·삭제</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">⑧</span></td>
+          <td>블로그 글</td>
+          <td>글 작성·수정·삭제</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge">⑨</span></td>
+          <td>고객 후기</td>
+          <td>후기 추가·수정·삭제</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge" style="background:#9A8A2E">⑪</span></td>
+          <td>색인·SEO 설정</td>
+          <td>생성 페이지 수(<code>generateCount</code>), AI 크롤러 허용 여부</td>
+        </tr>
+        <tr>
+          <td><span class="num-badge" style="background:#9A8A2E">⑫</span></td>
+          <td>전역 문구 치환·삭제</td>
+          <td>특정 단어 전체 교체 또는 삭제 (전 페이지 일괄 적용)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-label" style="margin-top:24px">자주 쓰는 작업</div>
+
+  <div class="card">
+    <div class="card-title"><span class="num">📞</span> 전화번호 바꾸기</div>
+    <div class="flow">
+      <div class="flow-step">① 사이트 설정</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">연락처·기본 정보·문구</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">전화번호 수정</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step result">저장</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num">🔄</span> 특정 단어 전체 교체·삭제</div>
+    <div class="flow">
+      <div class="flow-step">⑫ 전역 문구 치환·삭제</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">규칙 추가</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">from / to 입력</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step result">저장</div>
+    </div>
+    <div class="tip">to를 <strong>비워두면 삭제</strong>됩니다. 자동 생성된 1,500개+ 페이지 전체에 즉시 적용됩니다.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num">📊</span> 색인 페이지 수 조절</div>
+    <div class="flow">
+      <div class="flow-step">⑪ 색인·SEO 설정</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">generateCount 숫자 변경</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step result">저장</div>
+    </div>
+    <div class="tip">숫자 높일수록 구글 색인 페이지 증가 (빌드 시간도 증가)<br>권장 범위: <strong>500 ~ 1546</strong></div>
+  </div>
+
+  <div id="gallery-section" class="card star-card">
+    <div class="card-title"><span class="num gold">📸</span> 작업 사례 등록하기</div>
+    <ul class="step-list">
+      <li><div class="step-body">어드민 접속 → <strong>⑩ 작업 사례(사진)</strong> 클릭</div></li>
+      <li><div class="step-body">우측 상단 <strong>새 항목</strong> 클릭</div></li>
+      <li><div class="step-body"><strong>지역</strong>과 <strong>작업 종류</strong> 정확히 입력<br><span style="color:#9A8A2E">예) 지역: ○○구 / 작업 종류: ○○작업</span></div></li>
+      <li><div class="step-body">사진 업로드 (미디어 탭 또는 직접 업로드)</div></li>
+      <li><div class="step-body"><strong>저장</strong> → Netlify 자동 빌드 → 2~3분 후 반영</div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 배포 -->
+<div class="section" id="tab-deploy">
+  <div class="section-label">무언가를 바꾼 후 반드시 해야 할 일</div>
+
+  <div class="deploy-notice">
+    <div class="icon">⚡</div>
+    <div class="text">
+      <h4>어드민에서 저장하면 자동으로 빌드됩니다</h4>
+      <p>보통은 저장만 해도 자동 배포됩니다.<br>빌드가 안 됐거나 수동으로 재빌드하고 싶을 때만 아래를 사용하세요.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num">🔄</span> 수동 재빌드 방법</div>
+    <ul class="step-list">
+      <li><div class="step-body">
+        아래 버튼을 눌러 Netlify 배포 페이지로 이동
+        <br><a class="url-btn" style="margin-top:8px" href="https://app.netlify.com/projects/○○○○○○-○○○○-○○○○○○/deploys" target="_blank">Netlify 배포 페이지 열기 →</a>
+      </div></li>
+      <li><div class="step-body"><strong>Trigger deploy</strong> 버튼(또는 드롭다운) 클릭<br><span style="font-size:12px;color:#888">→ "Deploy site" 선택</span></div></li>
+      <li><div class="step-body">빌드 상태가 <span style="background:#f0fff4;color:#276749;padding:1px 6px;border-radius:4px;font-size:12px;font-weight:700">Published</span> 로 바뀌면 완료 (약 2~3분)</div></li>
+    </ul>
+    <div class="warn">빌드 중에는 <span style="background:#fffbeb;color:#92400e;padding:1px 6px;border-radius:4px;font-size:12px;font-weight:700">Building</span> 상태. 완료 전에는 사이트에 반영 안 됨.</div>
+  </div>
+</div>
+
+<!-- 색인 제출 -->
+<div class="section" id="tab-index">
+  <div class="section-label">색인이 변경되었을 때 해야 할 일</div>
+  <div class="tip" style="margin-bottom:20px">작업 사례 추가, generateCount 변경, 새 페이지 생성 후에는 검색엔진에 사이트맵을 다시 알려줘야 빠르게 반영됩니다.</div>
+
+  <div class="card">
+    <div class="card-title"><span class="num" style="background:#4285f4">G</span> 구글 서치콘솔 — 사이트맵 재제출</div>
+    <ul class="step-list">
+      <li><div class="step-body">
+        아래 버튼 클릭 (구글 계정 로그인 필요)
+        <br><a class="url-btn" style="margin-top:8px;background:#4285f4" href="https://search.google.com/search-console/sitemaps?resource_id=sc-domain%3Ayour-domain.kr&hl=ko" target="_blank">구글 서치콘솔 사이트맵 열기 →</a>
+      </div></li>
+      <li><div class="step-body">사이트맵 URL 입력창에 입력 후 제출<br><code>https://your-domain.kr/sitemap.xml</code></div></li>
+      <li><div class="step-body">상태가 <strong>성공</strong>으로 바뀌면 완료</div></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num" style="background:#03c75a">N</span> 네이버 서치어드바이저 — 3단계 작업</div>
+    <ul class="step-list">
+      <li><div class="step-body">
+        아래 버튼 클릭 (네이버 계정 로그인 필요)
+        <br><a class="url-btn" style="margin-top:8px;background:#03c75a" href="https://searchadvisor.naver.com/console/site/request/sitemap?site=https%3A%2F%2Fyour-domain.kr" target="_blank">네이버 사이트맵 제출 열기 →</a>
+      </div></li>
+      <li><div class="step-body">사이트맵 입력창에 입력 후 제출<br><code>https://your-domain.kr/sitemap.xml</code></div></li>
+      <li><div class="step-body">
+        <strong>웹페이지 수집 요청</strong>: 핵심 URL 개별 추가 수집 요청<br>
+        <span style="font-size:12px;color:#888">요청 → 웹페이지 수집 → URL 입력 → 확인<br>※ 하루 할당량이 있으니 중요한 URL 위주로</span>
+        <br><a class="url-btn outline" style="margin-top:8px" href="https://searchadvisor.naver.com/console/site" target="_blank">네이버 서치어드바이저 →</a>
+      </div></li>
+    </ul>
+    <div class="tip">네이버는 자동 재크롤이 느립니다. 키워드나 사례를 추가한 날 직접 제출해두는 게 좋습니다.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num">📋</span> 색인 작업 체크리스트</div>
+    <ul class="checklist" id="index-checklist">
+      <li><div class="check-icon" onclick="toggleCheck(this)"></div><span>Netlify 빌드 완료 확인 (Published 상태)</span></li>
+      <li><div class="check-icon" onclick="toggleCheck(this)"></div><span>구글 서치콘솔 sitemap.xml 재제출</span></li>
+      <li><div class="check-icon" onclick="toggleCheck(this)"></div><span>네이버 서치어드바이저 사이트맵 재제출</span></li>
+      <li><div class="check-icon" onclick="toggleCheck(this)"></div><span>네이버 웹페이지 수집 요청 (핵심 URL)</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- 현황 확인 -->
+<div class="section" id="tab-analytics">
+  <div class="section-label">얼마나 홍보되고 있는지 확인하는 곳</div>
+
+  <div class="platform-card">
+    <div class="p-card google">
+      <div class="p-logo">📊</div>
+      <h4>구글 애널리틱스</h4>
+      <ul>
+        <li><strong>실시간</strong> — 지금 방문자 수</li>
+        <li><strong>획득</strong> — 유입 경로<br>(검색 / 직접 / SNS)</li>
+        <li><strong>참여도</strong> — 인기 페이지</li>
+      </ul>
+      <a class="url-btn" style="margin-top:12px;font-size:11px;background:#4285f4" href="https://analytics.google.com" target="_blank">Analytics 열기 →</a>
+    </div>
+    <div class="p-card naver">
+      <div class="p-logo">🔍</div>
+      <h4>네이버 서치어드바이저</h4>
+      <ul>
+        <li><strong>현황</strong> — 수집/색인 현황</li>
+        <li><strong>요청</strong> — 사이트맵·URL 수집</li>
+        <li><strong>통계</strong> — 유입 키워드 확인</li>
+      </ul>
+      <a class="url-btn" style="margin-top:12px;font-size:11px;background:#03c75a" href="https://searchadvisor.naver.com/console/site" target="_blank">서치어드바이저 →</a>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-title"><span class="num">📈</span> 구글 애널리틱스 보는 법</div>
+    <table style="width:100%;font-size:13px;border-collapse:collapse">
+      <tr style="background:#f7f7f4">
+        <td style="padding:10px 14px;font-weight:700;width:100px">실시간</td>
+        <td style="padding:10px 14px;border-left:1px solid #eee">지금 이 순간 사이트에 방문 중인 사람 수 및 위치</td>
+      </tr>
+      <tr>
+        <td style="padding:10px 14px;font-weight:700">획득</td>
+        <td style="padding:10px 14px;border-left:1px solid #eee">어디서 왔는지: <strong>유기적 검색</strong>(구글·네이버), 직접 입력, SNS 등</td>
+      </tr>
+      <tr style="background:#f7f7f4">
+        <td style="padding:10px 14px;font-weight:700">참여도</td>
+        <td style="padding:10px 14px;border-left:1px solid #eee">어떤 페이지를 많이 봤는지 — 인기 페이지 순위 확인</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span class="num" style="background:#03c75a">N</span> 네이버 서치어드바이저 보는 법</div>
+    <ul class="step-list">
+      <li><div class="step-body"><a href="https://searchadvisor.naver.com/console/site" target="_blank" style="color:#03c75a;text-decoration:none;font-weight:700">searchadvisor.naver.com</a> → 사이트 선택 (your-domain.kr)</div></li>
+      <li><div class="step-body"><strong>현황 → 수집/색인 현황</strong>: 네이버가 우리 페이지를 얼마나 알고 있는지 확인</div></li>
+      <li><div class="step-body"><strong>요청 → 사이트맵 제출</strong>: <code>sitemap.xml</code> 재제출 (색인 추가 시)</div></li>
+      <li><div class="step-body"><strong>요청 → 웹페이지 수집</strong>: 특정 URL 빠르게 알리기 (하루 할당량 있음)</div></li>
+    </ul>
+    <div class="tip">네이버는 자동 반영이 느립니다. 키워드·사례 추가 당일에 직접 제출하는 습관을 들이세요.</div>
+  </div>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  const tabs = ['home','admin','deploy','index','analytics'];
+  document.querySelectorAll('.nav-tab')[tabs.indexOf(id)].classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleCheck(el) {
+  el.classList.toggle('done');
+  el.textContent = el.classList.contains('done') ? '✓' : '';
+}
+
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior: 'smooth', block: 'center'});
+}
+</script>
+</body>
+</html>

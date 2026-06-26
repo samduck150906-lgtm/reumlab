@@ -729,6 +729,16 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 </figure>
               ))}
             </div>
+            <p className="mt-7 text-center">
+              <a
+                href="/assets/admin-guide-example.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block rounded-full border border-slate-300 px-6 py-2.5 text-sm font-semibold text-slate-600 transition hover:border-accent hover:text-accent"
+              >
+                운영 가이드 예시 보기 →
+              </a>
+            </p>
           </div>
         </div>
       </section>

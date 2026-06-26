@@ -143,6 +143,16 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 </figure>
               ))}
             </div>
+            <p style={{ textAlign: 'center', marginTop: 28 }}>
+              <a
+                href="/assets/admin-guide-example.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'inline-block', padding: '10px 24px', border: '1px solid rgba(255,255,255,0.35)', borderRadius: 999, fontSize: 14, fontWeight: 600, color: 'rgba(255,255,255,0.75)', textDecoration: 'none' }}
+              >
+                운영 가이드 예시 보기 →
+              </a>
+            </p>
           </div>
         </div>
       </section>
