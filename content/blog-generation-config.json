@@ -5,33 +5,63 @@
     "topics": [
       {
         "mainKeyword": "앱 개발",
-        "subKeywords": ["비용", "기간", "견적", "외주", "비전공자", "실패 예방"],
+        "subKeywords": ["비용", "기간", "견적", "외주", "비전공자", "실패 예방", "인턴십", "스타트업", "회사"],
         "region": "수원",
-        "postsToGenerate": 6
+        "postsToGenerate": 12
       },
       {
         "mainKeyword": "홈페이지 제작",
-        "subKeywords": ["비용", "업체", "SEO", "견적", "템플릿"],
+        "subKeywords": ["비용", "업체", "SEO", "견적", "템플릿", "디자인", "마케팅", "개선"],
         "region": "인계동",
-        "postsToGenerate": 5
+        "postsToGenerate": 12
       },
       {
         "mainKeyword": "Flutter 개발",
-        "subKeywords": ["비용", "크로스플랫폼", "장점", "단점", "MVP"],
+        "subKeywords": ["비용", "크로스플랫폼", "장점", "단점", "MVP", "배우기", "강좌", "라이브러리"],
         "region": "경기도",
-        "postsToGenerate": 5
+        "postsToGenerate": 12
       },
       {
         "mainKeyword": "랜딩페이지",
-        "subKeywords": ["제작", "비용", "SEO", "전환율", "디자인"],
+        "subKeywords": ["제작", "비용", "SEO", "전환율", "디자인", "마케팅", "분석", "최적화"],
         "region": "온라인",
-        "postsToGenerate": 5
+        "postsToGenerate": 12
       },
       {
         "mainKeyword": "MVP 개발",
-        "subKeywords": ["비용", "기간", "검증", "전략", "실패 예방"],
+        "subKeywords": ["비용", "기간", "검증", "전략", "실패 예방", "아이디어", "시장", "스케일"],
         "region": "전국",
-        "postsToGenerate": 5
+        "postsToGenerate": 12
+      },
+      {
+        "mainKeyword": "웹개발",
+        "subKeywords": ["비용", "학원", "외주", "인턴", "회사", "기술", "기간", "경력"],
+        "region": "서울",
+        "postsToGenerate": 12
+      },
+      {
+        "mainKeyword": "앱개발외주",
+        "subKeywords": ["비용", "업체", "계약", "일정", "품질", "유지보수", "소스코드"],
+        "region": "경기",
+        "postsToGenerate": 12
+      },
+      {
+        "mainKeyword": "디자인",
+        "subKeywords": ["비용", "UI", "UX", "웹디자인", "앱디자인", "전문가", "학원"],
+        "region": "전국",
+        "postsToGenerate": 12
+      },
+      {
+        "mainKeyword": "AI개발",
+        "subKeywords": ["비용", "챗봇", "머신러닝", "딥러닝", "학습", "기술", "외주"],
+        "region": "전국",
+        "postsToGenerate": 10
+      },
+      {
+        "mainKeyword": "데이터분석",
+        "subKeywords": ["비용", "학원", "강좌", "기술", "도구", "경력", "외주"],
+        "region": "서울",
+        "postsToGenerate": 10
       }
     ],
     "seoStrategy": {
