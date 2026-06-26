@@ -194,6 +194,55 @@ export default function LandingPage({ slug }) {
         </div>
       </section>
 
+      {/* ── 직접 운영 세팅 + 데모 영상 ── */}
+      <section className="px-5 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <span className="text-sm font-bold uppercase tracking-wide text-accent">DIRECT HANDOVER</span>
+              <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
+                사이트만 넘겨드리지 않습니다. 직접 유지보수하실 수 있게, 전부 세팅해 드립니다.
+              </h2>
+              <p className="mt-5 text-[15px] leading-relaxed text-slate-600 sm:text-base">
+                메뉴별로 정리된 전용 관리 화면을 함께 세팅해 드립니다. 연락처·가격·후기·블로그까지,
+                개발자 없이도 클릭 몇 번으로 직접 수정하고 게시하실 수 있습니다.
+              </p>
+              <ul className="mt-7 space-y-3">
+                {[
+                  '메뉴별로 정리된 콘텐츠 관리 화면 — 무엇을 어디서 고치는지 한눈에',
+                  '텍스트·이미지·가격·후기까지 클릭 몇 번으로 직접 수정·게시',
+                  '처음 한 번, 실제 화면으로 1:1 운영 교육까지 포함',
+                ].map((t) => (
+                  <li key={t} className="flex items-start gap-3 text-[15px] text-slate-700">
+                    <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-accent-soft text-[11px] font-bold text-accent">✓</span>
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <figure className="m-0">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-card-hover" style={{ aspectRatio: '1034 / 924' }}>
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/assets/images/cms-maintenance-poster.jpg"
+                  aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
+                >
+                  <source src="/assets/videos/cms-maintenance.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption className="mt-3 text-center text-sm text-slate-500">
+                실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section className="px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl">

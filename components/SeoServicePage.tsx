@@ -85,6 +85,43 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
         </div>
       </section>
 
+      {/* 직접 운영 세팅 + 데모 영상 (테마 독립 네이비 밴드) */}
+      <section style={{ background: '#0f1f3a', padding: '64px 0' }}>
+        <div className="container" style={{ maxWidth: 980 }}>
+          <div style={{ textAlign: 'center', marginBottom: 28 }}>
+            <p style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#7aa0ff', marginBottom: 12 }}>
+              DIRECT HANDOVER
+            </p>
+            <h2 style={{ fontSize: 'clamp(22px, 3vw, 30px)', fontWeight: 800, color: '#ffffff', lineHeight: 1.3, margin: '0 auto 14px', maxWidth: 760 }}>
+              사이트만 넘겨드리지 않습니다 — 직접 유지보수하실 수 있게 전부 세팅해 드립니다
+            </h2>
+            <p style={{ color: 'rgba(255,255,255,0.72)', lineHeight: 1.75, maxWidth: 680, margin: '0 auto', fontSize: 15.5 }}>
+              메뉴별로 정리된 전용 관리 화면을 함께 세팅해 드립니다. 연락처·가격·후기·블로그까지,
+              개발자 없이도 클릭 몇 번으로 직접 수정하고 게시하실 수 있습니다.
+            </p>
+          </div>
+          <figure style={{ margin: '8px auto 0', maxWidth: 560, width: '100%' }}>
+            <div style={{ overflow: 'hidden', borderRadius: 16, border: '1px solid rgba(255,255,255,0.12)', background: '#eef1f5', aspectRatio: '1034 / 924', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}>
+              <video
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/assets/images/cms-maintenance-poster.jpg"
+                aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
+              >
+                <source src="/assets/videos/cms-maintenance.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <figcaption style={{ marginTop: 12, fontSize: 13, color: 'rgba(255,255,255,0.6)', textAlign: 'center' }}>
+              실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="sec sec-warm">
         <div className="container" style={{ maxWidth: 800 }}>
           <h2 className="sec-title" style={{ fontSize: 'clamp(22px, 3vw, 28px)', marginBottom: 20 }}>

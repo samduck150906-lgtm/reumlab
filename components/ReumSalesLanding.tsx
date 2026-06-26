@@ -638,6 +638,76 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
         </div>
       </section>
 
+      {/* Handover / 직접 운영 세팅 + 데모 영상 */}
+      <section id="handover" className="scroll-mt-24 border-t border-slate-100 py-20 sm:py-24">
+        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <div>
+              <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent-deep">
+                DIRECT HANDOVER
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+                사이트만 넘겨드리지 않습니다. 직접 유지보수하실 수 있게, 전부 세팅해 드립니다.
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-slate-700 sm:text-lg">
+                메뉴별로 정리된 전용 관리 화면을 함께 세팅해 드립니다. 연락처·가격·후기·블로그까지,
+                개발자 없이도 클릭 몇 번으로 직접 수정하고 게시하실 수 있습니다.
+              </p>
+              <ul className="mt-8 space-y-3">
+                {[
+                  '메뉴별로 정리된 콘텐츠 관리 화면 — 무엇을 어디서 고치는지 한눈에',
+                  '텍스트·이미지·가격·후기까지 클릭 몇 번으로 직접 수정·게시',
+                  '처음 한 번, 실제 화면으로 1:1 운영 교육까지 포함',
+                ].map((text) => (
+                  <li key={text} className="flex items-start gap-3">
+                    <span
+                      className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-accent-soft text-accent-deep"
+                      aria-hidden
+                    >
+                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-slate-700">{text}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-9">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-display text-sm font-semibold text-white shadow-blue transition hover:bg-accent-deep"
+                  data-analytics="cta_home_handover"
+                >
+                  운영 세팅 포함 상담
+                </a>
+              </div>
+            </div>
+            <figure className="m-0">
+              <div
+                className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-card-hover"
+                style={{ aspectRatio: '1034 / 924' }}
+              >
+                <video
+                  className="h-full w-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/assets/images/cms-maintenance-poster.jpg"
+                  aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
+                >
+                  <source src="/assets/videos/cms-maintenance.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption className="mt-3.5 text-center text-sm text-slate-500">
+                실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* Portfolio / 진행 사례 */}
       {hasPortfolio ? (
         <section id="work" className="scroll-mt-24 border-t border-slate-100 py-20 sm:py-24">
