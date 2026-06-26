@@ -1,0 +1,82 @@
+{
+  "blogGenerationStrategy": {
+    "enabled": true,
+    "description": "SEO 최적화 블로그 자동 생성 설정",
+    "topics": [
+      {
+        "mainKeyword": "앱 개발",
+        "subKeywords": ["비용", "기간", "견적", "외주", "비전공자", "실패 예방"],
+        "region": "수원",
+        "postsToGenerate": 6
+      },
+      {
+        "mainKeyword": "홈페이지 제작",
+        "subKeywords": ["비용", "업체", "SEO", "견적", "템플릿"],
+        "region": "인계동",
+        "postsToGenerate": 5
+      },
+      {
+        "mainKeyword": "Flutter 개발",
+        "subKeywords": ["비용", "크로스플랫폼", "장점", "단점", "MVP"],
+        "region": "경기도",
+        "postsToGenerate": 5
+      },
+      {
+        "mainKeyword": "랜딩페이지",
+        "subKeywords": ["제작", "비용", "SEO", "전환율", "디자인"],
+        "region": "온라인",
+        "postsToGenerate": 5
+      },
+      {
+        "mainKeyword": "MVP 개발",
+        "subKeywords": ["비용", "기간", "검증", "전략", "실패 예방"],
+        "region": "전국",
+        "postsToGenerate": 5
+      }
+    ],
+    "seoStrategy": {
+      "keywordVariation": true,
+      "regionalDiversity": true,
+      "multiPlatformDistribution": true,
+      "structuredData": true,
+      "internalLinking": true
+    },
+    "distributionChannels": {
+      "website": {
+        "enabled": true,
+        "priority": 1,
+        "seoWeight": 1.0
+      },
+      "naverPlace": {
+        "enabled": true,
+        "priority": 2,
+        "seoWeight": 0.8,
+        "url": "https://naver.me/FORRCoFc"
+      },
+      "naverBlog": {
+        "enabled": false,
+        "priority": 3,
+        "seoWeight": 0.7,
+        "note": "API 연동 필요"
+      },
+      "medium": {
+        "enabled": false,
+        "priority": 4,
+        "seoWeight": 0.6,
+        "note": "API 연동 필요"
+      }
+    },
+    "qualityAssurance": {
+      "minimumReadingTime": 5,
+      "minimumWordCount": 1500,
+      "faqs": true,
+      "htmlStructure": true,
+      "metaTags": true
+    },
+    "schedule": {
+      "autoPublish": false,
+      "publishInterval": "weekly",
+      "maxPostsPerWeek": 3
+    }
+  }
+}
