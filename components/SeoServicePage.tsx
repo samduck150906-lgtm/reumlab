@@ -119,6 +119,31 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
             </figcaption>
           </figure>
+          <div style={{ marginTop: 36 }}>
+            <p style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: 16 }}>
+              관리자 화면 미리보기
+            </p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: 16, maxWidth: 620, margin: '0 auto' }}>
+              {[
+                { src: '/assets/images/admin-preview-1.jpg', cap: '글자 하나도 전화 없이 직접', alt: '관리자 화면 — 매번 개발자에게 전화할 필요 없이 직접 수정' },
+                { src: '/assets/images/admin-preview-2.jpg', cap: '연락처·가격·SEO 바로 수정', alt: '관리자 화면 — 연락처·가격·메인 문구·SEO를 클릭해서 바로 수정' },
+                { src: '/assets/images/admin-preview-3.jpg', cap: '블로그·후기·FAQ도 직접', alt: '관리자 화면 — 블로그·후기·FAQ도 직접 올리고 삭제' },
+              ].map((s) => (
+                <figure key={s.src} style={{ margin: 0 }}>
+                  <img
+                    src={s.src}
+                    width={760}
+                    height={950}
+                    loading="lazy"
+                    decoding="async"
+                    alt={s.alt}
+                    style={{ width: '100%', height: 'auto', borderRadius: 14, border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 16px 40px rgba(0,0,0,0.3)', background: '#0f1f3a' }}
+                  />
+                  <figcaption style={{ marginTop: 9, textAlign: 'center', fontSize: 12.5, color: 'rgba(255,255,255,0.6)' }}>{s.cap}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

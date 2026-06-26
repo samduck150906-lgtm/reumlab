@@ -705,6 +705,31 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               </figcaption>
             </figure>
           </div>
+          <div className="mt-12">
+            <p className="text-center font-display text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+              관리자 화면 미리보기
+            </p>
+            <div className="mx-auto mt-5 grid max-w-3xl gap-5 sm:grid-cols-3">
+              {[
+                { src: '/assets/images/admin-preview-1.jpg', cap: '글자 하나도 전화 없이 직접', alt: '관리자 화면 — 매번 개발자에게 전화할 필요 없이 직접 수정' },
+                { src: '/assets/images/admin-preview-2.jpg', cap: '연락처·가격·SEO 바로 수정', alt: '관리자 화면 — 연락처·가격·메인 문구·SEO를 클릭해서 바로 수정' },
+                { src: '/assets/images/admin-preview-3.jpg', cap: '블로그·후기·FAQ도 직접', alt: '관리자 화면 — 블로그·후기·FAQ도 직접 올리고 삭제' },
+              ].map((s) => (
+                <figure key={s.src} className="m-0">
+                  <img
+                    src={s.src}
+                    width={760}
+                    height={950}
+                    loading="lazy"
+                    decoding="async"
+                    alt={s.alt}
+                    className="w-full rounded-2xl border border-slate-200 bg-navy-900 shadow-card"
+                  />
+                  <figcaption className="mt-2.5 text-center text-[13px] font-semibold text-slate-500">{s.cap}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

@@ -507,6 +507,13 @@ br.br-pc { display: inline; }
 .handover__media figcaption { margin-top: 14px; font-size: 14px; color: var(--ink-2); text-align: center; }
 .handover__note { margin-top: 6px; font-size: 12.5px; color: var(--ink-3); text-align: center; }
 @media (max-width: 1080px) { .handover { grid-template-columns: 1fr; gap: 34px; } }
+.handover-shots { margin-top: 44px; }
+.handover-shots__label { text-align: center; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 18px; }
+.handover-shots__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 860px; margin: 0 auto; }
+.handover-shot { margin: 0; }
+.handover-shot img { width: 100%; height: auto; border-radius: var(--r); border: 1px solid var(--line-2); box-shadow: var(--shadow); background: #0f1f3a; }
+.handover-shot figcaption { margin-top: 10px; text-align: center; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+@media (max-width: 720px) { .handover-shots__grid { grid-template-columns: 1fr; max-width: 360px; } }
 
 /* ============================================================
    PREPARATION
