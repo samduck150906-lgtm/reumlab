@@ -684,8 +684,8 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             </div>
             <figure className="m-0">
               <div
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-card-hover"
-                style={{ aspectRatio: '1034 / 924' }}
+                className="mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-navy-950 shadow-card-hover"
+                style={{ aspectRatio: '1080 / 1350', maxWidth: 408 }}
               >
                 <video
                   className="h-full w-full object-cover"
@@ -694,10 +694,10 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                   loop
                   playsInline
                   preload="metadata"
-                  poster="/assets/images/cms-maintenance-poster.jpg"
+                  poster="/assets/images/cms-promo-poster.jpg"
                   aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
                 >
-                  <source src="/assets/videos/cms-maintenance.mp4" type="video/mp4" />
+                  <source src="/assets/videos/cms-promo.mp4" type="video/mp4" />
                 </video>
               </div>
               <figcaption className="mt-3.5 text-center text-sm text-slate-500">

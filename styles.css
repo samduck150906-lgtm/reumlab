@@ -501,9 +501,10 @@ br.br-pc { display: inline; }
 .handover__media { margin: 0; }
 .handover__frame {
   border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line-2);
-  box-shadow: var(--shadow-lg); aspect-ratio: 1034 / 924; background: #eef1f5;
+  box-shadow: var(--shadow-lg); aspect-ratio: 1080 / 1350; background: #0a0f1c;
+  max-width: 408px; margin-left: auto; margin-right: auto;
 }
-.handover__video { width: 100%; height: 100%; object-fit: cover; display: block; background: #eef1f5; }
+.handover__video { width: 100%; height: 100%; object-fit: cover; display: block; background: #0a0f1c; }
 .handover__media figcaption { margin-top: 14px; font-size: 14px; color: var(--ink-2); text-align: center; }
 .handover__note { margin-top: 6px; font-size: 12.5px; color: var(--ink-3); text-align: center; }
 @media (max-width: 1080px) { .handover { grid-template-columns: 1fr; gap: 34px; } }

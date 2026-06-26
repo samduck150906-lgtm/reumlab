@@ -100,8 +100,8 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               개발자 없이도 클릭 몇 번으로 직접 수정하고 게시하실 수 있습니다.
             </p>
           </div>
-          <figure style={{ margin: '8px auto 0', maxWidth: 560, width: '100%' }}>
-            <div style={{ overflow: 'hidden', borderRadius: 16, border: '1px solid rgba(255,255,255,0.12)', background: '#eef1f5', aspectRatio: '1034 / 924', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}>
+          <figure style={{ margin: '8px auto 0', maxWidth: 400, width: '100%' }}>
+            <div style={{ overflow: 'hidden', borderRadius: 16, border: '1px solid rgba(255,255,255,0.12)', background: '#0a0f1c', aspectRatio: '1080 / 1350', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}>
               <video
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 autoPlay
@@ -109,10 +109,10 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 loop
                 playsInline
                 preload="metadata"
-                poster="/assets/images/cms-maintenance-poster.jpg"
+                poster="/assets/images/cms-promo-poster.jpg"
                 aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
               >
-                <source src="/assets/videos/cms-maintenance.mp4" type="video/mp4" />
+                <source src="/assets/videos/cms-promo.mp4" type="video/mp4" />
               </video>
             </div>
             <figcaption style={{ marginTop: 12, fontSize: 13, color: 'rgba(255,255,255,0.6)', textAlign: 'center' }}>
