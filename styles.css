@@ -239,6 +239,9 @@ br.br-pc { display: inline; }
 
 /* hero stacked visual */
 .hero__visual { position: relative; height: 530px; }
+/* 힉스필드 생성 히어로 비주얼 — 콘텐츠 뒤 앰비언트 백드롭(좌측 어두운 영역이 카피 뒤로 가도록 정렬) */
+.hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: 0; opacity: .22; pointer-events: none; }
+.hero > .wrap { position: relative; z-index: 1; }
 .card-float {
   position: absolute; background: #fff; border: 1px solid var(--line);
   border-radius: var(--r-lg); box-shadow: var(--shadow-lg);
