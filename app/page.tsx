@@ -1,3 +1,5 @@
+// ⚠️ 루트로 실제 서비스되는 홈은 정적 `index.html`입니다(빌드 copy:home가 이 페이지 출력물을 덮어씀).
+//    홈 내용을 바꾸면 `index.html`과 이 React 트윈을 함께 갱신하세요. 자세히는 README "홈페이지·배포 구조".
 import ReumSalesLanding from '../components/ReumSalesLanding';
 import { getSite } from '../lib/data';
 import { ReumHomeGraphJsonLd, BreadcrumbJsonLd, WebSiteJsonLd, FAQPageJsonLd } from '@/components/JsonLd';

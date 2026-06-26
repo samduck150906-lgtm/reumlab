@@ -21,6 +21,20 @@
 - 각 랜딩마다 다른 FAQ/후기/문구 → 중복 콘텐츠 회피
 - **JSON-LD** 구조화 데이터 → 검색엔진 리치 스니펫 대응
 
+## ⚠️ 홈페이지·배포 구조 (편집 전 필독)
+
+현재 운영 배포는 **Next.js 정적 export** 기준입니다 (`netlify.toml`: `npm run build` → `publish = out`).
+빌드 마지막 단계 `copy:home`(`cp index.html styles.css script.js out/`)이 Next가 생성한 홈을 덮어쓰므로,
+**`reumlab.com/`(루트)에 실제로 서비스되는 파일은 정적 `index.html`** 입니다.
+
+- 홈 화면(가격·히어로·카피 등)을 바꾸려면 **`index.html`을 직접 수정**해야 반영됩니다.
+- `components/ReumSalesLanding.tsx`는 같은 내용의 **React 트윈**입니다. 현재 루트로 서빙되지 않으므로
+  여기만 고치면 배포에 반영되지 않습니다 — **두 파일을 항상 함께 갱신**하세요(특히 가격).
+- 가격 문구는 추가로 `lib/seo.ts`·`lib/guides.ts`·`lib/blog-posts.ts`·`lib/pseo.ts`·`lib/industries.ts`·
+  `components/JsonLd.tsx`(JSON-LD Offer)에도 하드코딩되어 있습니다. 가격 변경 시 함께 점검하세요.
+- (참고) 아래 "개별 실행"의 `build:hubs`/`build:landings`/`copy:main` 등은 **레거시 정적 빌드**로,
+  현재 운영 빌드(`npm run build` = Next export → `out/`)와 다릅니다.
+
 ## 프로젝트 구조
 
 ```
