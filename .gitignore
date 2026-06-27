@@ -13,3 +13,6 @@ public/feed.xml
 
 # Local Netlify folder
 .netlify
+
+# Generated output files (marketing campaigns, reports)
+.output/
