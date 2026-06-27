@@ -217,60 +217,67 @@ class DashboardGenerator {
   <title>마케팅 캠페인 대시보드</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       min-height: 100vh;
-      padding: 20px;
+      padding: 16px;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
     }
     .container { max-width: 1400px; margin: 0 auto; }
     .header {
       background: white;
-      padding: 30px;
-      border-radius: 8px;
-      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
-    h1 { color: #333; margin-bottom: 10px; font-size: 32px; }
-    .timestamp { color: #999; font-size: 14px; }
+    h1 { color: #333; margin-bottom: 8px; font-size: clamp(24px, 5vw, 32px); }
+    .timestamp { color: #999; font-size: 13px; }
 
     .summary-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      margin-bottom: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
     }
     .summary-card {
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
       border-top: 4px solid #667eea;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .summary-label { color: #666; font-size: 12px; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
-    .summary-value { font-size: 28px; font-weight: bold; color: #333; }
+    .summary-card:active { transform: translateY(2px); }
+    .summary-label { color: #666; font-size: 11px; text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+    .summary-value { font-size: clamp(20px, 4vw, 28px); font-weight: bold; color: #333; }
 
     .section {
       background: white;
-      padding: 30px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
     }
     .section-title {
-      font-size: 20px;
+      font-size: clamp(18px, 4vw, 20px);
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       color: #333;
-      padding-bottom: 10px;
+      padding-bottom: 12px;
       border-bottom: 2px solid #667eea;
     }
 
     .alert-list { display: flex; flex-direction: column; gap: 12px; }
     .alert {
-      padding: 15px;
+      padding: 14px;
       border-radius: 8px;
       border-left: 4px solid;
+      font-size: 14px;
     }
     .alert.critical {
       background: #fff5f5;
@@ -286,36 +293,38 @@ class DashboardGenerator {
     }
     .alert-title {
       font-weight: bold;
-      margin-bottom: 5px;
-      font-size: 14px;
+      margin-bottom: 4px;
+      font-size: 13px;
     }
     .alert-message {
-      font-size: 13px;
+      font-size: 12px;
       color: #666;
+      line-height: 1.5;
     }
 
     .campaign-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
     }
     .campaign-card {
       background: #f9f9f9;
       border: 1px solid #e0e0e0;
       border-radius: 8px;
-      padding: 15px;
+      padding: 14px;
+      font-size: 14px;
     }
-    .campaign-name { font-weight: bold; margin-bottom: 10px; color: #333; }
+    .campaign-name { font-weight: bold; margin-bottom: 10px; color: #333; font-size: 13px; line-height: 1.4; }
     .campaign-stat {
       display: flex;
       justify-content: space-between;
-      padding: 5px 0;
-      font-size: 13px;
+      padding: 6px 0;
+      font-size: 12px;
       border-bottom: 1px solid #eee;
     }
     .campaign-stat:last-child { border-bottom: none; }
     .stat-label { color: #666; }
-    .stat-value { font-weight: bold; color: #333; }
+    .stat-value { font-weight: bold; color: #333; text-align: right; }
 
     .recommendation-list {
       list-style: none;
@@ -323,10 +332,11 @@ class DashboardGenerator {
     }
     .recommendation-list li {
       padding: 10px 0;
-      padding-left: 30px;
+      padding-left: 28px;
       position: relative;
       color: #555;
       line-height: 1.6;
+      font-size: 14px;
     }
     .recommendation-list li:before {
       content: "✓";
@@ -338,32 +348,64 @@ class DashboardGenerator {
 
     .platform-stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
     }
     .platform-stat {
       background: #f9f9f9;
-      padding: 15px;
+      padding: 14px;
       border-radius: 8px;
       border: 1px solid #e0e0e0;
+      font-size: 13px;
     }
     .platform-name {
       font-weight: bold;
       margin-bottom: 10px;
       color: #333;
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 11px;
     }
     .platform-detail {
-      font-size: 13px;
+      font-size: 12px;
       color: #666;
-      padding: 5px 0;
+      padding: 4px 0;
     }
     .platform-roas {
-      font-size: 18px;
+      font-size: clamp(16px, 4vw, 18px);
       font-weight: bold;
       color: #667eea;
-      margin-top: 10px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 12px; }
+      .header { padding: 16px; margin-bottom: 16px; }
+      .section { padding: 16px; margin-bottom: 16px; }
+      .summary-grid { gap: 10px; margin-bottom: 16px; }
+      .summary-card { padding: 14px; }
+      .campaign-grid { grid-template-columns: 1fr; }
+      .platform-stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 10px; }
+      .header { padding: 14px; margin-bottom: 12px; border-radius: 8px; }
+      .section { padding: 14px; margin-bottom: 12px; border-radius: 8px; }
+      h1 { font-size: 22px; margin-bottom: 6px; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+      .summary-card { padding: 12px; border-radius: 8px; }
+      .summary-label { font-size: 10px; margin-bottom: 4px; }
+      .summary-value { font-size: 18px; }
+      .section-title { font-size: 16px; margin-bottom: 12px; }
+      .alert { padding: 12px; font-size: 13px; }
+      .alert-title { font-size: 12px; }
+      .alert-message { font-size: 11px; }
+      .campaign-card { padding: 12px; }
+      .campaign-name { font-size: 12px; }
+      .campaign-stat { font-size: 11px; padding: 5px 0; }
+      .platform-stats { grid-template-columns: 1fr; }
+      .platform-stat { padding: 12px; }
+      .recommendation-list li { padding: 8px 0; padding-left: 24px; font-size: 13px; }
     }
   </style>
 </head>

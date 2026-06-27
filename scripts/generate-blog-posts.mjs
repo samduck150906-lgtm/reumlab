@@ -82,44 +82,68 @@ function generateBlogPost(main, sub, region, index) {
 
 function generateHtmlBody(main, sub, region) {
   return `
-<p><strong>${main}${sub}</strong>는 많은 분이 물어보는 주제입니다. 이 글에서는 실무 기준으로 ${sub}하는 방법, 예상 비용과 기간, 흔한 실수를 정리했습니다.</p>
+<article style="max-width: 900px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #333;">
+  <p style="font-size: 18px; margin-bottom: 20px;"><strong>${main}${sub}</strong>는 많은 분이 물어보는 주제입니다. 이 글에서는 실무 기준으로 ${sub}하는 방법, 예상 비용과 기간, 흔한 실수를 정리했습니다.</p>
 
-<h2>${main} ${sub}의 기본</h2>
-<p>${main} 프로젝트에서 ${sub}은 핵심 단계입니다. 이 단계를 제대로 이해하고 진행하면 후속 작업의 리스크가 크게 줄어듭니다.</p>
+  <h2 style="font-size: 24px; margin: 30px 0 15px; color: #222; border-bottom: 2px solid #667eea; padding-bottom: 10px;">${main} ${sub}의 기본</h2>
+  <p>${main} 프로젝트에서 ${sub}은 핵심 단계입니다. 이 단계를 제대로 이해하고 진행하면 후속 작업의 리스크가 크게 줄어듭니다.</p>
 
-<ul>
-<li>${sub}의 목적을 먼저 명확히 하기</li>
-<li>예상 비용과 일정을 미리 파악하기</li>
-<li>외주사 선정 시 확인할 체크리스트</li>
-</ul>
+  <ul style="margin: 15px 0 15px 20px; padding-left: 20px;">
+  <li style="margin-bottom: 10px;">${sub}의 목적을 먼저 명확히 하기</li>
+  <li style="margin-bottom: 10px;">예상 비용과 일정을 미리 파악하기</li>
+  <li>외주사 선정 시 확인할 체크리스트</li>
+  </ul>
 
-<h2>실무에서 주의할 점</h2>
-<p>${region}에서 ${main} 작업을 할 때 가장 많은 실수는 "기준을 미리 정하지 않는 것"입니다. 다음 항목을 계약 전에 명시하면 분쟁을 크게 줄 수 있습니다:</p>
+  <h2 style="font-size: 24px; margin: 30px 0 15px; color: #222; border-bottom: 2px solid #667eea; padding-bottom: 10px;">실무에서 주의할 점</h2>
+  <p>${region}에서 ${main} 작업을 할 때 가장 많은 실수는 "기준을 미리 정하지 않는 것"입니다. 다음 항목을 계약 전에 명시하면 분쟁을 크게 줄 수 있습니다:</p>
 
-<table>
-<thead><tr><th>항목</th><th>확인 사항</th><th>왜 중요한가</th></tr></thead>
-<tbody>
-<tr><td>범위</td><td>화면·기능·예외 처리를 문서화</td><td>범위 변경 요청의 기준을 만듦</td></tr>
-<tr><td>일정</td><td>중간 데모·검수 일정을 정함</td><td>방향이 어긋났을 때 빨리 파악</td></tr>
-<tr><td>소유권</td><td>소스코드·계정 권한이 누구 명의</td><td>나중에 다른 개발사로 이전 가능</td></tr>
-</tbody>
-</table>
+  <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px;">
+  <thead>
+    <tr style="background: #f5f5f5;">
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-weight: bold;">항목</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-weight: bold;">확인 사항</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; font-weight: bold;">왜 중요한가</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">범위</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">화면·기능·예외 처리를 문서화</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">범위 변경 요청의 기준을 만듦</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">일정</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">중간 데모·검수 일정을 정함</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">방향이 어긋났을 때 빨리 파악</td>
+    </tr>
+    <tr>
+      <td style="padding: 12px; border: 1px solid #ddd;">소유권</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">소스코드·계정 권한이 누구 명의</td>
+      <td style="padding: 12px; border: 1px solid #ddd;">나중에 다른 개발사로 이전 가능</td>
+    </tr>
+  </tbody>
+  </table>
 
-<h2>${main} ${sub}의 시장 상황</h2>
-<p>현재 시장에서는 다음과 같은 트렌드가 있습니다:</p>
-<ul>
-<li>원격 작업으로 지역의 경계가 낮아짐</li>
-<li>정액제 패키지로 투명한 가격 제시가 기준</li>
-<li>납품 후 직접 운영할 수 있게 교육을 포함하는 곳이 증가</li>
-</ul>
+  <h2 style="font-size: 24px; margin: 30px 0 15px; color: #222; border-bottom: 2px solid #667eea; padding-bottom: 10px;">${main} ${sub}의 시장 상황</h2>
+  <p>현재 시장에서는 다음과 같은 트렌드가 있습니다:</p>
+  <ul style="margin: 15px 0 15px 20px; padding-left: 20px;">
+  <li style="margin-bottom: 10px;">원격 작업으로 지역의 경계가 낮아짐</li>
+  <li style="margin-bottom: 10px;">정액제 패키지로 투명한 가격 제시가 기준</li>
+  <li>납품 후 직접 운영할 수 있게 교육을 포함하는 곳이 증가</li>
+  </ul>
 
-<h2>자주 묻는 질문</h2>
-<dl>
-<dt>Q. ${main} ${sub}에 보통 얼마가 들나요?</dt>
-<dd>규모와 복잡도에 따라 다르지만, 기본적으로는 ${sub}의 범위가 비용을 결정합니다. 구체적인 사항은 전문가와 상담해서 판단하세요.</dd>
-<dt>Q. 어떤 업체를 고르는 것이 좋을까요?</dt>
-<dd>가격을 먼저 공개하고, 소스코드·계정 소유권을 명시하며, 포트폴리오가 실제 스토어에 올라간 곳을 추천합니다.</dd>
-</dl>
+  <h2 style="font-size: 24px; margin: 30px 0 15px; color: #222; border-bottom: 2px solid #667eea; padding-bottom: 10px;">자주 묻는 질문</h2>
+  <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 16px; margin-bottom: 8px; color: #333; font-weight: bold;">Q. ${main} ${sub}에 보통 얼마가 들나요?</h3>
+      <p style="color: #666; margin-left: 20px;">규모와 복잡도에 따라 다르지만, 기본적으로는 ${sub}의 범위가 비용을 결정합니다. 구체적인 사항은 전문가와 상담해서 판단하세요.</p>
+    </div>
+    <div>
+      <h3 style="font-size: 16px; margin-bottom: 8px; color: #333; font-weight: bold;">Q. 어떤 업체를 고르는 것이 좋을까요?</h3>
+      <p style="color: #666; margin-left: 20px;">가격을 먼저 공개하고, 소스코드·계정 소유권을 명시하며, 포트폴리오가 실제 스토어에 올라간 곳을 추천합니다.</p>
+    </div>
+  </div>
+</article>
   `.trim();
 }
 
