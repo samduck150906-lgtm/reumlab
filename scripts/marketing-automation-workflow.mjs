@@ -20,42 +20,43 @@ class MarketingAutomationWorkflow {
     console.log('📚 1단계: 블로그 포스트 로드\n');
 
     try {
+      // JSON 파일에서 로드 시도
+      const blogPostsJsonPath = path.join(__dirname, '../.output/blog-posts.json');
+
+      if (fs.existsSync(blogPostsJsonPath)) {
+        const content = fs.readFileSync(blogPostsJsonPath, 'utf-8');
+        this.blogPosts = JSON.parse(content);
+        console.log(`✓ ${this.blogPosts.length}개 블로그 포스트 로드됨`);
+        return this.blogPosts;
+      }
+
+      // JSON 파일이 없으면 TypeScript 파일에서 로드
       const blogPostsPath = path.join(__dirname, '../lib/blog-posts.ts');
       const content = fs.readFileSync(blogPostsPath, 'utf-8');
 
-      // TypeScript 파일에서 블로그 포스트 JSON 추출
-      const jsonMatch = content.match(/const blogPosts = \[([\s\S]*)\] as const;/);
-      if (!jsonMatch) {
-        console.log('⚠️  블로그 포스트 파일 형식을 파싱할 수 없습니다.');
-        return [];
-      }
-
-      // 간단한 추출 방식 - 실제로는 더 정교한 파싱 필요
+      // TypeScript에서 포스트 카운트 추출
       const postCount = (content.match(/slug:/g) || []).length;
-      console.log(`✓ 블로그 포스트 ${postCount}개 로드됨`);
+      console.log(`✓ ${postCount}개 블로그 포스트 로드됨`);
 
-      // 시뮬레이션: 샘플 블로그 포스트
+      // 샘플 블로그 포스트 (JSON 파일이 없을 때만)
       this.blogPosts = [
         {
           slug: 'app-dev-cost-suwon',
           title: '앱 개발 비용: 비용·기간·선택 기준 완벽 정리',
           keywords: ['앱 개발 비용', '수원 앱 개발', '앱 개발 비용 견적'],
           description: '수원에서 앱을 개발하려는 분을 위한 완벽 가이드',
-          region: '수원',
         },
         {
           slug: 'web-dev-cost-seoul',
           title: '웹개발 비용: 서울 시장 기준 가격 정리',
           keywords: ['웹개발 비용', '서울 웹개발', '웹개발 외주 비용'],
           description: '서울에서 웹을 개발하려는 분을 위한 완벽 가이드',
-          region: '서울',
         },
         {
           slug: 'homepage-design-ingyedong',
           title: '홈페이지 제작 비용: 인계동 업체 선택 가이드',
           keywords: ['홈페이지 제작', '인계동 홈페이지', '홈페이지 제작 비용'],
           description: '인계동에서 홈페이지를 제작하려는 분을 위한 가이드',
-          region: '인계동',
         },
       ];
 

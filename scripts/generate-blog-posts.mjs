@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const contentDir = path.join(__dirname, '../content');
 const blogPostsFile = path.join(__dirname, '../lib/blog-posts.ts');
+const outputDir = path.join(__dirname, '../.output');
+const blogPostsJsonFile = path.join(outputDir, 'blog-posts.json');
 
 // SEO 최적화 키워드 및 콘텐츠 템플릿
 const keywords = [
@@ -173,6 +175,15 @@ function main() {
     fs.writeFileSync(blogPostsFile, updatedContent);
     console.log(`\n✅ ${generatedPosts.length}개 포스트가 추가되었습니다.`);
   }
+
+  // .output 디렉토리가 없으면 생성
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  // 생성된 포스트를 JSON 파일로 저장 (워크플로우용)
+  fs.writeFileSync(blogPostsJsonFile, JSON.stringify(generatedPosts, null, 2));
+  console.log(`📄 JSON 파일 저장: ${blogPostsJsonFile}`);
 
   // 각 포스트별 메타데이터 로깅
   console.log('\n📊 생성된 포스트 목록:');
