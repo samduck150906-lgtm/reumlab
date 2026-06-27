@@ -9,6 +9,8 @@
     "gen:feed": "node scripts/generate-feed.mjs",
     "gen:blog": "node scripts/generate-blog-posts.mjs",
     "gen:blog:distribute": "node scripts/distribute-blog-posts.mjs",
+    "gen:marketing": "node scripts/auto-marketing-campaigns.mjs",
+    "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && node scripts/generate-feed.mjs && node scripts/prepare-next-public.mjs && next build && npm run copy:home",
     "copy:home": "cp index.html styles.css script.js out/",
     "start": "next start",
