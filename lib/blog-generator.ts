@@ -1,4 +1,5 @@
-import { BlogPost, SITE } from '@/lib/seo';
+import { SITE } from '@/lib/seo';
+import type { BlogPost } from '@/lib/blog-posts';
 
 // 블로그 자동 생성 엔진 (화이트햇 SEO)
 export interface BlogTopicConfig {
