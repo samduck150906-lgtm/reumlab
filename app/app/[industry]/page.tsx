@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
-import { INDUSTRIES, getIndustry, industryCanonical } from '@/lib/industries';
+import { INDUSTRIES, getIndustry, industryCanonical, industryDecision } from '@/lib/industries';
+import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
@@ -47,7 +48,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: title }],
     },
     twitter: { card: 'summary_large_image', title, description, images: [SITE.defaultOgImage] },
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
+    // 색인 품질 게이트: 80점↑만 index (사이트맵과 동일 판정)
+    robots: robotsFor(industryDecision(ind.slug)!),
   };
 }
 

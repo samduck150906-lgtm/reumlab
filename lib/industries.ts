@@ -4,6 +4,7 @@
  * 각 업종은 고유 핵심 기능·예상 비용·시나리오·FAQ 3개를 가짐.
  */
 import { SITE } from './seo';
+import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
 
 export interface IndustryDef {
   slug: string;
@@ -262,4 +263,27 @@ export function allIndustrySlugs(): string[] {
 }
 export function industryCanonical(slug: string): string {
   return `${SITE.domain}/app/${slug}/`;
+}
+
+/**
+ * 업종 페이지 색인 판정 — 실제 렌더되는 본문(intro·features·costRange·scenario·FAQ)에서
+ * 신호를 측정한다. 내부링크는 라우트가 렌더하는 수와 동기화: 브레드크럼 2 +
+ * 다른 업종 8 + (관련 사례 있으면 +) → 최소 10.
+ */
+export function industryDecision(slug: string): IndexDecision | null {
+  const ind = getIndustry(slug);
+  if (!ind) return null;
+  const others = INDUSTRIES.filter((i) => i.slug !== ind.slug);
+  return decideFromContent({
+    title: `${ind.keyword} | ${ind.coreFeatures} MVP — 름랩`,
+    description: `${ind.keyword}. ${ind.coreFeatures} 등 ${ind.ko} 운영에 필요한 핵심 기능부터 MVP로. 소스코드 이관·직접 운영 교육 포함.`,
+    h1: ind.keyword,
+    bodyParts: [ind.intro, ind.features, ind.costRange, ind.scenario, ...ind.faqs.map((f) => f.a)],
+    faqQuestions: ind.faqs.map((f) => f.q),
+    // 브레드크럼(홈·앱개발) 2 + 다른 업종 링크 min(8) + 하단 요금 링크 1
+    internalLinks: 2 + Math.min(others.length, 8) + 1,
+    hasUniqueMedia: false,
+    // 업종 고유성 비교 — 다른 업종의 intro+scenario 지문과 대조
+    peerFingerprints: others.map((i) => fingerprint(`${i.intro} ${i.scenario}`)),
+  });
 }

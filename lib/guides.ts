@@ -4,6 +4,7 @@
  * 각 가이드는 고유 본문(섹션) + FAQ를 가짐. JSON-LD: Article + FAQPage + BreadcrumbList.
  */
 import { SITE } from './seo';
+import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
 
 export interface GuideSection {
   h: string;
@@ -281,4 +282,32 @@ export function allGuideSlugs(): string[] {
 }
 export function guideCanonical(slug: string): string {
   return `${SITE.domain}/guide/${slug}/`;
+}
+
+/**
+ * 가이드 페이지 색인 판정 — intro + 섹션 본문 + FAQ에서 신호를 측정한다.
+ * 가이드는 본문 분량이 길어 대개 만점에 가깝지만, 얇은 가이드가 추가되면
+ * 자동으로 사이트맵에서 제외된다.
+ */
+export function guideDecision(slug: string): IndexDecision | null {
+  const guide = getGuide(slug);
+  if (!guide) return null;
+  const others = GUIDES.filter((g) => g.slug !== guide.slug);
+  return decideFromContent({
+    title: guide.title,
+    description: guide.description,
+    h1: guide.h1,
+    bodyParts: [
+      guide.intro,
+      ...guide.sections.map((s) => `${s.h} ${s.body}`),
+      ...guide.faqs.map((f) => f.a),
+    ],
+    faqQuestions: guide.faqs.map((f) => f.q),
+    // 브레드크럼 2 + related 내부링크
+    internalLinks: 2 + guide.related.length,
+    hasUniqueMedia: false,
+    peerFingerprints: others.map((g) =>
+      fingerprint(`${g.intro} ${g.sections.map((s) => s.body).join(' ')}`),
+    ),
+  });
 }

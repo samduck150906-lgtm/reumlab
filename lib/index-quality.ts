@@ -159,6 +159,59 @@ export function scoreIndexability(s: IndexSignals): IndexDecision {
   };
 }
 
+/**
+ * 의사결정 정보 탐지 — 렌더되는 본문에 가격/기간/산출물/프로세스 신호가
+ * 실제로 있는지 정규식으로 "측정"한다. (상수 true 가정 대신 실측)
+ */
+const DECISION_PATTERNS =
+  /(만\s?원|원부터|VAT|비용|견적|예산|정액|기간|약\s?\d|\d+\s?(일|주|개월)|산출물|소스코드|이관|프로세스|단계|MVP|패키지)/;
+export function detectDecisionInfo(text: string): boolean {
+  return DECISION_PATTERNS.test(text);
+}
+
+/** 중첩 가능한 본문 조각(문자열/문자열배열/undefined)을 단일 본문 텍스트로 평탄화 */
+export function flattenBody(parts: Array<string | string[] | undefined | null>): string {
+  return parts
+    .flat()
+    .filter((p): p is string => typeof p === 'string' && p.trim().length > 0)
+    .join(' ');
+}
+
+/**
+ * 콘텐츠 신호로부터 색인 판정을 만든다 — 본문 분량·FAQ 수·의사결정/CTA 정보를
+ * 데이터 모델이 아니라 "실제 렌더되는 텍스트"에서 측정한다.
+ * 프로그래매틱 전 축(지역×서비스·업종·가이드·비교)이 공통으로 사용한다.
+ */
+export function decideFromContent(input: {
+  title: string;
+  description: string;
+  h1: string;
+  /** 실제 화면에 렌더되는 고유 본문 조각들 (제목/불릿/문단 등) */
+  bodyParts: Array<string | string[] | undefined | null>;
+  /** 실제 렌더되는 FAQ 질문들 */
+  faqQuestions: string[];
+  /** 실제 렌더되는 내부링크 수 (브레드크럼·관련·허브·스포크 합산) */
+  internalLinks: number;
+  hasUniqueMedia?: boolean;
+  hasLocalAccessInfo?: boolean;
+  peerFingerprints?: Set<string>[];
+}): IndexDecision {
+  const uniqueBodyText = flattenBody(input.bodyParts);
+  return scoreIndexability({
+    title: input.title,
+    description: input.description,
+    h1: input.h1,
+    uniqueBodyText,
+    faqQuestions: input.faqQuestions,
+    internalLinks: input.internalLinks,
+    hasConsultCta: true, // 프로그래매틱 라우트는 전화/이메일 CTA를 구조적으로 항상 렌더
+    hasDecisionInfo: detectDecisionInfo(uniqueBodyText),
+    hasLocalAccessInfo: input.hasLocalAccessInfo,
+    hasUniqueMedia: input.hasUniqueMedia ?? false,
+    peerFingerprints: input.peerFingerprints,
+  });
+}
+
 /** Next.js Metadata.robots 로 변환 (라우트 generateMetadata 에서 사용) */
 export function robotsFor(decision: IndexDecision) {
   const index = decision.shouldIndex;

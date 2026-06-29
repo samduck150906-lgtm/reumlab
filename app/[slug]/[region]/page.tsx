@@ -10,6 +10,7 @@ import {
   siblingRegions,
   regionServiceCanonical,
   regionServiceDecision,
+  regionServiceMedia,
 } from '@/lib/pseo';
 import { robotsFor } from '@/lib/index-quality';
 import { RegionServiceJsonLd } from '@/components/JsonLd';
@@ -71,6 +72,7 @@ export default function RegionServicePage({ params }: Props) {
 
   const canonical = regionServiceCanonical(service.slug, region.slug);
   const h1 = `${region.full} ${service.ko}`;
+  const media = regionServiceMedia(service.slug, region.slug)!;
 
   // 고유 FAQ 3개: 지역 FAQ + 서비스 FAQ + 지역×서비스 결합 FAQ
   const combinedFaq = {
@@ -125,6 +127,40 @@ export default function RegionServicePage({ params }: Props) {
               </a>
             </div>
           </div>
+
+          {/* 지역×서비스 고유 미디어 — 외부 이미지 없이 페이지마다 다른 인라인 SVG 히어로 */}
+          <figure className="region-hero" style={{ margin: '4px 0 8px' }}>
+            <svg
+              viewBox="0 0 1200 300"
+              role="img"
+              aria-label={media.alt}
+              preserveAspectRatio="xMidYMid slice"
+              style={{ width: '100%', height: 'auto', borderRadius: 14, display: 'block' }}
+            >
+              <title>{media.alt}</title>
+              <defs>
+                <linearGradient id="regionHeroBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stopColor={`hsl(${media.hue} 68% 40%)`} />
+                  <stop offset="100%" stopColor={`hsl(${(media.hue + 38) % 360} 62% 26%)`} />
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="300" fill="url(#regionHeroBg)" />
+              <circle cx="1040" cy="60" r="220" fill="rgba(255,255,255,0.07)" />
+              <circle cx="160" cy="280" r="160" fill="rgba(255,255,255,0.05)" />
+              <text x="64" y="150" fontSize="68" fontWeight="800" fill="#ffffff">
+                {media.label}
+              </text>
+              <text x="66" y="206" fontSize="30" fill="rgba(255,255,255,0.88)">
+                {media.sub}
+              </text>
+              <text x="66" y="252" fontSize="24" fill="rgba(255,255,255,0.78)">
+                소스코드 전체 이관 · 직접 운영 교육 포함
+              </text>
+            </svg>
+            <figcaption style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)' }}>
+              {media.alt}
+            </figcaption>
+          </figure>
 
           {/* 왜 이 지역에서 름랩인가 — 지역 고유 블록 */}
           <div className="section-inner" style={{ paddingTop: 8 }}>

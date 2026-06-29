@@ -4,6 +4,7 @@
  * 의사결정 단계 유입을 흡수해 름랩 포지션으로 연결. JSON-LD: Article + BreadcrumbList.
  */
 import { SITE } from './seo';
+import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
 
 export interface CompareRow {
   aspect: string;
@@ -135,4 +136,26 @@ export function allCompareSlugs(): string[] {
 }
 export function compareCanonical(slug: string): string {
   return `${SITE.domain}/compare/${slug}/`;
+}
+
+/**
+ * 비교 페이지 색인 판정 — intro + 비교표(각 행의 a/b) + verdict + FAQ에서 측정한다.
+ */
+export function compareDecision(slug: string): IndexDecision | null {
+  const cmp = getCompare(slug);
+  if (!cmp) return null;
+  const others = COMPARES.filter((c) => c.slug !== cmp.slug);
+  const rowsText = cmp.rows.map((r) => `${r.aspect} ${r.a} ${r.b}`);
+  return decideFromContent({
+    title: cmp.title,
+    description: cmp.description,
+    h1: cmp.h1,
+    bodyParts: [cmp.intro, ...rowsText, cmp.verdict, ...cmp.faqs.map((f) => f.a)],
+    faqQuestions: cmp.faqs.map((f) => f.q),
+    internalLinks: 2 + cmp.related.length,
+    hasUniqueMedia: false,
+    peerFingerprints: others.map((c) =>
+      fingerprint(`${c.intro} ${c.verdict} ${c.rows.map((r) => `${r.a} ${r.b}`).join(' ')}`),
+    ),
+  });
 }

@@ -8,7 +8,7 @@
  *  - 페이지 본문 = 지역 고유 단락 + 서비스 고유 단락 + 고유 FAQ 3개 + 내부링크
  */
 import { SITE } from './seo';
-import { scoreIndexability, fingerprint, type IndexDecision } from './index-quality';
+import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
 
 export interface RegionDef {
   /** 로마자 슬러그 (URL) */
@@ -459,9 +459,47 @@ export function regionServiceCanonical(serviceSlug: string, regionSlug: string):
   return `${SITE.domain}/${serviceSlug}/${regionSlug}/`;
 }
 
+/** 문자열 → 0~359 색상(hue). 같은 입력이면 항상 같은 값(결정적, SSG 안전). */
+function hashHue(seed: string): number {
+  let h = 0;
+  for (let i = 0; i < seed.length; i++) h = (h * 31 + seed.charCodeAt(i)) % 360;
+  return h;
+}
+
+export interface RegionServiceMedia {
+  /** 페이지마다 고유한 대체 텍스트 (색인 게이트의 hasUniqueMedia 근거) */
+  alt: string;
+  /** 상권 그룹×서비스로 결정되는 배경 hue (지역마다 다른 톤) */
+  hue: number;
+  /** 히어로에 표시할 메인 라벨 */
+  label: string;
+  /** 보조 라벨 (가격 한 줄) */
+  sub: string;
+}
+
+/**
+ * 지역×서비스 고유 미디어 — 외부 바이너리 없이 페이지마다 다른 인라인 SVG 히어로.
+ * alt·라벨·배경 톤이 페이지마다 달라 도어웨이 회피와 시각적 차별화를 동시에 만족한다.
+ * 라우트(app/[slug]/[region])와 색인 게이트(regionServiceDecision)가 함께 사용한다.
+ */
+export function regionServiceMedia(
+  serviceSlug: string,
+  regionSlug: string,
+): RegionServiceMedia | null {
+  const service = getService(serviceSlug);
+  const region = getRegion(regionSlug);
+  if (!service || !region) return null;
+  return {
+    alt: `${region.full} ${service.ko} 안내 — ${service.priceLine}, 소스코드 이관 포함`,
+    hue: hashHue(`${region.group}-${service.slug}`),
+    label: `${region.full} ${service.short}`,
+    sub: service.priceLine,
+  };
+}
+
 /**
  * 지역×서비스 페이지의 색인 자격 판정 (페이지 robots + 사이트맵 동기화용).
- * 현재 22개 지역은 모두 고유 intro/scene/FAQ를 가져 80점↑로 통과한다.
+ * 현재 등록된 지역은 모두 고유 intro/scene/FAQ를 가져 80점↑로 통과한다.
  * 미래에 얇은/중복 지역이 추가되면 자동으로 noindex + 사이트맵 제외된다.
  */
 export function regionServiceDecision(
@@ -473,26 +511,30 @@ export function regionServiceDecision(
   if (!service || !region) return null;
 
   const combinedQ = `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`;
-  return scoreIndexability({
+  // 내부링크는 라우트가 실제 렌더하는 수와 동기화한다:
+  // 브레드크럼(홈·서비스허브) 2 + 다른 지역 스포크 siblingRegions(최대 6)
+  // + 서비스 허브 "전체 보기" 1 + 하단 요금 링크 1
+  const internalLinks = 2 + siblingRegions(service.slug, region.slug, 6).length + 2;
+  return decideFromContent({
     title: `${region.full} ${service.ko} | 소스코드 이관·정액 패키지 — 름랩`,
     description: `${region.full} ${service.ko}. ${region.access} ${service.priceLine}. 소스코드 전체 이관과 직접 운영 교육 포함.`,
     h1: `${region.full} ${service.ko}`,
-    uniqueBodyText: [
+    // 실제 화면에 렌더되는 고유 본문 조각 (가격/기간/산출물 등 의사결정 정보는 detectDecisionInfo가 측정)
+    bodyParts: [
       region.intro,
       region.access,
       region.scene,
       service.intro,
       service.priceLine,
-      ...service.deliverables,
+      service.deliverables,
       region.faq.a,
       service.faq.a,
-    ].join(' '),
+    ],
     faqQuestions: [region.faq.q, service.faq.q, combinedQ],
-    internalLinks: 8,
-    hasConsultCta: true,
-    hasDecisionInfo: true,
+    internalLinks,
     hasLocalAccessInfo: Boolean(region.access),
-    hasUniqueMedia: false,
+    // 라우트가 지역명 고유 alt를 가진 인라인 SVG 히어로를 항상 렌더 (regionServiceMedia)
+    hasUniqueMedia: Boolean(regionServiceMedia(service.slug, region.slug)),
     // 지역 고유성(상권)만 비교 — 서비스 공통 단락은 제외해 정상 페이지가 오탐되지 않게 한다
     peerFingerprints: REGIONS.filter((r) => r.slug !== region.slug).map((r) =>
       fingerprint(`${r.intro} ${r.scene}`),

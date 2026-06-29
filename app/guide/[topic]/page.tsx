@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
-import { GUIDES, getGuide, guideCanonical } from '@/lib/guides';
+import { GUIDES, getGuide, guideCanonical, guideDecision } from '@/lib/guides';
+import { robotsFor } from '@/lib/index-quality';
 import { GuideArticleJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
@@ -36,7 +37,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: guide.title }],
     },
     twitter: { card: 'summary_large_image', title: guide.title, description: guide.description.slice(0, 200), images: [SITE.defaultOgImage] },
-    robots: { index: true, follow: true },
+    // 색인 품질 게이트: 80점↑만 index (사이트맵과 동일 판정)
+    robots: robotsFor(guideDecision(guide.slug)!),
   };
 }
 

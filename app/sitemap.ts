@@ -3,9 +3,9 @@ import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 import { getLandings, getClusters } from '../lib/data';
 import { BLOG_POSTS, blogCanonical } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
-import { INDUSTRIES, industryCanonical } from '@/lib/industries';
-import { GUIDES, guideCanonical } from '@/lib/guides';
-import { COMPARES, compareCanonical } from '@/lib/compare';
+import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
+import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
+import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -74,8 +74,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // 프로그래매틱 2축 — 업종×앱개발
+  // 프로그래매틱 2축 — 업종×앱개발 (색인 게이트 통과분만 포함)
   for (const ind of INDUSTRIES) {
+    const decision = industryDecision(ind.slug);
+    if (decision && !decision.inSitemap) continue;
     out.push({
       url: industryCanonical(ind.slug),
       lastModified: now,
@@ -84,8 +86,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // 3축 — 비용·견적·가이드
+  // 3축 — 비용·견적·가이드 (색인 게이트 통과분만 포함)
   for (const g of GUIDES) {
+    const decision = guideDecision(g.slug);
+    if (decision && !decision.inSitemap) continue;
     out.push({
       url: guideCanonical(g.slug),
       lastModified: new Date(g.publishedAt),
@@ -94,8 +98,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // 3축 — 비교
+  // 3축 — 비교 (색인 게이트 통과분만 포함)
   for (const c of COMPARES) {
+    const decision = compareDecision(c.slug);
+    if (decision && !decision.inSitemap) continue;
     out.push({
       url: compareCanonical(c.slug),
       lastModified: new Date(c.publishedAt),
