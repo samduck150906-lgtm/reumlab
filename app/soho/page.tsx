@@ -171,7 +171,7 @@ export default function SohoPage() {
 
             <div className="s-btns">
               <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_hero_apply">
-                🩺 무료 진단 신청하기
+                💬 무료 상담 신청하기
               </a>
               <a href={SITE.phoneHref} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_phone">
                 📞 전화 상담
@@ -431,14 +431,15 @@ export default function SohoPage() {
         {/* ── 무료 진단 신청 폼 ── */}
         <section className="s-sec t-light2 acc-teal" id="apply">
           <div className="s-wrap">
-            <p className="s-label">FREE DIAGNOSIS</p>
+            <p className="s-label">GET STARTED</p>
             <h2 className="s-h">
-              내 업장, 지금 뭐가 문제일까요?<br />
-              <span className="s-g">무료로 진단</span>해 드립니다
+              내 업장 홈페이지 제작,<br />
+              <span className="s-g">무료 상담</span>으로 시작하세요
             </h2>
             <p className="s-lead">
-              네이버 플레이스·스마트스토어·당근마케팅 노출 상태를 점검하고,
-              지금 당장 바꿔야 할 것만 콕 집어 알려드립니다. 비용은 0원입니다.
+              신청만 남겨주시면 현재 검색 노출 상태를 무료로 점검하고,
+              내 업장에 어떤 홈페이지가 맞는지 견적·방향까지 함께 정리해 드립니다.
+              상담은 무료, 결정은 자유입니다.
             </p>
 
             <div className="s-gets">
@@ -446,24 +447,24 @@ export default function SohoPage() {
               <div className="s-gets-grid">
                 <div className="s-gets-item">
                   <span className="s-gets-ico" aria-hidden="true">📊</span>
-                  <b>현재 검색 노출 점검</b>
-                  <span>네이버·구글에서 내 업장이 실제로 어떻게 보이는지</span>
+                  <b>현재 검색 노출 무료 점검</b>
+                  <span>지금 내 업장이 검색에서 어떻게 보이는지</span>
                 </div>
                 <div className="s-gets-item">
-                  <span className="s-gets-ico" aria-hidden="true">🆚</span>
-                  <b>경쟁업체 비교</b>
-                  <span>비슷한 업장 대비 부족한 점이 무엇인지</span>
+                  <span className="s-gets-ico" aria-hidden="true">🛠</span>
+                  <b>내 업장에 맞는 제작 방향</b>
+                  <span>어떤 페이지·구성이 필요한지 함께 정리</span>
                 </div>
                 <div className="s-gets-item">
-                  <span className="s-gets-ico" aria-hidden="true">✅</span>
-                  <b>당장 바꿀 액션</b>
-                  <span>지금 손보면 효과 보는 것들을 콕 집어서</span>
+                  <span className="s-gets-ico" aria-hidden="true">💰</span>
+                  <b>정확한 견적·일정 안내</b>
+                  <span>49만원부터, 숨은 비용 없이 미리</span>
                 </div>
               </div>
             </div>
 
             <ul className="s-trust" aria-label="신뢰 포인트">
-              <li>💸 비용 0원</li>
+              <li>💬 상담 무료</li>
               <li>🚫 월 관리비 없음</li>
               <li>📦 소스코드 이관</li>
               <li>🏪 개발자가 직접 매장 운영</li>

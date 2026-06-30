@@ -23,7 +23,7 @@ const DIAGNOSIS_ITEMS = [
   '네이버 플레이스',
   '당근 마케팅',
   '스마트스토어',
-  '전체 진단 희망',
+  '전체 상담 희망',
 ];
 
 const DIAGNOSE_CHECKLIST = [
@@ -109,9 +109,9 @@ export default function SohoForm() {
     return (
       <div className="sf-card sf-done" role="status" aria-live="polite">
         <div className="sf-done-ico" aria-hidden="true">✓</div>
-        <h3>무료 진단 신청이 접수됐어요!</h3>
+        <h3>무료 상담 신청이 접수됐어요!</h3>
         <p>
-          영업일 기준 1~2일 내에 입력해 주신 연락처로 진단 결과와 함께 연락드릴게요.
+          영업일 기준 1~2일 내에 입력해 주신 연락처로 상담 안내와 함께 연락드릴게요.
           <br />
           빠른 상담을 원하시면 전화(010-8111-9370)로도 편하게 문의 주세요.
         </p>
@@ -125,7 +125,7 @@ export default function SohoForm() {
   return (
     <div className="sf-card">
       <ul className="sf-checklist" aria-label="무료로 진단해 드리는 항목">
-        <li className="sf-checklist-h">이런 항목을 무료로 진단해 드려요</li>
+        <li className="sf-checklist-h">상담 때 이런 것까지 함께 봐드려요</li>
         {DIAGNOSE_CHECKLIST.map((c) => (
           <li key={c} className="sf-checklist-item">
             <span className="sf-checklist-ck" aria-hidden="true">✓</span>
@@ -222,7 +222,7 @@ export default function SohoForm() {
 
         {/* 무료 진단을 받고 싶은 항목 */}
         <div className="sf-field">
-          <span className="sf-label">무료 진단을 받고 싶은 항목</span>
+          <span className="sf-label">관심 있는 항목 (복수 선택 가능)</span>
           <div className="sf-checks">
             {DIAGNOSIS_ITEMS.map((item) => (
               <label key={item} className="sf-check">
@@ -281,11 +281,8 @@ export default function SohoForm() {
           data-analytics="cta_soho_apply_submit"
           disabled={status === 'submitting'}
         >
-          {status === 'submitting' ? '신청 중…' : '무료 진단 신청하기'}
+          {status === 'submitting' ? '신청 중…' : '무료 상담 신청하기'}
         </button>
-        <p className="sf-reassure">
-          30초면 신청 완료 · 영업일 1~2일 내 연락 · 부담되면 진단만 받으셔도 됩니다
-        </p>
       </form>
     </div>
   );
