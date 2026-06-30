@@ -8,7 +8,7 @@ export function Analytics() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   // 메타 픽셀 ID — 환경변수(NEXT_PUBLIC_META_PIXEL_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
   // 픽셀 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
-  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1021548000778850';
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1019901144020877';
 
   return (
     <>
