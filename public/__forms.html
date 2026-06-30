@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <title>Netlify form detection</title>
+  </head>
+  <body>
+    <!--
+      Netlify Forms 감지 전용 파일.
+      /soho 폼은 React(SohoForm.tsx)로 렌더되어 빌드 환경에 따라 Netlify 봇이
+      못 읽을 수 있어, 동일한 name·필드를 가진 정적 폼을 여기에 둬서 확실히 감지시킵니다.
+      실제 제출은 SohoForm이 fetch로 처리합니다. 이 파일은 화면에 노출되지 않습니다(noindex).
+      필드 name을 바꾸면 이 파일도 함께 수정하세요.
+    -->
+    <form name="soho-diagnosis" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="soho-diagnosis" />
+      <input type="text" name="이름" />
+      <input type="text" name="연락처" />
+      <input type="checkbox" name="진단항목" value="네이버 플레이스" />
+      <input type="checkbox" name="진단항목" value="당근 마케팅" />
+      <input type="checkbox" name="진단항목" value="스마트스토어" />
+      <input type="checkbox" name="진단항목" value="전체 진단 희망" />
+      <textarea name="상호명"></textarea>
+      <input type="checkbox" name="이용약관동의" value="동의" />
+      <input type="checkbox" name="개인정보동의" value="동의" />
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>
