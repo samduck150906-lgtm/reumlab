@@ -50,8 +50,8 @@ export function OrganizationJsonLd() {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '인계로124번길 19, 12층 1208호',
-      addressLocality: '수원시 팔달구',
+      streetAddress: '동탄첨단산업1로 58, 307호',
+      addressLocality: '화성시',
       addressRegion: '경기도',
       addressCountry: 'KR',
     },
@@ -119,8 +119,8 @@ export function ReumHomeGraphJsonLd() {
       email: SITE.email,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '인계로124번길 19, 12층 1208호',
-        addressLocality: '수원시 팔달구',
+        streetAddress: '동탄첨단산업1로 58, 307호',
+        addressLocality: '화성시',
         addressRegion: '경기도',
         addressCountry: 'KR',
       },
@@ -229,8 +229,8 @@ export function LandingServiceJsonLd({
       provider: { '@id': `${SITE.domain}/#organization` },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '인계로124번길 19, 12층 1208호',
-        addressLocality: '수원시 팔달구',
+        streetAddress: '동탄첨단산업1로 58, 307호',
+        addressLocality: '화성시',
         addressRegion: '경기도',
         addressCountry: 'KR',
       },
@@ -320,8 +320,8 @@ export function RegionServiceJsonLd({
       openingHours: ['Mo-Fr 10:00-18:00'],
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '인계로124번길 19, 12층 1208호',
-        addressLocality: '수원시 팔달구',
+        streetAddress: '동탄첨단산업1로 58, 307호',
+        addressLocality: '화성시',
         addressRegion: '경기도',
         addressCountry: 'KR',
       },

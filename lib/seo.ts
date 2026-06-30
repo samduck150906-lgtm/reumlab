@@ -6,7 +6,7 @@ export const SITE = {
   phone: '010-8111-9370',
   /** tel: 링크용 (하이픈 제거) */
   phoneHref: 'tel:01081119370',
-  address: '경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동)',
+  address: '경기도 화성시 동탄첨단산업1로 58, 307호(영천동)',
   email: 'ceo@eternalsix.com',
   /** 문의는 전화·이메일로만 받습니다 */
   company: '앱·웹개발 스튜디오 름랩',

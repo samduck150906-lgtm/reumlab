@@ -2,7 +2,7 @@ function Footer() {
   const company = '앱·웹개발 스튜디오 름랩';
   const phone = '010-8111-9370';
   const email = 'ceo@eternalsix.com';
-  const address = '경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동)';
+  const address = '경기도 화성시 동탄첨단산업1로 58, 307호(영천동)';
   return (
     <footer style={{ padding: '28px 20px', backgroundColor: '#f9fafb', borderTop: '1px solid #f3f4f6', color: '#6b7280', fontSize: '12px', lineHeight: '1.6', marginTop: 'auto' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>

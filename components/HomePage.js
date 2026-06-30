@@ -356,7 +356,7 @@ export default function HomePage({ site }) {
             <br />
             연락처: 010-8111-9370
             <br />
-            주소: 경기도 수원시 팔달구 인계로124번길 19, 12층 1208호(인계동) <span>|</span> 이메일:{' '}
+            주소: 경기도 화성시 동탄첨단산업1로 58, 307호(영천동) <span>|</span> 이메일:{' '}
             <a href="mailto:ceo@eternalsix.com" style={{ color: 'var(--text-dim)' }}>ceo@eternalsix.com</a>
           </p>
         </div>
