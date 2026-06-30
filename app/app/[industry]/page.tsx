@@ -120,6 +120,7 @@ export default function IndustryPage({ params }: Props) {
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{ind.ko}에서 어떻게 쓰이나</h2>
             <p className="hub-intro">{ind.scenario}</p>
+            {ind.benefits && <p className="hub-intro" style={{ marginTop: 14 }}>{ind.benefits}</p>}
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>

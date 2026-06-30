@@ -196,7 +196,9 @@ export function decideFromContent(input: {
   hasLocalAccessInfo?: boolean;
   peerFingerprints?: Set<string>[];
 }): IndexDecision {
-  const uniqueBodyText = flattenBody(input.bodyParts);
+  // FAQ 질문도 화면에 실제 렌더되는 고유 본문이므로 분량 측정에 포함한다
+  // (FAQ 개수 채점과는 별개 — 여기서는 길이에만 기여).
+  const uniqueBodyText = flattenBody([...input.bodyParts, ...input.faqQuestions]);
   return scoreIndexability({
     title: input.title,
     description: input.description,
