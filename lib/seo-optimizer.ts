@@ -125,14 +125,17 @@ export class SEOOptimizer {
       ],
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '서울시 강남구',
+        streetAddress: '동탄첨단산업1로 58, 307호(영천동)',
+        addressLocality: '화성시',
+        addressRegion: '경기도',
+        postalCode: '18469',
         addressCountry: 'KR',
       },
       contactPoint: {
         '@type': 'ContactPoint',
         contactType: '상담',
-        telephone: '+82-2-XXXX-XXXX',
-        email: 'contact@reumlab.com',
+        telephone: '+82-10-8111-9370',
+        email: 'ceo@eternalsix.com',
       },
     };
   }
