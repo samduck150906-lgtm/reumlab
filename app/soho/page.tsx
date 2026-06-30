@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { SITE } from '@/lib/seo';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import SohoForm from './SohoForm';
 import './soho.css';
 
 const PAGE_URL = `${SITE.domain}/soho/`;
@@ -169,11 +170,11 @@ export default function SohoPage() {
             </div>
 
             <div className="s-btns">
-              <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_hero_phone">
-                📞 내 업장 맞춤 상담받기
+              <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_hero_apply">
+                🩺 무료 진단 신청하기
               </a>
-              <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_email">
-                ✉️ 이메일 문의
+              <a href={SITE.phoneHref} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_phone">
+                📞 전화 상담
               </a>
             </div>
           </div>
@@ -424,6 +425,23 @@ export default function SohoPage() {
                 ✉️ 이메일 문의
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* ── 무료 진단 신청 폼 ── */}
+        <section className="s-sec t-light2 acc-teal" id="apply">
+          <div className="s-wrap">
+            <p className="s-label">FREE DIAGNOSIS</p>
+            <h2 className="s-h">
+              내 업장, 지금 뭐가 문제일까요?<br />
+              <span className="s-g">무료로 진단</span>해 드립니다
+            </h2>
+            <p className="s-lead">
+              네이버 플레이스·스마트스토어·당근마케팅 노출 상태를 점검하고,
+              지금 당장 바꿔야 할 것만 콕 집어 알려드립니다. 비용은 0원입니다.
+            </p>
+
+            <SohoForm />
           </div>
         </section>
 

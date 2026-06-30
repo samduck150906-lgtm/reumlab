@@ -594,6 +594,226 @@
 .soho .s-crumb { font-size: 13px; color: var(--c-dim); margin-bottom: 22px; }
 .soho .s-crumb a:hover { color: var(--mint); }
 
+/* ───────────────────────────────────────────────
+   무료 진단 신청 폼 (Netlify Forms)
+─────────────────────────────────────────────── */
+.soho .sf-card {
+  margin-top: 38px;
+  padding: clamp(22px, 4vw, 34px);
+  border-radius: 22px;
+  background: var(--c-card);
+  border: 1px solid var(--c-line);
+  box-shadow: 0 24px 60px rgba(20, 40, 28, 0.10);
+}
+
+/* 진단 항목 체크리스트 */
+.soho .sf-checklist {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--c-card2);
+  border: 1px solid var(--c-line);
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.soho .sf-checklist-h {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--c-text);
+  margin-bottom: 2px;
+}
+.soho .sf-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--c-sub);
+}
+.soho .sf-checklist-ck {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 7px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 900;
+  color: #06170d;
+  background: linear-gradient(120deg, var(--green-bright), var(--teal));
+}
+
+/* 폼 */
+.soho .sf-form { display: flex; flex-direction: column; gap: 22px; }
+.soho .sf-field { display: flex; flex-direction: column; gap: 10px; }
+.soho .sf-label {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--c-text);
+}
+.soho .sf-req { color: var(--coral); font-weight: 800; }
+
+.soho .sf-input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 13px;
+  border: 1px solid var(--c-line);
+  background: #fff;
+  color: #16231b;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.soho .sf-input::placeholder { color: #aab6ad; }
+.soho .sf-input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(47, 191, 110, 0.16);
+}
+.soho .sf-textarea { resize: vertical; min-height: 96px; line-height: 1.6; }
+
+/* 연락처 3분할 */
+.soho .sf-phone {
+  display: grid;
+  grid-template-columns: minmax(96px, 1.1fr) auto 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+.soho .sf-phone-prefix {
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%234d6356' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  cursor: pointer;
+}
+.soho .sf-phone-dash { color: var(--c-dim); font-weight: 700; text-align: center; }
+
+/* 진단 항목 체크박스 그리드 */
+.soho .sf-checks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 18px;
+}
+.soho .sf-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--c-text);
+  cursor: pointer;
+}
+.soho .sf-check input,
+.soho .sf-agree input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--c-line);
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  display: grid;
+  place-items: center;
+  transition: background 0.14s ease, border-color 0.14s ease;
+}
+.soho .sf-check input:checked,
+.soho .sf-agree input:checked {
+  background: linear-gradient(120deg, var(--green-bright), var(--teal));
+  border-color: transparent;
+}
+.soho .sf-check input:checked::after,
+.soho .sf-agree input:checked::after {
+  content: '✓';
+  font-size: 12px;
+  font-weight: 900;
+  color: #06170d;
+}
+.soho .sf-check input:focus-visible,
+.soho .sf-agree input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(47, 191, 110, 0.22);
+}
+
+/* 약관 동의 */
+.soho .sf-agrees {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 4px;
+}
+.soho .sf-agree {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--c-sub);
+  cursor: pointer;
+}
+.soho .sf-agree a { color: var(--c-accent); font-weight: 700; text-decoration: underline; }
+
+/* honeypot 숨김 */
+.soho .sf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* 제출 버튼 */
+.soho .sf-submit {
+  margin-top: 6px;
+  width: 100%;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #06170d;
+  background: linear-gradient(100deg, var(--green-bright), var(--teal));
+  box-shadow: 0 16px 38px rgba(46, 217, 137, 0.28);
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+}
+.soho .sf-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(46, 217, 137, 0.4);
+}
+.soho .sf-submit:disabled { opacity: 0.65; cursor: progress; }
+
+/* 메시지 */
+.soho .sf-msg { font-size: 14px; line-height: 1.6; margin: -4px 0 0; }
+.soho .sf-msg-error { color: var(--coral-deep); }
+
+/* 완료 카드 */
+.soho .sf-done { text-align: center; }
+.soho .sf-done-ico {
+  width: 64px;
+  height: 64px;
+  margin: 4px auto 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 900;
+  color: #06170d;
+  background: linear-gradient(120deg, var(--green-bright), var(--teal));
+  box-shadow: 0 14px 34px rgba(46, 217, 137, 0.32);
+}
+.soho .sf-done h3 { font-size: 21px; font-weight: 800; color: var(--c-text); margin-bottom: 12px; }
+.soho .sf-done p { font-size: 14.5px; color: var(--c-sub); line-height: 1.8; }
+.soho .sf-again {
+  margin-top: 22px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid var(--c-line);
+  background: var(--c-card2);
+  color: var(--c-text);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.16s ease;
+}
+.soho .sf-again:hover { transform: translateY(-2px); }
+
 /* 반응형 */
 @media (max-width: 620px) {
   .soho .s-grid,
@@ -605,4 +825,5 @@
   .soho .s-bubble { max-width: 92%; }
   .soho .s-np-grid { grid-template-columns: 1fr; justify-items: center; }
   .soho .np-points { width: 100%; }
+  .soho .sf-checks { grid-template-columns: 1fr; }
 }
