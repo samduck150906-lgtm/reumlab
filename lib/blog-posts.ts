@@ -1,4 +1,5 @@
 import { SITE } from '@/lib/seo';
+import { fingerprint, jaccard, visibleLength } from './index-quality';
 
 export interface BlogPost {
   slug: string;
@@ -7737,4 +7738,41 @@ export function getAllBlogSlugs(): string[] {
 
 export function blogCanonical(slug: string): string {
   return `${base}/${slug}/`;
+}
+
+/**
+ * 블로그 색인 품질 게이트 — 얇은(<600자)·치환형 중복(기존 색인 글과 70%+) 글을
+ * noindex,follow + 사이트맵 제외 처리해 사이트 전체 품질을 보호한다.
+ * 라우트 robots·사이트맵·목록이 공통으로 이 판정을 사용한다. (되돌리려면 게이트만 끄면 됨)
+ */
+const MIN_BLOG_BODY = 600;
+function blogBodyText(p: BlogPost): string {
+  return (p.htmlBody ?? p.paragraphs.join(' ')).replace(/<[^>]+>/g, ' ');
+}
+let _indexableBlogSlugs: Set<string> | null = null;
+function indexableBlogSlugs(): Set<string> {
+  if (_indexableBlogSlugs) return _indexableBlogSlugs;
+  const kept: Set<string>[] = [];
+  const out = new Set<string>();
+  for (const p of BLOG_POSTS) {
+    const body = blogBodyText(p);
+    if (visibleLength(body) < MIN_BLOG_BODY) continue; // 얇은 콘텐츠 제외
+    const fp = fingerprint(`${p.title} ${p.description} ${body}`);
+    if (kept.some((k) => jaccard(fp, k) >= 0.7)) continue; // 치환형 중복 제외
+    out.add(p.slug);
+    kept.push(fp);
+  }
+  _indexableBlogSlugs = out;
+  return out;
+}
+
+/** 이 글이 색인 대상인지(사이트맵 포함·robots index 여부) */
+export function blogShouldIndex(slug: string): boolean {
+  return indexableBlogSlugs().has(slug);
+}
+
+/** 색인 대상 글만 반환 (목록·내부링크용) */
+export function indexableBlogPosts(): BlogPost[] {
+  const set = indexableBlogSlugs();
+  return BLOG_POSTS.filter((p) => set.has(p.slug));
 }

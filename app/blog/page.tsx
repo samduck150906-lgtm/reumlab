@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BLOG_POSTS } from '@/lib/blog-posts';
+import { indexableBlogPosts } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
 import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -57,7 +57,10 @@ export default function BlogIndexPage() {
         <section className="sec sec-cream">
           <div className="container">
             <ul className="link-grid" style={{ marginTop: 8 }}>
-              {BLOG_POSTS.map((p) => (
+              {indexableBlogPosts()
+                .slice()
+                .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+                .map((p) => (
                 <li key={p.slug} style={{ listStyle: 'none' }}>
                   <Link href={`/blog/${p.slug}/`} style={{ display: 'block', minHeight: '100%' }}>
                     <article

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import {
   BLOG_POSTS,
   blogCanonical,
+  blogShouldIndex,
   getAllBlogSlugs,
   getBlogPostBySlug,
 } from '@/lib/blog-posts';
@@ -44,7 +45,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description.slice(0, 200),
       images: [SITE.defaultOgImage],
     },
-    robots: { index: true, follow: true },
+    // 얇은·중복 글은 색인 제외(noindex,follow) — 사이트 전체 품질 보호
+    robots: blogShouldIndex(post.slug)
+      ? { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } }
+      : { index: false, follow: true, googleBot: { index: false, follow: true } },
   };
 }
 
@@ -53,7 +57,8 @@ export default function BlogPostPage({ params }: Props) {
   if (!post) notFound();
   const url = blogCanonical(post.slug);
 
-  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  // 관련 글은 색인 품질을 통과한 글 우선 (얇은·중복 글로 링크 자산이 새지 않게)
+  const related = BLOG_POSTS.filter((p) => p.slug !== post.slug && blogShouldIndex(p.slug)).slice(0, 3);
 
   return (
     <>

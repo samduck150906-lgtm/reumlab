@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 import { getLandings, getClusters } from '../lib/data';
-import { BLOG_POSTS, blogCanonical } from '@/lib/blog-posts';
+import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   for (const b of BLOG_POSTS) {
+    if (!blogShouldIndex(b.slug)) continue; // 얇은·중복 글은 사이트맵 제외
     out.push({
       url: blogCanonical(b.slug),
       lastModified: new Date(b.publishedAt),
