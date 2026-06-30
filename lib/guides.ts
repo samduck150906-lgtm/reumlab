@@ -296,6 +296,8 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development/dongtan/', label: '동탄 앱개발 보기' },
       { href: '/app-development/hwaseong/', label: '화성 앱개발 보기' },
       { href: '/web-development/dongtan/', label: '동탄 홈페이지 제작 보기' },
+      { href: '/blog/dongtan-reservation-app/', label: '동탄 예약앱 만들기 (노쇼 줄이기)' },
+      { href: '/blog/hwaseong-dongtan-business-web/', label: '동탄첨단산업단지 업무 시스템 개발' },
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-06-30',
