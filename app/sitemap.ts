@@ -63,14 +63,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // 프로그래매틱 1축 — 지역×서비스 (색인 게이트 통과분만 포함)
+  // 본거지(동탄·화성)와 핵심 인접지(수원)는 크롤 우선순위·갱신빈도를 높여 노출 강화
+  const HOME_BASE_REGIONS = new Set(['dongtan', 'hwaseong', 'suwon']);
   for (const { slug, region } of allRegionServiceParams()) {
     const decision = regionServiceDecision(slug, region);
     if (decision && !decision.inSitemap) continue;
+    const homeBase = HOME_BASE_REGIONS.has(region);
     out.push({
       url: regionServiceCanonical(slug, region),
       lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: homeBase ? 'weekly' : 'monthly',
+      priority: homeBase ? 0.8 : 0.7,
     });
   }
 
