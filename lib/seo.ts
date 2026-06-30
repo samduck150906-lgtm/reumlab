@@ -47,9 +47,9 @@ export interface PageSeo {
 export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   // ─── 메인 (에이전시 정체성) ───
   '': {
-    title: '름랩 REUMLAB | Flutter 앱개발, 랜딩페이지 제작, MVP 외주개발 — 수원 개발 스튜디오',
+    title: '름랩 REUMLAB | Flutter 앱개발, 랜딩페이지 제작, MVP 외주개발 — 동탄·수원 개발 스튜디오',
     description:
-      '수원 인계동 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 49만 원부터, 앱 290만 원부터(VAT 포함 정액).',
+      '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 49만 원부터, 앱 290만 원부터(VAT 포함 정액).',
     keywords: [
       '외주개발',
       '앱개발 외주',
@@ -59,6 +59,9 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       '홈페이지 제작',
       '수원 앱개발',
       '수원 외주개발',
+      '동탄 앱개발',
+      '화성 앱개발',
+      '동탄 외주개발',
       '소스코드 이관',
       '스타트업 MVP',
     ],
@@ -180,7 +183,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'app-development': {
     title: 'App Development Outsourcing Korea | Flutter MVP | REUMLAB',
     description:
-      'Flutter app development studio in Suwon, Korea. iOS + Android in one codebase. MVP in ~21 days. Full source code handover + 1:1 operation training. From ₩2,900,000 VAT incl.',
+      'Flutter app development studio in Hwaseong (Dongtan), Korea. iOS + Android in one codebase. MVP in ~21 days. Full source code handover + 1:1 operation training. From ₩2,900,000 VAT incl.',
     keywords: [
       '앱개발 외주',
       'Flutter 앱개발',
@@ -190,7 +193,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       'mobile app outsourcing',
     ],
     ogTitle: 'Flutter App Development | MVP in 21 Days | REUMLAB Korea',
-    ogDescription: 'One codebase, iOS + Android. Full source handover. Suwon-based studio serving all of Korea.',
+    ogDescription: 'One codebase, iOS + Android. Full source handover. Hwaseong (Dongtan) studio serving Suwon and all of Korea.',
     h1: '앱개발 외주 · App Development',
     serviceDesc: '름랩은 Flutter로 iOS·Android 앱을 한 번에 만듭니다. 앱 라이트 MVP는 290만 원부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원·약 21일, 소스코드 전체 이관. 구글 광고·영문 검색으로 유입된 고객도 동일한 조건으로 상담합니다.',
     canonical: 'https://reumlab.com/app-development',
@@ -199,7 +202,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'web-development': {
     title: 'Web Development & Landing Page Korea | REUMLAB',
     description:
-      'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩490,000 VAT incl. Suwon studio.',
+      'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩490,000 VAT incl. Hwaseong (Dongtan) studio.',
     keywords: [
       '홈페이지 제작',
       '랜딩페이지 제작',
@@ -237,7 +240,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'flutter-development': {
     title: 'Flutter App Development Studio Korea | REUMLAB',
     description:
-      'Flutter specialist studio in Suwon Korea. One codebase for iOS and Android. 50–70% cost vs native. Full source handover + operation training.',
+      'Flutter specialist studio in Hwaseong (Dongtan), Korea. One codebase for iOS and Android. 50–70% cost vs native. Full source handover + operation training.',
     keywords: [
       'Flutter 개발',
       'Flutter 앱개발',
@@ -256,7 +259,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   mvp: {
     title: 'MVP 개발 외주 | 지역별 스타트업 MVP — 름랩 REUMLAB',
     description:
-      '검증에 필요한 핵심 기능부터 빠르게 출시하는 MVP 개발. Flutter 크로스플랫폼, 14~30일, VAT 포함 290만 원부터. 소스코드 전체 이관 + 직접 운영 교육. 수원 거점, 전국 어디서나 진행.',
+      '검증에 필요한 핵심 기능부터 빠르게 출시하는 MVP 개발. Flutter 크로스플랫폼, 14~30일, VAT 포함 290만 원부터. 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: ['MVP 개발', 'MVP 외주', '스타트업 MVP', '최소 기능 제품', 'Lean MVP', '앱개발 외주'],
     ogTitle: 'MVP 개발 외주 | 핵심 기능부터 빠르게 — 름랩',
     ogDescription: '시장 검증에 필요한 핵심 기능부터 Lean MVP로. 소스코드 전체 이관 + 직접 운영 교육.',
@@ -286,7 +289,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   flutter: {
     title: 'Flutter 앱개발 외주 | iOS·안드로이드 동시 — 름랩 REUMLAB',
     description:
-      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 290만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 수원 거점, 전국 어디서나 진행.',
+      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 290만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: ['Flutter 앱개발', 'Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주', 'iOS 안드로이드 앱'],
     ogTitle: 'Flutter 앱개발 외주 | 하나의 코드로 두 플랫폼 — 름랩',
     ogDescription: '하나의 코드로 iOS·Android 동시 제작. MVP 단계 시간·비용을 줄이는 Flutter 앱개발.',
