@@ -114,14 +114,14 @@ export class SEOOptimizer {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'REUMLAB',
+      name: '름랩',
+      alternateName: 'REUMLAB',
       url: 'https://reumlab.com',
       logo: 'https://reumlab.com/logo.png',
       description: '앱 개발, 웹개발, 홈페이지 제작 비용 · 기간 완벽 정리',
+      // 실제로 존재하는 채널만 등록 — 가짜/추정 URL 금지
       sameAs: [
-        'https://facebook.com/reumlab',
-        'https://twitter.com/reumlab',
-        'https://instagram.com/reumlab',
+        'https://naver.me/FORRCoFc', // 네이버 플레이스
       ],
       address: {
         '@type': 'PostalAddress',
