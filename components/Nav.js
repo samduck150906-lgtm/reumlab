@@ -29,7 +29,8 @@ export default function Nav({ site }) {
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`} id="nav">
         <div className="container">
           <div className="nav-inner">
-            <Link href="/" className="nav-logo en">
+            <Link href="/" className="nav-logo en" aria-label="REUMLAB 홈">
+              <img src="/logo.png" alt="" width="28" height="28" className="nav-logo-mark" />
               <span>REUMLAB</span>
             </Link>
             <ul className="nav-links">

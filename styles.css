@@ -162,10 +162,8 @@ br.br-pc { display: inline; }
 }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18.5px; letter-spacing: -0.03em; white-space: nowrap; }
 .logo__mark {
-  width: 30px; height: 30px; border-radius: 9px; flex: none;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dd) 100%);
-  display: grid; place-items: center; color: #fff; font-size: 14px; font-weight: 900;
-  box-shadow: 0 4px 12px rgba(47,107,255,.35);
+  width: 30px; height: 30px; flex: none;
+  object-fit: contain; display: block;
 }
 .logo__ko { color: var(--ink-3); font-weight: 700; font-size: 15px; }
 
