@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" width="440" height="120" role="img" aria-label="름랩 ReumLab · 웹앱개발 스튜디오">
+  <defs>
+    <linearGradient id="rl-grad" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#2f6bff"/>
+      <stop offset=".5" stop-color="#1f93da"/>
+      <stop offset="1" stop-color="#14b8c4"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(6 14) scale(0.92)">
+    <path fill-rule="evenodd" fill="url(#rl-grad)" d="M18 20 L50 20 A16 16 0 0 1 50 52 L34 52 L34 80 L18 80 Z M34 30 L42 30 A7 7 0 0 1 42 44 L34 44 Z"/>
+    <path fill="url(#rl-grad)" d="M33 49 L47 49 L66 80 L50 80 Z"/>
+    <rect x="60" y="26" width="10" height="10" rx="2.5" fill="#17b6c6"/>
+    <rect x="72" y="14" width="10" height="10" rx="2.5" fill="#1ab0a6"/>
+    <rect x="84" y="2"  width="10" height="10" rx="2.5" fill="#57c04a"/>
+  </g>
+  <text x="120" y="62" font-family="'Pretendard','Noto Sans KR',system-ui,sans-serif" font-size="44" font-weight="800" letter-spacing="-1">
+    <tspan fill="#16202e">름랩 Reum</tspan><tspan fill="#2f6bff">Lab</tspan>
+  </text>
+  <text x="122" y="90" font-family="'Pretendard','Noto Sans KR',system-ui,sans-serif" font-size="16.5" font-weight="600" letter-spacing="2" fill="#8794ab">웹앱개발 스튜디오</text>
+</svg>
