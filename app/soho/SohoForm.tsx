@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * 무료 진단 신청 폼 — Netlify Forms 연동.
@@ -34,6 +34,9 @@ const DIAGNOSE_CHECKLIST = [
   '문의·구매를 늘릴 수 있는 개선 방향',
 ];
 
+/** 광고 유입 추적용 — 폼 제출에 함께 담아 어떤 캠페인에서 온 신청인지 남깁니다. */
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function SohoForm() {
@@ -41,8 +44,30 @@ export default function SohoForm() {
   const [prefix, setPrefix] = useState('010');
   const [mid, setMid] = useState('');
   const [last, setLast] = useState('');
+  const [utm, setUtm] = useState<Record<string, string>>({});
 
   const phone = [prefix, mid, last].filter(Boolean).join('-');
+
+  // 광고로 유입될 때 URL의 utm_*·fbclid를 받아 세션에 보관 → 폼 제출에 함께 전송.
+  useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const fromUrl: Record<string, string> = {};
+      UTM_KEYS.forEach((k) => {
+        const v = params.get(k);
+        if (v) fromUrl[k] = v;
+      });
+      if (Object.keys(fromUrl).length > 0) {
+        sessionStorage.setItem('reum_utm', JSON.stringify(fromUrl));
+        setUtm(fromUrl);
+      } else {
+        const saved = sessionStorage.getItem('reum_utm');
+        if (saved) setUtm(JSON.parse(saved));
+      }
+    } catch {
+      /* sessionStorage 차단 환경 등은 무시 */
+    }
+  }, []);
 
   const onlyDigits = (v: string) => v.replace(/[^0-9]/g, '');
 
@@ -68,8 +93,12 @@ export default function SohoForm() {
       setPrefix('010');
       setMid('');
       setLast('');
-      if (typeof window !== 'undefined' && (window as any).dataLayer) {
-        (window as any).dataLayer.push({ event: 'soho_diagnosis_submit' });
+      if (typeof window !== 'undefined') {
+        const w = window as any;
+        // 메타 픽셀 전환 이벤트(웹사이트 전환 광고 최적화 기준).
+        if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
+        // GTM/GA4 등 dataLayer 트리거용.
+        if (w.dataLayer) w.dataLayer.push({ event: 'soho_diagnosis_submit' });
       }
     } catch {
       setStatus('error');
@@ -116,6 +145,10 @@ export default function SohoForm() {
       >
         {/* Netlify 폼 인식·동작용 필수 hidden */}
         <input type="hidden" name="form-name" value={FORM_NAME} />
+        {/* 광고 유입 추적 (utm_*·fbclid) — 어떤 캠페인에서 온 신청인지 기록 */}
+        {UTM_KEYS.map((k) => (
+          <input key={k} type="hidden" name={k} value={utm[k] || ''} />
+        ))}
         {/* honeypot (사람에겐 숨김) */}
         <p className="sf-hp" aria-hidden="true">
           <label>

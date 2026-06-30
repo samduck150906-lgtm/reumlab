@@ -6,7 +6,9 @@ import Script from 'next/script';
  */
 export function Analytics() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+  // 메타 픽셀 ID — 환경변수(NEXT_PUBLIC_META_PIXEL_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
+  // 픽셀 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1021548000778850';
 
   return (
     <>
@@ -31,8 +33,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
       ) : null}
       {metaPixelId ? (
-        <Script id="meta-pixel" strategy="afterInteractive">
-          {`!function(f,b,e,v,n,t,s)
+        <>
+          <Script id="meta-pixel" strategy="afterInteractive">
+            {`!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -42,7 +45,17 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '${metaPixelId}');
 fbq('track', 'PageView');`}
-        </Script>
+          </Script>
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              alt=""
+              style={{ display: 'none' }}
+              src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
+            />
+          </noscript>
+        </>
       ) : null}
     </>
   );
