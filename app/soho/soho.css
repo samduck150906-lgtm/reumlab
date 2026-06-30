@@ -814,6 +814,50 @@
 }
 .soho .sf-again:hover { transform: translateY(-2px); }
 
+/* ── 신청 섹션: 받는 것(결과물) ── */
+.soho .s-gets { margin-top: 30px; }
+.soho .s-gets-h { font-size: 15px; font-weight: 800; color: var(--c-text); margin-bottom: 14px; }
+.soho .s-gets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.soho .s-gets-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 16px;
+  border-radius: 14px;
+  background: var(--c-card);
+  border: 1px solid var(--c-line);
+}
+.soho .s-gets-ico { font-size: 22px; }
+.soho .s-gets-item b { font-size: 14.5px; color: var(--c-text); }
+.soho .s-gets-item span { font-size: 12.5px; color: var(--c-sub); line-height: 1.6; }
+
+/* ── 신뢰 배지 스트립 ── */
+.soho .s-trust {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.soho .s-trust li {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--c-sub);
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: var(--c-card2);
+  border: 1px solid var(--c-line);
+}
+
+/* ── 버튼 아래 안심 문구 ── */
+.soho .sf-reassure {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--c-dim);
+  line-height: 1.6;
+}
+
 /* 반응형 */
 @media (max-width: 620px) {
   .soho .s-grid,
@@ -826,4 +870,5 @@
   .soho .s-np-grid { grid-template-columns: 1fr; justify-items: center; }
   .soho .np-points { width: 100%; }
   .soho .sf-checks { grid-template-columns: 1fr; }
+  .soho .s-gets-grid { grid-template-columns: 1fr; }
 }

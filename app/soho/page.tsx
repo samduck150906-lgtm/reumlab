@@ -441,6 +441,34 @@ export default function SohoPage() {
               지금 당장 바꿔야 할 것만 콕 집어 알려드립니다. 비용은 0원입니다.
             </p>
 
+            <div className="s-gets">
+              <p className="s-gets-h">신청하면 이런 걸 받아요</p>
+              <div className="s-gets-grid">
+                <div className="s-gets-item">
+                  <span className="s-gets-ico" aria-hidden="true">📊</span>
+                  <b>현재 검색 노출 점검</b>
+                  <span>네이버·구글에서 내 업장이 실제로 어떻게 보이는지</span>
+                </div>
+                <div className="s-gets-item">
+                  <span className="s-gets-ico" aria-hidden="true">🆚</span>
+                  <b>경쟁업체 비교</b>
+                  <span>비슷한 업장 대비 부족한 점이 무엇인지</span>
+                </div>
+                <div className="s-gets-item">
+                  <span className="s-gets-ico" aria-hidden="true">✅</span>
+                  <b>당장 바꿀 액션</b>
+                  <span>지금 손보면 효과 보는 것들을 콕 집어서</span>
+                </div>
+              </div>
+            </div>
+
+            <ul className="s-trust" aria-label="신뢰 포인트">
+              <li>💸 비용 0원</li>
+              <li>🚫 월 관리비 없음</li>
+              <li>📦 소스코드 이관</li>
+              <li>🏪 개발자가 직접 매장 운영</li>
+            </ul>
+
             <SohoForm />
           </div>
         </section>

@@ -283,6 +283,9 @@ export default function SohoForm() {
         >
           {status === 'submitting' ? '신청 중…' : '무료 진단 신청하기'}
         </button>
+        <p className="sf-reassure">
+          30초면 신청 완료 · 영업일 1~2일 내 연락 · 부담되면 진단만 받으셔도 됩니다
+        </p>
       </form>
     </div>
   );
