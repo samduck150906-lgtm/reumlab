@@ -58,7 +58,7 @@ const CATEGORY_NOUN: Record<PortfolioItem['category'], string> = {
 export const PORTFOLIO: PortfolioItem[] = [
   {
     slug: 'academy-matching-app',
-    title: '우리 아이 맞춤 학원 — 학원 검색·결제 앱',
+    title: '학원 검색·결제 매칭 앱',
     summary:
       '과목·지역·수강료·평점을 조건별로 검색하고, 결제 인증 리뷰만 모아 보고, 앱 안에서 수강료까지 결제하는 학부모용 학원 매칭 앱. 원장이 ERP에 등록한 학원 정보가 학부모 앱에 실시간 반영됩니다.',
     category: 'app',
@@ -90,13 +90,13 @@ export const PORTFOLIO: PortfolioItem[] = [
       'Flutter 앱개발 사례',
     ],
     publishedAt: '2026-06-05',
-    consent: 'named',
+    consent: 'anonymous',
   },
   {
-    slug: 'ute-studio-rental',
-    title: '우트스튜디오 — 무인 렌탈스튜디오 랜딩페이지',
+    slug: 'unmanned-rental-studio-landing',
+    title: '무인 렌탈스튜디오 랜딩페이지',
     summary:
-      '수원 영통의 30평 단독 자연광 촬영공간을 사진·가격표·이용안내·FAQ로 정리하고, 카카오톡·문자 예약으로 바로 연결하는 무인 렌탈스튜디오 랜딩페이지. 름랩 대표가 직접 운영하는 매장입니다.',
+      '30평 단독 자연광 촬영공간을 사진·가격표·이용안내·FAQ로 정리하고, 카카오톡·문자 예약으로 바로 연결하는 무인 렌탈스튜디오 랜딩페이지. 름랩 대표가 직접 운영하는 매장을 사례로 제작했습니다.',
     category: 'web',
     stack: ['반응형 웹', '검색 노출 기본 세팅', '카카오톡·문자 예약 연결'],
     problem:
@@ -124,13 +124,13 @@ export const PORTFOLIO: PortfolioItem[] = [
       '소상공인 홈페이지 제작 사례',
     ],
     publishedAt: '2026-05-12',
-    consent: 'named',
+    consent: 'anonymous',
   },
   {
-    slug: 'ai-handler',
-    title: 'AI Handler — 역할별 프롬프트 엔진 앱',
+    slug: 'role-prompt-engine-app',
+    title: '역할별 프롬프트 엔진 앱',
     summary:
-      '마케터·콘텐츠 크리에이터 등 “어떤 목적으로 AI를 쓰는가(모드)”를 고르면, 역할에 맞는 프롬프트 엔진과 AI 툴 허브가 자동으로 연결되는 AI 핸들러 앱.',
+      '마케터·콘텐츠 크리에이터 등 “어떤 목적으로 AI를 쓰는가(모드)”를 고르면, 역할에 맞는 프롬프트 엔진과 AI 툴 허브가 자동으로 연결되는 역할(모드) 기반 AI 어시스턴트 앱.',
     category: 'ai',
     stack: ['Flutter', 'LLM·AI 툴 연동', '역할별 프롬프트 엔진'],
     problem:
@@ -153,16 +153,16 @@ export const PORTFOLIO: PortfolioItem[] = [
     keywords: [
       'AI 앱 개발 사례',
       '프롬프트 엔진 앱',
-      'AI 핸들러',
+      '역할별 AI 어시스턴트',
       'LLM 앱 외주개발',
       'AI 기능 개발 사례',
     ],
     publishedAt: '2026-05-28',
-    consent: 'named',
+    consent: 'anonymous',
   },
   {
-    slug: 'marbee-marketer-matching',
-    title: 'Marbee — 마케터 매칭 플랫폼',
+    slug: 'marketer-matching-platform',
+    title: '마케터 매칭 플랫폼',
     summary:
       '프로젝트 공고를 한 번 올리면 검증된 마케터들의 맞춤 제안서가 도착하고, 사장님은 편하게 비교·선택만 하면 되는 마케팅 외주 매칭 플랫폼.',
     category: 'web',
@@ -193,7 +193,7 @@ export const PORTFOLIO: PortfolioItem[] = [
       '웹 플랫폼 제작 사례',
     ],
     publishedAt: '2026-06-12',
-    consent: 'named',
+    consent: 'anonymous',
   },
 ];
 

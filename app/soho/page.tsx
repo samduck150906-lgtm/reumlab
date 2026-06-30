@@ -281,7 +281,7 @@ export default function SohoPage() {
               <span className="s-g">사장님 마음</span>으로 만듭니다
             </h2>
             <p className="s-lead">
-              옆의 네이버 플레이스, 제가 직접 운영하는 매장 ‘우트스튜디오’입니다. 저도 같은 자영업자라 검색에 안 보이는 답답함도, 광고비 부담도 직접 겪어봤습니다. 그래서 사장님 입장에서 꼭 필요한 것만 챙겨 만듭니다.
+              옆의 네이버 플레이스, 제가 직접 운영하는 무인 렌탈스튜디오입니다. 저도 같은 자영업자라 검색에 안 보이는 답답함도, 광고비 부담도 직접 겪어봤습니다. 그래서 사장님 입장에서 꼭 필요한 것만 챙겨 만듭니다.
             </p>
 
             <div className="s-np-grid">
@@ -290,16 +290,16 @@ export default function SohoPage() {
                 <div className="np-shot">
                   <img
                     src="/soho/naver-place.png"
-                    alt="제가 직접 운영하는 우트스튜디오 파티룸 수원점 네이버 플레이스 노출 화면 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
+                    alt="제가 직접 운영하는 무인 렌탈스튜디오 네이버 플레이스 노출 화면 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
                     width={416}
                     height={207}
                     loading="lazy"
                   />
                 </div>
                 <p className="np-cap">
-                  ↑ 제가 직접 운영하는 ‘우트스튜디오’ — 검색 노출을 직접 만들어 본 매장입니다.{' '}
-                  <Link href="/portfolio/ute-studio-rental/" style={{ textDecoration: 'underline' }}>
-                    우트스튜디오 제작 사례 보기 →
+                  ↑ 제가 직접 운영하는 무인 렌탈스튜디오 — 검색 노출을 직접 만들어 본 매장입니다.{' '}
+                  <Link href="/portfolio/unmanned-rental-studio-landing/" style={{ textDecoration: 'underline' }}>
+                    렌탈스튜디오 제작 사례 보기 →
                   </Link>
                 </p>
               </div>

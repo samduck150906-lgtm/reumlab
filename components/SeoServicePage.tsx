@@ -16,13 +16,13 @@ const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
 
 /** 서비스 슬러그 → 관련 포트폴리오 사례 (허브 → 사례 내부링크 / 토픽 클러스터) */
 const RELATED_CASES: { match: RegExp; slugs: string[] }[] = [
-  { match: /ai-development|솔루션SaaS|솔루션|saas/i, slugs: ['ai-handler', 'academy-matching-app'] },
-  { match: /플랫폼개발|platform|기업용ERP|erp/i, slugs: ['marbee-marketer-matching', 'academy-matching-app'] },
-  { match: /web-development|웹개발|homepage|홈페이지|landing|랜딩/i, slugs: ['ute-studio-rental', 'marbee-marketer-matching'] },
-  { match: /flutter/i, slugs: ['academy-matching-app', 'ai-handler'] },
-  { match: /mvp|스타트업/i, slugs: ['academy-matching-app', 'marbee-marketer-matching'] },
-  { match: /앱개발|app-development|app-dev/i, slugs: ['academy-matching-app', 'ai-handler'] },
-  { match: /source-handover|소스코드|이관/i, slugs: ['academy-matching-app', 'marbee-marketer-matching'] },
+  { match: /ai-development|솔루션SaaS|솔루션|saas/i, slugs: ['role-prompt-engine-app', 'academy-matching-app'] },
+  { match: /플랫폼개발|platform|기업용ERP|erp/i, slugs: ['marketer-matching-platform', 'academy-matching-app'] },
+  { match: /web-development|웹개발|homepage|홈페이지|landing|랜딩/i, slugs: ['unmanned-rental-studio-landing', 'marketer-matching-platform'] },
+  { match: /flutter/i, slugs: ['academy-matching-app', 'role-prompt-engine-app'] },
+  { match: /mvp|스타트업/i, slugs: ['academy-matching-app', 'marketer-matching-platform'] },
+  { match: /앱개발|app-development|app-dev/i, slugs: ['academy-matching-app', 'role-prompt-engine-app'] },
+  { match: /source-handover|소스코드|이관/i, slugs: ['academy-matching-app', 'marketer-matching-platform'] },
 ];
 
 function relatedCasesFor(pageSlug?: string) {

@@ -13,9 +13,9 @@ type Props = { params: { industry: string } };
 /** 업종 → 관련 포트폴리오 사례 (업종 페이지 → 사례 내부링크) */
 const INDUSTRY_CASES: Record<string, string[]> = {
   academy: ['academy-matching-app'],
-  marketplace: ['marbee-marketer-matching', 'academy-matching-app'],
-  booking: ['ute-studio-rental', 'academy-matching-app'],
-  community: ['marbee-marketer-matching'],
+  marketplace: ['marketer-matching-platform', 'academy-matching-app'],
+  booking: ['unmanned-rental-studio-landing', 'academy-matching-app'],
+  community: ['marketer-matching-platform'],
 };
 
 export function generateStaticParams() {

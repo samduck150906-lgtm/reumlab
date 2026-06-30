@@ -1,3 +1,11 @@
 # Netlify 등 정적 호스팅용 301 (있으면 우선 적용)
 /AI서비스개발    /솔루션SaaS/    301
 /AI서비스개발/   /솔루션SaaS/    301
+
+# 포트폴리오 슬러그 익명화 (구 URL → 신 URL)
+/portfolio/ute-studio-rental         /portfolio/unmanned-rental-studio-landing/   301
+/portfolio/ute-studio-rental/        /portfolio/unmanned-rental-studio-landing/   301
+/portfolio/ai-handler                /portfolio/role-prompt-engine-app/           301
+/portfolio/ai-handler/               /portfolio/role-prompt-engine-app/           301
+/portfolio/marbee-marketer-matching  /portfolio/marketer-matching-platform/       301
+/portfolio/marbee-marketer-matching/ /portfolio/marketer-matching-platform/       301
