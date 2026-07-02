@@ -43,7 +43,7 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 | `/compare/[slug]` (**3축: 비교**) | `app/compare/[slug]/page.tsx` | `COMPARES` (~7) | `compareDecision` 게이트 | `compareCanonical` |
 | `/blog/[slug]` | `app/blog/[slug]/page.tsx` | `BLOG_POSTS` (~413) | `blogShouldIndex` (600자↑ + Jaccard<0.7) | `blogCanonical` |
 | `/portfolio/[slug]` | `app/portfolio/[slug]/page.tsx` | `PORTFOLIO` (~7) | `hasPortfolio` 게이트 | `portfolioCanonical` |
-| `/l/[slug]` (**레거시 랜딩**) | `app/l/[slug]/page.js` | `landings.json` (328) | `landingIndexable` allowlist | 자기 URL |
+| `/l/[slug]` (**레거시 랜딩**) | `app/l/[slug]/page.js` | `landings.json` (328) | `landingIndexable` allowlist (`REDIRECTED_LANDING_SLUGS`는 생성·색인 제외) | 자기 URL, 지역 중복분은 앱 pSEO로 301 |
 | `/h/[hubSlug]` (**레거시 허브**) | `app/h/[hubSlug]/page.js` | `clusters.json` (~37) | `DUP_HUB_CANONICAL` 중복 허브 noindex | 대표 허브로 통합 |
 | `/soho` | `app/soho/page.tsx` | — | index | 자기 URL |
 
@@ -111,7 +111,7 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 
 | # | 결정 사항 | 현황 | 권장안 |
 |---|---|---|---|
-| 1 | **레거시 `/l/`·`/h/` vs 앱 pSEO 단일화** | 두 시스템이 키워드 영역 중첩 → 자기잠식 가능 | `/l/` 색인분(실적 earner)만 앱 pSEO 축으로 **점진 이관** 후 `/l/` 전량 301. 실적 없는 것은 이미 noindex라 급하지 않음 |
+| 🟡 | **레거시 `/l/`·`/h/` vs 앱 pSEO 단일화** | 지역 랜딩 자기잠식은 **1차 해소 완료** | **완료(1차)** — `/l/` 지역 랜딩 17종(수원·분당·강남 앱/웹/MVP)을 앱 pSEO 지역×서비스로 301 통합(`REDIRECTED_LANDING_SLUGS`), 정적 생성·사이트맵 제외, 허브 링크도 직접 대상으로. **남은 것**: ① 앱 pSEO에 대응 축이 없는 `/l/` 대표키워드(service_intent)·쇼핑몰 랜딩은 유지(자기잠식 아님) ② `/h/` 허브 자체의 색인 가치 재평가 |
 | ✅ | **블로그 저품질 배치 제거** | 생성기 버그로 25개 글이 각 5중복(125엔트리) + 15종 깨진 slug(`/blog/-1/` 등) 렌더 | **완료** — `lib/blog-posts.ts`에서 불량 배치 125개 전량 제거(534→409글). 깨진 URL·중복·유일 색인 필러(`flutter-12`) 모두 소멸 |
 | 2 | **소프트-noindex(60–79점) 승격** | 게이트가 자동 분류 | 분기별 상위 트래픽 잠재 페이지부터 본문 보강 |
 | 3 | **홈 전략 확정** | 배포 홈=레거시 `index.html`, 앱 `app/page.tsx`는 데드 | 택1 — 앱 홈으로 통일하면 유지보수·구조화데이터 일원화 |
@@ -143,9 +143,10 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 | ✅ | 사이트맵 `lastmod` 안정화 + URL 중복 제거(§4-1) | — | 완료 |
 | ✅ | IndexNow 변경분만 제출(§4-2) | — | 완료 |
 | ✅ | 블로그 저품질 배치 125개 제거(§5) | — | 완료 |
+| ✅ | `/l/` 지역 랜딩 17종 → 앱 pSEO 301 통합(§5-1, 1차) | — | 완료 |
 | 1 | GSC·서치어드바이저 사이트맵 재제출 + 색인 수확 루프 가동(§4-3) | 없음 | 높음 |
 | 2 | 분기 색인 회수: 노출0 페이지 noindex(§4-3) | 낮음 | 중(예산 재배분) |
-| 3 | `/l/`·`/h/` 단일화 착수(§5-1) | 중 | 중(자기잠식 제거) |
+| 3 | `/h/` 허브 색인 가치 재평가(§5-1 잔여) | 중 | 중 |
 | 4 | soft-noindex 페이지 본문 보강 → 승격(§5-2) | 낮음 | 높음(누적) |
 
 ---

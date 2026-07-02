@@ -22,3 +22,40 @@
 /portfolio/ai-handler/               /portfolio/role-prompt-engine-app/           301
 /portfolio/marbee-marketer-matching  /portfolio/marketer-matching-platform/       301
 /portfolio/marbee-marketer-matching/ /portfolio/marketer-matching-platform/       301
+
+# /l/ 지역 랜딩 → 앱 pSEO 지역×서비스 통합 (자기잠식 제거, lib/data.js REDIRECTED_LANDING_SLUGS와 동기화)
+# 정적 생성에서 제외돼 out/에 파일이 없으므로 일반 301로 발동한다. (/soho·service_intent 대표키워드·쇼핑몰 랜딩은 유지)
+/l/suwon-app-dev              /app-development/suwon/    301
+/l/suwon-app-dev/             /app-development/suwon/    301
+/l/suwon-app-dev-out          /app-development/suwon/    301
+/l/suwon-app-dev-out/         /app-development/suwon/    301
+/l/suwon-app-dev-cost         /app-development/suwon/    301
+/l/suwon-app-dev-cost/        /app-development/suwon/    301
+/l/suwon-app-dev-quote        /app-development/suwon/    301
+/l/suwon-app-dev-quote/       /app-development/suwon/    301
+/l/bundang-app-dev            /app-development/bundang/  301
+/l/bundang-app-dev/           /app-development/bundang/  301
+/l/suwon-web-dev              /web-development/suwon/    301
+/l/suwon-web-dev/             /web-development/suwon/    301
+/l/suwon-web-dev-cost         /web-development/suwon/    301
+/l/suwon-web-dev-cost/        /web-development/suwon/    301
+/l/suwon-web-dev-quote        /web-development/suwon/    301
+/l/suwon-web-dev-quote/       /web-development/suwon/    301
+/l/suwon-homepage-dev         /web-development/suwon/    301
+/l/suwon-homepage-dev/        /web-development/suwon/    301
+/l/suwon-homepage-dev-cost    /web-development/suwon/    301
+/l/suwon-homepage-dev-cost/   /web-development/suwon/    301
+/l/suwon-homepage-dev-quote   /web-development/suwon/    301
+/l/suwon-homepage-dev-quote/  /web-development/suwon/    301
+/l/suwon-website-dev          /web-development/suwon/    301
+/l/suwon-website-dev/         /web-development/suwon/    301
+/l/suwon-landing-page         /web-development/suwon/    301
+/l/suwon-landing-page/        /web-development/suwon/    301
+/l/suwon-landing-page-cost    /web-development/suwon/    301
+/l/suwon-landing-page-cost/   /web-development/suwon/    301
+/l/suwon-landing-page-quote   /web-development/suwon/    301
+/l/suwon-landing-page-quote/  /web-development/suwon/    301
+/l/gangnam-landing-page-quote /web-development/gangnam/  301
+/l/gangnam-landing-page-quote/ /web-development/gangnam/ 301
+/l/suwon-mvp-dev              /mvp/suwon/                301
+/l/suwon-mvp-dev/             /mvp/suwon/                301

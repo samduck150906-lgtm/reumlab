@@ -1,4 +1,4 @@
-import { getLandings, getLandingBySlug, getHubBySlug, landingIndexable } from '../../../lib/data';
+import { getLandings, getLandingBySlug, getHubBySlug, landingIndexable, landingRedirectTarget } from '../../../lib/data';
 import LandingPage from '../../../components/LandingPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
@@ -6,7 +6,8 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
 export async function generateStaticParams() {
   const landings = getLandings();
-  return landings.map((l) => ({ slug: l.slug }));
+  // 앱 pSEO로 301 통합되는 랜딩은 정적 생성 제외 → out/에 파일이 없어 _redirects 301이 그대로 발동
+  return landings.filter((l) => !landingRedirectTarget(l.slug)).map((l) => ({ slug: l.slug }));
 }
 
 export async function generateMetadata({ params }) {

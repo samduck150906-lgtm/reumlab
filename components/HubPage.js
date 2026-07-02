@@ -5,6 +5,7 @@ import {
   getHubBodyTemplate,
   getKeywordBySlug,
   getLandingBySlug,
+  landingRedirectTarget,
 } from '../lib/data';
 import BusinessFooter from './BusinessFooter';
 
@@ -65,10 +66,12 @@ export default function HubPage({ hubSlug }) {
             {landings.map((slug) => {
               const l = getLandingBySlug(slug);
               const keyword = getKeywordBySlug(slug);
+              // 앱 pSEO로 통합된 랜딩은 301 홉 없이 대상 페이지로 직접 링크
+              const href = landingRedirectTarget(slug) || `/l/${slug}/`;
               return (
                 <Link
                   key={slug}
-                  href={`/l/${slug}/`}
+                  href={href}
                   className="group flex items-center justify-between gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-card transition-all hover:-translate-y-0.5 hover:border-accent hover:shadow-card-hover"
                 >
                   <div>
