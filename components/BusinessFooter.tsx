@@ -17,6 +17,7 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/flutter/">Flutter 앱개발</Link>
           <Link href="/ai-development/">AI 외주개발</Link>
           <Link href="/source-handover/">소스코드 이관</Link>
+          <Link href="/windows-app-development/">윈도우 앱 개발</Link>
           <Link href="/web-development/">웹사이트 제작</Link>
           <Link href="/portfolio/">포트폴리오</Link>
           <Link href="/blog/">블로그</Link>
