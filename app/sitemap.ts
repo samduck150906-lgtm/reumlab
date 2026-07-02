@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
-import { getLandings, getClusters } from '../lib/data';
+import { getLandings, getClusters, landingIndexable } from '../lib/data';
 import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
@@ -124,6 +124,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const l of getLandings()) {
+    if (!landingIndexable(l)) continue; // near-duplicate 랜딩은 사이트맵 제외 (robots noindex와 동기화)
     out.push({
       url: `${SITE.domain}/l/${l.slug}/`,
       lastModified: now,

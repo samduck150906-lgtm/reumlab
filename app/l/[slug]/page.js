@@ -1,4 +1,4 @@
-import { getLandings, getLandingBySlug, getHubBySlug } from '../../../lib/data';
+import { getLandings, getLandingBySlug, getHubBySlug, landingIndexable } from '../../../lib/data';
 import LandingPage from '../../../components/LandingPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
@@ -23,6 +23,10 @@ export async function generateMetadata({ params }) {
       images: ['/og-default.png'],
     },
     alternates: { canonical: url },
+    // 지역/업종만 치환한 near-duplicate 랜딩은 색인 제외(noindex,follow) — 사이트 전체 품질 보호
+    robots: landingIndexable(landing)
+      ? { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } }
+      : { index: false, follow: true, googleBot: { index: false, follow: true } },
   };
 }
 
