@@ -1,6 +1,19 @@
 # Netlify 등 정적 호스팅용 301 (있으면 우선 적용)
-/AI서비스개발    /솔루션SaaS/    301
-/AI서비스개발/   /솔루션SaaS/    301
+# 얇은 한글 pillar → 충실한 한글 페이지 (본문 없는 meta-only 중복 정리)
+/스타트업MVP     /mvp/             301
+/스타트업MVP/    /mvp/             301
+/스타트업mvp     /mvp/             301
+/스타트업mvp/    /mvp/             301
+/앱개발          /flutter/         301
+/앱개발/         /flutter/         301
+/솔루션SaaS      /ai-development/  301
+/솔루션SaaS/     /ai-development/  301
+# AI서비스개발: 체인 방지 위해 최종 목적지로 직결
+/AI서비스개발    /ai-development/  301
+/AI서비스개발/   /ai-development/  301
+# stale 404
+/bootcamp/ai-app     /ai-development/  301
+/bootcamp/ai-app/    /ai-development/  301
 
 # 포트폴리오 슬러그 익명화 (구 URL → 신 URL)
 /portfolio/ute-studio-rental         /portfolio/unmanned-rental-studio-landing/   301

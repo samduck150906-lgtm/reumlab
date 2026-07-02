@@ -9,12 +9,17 @@ export async function generateStaticParams() {
   return Object.keys(clusters).map((hubSlug) => ({ hubSlug }));
 }
 
+// 중복 허브 → 대표 허브로 canonical 통합 (예: mobile-app 은 app-dev 와 동일)
+const DUP_HUB_CANONICAL = { 'mobile-app': 'app-dev' };
+
 export async function generateMetadata({ params }) {
   const hub = getHubBySlug(params.hubSlug);
   if (!hub) return { title: '름랩 REUMLAB' };
   const title = `${hub.ko} | 름랩 REUMLAB`;
   const description = `${hub.ko} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
   const url = `${BASE}/h/${params.hubSlug}/`;
+  const canonicalSlug = DUP_HUB_CANONICAL[params.hubSlug] || params.hubSlug;
+  const canonical = `${BASE}/h/${canonicalSlug}/`;
   return {
     title,
     description,
@@ -24,7 +29,10 @@ export async function generateMetadata({ params }) {
       url,
       images: ['/og-default.png'],
     },
-    alternates: { canonical: url },
+    alternates: { canonical },
+    ...(canonicalSlug !== params.hubSlug
+      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
+      : {}),
   };
 }
 

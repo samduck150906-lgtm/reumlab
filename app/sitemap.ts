@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
+import { PAGE_SEO_MAP, SITE, REDIRECTED_PILLAR_SLUGS, NOINDEX_PILLAR_SLUGS } from '@/lib/seo';
 import { getLandings, getClusters, landingIndexable } from '../lib/data';
 import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
 
   for (const [slug, seo] of Object.entries(PAGE_SEO_MAP)) {
+    // 얇은 한글 pillar는 301(정적 생성 제외) 또는 noindex → 사이트맵에서 제외
+    if (REDIRECTED_PILLAR_SLUGS.has(slug) || NOINDEX_PILLAR_SLUGS.has(slug)) continue;
     out.push({
       url: seo.canonical,
       lastModified: now,
@@ -115,6 +117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const hubSlug of Object.keys(getClusters())) {
+    if (hubSlug === 'mobile-app') continue; // /h/app-dev/ 와 중복 → canonical 통합, 사이트맵 제외
     out.push({
       url: `${SITE.domain}/h/${hubSlug}/`,
       lastModified: now,

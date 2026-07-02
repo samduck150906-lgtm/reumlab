@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ALL_SLUGS, PAGE_SEO_MAP, SITE } from '@/lib/seo';
+import { ALL_SLUGS, PAGE_SEO_MAP, SITE, NOINDEX_PILLAR_SLUGS } from '@/lib/seo';
 import { OrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import SeoServicePage from '@/components/SeoServicePage';
 
@@ -49,16 +49,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: seo.ogDescription,
       images: [SITE.defaultOgImage],
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
-      },
-    },
+    // 얇은(meta-only) 한글 pillar는 색인 제외 — 사이트 전체 품질 보호(본문 보강 시 해제)
+    robots: NOINDEX_PILLAR_SLUGS.has(slug)
+      ? { index: false, follow: true, googleBot: { index: false, follow: true } }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+          },
+        },
     ...(naver ? { other: { 'naver-site-verification': naver } } : {}),
   };
 }

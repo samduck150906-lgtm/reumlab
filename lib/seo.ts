@@ -386,7 +386,18 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 };
 
-export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter((s) => s !== '');
+/**
+ * 얇은(meta-only) 한글 pillar 정리.
+ * - REDIRECTED: 충실한 한글 페이지가 따로 있어 301 (정적 생성 제외 → public/_redirects 301 발동)
+ * - NOINDEX: 충실한 한글 트윈이 없어 우선 noindex,follow + 사이트맵 제외 (본문 보강 시 재색인)
+ * (영문 슬러그 app-development/web-development 등은 영어 페이지라 통합 대상이 아님)
+ */
+export const REDIRECTED_PILLAR_SLUGS = new Set(['스타트업MVP', '앱개발', '솔루션SaaS']);
+export const NOINDEX_PILLAR_SLUGS = new Set(['웹개발', '플랫폼개발', '기업용ERP']);
+
+export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter(
+  (s) => s !== '' && !REDIRECTED_PILLAR_SLUGS.has(s),
+);
 
 export function getSeoBySlug(slug: string): PageSeo | undefined {
   return PAGE_SEO_MAP[slug];
