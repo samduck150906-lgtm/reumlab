@@ -44,7 +44,7 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 | `/blog/[slug]` | `app/blog/[slug]/page.tsx` | `BLOG_POSTS` (~413) | `blogShouldIndex` (600자↑ + Jaccard<0.7) | `blogCanonical` |
 | `/portfolio/[slug]` | `app/portfolio/[slug]/page.tsx` | `PORTFOLIO` (~7) | `hasPortfolio` 게이트 | `portfolioCanonical` |
 | `/l/[slug]` (**레거시 랜딩**) | `app/l/[slug]/page.js` | `landings.json` (328) | `landingIndexable` allowlist (`REDIRECTED_LANDING_SLUGS`는 생성·색인 제외) | 자기 URL, 지역 중복분은 앱 pSEO로 301 |
-| `/h/[hubSlug]` (**레거시 허브**) | `app/h/[hubSlug]/page.js` | `clusters.json` (~37) | `DUP_HUB_CANONICAL` 중복 허브 noindex | 대표 허브로 통합 |
+| `/h/[hubSlug]` (**레거시 허브**) | `app/h/[hubSlug]/page.js` | `clusters.json` (38) | `hubIndexable`(색인 랜딩 ≥1) + `DUP_HUB_CANONICAL` | 대표 허브로 통합 |
 | `/soho` | `app/soho/page.tsx` | — | index | 자기 URL |
 
 **규칙**
@@ -111,7 +111,7 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 
 | # | 결정 사항 | 현황 | 권장안 |
 |---|---|---|---|
-| 🟡 | **레거시 `/l/`·`/h/` vs 앱 pSEO 단일화** | 지역 랜딩 자기잠식은 **1차 해소 완료** | **완료(1차)** — `/l/` 지역 랜딩 17종(수원·분당·강남 앱/웹/MVP)을 앱 pSEO 지역×서비스로 301 통합(`REDIRECTED_LANDING_SLUGS`), 정적 생성·사이트맵 제외, 허브 링크도 직접 대상으로. **남은 것**: ① 앱 pSEO에 대응 축이 없는 `/l/` 대표키워드(service_intent)·쇼핑몰 랜딩은 유지(자기잠식 아님) ② `/h/` 허브 자체의 색인 가치 재평가 |
+| 🟡 | **레거시 `/l/`·`/h/` vs 앱 pSEO 단일화** | 지역 랜딩·죽은 허브 자기잠식 **1·2차 해소** | **완료(1·2차)** — ① `/l/` 지역 랜딩 17종을 앱 pSEO로 301 통합(`REDIRECTED_LANDING_SLUGS`) ② `/h/` 허브 색인 게이트 신설(`hubIndexable`) — 색인 랜딩 0개인 얇은 허브 21종(빈 composite·죽은 지역/업종) noindex+사이트맵 제외(사이트맵 38→16 허브). **남은 것(1건)**: 콘텐츠를 가진 **service 허브 11종**(app-dev·web-dev·mvp-dev 등)이 앱 pSEO 서비스 페이지(/app-development·/mvp 등)와 키워드 겹침 → 301 통합 vs noindex는 **백링크 실적 확인 후 운영자 판단** 필요 |
 | ✅ | **블로그 저품질 배치 제거** | 생성기 버그로 25개 글이 각 5중복(125엔트리) + 15종 깨진 slug(`/blog/-1/` 등) 렌더 | **완료** — `lib/blog-posts.ts`에서 불량 배치 125개 전량 제거(534→409글). 깨진 URL·중복·유일 색인 필러(`flutter-12`) 모두 소멸 |
 | 2 | **소프트-noindex(60–79점) 승격** | 게이트가 자동 분류 | 분기별 상위 트래픽 잠재 페이지부터 본문 보강 |
 | 3 | **홈 전략 확정** | 배포 홈=레거시 `index.html`, 앱 `app/page.tsx`는 데드 | 택1 — 앱 홈으로 통일하면 유지보수·구조화데이터 일원화 |
@@ -144,9 +144,10 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 | ✅ | IndexNow 변경분만 제출(§4-2) | — | 완료 |
 | ✅ | 블로그 저품질 배치 125개 제거(§5) | — | 완료 |
 | ✅ | `/l/` 지역 랜딩 17종 → 앱 pSEO 301 통합(§5-1, 1차) | — | 완료 |
+| ✅ | `/h/` 허브 색인 게이트 — 죽은 허브 21종 noindex(§5-1, 2차) | — | 완료 |
 | 1 | GSC·서치어드바이저 사이트맵 재제출 + 색인 수확 루프 가동(§4-3) | 없음 | 높음 |
-| 2 | 분기 색인 회수: 노출0 페이지 noindex(§4-3) | 낮음 | 중(예산 재배분) |
-| 3 | `/h/` 허브 색인 가치 재평가(§5-1 잔여) | 중 | 중 |
+| 2 | **service 허브 11종 자기잠식** 결정 — 301 통합 vs noindex(§5-1 잔여) | 중 | 중(백링크 실적 필요) |
+| 3 | 분기 색인 회수: 노출0 페이지 noindex(§4-3) | 낮음 | 중(예산 재배분) |
 | 4 | soft-noindex 페이지 본문 보강 → 승격(§5-2) | 낮음 | 높음(누적) |
 
 ---
