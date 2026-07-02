@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { PAGE_SEO_MAP, SITE, REDIRECTED_PILLAR_SLUGS, NOINDEX_PILLAR_SLUGS } from '@/lib/seo';
-import { getLandings, getClusters, landingIndexable, hubIndexable } from '../lib/data';
+import { getLandings, getClusters, landingIndexable, hubShouldIndex } from '../lib/data';
 import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
@@ -129,7 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const hubSlug of Object.keys(getClusters())) {
     if (hubSlug === 'mobile-app') continue; // /h/app-dev/ 와 중복 → canonical 통합, 사이트맵 제외
-    if (!hubIndexable(hubSlug)) continue; // 색인 랜딩 0개 허브(얇은 도어웨이)는 제외 — robots noindex와 동기화
+    if (!hubShouldIndex(hubSlug)) continue; // 도어웨이·앱 pSEO 대체 허브 제외 — robots noindex와 동기화
     out.push({
       url: `${SITE.domain}/h/${hubSlug}/`,
       lastModified: clustersMod,
