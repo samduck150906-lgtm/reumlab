@@ -14,6 +14,7 @@
     "optimize": "node scripts/monitor-and-optimize.mjs",
     "dashboard": "node scripts/generate-dashboard.mjs",
     "seo:optimize": "node scripts/seo-optimization.mjs",
+    "seo:indexnow": "node scripts/submit-indexnow.mjs",
     "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && node scripts/generate-feed.mjs && node scripts/prepare-next-public.mjs && next build && npm run copy:home",
     "copy:home": "cp index.html styles.css script.js out/",

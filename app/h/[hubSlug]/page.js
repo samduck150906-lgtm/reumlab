@@ -1,4 +1,4 @@
-import { getClusters, getHubBySlug } from '../../../lib/data';
+import { getClusters, getHubBySlug, hubShouldIndex } from '../../../lib/data';
 import HubPage from '../../../components/HubPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 
@@ -30,7 +30,8 @@ export async function generateMetadata({ params }) {
       images: ['/og-default.png'],
     },
     alternates: { canonical },
-    ...(canonicalSlug !== params.hubSlug
+    // 색인 제외: ① 중복 허브(대표로 canonical 통합) ② 색인 랜딩 0개 도어웨이 ③ 앱 pSEO 대체 service 허브
+    ...(canonicalSlug !== params.hubSlug || !hubShouldIndex(params.hubSlug)
       ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
       : {}),
   };
