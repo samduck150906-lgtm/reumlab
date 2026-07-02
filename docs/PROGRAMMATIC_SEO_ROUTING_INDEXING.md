@@ -81,14 +81,17 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 인프라가 끝났으므로, 성과는 **운영 루프**에서 나온다.
 
 ### 4-1. 사이트맵
-- **현재**: `app/sitemap.ts` 단일 파일, 게이트 통과 URL만. `public/sitemap.xml` 정적본은 이미 폐기됨(중복 해소 완료).
-- **`lastmod` 안정화 (권장 개선)**: 현재 정적/1축 엔트리 다수가 `new Date()`(빌드시각)를 쓴다 → **매 배포마다 "전부 변경됨" 신호** → 크롤 예산 낭비 + lastmod 신뢰 하락. 콘텐츠에 `updatedAt`이 있으면 그 값을, 없으면 git 커밋 기준 날짜를 쓰도록 바꾼다. (블로그·가이드·포트폴리오는 이미 `publishedAt` 사용 중 — 좋음)
-- **샤딩 임계치**: 색인 URL이 **1,000개 미만이면 단일 파일 유지**. 초과 시 축별 sitemap index로 분리(`sitemap-region.xml`, `sitemap-blog.xml` …). 하드 한도는 파일당 50,000 URL / 50MB.
+- **현재**: `app/sitemap.ts` 단일 파일, 게이트 통과 URL만(현행 320개). `public/sitemap.xml` 정적본은 이미 폐기됨(중복 해소 완료).
+- **`lastmod` 안정화 ✅ 적용됨** (`lib/lastmod.ts`): 정적/프로그래매틱 엔트리는 이제 `new Date()`(빌드시각)가 아니라 **각 콘텐츠 소스 파일의 git 커밋 날짜**를 lastmod로 쓴다 → 같은 커밋을 재배포해도 lastmod 불변 → 크롤 예산 churn 제거. (블로그·가이드·포트폴리오는 기존대로 `publishedAt` 사용)
+- **URL 중복 제거 ✅ 적용됨**: `app/sitemap.ts` 말미에서 URL당 1개만 남기는 최종 방어선 추가. 데이터에 중복 slug가 있어도 사이트맵에 loc가 중복되지 않는다.
+- **샤딩 임계치**: 색인 URL이 **1,000개 미만이면 단일 파일 유지**(현행 320개 → 단일 OK). 초과 시 축별 sitemap index로 분리(`sitemap-region.xml`, `sitemap-blog.xml` …). 하드 한도는 파일당 50,000 URL / 50MB.
 - **priority 남발 금지**: 홈 1.0, 본거지(동탄·화성·수원) 0.8, 나머지 프로그래매틱 0.65–0.75로 이미 계층화됨. 유지.
 
-### 4-2. 즉시 색인 (IndexNow)
-- `scripts/submit-indexnow.mjs`가 Naver·Bing에 제출. 키 파일 `public/reumlab2026indexnow9370.txt`.
-- **권장**: 배포 파이프라인에 `postbuild` 훅으로 **변경된 URL만** 제출(전량 반복 제출은 스팸 신호). 구글은 IndexNow 미지원 → 사이트맵 + GSC "URL 검사 > 색인 요청"으로 커버.
+### 4-2. 즉시 색인 (IndexNow) ✅ 변경분만 제출로 개선됨
+- `scripts/submit-indexnow.mjs`가 Naver·Bing에 제출. 키 파일 `public/reumlab2026indexnow9370.txt`. Netlify 빌드(`netlify.toml`)가 빌드 후 자동 실행.
+- **개선 완료**: `out/sitemap.xml`(색인 대상 URL만)을 읽어 커밋된 매니페스트(`scripts/.indexnow-manifest.json`)와 **lastmod를 비교해 변경분만** 제출한다. lastmod가 git 커밋 기준으로 안정화됐으므로, **같은 커밋 재배포 시 변경분 0 → 호스트 호출 안 함**(스팸 신호 방지). 플래그: `--all`(전량), `--dry-run`(제출 없이 변경분만 출력). 수동 실행: `npm run seo:indexnow`.
+- **매니페스트 지속성 주의**: Netlify 빌드는 ephemeral(fresh clone)이라 스크립트가 갱신한 매니페스트가 커밋되지 않으면 다음 배포에서 "전량 신규"로 보일 수 있다. 진짜 변경분만 제출하려면 콘텐츠 커밋과 함께 `scripts/.indexnow-manifest.json`을 커밋하거나 Netlify build cache 플러그인으로 보존할 것.
+- 구글은 IndexNow 미지원 → 사이트맵 + GSC "URL 검사 > 색인 요청"으로 커버.
 
 ### 4-3. 색인 수확·회수 루프 (분기별)
 1. **수확(Harvest)**: 신규 배포 후 GSC·서치어드바이저에 사이트맵 재제출 + 핵심 URL 색인 요청.
@@ -109,9 +112,11 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 | # | 결정 사항 | 현황 | 권장안 |
 |---|---|---|---|
 | 1 | **레거시 `/l/`·`/h/` vs 앱 pSEO 단일화** | 두 시스템이 키워드 영역 중첩 → 자기잠식 가능 | `/l/` 색인분(실적 earner)만 앱 pSEO 축으로 **점진 이관** 후 `/l/` 전량 301. 실적 없는 것은 이미 noindex라 급하지 않음 |
-| 2 | **사이트맵 `lastmod` 안정화** | 다수 `new Date()` | git/`updatedAt` 기반으로 교체 (§4-1). 안전·저위험, 우선 착수 권장 |
+| 2 | **블로그 중복 slug 정리** | `lib/blog-posts.ts`에 `slug: 'flutter-12'`가 **5개 글에 중복** → 1개만 렌더되고 나머지 4개 글은 도달 불가(고아 콘텐츠) | 4개 글에 고유 slug 부여(내용 기반) 또는 잉여 3~4개 제거. 사이트맵 loc 중복은 §4-1 dedup으로 이미 방어됨 |
 | 3 | **소프트-noindex(60–79점) 승격** | 게이트가 자동 분류 | 분기별 상위 트래픽 잠재 페이지부터 본문 보강 |
 | 4 | **홈 전략 확정** | 배포 홈=레거시 `index.html`, 앱 `app/page.tsx`는 데드 | 택1 — 앱 홈으로 통일하면 유지보수·구조화데이터 일원화 |
+
+> §5-2 lastmod 안정화 / IndexNow 변경분 제출은 **이번 작업에서 적용 완료**(§4-1·§4-2).
 
 ---
 
@@ -134,12 +139,13 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 
 | 순위 | 작업 | 위험 | 임팩트 |
 |---|---|---|---|
+| ✅ | 사이트맵 `lastmod` 안정화 + URL 중복 제거(§4-1) | — | 완료 |
+| ✅ | IndexNow 변경분만 제출(§4-2) | — | 완료 |
 | 1 | GSC·서치어드바이저 사이트맵 재제출 + 색인 수확 루프 가동(§4-3) | 없음 | 높음 |
-| 2 | 사이트맵 `lastmod` 안정화(§4-1, §5-2) | 낮음 | 중(크롤 효율) |
-| 3 | IndexNow 배포 훅 자동화 — 변경분만(§4-2) | 낮음 | 중 |
-| 4 | 분기 색인 회수: 노출0 페이지 noindex(§4-3) | 낮음 | 중(예산 재배분) |
-| 5 | `/l/`·`/h/` 단일화 착수(§5-1) | 중 | 중(자기잠식 제거) |
-| 6 | soft-noindex 페이지 본문 보강 → 승격(§5-3) | 낮음 | 높음(누적) |
+| 2 | 블로그 중복 slug(`flutter-12` ×5) 정리(§5-2) | 낮음 | 중(고아 콘텐츠 회복) |
+| 3 | 분기 색인 회수: 노출0 페이지 noindex(§4-3) | 낮음 | 중(예산 재배분) |
+| 4 | `/l/`·`/h/` 단일화 착수(§5-1) | 중 | 중(자기잠식 제거) |
+| 5 | soft-noindex 페이지 본문 보강 → 승격(§5-3) | 낮음 | 높음(누적) |
 
 ---
 
