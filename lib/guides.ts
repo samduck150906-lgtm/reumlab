@@ -78,7 +78,7 @@ export const GUIDES: GuideDef[] = [
     ],
     related: [
       { href: '/guide/app-cost', label: '앱개발 비용 결정 구조' },
-      { href: '/blog/oeju-gaebal-silphae-an-haneun-bab/', label: '외주개발, 실패 안 하는 법' },
+      { href: '/source-handover/', label: '소스코드 이관 — 외주 종속 피하기' },
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-06-22',
@@ -108,7 +108,7 @@ export const GUIDES: GuideDef[] = [
     related: [
       { href: '/mvp', label: 'MVP 개발 서비스 보기' },
       { href: '/guide/startup-mvp', label: '스타트업 MVP 개발 가이드' },
-      { href: '/blog/mvp-gaebal-biyong-gigan/', label: 'MVP 개발 비용과 기간' },
+      { href: '/guide/app-cost', label: '앱개발 비용 결정 구조' },
     ],
     publishedAt: '2026-06-22',
   },
@@ -137,7 +137,7 @@ export const GUIDES: GuideDef[] = [
     related: [
       { href: '/web-development', label: '웹사이트 제작 서비스 보기' },
       { href: '/guide/app-cost', label: '앱개발 비용 구조' },
-      { href: '/blog/homepage-jejak-biyong/', label: '홈페이지 제작 비용 총정리' },
+      { href: '/soho/', label: '소상공인 홈페이지 49만원' },
     ],
     publishedAt: '2026-06-22',
   },
@@ -165,7 +165,7 @@ export const GUIDES: GuideDef[] = [
     ],
     related: [
       { href: '/ai-development', label: 'AI 외주개발 서비스 보기' },
-      { href: '/blog/ai-chatbot-gaebal-sijak-beobeun/', label: 'AI 챗봇 개발, 작게 시작하는 법' },
+      { href: '/portfolio/role-prompt-engine-app/', label: 'AI 앱 개발 사례 — 프롬프트 엔진' },
       { href: '/guide/quote', label: '견적 빨리 받는 법' },
     ],
     publishedAt: '2026-06-22',
@@ -225,7 +225,7 @@ export const GUIDES: GuideDef[] = [
     related: [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
       { href: '/guide/app-cost', label: '앱개발 비용 결정 구조' },
-      { href: '/blog/oeju-gaebal-silphae-an-haneun-bab/', label: '외주 맡기기 전, 실패 안 하는 법' },
+      { href: '/source-handover/', label: '소스코드 이관 — 외주 종속 피하기' },
     ],
     publishedAt: '2026-06-22',
   },
@@ -253,7 +253,7 @@ export const GUIDES: GuideDef[] = [
     ],
     related: [
       { href: '/mvp', label: 'MVP 개발 서비스 보기' },
-      { href: '/blog/mvp-gaebal-bijeongongja-daehyo/', label: '비개발자 대표의 MVP 개발' },
+      { href: '/guide/startup-mvp', label: '스타트업 MVP 개발 가이드' },
       { href: '/guide/quote', label: '견적 빨리 받는 법' },
     ],
     publishedAt: '2026-06-22',

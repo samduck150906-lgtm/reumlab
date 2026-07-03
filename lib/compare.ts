@@ -89,7 +89,7 @@ export const COMPARES: CompareDef[] = [
     ],
     related: [
       { href: '/mvp', label: 'MVP 개발 서비스 보기' },
-      { href: '/blog/oeju-gaebal-silphae-an-haneun-bab/', label: '외주개발, 실패 안 하는 법' },
+      { href: '/source-handover/', label: '소스코드 이관 — 외주 종속 피하기' },
       { href: '/guide/mvp-cost', label: 'MVP 비용 줄이기' },
     ],
     publishedAt: '2026-06-22',
@@ -122,7 +122,7 @@ export const COMPARES: CompareDef[] = [
     ],
     related: [
       { href: '/guide/startup-mvp', label: '스타트업 MVP 개발 가이드' },
-      { href: '/blog/oeju-gaebal-silphae-an-haneun-bab/', label: '외주개발, 실패 안 하는 법' },
+      { href: '/source-handover/', label: '소스코드 이관 — 외주 종속 피하기' },
       { href: '/mvp', label: 'MVP 개발 서비스 보기' },
     ],
     publishedAt: '2026-06-22',
