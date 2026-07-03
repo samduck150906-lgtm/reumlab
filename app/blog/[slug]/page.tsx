@@ -9,17 +9,31 @@ import {
   getBlogPostBySlug,
 } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
+import { serviceLinksFor, regionLinkFor } from '@/lib/blog-links';
 import { ArticleJsonLd, BreadcrumbJsonLdTrail, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
 type Props = { params: { slug: string } };
+
+/**
+ * 정적 export에서 한글 slug는 params.slug가 percent-encoding(%EC…)으로 전달된다.
+ * 디코드하지 않으면 getBlogPostBySlug가 못 찾아 notFound()로 떨어지고, 한글 slug
+ * 블로그 글(대다수)이 전부 error 페이지로 빌드된다. app/[slug]/page.tsx와 동일 처리.
+ */
+function resolveSlug(raw: string): string {
+  try {
+    return decodeURIComponent(raw);
+  } catch {
+    return raw;
+  }
+}
 
 export function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getBlogPostBySlug(params.slug);
+  const post = getBlogPostBySlug(resolveSlug(params.slug));
   if (!post) notFound();
   const canonical = blogCanonical(post.slug);
 
@@ -53,12 +67,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default function BlogPostPage({ params }: Props) {
-  const post = getBlogPostBySlug(params.slug);
+  const post = getBlogPostBySlug(resolveSlug(params.slug));
   if (!post) notFound();
   const url = blogCanonical(post.slug);
 
   // 관련 글은 색인 품질을 통과한 글 우선 (얇은·중복 글로 링크 자산이 새지 않게)
   const related = BLOG_POSTS.filter((p) => p.slug !== post.slug && blogShouldIndex(p.slug)).slice(0, 3);
+
+  // 글 주제(키워드/제목)에 맞춘 머니페이지 내부링크 — 정보성 글의 힘을 견적 페이지로 전달(§7·§10)
+  const serviceLinks = serviceLinksFor(post);
+  const regionLink = regionLinkFor(post);
+  const primaryService = serviceLinks[0]; // 하단 CTA 대상(글마다 다름)
 
   return (
     <>
@@ -107,17 +126,59 @@ export default function BlogPostPage({ params }: Props) {
               )}
             </div>
 
+            {/* 관련 서비스 — 글 주제에 맞춰 머니페이지로 링크 자산 전달(§7·§10) */}
+            <div style={{ marginTop: 44 }}>
+              <p className="section-tag" style={{ marginBottom: 16 }}>관련 서비스</p>
+              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
+                {serviceLinks.map((s) => (
+                  <li key={s.href}>
+                    <Link
+                      href={s.href}
+                      style={{ display: 'block', padding: '14px 18px', background: 'rgba(255,255,255,0.04)', borderRadius: 10, textDecoration: 'none' }}
+                      data-analytics="cta_blog_service_link"
+                    >
+                      <span className="hub-intro" style={{ fontWeight: 600, color: 'var(--green, #4ade80)' }}>
+                        {s.label} →
+                      </span>
+                      <span style={{ display: 'block', fontSize: 13, color: 'var(--text-dim)', marginTop: 4 }}>
+                        {s.blurb}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+                {regionLink && (
+                  <li key={regionLink.href}>
+                    <Link
+                      href={regionLink.href}
+                      style={{ display: 'block', padding: '14px 18px', background: 'rgba(255,255,255,0.04)', borderRadius: 10, textDecoration: 'none' }}
+                      data-analytics="cta_blog_region_link"
+                    >
+                      <span className="hub-intro" style={{ fontWeight: 600, color: 'var(--green, #4ade80)' }}>
+                        {regionLink.label} →
+                      </span>
+                      <span style={{ display: 'block', fontSize: 13, color: 'var(--text-dim)', marginTop: 4 }}>
+                        {regionLink.blurb}
+                      </span>
+                    </Link>
+                  </li>
+                )}
+              </ul>
+            </div>
+
+            {/* 하단 CTA — 대표 서비스로 연결(글마다 다른 동선), 전화 상담 우선 */}
             <div className="cta" style={{ marginTop: 40 }}>
               <h2 className="section-title" style={{ fontSize: '1.15rem' }}>
                 다음 단계
               </h2>
-              <p className="hub-intro">패키지·일정이 궁금하시면 상담으로 연결해 드립니다.</p>
+              <p className="hub-intro">
+                {primaryService.label} 관련 상담이라면 패키지·일정을 바로 안내해 드립니다.
+              </p>
               <div className="cta-buttons">
                 <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_blog_post_call">
                   📞 무료 상담
                 </a>
-                <Link href="/#pricing" className="btn-outline" data-analytics="cta_blog_post_pricing">
-                  패키지 요금 보기
+                <Link href={primaryService.href} className="btn-outline" data-analytics="cta_blog_post_service">
+                  {primaryService.label} 자세히 보기
                 </Link>
               </div>
             </div>
