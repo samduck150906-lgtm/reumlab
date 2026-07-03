@@ -4,6 +4,7 @@ import { getLandings, getClusters, landingIndexable, hubShouldIndex } from '../l
 import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
+import { COSTS, costCanonical, costDecision } from '@/lib/cost';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
@@ -100,6 +101,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: industryMod,
       changeFrequency: 'monthly',
       priority: 0.7,
+    });
+  }
+
+  // 4축 — 업종별 앱개발 비용/견적 (색인 게이트 통과분만 포함)
+  // /app/[industry] 와 검색 의도 분리(무엇을 만드나 vs 얼마가 드나) — 자기잠식 방지
+  const costMod = gitLastModified('lib/cost.ts');
+  for (const c of COSTS) {
+    const decision = costDecision(c.slug);
+    if (decision && !decision.inSitemap) continue;
+    out.push({
+      url: costCanonical(c.slug),
+      lastModified: costMod,
+      changeFrequency: 'monthly',
+      priority: 0.72,
     });
   }
 
