@@ -106,6 +106,23 @@ export default function PortfolioIndexPage() {
             )}
 
             {hasPortfolio ? (
+              <div style={{ marginTop: 44, maxWidth: 760, marginLeft: 'auto', marginRight: 'auto' }}>
+                <h2 className="section-title" style={{ fontSize: '1.2rem' }}>이 사례들로 확인할 수 있는 것</h2>
+                <p className="hub-intro">
+                  개발 외주에서 가장 중요한 질문은 “이 팀이 실제로 만들 수 있는가”입니다. 각 사례는
+                  화면·기능처럼 확인 가능한 사실만 적고, 매출·전환율 같은 미확인 수치는 넣지 않았습니다.
+                  사례마다 <strong>문제 → 해결 → 결과 → 사용 기술 → 개발 범위 → 산출물 → 예상 견적</strong>과
+                  자주 묻는 질문까지 정리해, 비슷한 프로젝트를 준비할 때 그대로 참고하실 수 있습니다.
+                </p>
+                <ul className="hub-intro" style={{ paddingLeft: '1.1em', listStyle: 'disc', marginTop: 12 }}>
+                  <li style={{ marginTop: 6 }}><strong>기술 폭</strong> — Flutter 앱, 반응형 웹, AI(LLM) 연동, 양면 매칭 플랫폼까지 실제 구현 범위</li>
+                  <li style={{ marginTop: 6 }}><strong>소유권 이관</strong> — 모든 사례에서 소스코드·저장소·배포 권한을 대표 명의로 통째 이관</li>
+                  <li style={{ marginTop: 6 }}><strong>정액 견적 기준</strong> — 비슷한 규모를 새로 만들 때의 예상 패키지·금액을 사례마다 공개</li>
+                </ul>
+              </div>
+            ) : null}
+
+            {hasPortfolio ? (
               <div style={{ marginTop: 40 }}>
                 <h2 className="section-title" style={{ fontSize: '1.15rem', textAlign: 'center' }}>
                   서비스별로 더 보기

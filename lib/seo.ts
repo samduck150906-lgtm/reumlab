@@ -234,6 +234,16 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogDescription: 'Cross-platform Flutter MVP. Full source ownership. Validate your market in 21 days.',
     h1: 'MVP 개발 · Startup MVP Development',
     serviceDesc: '검증에 필요한 최소 기능만 빠르게 만듭니다. Flutter로 iOS·Android 동시 출시, 소스코드 전체 이관, 직접 운영 교육 포함. 앱 라이트 MVP는 VAT 포함 290만 원·약 14일, 회원·결제까지 갖춘 앱 스탠다드는 490만 원·약 21일.',
+    sections: [
+      { h2: 'What to build first — and what to cut', body: 'A good MVP includes only what is needed to test your core hypothesis (investment, sales, or user validation). We keep the essential login/payment/admin flows and defer edge cases, extra options, and “nice to have” features to after validation. Trying to build everything at once multiplies cost and delays launch.' },
+      { h2: 'MVP cost and timeline', body: 'Scope decides price. A lean web MVP maps to our Web Business package, an app MVP to App Lite (₩2,900,000, ~14 days) or App Standard with members/payments/admin (₩4,900,000, ~21 days). AI or complex settlement moves into the App AI (₩6,900,000) tier. All prices are fixed and VAT-included, disclosed before we start — no hidden fees.' },
+      { h2: 'How ownership is handed over', body: 'On delivery we transfer the full source code, Git repository, deployment rights, and store accounts to your name. You can move to another team or run it yourself — never locked to one vendor. We also give 1:1 training so a non-developer founder can make simple edits directly, and the codebase is structured to extend on the same base after validation.' },
+    ],
+    faqs: [
+      { q: 'How much does MVP development cost in Korea?', a: 'Our lean MVP starts from ₩2,900,000 (VAT included), scaling to ₩4,900,000 for an app with members, payments, and an admin panel. Final pricing depends on scope, which we fix and disclose before starting.' },
+      { q: 'How long does it take to launch an MVP?', a: 'Typically about 14–30 days depending on scope. App Lite is around 14 days, App Standard around 21 days. If you have an investor or demo-day deadline, we scope the build to fit it.' },
+      { q: 'Do I receive the full source code?', a: 'Yes — always. Full source code, repository, deployment rights, and store accounts are transferred to you, plus 1:1 operation training. No lock-in.' },
+    ],
     canonical: 'https://reumlab.com/mvp-development',
   },
 
@@ -252,6 +262,16 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogDescription: 'Flutter specialist studio. One code, two platforms. Cheaper to build, cheaper to maintain.',
     h1: 'Flutter 앱개발 · Flutter Development',
     serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. 앱 라이트 MVP 290만 원부터, 회원·결제까지 갖춘 앱 스탠다드 490만 원.',
+    sections: [
+      { h2: 'Why Flutter is cheaper to build and maintain', body: 'Building iOS and Android natively means two codebases, two teams, and two maintenance streams. Flutter uses a single codebase for both platforms, cutting development cost by roughly 50–70% and halving long-term maintenance — every fix and update ships to both platforms at once.' },
+      { h2: 'When Flutter fits — and when native is better', body: 'Flutter is ideal for commerce, booking, community, and subscription apps, and for MVPs that need to launch on both platforms fast. For high-end 3D games, real-time video, or AR that depend on native performance, we recommend native and say so up front. We assess fit before quoting.' },
+      { h2: 'Cost, delivery, and handover', body: 'A Flutter app MVP starts at ₩2,900,000 (App Lite, ~14 days) and ₩4,900,000 for App Standard with members, payments, and admin (~21 days) — fixed, VAT-included pricing. We handle App Store and Play Store submission, then transfer the full source code, repository, and deployment rights to you, with 1:1 operation training.' },
+    ],
+    faqs: [
+      { q: 'How much does Flutter app development cost?', a: 'Our Flutter app MVP starts from ₩2,900,000 (App Lite, VAT included), and ₩4,900,000 for App Standard with members, payments, and an admin panel. Scope is fixed and disclosed before we start.' },
+      { q: 'Does Flutter build both iOS and Android?', a: 'Yes — one codebase produces both iOS and Android apps, released together. We also handle store registration and transfer the accounts and rights to you.' },
+      { q: 'Is Flutter quality lower than native?', a: 'For MVPs and most business apps, users notice essentially no difference. Unless you need high-end 3D or real-time video, Flutter is faster to launch and cheaper to maintain — usually the more practical choice.' },
+    ],
     canonical: 'https://reumlab.com/flutter-development',
   },
 

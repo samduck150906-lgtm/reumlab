@@ -1,6 +1,7 @@
 import { getClusters, getHubBySlug, hubShouldIndex } from '../../../lib/data';
+import { getHubContent } from '../../../lib/hub-content';
 import HubPage from '../../../components/HubPage';
-import { LandingServiceJsonLd } from '../../../components/JsonLd';
+import { LandingServiceJsonLd, FAQPageJsonLd } from '../../../components/JsonLd';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -40,6 +41,8 @@ export async function generateMetadata({ params }) {
 export default function HubRoute({ params }) {
   const hub = getHubBySlug(params.hubSlug);
   const url = `${BASE}/h/${params.hubSlug}/`;
+  // 색인되는 허브에만 고유 본문/FAQ가 있으므로, 그 경우에만 FAQPage 스키마를 낸다
+  const content = hubShouldIndex(params.hubSlug) ? getHubContent(params.hubSlug) : undefined;
   return (
     <>
       {hub ? (
@@ -53,6 +56,7 @@ export default function HubRoute({ params }) {
           ]}
         />
       ) : null}
+      {content ? <FAQPageJsonLd items={content.faqs} /> : null}
       <HubPage hubSlug={params.hubSlug} />
     </>
   );

@@ -7,6 +7,7 @@ import {
   getLandingBySlug,
   landingRedirectTarget,
 } from '../lib/data';
+import { getHubContent } from '../lib/hub-content';
 import BusinessFooter from './BusinessFooter';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
@@ -16,7 +17,8 @@ export default function HubPage({ hubSlug }) {
   const hub = getHubBySlug(hubSlug);
   if (!hub) return null;
 
-  const bodyText = getHubBodyTemplate(hub);
+  const content = getHubContent(hubSlug);
+  const bodyText = (content && content.intro) || getHubBodyTemplate(hub);
   const tel = `tel:${String(site.tel || '').replace(/-/g, '')}`;
   const mail = `mailto:${site.email}`;
   const landings = (hub.landings || []).slice(0, 60);
@@ -85,6 +87,36 @@ export default function HubPage({ hubSlug }) {
           </div>
         </div>
       </section>
+
+      {/* ── 업종/지역 고유 본문 + FAQ (색인 허브 심화) ── */}
+      {content ? (
+        <section className="px-5 pb-4 sm:px-6">
+          <div className="mx-auto max-w-3xl">
+            {content.sections.map((s) => (
+              <div key={s.h} className="mb-9">
+                <h2 className="font-display text-xl font-bold tracking-tight text-navy-900 sm:text-2xl">
+                  {s.h}
+                </h2>
+                <p className="mt-3 text-[15px] leading-relaxed text-slate-600 sm:text-base">
+                  {s.body}
+                </p>
+              </div>
+            ))}
+
+            <h2 className="mt-12 font-display text-xl font-bold tracking-tight text-navy-900 sm:text-2xl">
+              자주 묻는 질문
+            </h2>
+            <div className="mt-5 space-y-4">
+              {content.faqs.map((f) => (
+                <div key={f.q} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-card">
+                  <p className="text-[15px] font-bold text-navy-900">{f.q}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-slate-600">{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       {/* ── 최종 CTA ── */}
       <section className="bg-gradient-to-br from-accent to-accent-deep px-5 py-16 text-center sm:px-6 sm:py-20">
