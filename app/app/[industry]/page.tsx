@@ -20,6 +20,14 @@ const INDUSTRY_CASES: Record<string, string[]> = {
   studycafe: ['unmanned-rental-studio-landing'],
   rental: ['unmanned-rental-studio-landing'],
   o2o: ['marketer-matching-platform'],
+  'english-academy': ['academy-matching-app'],
+  'math-academy': ['academy-matching-app'],
+  'music-academy': ['academy-matching-app'],
+  'art-academy': ['academy-matching-app'],
+  taekwondo: ['academy-matching-app'],
+  tutoring: ['academy-matching-app', 'marketer-matching-platform'],
+  'party-room': ['unmanned-rental-studio-landing'],
+  'rental-car': ['unmanned-rental-studio-landing'],
 };
 
 export function generateStaticParams() {
