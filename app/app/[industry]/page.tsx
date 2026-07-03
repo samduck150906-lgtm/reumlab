@@ -16,6 +16,10 @@ const INDUSTRY_CASES: Record<string, string[]> = {
   marketplace: ['marketer-matching-platform', 'academy-matching-app'],
   booking: ['unmanned-rental-studio-landing', 'academy-matching-app'],
   community: ['marketer-matching-platform'],
+  university: ['academy-matching-app'],
+  studycafe: ['unmanned-rental-studio-landing'],
+  rental: ['unmanned-rental-studio-landing'],
+  o2o: ['marketer-matching-platform'],
 };
 
 export function generateStaticParams() {
