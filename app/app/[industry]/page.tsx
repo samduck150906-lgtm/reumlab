@@ -10,6 +10,7 @@ import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '
 import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
+import { getDeepDive } from '@/lib/deep-dive';
 
 type Props = { params: { industry: string } };
 
@@ -79,6 +80,7 @@ export default function IndustryPage({ params }: Props) {
     { name: ind.keyword, url: canonical },
   ];
   const others = INDUSTRIES.filter((i) => i.slug !== ind.slug).slice(0, 8);
+  const deep = getDeepDive(ind.slug);
   const relatedCases = (INDUSTRY_CASES[ind.slug] ?? [])
     .map((s) => getPortfolioBySlug(s))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
@@ -150,6 +152,30 @@ export default function IndustryPage({ params }: Props) {
             <p className="hub-intro">{ind.scenario}</p>
             {ind.benefits && <p className="hub-intro" style={{ marginTop: 14 }}>{ind.benefits}</p>}
           </div>
+
+          {deep && (
+            <div className="section-inner" style={{ paddingTop: 16 }}>
+              <p className="hub-intro" style={{ fontSize: '1.02rem', lineHeight: 1.9 }}>{deep.lead}</p>
+              {deep.sections.map((s, i) => (
+                <div key={s.h} style={{ marginTop: i === 0 ? 20 : 26 }}>
+                  <h2 className="section-title" style={{ fontSize: '1.18rem', marginBottom: 8 }}>{s.h}</h2>
+                  <p className="hub-intro" style={{ lineHeight: 1.9 }}>{s.body}</p>
+                </div>
+              ))}
+              <aside
+                style={{
+                  marginTop: 26,
+                  padding: '16px 18px',
+                  background: 'var(--surface, #f6f8f7)',
+                  borderRadius: 10,
+                  borderLeft: '4px solid var(--green)',
+                }}
+              >
+                <p style={{ margin: 0, fontWeight: 600, fontSize: '0.9rem', color: 'var(--green)' }}>진행하면서 바뀐 점</p>
+                <p className="hub-intro" style={{ margin: '6px 0 0', lineHeight: 1.85 }}>{deep.changed}</p>
+              </aside>
+            </div>
+          )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{ind.ko} 앱 개발 자주 묻는 질문</h2>
