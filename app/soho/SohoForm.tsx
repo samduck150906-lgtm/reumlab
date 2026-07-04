@@ -253,7 +253,7 @@ export default function SohoForm() {
             <input type="checkbox" name="이용약관동의" value="동의" required />
             <span>
               이용약관 동의{' '}
-              <a href="/terms.html" target="_blank" rel="noopener noreferrer">
+              <a href="/terms/" target="_blank" rel="noopener noreferrer">
                 [보기]
               </a>
             </span>
@@ -262,7 +262,7 @@ export default function SohoForm() {
             <input type="checkbox" name="개인정보동의" value="동의" required />
             <span>
               개인정보 수집·이용 동의{' '}
-              <a href="/privacy.html" target="_blank" rel="noopener noreferrer">
+              <a href="/privacy/" target="_blank" rel="noopener noreferrer">
                 [보기]
               </a>
             </span>

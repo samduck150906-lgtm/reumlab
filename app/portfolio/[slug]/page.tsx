@@ -10,7 +10,7 @@ import {
   portfolioMetaDescription,
   portfolioCategoryLabel,
 } from '@/lib/portfolio';
-import { PortfolioCreativeWorkJsonLd } from '@/components/JsonLd';
+import { PortfolioCreativeWorkJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
 type Props = { params: { slug: string } };
@@ -98,6 +98,7 @@ export default function PortfolioDetailPage({ params }: Props) {
         datePublished={item.publishedAt}
         crumbs={crumbs}
       />
+      {item.faqs && item.faqs.length > 0 && <FAQPageJsonLd items={item.faqs} />}
       <main>
         <article className="dynamic-page">
           <nav className="breadcrumb" aria-label="breadcrumb">
@@ -140,6 +141,24 @@ export default function PortfolioDetailPage({ params }: Props) {
             </div>
           ))}
 
+          {item.techNote ? (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.2rem' }}>사용 기술과 선택 이유</h2>
+              <p className="hub-intro">{item.techNote}</p>
+            </div>
+          ) : null}
+
+          {item.scope && item.scope.length > 0 ? (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.2rem' }}>개발 범위</h2>
+              <ul className="hub-intro" style={{ paddingLeft: '1.1em', listStyle: 'disc' }}>
+                {item.scope.map((s) => (
+                  <li key={s} style={{ marginTop: 6 }}>{s}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.2rem' }}>산출물</h2>
             <ul className="hub-intro" style={{ paddingLeft: '1.1em', listStyle: 'disc' }}>
@@ -148,6 +167,38 @@ export default function PortfolioDetailPage({ params }: Props) {
               ))}
             </ul>
           </div>
+
+          {item.estimateNote ? (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.2rem' }}>비슷한 프로젝트 예상 견적</h2>
+              <p className="hub-intro">{item.estimateNote}</p>
+            </div>
+          ) : null}
+
+          {item.checkpoints && item.checkpoints.length > 0 ? (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.2rem' }}>비개발자 대표가 확인할 체크포인트</h2>
+              <ul className="hub-intro" style={{ paddingLeft: '1.1em', listStyle: 'disc' }}>
+                {item.checkpoints.map((c) => (
+                  <li key={c} style={{ marginTop: 6 }}>{c}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {item.faqs && item.faqs.length > 0 ? (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.2rem' }}>자주 묻는 질문</h2>
+              <div className="faq-grid">
+                {item.faqs.map((f) => (
+                  <div className="faq-item" key={f.q}>
+                    <p className="faq-q">{f.q}</p>
+                    <p className="faq-a">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 진행 사례</h2>

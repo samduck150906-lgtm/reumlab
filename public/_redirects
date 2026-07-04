@@ -1,4 +1,9 @@
 # Netlify 등 정적 호스팅용 301 (있으면 우선 적용)
+# 법적 고지 flat .html → pretty URL 통합 (canonical 없는 중복 제거, GSC "Duplicate without user-selected canonical" 해소)
+/privacy.html   /privacy/   301!
+/terms.html     /terms/     301!
+/refund.html    /refund/    301!
+
 # 얇은 한글 pillar → 충실한 한글 페이지 (본문 없는 meta-only 중복 정리)
 /스타트업MVP     /mvp/             301
 /스타트업MVP/    /mvp/             301
@@ -59,3 +64,56 @@
 /l/gangnam-landing-page-quote/ /web-development/gangnam/ 301
 /l/suwon-mvp-dev              /mvp/suwon/                301
 /l/suwon-mvp-dev/             /mvp/suwon/                301
+
+# 저품질 자동생성 블로그 400편(50키워드×8지역 near-duplicate) 제거 → 관련 페이지로 301
+# lib/blog-posts.ts 에서 삭제, 접두어 글롭으로 지역·인덱스 변형 전부 통합 (자기잠식·도어웨이 제거)
+/blog/앱-개발-비용-*   /guide/app-cost/   301
+/blog/앱-개발-기간-*   /guide/app-cost/   301
+/blog/앱-개발-견적-*   /guide/quote/   301
+/blog/앱-개발-비전공자-*   /guide/non-developer-app/   301
+/blog/앱-개발-실패-예방-*   /guide/outsourcing-cost/   301
+/blog/앱-개발-외주-*   /app-development/   301
+/blog/홈페이지-제작-비용-*   /guide/web-cost/   301
+/blog/홈페이지-제작-견적-*   /guide/web-cost/   301
+/blog/홈페이지-제작-seo-*   /web-development/   301
+/blog/홈페이지-제작-디자인-*   /web-development/   301
+/blog/홈페이지-제작-템플릿-*   /web-development/   301
+/blog/홈페이지-제작-업체-*   /web-development/   301
+/blog/웹개발-비용-*   /guide/web-cost/   301
+/blog/웹개발-외주-*   /web-development/   301
+/blog/웹개발-회사-*   /web-development/   301
+/blog/웹개발-기술-*   /web-development/   301
+/blog/웹개발-인턴-*   /web-development/   301
+/blog/웹개발-학원-*   /web-development/   301
+/blog/랜딩페이지-제작-*   /web-development/   301
+/blog/랜딩페이지-비용-*   /guide/web-cost/   301
+/blog/랜딩페이지-seo-*   /web-development/   301
+/blog/랜딩페이지-전환율-*   /web-development/   301
+/blog/랜딩페이지-디자인-*   /web-development/   301
+/blog/랜딩페이지-마케팅-*   /web-development/   301
+/blog/flutter-비용-*   /guide/flutter-cost/   301
+/blog/flutter-mvp-*   /flutter/   301
+/blog/flutter-단점-*   /flutter/   301
+/blog/flutter-장점-*   /flutter/   301
+/blog/flutter-크로스-*   /flutter/   301
+/blog/flutter-배우기-*   /flutter/   301
+/blog/mvp-비용-*   /guide/mvp-cost/   301
+/blog/mvp-기간-*   /guide/mvp-cost/   301
+/blog/mvp-검증-*   /mvp/   301
+/blog/mvp-전략-*   /mvp/   301
+/blog/mvp-아이디어-*   /mvp/   301
+/blog/mvp-시장-*   /mvp/   301
+/blog/외주개발-비용-*   /guide/outsourcing-cost/   301
+/blog/외주개발-업체-*   /app-development/   301
+/blog/외주개발-계약-*   /source-handover/   301
+/blog/외주개발-일정-*   /app-development/   301
+/blog/외주개발-품질-*   /source-handover/   301
+/blog/외주개발-유지보수-*   /source-handover/   301
+/blog/ai개발-비용-*   /ai-development/   301
+/blog/ai개발-챗봇-*   /guide/chatbot-cost/   301
+/blog/ai개발-ml-*   /ai-development/   301
+/blog/ai개발-학습-*   /ai-development/   301
+/blog/ai개발-기술-*   /ai-development/   301
+/blog/ai개발-외주-*   /ai-development/   301
+/blog/데이터분석-비용-*   /ai-development/   301
+/blog/데이터분석-학원-*   /ai-development/   301
