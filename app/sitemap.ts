@@ -5,6 +5,7 @@ import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
 import { COSTS, costCanonical, costDecision } from '@/lib/cost';
+import { SOLUTIONS, solutionCanonical, solutionDecision } from '@/lib/solution';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
@@ -113,6 +114,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     out.push({
       url: costCanonical(c.slug),
       lastModified: costMod,
+      changeFrequency: 'monthly',
+      priority: 0.72,
+    });
+  }
+
+  // 5축 — 업종별 솔루션·시스템 구축 (색인 게이트 통과분만 포함)
+  // /app(무엇)·/cost(얼마)와 검색 의도 분리(어떻게 구축) — 자기잠식 방지
+  const solutionMod = gitLastModified('lib/solution.ts');
+  for (const s of SOLUTIONS) {
+    const decision = solutionDecision(s.slug);
+    if (decision && !decision.inSitemap) continue;
+    out.push({
+      url: solutionCanonical(s.slug),
+      lastModified: solutionMod,
       changeFrequency: 'monthly',
       priority: 0.72,
     });

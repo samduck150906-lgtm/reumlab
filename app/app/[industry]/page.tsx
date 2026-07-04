@@ -8,6 +8,7 @@ import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 import { hasCost } from '@/lib/cost';
+import { hasSolution } from '@/lib/solution';
 
 type Props = { params: { industry: string } };
 
@@ -131,6 +132,11 @@ export default function IndustryPage({ params }: Props) {
             {hasCost(ind.slug) && (
               <p className="hub-intro" style={{ marginTop: 8 }}>
                 <Link href={`/cost/${ind.slug}/`}>💰 {ind.ko} 앱 개발 비용 자세히 보기 (가격대·비용 요인·절감 방법)</Link>
+              </p>
+            )}
+            {hasSolution(ind.slug) && (
+              <p className="hub-intro" style={{ marginTop: 6 }}>
+                <Link href={`/solution/${ind.slug}/`}>🧩 {ind.ko} 솔루션 구축 보기 (기능 모듈·기술 스택·연동·도입 단계)</Link>
               </p>
             )}
           </div>
