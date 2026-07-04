@@ -1,4 +1,9 @@
 # Netlify 등 정적 호스팅용 301 (있으면 우선 적용)
+# 법적 고지 flat .html → pretty URL 통합 (canonical 없는 중복 제거, GSC "Duplicate without user-selected canonical" 해소)
+/privacy.html   /privacy/   301!
+/terms.html     /terms/     301!
+/refund.html    /refund/    301!
+
 # 얇은 한글 pillar → 충실한 한글 페이지 (본문 없는 meta-only 중복 정리)
 /스타트업MVP     /mvp/             301
 /스타트업MVP/    /mvp/             301
