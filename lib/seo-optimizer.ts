@@ -337,7 +337,7 @@ ${JSON.stringify(this.generateFAQSchema(post.faqs), null, 2)}
   }): Record<string, any> {
     return {
       // 네이버 특화: 콘텐츠 설명이 더 상세할수록 유리
-      contentDescription: `${post.title}에 대한 완벽한 가이드. ${post.region || '전국'} 기준으로 비용, 기간, 선택 기준을 상세히 설명합니다.`,
+      contentDescription: `${post.title} — ${post.region || '전국'} 기준으로 비용, 기간, 무엇부터 정할지까지 실제 진행 순서대로 정리했습니다.`,
 
       // 네이버: 카테고리 분류 중요
       categories: [

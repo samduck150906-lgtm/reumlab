@@ -169,9 +169,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             {(seo.whyPoints && seo.whyPoints.length > 0
               ? seo.whyPoints
               : [
-                  '기획·디자인·개발·배포까지 원스톱',
-                  'Flutter, React Native, Next.js 등 최신 스택',
-                  '견적·일정 투명 안내 · 대표 직접 커뮤니케이션',
+                  '기획·디자인·개발·배포를 한 팀이 이어서 진행',
+                  '주로 Flutter·React Native·Next.js로 작업합니다',
+                  '견적·일정을 미리 공개하고, 대표가 직접 소통합니다',
                   `사업자 ${SITE.company} · 대표 ${SITE.representative} · ${SITE.phone}`,
                 ]
             ).map((pt) => (

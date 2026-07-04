@@ -9,6 +9,7 @@ import BusinessFooter from '@/components/BusinessFooter';
 import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
+import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 
 type Props = { params: { industry: string } };
 
@@ -110,6 +111,9 @@ export default function IndustryPage({ params }: Props) {
               핵심 기능: {ind.coreFeatures}
             </p>
             <p className="hub-intro">{ind.intro}</p>
+            <p className="hub-intro" style={{ marginTop: 12, fontSize: '0.95rem', color: 'var(--muted, #667085)', borderLeft: '3px solid var(--green)', paddingLeft: 12 }}>
+              {operatorNote(ind.slug)}
+            </p>
 
             <div className="cta-buttons" style={{ marginTop: 24 }}>
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_industry_call">
@@ -187,10 +191,10 @@ export default function IndustryPage({ params }: Props) {
             <p className="hub-intro">기획서가 없어도 핵심 기능 한두 가지만 있으면 상담을 시작할 수 있습니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_industry_call_bottom">
-                무료 30분 상담
+                {ctaPrimary(ind.slug)}
               </a>
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_industry_pricing">
-                패키지 요금 보기
+                {ctaSecondary(ind.slug)}
               </Link>
             </div>
           </div>

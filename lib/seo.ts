@@ -85,16 +85,16 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       'Next.js 개발',
       'TypeScript 웹',
     ],
-    ogTitle: '전문 웹 개발 및 홈페이지 제작 | 름랩',
-    ogDescription: '사용자 경험을 최우선으로 하는 고품질 웹 구축 솔루션.',
-    h1: '성공적인 비즈니스를 위한 웹 개발 및 제작',
+    ogTitle: '홈페이지 제작·웹 개발 | 름랩',
+    ogDescription: '검색에 잡히고 문의로 이어지는 웹사이트를 정액으로 만듭니다. 소스코드는 넘겨드립니다.',
+    h1: '홈페이지 제작·웹 개발',
     canonical: 'https://reumlab.com/웹개발',
   },
 
   앱개발: {
     title: '앱개발 외주 | Flutter iOS·안드로이드 MVP 290만원부터 — 름랩',
     description:
-      'iOS·Android 네이티브 및 하이브리드 앱 제작. 안정적인 성능과 최적의 UX를 구현합니다.',
+      'Flutter로 iOS·안드로이드 앱을 한 번에 만듭니다. 기획서가 없어도 꼭 필요한 기능 한두 개면 상담을 시작할 수 있고, 완성 후 소스코드를 넘겨드립니다.',
     keywords: [
       '앱 개발',
       '어플 제작',
@@ -103,16 +103,16 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       'Flutter 앱',
       'iOS 안드로이드 앱',
     ],
-    ogTitle: '사용자가 만족하는 모바일 앱 개발 | 름랩',
-    ogDescription: '기획부터 스토어 등록까지, 완벽한 모바일 비즈니스 앱 구축.',
-    h1: '비즈니스 경쟁력을 높이는 Flutter 앱 MVP 개발',
+    ogTitle: 'Flutter 앱 개발 외주 | 름랩',
+    ogDescription: '화면 설계부터 스토어 등록까지 진행하고, 대표님이 직접 수정할 수 있게 운영 교육까지 드립니다.',
+    h1: 'Flutter 앱 MVP 개발',
     canonical: 'https://reumlab.com/앱개발',
   },
 
   스타트업MVP: {
     title: '스타트업 MVP 개발 외주 | 3주 출시·소스코드 이관 — 름랩 REUMLAB',
     description:
-      '가장 빠른 시장 검증을 위한 MVP 기획 및 개발. 불필요한 비용 없이 핵심 가치를 구축합니다.',
+      '검증에 필요한 핵심 기능만 추려 3주 안에 출시하는 MVP 개발. 다 만들고 나서 반응을 보는 대신, 꼭 필요한 흐름 하나부터 시장에 내놓습니다.',
     keywords: [
       '스타트업 MVP',
       'MVP 제작',
@@ -120,9 +120,9 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       '스타트업 외주',
       '신규 서비스 구축',
     ],
-    ogTitle: '빠른 실행력을 위한 스타트업 MVP 개발 | 름랩',
-    ogDescription: '아이디어를 현실로. 가장 효율적인 방식으로 시장 반응을 확인하세요.',
-    h1: '아이디어를 검증하는 가장 빠른 방법, MVP 개발',
+    ogTitle: '스타트업 MVP 개발 외주 | 름랩',
+    ogDescription: '데모데이·투자 일정이 있으면 그 날짜에 맞춰 범위를 잡습니다. 이후 내부 개발팀이 이어받도록 코드를 정리해 넘겨드립니다.',
+    h1: '스타트업 MVP 개발',
     canonical: 'https://reumlab.com/스타트업MVP',
   },
 

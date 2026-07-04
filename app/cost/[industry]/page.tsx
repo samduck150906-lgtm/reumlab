@@ -7,6 +7,7 @@ import { COSTS, getCost, costCanonical, costDecision, costTitleName } from '@/li
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import { ctaPrimary, operatorNote } from '@/lib/voice';
 
 type Props = { params: { industry: string } };
 
@@ -85,6 +86,9 @@ export default function CostPage({ params }: Props) {
               {name}
             </h1>
             <p className="hub-intro">{c.lead}</p>
+            <p className="hub-intro" style={{ marginTop: 12, fontSize: '0.95rem', color: 'var(--muted, #667085)', borderLeft: '3px solid var(--green)', paddingLeft: 12 }}>
+              {operatorNote('cost-' + c.slug)}
+            </p>
 
             <div className="cta-buttons" style={{ marginTop: 24 }}>
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_cost_call">
@@ -169,7 +173,7 @@ export default function CostPage({ params }: Props) {
             <p className="hub-intro">기획서가 없어도 꼭 필요한 기능만 알려 주시면 범위에 맞는 정액 견적을 안내해 드립니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_cost_call_bottom">
-                무료 견적 상담
+                {ctaPrimary('cost-' + c.slug)}
               </a>
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_cost_pricing">
                 패키지 요금 보기
