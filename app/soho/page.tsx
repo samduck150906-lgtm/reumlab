@@ -4,6 +4,7 @@ import { SITE } from '@/lib/seo';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import SohoForm from './SohoForm';
+import SohoCountdown from './SohoCountdown';
 import './soho.css';
 
 const PAGE_URL = `${SITE.domain}/soho/`;
@@ -102,6 +103,23 @@ const FAQS = [
   },
 ];
 
+/** '왜 름랩' 4대 설득 포인트 (유입 3초 설득) */
+const WHY_CHECKS = [
+  { title: '추가금 없는 명확한 견적', desc: '처음 안내한 금액 그대로. 진행 중 갑자기 늘어나는 비용이 없습니다.' },
+  { title: '검색노출을 고려한 구조 설계', desc: '예쁘기만 한 사이트가 아니라, 네이버·구글에 잡히도록 구조부터 설계합니다.' },
+  { title: '직접 수정 가능한 홈페이지', desc: '소스코드 전체 이관 + 직접 수정 교육으로, 글자·이미지·연락처를 직접 고칩니다.' },
+  { title: '문의가 생기는 동선 설계', desc: '방문자가 전화·예약까지 자연스럽게 이어지도록 전환 동선을 설계합니다.' },
+];
+
+/** 성과 1위 비교 소재 — 일반 제작 vs 름랩 */
+const VS_ROWS = [
+  { other: '예쁜 디자인', reum: '문의 중심 설계' },
+  { other: '제작 후 끝', reum: '운영까지 고려' },
+  { other: '수정마다 비용', reum: '직접 수정 가능' },
+  { other: '검색 고려 X', reum: '검색노출 구조' },
+  { other: '기능 추가마다 비용', reum: '처음부터 필요한 기능 설계' },
+];
+
 const NP_POINTS = [
   { title: '검색에 안 보이면 없는 가게나 마찬가지', desc: '직접 매장을 운영하며 가장 먼저 부딪힌 벽이었습니다' },
   { title: '광고비만 매달 빠져나가는 부담', desc: '광고를 멈추면 손님도 끊기는 구조, 직접 겪어봤습니다' },
@@ -169,9 +187,18 @@ export default function SohoPage() {
               ))}
             </div>
 
+            {/* 긴급성 프로모션 배너 + 카운트다운 (CTA 바로 위) */}
+            <div className="s-promo" role="note" aria-label="이번 달 한정 프로모션">
+              <span className="s-promo-flame" aria-hidden="true">🔥</span>
+              <span className="s-promo-txt">
+                <b>이번 달 상담 고객 한정</b> · 정가 대비 <b className="s-promo-pct">50% 할인가</b>
+              </span>
+              <SohoCountdown />
+            </div>
+
             <div className="s-btns">
               <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_hero_apply">
-                💬 무료 상담 신청하기
+                💬 지금 50% 할인가로 상담 신청
               </a>
               <a href={SITE.phoneHref} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_phone">
                 📞 전화 상담
@@ -369,6 +396,56 @@ export default function SohoPage() {
           </div>
         </section>
 
+        {/* ── 왜 름랩 + 일반 제작 vs 름랩 비교 (성과 1위 소재) ── */}
+        <section className="s-sec t-light2 acc-green s-vs">
+          <div className="s-wrap">
+            <p className="s-label">일반 제작 vs 름랩</p>
+            <h2 className="s-h">
+              왜 <span className="s-g">름랩</span>이어야 할까요?
+            </h2>
+            <p className="s-lead">수많은 홈페이지 제작 업체 중에, 름랩은 다르게 만듭니다.</p>
+
+            <ul className="s-why-list">
+              {WHY_CHECKS.map((c) => (
+                <li key={c.title}>
+                  <span className="s-why-ck" aria-hidden="true">✓</span>
+                  <div>
+                    <b>{c.title}</b>
+                    <span>{c.desc}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="s-vs-board">
+              <div className="s-vs-head">
+                <div className="s-vs-hc other">일반 제작</div>
+                <div className="s-vs-hc reum">
+                  름랩<span className="s-vs-badge">REUMLAB</span>
+                </div>
+              </div>
+              {VS_ROWS.map((r) => (
+                <div className="s-vs-row" key={r.other}>
+                  <div className="s-vs-cell other">
+                    <span className="s-vs-x" aria-hidden="true">✕</span>
+                    {r.other}
+                  </div>
+                  <div className="s-vs-cell reum">
+                    <span className="s-vs-v" aria-hidden="true">✓</span>
+                    {r.reum}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="s-btns" style={{ marginTop: 30 }}>
+              <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_vs_apply">
+                이번 달 한정 50% 할인가로 상담받기 →
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* ── 가격 ── */}
         <section className="s-sec t-ink2 acc-gold" id="price">
           <div className="s-wrap">
@@ -378,16 +455,27 @@ export default function SohoPage() {
               숨은 비용 없는 <span className="s-g">투명한 가격</span>
             </h2>
 
+            {/* 이번 달 한정 50% 할인 프로모션 + 카운트다운 */}
+            <div className="s-price-promo" role="note">
+              <span className="s-promo-flame" aria-hidden="true">🔥</span>
+              <span>
+                <b>이번 달 상담 고객 한정</b> · 아래 가격은 정가 대비{' '}
+                <b className="s-promo-pct">50% 할인가</b>
+              </span>
+              <SohoCountdown className="s-cd--gold" />
+            </div>
+
             <div className="s-prices">
               <div className="s-price">
                 <span className="s-price-tag">기본</span>
                 <h3>홈페이지 제작</h3>
                 <p className="s-price-sub">검색에 잘 잡히는 기본 웹사이트</p>
                 <div className="s-price-amt">
-                  <span className="s-price-was">50만원</span>
+                  <span className="s-price-was">98만원</span>
                   <span className="s-price-now">49<small>만원</small></span>
+                  <span className="s-price-off">50%↓</span>
                 </div>
-                <p className="s-price-note">1회성 · 호스팅·도메인 별도</p>
+                <p className="s-price-note">이번 달 한정가 · 1회성 · 호스팅·도메인 별도</p>
               </div>
 
               <div className="s-price is-feature">
@@ -395,10 +483,11 @@ export default function SohoPage() {
                 <h3>홈페이지 + 검색 노출 설계</h3>
                 <p className="s-price-sub">네이버·구글·AI 검색까지 함께</p>
                 <div className="s-price-amt">
-                  <span className="s-price-was">100만원</span>
+                  <span className="s-price-was">196만원</span>
                   <span className="s-price-now">98<small>만원</small></span>
+                  <span className="s-price-off">50%↓</span>
                 </div>
-                <p className="s-price-note">기본 대비 +49만원으로 노출까지 한 번에</p>
+                <p className="s-price-note">이번 달 한정가 · 기본 대비 +49만원으로 노출까지 한 번에</p>
               </div>
             </div>
 

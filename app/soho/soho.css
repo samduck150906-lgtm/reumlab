@@ -863,3 +863,103 @@
   .soho .sf-checks { grid-template-columns: 1fr; }
   .soho .s-gets-grid { grid-template-columns: 1fr; }
 }
+
+/* ───────────────────────────────────────────────
+   긴급성 프로모션 배너 + 카운트다운
+─────────────────────────────────────────────── */
+.soho .s-promo {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 9px 14px;
+  margin-top: 24px; padding: 13px 18px; border-radius: 14px;
+  background: linear-gradient(100deg, rgba(226, 181, 74, 0.18), rgba(240, 86, 107, 0.14));
+  border: 1px solid rgba(240, 207, 122, 0.38);
+  font-size: 14.5px; font-weight: 700; color: #f6ead0; line-height: 1.4;
+}
+.soho .s-promo-flame { font-size: 18px; flex: none; }
+.soho .s-promo-txt b { color: var(--gold-bright); font-weight: 800; }
+.soho .s-promo-pct { color: #ffcf8a !important; font-size: 16px; }
+
+.soho .s-cd {
+  display: inline-flex; align-items: center; gap: 8px; margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+.soho .s-cd-lead { color: var(--c-sub); font-size: 12.5px; font-weight: 600; }
+.soho .s-cd-dday { color: var(--green-bright); font-weight: 900; font-size: 15px; letter-spacing: -0.01em; }
+.soho .s-cd-clock { display: inline-flex; align-items: center; gap: 3px; }
+.soho .s-cd-clock b {
+  background: rgba(0, 0, 0, 0.35); color: #fff; font-weight: 800; font-size: 13px;
+  padding: 3px 6px; border-radius: 6px; min-width: 28px; text-align: center;
+}
+.soho .s-cd-clock i { color: var(--c-dim); font-style: normal; font-weight: 800; }
+.soho .s-cd--gold .s-cd-dday { color: var(--gold-bright); }
+
+/* ───────────────────────────────────────────────
+   왜 름랩 4체크 + 일반 제작 vs 름랩 비교
+─────────────────────────────────────────────── */
+.soho .s-why-list {
+  list-style: none; padding: 0; margin: 28px auto 0; max-width: 640px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: left;
+}
+.soho .s-why-list li {
+  display: flex; align-items: flex-start; gap: 11px; padding: 16px 18px;
+  border-radius: 14px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.soho .s-why-ck {
+  flex: none; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center;
+  background: #d8f5e5; color: var(--green-deep); font-weight: 900; font-size: 13px;
+}
+.soho .s-why-list b { display: block; font-size: 15px; font-weight: 800; color: #16231b; letter-spacing: -0.02em; }
+.soho .s-why-list span { display: block; margin-top: 4px; font-size: 13px; color: #5c6b5f; line-height: 1.55; }
+
+.soho .s-vs-board {
+  max-width: 640px; margin: 30px auto 0; border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.10); background: #fff;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+}
+.soho .s-vs-head { display: grid; grid-template-columns: 1fr 1fr; }
+.soho .s-vs-hc { padding: 15px 18px; text-align: center; font-weight: 900; font-size: 16px; letter-spacing: -0.02em; }
+.soho .s-vs-hc.other { background: #eee7d6; color: #8a8676; }
+.soho .s-vs-hc.reum {
+  background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.soho .s-vs-badge {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.08em; color: var(--ink);
+  background: var(--green-bright); padding: 3px 7px; border-radius: 999px;
+}
+.soho .s-vs-row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(0, 0, 0, 0.08); }
+.soho .s-vs-cell { display: flex; align-items: center; gap: 9px; padding: 14px 18px; font-size: 15px; line-height: 1.4; }
+.soho .s-vs-cell.other { color: #9a9484; background: #faf7ef; }
+.soho .s-vs-cell.reum { color: #16231b; font-weight: 800; border-left: 1px solid rgba(0, 0, 0, 0.08); }
+.soho .s-vs-x {
+  flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center;
+  background: #fbe0e4; color: var(--coral-deep); font-size: 12px; font-weight: 900;
+}
+.soho .s-vs-v {
+  flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center;
+  background: #d8f5e5; color: var(--green-deep); font-size: 12px; font-weight: 900;
+}
+
+/* ───────────────────────────────────────────────
+   가격 50% 앵커 + 프로모션 라인
+─────────────────────────────────────────────── */
+.soho .s-price-promo {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 14px;
+  max-width: 620px; margin: 0 auto 28px; padding: 13px 18px; border-radius: 14px;
+  background: linear-gradient(100deg, rgba(226, 181, 74, 0.18), rgba(240, 86, 107, 0.12));
+  border: 1px solid rgba(240, 207, 122, 0.34);
+  font-size: 14.5px; font-weight: 700; color: #f6ead0; text-align: center; line-height: 1.5;
+}
+.soho .s-price-promo .s-promo-flame { font-size: 18px; }
+.soho .s-price-promo b { color: var(--gold-bright); font-weight: 800; }
+.soho .s-price-promo .s-promo-pct { color: #ffcf8a !important; font-size: 16px; }
+.soho .s-price-off {
+  align-self: center; font-size: 12px; font-weight: 900; letter-spacing: -0.01em;
+  color: #2a1c00; background: var(--gold-bright); padding: 3px 9px; border-radius: 999px;
+}
+.soho .s-price.is-feature .s-price-off { background: var(--gold-bright); }
+
+@media (max-width: 620px) {
+  .soho .s-why-list { grid-template-columns: 1fr; }
+  .soho .s-cd { margin-left: 0; }
+  .soho .s-vs-hc { font-size: 14px; padding: 13px 10px; }
+  .soho .s-vs-cell { font-size: 13.5px; padding: 13px 11px; gap: 7px; }
+}
