@@ -96,6 +96,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4축 — 업종별 앱개발 비용/견적 (색인 게이트 통과분만 포함)
   // /app/[industry] 와 검색 의도 분리(무엇을 만드나 vs 얼마가 드나) — 자기잠식 방지
   const costMod = gitLastModified('lib/cost.ts');
+  out.push({
+    url: `${SITE.domain}/cost/`,
+    lastModified: costMod,
+    changeFrequency: 'weekly',
+    priority: 0.82,
+  });
   for (const c of COSTS) {
     const decision = costDecision(c.slug);
     if (decision && !decision.inSitemap) continue;
@@ -110,6 +116,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 5축 — 업종별 솔루션·시스템 구축 (색인 게이트 통과분만 포함)
   // /app(무엇)·/cost(얼마)와 검색 의도 분리(어떻게 구축) — 자기잠식 방지
   const solutionMod = gitLastModified('lib/solution.ts');
+  out.push({
+    url: `${SITE.domain}/solution/`,
+    lastModified: solutionMod,
+    changeFrequency: 'weekly',
+    priority: 0.82,
+  });
   for (const s of SOLUTIONS) {
     const decision = solutionDecision(s.slug);
     if (decision && !decision.inSitemap) continue;
