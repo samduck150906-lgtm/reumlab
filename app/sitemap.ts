@@ -73,6 +73,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // 업종 인덱스 허브 — 100개 업종을 3축으로 잇는 크롤 진입점
+  out.push({
+    url: `${SITE.domain}/app/`,
+    lastModified: industryMod,
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  });
+
   // 프로그래매틱 2축 — 업종×앱개발 (색인 게이트 통과분만 포함)
   for (const ind of INDUSTRIES) {
     const decision = industryDecision(ind.slug);

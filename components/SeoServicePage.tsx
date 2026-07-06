@@ -224,6 +224,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               {[
                 { href: '/app-agency/', label: '앱개발 업체' },
                 { href: '/website-agency/', label: '홈페이지 제작 업체' },
+                { href: '/app/', label: '업종별 앱개발' },
                 { href: '/mvp/', label: '앱 MVP 개발' },
                 { href: '/flutter/', label: 'Flutter 앱개발' },
                 { href: '/ai-development/', label: 'AI 외주개발' },

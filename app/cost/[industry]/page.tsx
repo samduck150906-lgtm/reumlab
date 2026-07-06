@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import { getIndustry } from '@/lib/industries';
 import { COSTS, getCost, costCanonical, costDecision, costTitleName } from '@/lib/cost';
+import { hasSolution } from '@/lib/solution';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -152,9 +153,12 @@ export default function CostPage({ params }: Props) {
 
           {ind && (
             <div className="section-inner" style={{ paddingTop: 8 }}>
-              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{ind.ko} 앱, 무엇을 만드나</h2>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{ind.ko} 앱, 무엇을·어떻게 만드나</h2>
               <div className="link-grid">
                 <Link href={`/app/${ind.slug}/`}>{ind.keyword} — 핵심 기능·시나리오 보기</Link>
+                {hasSolution(c.slug) && (
+                  <Link href={`/solution/${c.slug}/`}>{ind.ko} 솔루션 구축 — 모듈·기술 스택·연동 보기</Link>
+                )}
               </div>
             </div>
           )}
