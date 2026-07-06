@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
-import { getService, REGIONS } from '@/lib/pseo';
+import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
 
 // 실제 존재하는 블로그 슬러그로만 매칭한다(404 방지). 위에서부터 first-match.
@@ -178,15 +178,20 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           {regionService && (
             <div style={{ marginTop: 36 }}>
               <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
-                지역별 {regionService.short}
+                거점 지역 {regionService.short}
               </h2>
+              {/* 지역은 차별화 축이 아니다 — 실제 거점(동탄·화성·수원)만 노출하고, 그 외는 아래 문구로 안내 */}
               <div className="link-grid">
-                {REGIONS.map((r) => (
+                {REGIONS.filter((r) => INDEXED_REGION_SLUGS.has(r.slug)).map((r) => (
                   <Link key={r.slug} href={`/${regionService.slug}/${r.slug}/`}>
                     {r.full} {regionService.short}
                   </Link>
                 ))}
               </div>
+              <p style={{ marginTop: 14, fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7 }}>
+                동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
+                <strong> 전국 어디서나 동일한 조건</strong>으로 진행합니다.
+              </p>
             </div>
           )}
           {seo.faqs && seo.faqs.length > 0 && (
