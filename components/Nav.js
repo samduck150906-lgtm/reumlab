@@ -17,9 +17,7 @@ export default function Nav({ site }) {
 
   const navLinks = [
     { href: '/#solution', label: '특징', a: 'nav_solution' },
-    { href: '/#work', label: '사례', a: 'nav_work' },
     { href: '/#pricing', label: '패키지', a: 'nav_pricing' },
-    { href: '/portfolio/', label: '포트폴리오', a: 'nav_portfolio' },
     { href: '/blog/', label: '블로그', a: 'nav_blog' },
     { href: '/#faq', label: 'FAQ', a: 'nav_faq' },
   ];
@@ -69,12 +67,10 @@ export default function Nav({ site }) {
           ✕
         </button>
         <Link href="/#solution" onClick={closeMobile} data-analytics="nav_m_solution">특징</Link>
-        <Link href="/#work" onClick={closeMobile} data-analytics="nav_m_work">진행 사례</Link>
         <Link href="/#pricing" onClick={closeMobile} data-analytics="nav_m_pricing">패키지</Link>
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
-        <Link href="/portfolio/" onClick={closeMobile} data-analytics="nav_m_portfolio">포트폴리오</Link>
         <Link href="/mvp/" onClick={closeMobile} data-analytics="nav_m_mvp">앱 MVP 개발</Link>
         <Link href="/flutter/" onClick={closeMobile} data-analytics="nav_m_flutter">Flutter 앱개발</Link>
         <Link href="/ai-development/" onClick={closeMobile} data-analytics="nav_m_ai">AI 외주개발</Link>

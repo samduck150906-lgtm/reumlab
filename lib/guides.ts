@@ -165,7 +165,6 @@ export const GUIDES: GuideDef[] = [
     ],
     related: [
       { href: '/ai-development', label: 'AI 외주개발 서비스 보기' },
-      { href: '/portfolio/role-prompt-engine-app/', label: 'AI 앱 개발 사례 — 프롬프트 엔진' },
       { href: '/guide/quote', label: '견적 빨리 받는 법' },
     ],
     publishedAt: '2026-06-22',

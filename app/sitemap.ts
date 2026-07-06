@@ -8,7 +8,6 @@ import { COSTS, costCanonical, costDecision } from '@/lib/cost';
 import { SOLUTIONS, solutionCanonical, solutionDecision } from '@/lib/solution';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
-import { PORTFOLIO, hasPortfolio, portfolioCanonical } from '@/lib/portfolio';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const industryMod = gitLastModified('lib/industries.ts');
   const clustersMod = gitLastModified('content/clusters.json');
   const landingsMod = gitLastModified('content/landings.json');
-  const portfolioMod = gitLastModified('lib/portfolio.ts');
   const sohoMod = gitLastModified('app/soho/page.tsx');
 
   for (const [slug, seo] of Object.entries(PAGE_SEO_MAP)) {
@@ -59,24 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.85,
   });
-
-  // 포트폴리오 — 실제 진행 사례가 있을 때만 색인 (빈 목록은 noindex)
-  if (hasPortfolio) {
-    out.push({
-      url: `${SITE.domain}/portfolio/`,
-      lastModified: portfolioMod,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    });
-    for (const p of PORTFOLIO) {
-      out.push({
-        url: portfolioCanonical(p.slug),
-        lastModified: new Date(p.publishedAt),
-        changeFrequency: 'monthly',
-        priority: 0.72,
-      });
-    }
-  }
 
   // 프로그래매틱 1축 — 지역×서비스 (색인 게이트 통과분만 포함)
   // 본거지(동탄·화성)와 핵심 인접지(수원)는 크롤 우선순위·갱신빈도를 높여 노출 강화

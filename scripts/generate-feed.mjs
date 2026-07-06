@@ -20,7 +20,7 @@ function escapeXml(s) {
     .replace(/'/g, '&apos;');
 }
 
-/** lib/seo.ts PAGE_SEO_MAP + portfolio·consultation 과 동기화 */
+/** lib/seo.ts PAGE_SEO_MAP + consultation 과 동기화 */
 const STATIC_PAGES = [
   {
     url: `${DOMAIN}/`,

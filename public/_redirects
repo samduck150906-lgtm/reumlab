@@ -20,13 +20,10 @@
 /bootcamp/ai-app     /ai-development/  301
 /bootcamp/ai-app/    /ai-development/  301
 
-# 포트폴리오 슬러그 익명화 (구 URL → 신 URL)
-/portfolio/ute-studio-rental         /portfolio/unmanned-rental-studio-landing/   301
-/portfolio/ute-studio-rental/        /portfolio/unmanned-rental-studio-landing/   301
-/portfolio/ai-handler                /portfolio/role-prompt-engine-app/           301
-/portfolio/ai-handler/               /portfolio/role-prompt-engine-app/           301
-/portfolio/marbee-marketer-matching  /portfolio/marketer-matching-platform/       301
-/portfolio/marbee-marketer-matching/ /portfolio/marketer-matching-platform/       301
+# 포트폴리오 섹션 전체 제거 — 구 색인 URL(/portfolio, /portfolio/*, 익명화 슬러그 포함)은
+# 홈으로 통합해 soft-404 방지. 페이지 자체가 삭제돼 out/portfolio 파일이 없으므로 일반 301로 발동.
+/portfolio            /   301
+/portfolio/*          /   301
 
 # /l/ 지역 랜딩 → 앱 pSEO 지역×서비스 통합 (자기잠식 제거, lib/data.js REDIRECTED_LANDING_SLUGS와 동기화)
 # 정적 생성에서 제외돼 out/에 파일이 없으므로 일반 301로 발동한다. (/soho·service_intent 대표키워드·쇼핑몰 랜딩은 유지)

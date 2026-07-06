@@ -6,33 +6,12 @@ import { INDUSTRIES, getIndustry, industryCanonical, industryDecision } from '@/
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
-import { getPortfolioBySlug, portfolioCanonical, portfolioCategoryLabel } from '@/lib/portfolio';
 import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 import { getDeepDive } from '@/lib/deep-dive';
 
 type Props = { params: { industry: string } };
-
-/** 업종 → 관련 포트폴리오 사례 (업종 페이지 → 사례 내부링크) */
-const INDUSTRY_CASES: Record<string, string[]> = {
-  academy: ['academy-matching-app'],
-  marketplace: ['marketer-matching-platform', 'academy-matching-app'],
-  booking: ['unmanned-rental-studio-landing', 'academy-matching-app'],
-  community: ['marketer-matching-platform'],
-  university: ['academy-matching-app'],
-  studycafe: ['unmanned-rental-studio-landing'],
-  rental: ['unmanned-rental-studio-landing'],
-  o2o: ['marketer-matching-platform'],
-  'english-academy': ['academy-matching-app'],
-  'math-academy': ['academy-matching-app'],
-  'music-academy': ['academy-matching-app'],
-  'art-academy': ['academy-matching-app'],
-  taekwondo: ['academy-matching-app'],
-  tutoring: ['academy-matching-app', 'marketer-matching-platform'],
-  'party-room': ['unmanned-rental-studio-landing'],
-  'rental-car': ['unmanned-rental-studio-landing'],
-};
 
 export function generateStaticParams() {
   return INDUSTRIES.map((i) => ({ industry: i.slug }));
@@ -81,9 +60,6 @@ export default function IndustryPage({ params }: Props) {
   ];
   const others = INDUSTRIES.filter((i) => i.slug !== ind.slug).slice(0, 8);
   const deep = getDeepDive(ind.slug);
-  const relatedCases = (INDUSTRY_CASES[ind.slug] ?? [])
-    .map((s) => getPortfolioBySlug(s))
-    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -188,20 +164,6 @@ export default function IndustryPage({ params }: Props) {
               ))}
             </div>
           </div>
-
-          {relatedCases.length > 0 && (
-            <div className="section-inner" style={{ paddingTop: 8 }}>
-              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 진행 사례</h2>
-              <div className="link-grid">
-                {relatedCases.map((p) => (
-                  <Link key={p.slug} href={portfolioCanonical(p.slug).replace(SITE.domain, '')}>
-                    [{portfolioCategoryLabel(p.category)}] {p.title}
-                  </Link>
-                ))}
-                <Link href="/portfolio/">전체 포트폴리오 보기</Link>
-              </div>
-            </div>
-          )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 업종 앱개발</h2>
