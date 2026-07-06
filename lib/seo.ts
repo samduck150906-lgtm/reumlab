@@ -107,7 +107,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['웹개발 업체', '반응형 웹', '기업용 웹사이트'],
     intent: '업체 비교/견적',
     funnel: '전환 직전',
-    canonical: 'https://reumlab.com/웹개발',
+    canonical: 'https://reumlab.com/웹개발/',
   },
 
   앱개발: {
@@ -125,7 +125,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogTitle: 'Flutter 앱 개발 외주 | 름랩',
     ogDescription: '화면 설계부터 스토어 등록까지 진행하고, 대표님이 직접 수정할 수 있게 운영 교육까지 드립니다.',
     h1: 'Flutter 앱 MVP 개발',
-    canonical: 'https://reumlab.com/앱개발',
+    canonical: 'https://reumlab.com/앱개발/',
   },
 
   스타트업MVP: {
@@ -142,7 +142,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogTitle: '스타트업 MVP 개발 외주 | 름랩',
     ogDescription: '데모데이·투자 일정이 있으면 그 날짜에 맞춰 범위를 잡습니다. 이후 내부 개발팀이 이어받도록 코드를 정리해 넘겨드립니다.',
     h1: '스타트업 MVP 개발',
-    canonical: 'https://reumlab.com/스타트업MVP',
+    canonical: 'https://reumlab.com/스타트업MVP/',
   },
 
   솔루션SaaS: {
@@ -161,7 +161,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     ogDescription:
       '엣지 컴퓨팅과 최신 데이터 기술로 기업의 업무 효율을 극대화합니다.',
     h1: '확장 가능한 고성능 B2B 솔루션 및 SaaS 개발',
-    canonical: 'https://reumlab.com/솔루션SaaS',
+    canonical: 'https://reumlab.com/솔루션SaaS/',
   },
 
   플랫폼개발: {
@@ -182,7 +182,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['매칭 서비스 제작', 'O2O 플랫폼', '예약 시스템 구축'],
     intent: '업체/정보',
     funnel: '중간',
-    canonical: 'https://reumlab.com/플랫폼개발',
+    canonical: 'https://reumlab.com/플랫폼개발/',
   },
 
   기업용ERP: {
@@ -203,7 +203,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['CRM 시스템', '백오피스 구축', '관리자 페이지 고도화'],
     intent: '정보/전환',
     funnel: '중간',
-    canonical: 'https://reumlab.com/기업용ERP',
+    canonical: 'https://reumlab.com/기업용ERP/',
   },
 
   // ─── 영문 서비스 URL (구글 광고 랜딩 + 영문 검색) ───
@@ -228,7 +228,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     intent: '영문 검색/광고',
     funnel: '전환',
     serviceDesc: '름랩은 Flutter로 iOS·Android 앱을 한 번에 만듭니다. 앱 라이트 MVP는 290만 원부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원·약 21일, 소스코드 전체 이관. 구글 광고·영문 검색으로 유입된 고객도 동일한 조건으로 상담합니다.',
-    canonical: 'https://reumlab.com/app-development',
+    canonical: 'https://reumlab.com/app-development/',
   },
 
   'web-development': {
@@ -252,7 +252,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     intent: '영문 검색/광고',
     funnel: '전환',
     serviceDesc: '름랩 웹은 원페이지 랜딩 웹 스타터 49만 원부터 시작하고, 멀티페이지+CMS+블로그를 갖춘 웹 비즈니스 패키지는 VAT 포함 190만 원, 약 14일입니다. 맞춤 제작, 소스코드 전체 이관, 월 관리비 없음. SEO 기본기(메타·구조화 데이터·사이트맵)가 기본 포함됩니다.',
-    canonical: 'https://reumlab.com/web-development',
+    canonical: 'https://reumlab.com/web-development/',
   },
 
   'mvp-development': {
@@ -285,7 +285,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: 'How long does it take to launch an MVP?', a: 'Typically about 14–30 days depending on scope. App Lite is around 14 days, App Standard around 21 days. If you have an investor or demo-day deadline, we scope the build to fit it.' },
       { q: 'Do I receive the full source code?', a: 'Yes — always. Full source code, repository, deployment rights, and store accounts are transferred to you, plus 1:1 operation training. No lock-in.' },
     ],
-    canonical: 'https://reumlab.com/mvp-development',
+    canonical: 'https://reumlab.com/mvp-development/',
   },
 
   'flutter-development': {
@@ -317,7 +317,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: 'Does Flutter build both iOS and Android?', a: 'Yes — one codebase produces both iOS and Android apps, released together. We also handle store registration and transfer the accounts and rights to you.' },
       { q: 'Is Flutter quality lower than native?', a: 'For MVPs and most business apps, users notice essentially no difference. Unless you need high-end 3D or real-time video, Flutter is faster to launch and cheaper to maintain — usually the more practical choice.' },
     ],
-    canonical: 'https://reumlab.com/flutter-development',
+    canonical: 'https://reumlab.com/flutter-development/',
   },
 
   // ─── 지역×서비스(pSEO) 허브 — 한글 서비스 슬러그 ───
@@ -352,7 +352,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: 'MVP 개발 비용은 얼마인가요?', a: '기능 범위가 가격을 정합니다. 름랩 Lean MVP는 VAT 포함 290만 원부터, 약 14~30일입니다. 상담에서 검증 목표에 맞춰 범위와 패키지를 함께 정합니다.' },
       { q: '검증 후 확장은 어떻게 하나요?', a: '소스코드와 저장소를 통째로 이관하므로 같은 코드 위에서 기능을 단계적으로 추가합니다. 내부 개발팀이 생기면 그대로 이어받을 수 있습니다.' },
     ],
-    canonical: 'https://reumlab.com/mvp',
+    canonical: 'https://reumlab.com/mvp/',
   },
 
   'windows-app-development': {
@@ -386,7 +386,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '기존 엑셀 자료를 옮길 수 있나요?', a: '가능합니다. 쓰시던 엑셀·CSV 데이터를 불러와 프로그램에서 이어서 쓰도록 마이그레이션을 포함해 설계합니다.' },
       { q: 'macOS에서도 쓸 수 있나요?', a: 'Electron·Flutter Desktop 기반이면 Windows와 macOS를 함께 대응할 수 있습니다. 필요 여부를 상담에서 정합니다.' },
     ],
-    canonical: 'https://reumlab.com/windows-app-development',
+    canonical: 'https://reumlab.com/windows-app-development/',
   },
 
   flutter: {
@@ -420,7 +420,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: 'iOS와 Android 둘 다 나오나요?', a: '네. 하나의 코드로 두 플랫폼을 동시에 만들어 함께 출시합니다. 스토어 등록도 대행하고 계정·권한을 이관합니다.' },
       { q: 'Flutter 앱개발 비용은 얼마인가요?', a: '핵심 화면 중심 앱 라이트 MVP는 VAT 포함 290만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원(약 21일)입니다. 기능 범위에 따라 견적이 정해지며 상담에서 미리 안내합니다.' },
     ],
-    canonical: 'https://reumlab.com/flutter',
+    canonical: 'https://reumlab.com/flutter/',
   },
 
   'ai-development': {
@@ -454,7 +454,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '기존 서비스에 AI 기능만 추가할 수 있나요?', a: '네. 이미 운영 중인 앱·웹에 챗봇·자동 응답·요약 같은 AI 기능만 추가 연동하는 방식도 진행합니다.' },
       { q: 'API 키와 비용은 누가 관리하나요?', a: '대표님 명의로 API 키를 직접 보유하도록 이관합니다. 사용량 기반 비용 구조와 절감 방법도 함께 안내합니다.' },
     ],
-    canonical: 'https://reumlab.com/ai-development',
+    canonical: 'https://reumlab.com/ai-development/',
   },
 
   // ─── 차별화 pillar — 소스코드 이관 (경쟁사 미점유 토픽) ───
@@ -542,7 +542,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '직원마다 볼 수 있는 화면을 다르게 할 수 있나요?', a: '네. 관리자·매니저·직원처럼 역할별로 접근 권한과 노출 화면을 나눠 설계합니다. 민감한 정산·회원정보는 권한이 있는 계정만 보도록 구성합니다.' },
       { q: '완성 후 직접 수정할 수 있나요?', a: '소스코드를 통째로 이관하고, 항목·문구·기본 설정은 대표님이 직접 수정하도록 1:1 운영 교육을 제공합니다. 큰 기능 추가가 필요할 때만 추가 개발로 진행합니다.' },
     ],
-    canonical: 'https://reumlab.com/admin-page-development',
+    canonical: 'https://reumlab.com/admin-page-development/',
   },
 
   maintenance: {
@@ -585,7 +585,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '유지보수 비용은 어떻게 정해지나요?', a: '작업 범위(오류 대응·기능 추가·이전 등)와 코드 상태로 정해집니다. 인수 점검으로 난이도를 먼저 확인한 뒤 작업 단위로 견적을 공개합니다.' },
       { q: '오래된 앱이 스토어에서 오류가 나는데 되나요?', a: 'OS·스토어 정책 변경으로 생긴 빌드·심사 오류 대응이 유지보수의 흔한 작업입니다. 점검 후 수정 범위와 일정을 안내해 다시 정상 배포되도록 진행합니다.' },
     ],
-    canonical: 'https://reumlab.com/maintenance',
+    canonical: 'https://reumlab.com/maintenance/',
   },
 
   renewal: {
@@ -628,7 +628,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '리뉴얼 후에도 매달 관리비가 드나요?', a: '름랩 웹은 월 관리비가 없습니다. 소스코드를 이관하고 문구·이미지 수정은 직접 하도록 교육합니다. 호스팅·도메인만 실비로 직접 보유하시면 됩니다.' },
       { q: '웹사이트 리뉴얼 비용은 얼마인가요?', a: '페이지 수·기능·이전 범위로 정해집니다. 콘텐츠를 살리는 개편은 신규 제작보다 합리적인 경우가 많고, 상담에서 현재 사이트를 보고 범위와 견적을 먼저 공개합니다.' },
     ],
-    canonical: 'https://reumlab.com/renewal',
+    canonical: 'https://reumlab.com/renewal/',
   },
 
   'cafe24-limit': {
@@ -671,7 +671,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '아예 맞춤 쇼핑몰로 옮기는 게 나을까요?', a: '수수료·기능 제약이 반복되고 규모가 커졌다면 이전이 유리할 수 있습니다. 다만 비용이 크므로, 먼저 막힌 지점만 맞춤으로 풀어 보고 판단하는 것을 권장합니다.' },
       { q: '비용은 어떻게 정해지나요?', a: '유지/이전 범위와 맞춤 기능의 복잡도로 정해집니다. 현재 카페24 구성을 보고 막힌 지점을 진단한 뒤 작업 단위로 견적을 공개합니다.' },
     ],
-    canonical: 'https://reumlab.com/cafe24-limit',
+    canonical: 'https://reumlab.com/cafe24-limit/',
   },
 
   'nocode-limit': {
@@ -714,7 +714,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '기존 사용자 데이터를 잃지 않고 옮길 수 있나요?', a: '네. 노코드 툴에서 데이터를 추출해 새 구조로 이관하는 것을 이전 설계에 포함합니다. 핵심 기능부터 옮겨 연속성을 유지하며 단계적으로 이전할 수도 있습니다.' },
       { q: '옮긴 뒤에는 누가 운영하나요?', a: '완성 후 소스코드·저장소·배포 권한을 통째로 이관합니다. 플랫폼 종속 없이 직접 운영·확장할 수 있고, 간단한 수정은 1:1 교육으로 직접 하실 수 있습니다.' },
     ],
-    canonical: 'https://reumlab.com/nocode-limit',
+    canonical: 'https://reumlab.com/nocode-limit/',
   },
 
   // ─── 한글 "업체/회사" 고의도 랜딩 — 영문 랜딩(app-development/web-development)과
@@ -759,7 +759,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '지역이 다른데 진행되나요?', a: '동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로 전국 어디든 같은 조건으로 진행합니다.' },
       { q: '만든 뒤 다른 업체로 옮길 수 있나요?', a: '네. 소스코드·저장소·권한을 통째로 이관하므로 다른 개발사로 옮기거나 직접 운영·유지보수할 수 있습니다. 종속되지 않는 것이 기본 원칙입니다.' },
     ],
-    canonical: 'https://reumlab.com/app-agency',
+    canonical: 'https://reumlab.com/app-agency/',
   },
 
   'website-agency': {
@@ -802,7 +802,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { q: '만든 뒤 제가 직접 수정할 수 있나요?', a: '네. 소스코드를 이관하고, 연락처·가격·문구·이미지·블로그를 직접 수정·게시하도록 관리 화면과 1:1 운영 교육을 제공합니다.' },
       { q: '지역이 다른데 제작 가능한가요?', a: '동탄·수원 거점이지만 비대면 협업으로 전국 어디든 같은 조건으로 진행합니다. 필요한 경우 일정을 조율해 대면도 가능합니다.' },
     ],
-    canonical: 'https://reumlab.com/website-agency',
+    canonical: 'https://reumlab.com/website-agency/',
   },
 };
 
