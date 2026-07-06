@@ -227,9 +227,13 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 { href: '/app/', label: '업종별 앱개발' },
                 { href: '/mvp/', label: '앱 MVP 개발' },
                 { href: '/flutter/', label: 'Flutter 앱개발' },
+                { href: '/flutter-development/', label: 'Flutter Development' },
                 { href: '/ai-development/', label: 'AI 외주개발' },
                 { href: '/admin-page-development/', label: '관리자 페이지 개발' },
                 { href: '/maintenance/', label: '앱·웹 유지보수' },
+                { href: '/renewal/', label: '웹사이트 리뉴얼' },
+                { href: '/cafe24-limit/', label: '카페24 한계' },
+                { href: '/nocode-limit/', label: '노코드 한계' },
                 { href: '/source-handover/', label: '소스코드 이관' },
                 { href: '/blog/', label: '블로그' },
               ]

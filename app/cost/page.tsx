@@ -119,6 +119,7 @@ export default function CostHubPage() {
             <div className="link-grid">
               <Link href="/app/">업종별 앱개발(기능)</Link>
               <Link href="/solution/">업종별 솔루션 구축</Link>
+              <Link href="/guide/">개발 가이드 모음</Link>
               <Link href="/mvp-development/">MVP 개발 비용</Link>
               <Link href="/app-agency/">앱개발 업체</Link>
             </div>

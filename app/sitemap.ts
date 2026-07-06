@@ -133,6 +133,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // 가이드 인덱스 허브 — 가이드·비교·레거시 허브(h)로 이어지는 크롤 진입점
+  out.push({
+    url: `${SITE.domain}/guide/`,
+    lastModified: gitLastModified('lib/guides.ts'),
+    changeFrequency: 'weekly',
+    priority: 0.78,
+  });
+
   // 3축 — 비용·견적·가이드 (색인 게이트 통과분만 포함)
   for (const g of GUIDES) {
     const decision = guideDecision(g.slug);
