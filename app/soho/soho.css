@@ -84,10 +84,12 @@
   --c-dim: rgba(5, 32, 21, 0.55);
 }
 
-/* ── 액센트 변주 (다크 섹션용) ── */
-.soho .acc-teal { --c-accent: var(--teal); --c-accent2: var(--green-bright); }
-.soho .acc-gold { --c-accent: var(--gold-bright); --c-accent2: var(--gold); }
-.soho .acc-coral { --c-accent: var(--coral-bright); --c-accent2: var(--coral); }
+/* ── 팔레트 절제: 섹션 액센트를 브랜드 그린으로 통일(무지개 제거) ──
+   시맨틱 컬러(랭킹 경고 코랄, 폼 에러, 프로모션/추천 골드)는
+   해당 컴포넌트에서 개별적으로만 유지한다. */
+.soho .acc-teal,
+.soho .acc-gold,
+.soho .acc-coral { --c-accent: var(--green-bright); --c-accent2: var(--green); }
 
 /* ── 배경 장식 ── */
 .soho .s-sec.t-dark::before,
@@ -142,10 +144,7 @@
   color: var(--c-text);
 }
 .soho .s-g {
-  background: var(--c-grad);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--c-accent);
 }
 .soho .t-band .s-g {
   background: none;
@@ -426,10 +425,8 @@
   height: 3px;
   background: var(--f, var(--c-accent));
 }
-.soho .s-feat:nth-child(1) { --f: var(--green-bright); }
-.soho .s-feat:nth-child(2) { --f: var(--teal); }
-.soho .s-feat:nth-child(3) { --f: var(--gold-bright); }
-.soho .s-feat:nth-child(4) { --f: var(--coral-bright); }
+/* 강점 카드 액센트도 그린으로 통일(기존 nth-child 멀티컬러 제거) */
+.soho .s-feat { --f: var(--green-bright); }
 .soho .s-feat:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--f) 45%, var(--c-line)); }
 .soho .s-feat-no {
   font-family: 'Outfit', sans-serif;
