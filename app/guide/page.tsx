@@ -10,9 +10,14 @@ import BusinessFooter from '@/components/BusinessFooter';
 const CANONICAL = `${SITE.domain}/guide/`;
 const GUIDE_LIST = GUIDES.filter((g) => guideDecision(g.slug)?.shouldIndex);
 const COMPARE_LIST = COMPARES.filter((c) => compareDecision(c.slug)?.shouldIndex);
+// 색인 허용 허브(7)뿐 아니라 noindex,follow 허브(30)까지 전부 링크한다.
+// noindex 허브는 자신은 색인되지 않지만 그 아래 /l/ 랜딩(색인 허용분 포함)으로
+// 링크 자산을 전달하는 것이 설계 의도(docs/PROGRAMMATIC_SEO_ROUTING_INDEXING.md §4-4).
+// 여기서 어떤 허브를 "링크"할지 고르는 것이지 그 허브 자체의 색인 여부를 바꾸는 게 아니다.
 const HUB_SLUGS = Object.keys(getClusters())
-  .filter((h) => h !== 'mobile-app' && hubShouldIndex(h))
+  .filter((h) => h !== 'mobile-app') // canonical 통합 대상(→ /h/app-dev/)만 제외
   .sort();
+const INDEXED_HUB_SLUGS = new Set(HUB_SLUGS.filter(hubShouldIndex));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -126,9 +131,11 @@ export default function GuideHubPage() {
             <div className="section-inner" style={{ paddingTop: 8 }}>
               <h2 className="section-title" style={{ fontSize: '1.15rem' }}>주제별 모음 더 보기</h2>
               <div className="link-grid">
-                {HUB_SLUGS.map((h) => (
-                  <Link key={h} href={`/h/${h}/`}>{h} 관련 글 모음</Link>
-                ))}
+                {[...HUB_SLUGS]
+                  .sort((a, b) => Number(INDEXED_HUB_SLUGS.has(b)) - Number(INDEXED_HUB_SLUGS.has(a)))
+                  .map((h) => (
+                    <Link key={h} href={`/h/${h}/`}>{h} 관련 글 모음</Link>
+                  ))}
               </div>
             </div>
           )}
