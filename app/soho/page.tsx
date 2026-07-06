@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/lib/seo';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
@@ -72,12 +73,12 @@ const FEATURES = [
 ];
 
 const INCLUDES = [
-  { icon: '📱', title: '모바일 반응형 완전 지원', desc: '스마트폰·태블릿·PC에서 모두 깔끔하게' },
-  { icon: '🔍', title: '검색 노출 기본 세팅', desc: '메타 태그·구조화 데이터·사이트맵 기본 적용' },
-  { icon: '📦', title: '소스코드 전체 이관', desc: '완료 후 GitHub 저장소 + 소스코드 100% 이관' },
-  { icon: '💸', title: '월 관리비 없음', desc: '호스팅·도메인 외 별도 월정액 없음' },
-  { icon: '✏️', title: '직접 수정 교육 1회', desc: '텍스트·이미지·연락처 바꾸는 법 안내' },
-  { icon: '🚀', title: '약 14일 납기', desc: '콘텐츠 확정 후 2주 내 오픈 목표' },
+  { icon: 'mobile', title: '모바일 반응형 완전 지원', desc: '스마트폰·태블릿·PC에서 모두 깔끔하게' },
+  { icon: 'search', title: '검색 노출 기본 세팅', desc: '메타 태그·구조화 데이터·사이트맵 기본 적용' },
+  { icon: 'code', title: '소스코드 전체 이관', desc: '완료 후 GitHub 저장소 + 소스코드 100% 이관' },
+  { icon: 'wallet', title: '월 관리비 없음', desc: '호스팅·도메인 외 별도 월정액 없음' },
+  { icon: 'edit', title: '직접 수정 교육 1회', desc: '텍스트·이미지·연락처 바꾸는 법 안내' },
+  { icon: 'clock', title: '약 14일 납기', desc: '콘텐츠 확정 후 2주 내 오픈 목표' },
 ];
 
 const FAQS = [
@@ -140,6 +141,100 @@ const QIcon = () => (
   </svg>
 );
 
+/** 통일된 모노라인 아이콘 세트 (이모지 대체 — 단색·라인 스타일) */
+const ICO_PATHS: Record<string, ReactNode> = {
+  mobile: (
+    <>
+      <rect x="6" y="3" width="12" height="18" rx="2.2" />
+      <line x1="10.5" y1="18" x2="13.5" y2="18" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <line x1="20.5" y1="20.5" x2="16.65" y2="16.65" />
+    </>
+  ),
+  code: (
+    <>
+      <path d="M9 8l-4 4 4 4" />
+      <path d="M15 8l4 4-4 4" />
+    </>
+  ),
+  wallet: (
+    <>
+      <path d="M3 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2" />
+      <rect x="3" y="7" width="18" height="12" rx="2.4" />
+      <circle cx="16.5" cy="13" r="1.2" />
+    </>
+  ),
+  edit: (
+    <>
+      <path d="M12 20h9" />
+      <path d="M16.5 3.5a2.05 2.05 0 0 1 2.9 2.9L7 19l-4 1 1-4z" />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 1.8" />
+    </>
+  ),
+  gauge: (
+    <>
+      <path d="M4 13a8 8 0 0 1 16 0" />
+      <path d="M12 13l3.4-2.4" />
+      <line x1="4" y1="13" x2="4" y2="15" />
+      <line x1="20" y1="13" x2="20" y2="15" />
+    </>
+  ),
+  layout: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <line x1="3" y1="9" x2="21" y2="9" />
+      <line x1="9" y1="9" x2="9" y2="20" />
+    </>
+  ),
+  tag: (
+    <>
+      <path d="M20.5 13.3l-7.2 7.2a1.9 1.9 0 0 1-2.7 0l-7.1-7.1A1.9 1.9 0 0 1 3 12V4.9A1.9 1.9 0 0 1 4.9 3H12a1.9 1.9 0 0 1 1.3.6l7.2 7.2a1.9 1.9 0 0 1 0 2.5z" />
+      <circle cx="7.6" cy="7.6" r="1.1" />
+    </>
+  ),
+  chat: <path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4 19.5l1.3-4.1A7.5 7.5 0 1 1 20 11.5z" />,
+  ban: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <line x1="6.2" y1="6.2" x2="17.8" y2="17.8" />
+    </>
+  ),
+  store: (
+    <>
+      <path d="M4.5 9.5 5.7 5h12.6l1.2 4.5" />
+      <path d="M4.5 9.5a2.35 2.35 0 0 0 4.7 0 2.35 2.35 0 0 0 4.7 0 2.35 2.35 0 0 0 4.7 0" />
+      <path d="M5.6 11.3V19h12.8v-7.7" />
+      <path d="M10 19v-4h4v4" />
+    </>
+  ),
+};
+
+function Ico({ name, className = 's-ic' }: { name: string; className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {ICO_PATHS[name]}
+    </svg>
+  );
+}
+
 export default function SohoPage() {
   return (
     <>
@@ -189,7 +284,7 @@ export default function SohoPage() {
 
             {/* 긴급성 프로모션 배너 + 카운트다운 (CTA 바로 위) */}
             <div className="s-promo" role="note" aria-label="이번 달 한정 프로모션">
-              <span className="s-promo-flame" aria-hidden="true">🔥</span>
+              <Ico name="clock" className="s-promo-ic" />
               <span className="s-promo-txt">
                 <b>이번 달 상담 고객 한정</b> · 정가 대비 <b className="s-promo-pct">50% 할인가</b>
               </span>
@@ -198,10 +293,10 @@ export default function SohoPage() {
 
             <div className="s-btns">
               <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_hero_apply">
-                💬 지금 50% 할인가로 상담 신청
+                지금 50% 할인가로 상담 신청
               </a>
               <a href={SITE.phoneHref} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_phone">
-                📞 전화 상담
+                전화 상담
               </a>
             </div>
           </div>
@@ -457,7 +552,7 @@ export default function SohoPage() {
 
             {/* 이번 달 한정 50% 할인 프로모션 + 카운트다운 */}
             <div className="s-price-promo" role="note">
-              <span className="s-promo-flame" aria-hidden="true">🔥</span>
+              <Ico name="clock" className="s-promo-ic" />
               <span>
                 <b>이번 달 상담 고객 한정</b> · 아래 가격은 정가 대비{' '}
                 <b className="s-promo-pct">50% 할인가</b>
@@ -494,7 +589,7 @@ export default function SohoPage() {
             <div className="s-incl">
               {INCLUDES.map((it) => (
                 <div className="s-incl-item" key={it.title}>
-                  <span className="s-incl-ico">{it.icon}</span>
+                  <span className="s-incl-ico"><Ico name={it.icon} /></span>
                   <div>
                     <b>{it.title}</b>
                     <span>{it.desc}</span>
@@ -505,10 +600,10 @@ export default function SohoPage() {
 
             <div className="s-btns" style={{ marginTop: 32 }}>
               <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_price_phone">
-                📞 {SITE.phone} 상담 신청
+                {SITE.phone} 상담 신청
               </a>
               <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_price_email">
-                ✉️ 이메일 문의
+                이메일 문의
               </a>
             </div>
           </div>
@@ -532,17 +627,17 @@ export default function SohoPage() {
               <p className="s-gets-h">신청하면 이런 걸 받아요</p>
               <div className="s-gets-grid">
                 <div className="s-gets-item">
-                  <span className="s-gets-ico" aria-hidden="true">📊</span>
+                  <span className="s-gets-ico"><Ico name="gauge" /></span>
                   <b>현재 검색 노출 무료 점검</b>
                   <span>지금 내 업장이 검색에서 어떻게 보이는지</span>
                 </div>
                 <div className="s-gets-item">
-                  <span className="s-gets-ico" aria-hidden="true">🛠</span>
+                  <span className="s-gets-ico"><Ico name="layout" /></span>
                   <b>내 업장에 맞는 제작 방향</b>
                   <span>어떤 페이지·구성이 필요한지 함께 정리</span>
                 </div>
                 <div className="s-gets-item">
-                  <span className="s-gets-ico" aria-hidden="true">💰</span>
+                  <span className="s-gets-ico"><Ico name="tag" /></span>
                   <b>정확한 견적·일정 안내</b>
                   <span>49만원부터, 숨은 비용 없이 미리</span>
                 </div>
@@ -550,10 +645,10 @@ export default function SohoPage() {
             </div>
 
             <ul className="s-trust" aria-label="신뢰 포인트">
-              <li>💬 상담 무료</li>
-              <li>🚫 월 관리비 없음</li>
-              <li>📦 소스코드 이관</li>
-              <li>🏪 개발자가 직접 매장 운영</li>
+              <li><Ico name="chat" /> 상담 무료</li>
+              <li><Ico name="ban" /> 월 관리비 없음</li>
+              <li><Ico name="code" /> 소스코드 이관</li>
+              <li><Ico name="store" /> 개발자가 직접 매장 운영</li>
             </ul>
 
             <SohoForm />
@@ -586,10 +681,10 @@ export default function SohoPage() {
             </h2>
             <div className="s-btns">
               <a href={SITE.phoneHref} className="s-btn s-btn-main" data-analytics="cta_soho_bottom_phone">
-                📞 내 업장 맞춤 상담받기
+                내 업장 맞춤 상담받기
               </a>
               <a href={`mailto:${SITE.email}`} className="s-btn s-btn-ghost" data-analytics="cta_soho_bottom_email">
-                ✉️ 이메일 문의
+                이메일 문의
               </a>
             </div>
             <p className="s-final-foot">
