@@ -166,6 +166,18 @@ export default function IndustryPage({ params }: Props) {
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>
+            <div className="link-grid">
+              <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
+              <Link href="/admin-page-development/">관리자 페이지 개발</Link>
+              <Link href="/mvp/">MVP 개발</Link>
+              <Link href="/maintenance/">앱·웹 유지보수</Link>
+              <Link href="/source-handover/">소스코드 이관</Link>
+              <Link href="/app/">업종별 앱개발 전체 보기</Link>
+            </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 업종 앱개발</h2>
             <div className="link-grid">
               {others.map((i) => (

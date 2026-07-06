@@ -164,6 +164,16 @@ export default function CostPage({ params }: Props) {
           )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>
+            <div className="link-grid">
+              <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
+              <Link href="/mvp-development/">MVP 개발 비용</Link>
+              <Link href="/source-handover/">소스코드 이관</Link>
+              <Link href="/cost/">업종별 앱 개발 비용 전체 보기</Link>
+            </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 업종 앱 개발 비용</h2>
             <div className="link-grid">
               {others.map((x) => (
