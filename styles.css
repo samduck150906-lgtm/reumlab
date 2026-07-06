@@ -719,3 +719,135 @@ br.br-pc { display: inline; }
   .trust__grid { grid-template-columns: 1fr; }
   .hero__visual { height: 420px; }
 }
+
+/* ============================================================
+   PROMO — 긴급성 배너 + 카운트다운 (히어로 CTA 위)
+   ============================================================ */
+.promo {
+  margin-top: 26px; max-width: 560px;
+  border: 1px solid #ffd7a8; border-radius: 14px;
+  background: linear-gradient(180deg, #fff8ef, #fff3e2);
+  box-shadow: 0 8px 24px rgba(214,122,20,.12);
+  overflow: hidden;
+}
+.promo__top {
+  display: flex; align-items: center; gap: 9px;
+  padding: 12px 16px; font-size: 15px; font-weight: 700; color: #7a4a12;
+  line-height: 1.4;
+}
+.promo__flame { font-size: 18px; flex: none; }
+.promo__label b { color: #b3560a; font-weight: 800; }
+.promo__pct { font-size: 17px; color: #d1490a !important; }
+.promo__timer {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px;
+  padding: 11px 16px; background: var(--navy);
+  color: #cdd9ee; font-size: 13.5px; font-weight: 600;
+}
+.promo__timer-lead { color: #9fb1d2; }
+.promo__dday { font-weight: 800; color: var(--lime); font-size: 15px; letter-spacing: -0.01em; }
+.promo__clock { display: inline-flex; align-items: center; gap: 3px; margin-left: auto; font-variant-numeric: tabular-nums; }
+.promo__clock b {
+  background: rgba(255,255,255,.1); color: #fff; font-weight: 800; font-size: 14px;
+  padding: 3px 7px; border-radius: 6px; min-width: 30px; text-align: center;
+}
+.promo__clock i { color: #6f82a6; font-style: normal; font-weight: 800; }
+
+/* 히어로 핵심 지표 칩 */
+.hero__nums {
+  list-style: none; margin: 18px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, auto); justify-content: start;
+  gap: 10px 26px;
+}
+.hero__nums li { display: flex; flex-direction: column; line-height: 1.15; }
+.hero__nums li b { font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.03em; }
+.hero__nums li b i { color: var(--accent); font-style: normal; }
+.hero__nums li span { font-size: 12.5px; color: var(--ink-3); font-weight: 600; margin-top: 3px; }
+
+/* ============================================================
+   WHY REUMLAB — 유입 3초 설득 카드
+   ============================================================ */
+.why__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 900px; margin: 0 auto; }
+.why__item {
+  display: flex; align-items: flex-start; gap: 14px; padding: 22px 24px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r);
+  box-shadow: var(--shadow-sm); transition: border-color .18s, transform .18s, box-shadow .18s;
+}
+.why__item:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow); }
+.why__ck {
+  flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent);
+}
+.why__ck svg { width: 20px; height: 20px; }
+.why__txt b { display: block; font-size: 17px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+.why__txt p { margin-top: 6px; font-size: 14.5px; color: var(--ink-2); line-height: 1.6; }
+
+/* ============================================================
+   VS OTHERS — 일반 제작 vs 름랩 (성과 1위 비교 소재)
+   ============================================================ */
+.vs__board {
+  max-width: 760px; margin: 0 auto; border: 1px solid var(--line-2); border-radius: var(--r-lg);
+  overflow: hidden; background: #fff; box-shadow: var(--shadow);
+}
+.vs__head { display: grid; grid-template-columns: 1fr 1fr; }
+.vs__hcol {
+  padding: 16px 20px; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; text-align: center;
+}
+.vs__hcol--other { background: #f4f6fa; color: var(--ink-3); }
+.vs__hcol--reum {
+  background: var(--navy); color: #fff; position: relative;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.vs__hbadge {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.1em; color: var(--navy);
+  background: var(--lime); padding: 3px 7px; border-radius: 999px;
+}
+.vs__row { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.vs__cell {
+  display: flex; align-items: center; gap: 10px; padding: 15px 20px;
+  font-size: 15.5px; letter-spacing: -0.01em; line-height: 1.4;
+}
+.vs__cell--other { color: var(--ink-3); background: #fafbfd; }
+.vs__cell--reum { color: var(--ink); font-weight: 700; border-left: 1px solid var(--line); }
+.vs__x { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: #fdecec; color: #d64545; font-size: 12px; font-weight: 800; }
+.vs__v { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 800; }
+.vs__cta { text-align: center; margin-top: 34px; }
+.vs__note { margin-top: 14px; font-size: 14px; color: var(--ink-2); }
+
+/* ============================================================
+   PRICE — 50% 앵커(정가 취소선) + 프로모션 스트립
+   ============================================================ */
+.price-orig { display: flex; align-items: center; gap: 8px; margin-top: 14px; margin-bottom: -6px; }
+.price-orig s { font-size: 15px; color: var(--ink-3); text-decoration-thickness: 1.5px; }
+.price-off {
+  display: inline-flex; align-items: center; font-size: 12px; font-weight: 800; letter-spacing: -0.01em;
+  color: #d1490a; background: #ffe9d4; padding: 2px 7px; border-radius: 999px;
+}
+.price-off i { font-style: normal; }
+.price-card.featured .price-orig s { color: #8fa2c2; }
+.price-card.featured .price-off { color: #fff; background: rgba(255,120,40,.9); }
+.price-amount { margin-top: 6px; }
+
+.price-promo {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; justify-content: center;
+  max-width: 760px; margin: 0 auto 40px; padding: 14px 20px;
+  border: 1px solid #ffd7a8; border-radius: 14px;
+  background: linear-gradient(180deg, #fff8ef, #fff3e2);
+  font-size: 15px; font-weight: 700; color: #7a4a12; text-align: center;
+}
+.price-promo__flame { font-size: 18px; }
+.price-promo__txt b { color: #b3560a; font-weight: 800; }
+.price-promo__pct { color: #d1490a !important; }
+.price-promo__timer {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--ink-2); font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.price-promo__timer b { color: var(--accent-d); }
+.price-promo__timer .promo__clock b { background: var(--navy); color: #fff; }
+
+@media (max-width: 720px) {
+  .why__grid { grid-template-columns: 1fr; }
+  .hero__nums { grid-template-columns: repeat(2, 1fr); gap: 16px; justify-items: start; }
+  .vs__hcol { font-size: 15px; padding: 13px 12px; }
+  .vs__cell { font-size: 14px; padding: 13px 12px; gap: 7px; }
+  .promo__clock { margin-left: 0; }
+}

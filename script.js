@@ -110,4 +110,36 @@
       });
     });
   }
+
+  // 프로모션 카운트다운 — 이번 달 말일 23:59:59(로컬)까지, 매월 자동 갱신
+  var cdRoots = document.querySelectorAll("[data-countdown]");
+  if (cdRoots.length) {
+    function monthEnd() {
+      var now = new Date();
+      // 다음 달 0일 = 이번 달 마지막 날
+      return new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
+    }
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    function tick() {
+      var diff = monthEnd().getTime() - Date.now();
+      if (diff < 0) diff = 0;
+      var DAY = 86400000, HOUR = 3600000, MIN = 60000;
+      var d = Math.floor(diff / DAY);
+      var h = Math.floor((diff % DAY) / HOUR);
+      var m = Math.floor((diff % HOUR) / MIN);
+      var s = Math.floor((diff % MIN) / 1000);
+      cdRoots.forEach(function (root) {
+        var dd = root.querySelector("[data-dday]");
+        if (dd) dd.textContent = "D-" + d;
+        var eh = root.querySelector('[data-cd="h"]');
+        var em = root.querySelector('[data-cd="m"]');
+        var es = root.querySelector('[data-cd="s"]');
+        if (eh) eh.textContent = pad(h);
+        if (em) em.textContent = pad(m);
+        if (es) es.textContent = pad(s);
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
 })();
