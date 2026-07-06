@@ -1,9 +1,42 @@
-# 무료 진단 신청 폼 — Netlify Forms 이메일 설정
+# 신청 폼 — Netlify Forms 이메일 설정
 
-`reumlab.com/soho` 하단 **무료 진단 신청 폼**은 Resend 같은 외부 메일 서비스 없이
-**Netlify Forms**로 접수됩니다. 신청이 들어오면 Netlify가 자동으로 저장하고,
-설정해 둔 이메일로 알림을 보냅니다. 코드 추가는 끝났고, **Netlify 대시보드에서
-이메일 알림만 켜면** 됩니다.
+Resend 같은 외부 메일 서비스 없이 **Netlify Forms**로 접수됩니다. 신청이 들어오면
+Netlify가 자동으로 저장하고, 설정해 둔 이메일로 알림을 보냅니다. 코드 추가는 끝났고,
+**Netlify 대시보드에서 이메일 알림만 켜면** 됩니다.
+
+현재 폼은 두 개입니다.
+
+| 폼 이름 | 위치 | 수집 항목 |
+|---|---|---|
+| **`main-apply`** | 메인 페이지(`reumlab.com/`) **상단 히어로 + 하단 CTA** 두 곳 | 이름 · 업체명 · 휴대폰번호 (+ 광고 유입 `utm_*`·`fbclid`) |
+| `soho-diagnosis` | `reumlab.com/soho` 하단 | 이름 · 연락처 · 진단항목 · 상호명 · 약관동의 |
+
+> 메인 페이지 상단·하단 폼은 **같은 `main-apply` 폼**이라 신청 내역이 한곳에 모입니다.
+> 알림을 한 번만 설정하면 두 폼 제출이 모두 같은 메일로 옵니다.
+
+---
+
+## ⭐ 메인 페이지 신청 폼(`main-apply`) 이메일 알림 — 여기만 하면 끝
+
+1. **먼저 `main`에 머지 → 배포**되어야 Netlify가 폼을 인식합니다.
+   (`index.html`이 정적으로 그대로 배포되고, `public/__forms.html`에도 감지용으로 등록해 둠)
+2. Netlify 대시보드 → **Forms** 에 **`main-apply`** 가 나타나는지 확인
+   (안 보이면 **Project configuration → Forms → Form detection** 켜고 재배포)
+3. **Add notification → Email notification** 클릭
+4. **Email to notify** 에 `ceo@eternalsix.com` 입력, **Form** 은 `main-apply` 선택 → **Save**
+5. 이후 신청이 들어올 때마다 `ceo@eternalsix.com` 으로 메일이 옵니다.
+   접수 내역은 **Forms → main-apply** 에도 계속 쌓입니다(무료 플랜 월 100건).
+
+> 폼 마크업 수정: `index.html`(상단 히어로 · 하단 `#contact` 두 곳), 제출 JS: `script.js`,
+> 스타일: `styles.css`(`.af-*`). 필드 `name`(이름·업체명·휴대폰번호)이나 폼 이름을 바꾸면
+> `public/__forms.html` 도 함께 고치고 알림을 다시 설정하세요.
+
+---
+
+## 참고: `/soho` 무료 진단 폼
+
+아래 내용은 `soho-diagnosis` 폼 기준입니다. 설정 방법은 위와 동일하며, 폼 이름만
+`main-apply` 대신 `soho-diagnosis` 로 고르면 됩니다.
 
 ---
 
