@@ -10,6 +10,7 @@ import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 import { getDeepDive } from '@/lib/deep-dive';
+import { pickSiblings } from '@/lib/sibling-picker';
 
 type Props = { params: { industry: string } };
 
@@ -58,7 +59,7 @@ export default function IndustryPage({ params }: Props) {
     { name: '업종별 앱개발', url: `${SITE.domain}/app-development/` },
     { name: ind.keyword, url: canonical },
   ];
-  const others = INDUSTRIES.filter((i) => i.slug !== ind.slug).slice(0, 8);
+  const others = pickSiblings(INDUSTRIES, ind.slug, 8);
   const deep = getDeepDive(ind.slug);
 
   return (

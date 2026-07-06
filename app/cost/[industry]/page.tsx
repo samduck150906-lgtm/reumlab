@@ -9,6 +9,7 @@ import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ctaPrimary, operatorNote } from '@/lib/voice';
+import { pickSiblings } from '@/lib/sibling-picker';
 
 type Props = { params: { industry: string } };
 
@@ -60,7 +61,7 @@ export default function CostPage({ params }: Props) {
     { name: '업종별 앱개발', url: `${SITE.domain}/app-development/` },
     { name, url: canonical },
   ];
-  const others = COSTS.filter((x) => x.slug !== c.slug).slice(0, 6);
+  const others = pickSiblings(COSTS, c.slug, 6);
 
   return (
     <>
