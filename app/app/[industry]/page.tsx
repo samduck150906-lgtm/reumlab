@@ -10,6 +10,7 @@ import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 import { getDeepDive } from '@/lib/deep-dive';
+import { pickSiblings } from '@/lib/sibling-picker';
 
 type Props = { params: { industry: string } };
 
@@ -58,7 +59,7 @@ export default function IndustryPage({ params }: Props) {
     { name: '업종별 앱개발', url: `${SITE.domain}/app-development/` },
     { name: ind.keyword, url: canonical },
   ];
-  const others = INDUSTRIES.filter((i) => i.slug !== ind.slug).slice(0, 8);
+  const others = pickSiblings(INDUSTRIES, ind.slug, 8);
   const deep = getDeepDive(ind.slug);
 
   return (
@@ -162,6 +163,18 @@ export default function IndustryPage({ params }: Props) {
                   <p className="faq-a">{f.a}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>
+            <div className="link-grid">
+              <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
+              <Link href="/admin-page-development/">관리자 페이지 개발</Link>
+              <Link href="/mvp/">MVP 개발</Link>
+              <Link href="/maintenance/">앱·웹 유지보수</Link>
+              <Link href="/source-handover/">소스코드 이관</Link>
+              <Link href="/app/">업종별 앱개발 전체 보기</Link>
             </div>
           </div>
 

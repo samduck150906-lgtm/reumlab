@@ -1078,6 +1078,14 @@ export function regionServiceMedia(
  * 현재 등록된 지역은 모두 고유 intro/scene/FAQ를 가져 80점↑로 통과한다.
  * 미래에 얇은/중복 지역이 추가되면 자동으로 noindex + 사이트맵 제외된다.
  */
+/**
+ * 색인 대상 지역 — 실제 물리 거점(동탄·화성·수원, 네이버 플레이스 보유)만.
+ * 름랩은 전국 비대면 외주라 지역은 차별화 축이 아니다. 거점 밖 지역까지 색인하면
+ * "지역명만 바꾼 도어웨이"로 보일 위험이 크므로, 거점 외 지역은 생성·접근은 유지하되
+ * noindex,follow 로 검색 색인에서 제외한다(전략 변경 시 이 Set만 조정).
+ */
+export const INDEXED_REGION_SLUGS = new Set(['dongtan', 'hwaseong', 'suwon']);
+
 export function regionServiceDecision(
   serviceSlug: string,
   regionSlug: string,
@@ -1085,6 +1093,17 @@ export function regionServiceDecision(
   const service = getService(serviceSlug);
   const region = getRegion(regionSlug);
   if (!service || !region) return null;
+
+  // 비거점 지역 — 콘텐츠 점수와 무관하게 색인 제외(전국 비대면 전략)
+  if (!INDEXED_REGION_SLUGS.has(region.slug)) {
+    return {
+      score: 0,
+      verdict: 'noindex',
+      shouldIndex: false,
+      inSitemap: false,
+      reasons: ['비거점 지역 — 전국 비대면 전략상 색인 제외(noindex,follow)'],
+    };
+  }
 
   const combinedQ = `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`;
   // 내부링크는 라우트가 실제 렌더하는 수와 동기화한다:

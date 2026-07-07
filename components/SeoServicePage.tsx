@@ -1,16 +1,20 @@
 import Link from 'next/link';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
-import { getService, REGIONS } from '@/lib/pseo';
+import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
 
+// 실제 존재하는 블로그 슬러그로만 매칭한다(404 방지). 위에서부터 first-match.
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
-  { match: /source-handover|소스코드|이관/, slug: 'oeju-gaebal-silphae-an-haneun-bab', title: '외주 개발 실패 안 하는 법: 명세·일정·소유권 3종 세트' },
-  { match: /app-dev|앱개발|앱-개발|app-gaebal/, slug: 'app-gaebal-biyong-julineun-bab', title: '앱 개발 비용 총정리 (2026): 범위별 견적과 줄이는 법' },
-  { match: /mvp/, slug: 'mvp-gaebal-biyong-gigan', title: 'MVP 개발 비용과 기간: 3주 만에 시장 검증이 가능한 이유' },
+  { match: /admin-page|관리자|어드민|백오피스|maintenance|유지보수|인수|hwaseong|화성/, slug: 'hwaseong-dongtan-business-web', title: '화성 동탄첨단산업단지 기업을 위한 업무용 웹·관리자 시스템 개발' },
   { match: /flutter/, slug: 'flutter-oeju-jangdanjeom', title: 'Flutter 앱개발 외주, 장단점 솔직 정리' },
-  { match: /suwon|수원/, slug: 'suwon-app-gaebal-upche', title: '수원 앱개발 업체 고르는 법' },
-  { match: /landing|homepage|홈페이지|랜딩/, slug: 'homepage-jejak-biyong', title: '홈페이지 제작 비용 총정리 (2026)' },
+  { match: /renewal|리뉴얼|cafe24|카페24|nocode|노코드|web-development|웹개발|homepage|홈페이지|랜딩|website/, slug: 'website-or-app-first', title: '소상공인, 홈페이지부터일까 앱부터일까? 선택 기준 5가지' },
+  { match: /academy|학원/, slug: 'academy-management-app', title: '학원 수강관리 앱 만들기: 수강신청·출결·수납·학부모 알림 한 번에' },
+  { match: /clinic|병원|의원|한의원/, slug: 'clinic-reservation-app', title: '병원·한의원 예약·접수·문진 앱: 대기 줄이고 노쇼 막는 법' },
+  { match: /gym|fitness|헬스|피트니스/, slug: 'gym-membership-app', title: '헬스장·필라테스 회원관리 앱: 회원권·PT·자동결제·출석 한 번에' },
+  { match: /restaurant|식당|음식점/, slug: 'restaurant-order-app', title: '음식점·카페 주문·웨이팅·포인트 앱: 회전율 높이고 단골 만드는 법' },
+  { match: /reservation|예약|dongtan|동탄/, slug: 'dongtan-reservation-app', title: '동탄 카페·학원·헬스장 예약앱 만들기: 노쇼 줄이는 5가지 기능' },
+  { match: /suwon|수원|app-development|app-agency|앱개발|앱-개발|app-gaebal|mvp|source-handover|소스코드|이관/, slug: 'suwon-app-gaebal-upche', title: '수원 앱개발 업체 고르는 법' },
 ];
 
 export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSlug?: string }) {
@@ -174,15 +178,20 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           {regionService && (
             <div style={{ marginTop: 36 }}>
               <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
-                지역별 {regionService.short}
+                거점 지역 {regionService.short}
               </h2>
+              {/* 지역은 차별화 축이 아니다 — 실제 거점(동탄·화성·수원)만 노출하고, 그 외는 아래 문구로 안내 */}
               <div className="link-grid">
-                {REGIONS.map((r) => (
+                {REGIONS.filter((r) => INDEXED_REGION_SLUGS.has(r.slug)).map((r) => (
                   <Link key={r.slug} href={`/${regionService.slug}/${r.slug}/`}>
                     {r.full} {regionService.short}
                   </Link>
                 ))}
               </div>
+              <p style={{ marginTop: 14, fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7 }}>
+                동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
+                <strong> 전국 어디서나 동일한 조건</strong>으로 진행합니다.
+              </p>
             </div>
           )}
           {seo.faqs && seo.faqs.length > 0 && (
@@ -213,11 +222,19 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             <p className="section-tag" style={{ marginBottom: 12 }}>주요 서비스</p>
             <div className="link-grid">
               {[
+                { href: '/app-agency/', label: '앱개발 업체' },
+                { href: '/website-agency/', label: '홈페이지 제작 업체' },
+                { href: '/app/', label: '업종별 앱개발' },
                 { href: '/mvp/', label: '앱 MVP 개발' },
                 { href: '/flutter/', label: 'Flutter 앱개발' },
+                { href: '/flutter-development/', label: 'Flutter Development' },
                 { href: '/ai-development/', label: 'AI 외주개발' },
+                { href: '/admin-page-development/', label: '관리자 페이지 개발' },
+                { href: '/maintenance/', label: '앱·웹 유지보수' },
+                { href: '/renewal/', label: '웹사이트 리뉴얼' },
+                { href: '/cafe24-limit/', label: '카페24 한계' },
+                { href: '/nocode-limit/', label: '노코드 한계' },
                 { href: '/source-handover/', label: '소스코드 이관' },
-                { href: '/web-development/', label: '웹사이트 제작' },
                 { href: '/blog/', label: '블로그' },
               ]
                 .filter((s) => !pageSlug || !s.href.includes(`/${pageSlug}/`))

@@ -9,6 +9,7 @@ import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ctaPrimary, operatorNote } from '@/lib/voice';
+import { pickSiblings } from '@/lib/sibling-picker';
 
 type Props = { params: { industry: string } };
 
@@ -60,7 +61,7 @@ export default function SolutionPage({ params }: Props) {
     { name: '업종별 앱개발', url: `${SITE.domain}/app-development/` },
     { name: `${name} 구축`, url: canonical },
   ];
-  const others = SOLUTIONS.filter((x) => x.slug !== s.slug).slice(0, 6);
+  const others = pickSiblings(SOLUTIONS, s.slug, 6);
 
   return (
     <>
@@ -160,6 +161,16 @@ export default function SolutionPage({ params }: Props) {
             <div className="link-grid">
               {ind && <Link href={`/app/${ind.slug}/`}>{ind.keyword} — 핵심 기능·시나리오</Link>}
               {hasCost(s.slug) && <Link href={`/cost/${s.slug}/`}>{ind?.ko ?? ''} 앱 개발 비용·견적</Link>}
+            </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>
+            <div className="link-grid">
+              <Link href="/admin-page-development/">관리자 페이지 개발</Link>
+              <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
+              <Link href="/source-handover/">소스코드 이관</Link>
+              <Link href="/solution/">업종별 솔루션 구축 전체 보기</Link>
             </div>
           </div>
 

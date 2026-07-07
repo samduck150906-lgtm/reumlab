@@ -4,10 +4,12 @@ import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import { getIndustry } from '@/lib/industries';
 import { COSTS, getCost, costCanonical, costDecision, costTitleName } from '@/lib/cost';
+import { hasSolution } from '@/lib/solution';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ctaPrimary, operatorNote } from '@/lib/voice';
+import { pickSiblings } from '@/lib/sibling-picker';
 
 type Props = { params: { industry: string } };
 
@@ -59,7 +61,7 @@ export default function CostPage({ params }: Props) {
     { name: '업종별 앱개발', url: `${SITE.domain}/app-development/` },
     { name, url: canonical },
   ];
-  const others = COSTS.filter((x) => x.slug !== c.slug).slice(0, 6);
+  const others = pickSiblings(COSTS, c.slug, 6);
 
   return (
     <>
@@ -152,12 +154,25 @@ export default function CostPage({ params }: Props) {
 
           {ind && (
             <div className="section-inner" style={{ paddingTop: 8 }}>
-              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{ind.ko} 앱, 무엇을 만드나</h2>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{ind.ko} 앱, 무엇을·어떻게 만드나</h2>
               <div className="link-grid">
                 <Link href={`/app/${ind.slug}/`}>{ind.keyword} — 핵심 기능·시나리오 보기</Link>
+                {hasSolution(c.slug) && (
+                  <Link href={`/solution/${c.slug}/`}>{ind.ko} 솔루션 구축 — 모듈·기술 스택·연동 보기</Link>
+                )}
               </div>
             </div>
           )}
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>
+            <div className="link-grid">
+              <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
+              <Link href="/mvp-development/">MVP 개발 비용</Link>
+              <Link href="/source-handover/">소스코드 이관</Link>
+              <Link href="/cost/">업종별 앱 개발 비용 전체 보기</Link>
+            </div>
+          </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>다른 업종 앱 개발 비용</h2>
