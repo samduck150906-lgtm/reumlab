@@ -101,6 +101,8 @@
           if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
           try { if (typeof window.fbq === "function") window.fbq("track", "Lead"); } catch (e2) {}
           try { if (window.dataLayer) window.dataLayer.push({ event: "main_apply_submit" }); } catch (e3) {}
+          // 폼 제출 성공 커스텀 이벤트 — GTM 맞춤 이벤트 트리거(form_submit_success)로 GA4 전환 수집.
+          try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "form_submit_success" }); } catch (e4) {}
         }).catch(function () {
           if (errEl) errEl.hidden = false;
         }).then(function () {

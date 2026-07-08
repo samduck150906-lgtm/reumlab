@@ -99,6 +99,9 @@ export default function SohoForm() {
         if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
         // GTM/GA4 등 dataLayer 트리거용.
         if (w.dataLayer) w.dataLayer.push({ event: 'soho_diagnosis_submit' });
+        // 폼 제출 성공 커스텀 이벤트 — GTM 맞춤 이벤트 트리거(form_submit_success)로 GA4 전환 수집.
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({ event: 'form_submit_success' });
       }
     } catch {
       setStatus('error');
