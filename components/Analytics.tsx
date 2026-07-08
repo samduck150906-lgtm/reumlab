@@ -5,7 +5,9 @@ import Script from 'next/script';
  * NEXT_PUBLIC_META_PIXEL_ID: 선택, GTM에 Pixel 없을 때만 직접 삽입
  */
 export function Analytics() {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+  // GTM 컨테이너 ID — 환경변수(NEXT_PUBLIC_GTM_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
+  // 컨테이너 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WHLMP8ZD';
   // 메타 픽셀 ID — 환경변수(NEXT_PUBLIC_META_PIXEL_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
   // 픽셀 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1019901144020877';
