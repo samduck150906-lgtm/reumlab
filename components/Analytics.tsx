@@ -2,12 +2,16 @@ import Script from 'next/script';
 
 /**
  * NEXT_PUBLIC_GTM_ID: GTM-XXXX (컨테이너 하나로 GA4·Meta 등 묶기 권장)
+ * NEXT_PUBLIC_GA4_ID: G-XXXX (GA4 측정 ID — gtag.js 직접 로드)
  * NEXT_PUBLIC_META_PIXEL_ID: 선택, GTM에 Pixel 없을 때만 직접 삽입
  */
 export function Analytics() {
   // GTM 컨테이너 ID — 환경변수(NEXT_PUBLIC_GTM_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
   // 컨테이너 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WHLMP8ZD';
+  // GA4 측정 ID — 환경변수(NEXT_PUBLIC_GA4_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
+  // 주의: GTM 컨테이너에도 GA4를 넣으면 이중 집계되므로, GA4는 여기(gtag.js) 또는 GTM 중 한 곳에서만 로드하세요.
+  const ga4Id = process.env.NEXT_PUBLIC_GA4_ID || 'G-YWXT6T2Y3S';
   // 메타 픽셀 ID — 환경변수(NEXT_PUBLIC_META_PIXEL_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
   // 픽셀 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1019901144020877';
@@ -33,6 +37,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+      ) : null}
+      {ga4Id ? (
+        <>
+          <Script
+            id="ga4-src"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}
+          />
+          <Script id="ga4-init" strategy="afterInteractive">
+            {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${ga4Id}');`}
+          </Script>
+        </>
       ) : null}
       {metaPixelId ? (
         <>
