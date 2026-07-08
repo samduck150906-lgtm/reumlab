@@ -106,7 +106,7 @@ const FAQS = [
 
 /** '왜 름랩' 4대 설득 포인트 (유입 3초 설득) */
 const WHY_CHECKS = [
-  { title: '추가금 없는 명확한 견적', desc: '처음 안내한 금액 그대로. 진행 중 갑자기 늘어나는 비용이 없습니다.' },
+  { title: '추가금 없는 명확한 견적', desc: '처음 안내한 금액 그대로. 확정된 범위 안에서는 진행 중 비용이 늘지 않습니다.' },
   { title: '검색노출을 고려한 구조 설계', desc: '예쁘기만 한 사이트가 아니라, 네이버·구글에 잡히도록 구조부터 설계합니다.' },
   { title: '직접 수정 가능한 홈페이지', desc: '소스코드 전체 이관 + 직접 수정 교육으로, 글자·이미지·연락처를 직접 고칩니다.' },
   { title: '문의가 생기는 동선 설계', desc: '방문자가 전화·예약까지 자연스럽게 이어지도록 전환 동선을 설계합니다.' },
@@ -547,7 +547,7 @@ export default function SohoPage() {
             <p className="s-label">TRANSPARENT PRICE</p>
             <h2 className="s-h">
               필요한 만큼만,<br />
-              숨은 비용 없는 <span className="s-g">투명한 가격</span>
+              범위·금액 먼저 확정하는 <span className="s-g">투명한 가격</span>
             </h2>
 
             {/* 이번 달 한정 50% 할인 프로모션 + 카운트다운 */}
@@ -639,7 +639,7 @@ export default function SohoPage() {
                 <div className="s-gets-item">
                   <span className="s-gets-ico"><Ico name="tag" /></span>
                   <b>정확한 견적·일정 안내</b>
-                  <span>49만원부터, 숨은 비용 없이 미리</span>
+                  <span>49만원부터, 범위·금액 먼저 안내</span>
                 </div>
               </div>
             </div>

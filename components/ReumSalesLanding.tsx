@@ -301,7 +301,7 @@ const APP_PACKAGES: Pkg[] = [
   },
 ];
 
-/** 정액제 vs 일반 외주 — '숨은 비용 0' 비교 (사실 기반 포지셔닝) */
+/** 정액제 vs 일반 외주 — 범위·금액 선확정 비교 (사실 기반 포지셔닝) */
 const COMPARE_ROWS = [
   { label: '가격 공개', reum: 'VAT 포함 정액 선공개', other: '견적 전까지 비공개' },
   { label: '소스코드', reum: '전체 이관 · 대표님 소유', other: '미제공·부분 제공 잦음' },
@@ -337,7 +337,7 @@ const FAQ_ITEMS = [
   },
   {
     q: '금액에 부가세(VAT)가 포함인가요?',
-    a: '네, 표기된 패키지 금액은 VAT 포함입니다. 패키지 설명 범위를 넘는 기능이 필요하면 상담 후 별도 견적을 솔직하게 안내드립니다. 숨은 비용은 만들지 않습니다.',
+    a: '네, 표기된 패키지 금액은 VAT 포함입니다. 패키지 설명 범위를 넘는 기능이 필요하면 상담 후 별도 견적을 솔직하게 안내드립니다. 범위와 금액을 먼저 확정해 안내드립니다.',
   },
   {
     q: '납품이 끝나면 연락이 끊기나요?',
@@ -813,7 +813,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-              숨은 비용 0 · 표시가가 곧 견적 기준
+              범위·금액 선확정 · 표시가가 곧 견적 기준
             </span>
           </div>
 
@@ -822,7 +822,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             <PricingLine label="앱(App) 라인" caption="Flutter로 iOS·안드로이드 동시 — 기능 깊이로 선택" packages={APP_PACKAGES} />
           </div>
 
-          {/* 숨은 비용 0 — 정액제 vs 일반 외주 비교 */}
+          {/* 범위·금액 선확정 — 정액제 vs 일반 외주 비교 */}
           <div className="mt-16">
             <h3 className="text-center font-display text-lg font-bold text-white sm:text-xl">정액제가 남기는 차이</h3>
             <p className="mt-2 text-center text-sm text-slate-300">같은 결과물이라도, 끝까지 남는 비용이 다릅니다.</p>
