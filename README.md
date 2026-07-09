@@ -117,6 +117,26 @@ npx serve public -l 3000
 | 업종 × 서비스 | 스타트업 앱개발, 카페 홈페이지 | 72개 |
 | 지역 × 서비스 × 의도 | 수원 앱개발 비용, 판교 웹개발 견적 | 80개 |
 
+## 구글 비즈니스 프로필(GBP) 콘텐츠 자동생성
+
+로컬 검색·지도 노출을 위한 **구글 비즈니스 프로필** 콘텐츠를 키워드·지역·업종·서비스 매트릭스에서 자동 생성합니다.
+GBP 는 사이트에 서빙되는 자산이 아니라 프로필에 **직접 붙여넣는** 외부 채널이라, `build` 체인과 분리된 별도 명령입니다.
+
+```bash
+npm run gen:gbp        # content/gbp/ 에 GBP 콘텐츠 생성
+```
+
+- **입력**: `content/gbp.json`(설정) + `content/clusters.json`·`content/landings.json`(주제) + `content/templates.json`(Q&A 풀)
+- **출력**:
+  - `content/gbp/gbp-content.json` — 구조화 데이터(사업설명·서비스 12·상품 3·소식 25·Q&A 8)
+  - `content/gbp/GBP-PASTE-GUIDE.md` — 프로필 각 영역에 그대로 붙여넣는 가이드
+- **웹사이트 필드(확정)**: `https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp`
+  소식 포스트의 각 링크에는 위 UTM 에 `utm_content`(포스트 slug)가 자동으로 붙어, 매칭되는 허브(`/h/…`)·랜딩(`/l/…`) 페이지로 연결됩니다 → GA4/GTM 에서 GBP 유입 추적.
+- **결정적 생성**: 무작위 없음, 발행일은 `gbp.json` 의 `posts.schedule.start` 기준으로 계산 → 재실행해도 결과 동일(불필요한 diff 방지).
+- 문구·패키지·카테고리·발행 주기는 `content/gbp.json` 에서 수정 후 `npm run gen:gbp` 재실행.
+
+> NAP(상호·주소·연락처)는 사이트 footer / JSON-LD / 네이버 플레이스 / GBP 가 **글자 단위로 동일**해야 엔티티가 묶입니다. `gbp.json` 의 `business` 값은 `lib/seo.ts` 의 `SITE` 와 일치시켜 주세요.
+
 ## 네이버·구글 검색 등록 가이드
 
 ### STEP 1: 구글 서치콘솔

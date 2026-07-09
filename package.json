@@ -9,6 +9,7 @@
     "gen:feed": "node scripts/generate-feed.mjs",
     "gen:blog": "node scripts/generate-blog-posts.mjs",
     "gen:blog:distribute": "node scripts/distribute-blog-posts.mjs",
+    "gen:gbp": "node scripts/generate-gbp.mjs",
     "gen:marketing": "node scripts/auto-marketing-campaigns.mjs",
     "workflow:marketing": "node scripts/marketing-automation-workflow.mjs",
     "optimize": "node scripts/monitor-and-optimize.mjs",
