@@ -875,23 +875,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">PORTFOLIO</span>
-      <h2 class="sec-title">어떤 결과물을 만드나요</h2>
-      <p class="sec-sub">고객사 계약상 비공개인 사례가 많아, 상담 때 유사 프로젝트 화면을 직접 보여드립니다. 아래는 대표적인 작업 유형입니다.</p>
+      <h2 class="sec-title">실제 작업 사례</h2>
+      <p class="sec-sub">고객사·의뢰인 보호를 위해 프로젝트명과 실명은 마스킹 처리했습니다. 아래는 실제 진행한 프로젝트와 사용 기술입니다.</p>
     </div>
-    <div class="grid grid-3">
-      <!-- TODO(reumlab): 아래 placeholder를 실제 작업 스크린샷으로 교체하세요. -->
-      <div class="card reveal" style="overflow:hidden;padding:0;">
-        <div style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(0,0,0,.03),rgba(0,0,0,.03) 12px,rgba(0,0,0,.05) 12px,rgba(0,0,0,.05) 24px);border-bottom:1px dashed var(--line);color:var(--text-dim,#7a9080);font-size:13px;">작업 화면 준비 중</div>
-        <div style="padding:18px 20px;"><b>앱 MVP</b><p style="font-size:14px;color:var(--text-sub,#4a5568);margin-top:6px;">예약·문의 중심의 Flutter 앱 — 핵심 화면부터 빠르게 검증</p></div>
+    <!-- TODO(reumlab): 재업로드된 스크린샷이 준비되면 각 카드 상단에 이미지를 추가하세요. -->
+    <div class="grid grid-3 pf-grid">
+      <div class="card reveal">
+        <span class="pill tag">앱+웹 ERP</span>
+        <h3 class="pf-title">AI 학원 검색·원장 ERP 플랫폼</h3>
+        <p class="pf-name">학○○ · 실명 비공개</p>
+        <p class="pf-desc">학부모·학생 앱 + 원장용 웹 ERP 양면 플랫폼. AI 맞춤 추천·지역/카테고리 검색·리뷰, 상담·수강료 결제, 출결·수납 관리.</p>
+        <p class="pf-tech">Flutter · Clean Architecture · Provider · GoRouter · Supabase · Firebase FCM · 카카오·구글·애플 로그인 · 토스페이먼츠 · Paddle</p>
       </div>
-      <div class="card reveal d1" style="overflow:hidden;padding:0;">
-        <div style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(0,0,0,.03),rgba(0,0,0,.03) 12px,rgba(0,0,0,.05) 12px,rgba(0,0,0,.05) 24px);border-bottom:1px dashed var(--line);color:var(--text-dim,#7a9080);font-size:13px;">작업 화면 준비 중</div>
-        <div style="padding:18px 20px;"><b>웹 비즈니스</b><p style="font-size:14px;color:var(--text-sub,#4a5568);margin-top:6px;">멀티페이지 + 블로그 + 문의 동선을 갖춘 정식 웹사이트</p></div>
+      <div class="card reveal d1">
+        <span class="pill tag">앱 커머스</span>
+        <h3 class="pf-title">반려동물 제품 성분 분석·커머스 앱</h3>
+        <p class="pf-name">V○○ · 실명 비공개</p>
+        <p class="pf-desc">성분표를 촬영하면 OCR로 인식·분석하는 스캐너가 핵심. 상품 DB·관리자 CMS·주문/결제 플로우·다크 모드까지 갖춘 크로스플랫폼 앱.</p>
+        <p class="pf-tech">React Native · Capacitor · TypeScript · Supabase(PostgreSQL/RLS) · tesseract.js OCR · 커머스 체크아웃</p>
       </div>
-      <div class="card reveal d2" style="overflow:hidden;padding:0;">
-        <div style="aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(0,0,0,.03),rgba(0,0,0,.03) 12px,rgba(0,0,0,.05) 12px,rgba(0,0,0,.05) 24px);border-bottom:1px dashed var(--line);color:var(--text-dim,#7a9080);font-size:13px;">작업 화면 준비 중</div>
-        <div style="padding:18px 20px;"><b>AI 기능</b><p style="font-size:14px;color:var(--text-sub,#4a5568);margin-top:6px;">문의 자동응답 챗봇·문서 요약 등 운영을 덜어주는 AI 기능</p></div>
+      <div class="card reveal d2">
+        <span class="pill tag">시스템·보안</span>
+        <h3 class="pf-title">로컬 시크릿 관리 도구 (Rust)</h3>
+        <p class="pf-name">e○○ · 실명 비공개</p>
+        <p class="pf-desc">.env 시크릿을 AES-256-GCM으로 암호화해 로컬에만 저장하고, MCP로 연동하되 모든 접근에 OS 승인 창을 띄우는 휴먼 인 더 루프 보안 도구.</p>
+        <p class="pf-tech">Rust · Tauri v2 · AES-256-GCM · Argon2id 볼트 · Ed25519 라이선스 검증 · JSON-RPC MCP 서버 · MIT 오픈소스</p>
       </div>
+      <div class="card reveal">
+        <span class="pill tag">모노레포</span>
+        <h3 class="pf-title">부동산 리드·제휴업체 관리 솔루션</h3>
+        <p class="pf-name">I○○ · 실명 비공개</p>
+        <p class="pf-desc">파트너용 모바일 앱, 본사 관리자 대시보드, 고객용 랜딩을 하나의 워크스페이스로 구성한 대규모 프로젝트.</p>
+        <p class="pf-tech">pnpm 모노레포 · React Native/Expo · Next.js · shared 패키지 · Supabase · SMS/이메일/카카오 알림 · 세이프 모드</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="pill tag">B2B SaaS</span>
+        <h3 class="pf-title">AI 영업 자동화 SaaS</h3>
+        <p class="pf-name">D○○ · 실명 비공개</p>
+        <p class="pf-desc">리드 관리·시퀀스 빌더·AI 카피라이터·CRM·애널리틱스를 갖춘 SaaS 대시보드. 다국어와 플랜별 요금 체계까지 설계.</p>
+        <p class="pf-tech">Next.js 14(App Router) · TypeScript · Tailwind · Framer Motion · Supabase(Auth/RLS) · OpenAI API · Stripe · i18n</p>
+      </div>
+      <div class="card reveal d2">
+        <span class="pill tag">AI 서비스</span>
+        <h3 class="pf-title">AI 기억 검색 서비스</h3>
+        <p class="pf-name">뭐○○ · 실명 비공개</p>
+        <p class="pf-desc">기억나지 않는 영화·노래·물건을 대충 설명하면 AI가 대화형으로 좁혀가며 찾아주는 서비스. 프로덕션 수준의 API 안정성 설계가 강점.</p>
+        <p class="pf-tech">Next.js · TypeScript(strict) · GPT-4o-mini · Edge Runtime · zod 검증 · Upstash Redis 레이트리밋 · Vitest</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill tag">PWA</span>
+        <h3 class="pf-title">게이미피케이션 습관·목표 관리 PWA</h3>
+        <p class="pf-name">인○○ · 실명 비공개</p>
+        <p class="pf-desc">할 일을 완료할 때마다 꽃이 피고 정원이 계절에 따라 변하는 로컬 우선·오프라인 PWA. 즉각적 시청각 피드백 설계가 특징.</p>
+        <p class="pf-tech">React 18 · Vite · Tailwind · Framer Motion · IndexedDB(idb) · Web Audio API · navigator.vibrate · Zustand · PWA</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="pill tag">커머스·CMS</span>
+        <h3 class="pf-title">스킨케어 커머스 랜딩</h3>
+        <p class="pf-name">생○○ · 실명 비공개</p>
+        <p class="pf-desc">백엔드 없이 운영 가능한 정적 커머스 사이트. 비개발자 의뢰인이 관리자 화면에서 상품·배너·문구를 직접 편집하도록 설계.</p>
+        <p class="pf-tech">Next.js 16 · TypeScript · Tailwind v4 · 정적 SSG(export) · Decap CMS · 카카오 로그인 · 토스페이먼츠</p>
+      </div>
+      <div class="card reveal d2">
+        <span class="pill tag">개발자 SaaS</span>
+        <h3 class="pf-title">확장형 개발자 도구 SaaS</h3>
+        <p class="pf-name">E○○ · 실명 비공개</p>
+        <p class="pf-desc">브라우저에서만 동작(서버 전송·업로드 없음)하는 유틸리티를 폴더 단위로 추가하면 목록·사이트맵·SEO가 자동 반영되는 멀티테넌트 플랫폼.</p>
+        <p class="pf-tech">Next.js · TypeScript · Supabase · Paddle · Sentry 웹훅 · JSON-LD · 동적 sitemap/robots</p>
+      </div>
+      <div class="card reveal">
+        <span class="pill tag">랜딩·SEO</span>
+        <h3 class="pf-title">AI 교육 브랜드 랜딩</h3>
+        <p class="pf-name">에○○ · 실명 비공개</p>
+        <p class="pf-desc">프로그래매틱 SEO 기반 개인 브랜드 교육 사이트. 라우트별 동적 OG 이미지 생성.</p>
+        <p class="pf-tech">Next.js · TypeScript · 프로그래매틱 SEO · 동적 라우팅 · 동적 Open Graph · 정적 export · Netlify</p>
+      </div>
+      <div class="card reveal d1">
+        <span class="pill tag">웹 · 개인 브랜딩</span>
+        <h3 class="pf-title">경영기획·HR 전문가 개인 브랜딩 사이트</h3>
+        <p class="pf-name">개인 의뢰인 · 실명 비공개 <span style="color:var(--accent,#3a8c5c);">· 스크린샷 준비 중</span></p>
+        <p class="pf-desc">원페이지 개인 브랜딩 사이트. 핵심 성과 지표를 카운터 애니메이션으로 강조하고 소개·경력·역량·포트폴리오·연락 섹션으로 구성. KR/EN 이중언어·반응형.</p>
+        <p class="pf-tech">React · TypeScript · Tailwind · i18n(KR/EN) · 반응형 · Netlify</p>
+      </div>
+      <div class="card reveal d2">
+        <span class="pill tag">자사 · SEO 자동화</span>
+        <h3 class="pf-title">SEO 키워드 랜딩 자동생성 시스템</h3>
+        <p class="pf-name">REUMLAB · 자사 프로젝트</p>
+        <p class="pf-desc">키워드 매트릭스(서비스×지역×업종×의도)로 랜딩 328개 + 허브 38개를 정적 HTML로 자동 생성하고 내부 링크 클러스터링으로 자연 유입을 극대화.</p>
+        <p class="pf-tech">Next.js 정적 export · Node.js 빌드 스크립트(.mjs) · JSON-LD · 자동 sitemap(367 URL)/robots · 네이버·구글 색인 최적화</p>
+      </div>
+    </div>
+    <div class="pf-summary reveal" style="max-width:960px;margin:32px auto 0;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:16px;padding:22px 24px;">
+      <b style="display:block;margin-bottom:8px;">핵심 기술 역량</b>
+      <p style="font-size:13.5px;line-height:1.75;color:var(--text-sub,#4a5568);">모바일 <b>Flutter·React Native/Expo·Capacitor</b>, 웹 <b>Next.js(14/16)·React 18·Vite·TypeScript(strict)·Tailwind</b>, 백엔드/DB <b>Supabase(PostgreSQL/RLS)·Edge/Serverless·IndexedDB·Upstash Redis</b>, 시스템 <b>Rust·Tauri·AES-256-GCM·Ed25519·MCP</b>, AI <b>OpenAI GPT-4o 연동·스키마 검증·레이트리밋</b>, 결제 <b>토스페이먼츠·Stripe·Paddle(B2B/B2C)</b>, 인증 <b>카카오·구글·애플 로그인</b>, 그리고 SEO·PWA·모노레포(pnpm)·CMS 연동까지 아우릅니다. 단순 화면 구현을 넘어 결제 승인·보안·레이트리밋·라이선스 검증 같은 프로덕션 수준의 백엔드·보안 설계와, 비개발자 의뢰인이 직접 운영하는 CMS·셀프 편집 구조까지 고려합니다.</p>
     </div>
     <p style="text-align:center;margin-top:28px;">
       <a class="btn btn--ghost" href="#contact" style="font-size:14px;padding:10px 24px;">내 서비스와 비슷한 사례 상담받기 →</a>
