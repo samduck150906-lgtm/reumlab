@@ -21,7 +21,7 @@ const INDEXED_HUB_SLUGS = new Set(HUB_SLUGS.filter(hubShouldIndex));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '개발 가이드 모음 | 비용·업종별 앱 만들기 — 름랩',
+  title: { absolute: '개발 가이드 모음 | 비용·업종별 앱 만들기 — 름랩' },
   description:
     '앱개발 비용, 외주 견적, 스타트업 MVP, 업종별 앱 만들기까지 개발 전 확인할 실전 가이드를 모았습니다. Flutter vs React Native 같은 선택 비교도 함께 정리했습니다.',
   keywords: ['앱개발 비용 가이드', '외주 견적', '업종별 앱 만들기', 'MVP 개발 가이드', '개발 비교'],

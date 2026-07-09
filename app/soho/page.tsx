@@ -12,7 +12,7 @@ const PAGE_URL = `${SITE.domain}/soho/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB',
+  title: { absolute: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB' },
   description:
     '광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음. 동탄·수원 거점 · 전국 어디서나 진행.',
   keywords: [

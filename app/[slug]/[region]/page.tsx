@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title,
+    title: { absolute: title },
     description,
     keywords: [
       `${region.full} ${service.short}`,

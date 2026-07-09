@@ -9,7 +9,7 @@ const canonical = `${SITE.domain}/blog/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '블로그 | 앱개발 비용·MVP·Flutter·홈페이지 제작 실무 칼럼 | 름랩',
+  title: { absolute: '블로그 | 앱개발 비용·MVP·Flutter·홈페이지 제작 실무 칼럼 | 름랩' },
   description:
     '앱 개발 비용, MVP 개발 기간, Flutter 외주, 랜딩페이지 제작 비용 등 창업자가 궁금한 개발·외주 주제를 정리한 름랩 칼럼입니다.',
   alternates: { canonical },

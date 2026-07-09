@@ -12,10 +12,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const landing = getLandingBySlug(params.slug);
-  if (!landing) return { title: '름랩 REUMLAB' };
+  if (!landing) return { title: { absolute: '름랩 REUMLAB' } };
   const url = `${BASE}/l/${params.slug}/`;
   return {
-    title: landing.title,
+    title: { absolute: landing.title },
     description: landing.description,
     openGraph: {
       title: landing.title,

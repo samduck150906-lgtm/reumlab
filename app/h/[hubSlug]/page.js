@@ -15,14 +15,14 @@ const DUP_HUB_CANONICAL = { 'mobile-app': 'app-dev' };
 
 export async function generateMetadata({ params }) {
   const hub = getHubBySlug(params.hubSlug);
-  if (!hub) return { title: '름랩 REUMLAB' };
+  if (!hub) return { title: { absolute: '름랩 REUMLAB' } };
   const title = `${hub.ko} | 름랩 REUMLAB`;
   const description = `${hub.ko} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
   const url = `${BASE}/h/${params.hubSlug}/`;
   const canonicalSlug = DUP_HUB_CANONICAL[params.hubSlug] || params.hubSlug;
   const canonical = `${BASE}/h/${canonicalSlug}/`;
   return {
-    title,
+    title: { absolute: title },
     description,
     openGraph: {
       title,

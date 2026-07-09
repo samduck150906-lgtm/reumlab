@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title: seo.title,
+    title: { absolute: seo.title },
     description: seo.description,
     keywords: seo.keywords,
     alternates: { canonical: seo.canonical },

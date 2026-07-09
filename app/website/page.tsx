@@ -14,7 +14,7 @@ const CANONICAL = `${SITE.domain}/website/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '업종별 홈페이지 제작 | 병원·학원·카페부터 제조·법률까지 — 름랩',
+  title: { absolute: '업종별 홈페이지 제작 | 병원·학원·카페부터 제조·법률까지 — 름랩' },
   description:
     '업종별 홈페이지 제작 가이드. 병원·학원·헬스장·카페·쇼핑몰부터 제조·건설·법률·자동차까지, 업종마다 필요한 페이지 구성·검색 노출·제작 비용(49만 원부터)을 정리했습니다. 월 관리비 없이 소스코드 이관·직접 수정.',
   keywords: ['업종별 홈페이지 제작', '홈페이지 제작', '홈페이지 제작 비용', '홈페이지 제작 업체', '반응형 홈페이지 제작', '소상공인 홈페이지'],

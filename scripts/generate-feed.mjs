@@ -64,11 +64,6 @@ const STATIC_PAGES = [
     description:
       'CRM, 사내 시스템, 관리자 웹 고도화. 기존 데이터를 통합하여 업무 효율을 혁신합니다.',
   },
-  {
-    url: `${DOMAIN}/consultation/`,
-    title: '프로젝트 상담 신청 | 름랩 (REUMLAB)',
-    description: '웹·앱 개발 상담 및 견적 문의. 름랩에 프로젝트를 맡겨 주세요.',
-  },
 ];
 
 function main() {

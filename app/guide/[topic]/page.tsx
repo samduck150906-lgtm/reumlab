@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title: `${guide.title} | 름랩`,
+    title: { absolute: `${guide.title} | 름랩` },
     description: guide.description,
     keywords: guide.keywords,
     alternates: { canonical },

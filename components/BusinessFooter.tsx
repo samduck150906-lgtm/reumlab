@@ -47,6 +47,11 @@ export default function BusinessFooter({ topExtra }: Props) {
             네이버 플레이스 보기
           </a>
         </p>
+        <nav aria-label="법적 고지" style={{ marginTop: 14, display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 13 }}>
+          <Link href="/privacy/">개인정보처리방침</Link>
+          <Link href="/terms/">이용약관</Link>
+          <Link href="/refund/">환불정책</Link>
+        </nav>
       </div>
     </footer>
   );

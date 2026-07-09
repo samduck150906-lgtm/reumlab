@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title: `${post.title} | ${SITE.name}`,
+    title: { absolute: `${post.title} | ${SITE.name}` },
     description: post.description,
     keywords: post.keywords,
     alternates: { canonical },

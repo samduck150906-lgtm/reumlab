@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title: `${cmp.title} | 름랩`,
+    title: { absolute: `${cmp.title} | 름랩` },
     description: cmp.description,
     keywords: cmp.keywords,
     alternates: { canonical },

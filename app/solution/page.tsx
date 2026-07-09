@@ -12,7 +12,7 @@ const LIST = INDUSTRIES.filter((i) => hasSolution(i.slug));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: '업종별 솔루션·시스템 구축 100개 업종 | 모듈·연동 — 름랩',
+  title: { absolute: '업종별 솔루션·시스템 구축 100개 업종 | 모듈·연동 — 름랩' },
   description:
     '병원·학원·헬스장·커머스부터 제조·전문서비스까지 100개 업종별 솔루션 구축 가이드. 업종마다 어떤 기능 모듈로, 어떤 기술 스택과 연동으로, 어떤 단계로 시스템을 구축하는지 정리했습니다. 소스코드 전체 이관·직접 운영.',
   keywords: ['업종별 솔루션', '업종 시스템 구축', '업종별 관리 시스템', '디지털 전환', '업무 시스템 개발', '맞춤 솔루션 개발'],

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     metadataBase: new URL(SITE.domain),
-    title,
+    title: { absolute: title },
     description,
     keywords: [name, `${ind?.ko ?? ''} 시스템 구축`, `${ind?.ko ?? ''} 디지털 전환`, `${ind?.ko ?? ''} 관리 시스템`, '소스코드 이관'],
     alternates: { canonical },

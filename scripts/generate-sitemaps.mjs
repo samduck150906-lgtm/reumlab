@@ -19,7 +19,6 @@ const now = new Date().toISOString().slice(0, 10);
 
 const urls = [
   { loc: BASE + '/', lastmod: now, changefreq: 'weekly', priority: '1.0' },
-  { loc: BASE + '/consultation/', lastmod: now, changefreq: 'monthly', priority: '0.9' },
   ...Object.keys(clusters).map((slug) => ({
     loc: `${BASE}/h/${slug}/`,
     lastmod: now,
