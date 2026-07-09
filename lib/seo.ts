@@ -1,3 +1,5 @@
+import { RELATED_KEYWORDS_BY_PILLAR, mergeRelatedKeywords } from './keyword-coverage';
+
 export const SITE = {
   name: '름랩',
   nameEn: 'REUMLAB',
@@ -805,6 +807,13 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     canonical: 'https://reumlab.com/website-agency/',
   },
 };
+
+// File2 연관키워드(관련 검색어) 반영 — 필러별 보조 키워드를 keywords 에 중복 없이 병합.
+// (버퍼 의도 학습·언어 키워드는 lib/keyword-coverage.ts 에서 이미 제외됨)
+for (const [slug, extra] of Object.entries(RELATED_KEYWORDS_BY_PILLAR)) {
+  const seo = PAGE_SEO_MAP[slug];
+  if (seo) seo.keywords = mergeRelatedKeywords(slug, seo.keywords);
+}
 
 /**
  * 얇은(meta-only) 한글 pillar 정리.

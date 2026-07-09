@@ -135,6 +135,7 @@ export default function IndustryHubPage() {
             <div className="link-grid">
               <Link href="/cost/">업종별 앱 개발 비용</Link>
               <Link href="/solution/">업종별 솔루션 구축</Link>
+              <Link href="/website/">업종별 홈페이지 제작</Link>
               <Link href="/guide/">개발 가이드 모음</Link>
               <Link href="/app-development/">앱개발 외주</Link>
               <Link href="/app-agency/">앱개발 업체</Link>

@@ -19,6 +19,7 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/source-handover/">소스코드 이관</Link>
           <Link href="/windows-app-development/">윈도우 앱 개발</Link>
           <Link href="/web-development/">웹사이트 제작</Link>
+          <Link href="/website/">업종별 홈페이지 제작</Link>
           <Link href="/blog/">블로그</Link>
         </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
