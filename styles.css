@@ -873,12 +873,13 @@ br.br-pc { display: inline; }
 .pf-card { padding: 0; overflow: hidden; }
 .pf-card__body { padding: 18px 20px 22px; display: flex; flex-direction: column; }
 .pf-cover { position: relative; height: 116px; display: flex; align-items: flex-end; padding: 14px 16px; overflow: hidden; }
-.pf-cover::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.16) 1px, transparent 1px); background-size: 14px 14px; opacity: .5; }
-.pf-cover__mark { position: absolute; top: -14px; right: 6px; font-size: 88px; font-weight: 800; line-height: 1; color: #fff; opacity: .15; letter-spacing: -0.05em; }
-.pf-cover__cat { position: relative; z-index: 1; font-size: 11.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.32); padding: 4px 11px; border-radius: 999px; }
-.pf-cover--a { background: linear-gradient(135deg, #0a1830, #2f6bff); }
-.pf-cover--b { background: linear-gradient(135deg, #0f2240, #3f7dff); }
-.pf-cover--c { background: linear-gradient(135deg, #101d3a, #5661f0); }
-.pf-cover--d { background: linear-gradient(135deg, #0a1830, #1f4fd6); }
-.pf-cover--e { background: linear-gradient(140deg, #12233f, #3a6df0); }
+.pf-cover__mark { position: absolute; z-index: 1; top: -14px; right: 6px; font-size: 88px; font-weight: 800; line-height: 1; color: #fff; opacity: .16; letter-spacing: -0.05em; text-shadow: 0 2px 12px rgba(0,0,0,.3); }
+.pf-cover__cat { position: relative; z-index: 1; font-size: 11.5px; font-weight: 700; color: #fff; background: rgba(255,255,255,.2); border: 1px solid rgba(255,255,255,.34); padding: 4px 11px; border-radius: 999px; backdrop-filter: blur(2px); }
+/* Higgsfield(Recraft) 생성 추상 테크 배경 — 어두운 오버레이 + 브랜드 그라디언트 fallback */
+.pf-cover { background: #0a1830; background-size: cover; background-position: center; }
+.pf-cover--a { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104117_3a076c77-25e0-4471-9200-ff8971cbb8f4_min.webp"), linear-gradient(135deg, #0a1830, #2f6bff); }
+.pf-cover--b { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_6877282f-7fd0-4b44-8e86-ab48bda7080c_min.webp"), linear-gradient(135deg, #0f2240, #3f7dff); }
+.pf-cover--c { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_6b470ee1-ed64-434b-b64b-d4b2bb439ebf_min.webp"), linear-gradient(135deg, #101d3a, #5661f0); }
+.pf-cover--d { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_608548b8-511a-4a01-9861-3b1fe21c6d1b_min.webp"), linear-gradient(135deg, #0a1830, #1f4fd6); }
+.pf-cover--e { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_5725c013-363f-4ed2-87f2-0d3d10279215_min.webp"), linear-gradient(140deg, #12233f, #3a6df0); }
 .pf-card .pf-title { margin-top: 13px; }
