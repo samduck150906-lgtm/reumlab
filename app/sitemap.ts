@@ -4,6 +4,7 @@ import { getLandings, getClusters, landingIndexable, hubShouldIndex } from '../l
 import { BLOG_POSTS, blogCanonical, blogShouldIndex } from '@/lib/blog-posts';
 import { allRegionServiceParams, regionServiceCanonical, regionServiceDecision } from '@/lib/pseo';
 import { INDUSTRIES, industryCanonical, industryDecision } from '@/lib/industries';
+import { WEBSITE_INDUSTRIES, websiteCanonical, websiteDecision } from '@/lib/website-industries';
 import { COSTS, costCanonical, costDecision } from '@/lib/cost';
 import { SOLUTIONS, solutionCanonical, solutionDecision } from '@/lib/solution';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
@@ -88,6 +89,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     out.push({
       url: industryCanonical(ind.slug),
       lastModified: industryMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // 6축 — 업종별 홈페이지 제작 (파워링크 키워드 294종, 색인 게이트 통과분만 포함)
+  // /app(앱개발)와 검색 의도 분리(홈페이지 페이지구성·검색노출·제작비용) — 자기잠식 방지
+  const websiteMod = gitLastModified('lib/website-industries.ts');
+  out.push({
+    url: `${SITE.domain}/website/`,
+    lastModified: websiteMod,
+    changeFrequency: 'weekly',
+    priority: 0.82,
+  });
+  for (const d of WEBSITE_INDUSTRIES) {
+    const decision = websiteDecision(d.slug);
+    if (decision && !decision.inSitemap) continue;
+    out.push({
+      url: websiteCanonical(d.slug),
+      lastModified: websiteMod,
       changeFrequency: 'monthly',
       priority: 0.7,
     });
