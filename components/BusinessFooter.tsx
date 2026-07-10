@@ -37,16 +37,20 @@ export default function BusinessFooter({ topExtra }: Props) {
           </a>
           <br />
           주소: {SITE.address}
-          <br />
-          <a
-            href="https://naver.me/FORRCoFc"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--text-dim)' }}
-          >
-            네이버 플레이스 보기
-          </a>
         </p>
+        <nav aria-label="공식 채널" style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: '6px 14px', fontSize: 13 }}>
+          {[
+            { href: 'https://naver.me/FORRCoFc', label: '네이버 플레이스' },
+            { href: 'https://blog.naver.com/reumlab', label: '네이버 블로그' },
+            { href: 'https://www.instagram.com/reumlab/', label: '인스타그램' },
+            { href: 'https://pf.kakao.com/_xkxjQxgn', label: '카카오톡 채널' },
+            { href: 'https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8', label: '구글 지도' },
+          ].map((c) => (
+            <a key={c.href} href={c.href} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-dim)' }}>
+              {c.label}
+            </a>
+          ))}
+        </nav>
         <nav aria-label="법적 고지" style={{ marginTop: 14, display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 13 }}>
           <Link href="/privacy/">개인정보처리방침</Link>
           <Link href="/terms/">이용약관</Link>

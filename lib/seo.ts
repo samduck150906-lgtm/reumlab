@@ -21,11 +21,11 @@ export const SITE = {
    */
   sameAs: [
     'https://naver.me/FORRCoFc', // 네이버 플레이스
-    // 'https://blog.naver.com/...',     // 네이버 블로그
-    // 'https://www.instagram.com/...',  // 인스타그램
-    // 'https://www.youtube.com/@...',   // 유튜브
-    // 'https://github.com/...',         // GitHub / 포트폴리오
-    // 'https://www.google.com/maps/...',// 구글 비즈니스 프로필
+    'https://blog.naver.com/reumlab', // 네이버 블로그
+    'https://www.instagram.com/reumlab/', // 인스타그램
+    'https://pf.kakao.com/_xkxjQxgn', // 카카오톡 채널
+    'https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8', // 구글 비즈니스 프로필(지도)
+    // 'https://www.youtube.com/@...',   // 유튜브 (개설 시 추가)
   ] as string[],
 };
 
