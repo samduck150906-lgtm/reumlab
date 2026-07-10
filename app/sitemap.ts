@@ -17,6 +17,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // lastmod는 빌드시각(new Date())이 아니라 각 콘텐츠 소스의 git 커밋 날짜를 쓴다.
   // → 같은 커밋을 재배포해도 lastmod가 그대로라 크롤 예산 churn이 없다(§4-1).
   const seoMod = gitLastModified('lib/seo.ts');
+  // 홈(/)은 Next 렌더가 아니라 정적 index.html(+styles.css/script.js)로 서빙된다(copy:home).
+  // 홈 lastmod가 lib/seo.ts 커밋만 따라가면, 실제 홈 콘텐츠(index.html)가 바뀐 배포에서도
+  // 프레시 신호가 전진하지 않아 크롤러가 옛 홈을 계속 캐시한다(색인 stale 원인).
+  // → 홈 lastmod는 실제 배포되는 홈 소스 파일들의 최신 git 날짜를 함께 반영한다.
+  const latest = (...ds: Date[]) => new Date(Math.max(...ds.map((d) => d.getTime())));
+  const homeMod = latest(
+    seoMod,
+    gitLastModified('index.html'),
+    gitLastModified('styles.css'),
+    gitLastModified('script.js'),
+  );
   const blogMod = gitLastModified('lib/blog-posts.ts');
   const pseoMod = gitLastModified('lib/pseo.ts');
   const industryMod = gitLastModified('lib/industries.ts');
@@ -29,7 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (REDIRECTED_PILLAR_SLUGS.has(slug) || NOINDEX_PILLAR_SLUGS.has(slug)) continue;
     out.push({
       url: seo.canonical,
-      lastModified: seoMod,
+      lastModified: slug === '' ? homeMod : seoMod,
       changeFrequency: slug === '' ? 'weekly' : 'monthly',
       priority: slug === '' ? 1 : 0.8,
     });
