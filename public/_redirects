@@ -118,3 +118,15 @@
 /blog/ai개발-외주-*   /ai-development/   301
 /blog/데이터분석-비용-*   /ai-development/   301
 /blog/데이터분석-학원-*   /ai-development/   301
+
+# 구 자동생성 블로그의 잔여 stale URL — 한글 접두어가 유실된 슬러그(-16·-seo-18·flutter-14·mvp-22).
+# 현재 lib/blog-posts.ts BLOG_POSTS에 없는 삭제분인데, 위 한글 글롭과도 매칭되지 않아 GSC "NOINDEX 태그로 제외"에 잔류.
+# (구 초안 슬러그이지 의도적 noindex 콘텐츠가 아님) → 주제에 맞는 현행 페이지로 301 통합해 정리한다.
+/blog/-16            /blog/              301
+/blog/-16/           /blog/              301
+/blog/-seo-18        /web-development/   301
+/blog/-seo-18/       /web-development/   301
+/blog/flutter-14     /flutter/           301
+/blog/flutter-14/    /flutter/           301
+/blog/mvp-22         /mvp/               301
+/blog/mvp-22/        /mvp/               301

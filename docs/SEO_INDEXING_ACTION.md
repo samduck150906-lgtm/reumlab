@@ -61,3 +61,20 @@
 | 광역 경쟁 키워드(앱개발·홈페이지 제작) 1페이지 | 수개월+ (authority 누적 필요) |
 
 **핵심:** 코드는 기술적 신선도 버그만 고칠 수 있다. 실제 순위는 **GSC 색인 요청(1번) + 네이버 등록(2번) + 엔티티/후기/백링크(3·4번)**가 좌우한다. 1·2번은 오늘 바로 실행 가능하다.
+
+---
+
+## GSC "색인 미생성" 6개 항목 → 코드 대응 현황 (2026-06-30 기준, 색인됨 361 / 미색인 203)
+
+GSC가 보고한 6개 미색인 사유를 코드 상태에 하나씩 대조했다. 대부분은 **의도된 품질 게이트(noindex,follow)** 이거나 **최근 SEO 커밋 배포 이전에 크롤된 stale 데이터**로, 재크롤 시 자연 해소된다. 코드로 새로 고칠 것은 **NOINDEX 4건뿐**이었다.
+
+| GSC 사유 | 건수 | 판정 | 코드 대응 |
+|---|---:|---|---|
+| 발견됨–현재 색인 미생성 | 139 | 시간·크롤예산 문제 | 조치 불필요. 사이트맵/IndexNow 이미 가동, GSC 색인 요청(위 1번)으로 촉진. ute.kr(2,482) 대비 소규모 |
+| 사용자가 선택한 표준 없는 중복 | 49 | 대부분 stale + 의도 noindex | `/l/`·`/h/`·pSEO near-duplicate는 `landingIndexable`·`hubShouldIndex`·`index-quality`로 이미 `noindex,follow` + 사이트맵 제외(자기참조 canonical 포함). 최근 canonical 통합 커밋 배포 前 크롤분이 다수 → 재크롤 시 해소 |
+| 크롤링됨–현재 색인 미생성 | 8 | 의도 noindex + 정상 | `/l/*` near-duplicate 랜딩(색인 게이트 제외), `웹개발-인턴-*`은 글롭 301 처리됨, `/feed.xml`은 정상(피드) |
+| **NOINDEX 태그로 제외** | **4** | **stale 초안 → 정리함** | `/blog/-16`·`/blog/-seo-18`·`/blog/flutter-14`·`/blog/mvp-22`. 현행 `BLOG_POSTS`에 없는 구 자동생성 삭제분(한글 접두어 유실 슬러그). 의도적 noindex 콘텐츠가 아니므로 **`public/_redirects`에 주제별 301 추가**(→ `/blog/`·`/web-development/`·`/flutter/`·`/mvp/`) |
+| 리디렉션이 포함된 페이지 | 2 | 정상(버그 아님) | `/guide/quote`·`/mvp-development`는 실제 색인 대상 페이지이고 자기참조 canonical 보유. `next.config.mjs`의 `trailingSlash: true`로 인해 **슬래시 없는 요청이 슬래시 버전으로 301**되는 정상 동작 — GSC의 "리디렉션"은 이 non-slash→slash 301을 가리킴 |
+| 찾을 수 없음(404) | 1 | 이미 처리됨 | `/bootcamp/ai-app/`는 `public/_redirects`에서 `/ai-development/`로 301 완료(GSC 재크롤 대기) |
+
+**요약:** 코드로 새로 조치한 것은 NOINDEX 4건(stale 초안 → 301)뿐이고, 나머지는 이미 구현된 색인 게이트(의도)이거나 재크롤로 풀릴 stale이다. 남은 실효 조치는 위 **1번(GSC 강제 재크롤)** 이다.
