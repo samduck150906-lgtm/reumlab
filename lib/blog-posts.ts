@@ -11,11 +11,81 @@ export interface BlogPost {
   paragraphs: string[];
   htmlBody?: string;
   faqs?: { q: string; a: string }[];
+  /**
+   * 대표 이미지(OG·트위터 카드·Article JSON-LD image). 루트 절대경로(`/assets/...`)로 저장하고
+   * 사용처에서 SITE.domain을 붙여 절대 URL로 만든다. 없으면 SITE.defaultOgImage를 쓴다.
+   */
+  ogImage?: string;
+}
+
+/** 글의 대표 이미지 절대 URL — 지정된 ogImage가 있으면 그것을, 없으면 기본 OG 이미지를 반환한다. */
+export function blogOgImage(post: BlogPost): string {
+  return post.ogImage ? `${SITE.domain}${post.ogImage}` : SITE.defaultOgImage;
 }
 
 const base = `${SITE.domain}/blog`;
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: 'jikjeop-gwanli-homepage-cms',
+    title: '홈페이지 문구, 개발자 없이 직접 수정하는 법 — 름랩 CMS 관리자 화면 공개',
+    description:
+      '연락처·가격·메인 문구·SEO·블로그를 사장님이 전화 한 통 없이 직접 고치는 름랩 CMS 관리자 화면을 실제 스크린샷으로 공개합니다. 직접 관리하는 홈페이지가 왜 매출·검색 노출에 유리한지 정리했습니다.',
+    keywords: ['홈페이지 직접 수정', 'CMS 홈페이지', '홈페이지 관리자 페이지', '홈페이지 문구 수정', '직접 관리하는 홈페이지', '워드프레스 대안'],
+    publishedAt: '2026-07-10',
+    readingMinutes: 6,
+    paragraphs: [],
+    ogImage: '/assets/images/cms-promo-poster.jpg',
+    htmlBody: `<p>홈페이지 글자 하나, 가격 한 줄 바꾸려고 매번 개발자에게 전화하고 계신가요? 많은 사장님이 "홈페이지는 한 번 만들면 끝"이라고 생각하지만, 실제로는 연락처·영업시간·가격·이벤트 문구가 계속 바뀝니다. 이때마다 외주 업체에 연락하고 수정비를 내고 며칠씩 기다린다면, 그 홈페이지는 사실상 내 것이 아닙니다. 름랩은 이런 불편을 없애기 위해 <strong>사장님이 직접 관리하는 홈페이지(CMS)</strong>를 기본으로 제공합니다. 이 글에서는 실제 관리자 화면을 공개하며 "직접 관리"가 왜 매출과 검색 노출에 유리한지 정리합니다.</p>
+<figure>
+<img src="/assets/images/admin-preview-1.jpg" alt="름랩 CMS 관리자 화면 — 메인 페이지(홈 문구) 컬렉션을 클릭해 히어로·제목·CTA 문구를 직접 수정" loading="lazy" width="760" height="950" />
+<figcaption>메인 문구·히어로·CTA까지, 개발자 없이 컬렉션을 클릭해 바로 수정합니다.</figcaption>
+</figure>
+<h2>왜 '직접 관리'가 중요한가</h2>
+<h3>1. 수정 속도 — 오늘 바로 반영</h3>
+<p>영업시간 변경, 임시 휴무, 한정 이벤트처럼 <strong>타이밍이 곧 매출</strong>인 정보는 며칠을 기다릴 수 없습니다. 관리자 화면에서 직접 고치면 몇 분 만에 사이트에 반영됩니다.</p>
+<h3>2. 비용 — 반복 수정비 0원</h3>
+<p>외주 수정은 건당 비용이 붙고 쌓이면 연간 적지 않은 금액이 됩니다. 사장님이 직접 바꾸면 이 비용이 사라지고, 월 관리비 없이 소스코드까지 회사 자산으로 남습니다.</p>
+<h3>3. 검색 노출(SEO) — 살아 있는 사이트가 유리</h3>
+<p>네이버·구글은 자주 업데이트되는 사이트를 선호합니다. 블로그·후기·FAQ를 꾸준히 직접 올릴 수 있으면, 롱테일 검색 유입이 쌓이며 광고비 없이 신규 고객이 들어옵니다.</p>
+<figure>
+<img src="/assets/images/admin-preview-2.jpg" alt="름랩 CMS 관리자 화면 — 연락처·가격·메인 문구·색인(SEO) 설정을 클릭해서 바로 수정" loading="lazy" width="760" height="950" />
+<figcaption>연락처·가격·메인 문구·SEO 설정까지, 클릭 한 번으로 편집 화면이 열립니다.</figcaption>
+</figure>
+<h2>관리자 화면에서 직접 바꾸는 것들</h2>
+<ul>
+<li><strong>사이트 설정</strong> — 상호·연락처·주소·기본 SEO(타이틀·설명)</li>
+<li><strong>업체 정보</strong> — 서비스 목록·강점·진행 과정·차별점 섹션</li>
+<li><strong>메인 페이지</strong> — 히어로 문구·색션 제목·통계·마무리 CTA</li>
+<li><strong>가격·견적 문구</strong> — 비용 참고표와 상담 유도 문구</li>
+<li><strong>블로그·후기·FAQ</strong> — 정보성 글과 고객 후기, 자주 묻는 질문</li>
+<li><strong>전역 문구 치환</strong> — 반복되는 문구를 한 번에 찾아 바꾸기</li>
+</ul>
+<p>어렵게 코드를 만질 필요가 없습니다. 문서를 편집하듯 컬렉션을 열고, 필드에 값을 채우고, 저장하면 끝입니다.</p>
+<figure>
+<img src="/assets/images/admin-preview-3.jpg" alt="름랩 CMS 관리자 화면 — 블로그 글·고객 후기·FAQ를 사장님이 직접 올리고 삭제" loading="lazy" width="760" height="950" />
+<figcaption>블로그·후기·FAQ도 사장님이 직접 올리고 지우며, 콘텐츠가 쌓일수록 검색 유입이 늘어납니다.</figcaption>
+</figure>
+<h2>워드프레스와 무엇이 다른가</h2>
+<table>
+<thead><tr><th>구분</th><th>일반 워드프레스</th><th>름랩 직접 관리형</th></tr></thead>
+<tbody>
+<tr><td>수정 난이도</td><td>테마·플러그인 이해 필요</td><td>필드에 값만 채우면 끝</td></tr>
+<tr><td>속도·보안</td><td>플러그인 많으면 느려짐·취약</td><td>가볍고 정적 배포로 빠름</td></tr>
+<tr><td>월 비용</td><td>호스팅·플러그인 구독 누적</td><td>월 관리비 없음(선택)</td></tr>
+<tr><td>소유권</td><td>업체 종속 가능</td><td>소스코드 전량 이관</td></tr>
+</tbody>
+</table>
+<h2>완성 후, 이렇게 넘겨드립니다</h2>
+<p>름랩은 홈페이지·앱을 만들고 끝내지 않습니다. 완성 후 <strong>소스코드·저장소·배포 권한을 회사 명의로 통째로 이관</strong>하고, 관리자 화면 사용법을 1:1로 교육합니다. 연락처·가격·문구 같은 간단한 수정은 사장님이 직접, 큰 개편이 필요할 때만 도움을 받으면 됩니다. 홈페이지를 진짜 '내 자산'으로 만드는 방식입니다.</p>
+<p>직접 관리하는 홈페이지 제작이 궁금하다면 <a href="/soho/">소상공인 홈페이지</a> 안내를 참고하시고, 화면을 직접 보고 싶으시면 무료 상담으로 데모를 요청해 주세요.</p>`,
+    faqs: [
+      { q: '정말 개발 지식 없이 제가 직접 수정할 수 있나요?', a: '네. 관리자 화면은 문서를 편집하듯 컬렉션을 열고 필드에 값을 채워 저장하는 방식입니다. 코드를 만질 필요가 없고, 완성 후 1:1 사용법 교육을 제공합니다.' },
+      { q: '수정하면 언제 홈페이지에 반영되나요?', a: '저장 후 배포까지 대체로 몇 분 안에 반영됩니다. 영업시간·임시 휴무·이벤트 문구처럼 타이밍이 중요한 정보도 바로 바꿀 수 있습니다.' },
+      { q: '월 관리비나 수정비가 계속 드나요?', a: '사장님이 직접 수정하면 반복 수정비가 들지 않습니다. 소스코드를 전량 이관하므로 특정 업체에 종속되지 않으며, 월 관리비는 선택 사항입니다.' },
+      { q: '블로그나 후기도 직접 올릴 수 있나요?', a: '네. 블로그 글·고객 후기·FAQ를 관리자 화면에서 직접 올리고 삭제할 수 있습니다. 콘텐츠가 쌓일수록 네이버·구글 검색 유입이 늘어납니다.' },
+    ],
+  },
   {
     slug: 'flutter-oeju-jangdanjeom',
     title: 'Flutter 앱개발 외주, 장단점 솔직 정리',

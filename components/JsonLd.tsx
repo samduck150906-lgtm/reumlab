@@ -1,5 +1,6 @@
 import type { PageSeo } from '@/lib/seo';
 import type { BlogPost } from '@/lib/blog-posts';
+import { blogOgImage } from '@/lib/blog-posts';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
 /** VAT 포함 정액 패키지 — 화면 표기와 1:1 일치 (price rich result 대응) */
@@ -163,6 +164,7 @@ export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
     '@type': 'Article',
     headline: post.title,
     description: post.description,
+    image: blogOgImage(post),
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     author: {

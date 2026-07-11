@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import {
   BLOG_POSTS,
   blogCanonical,
+  blogOgImage,
   blogShouldIndex,
   getAllBlogSlugs,
   getBlogPostBySlug,
@@ -36,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(resolveSlug(params.slug));
   if (!post) notFound();
   const canonical = blogCanonical(post.slug);
+  const ogImage = blogOgImage(post);
 
   return {
     metadataBase: new URL(SITE.domain),
@@ -51,13 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       publishedTime: post.publishedAt,
-      images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description.slice(0, 200),
-      images: [SITE.defaultOgImage],
+      images: [ogImage],
     },
     // 얇은·중복 글은 색인 제외(noindex,follow) — 사이트 전체 품질 보호
     robots: blogShouldIndex(post.slug)
