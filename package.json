@@ -17,6 +17,7 @@
     "seo:optimize": "node scripts/seo-optimization.mjs",
     "seo:report": "tsx scripts/seo-index-report.mts",
     "seo:indexnow": "node scripts/submit-indexnow.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs",
     "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && node scripts/generate-feed.mjs && node scripts/prepare-next-public.mjs && next build && npm run copy:home",
     "copy:home": "cp index.html styles.css script.js out/",

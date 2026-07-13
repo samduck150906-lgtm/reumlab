@@ -137,7 +137,9 @@ export default function RegionServicePage({ params }: Props) {
               preserveAspectRatio="xMidYMid slice"
               style={{ width: '100%', height: 'auto', borderRadius: 14, display: 'block' }}
             >
-              <title>{media.alt}</title>
+              {/* 접근성 이름은 svg의 aria-label과 아래 figcaption으로 제공.
+                  SVG <title> 요소는 네이버 크롤러가 문서 <title>로 중복 집계해
+                  "title 요소 2개 이상" 오류를 유발하므로 사용하지 않음. */}
               <defs>
                 <linearGradient id="regionHeroBg" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stopColor={`hsl(${media.hue} 68% 40%)`} />
