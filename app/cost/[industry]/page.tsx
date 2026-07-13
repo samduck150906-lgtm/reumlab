@@ -170,6 +170,12 @@ export default function CostPage({ params }: Props) {
               <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
               <Link href="/mvp-development/">MVP 개발 비용</Link>
               <Link href="/source-handover/">소스코드 이관</Link>
+              {(params.industry === 'academy' || params.industry.endsWith('-academy')) && (
+                <Link href="/academy-shopping-mall/">학원 쇼핑몰 제작 — 수강신청·결제</Link>
+              )}
+              {params.industry === 'realestate' && (
+                <Link href="/realestate-landing/">부동산 랜딩페이지 — 문의 전환형</Link>
+              )}
               <Link href="/cost/">업종별 앱 개발 비용 전체 보기</Link>
             </div>
           </div>

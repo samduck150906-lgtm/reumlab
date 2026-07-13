@@ -155,6 +155,13 @@ export default function WebsiteIndustryPage({ params }: Props) {
               <Link href="/web-development/">웹사이트 제작 — 패키지·프로세스</Link>
               <Link href="/website-agency/">홈페이지 제작 업체 — 선택 기준·비용</Link>
               <Link href="/app-development/">앱개발 — 앱까지 필요할 때</Link>
+              {/* 검색 의도가 맞닿은 전용 서비스로 컨텍스트 내부링크 */}
+              {d.category === 'education' && (
+                <Link href="/academy-shopping-mall/">학원 쇼핑몰 제작 — 수강신청·결제 구축</Link>
+              )}
+              {d.category === 'realestate' && (
+                <Link href="/realestate-landing/">부동산 랜딩페이지 — 분양·매물 문의 전환형</Link>
+              )}
               <Link href="/website/">업종별 홈페이지 제작 전체 보기</Link>
             </div>
           </div>

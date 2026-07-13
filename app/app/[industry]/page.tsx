@@ -174,6 +174,12 @@ export default function IndustryPage({ params }: Props) {
               <Link href="/mvp/">MVP 개발</Link>
               <Link href="/maintenance/">앱·웹 유지보수</Link>
               <Link href="/source-handover/">소스코드 이관</Link>
+              {(params.industry === 'academy' || params.industry.endsWith('-academy')) && (
+                <Link href="/academy-shopping-mall/">학원 쇼핑몰 제작 — 수강신청·결제</Link>
+              )}
+              {params.industry === 'realestate' && (
+                <Link href="/realestate-landing/">부동산 랜딩페이지 — 문의 전환형</Link>
+              )}
               <Link href="/app/">업종별 앱개발 전체 보기</Link>
             </div>
           </div>

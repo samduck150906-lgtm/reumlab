@@ -170,6 +170,12 @@ export default function SolutionPage({ params }: Props) {
               <Link href="/admin-page-development/">관리자 페이지 개발</Link>
               <Link href="/app-agency/">앱개발 업체 — 견적·업체 선택 기준</Link>
               <Link href="/source-handover/">소스코드 이관</Link>
+              {(params.industry === 'academy' || params.industry.endsWith('-academy')) && (
+                <Link href="/academy-shopping-mall/">학원 쇼핑몰 제작 — 수강신청·결제</Link>
+              )}
+              {params.industry === 'realestate' && (
+                <Link href="/realestate-landing/">부동산 랜딩페이지 — 문의 전환형</Link>
+              )}
               <Link href="/solution/">업종별 솔루션 구축 전체 보기</Link>
             </div>
           </div>
