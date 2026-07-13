@@ -10,7 +10,8 @@ export const SITE = {
   phoneHref: 'tel:01081119370',
   address: '경기도 화성시 동탄첨단산업1로 58, 307호(영천동)',
   email: 'ceo@eternalsix.com',
-  /** 문의는 전화·이메일로만 받습니다 */
+  /** 카카오톡 채널 — 전화 부담을 낮춘 저마찰 상담 채널(홈·전 페이지 CTA·플로팅 버튼 공용) */
+  kakaoChannel: 'https://pf.kakao.com/_xkxjQxgn',
   company: '앱·웹개발 스튜디오 름랩',
   representative: '성아름',
   bizNo: '793-12-03247',

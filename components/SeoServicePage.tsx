@@ -62,6 +62,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             <a href={SITE.phoneHref} className="btn-primary">
               📞 {SITE.phone} 전화 상담
             </a>
+            <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" className="btn-secondary" data-analytics="cta_service_kakao" style={{ background: '#FEE500', color: '#191919', fontWeight: 700 }}>
+              💬 카카오톡 상담
+            </a>
             <a href={`mailto:${SITE.email}`} className="btn-secondary">
               ✉️ 이메일 문의
             </a>

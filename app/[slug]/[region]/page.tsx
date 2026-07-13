@@ -122,6 +122,9 @@ export default function RegionServicePage({ params }: Props) {
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_region_call">
                 📞 {SITE.phone} 전화 상담
               </a>
+              <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" className="btn-outline" data-analytics="cta_region_kakao" style={{ background: '#FEE500', color: '#191919', borderColor: '#FEE500', fontWeight: 700 }}>
+                💬 카카오톡 상담
+              </a>
               <a href={`mailto:${SITE.email}`} className="btn-outline" data-analytics="cta_region_email">
                 ✉️ 이메일 문의
               </a>
@@ -226,6 +229,9 @@ export default function RegionServicePage({ params }: Props) {
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_region_call_bottom">
                 무료 30분 상담
+              </a>
+              <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" className="btn-outline" data-analytics="cta_region_kakao_bottom" style={{ background: '#FEE500', color: '#191919', borderColor: '#FEE500', fontWeight: 700 }}>
+                💬 카카오톡 상담
               </a>
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_region_pricing">
                 패키지 요금 보기

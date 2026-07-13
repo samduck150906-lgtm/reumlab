@@ -35,6 +35,15 @@ export default function FloatingContact() {
           }}
         >
           <a
+            href={SITE.kakaoChannel}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-analytics="float_kakao"
+            style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, background: '#FEE500', color: '#191919', fontSize: 14, fontWeight: 700, textDecoration: 'none' }}
+          >
+            💬 카카오톡 상담
+          </a>
+          <a
             href={SITE.phoneHref}
             data-analytics="float_call"
             style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '10px 12px', borderRadius: 10, background: '#0f1f3a', color: '#fff', fontSize: 14, fontWeight: 600, textDecoration: 'none' }}
