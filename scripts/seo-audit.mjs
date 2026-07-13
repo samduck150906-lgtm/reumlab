@@ -102,6 +102,20 @@ if (warned.length > 40) console.log(`  …외 ${warned.length - 40}건 경고`);
 const dist = {};
 for (const r of rows) dist[r.titleCount] = (dist[r.titleCount] || 0) + 1;
 console.log(`\n  title 개수 분포: ${JSON.stringify(dist)}`);
+
+// 사이트 전역 중복 요약 (2개 이상 페이지가 공유하는 title/description)
+const dupTitles = [...titleSeen.entries()].filter(([, n]) => n > 1).sort((a, b) => b[1] - a[1]);
+const dupDescs = [...descSeen.entries()].filter(([, n]) => n > 1).sort((a, b) => b[1] - a[1]);
+const noDesc = rows.filter((r) => !r.hasDesc).length;
+console.log(`\n  중복 title: ${dupTitles.length}종 · 중복 description: ${dupDescs.length}종 · description 없음: ${noDesc}개`);
+if (dupTitles.length) {
+  console.log('  ── 중복 title (상위) ──');
+  for (const [t, n] of dupTitles.slice(0, 15)) console.log(`    ×${n}  ${t}`);
+}
+if (dupDescs.length) {
+  console.log('  ── 중복 description (상위) ──');
+  for (const [d, n] of dupDescs.slice(0, 15)) console.log(`    ×${n}  ${d.slice(0, 70)}…`);
+}
 console.log(failed.length ? `\n[seo-audit] 실패: title 오류 ${failed.length}건\n` : `\n[seo-audit] 통과: 모든 페이지 title 정확히 1개\n`);
 
 process.exit(failed.length ? 1 : 0);

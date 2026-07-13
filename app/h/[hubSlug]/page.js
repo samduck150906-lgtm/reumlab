@@ -16,7 +16,9 @@ const DUP_HUB_CANONICAL = { 'mobile-app': 'app-dev' };
 export async function generateMetadata({ params }) {
   const hub = getHubBySlug(params.hubSlug);
   if (!hub) return { title: { absolute: '름랩 REUMLAB' } };
-  const title = `${hub.ko} | 름랩 REUMLAB`;
+  // 허브는 키워드 모음(집합) 페이지 → 개별 랜딩(/l/*)과 제목이 겹치지 않도록
+  // '총정리' 접미로 정보형 의도를 명확히 하고 중복 title을 방지한다.
+  const title = `${hub.ko} 총정리 | 지역별 견적·업체 — 름랩 REUMLAB`;
   const description = `${hub.ko} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
   const url = `${BASE}/h/${params.hubSlug}/`;
   const canonicalSlug = DUP_HUB_CANONICAL[params.hubSlug] || params.hubSlug;
