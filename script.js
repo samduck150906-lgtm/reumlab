@@ -174,4 +174,70 @@
     }, { threshold: 0.12 });
     io.observe(contact);
   }
+
+  // ============================================================
+  // GA4 상세 이벤트 — 이탈 지점 진단(어디서 나가는지 수치화)
+  // ============================================================
+  function pushDL(obj) {
+    try { window.dataLayer = window.dataLayer || []; window.dataLayer.push(obj); } catch (e) {}
+  }
+
+  // 히어로 CTA 클릭 (primary / pricing)
+  document.querySelectorAll("[data-hero-cta]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      pushDL({ event: "hero_cta_click", hero_cta: el.getAttribute("data-hero-cta") });
+    });
+  });
+
+  // 상담(#contact)으로 이동하는 모든 버튼 클릭
+  document.querySelectorAll('a[href="#contact"]').forEach(function (el) {
+    el.addEventListener("click", function () {
+      pushDL({ event: "contact_button_click", cta_location: el.getAttribute("data-cta-loc") || "" });
+    });
+  });
+
+  // 전화 · 카카오 클릭 (전용 이벤트)
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (el) {
+    el.addEventListener("click", function () { pushDL({ event: "phone_click" }); });
+  });
+  document.querySelectorAll('a[href*="pf.kakao.com"]').forEach(function (el) {
+    el.addEventListener("click", function () { pushDL({ event: "kakao_click" }); });
+  });
+
+  // FAQ 펼침 (열리는 순간에만) — 캡처 단계에서 토글 이전 상태 확인
+  document.querySelectorAll(".faq-item .faq-q").forEach(function (q) {
+    q.addEventListener("click", function () {
+      var item = q.closest(".faq-item");
+      if (item && !item.classList.contains("open")) pushDL({ event: "faq_open" });
+    }, true);
+  });
+
+  // 섹션 노출 — 가격·제작사례 도달(1회)
+  [["#pricing", "price_view"], ["#portfolio", "portfolio_view"]].forEach(function (pair) {
+    var el = document.querySelector(pair[0]);
+    if (el && "IntersectionObserver" in window) {
+      var fired = false;
+      var so = new IntersectionObserver(function (ents) {
+        ents.forEach(function (en) {
+          if (en.isIntersecting && !fired) { fired = true; pushDL({ event: pair[1] }); so.disconnect(); }
+        });
+      }, { threshold: 0.25 });
+      so.observe(el);
+    }
+  });
+
+  // 스크롤 깊이 25/50/75/100% (각 1회)
+  (function () {
+    var marks = [25, 50, 75, 100], done = {};
+    function onDepth() {
+      var h = document.documentElement;
+      var scrollable = h.scrollHeight - h.clientHeight;
+      if (scrollable <= 0) return;
+      var pct = ((window.scrollY || h.scrollTop) / scrollable) * 100;
+      marks.forEach(function (m) { if (pct >= m && !done[m]) { done[m] = true; pushDL({ event: "scroll_depth", percent: m }); } });
+      if (done[100]) window.removeEventListener("scroll", onDepth);
+    }
+    window.addEventListener("scroll", onDepth, { passive: true });
+    onDepth();
+  })();
 })();
