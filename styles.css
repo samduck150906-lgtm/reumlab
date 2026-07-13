@@ -883,3 +883,104 @@ br.br-pc { display: inline; }
 .pf-cover--d { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_608548b8-511a-4a01-9861-3b1fe21c6d1b_min.webp"), linear-gradient(135deg, #0a1830, #1f4fd6); }
 .pf-cover--e { background-image: linear-gradient(160deg, rgba(10,24,48,.28), rgba(10,24,48,.74)), url("https://d8j0ntlcm91z4.cloudfront.net/user_3FdCEOalMu87LCdqcoZOOmUUMjn/hf_20260709_104310_5725c013-363f-4ed2-87f2-0d3d10279215_min.webp"), linear-gradient(140deg, #12233f, #3a6df0); }
 .pf-card .pf-title { margin-top: 13px; }
+
+/* ============================================================
+   KAKAO 버튼 (전화 부담 낮춘 마이크로 전환 CTA)
+   ============================================================ */
+.btn--kakao {
+  background: #FEE500; color: #191919;
+  box-shadow: 0 10px 26px rgba(245,214,0,.34);
+}
+.btn--kakao:hover { background: #f4d800; transform: translateY(-2px); box-shadow: 0 16px 34px rgba(245,214,0,.42); }
+.btn--kakao svg { width: 19px; height: 19px; color: #191919; }
+.mobile-nav .btn--kakao { color: #191919; }
+
+/* 폼 안 '또는' 구분선 + 카톡 대안 */
+.af-or {
+  display: flex; align-items: center; gap: 10px; margin: 8px 0 2px;
+  color: var(--ink-3); font-size: 12px; font-weight: 700; letter-spacing: -0.01em;
+}
+.af-or::before, .af-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.af-kakao { min-height: 50px; font-size: 15.5px; }
+
+/* ============================================================
+   FOUNDER / 신뢰 섹션 (대표 소개 + 검증 가능한 사실)
+   ============================================================ */
+.founder {
+  display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start;
+  max-width: 940px; margin: 0 auto;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: var(--shadow); padding: 40px;
+}
+.founder__who { text-align: center; }
+.founder__avatar {
+  position: relative; width: 128px; height: 128px; margin: 0 auto 16px;
+  border-radius: 50%; overflow: hidden; background: var(--navy);
+  box-shadow: var(--shadow); border: 3px solid #fff;
+}
+.founder__mono {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: 54px; font-weight: 800; color: #fff; letter-spacing: -0.03em;
+  background: linear-gradient(145deg, var(--navy-2), var(--accent-dd));
+}
+.founder__name { font-size: 19px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; }
+.founder__name span { font-size: 14.5px; font-weight: 700; color: var(--ink-3); }
+.founder__role { margin-top: 6px; font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+.founder__msg { min-width: 0; }
+.founder__quote { margin: 0; border-left: 3px solid var(--accent); padding-left: 20px; }
+.founder__quote p { font-size: 16px; line-height: 1.75; color: var(--ink-2); }
+.founder__quote p + p { margin-top: 14px; }
+.founder__quote b { color: var(--ink); font-weight: 800; }
+.founder__sign { margin: 18px 0 0; font-size: 15px; color: var(--ink-2); }
+.founder__sign b { color: var(--ink); font-weight: 800; }
+.founder__facts {
+  list-style: none; margin: 24px 0 0; padding: 20px 0 0; border-top: 1px solid var(--line);
+  display: grid; gap: 12px;
+}
+.founder__fact { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
+.founder__fact b { color: var(--ink); font-weight: 800; }
+.founder__fact a { color: var(--accent-d); font-weight: 700; }
+.founder__fact a:hover { text-decoration: underline; }
+.founder__fact-ck {
+  flex: none; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent-soft); color: var(--accent);
+  font-size: 12px; font-weight: 800;
+}
+@media (max-width: 720px) {
+  .founder { grid-template-columns: 1fr; gap: 26px; padding: 28px 22px; }
+  .founder__quote { padding-left: 16px; }
+  .founder__quote p { font-size: 15px; }
+}
+
+/* ============================================================
+   MOBILE STICKY CTA BAR (첫 화면 CTA 노출 + 전화 부담 낮춘 진입점)
+   ============================================================ */
+.mcta { display: none; }
+@media (max-width: 1000px) {
+  .mcta {
+    display: grid; grid-template-columns: 1fr 0.72fr 1.5fr; gap: 8px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 90;
+    padding: 9px 12px calc(9px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255,255,255,.94);
+    -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    border-top: 1px solid var(--line-2);
+    box-shadow: 0 -8px 26px rgba(11,27,51,.12);
+    transition: transform .28s ease;
+  }
+  .mcta.is-hidden { transform: translateY(130%); pointer-events: none; }
+  .mcta__btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    min-height: 50px; border-radius: 12px; border: 1px solid transparent;
+    font-size: 14.5px; font-weight: 800; letter-spacing: -0.02em; white-space: nowrap;
+  }
+  .mcta__btn svg { width: 17px; height: 17px; }
+  .mcta__btn--kakao { background: #FEE500; color: #191919; }
+  .mcta__btn--call { background: #fff; color: var(--ink); border-color: var(--line-2); }
+  .mcta__btn--apply { background: var(--accent); color: #fff; box-shadow: var(--shadow-blue); }
+  /* 고정 바가 하단 콘텐츠를 가리지 않도록 여백 확보 */
+  body { padding-bottom: calc(70px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 360px) {
+  .mcta__btn { font-size: 13px; gap: 4px; }
+  .mcta__btn--call span { display: none; }
+}

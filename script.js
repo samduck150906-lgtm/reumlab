@@ -144,4 +144,34 @@
     tick();
     setInterval(tick, 1000);
   }
+
+  // 마이크로 전환 클릭 추적 — 카톡/전화/신청 버튼 클릭을 GA4·Meta로 전송(리타게팅·전환 재학습 신호)
+  document.querySelectorAll("[data-cta]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var type = el.getAttribute("data-cta");
+      var loc = el.getAttribute("data-cta-loc") || "";
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: "cta_click", cta_type: type, cta_location: loc });
+      } catch (e) {}
+      try {
+        if (typeof window.fbq === "function") {
+          // 카톡·전화 문의는 Meta 표준 'Contact' 이벤트로 집계
+          if (type === "kakao" || type === "call") window.fbq("track", "Contact", { method: type });
+        }
+      } catch (e2) {}
+    });
+  });
+
+  // 모바일 고정 CTA 바 — 하단 상담 폼(#contact)이 보이면 중복 노출을 피해 자동 숨김
+  var mcta = document.getElementById("mcta");
+  var contact = document.getElementById("contact");
+  if (mcta && contact && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        mcta.classList.toggle("is-hidden", en.isIntersecting);
+      });
+    }, { threshold: 0.12 });
+    io.observe(contact);
+  }
 })();
