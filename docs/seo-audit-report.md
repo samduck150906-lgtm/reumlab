@@ -40,18 +40,24 @@
 | 지역 페이지 `<title>` 개수 | 수정 전 2 → **수정 후 1** (예: `/app-development/sokcho/`) |
 | `npm run seo:audit` | **PASS** (exit 0) |
 | 전 페이지 title 개수 분포 | **`{ "1": 1407 }`** — 2개 이상인 페이지 0건 |
+| 중복 title / 중복 description | **0종 / 0종** (전 사이트) |
+| canonical 자기참조 | **1408/1408** (홈으로 몰림 없음) |
+| sitemap URL | **824건** (품질 게이트 통과분만, 리다이렉트 스텁 제외) |
+| robots.txt | 정상 (Allow: / · Sitemap 명시) |
 | 치명 오류(FAIL) | **0건** |
 
-즉, **“title 2개 이상” 오류는 전 페이지에서 해소**되었습니다.
+즉, **“title 2개 이상” 오류는 전 페이지에서 해소**되었고, title/description 중복,
+canonical, sitemap 등 구조적 SEO 항목도 모두 정상입니다.
 
-## 4. 남은 경고(WARN) — 저위험, 후속 검토
+## 4. 해소 완료 — hub↔landing 제목 중복
 
-- **hub↔landing 제목 중복(5쌍)**: `/h/{slug}` 와 `/l/{slug}` 가 같은 키워드로 생성되어
-  제목이 동일합니다(예: “앱개발 비용 | 름랩 REUMLAB”).
-  - 대상: `app-dev-cost`, `gangnam-homepage`, `homepage-quote`, `startup-app-dev`, `web-dev-cost`.
-  - 이는 “title 요소 2개” 오류(네이버 지적사항)와 **무관**한, 페이지 간 제목 중복(경미)입니다.
-  - 권장 수정: 허브(집합/총정리 페이지) 제목에 구분 접미(예: “… 총정리 · 지역별 견적”)를 부여.
-    단, 허브 38개 전체 제목이 바뀌어 색인 변동이 생기므로 **별도 승인 후** 진행 권장.
+- 초기 감사에서 `/h/{slug}` 와 `/l/{slug}` 가 같은 키워드로 제목이 겹치던 5쌍
+  (`app-dev-cost`, `gangnam-homepage`, `homepage-quote`, `startup-app-dev`, `web-dev-cost`)을
+  **허브 제목에 “… 총정리 | 지역별 견적·업체” 접미를 부여**해 해소했습니다.
+- 허브는 키워드 모음(집합) 페이지이므로 정보형 의도를 명확히 하는 방향이며,
+  개별 랜딩(/l/*)은 정확 키워드 제목을 유지합니다. → **중복 title 0종**.
+
+### 남은 경고(정상 동작)
 - `/AI서비스개발/`: 구 URL → 신 URL **메타 리프레시 리다이렉트 스텁**. H1/description 없음이 정상.
 
 ## 5. 코드로 해결 불가 — 사용자 조치 필요
