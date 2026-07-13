@@ -230,6 +230,8 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 { href: '/flutter-development/', label: 'Flutter Development' },
                 { href: '/ai-development/', label: 'AI 외주개발' },
                 { href: '/admin-page-development/', label: '관리자 페이지 개발' },
+                { href: '/academy-shopping-mall/', label: '학원 쇼핑몰 제작' },
+                { href: '/realestate-landing/', label: '부동산 랜딩페이지' },
                 { href: '/maintenance/', label: '앱·웹 유지보수' },
                 { href: '/renewal/', label: '웹사이트 리뉴얼' },
                 { href: '/cafe24-limit/', label: '카페24 한계' },
