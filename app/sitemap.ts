@@ -46,6 +46,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // 목적별 랜딩 허브 — 정적 생성(scripts/generate-purpose-landings.mjs → out/<slug>/).
+  // mvp·website 는 PAGE_SEO_MAP 에 이미 포함되어(같은 URL을 리치 랜딩으로 덮어씀) 위에서 추가됨.
+  // 여기서는 신규 6종만 사이트맵에 추가한다.
+  const purposeMod = gitLastModified('scripts/generate-purpose-landings.mjs');
+  for (const slug of ['erp', 'ai-automation', 'platform', 'reservation-commerce', 'data-seo', 'service-renewal']) {
+    out.push({
+      url: `${SITE.domain}/${slug}/`,
+      lastModified: purposeMod,
+      changeFrequency: 'monthly',
+      priority: 0.82,
+    });
+  }
+
   out.push({
     url: `${SITE.domain}/blog/`,
     lastModified: blogMod,
