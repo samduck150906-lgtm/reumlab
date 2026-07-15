@@ -84,6 +84,14 @@ const LANDINGS = [
     features: ['사용자 웹', 'iOS·Android 앱', '관리자페이지', '회원·권한', '결제·구독', '알림', '검색·필터', '외부 API 연동'],
     bespoke: [{ title: 'MVP 범위는 이렇게 정합니다', type: 'scope', rows: [['처음 요청', '회원가입, 커뮤니티, 채팅, 결제, AI 추천, 관리자'], ['1차 MVP', '회원가입, 핵심 콘텐츠, 신청·결제, 관리자'], ['후속 버전', '커뮤니티, 채팅, AI 추천, 고급 통계']] }],
     caseIds: ['edu-review', 'b2b-lead', 'soho-saas', 'life-match', 'ai-work-hub', 'research-writer'],
+    caseAngles: {
+      'edu-review': '앱과 관리자를 함께 만들어 아이디어를 실제 서비스로 검증한 사례',
+      'b2b-lead': '파트너 앱과 본사 관리자를 하나의 MVP로 출시한 사례',
+      'soho-saas': '핵심 기능부터 SaaS로 빠르게 검증한 사례',
+      'life-match': '요청→매칭 핵심 흐름만으로 시장 반응을 본 MVP 사례',
+      'ai-work-hub': 'AI 결과 생성이라는 핵심 가치부터 검증한 MVP 사례',
+      'research-writer': '작은 보조 기능으로 먼저 사용성을 확인한 사례',
+    },
     pricingIds: ['web-starter', 'app-light', 'app-standard', 'app-premium'],
     formHint: '서비스를 한 문장으로 · 누가 사용하나요 · 반드시 필요한 기능 · 앱/웹/둘 다 · 관리자페이지 필요 여부 · 현재 단계',
     ctaLabel: '내 MVP 범위 검토받기',
@@ -105,6 +113,13 @@ const LANDINGS = [
       { title: '권한 구조', type: 'roles', items: [['대표', '전체 매출·직원·설정 관리'], ['관리자', '고객·업무·정산 관리'], ['직원', '담당 고객과 업무만 열람'], ['고객', '본인 신청·결제·진행상황 확인']] },
     ],
     caseIds: ['edu-erp', 'b2b-lead', 'soho-saas', 'space-booking', 'quote-doc'],
+    caseAngles: {
+      'edu-erp': '수납·출결·상담 업무를 하나의 관리자로 통합한 사례',
+      'b2b-lead': '파트너별 리드 현황을 본사 대시보드로 실시간 통합한 사례',
+      'soho-saas': '예약·고객·매출을 한 관리자에서 운영하는 사례',
+      'space-booking': '예약·정산 운영을 관리자 중심으로 정리한 사례',
+      'quote-doc': '반복 문서 발행을 관리 도구로 표준화한 사례',
+    },
     pricingIds: ['web-premium', 'app-standard', 'app-ai', 'app-premium'],
     formHint: '현재 업무 관리 방식 · 사용하는 엑셀/프로그램 · 사용 직원 수 · 관리할 고객/회원 수 · 통합하고 싶은 업무 · 기존 데이터 이전 필요 여부',
     ctaLabel: '우리 회사 ERP 범위 상담하기',
@@ -126,6 +141,13 @@ const LANDINGS = [
       { title: '데이터 보안은 과장 없이 설명합니다', type: 'note', text: '어떤 데이터가 외부 AI API로 전달되는지, 저장 여부와 접근 권한을 사전에 정의합니다. "무엇이든 다 된다"고 말하지 않습니다.' },
     ],
     caseIds: ['ai-work-hub', 'ai-sales', 'sns-content', 'gov-search', 'research-writer'],
+    caseAngles: {
+      'ai-work-hub': '반복 문서 작성을 템플릿 + AI로 자동화한 사례',
+      'ai-sales': '리드 정리·메시지 작성을 시퀀스 + AI로 자동화한 사례',
+      'sns-content': '콘텐츠 기획·제작을 초안 자동 생성으로 줄인 사례',
+      'gov-search': '흩어진 정보 탐색을 대화형 AI 검색으로 바꾼 사례',
+      'research-writer': '자료 정리·초안 작성을 AI 보조로 단축한 사례',
+    },
     pricingIds: ['app-ai', 'app-premium', 'web-premium'],
     formHint: '현재 반복하는 업무 · 1건 처리 시간 · 한 달 처리 건수 · 사용 중인 문서/데이터 · 결과물 검수 주체 · 사내용/외부 고객용 여부',
     ctaLabel: '자동화 가능 업무 확인하기',
@@ -147,6 +169,12 @@ const LANDINGS = [
       { title: '최소 MVP와 확장', type: 'scope', rows: [['1차', '회원 역할 · 목록 · 상세 · 신청 · 관리자'], ['2차', '결제 · 채팅 · 리뷰 · 알림'], ['3차', '추천 · 정산 · 구독 · 자동 매칭']] },
     ],
     caseIds: ['life-match', 'edu-review', 'b2b-lead', 'digital-market'],
+    caseAngles: {
+      'life-match': '고객 요청과 업체를 요청서 기반으로 매칭한 양면 플랫폼 사례',
+      'edu-review': '정보 탐색·리뷰로 사용자와 공급자를 잇는 플랫폼 관점',
+      'b2b-lead': '파트너와 본사를 잇는 B2B 연결 구조 관점',
+      'digital-market': '구매자·판매자·관리자 3자 마켓플레이스 관점',
+    },
     pricingIds: ['app-standard', 'app-premium', 'web-premium'],
     formHint: '연결하려는 두 사용자 유형 · 공급자 입점 방식 · 검색 조건 · 매칭 방식 · 결제·수수료 구조 · 채팅/리뷰/정산 필요 여부',
     ctaLabel: '플랫폼 핵심 구조 검토받기',
@@ -169,6 +197,12 @@ const LANDINGS = [
       { title: '결제 범위', type: 'note', text: '실제 지원 가능한 결제 수단은 코드와 사업 범위에서 확인 후 표시합니다. 확정되지 않은 결제 수단을 미리 약속하지 않습니다.' },
     ],
     caseIds: ['space-booking', 'digital-market', 'quote-doc', 'soho-saas'],
+    caseAngles: {
+      'space-booking': '실시간 예약 캘린더와 결제·환불을 통합한 사례',
+      'digital-market': '상품 주문·결제·정산을 온라인화한 사례',
+      'quote-doc': '견적·청구를 결제 흐름과 연결한 사례',
+      'soho-saas': '예약·결제·회원 운영을 하나로 묶은 사례',
+    },
     pricingIds: ['web-premium', 'app-standard', 'web-business'],
     formHint: '예약 대상 · 시간/일/회차 방식 · 동시 예약 가능 수량 · 결제 시점 · 취소·환불 규칙 · 관리자 수 · 현재 예약 채널 · 알림톡 필요 여부',
     ctaLabel: '예약 흐름 설계받기',
@@ -189,6 +223,11 @@ const LANDINGS = [
       { title: '제작 유형', type: 'chips', items: ['원페이지 랜딩', '기업 홈페이지', '서비스 소개 사이트', '예약형 홈페이지', '쇼핑몰·결제 사이트', '콘텐츠·SEO 사이트'] },
     ],
     caseIds: ['space-booking', 'pseo-engine', 'digital-market'],
+    caseAngles: {
+      'space-booking': '예약까지 이어지는 전환형 웹 관점',
+      'pseo-engine': '검색 노출을 노린 대규모 콘텐츠 웹 관점',
+      'digital-market': '상품 소개에서 구매로 이어지는 전환 웹 관점',
+    },
     pricingIds: ['web-starter', 'web-marketing', 'web-business', 'web-premium'],
     formHint: '사이트 목적 · 필요 페이지 · 참고 사이트 · 로고/사진/원고 보유 여부 · 문의/예약/결제 기능 · 관리자 수정 필요 여부 · 희망 오픈일',
     ctaLabel: '내 홈페이지 범위 확인하기',
@@ -210,6 +249,11 @@ const LANDINGS = [
       { title: '먼저 확인하는 것', type: 'list', items: ['수집 대상 사이트의 이용약관·접근 정책', '개인정보 포함 여부', '데이터 갱신 주기', '중복·오류 데이터 처리', '검색엔진 품질 정책'] },
     ],
     caseIds: ['data-crawl', 'pseo-engine', 'gov-search'],
+    caseAngles: {
+      'data-crawl': '대량 데이터 수집·정제·검색 인프라 사례',
+      'pseo-engine': '키워드 매트릭스로 대량 페이지를 자동 생성한 사례',
+      'gov-search': '수집 데이터를 검색·탐색으로 노출한 사례',
+    },
     pricingIds: ['web-premium', 'app-premium'],
     pricingNote: '데이터·SEO 시스템은 수집 규모·출처·갱신 주기에 따라 범위가 크게 달라져, 상담·진단 후 별도 견적으로 안내드립니다. 위 금액은 참고용 상한 예시입니다.',
     formHint: '수집하려는 데이터 · 데이터 출처 · 예상 데이터 수 · 갱신 주기 · 검색 기능 필요 여부 · 자동 생성할 페이지 유형 · 현재 사이트/기술 환경',
@@ -314,16 +358,19 @@ function crossNav(activeSlug) {
   return `<div class="lx-cross"><span>다른 제작 유형 보기</span><nav aria-label="다른 제작 유형">${links}</nav></div>`;
 }
 
-function casesSection(caseIds) {
+function casesSection(caseIds, angles = {}) {
   if (!caseIds || !caseIds.length) return '';
   const cards = caseIds.map((id) => {
     const p = PROJECTS[id];
     if (!p) return '';
+    const angle = angles[id];
+    const angleLine = angle ? `<p class="lx-case__angle"><span>이 목적에서</span>${esc(angle)}</p>` : '';
     return `      <article class="lx-case">
         <div class="lx-case__shot shot" aria-hidden="true">${shotHTML(p.shot)}</div>
         <div class="lx-case__body">
           <span class="pf-chip">${esc(p.chip)}</span>
           <h3>${esc(p.title)}</h3>
+          ${angleLine}
           <p class="lx-case__lbl">문제</p><p class="lx-case__t">${esc(p.problem)}</p>
           <p class="lx-case__lbl">구현</p><p class="lx-case__t">${esc(p.build)}</p>
           <p class="lx-case__scope"><b>담당 범위</b> ${esc(p.scope)}</p>
@@ -535,7 +582,7 @@ function renderLanding(land) {
   const audience = land.audience.map((x) => `        <li><span class="lx-fit__ck" aria-hidden="true">✓</span>${esc(x)}</li>`).join('\n');
   const feats = land.features.map((x) => `        <li>${esc(x)}</li>`).join('\n');
   const bespoke = (land.bespoke || []).map(bespokeSection).join('\n');
-  const cases = casesSection(land.caseIds);
+  const cases = casesSection(land.caseIds, land.caseAngles || {});
   const pricing = pricingSection(land.pricingIds, land.pricingNote);
 
   return `<!DOCTYPE html>
