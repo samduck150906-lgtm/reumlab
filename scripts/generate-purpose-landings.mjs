@@ -101,6 +101,7 @@ const LANDINGS = [
     features: ['고객·회원 관리', '직원·권한 관리', '상담·문의 관리', '예약·일정 관리', '수납·미납 관리', '매출·정산 관리', '계약·문서 관리', '대시보드·통계', '알림·메시지', '외부 서비스 연동'],
     bespoke: [
       { title: '현재 vs 개선 후', type: 'compare', left: ['엑셀마다 정보가 다름', '직원이 바뀌면 인수인계 어려움', '요청이 카카오톡·전화에 흩어짐', '매출·미수금을 수기 계산', '관리자만 아는 업무 방식'], right: ['회원 데이터 통합', '역할별 직원 권한', '상담·처리 이력 기록', '매출·정산 자동 집계', '업무 상태 실시간 공유'] },
+      { title: '실제 업무 흐름 예시', type: 'flow', steps: ['고객 신청', '담당자 배정', '상담 기록', '계약·결제', '서비스 진행', '완료 처리', '정산·통계'] },
       { title: '권한 구조', type: 'roles', items: [['대표', '전체 매출·직원·설정 관리'], ['관리자', '고객·업무·정산 관리'], ['직원', '담당 고객과 업무만 열람'], ['고객', '본인 신청·결제·진행상황 확인']] },
     ],
     caseIds: ['edu-erp', 'b2b-lead', 'soho-saas', 'space-booking', 'quote-doc'],
@@ -163,6 +164,7 @@ const LANDINGS = [
     features: ['일정 조회·예약 신청', '상품·옵션·시간 선택', '결제·취소·환불', '예약 확인·변경', '알림(문자·알림톡)', '예약 현황·운영 시간', '가격·상품 설정', '채널별 예약 통합'],
     bespoke: [
       { title: '예약 유형부터 정합니다', type: 'chips', items: ['시간 예약', '날짜·숙박 예약', '회차·수업 예약', '직원별 예약', '공간·객실 예약', '상품 주문', '회원권·이용권'] },
+      { title: '고객 화면 / 관리자 화면', type: 'roles', items: [['고객 화면', '일정 조회 · 예약 신청 · 결제 · 확인 · 취소·변경 · 알림'], ['관리자 화면', '예약 현황 · 운영 시간 · 가격·상품 설정 · 고객 관리 · 취소·환불 · 매출 · 채널 통합']] },
       { title: '예약 충돌 방지 구조', type: 'list', items: ['동일 시간 중복 예약 방지', '결제 대기 시간 관리', '관리자 수동 예약 반영', '취소 시 재고 복구', '외부 채널 예약 반영'] },
       { title: '결제 범위', type: 'note', text: '실제 지원 가능한 결제 수단은 코드와 사업 범위에서 확인 후 표시합니다. 확정되지 않은 결제 수단을 미리 약속하지 않습니다.' },
     ],
@@ -328,7 +330,7 @@ function casesSection(caseIds) {
         </div>
       </article>`;
   }).join('\n');
-  return `<section class="section" id="cases">
+  return `<section class="section section--soft" id="cases">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="eyebrow">CASES</span><h2 class="sec-title">이 목적과 관련된 익명 사례</h2><p class="sec-sub">고객사 요청에 따라 프로젝트명·URL·화면 속 개인정보는 비공개 처리했습니다.</p></div>
     <div class="lx-cases">
@@ -392,7 +394,7 @@ const PROCESS = `<section class="section" id="process">
   </div>
 </section>`;
 
-const HANDOVER = `<section class="section section--soft">
+const HANDOVER = `<section class="section">
   <div class="wrap">
     <div class="sec-head reveal"><span class="eyebrow">HANDOVER</span><h2 class="sec-title">완성된 서비스뿐 아니라,<br class="br-pc">직접 운영할 수 있는 권한까지 전달합니다.</h2><p class="sec-sub">외주사에 종속되지 않도록 결과물과 함께 아래 항목을 정리해 이관합니다.</p></div>
     <ul class="hlist reveal">
@@ -411,7 +413,7 @@ const HANDOVER = `<section class="section section--soft">
 
 function faqSection() {
   const items = FAQ_COMMON.map((f) => `      <div class="faq-item"><button class="faq-q"><span class="qm">Q</span>${esc(f.q)}<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a"><div class="faq-a__in">${esc(f.a)}</div></div></div>`).join('\n');
-  return `<section class="section" id="faq">
+  return `<section class="section section--soft" id="faq">
   <div class="wrap">
     <div class="sec-head center reveal"><span class="eyebrow">FAQ</span><h2 class="sec-title">자주 묻는 질문</h2></div>
     <div class="faq reveal">
@@ -422,7 +424,7 @@ ${items}
 }
 
 function contactSection(land) {
-  return `<section class="section section--soft" id="contact">
+  return `<section class="section" id="contact">
   <div class="wrap">
     <div class="final">
       <div class="final__intro reveal">
