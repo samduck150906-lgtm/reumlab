@@ -1375,6 +1375,16 @@ body.pm-open { overflow: hidden; }
    목적 랜딩 (generate-purpose-landings.mjs) 전용 스타일
    ============================================================ */
 .hero--lx { padding: 96px 0 46px; }
+.lx-hero-stage { max-width: 520px; margin-left: auto; }
+.lx-hero-frame { background: #fff; border: 1px solid var(--line-2); border-radius: 18px; box-shadow: var(--shadow-lg); overflow: hidden; }
+.lx-hero-frame__bar { display: flex; align-items: center; gap: 6px; padding: 12px 15px; background: #f2f5fb; border-bottom: 1px solid var(--line); }
+.lx-hero-frame__bar span { width: 9px; height: 9px; border-radius: 50%; background: #cdd6e6; }
+.lx-hero-frame__bar em { margin-left: 8px; font-size: 11px; font-style: normal; color: var(--ink-3); background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 2px 12px; }
+.lx-hero-frame__body { height: 268px; padding: 28px; display: grid; place-items: stretch; background: linear-gradient(160deg, #f5f9ff, #e9f0fb); color: var(--accent-d); }
+.lx-hero-frame__body > div { width: 100%; height: 100%; justify-content: center; }
+.lx-hero-frame__body > .s-mob { height: auto; align-self: center; justify-self: center; transform: scale(1.35); }
+@media (max-width: 1080px) { .lx-hero-stage { margin: 0 auto; } }
+@media (max-width: 480px) { .lx-hero-frame__body { height: 216px; padding: 20px; } }
 .lx-cross { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 12.5px; color: var(--ink-3); }
 .lx-cross > span { font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; margin-right: 2px; }
 .lx-cross nav { display: flex; flex-wrap: wrap; gap: 4px 8px; }

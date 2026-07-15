@@ -283,6 +283,12 @@ const LANDINGS = [
   },
 ];
 
+/* ---------------- 히어로 화면(목적별 관련 화면) ---------------- */
+const HERO_SHOT = {
+  mvp: 'mobile', erp: 'erp', 'ai-automation': 'ai', platform: 'matching',
+  'reservation-commerce': 'calendar', website: 'search', 'data-seo': 'data', 'service-renewal': 'erp',
+};
+
 /* ---------------- 화면 목업 ---------------- */
 function shotHTML(type) {
   const S = {
@@ -624,8 +630,11 @@ ${header(land.slug)}
       </div>
       ${crossNav(land.slug)}
     </div>
-    <div class="hero__stage reveal d2" role="img" aria-label="${esc(land.navLabel)} 관련 익명 화면 예시">
-      <div class="mock mock--erp" aria-hidden="true"><div class="mock__chrome"><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__url">example.com</span></div><div class="mock__body"><div class="mock__side"><span class="mock__logo"></span><i class="mock__nav is-on"></i><i class="mock__nav"></i><i class="mock__nav"></i><i class="mock__nav"></i></div><div class="mock__main"><div class="mock__kpis"><span><b>1,240</b>건</span><span><b>98</b>진행</span><span><b>₩4.2M</b>정산</span></div><div class="mock__chart"><i style="height:38%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:66%"></i><i style="height:92%"></i></div><div class="mock__rows"><i></i><i></i><i></i></div></div></div></div>
+    <div class="hero__stage lx-hero-stage reveal d2" role="img" aria-label="${esc(land.navLabel)} 관련 익명 화면 예시(예시 데이터)">
+      <div class="lx-hero-frame" aria-hidden="true">
+        <div class="lx-hero-frame__bar"><span></span><span></span><span></span><em>example.com</em></div>
+        <div class="lx-hero-frame__body shot shot--${HERO_SHOT[land.slug] || 'erp'}">${shotHTML(HERO_SHOT[land.slug] || 'erp')}</div>
+      </div>
     </div>
   </div>
 </section>
