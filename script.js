@@ -420,6 +420,29 @@
     mnav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeNav); });
   }
 
+  // 헤더 서비스 드롭다운 — 클릭/터치 토글(호버는 CSS), 외부 클릭·ESC 닫기
+  var navDd = document.querySelector(".nav-dd");
+  if (navDd) {
+    var ddBtn = navDd.querySelector(".nav-dd__btn");
+    ddBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = navDd.classList.toggle("open");
+      ddBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", function (e) { if (!navDd.contains(e.target)) { navDd.classList.remove("open"); ddBtn.setAttribute("aria-expanded", "false"); } });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { navDd.classList.remove("open"); ddBtn.setAttribute("aria-expanded", "false"); } });
+  }
+
+  // 모바일 서비스 아코디언
+  var mAcc = document.querySelector(".mnav-acc");
+  if (mAcc) {
+    var accBtn = mAcc.querySelector(".mnav-acc__btn");
+    accBtn.addEventListener("click", function () {
+      var open = mAcc.classList.toggle("open");
+      accBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
   document.querySelectorAll(".faq-item").forEach(function (item) {
     var q = item.querySelector(".faq-q");
     var a = item.querySelector(".faq-a");
