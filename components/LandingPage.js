@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getSite, getLandingBySlug, getHubBySlug } from '../lib/data';
 import { buildLandingContent } from '../lib/landing-content';
 import BusinessFooter from './BusinessFooter';
+import LandingInquiryForm from './LandingInquiryForm';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -131,7 +132,7 @@ export default function LandingPage({ slug }) {
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-sm text-slate-400">{c.pricing.note}</p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {c.pricing.tiers.map((t) => (
               <div
                 key={t.tier}
@@ -313,6 +314,12 @@ export default function LandingPage({ slug }) {
               ✉️ 이메일 문의
             </a>
           </div>
+
+          {/* 홈과 동일한 상담 폼(Netlify main-apply) — 전화·이메일이 부담될 때 바로 접수 */}
+          <div className="mt-8">
+            <LandingInquiryForm landingSlug={slug} />
+          </div>
+
           {hub ? (
             <p className="mt-6 text-sm text-white/80">
               <Link href={`/h/${landing.hubId}/`} className="font-semibold underline-offset-2 hover:underline">
