@@ -59,6 +59,7 @@ const PURPOSES = [
   { slug: 'website', label: '홈페이지·랜딩', short: '문의가 들어오는 사이트' },
   { slug: 'data-seo', label: '데이터·SEO', short: '대규모 수집·노출' },
   { slug: 'service-renewal', label: '기존 서비스 개선', short: '오류 수정·리뉴얼·인수' },
+  { slug: 'soho', label: '소상공인 홈페이지', short: '자영업자·소상공인 전용' },
 ];
 
 const FAQ_COMMON = [
