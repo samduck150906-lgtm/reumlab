@@ -446,9 +446,9 @@ export function buildWebsiteContent(d: WebsiteIndustryDef): WebsiteContent {
     NO_KO_PREFIX.some((x) => p.includes(x)) ? p : `${ko} ${p}`,
   );
   const searchLine = `${ko} 고객이 많이 쓰는 검색어(${a.search.join(', ')})에 맞춰 ${kc}의 제목·본문·구조화 데이터를 정렬해, 광고 없이도 ${koG(ko)} 검색에 잡히도록 만듭니다.`;
-  const priceLine = `${kp}는 원페이지 기준 VAT 포함 49만 원부터, 예약·다페이지 구성의 ${kc}는 190만 원·약 14일입니다. 월 관리비는 없고 호스팅·도메인은 대표님 명의로 보유합니다.`;
+  const priceLine = `${kp}는 원페이지 기준 VAT 포함 98만 원부터, 예약·다페이지 구성의 ${kc}는 380만 원·약 14일입니다. 월 관리비는 없고 호스팅·도메인은 대표님 명의로 보유합니다.`;
   const faqs = [
-    { q: `${kp} 비용은 얼마인가요?`, a: `${ko} 원페이지는 VAT 포함 49만 원부터, 예약·다페이지 구성의 ${kc}는 190만 원부터입니다. 월 관리비 없이 정액으로 진행하고 상담에서 ${ko} 범위와 견적을 먼저 공개합니다.` },
+    { q: `${kp} 비용은 얼마인가요?`, a: `${ko} 원페이지는 VAT 포함 98만 원부터, 예약·다페이지 구성의 ${kc}는 380만 원부터입니다. 월 관리비 없이 정액으로 진행하고 상담에서 ${ko} 범위와 견적을 먼저 공개합니다.` },
     { q: `${ko}도 검색에 잘 나오게 만들어 주나요?`, a: `네. ${ko} 고객이 쓰는 검색어에 맞춰 메타·구조화 데이터·사이트맵·모바일 반응형을 제작에 포함합니다. ${why} 그래서 ${ko} 상호·지역·서비스 키워드로 ${kc}가 검색에 잡히도록 구조를 잡습니다.` },
     { q: `만든 뒤 ${ko} 정보를 직접 수정할 수 있나요?`, a: `네. 소스코드를 이관하고 ${ko} 가격·소식·이미지를 대표님이 직접 고치도록 관리 화면과 1:1 교육을 제공합니다. ${kb}에 매번 수정 요청할 필요가 없습니다.` },
   ];
@@ -473,7 +473,7 @@ export function websiteTitle(d: WebsiteIndustryDef): string {
   return `${d.ko} 홈페이지 제작 | 비용·페이지 구성·검색 노출 — 름랩`;
 }
 export function websiteDescription(d: WebsiteIndustryDef): string {
-  return `${d.ko} 홈페이지 제작 — ${d.ko} 운영에 필요한 페이지 구성과 비용(49만 원부터), 검색 노출까지. 월 관리비 없이 소스코드 이관·직접 수정. 동탄·수원 거점, 전국 진행.`;
+  return `${d.ko} 홈페이지 제작 — ${d.ko} 운영에 필요한 페이지 구성과 비용(98만 원부터), 검색 노출까지. 월 관리비 없이 소스코드 이관·직접 수정. 동탄·수원 거점, 전국 진행.`;
 }
 
 // 색인 게이트 — 실제 렌더 본문(intro·features·searchLine·scenario·priceLine·FAQ)에서 측정.

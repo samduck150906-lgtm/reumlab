@@ -1,6 +1,21 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { SITE } from '@/lib/seo';
 import BusinessFooter from '@/components/BusinessFooter';
+
+/**
+ * 404는 루트 layout의 metadata(홈 title·description·canonical=홈·index,follow)를 그대로
+ * 상속하고 있었다. 그 결과 out/404.html 과 200으로 열리는 out/404/index.html 이
+ * "홈과 동일한 title·description + canonical=홈"을 들고 나가 soft-404·중복으로 보였다.
+ * → 오류 페이지 고유 메타로 덮고 noindex를 명시한다(canonical은 상속하지 않도록 자기 URL 지정).
+ */
+export const metadata: Metadata = {
+  title: { absolute: '페이지를 찾을 수 없습니다 (404) | 름랩 REUMLAB' },
+  description:
+    '요청하신 주소가 바뀌었거나 삭제된 페이지입니다. 름랩의 앱 MVP·Flutter 앱개발·웹사이트 제작·AI 개발 페이지에서 필요한 서비스를 찾아보세요.',
+  alternates: { canonical: `${SITE.domain}/404` },
+  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
+};
 
 export default function NotFound() {
   return (

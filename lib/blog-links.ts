@@ -33,7 +33,7 @@ const TARGETS = {
   flutter: {
     href: '/flutter/',
     label: 'Flutter 앱개발 외주',
-    blurb: '하나의 코드로 iOS·Android 동시 출시 — VAT 포함 290만 원부터, 소스코드 전체 이관',
+    blurb: '하나의 코드로 iOS·Android 동시 출시 — VAT 포함 580만 원부터, 소스코드 전체 이관',
   },
   mvp: {
     href: '/mvp/',
@@ -58,7 +58,7 @@ const TARGETS = {
   web: {
     href: '/web-development/',
     label: '웹사이트·랜딩페이지 제작',
-    blurb: '반응형 웹 49만 원부터 · 월 관리비 없이 소스코드 이관',
+    blurb: '반응형 웹 98만 원부터 · 월 관리비 없이 소스코드 이관',
   },
 } as const satisfies Record<string, ServiceLink>;
 

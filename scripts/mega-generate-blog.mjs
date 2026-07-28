@@ -65,7 +65,7 @@ function generateRichHtmlBody(main, sub, region) {
 <table>
 <thead><tr><th>난이도</th><th>범위</th><th>예상 비용</th><th>기간</th><th>팀 구성</th></tr></thead>
 <tbody>
-<tr><td><strong>입문</strong></td><td>기본 기능 중심<br/>화면 3~5개<br/>DB 단순</td><td>200만~400만 원</td><td>1~2주</td><td>1인 또는 소규모</td></tr>
+<tr><td><strong>입문</strong></td><td>기본 기능 중심<br/>화면 3~5개<br/>DB 단순</td><td>200만~400만 원</td><td>1~2주</td><td>소규모</td></tr>
 <tr><td><strong>초급</strong></td><td>기본 기능 완성<br/>화면 5~10개<br/>간단한 DB</td><td>400만~700만 원</td><td>2~3주</td><td>2~3명</td></tr>
 <tr><td><strong>중급</strong></td><td>추가 기능 포함<br/>화면 10~20개<br/>복잡한 DB<br/>관리자 기능</td><td>700만~1,500만 원</td><td>3~4주</td><td>3~5명</td></tr>
 <tr><td><strong>고급</strong></td><td>고도화 기능<br/>실시간 처리<br/>AI/ML 연동<br/>국제화 지원</td><td>1,500만~3,000만 원</td><td>4주~3개월</td><td>5명 이상</td></tr>

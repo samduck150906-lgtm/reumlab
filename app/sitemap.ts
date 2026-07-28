@@ -66,6 +66,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.78,
   });
 
+  // 법적 고지 페이지 — public/{privacy,terms,refund}/index.html 로 서빙되는 정적 페이지.
+  // Next 라우트가 아니라 사이트맵에서 누락돼 있었다. 색인 자체보다 사업자·환불·개인정보
+  // 처리 주체가 공개돼 있다는 신뢰(E-E-A-T) 신호가 크롤러·생성형 검색에 닿게 한다.
+  const legalMod = gitLastModified('public/privacy/index.html');
+  for (const slug of ['privacy', 'terms', 'refund']) {
+    out.push({
+      url: `${SITE.domain}/${slug}/`,
+      lastModified: legalMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    });
+  }
+
   for (const b of BLOG_POSTS) {
     if (!blogShouldIndex(b.slug)) continue; // 얇은·중복 글은 사이트맵 제외
     out.push({

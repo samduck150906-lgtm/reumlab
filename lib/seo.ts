@@ -63,7 +63,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   '': {
     title: '름랩 REUMLAB | Flutter 앱개발, 랜딩페이지 제작, MVP 외주개발 — 동탄·수원 개발 스튜디오',
     description:
-      '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 49만 원부터, 앱 290만 원부터(VAT 포함 정액).',
+      '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 98만 원부터, 앱 580만 원부터(VAT 포함 정액).',
     keywords: [
       '외주개발',
       '앱개발 외주',
@@ -92,7 +92,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
 
   // ─── 서비스별 페이지 (AI 단어 제거) ───
   웹개발: {
-    title: '웹사이트 제작 외주 | 반응형 웹 49만원부터 정액 — 름랩 REUMLAB',
+    title: '웹사이트 제작 외주 | 반응형 웹 98만원부터 정액 — 름랩 REUMLAB',
     description:
       '기업용 웹사이트, 고성능 랜딩페이지 제작. 최신 기술 스택 기반의 반응형 웹 개발을 제공합니다.',
     keywords: [
@@ -114,7 +114,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   앱개발: {
-    title: '앱개발 외주 | Flutter iOS·안드로이드 MVP 290만원부터 — 름랩',
+    title: '앱개발 외주 | Flutter iOS·안드로이드 MVP 580만원부터 — 름랩',
     description:
       'Flutter로 iOS·안드로이드 앱을 한 번에 만듭니다. 기획서가 없어도 꼭 필요한 기능 한두 개면 상담을 시작할 수 있고, 완성 후 소스코드를 넘겨드립니다.',
     keywords: [
@@ -213,7 +213,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'app-development': {
     title: 'App Development Outsourcing Korea | Flutter MVP | REUMLAB',
     description:
-      'Flutter app development studio in Hwaseong (Dongtan), Korea. iOS + Android in one codebase. MVP in ~21 days. Full source code handover + 1:1 operation training. From ₩2,900,000 VAT incl.',
+      'Flutter app development studio in Korea. iOS + Android in one codebase, MVP in ~21 days, full source code handover. From ₩5,800,000 VAT incl.',
     keywords: [
       '앱개발 외주',
       'Flutter 앱개발',
@@ -230,14 +230,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['app development outsourcing', 'Flutter MVP Korea', '앱개발 외주'],
     intent: '영문 검색/광고',
     funnel: '전환',
-    serviceDesc: '름랩은 Flutter로 iOS·Android 앱을 한 번에 만듭니다. 앱 라이트 MVP는 290만 원부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원·약 21일, 소스코드 전체 이관. 구글 광고·영문 검색으로 유입된 고객도 동일한 조건으로 상담합니다.',
+    serviceDesc: '름랩은 Flutter로 iOS·Android 앱을 한 번에 만듭니다. 앱 라이트 MVP는 580만 원부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원·약 21일, 소스코드 전체 이관. 구글 광고·영문 검색으로 유입된 고객도 동일한 조건으로 상담합니다.',
     canonical: 'https://reumlab.com/app-development/',
   },
 
   'web-development': {
     title: 'Web Development & Landing Page Korea | REUMLAB',
     description:
-      'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩490,000 VAT incl. Hwaseong (Dongtan) studio.',
+      'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩980,000 VAT incl. Hwaseong (Dongtan) studio.',
     keywords: [
       '홈페이지 제작',
       '랜딩페이지 제작',
@@ -254,14 +254,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['landing page Korea', 'website development Korea', '랜딩페이지 제작'],
     intent: '영문 검색/광고',
     funnel: '전환',
-    serviceDesc: '름랩 웹은 원페이지 랜딩 웹 스타터 49만 원부터 시작하고, 멀티페이지+CMS+블로그를 갖춘 웹 비즈니스 패키지는 VAT 포함 190만 원, 약 14일입니다. 맞춤 제작, 소스코드 전체 이관, 월 관리비 없음. SEO 기본기(메타·구조화 데이터·사이트맵)가 기본 포함됩니다.',
+    serviceDesc: '름랩 웹은 원페이지 랜딩 웹 스타터 98만 원부터 시작하고, 멀티페이지+CMS+블로그를 갖춘 웹 비즈니스 패키지는 VAT 포함 380만 원, 약 14일입니다. 맞춤 제작, 소스코드 전체 이관, 월 관리비 없음. SEO 기본기(메타·구조화 데이터·사이트맵)가 기본 포함됩니다.',
     canonical: 'https://reumlab.com/web-development/',
   },
 
   'mvp-development': {
     title: 'MVP Development Korea | 3-Week Launch | REUMLAB',
     description:
-      'Startup MVP development in Korea. Flutter cross-platform, 3-week turnaround, full source handover. Validate your idea before scaling. From ₩2,900,000.',
+      'Startup MVP development in Korea. Flutter cross-platform, 3-week turnaround, full source handover. Validate your idea before scaling. From ₩5,800,000.',
     keywords: [
       'MVP 개발',
       'MVP 외주',
@@ -277,14 +277,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['MVP 개발 비용', '스타트업 MVP', 'MVP 외주', 'MVP 개발 견적'],
     intent: '업체/비용',
     funnel: '전환',
-    serviceDesc: '검증에 필요한 최소 기능만 빠르게 만듭니다. Flutter로 iOS·Android 동시 출시, 소스코드 전체 이관, 직접 운영 교육 포함. 앱 라이트 MVP는 VAT 포함 290만 원·약 14일, 회원·결제까지 갖춘 앱 스탠다드는 490만 원·약 21일.',
+    serviceDesc: '검증에 필요한 최소 기능만 빠르게 만듭니다. Flutter로 iOS·Android 동시 출시, 소스코드 전체 이관, 직접 운영 교육 포함. 앱 라이트 MVP는 VAT 포함 580만 원·약 14일, 회원·결제까지 갖춘 앱 스탠다드는 980만 원·약 21일.',
     sections: [
       { h2: 'What to build first — and what to cut', body: 'A good MVP includes only what is needed to test your core hypothesis (investment, sales, or user validation). We keep the essential login/payment/admin flows and defer edge cases, extra options, and “nice to have” features to after validation. Trying to build everything at once multiplies cost and delays launch.' },
-      { h2: 'MVP cost and timeline', body: 'Scope decides price. A lean web MVP maps to our Web Business package, an app MVP to App Lite (₩2,900,000, ~14 days) or App Standard with members/payments/admin (₩4,900,000, ~21 days). AI or complex settlement moves into the App AI (₩6,900,000) tier. All prices are fixed and VAT-included, disclosed before we start — no hidden fees.' },
+      { h2: 'MVP cost and timeline', body: 'Scope decides price. A lean web MVP maps to our Web Business package, an app MVP to App Lite (₩5,800,000, ~14 days) or App Standard with members/payments/admin (₩9,800,000, ~21 days). AI or complex settlement moves into the App AI (₩13,800,000) tier. All prices are fixed and VAT-included, disclosed before we start — no hidden fees.' },
       { h2: 'How ownership is handed over', body: 'On delivery we transfer the full source code, Git repository, deployment rights, and store accounts to your name. You can move to another team or run it yourself — never locked to one vendor. We also give 1:1 training so a non-developer founder can make simple edits directly, and the codebase is structured to extend on the same base after validation.' },
     ],
     faqs: [
-      { q: 'How much does MVP development cost in Korea?', a: 'Our lean MVP starts from ₩2,900,000 (VAT included), scaling to ₩4,900,000 for an app with members, payments, and an admin panel. Final pricing depends on scope, which we fix and disclose before starting.' },
+      { q: 'How much does MVP development cost in Korea?', a: 'Our lean MVP starts from ₩5,800,000 (VAT included), scaling to ₩9,800,000 for an app with members, payments, and an admin panel. Final pricing depends on scope, which we fix and disclose before starting.' },
       { q: 'How long does it take to launch an MVP?', a: 'Typically about 14–30 days depending on scope. App Lite is around 14 days, App Standard around 21 days. If you have an investor or demo-day deadline, we scope the build to fit it.' },
       { q: 'Do I receive the full source code?', a: 'Yes — always. Full source code, repository, deployment rights, and store accounts are transferred to you, plus 1:1 operation training. No lock-in.' },
     ],
@@ -309,14 +309,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주'],
     intent: '업체/정보',
     funnel: '전환',
-    serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. 앱 라이트 MVP 290만 원부터, 회원·결제까지 갖춘 앱 스탠다드 490만 원.',
+    serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. 앱 라이트 MVP 580만 원부터, 회원·결제까지 갖춘 앱 스탠다드 980만 원.',
     sections: [
       { h2: 'Why Flutter is cheaper to build and maintain', body: 'Building iOS and Android natively means two codebases, two teams, and two maintenance streams. Flutter uses a single codebase for both platforms, cutting development cost by roughly 50–70% and halving long-term maintenance — every fix and update ships to both platforms at once.' },
       { h2: 'When Flutter fits — and when native is better', body: 'Flutter is ideal for commerce, booking, community, and subscription apps, and for MVPs that need to launch on both platforms fast. For high-end 3D games, real-time video, or AR that depend on native performance, we recommend native and say so up front. We assess fit before quoting.' },
-      { h2: 'Cost, delivery, and handover', body: 'A Flutter app MVP starts at ₩2,900,000 (App Lite, ~14 days) and ₩4,900,000 for App Standard with members, payments, and admin (~21 days) — fixed, VAT-included pricing. We handle App Store and Play Store submission, then transfer the full source code, repository, and deployment rights to you, with 1:1 operation training.' },
+      { h2: 'Cost, delivery, and handover', body: 'A Flutter app MVP starts at ₩5,800,000 (App Lite, ~14 days) and ₩9,800,000 for App Standard with members, payments, and admin (~21 days) — fixed, VAT-included pricing. We handle App Store and Play Store submission, then transfer the full source code, repository, and deployment rights to you, with 1:1 operation training.' },
     ],
     faqs: [
-      { q: 'How much does Flutter app development cost?', a: 'Our Flutter app MVP starts from ₩2,900,000 (App Lite, VAT included), and ₩4,900,000 for App Standard with members, payments, and an admin panel. Scope is fixed and disclosed before we start.' },
+      { q: 'How much does Flutter app development cost?', a: 'Our Flutter app MVP starts from ₩5,800,000 (App Lite, VAT included), and ₩9,800,000 for App Standard with members, payments, and an admin panel. Scope is fixed and disclosed before we start.' },
       { q: 'Does Flutter build both iOS and Android?', a: 'Yes — one codebase produces both iOS and Android apps, released together. We also handle store registration and transfer the accounts and rights to you.' },
       { q: 'Is Flutter quality lower than native?', a: 'For MVPs and most business apps, users notice essentially no difference. Unless you need high-end 3D or real-time video, Flutter is faster to launch and cheaper to maintain — usually the more practical choice.' },
     ],
@@ -327,7 +327,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   mvp: {
     title: 'MVP 개발 외주 | 지역별 스타트업 MVP — 름랩 REUMLAB',
     description:
-      '검증에 필요한 핵심 기능부터 빠르게 출시하는 MVP 개발. Flutter 크로스플랫폼, 14~30일, VAT 포함 290만 원부터. 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
+      '검증에 필요한 핵심 기능부터 빠르게 출시하는 MVP 개발. Flutter 크로스플랫폼, 14~30일, VAT 포함 580만 원부터. 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: ['MVP 개발', 'MVP 외주', '스타트업 MVP', '최소 기능 제품', 'Lean MVP', '앱개발 외주'],
     ogTitle: 'MVP 개발 외주 | 핵심 기능부터 빠르게 — 름랩',
     ogDescription: '시장 검증에 필요한 핵심 기능부터 Lean MVP로. 소스코드 전체 이관 + 직접 운영 교육.',
@@ -337,22 +337,22 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     intent: '정보/전환',
     funnel: '중간',
     serviceDesc:
-      '시장 검증에 필요한 핵심 기능부터 만드는 Lean MVP. 화면 흐름 설계 → 중간 확인 → 소스코드 이관 순서로 진행합니다. VAT 포함 290만 원부터, 약 14~30일. 전국 어디서나 같은 패키지로 진행합니다.',
+      '시장 검증에 필요한 핵심 기능부터 만드는 Lean MVP. 화면 흐름 설계 → 중간 확인 → 소스코드 이관 순서로 진행합니다. VAT 포함 580만 원부터, 약 14~30일. 전국 어디서나 같은 패키지로 진행합니다.',
     whyPoints: [
       '검증에 필요한 핵심 기능만 추려 14~30일에 출시 — 예산·실패 리스크 최소화',
-      'VAT 포함 정액(290만 원부터)으로 가격 먼저 공개, 숨은 비용 없음',
+      'VAT 포함 정액(580만 원부터)으로 가격 먼저 공개, 숨은 비용 없음',
       '소스코드·저장소·배포 권한 전체 이관 — 검증 후 같은 코드 위에서 확장',
       '비개발자 대표도 직접 운영하도록 AI 운영 1:1 교육 포함',
     ],
     sections: [
-      { h2: 'MVP 개발 비용과 기간', body: 'MVP 비용은 기능 범위·화면 수·관리자/연동 여부로 정해집니다. 름랩 Lean MVP는 VAT 포함 290만 원부터, 약 14~30일입니다. 웹 중심 MVP는 웹 비즈니스(190만 원·약 14일), 앱 MVP는 앱 라이트 290만 원(약 14일)·앱 스탠다드(490만 원·약 21일), AI·고도화가 필요하면 앱 AI 690만 원~앱 프리미엄 990만 원(약 30~45일)으로 매핑됩니다.' },
+      { h2: 'MVP 개발 비용과 기간', body: 'MVP 비용은 기능 범위·화면 수·관리자/연동 여부로 정해집니다. 름랩 Lean MVP는 VAT 포함 580만 원부터, 약 14~30일입니다. 웹 중심 MVP는 웹 비즈니스(380만 원·약 14일), 앱 MVP는 앱 라이트 580만 원(약 14일)·앱 스탠다드(980만 원·약 21일), AI·고도화가 필요하면 앱 AI 1,380만 원~앱 프리미엄 1,980만 원(약 30~45일)으로 매핑됩니다.' },
       { h2: 'MVP에 넣을 것 vs 빼야 할 것', body: '검증 목표(투자·영업·사용자 테스트)에 직접 필요한 기능만 넣습니다. 회원·결제·관리자 중 검증에 꼭 필요한 흐름만 남기고, 부가 기능·예외 처리·확장 옵션은 검증 후로 미룹니다. 처음부터 다 넣으면 비용과 기간이 두세 배로 늘고 출시가 늦어집니다.' },
       { h2: '진행 프로세스', body: '핵심 기능 범위 설계 → 화면·흐름 확정 → 개발 → 중간 확인으로 방향 조정 → 소스코드·문서 이관 → 직접 운영 교육 순서로 진행합니다. 중간 확인 단계가 “생각과 다른 결과물” 리스크를 줄입니다.' },
       { h2: '이런 경우 적합 / 부적합', body: '적합: 아이디어를 빠르게 시장에서 검증하려는 초기 창업자·스타트업, 투자·데모데이용 데모가 필요한 팀. 부적합: 처음부터 대규모 트래픽·복잡한 정산·고성능 그래픽이 핵심인 서비스는 MVP보다 본개발 설계가 먼저입니다.' },
     ],
     faqs: [
       { q: 'MVP는 일반 앱개발과 무엇이 다른가요?', a: '모든 기능을 한 번에 만들지 않고 검증에 꼭 필요한 핵심부터 빠르게 출시하는 방식입니다. 초기 비용과 실패 리스크를 줄이고, 반응을 본 뒤 같은 코드 위에서 확장합니다.' },
-      { q: 'MVP 개발 비용은 얼마인가요?', a: '기능 범위가 가격을 정합니다. 름랩 Lean MVP는 VAT 포함 290만 원부터, 약 14~30일입니다. 상담에서 검증 목표에 맞춰 범위와 패키지를 함께 정합니다.' },
+      { q: 'MVP 개발 비용은 얼마인가요?', a: '기능 범위가 가격을 정합니다. 름랩 Lean MVP는 VAT 포함 580만 원부터, 약 14~30일입니다. 상담에서 검증 목표에 맞춰 범위와 패키지를 함께 정합니다.' },
       { q: '검증 후 확장은 어떻게 하나요?', a: '소스코드와 저장소를 통째로 이관하므로 같은 코드 위에서 기능을 단계적으로 추가합니다. 내부 개발팀이 생기면 그대로 이어받을 수 있습니다.' },
     ],
     canonical: 'https://reumlab.com/mvp/',
@@ -395,7 +395,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   flutter: {
     title: 'Flutter 앱개발 외주 | iOS·안드로이드 동시 — 름랩 REUMLAB',
     description:
-      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 290만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
+      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 580만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: ['Flutter 앱개발', 'Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주', 'iOS 안드로이드 앱'],
     ogTitle: 'Flutter 앱개발 외주 | 하나의 코드로 두 플랫폼 — 름랩',
     ogDescription: '하나의 코드로 iOS·Android 동시 제작. MVP 단계 시간·비용을 줄이는 Flutter 앱개발.',
@@ -405,23 +405,23 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     intent: '정보/전환',
     funnel: '중간',
     serviceDesc:
-      'Flutter 크로스플랫폼으로 iOS·Android를 한 번에 만듭니다. 네이티브 2벌 대비 비용 50~70% 절감, 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 포함 290만 원부터.',
+      'Flutter 크로스플랫폼으로 iOS·Android를 한 번에 만듭니다. 네이티브 2벌 대비 비용 50~70% 절감, 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 포함 580만 원부터.',
     whyPoints: [
       '하나의 코드로 iOS·Android 동시 출시 — 네이티브 2벌 대비 비용 50~70% 절감',
       '유지보수도 구조적으로 절반 — 출시 후 운영비까지 줄임',
-      'VAT 포함 290만 원부터 정액, 소스코드 전체 이관',
+      'VAT 포함 580만 원부터 정액, 소스코드 전체 이관',
       'MVP·중소 규모 서비스 앱에 최적, 직접 수정 교육 포함',
     ],
     sections: [
       { h2: 'Flutter가 비용을 줄이는 이유', body: 'iOS·Android를 따로 만들면 인력·기간·유지보수가 두 벌 듭니다. Flutter는 하나의 코드베이스로 두 플랫폼을 함께 만들어 개발 비용을 50~70% 줄이고, 이후 수정·업데이트도 한 번에 반영돼 유지보수가 구조적으로 절반입니다.' },
       { h2: 'Flutter가 맞는 경우 / 아닌 경우', body: '맞는 경우: 커머스·예약·커뮤니티·구독처럼 일반 비즈니스 앱, iOS·Android 동시 출시가 필요한 MVP. 아닌 경우: 고사양 3D 게임, 실시간 영상 처리처럼 플랫폼 네이티브 성능이 핵심인 영역은 네이티브를 검토합니다. 상담에서 적합성을 먼저 판단합니다.' },
       { h2: '진행 방식과 산출물', body: '화면·흐름 확정 → 핵심 기능 중심 개발 → 중간 확인 → 스토어 등록 → 소스코드·저장소·배포 권한 이관 순으로 진행합니다. 산출물은 iOS·Android 앱, 관리자/연동 기능, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다.' },
-      { h2: '비용·기간', body: 'Flutter 앱 MVP는 핵심 화면 중심 앱 라이트 290만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원(약 21일)입니다(VAT 포함 정액). 결제·복잡한 관리자·외부 API·서버 비용·스토어 계정은 범위에 따라 별도 안내되며, 숨은 비용 없이 상담 단계에서 미리 정합니다.' },
+      { h2: '비용·기간', body: 'Flutter 앱 MVP는 핵심 화면 중심 앱 라이트 580만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원(약 21일)입니다(VAT 포함 정액). 결제·복잡한 관리자·외부 API·서버 비용·스토어 계정은 범위에 따라 별도 안내되며, 숨은 비용 없이 상담 단계에서 미리 정합니다.' },
     ],
     faqs: [
       { q: 'Flutter로 만들면 네이티브보다 품질이 떨어지나요?', a: 'MVP·중소 규모 서비스에서는 체감 차이가 거의 없습니다. 고사양 게임·실시간 영상이 아니라면 출시 속도와 유지보수 비용에서 오히려 유리합니다.' },
       { q: 'iOS와 Android 둘 다 나오나요?', a: '네. 하나의 코드로 두 플랫폼을 동시에 만들어 함께 출시합니다. 스토어 등록도 대행하고 계정·권한을 이관합니다.' },
-      { q: 'Flutter 앱개발 비용은 얼마인가요?', a: '핵심 화면 중심 앱 라이트 MVP는 VAT 포함 290만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원(약 21일)입니다. 기능 범위에 따라 견적이 정해지며 상담에서 미리 안내합니다.' },
+      { q: 'Flutter 앱개발 비용은 얼마인가요?', a: '핵심 화면 중심 앱 라이트 MVP는 VAT 포함 580만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원(약 21일)입니다. 기능 범위에 따라 견적이 정해지며 상담에서 미리 안내합니다.' },
     ],
     canonical: 'https://reumlab.com/flutter/',
   },
@@ -582,14 +582,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { h2: '만드는 기능 범위', body: '회원가입·로그인(학생/학부모 계정 분리 가능), 수강신청·장바구니·결제, 쿠폰·할인·형제 할인, 환불·부분환불 처리, 수강권 사용기간·잔여횟수 관리, 공지·상담문의, 그리고 원장·강사가 쓰는 관리자 페이지(주문·수강생·매출·정산·상품 관리)까지 포함합니다. 처음부터 전부 넣기보다 지금 매출이 나는 상품부터 열고 단계적으로 확장합니다.' },
       { h2: '결제·환불·정산', body: '토스페이먼츠 등 국내 PG를 연동해 카드·간편결제를 받고, 학원 환불 규정(수강 개시 전/후, 일할 계산)을 결제·환불 로직에 반영합니다. 매출·환불·정산 내역은 관리자에서 집계해 엑셀로 내려받을 수 있습니다.' },
       { h2: '기존 출결·ERP와의 연동', body: '이미 쓰는 출결·문자·학원관리(ERP) 도구가 있으면 연동 가능 여부를 먼저 확인합니다. API가 열려 있으면 회원·결제 데이터를 연동하고, 없으면 엑셀·CSV로 주고받는 방식으로 시작해 온라인 판매만 먼저 여는 것도 가능합니다.' },
-      { h2: '진행 방식과 산출물', body: '판매 상품·규칙 정리 → 화면·결제 흐름 설계 → 개발 → 결제 테스트 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 산출물은 학원 쇼핑몰(모바일 반응형), 관리자 페이지, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다. 가격은 웹 라인 정액(스타터 49만 원부터, 회원·결제·관리자 범위가 커지면 비즈니스·프리미엄으로 확장)을 기준으로 기능 범위에 맞춰 먼저 공개합니다.' },
+      { h2: '진행 방식과 산출물', body: '판매 상품·규칙 정리 → 화면·결제 흐름 설계 → 개발 → 결제 테스트 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 산출물은 학원 쇼핑몰(모바일 반응형), 관리자 페이지, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다. 가격은 웹 라인 정액(스타터 98만 원부터, 회원·결제·관리자 범위가 커지면 비즈니스·프리미엄으로 확장)을 기준으로 기능 범위에 맞춰 먼저 공개합니다.' },
     ],
     faqs: [
       { q: '카페24·아임웹으로도 학원 쇼핑몰을 만들 수 있지 않나요?', a: '간단한 교재 판매 정도는 가능하지만, 수강기간·정원·차수·재수강 할인·학생/학부모 계정처럼 학원 고유 규칙은 템플릿에서 막히는 경우가 많습니다. 름랩은 이 규칙을 코드로 직접 구현하고 소스코드를 이관해, 이후 원장님이 직접 운영할 수 있게 만듭니다.' },
       { q: '수강권 기간·잔여 횟수 관리도 되나요?', a: '네. 월 수강권의 사용 기간, 횟수제 수강권의 잔여 횟수, 만료·연장·정지를 관리자에서 다루도록 설계합니다. 학생별 수강 현황도 한 화면에서 확인할 수 있습니다.' },
       { q: '결제와 환불은 어떻게 처리되나요?', a: '토스페이먼츠 등 국내 결제를 연동해 카드·간편결제를 받고, 학원 환불 규정(개강 전/후, 일할 계산)을 환불 로직에 반영합니다. 매출·환불·정산은 관리자에서 집계·엑셀 다운로드가 됩니다.' },
       { q: '학부모와 학생 계정을 나눌 수 있나요?', a: '가능합니다. 결제·정보 관리는 학부모 계정이, 수강·학습은 학생 계정이 쓰도록 역할을 나눠 설계할 수 있습니다. 학원 운영 방식에 맞춰 계정 구조를 정합니다.' },
-      { q: '제작 비용과 기간은 어느 정도인가요?', a: '파는 상품 종류, 결제·환불 규칙, 관리자 기능 범위로 정해집니다. 웹 라인 정액(스타터 49만 원부터)을 기준으로, 회원·결제·수강관리가 들어가면 비즈니스·프리미엄 범위로 산정합니다. 상담에서 판매 상품과 규칙을 듣고 화면 단위로 먼저 공개합니다.' },
+      { q: '제작 비용과 기간은 어느 정도인가요?', a: '파는 상품 종류, 결제·환불 규칙, 관리자 기능 범위로 정해집니다. 웹 라인 정액(스타터 98만 원부터)을 기준으로, 회원·결제·수강관리가 들어가면 비즈니스·프리미엄 범위로 산정합니다. 상담에서 판매 상품과 규칙을 듣고 화면 단위로 먼저 공개합니다.' },
       { q: '완성 후 상품·가격을 직접 바꿀 수 있나요?', a: '네. 소스코드를 통째로 이관하고, 상품·가격·공지·배너는 관리자에서 직접 수정하도록 1:1 운영 교육을 제공합니다. 큰 기능 추가가 필요할 때만 추가 개발로 진행합니다.' },
     ],
     canonical: 'https://reumlab.com/academy-shopping-mall/',
@@ -629,14 +629,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       { h2: '문의 전환 장치', body: '전화 바로걸기, 카카오톡 채널·오픈채팅 연결, 이름·연락처 중심의 짧은 문의 폼(과한 입력 요구 없이), 상담 가능 시간 안내를 넣습니다. 문의가 들어오면 담당자에게 이메일·알림으로 전달되도록 연결할 수 있습니다.' },
       { h2: '광고 성과 추적', body: 'GA4, 메타·네이버 전환 픽셀, UTM 파라미터를 붙여 어떤 광고 소재·매체에서 문의가 나오는지 측정합니다. 전화 클릭·카톡 클릭·폼 제출을 각각 전환 이벤트로 잡아, 광고비 대비 문의 성과를 숫자로 확인할 수 있게 합니다.' },
       { h2: '여러 매물·캠페인 운영', body: '분양 현장·매물이 여러 개면 같은 틀로 페이지를 복제해 매물별 랜딩을 빠르게 만들 수 있습니다. 광고 소재별로 첫 화면 문구를 다르게 한 전용 랜딩을 나눠 A/B로 성과를 비교하는 구성도 가능합니다.' },
-      { h2: '진행 방식과 산출물', body: '매물·타깃·문의 방식 정리 → 첫 화면·전환 동선 설계 → 제작 → 광고 추적 세팅 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 산출물은 부동산 랜딩페이지(모바일 반응형), 광고 추적 세팅, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다. 가격은 웹 라인 정액(스타터 49만 원부터, 광고 추적·전환 세팅 포함 시 웹+마케팅 라인)을 기준으로 먼저 공개합니다.' },
+      { h2: '진행 방식과 산출물', body: '매물·타깃·문의 방식 정리 → 첫 화면·전환 동선 설계 → 제작 → 광고 추적 세팅 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 산출물은 부동산 랜딩페이지(모바일 반응형), 광고 추적 세팅, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다. 가격은 웹 라인 정액(스타터 98만 원부터, 광고 추적·전환 세팅 포함 시 웹+마케팅 라인)을 기준으로 먼저 공개합니다.' },
     ],
     faqs: [
       { q: '분양 광고용으로 빠르게 만들 수 있나요?', a: '네. 한 페이지 전환형 구조라 회사 홈페이지보다 빠르게 만들 수 있습니다. 매물 자료(평면도·이미지·입지 정보)와 문의 받을 방식(전화·카톡·폼)만 정리해 주시면 첫 화면 전환 동선부터 설계해 진행합니다.' },
       { q: '전화·카카오·문의 폼을 다 넣을 수 있나요?', a: '가능합니다. 전화 바로걸기, 카카오톡 채널·오픈채팅 연결, 짧은 문의 폼을 함께 넣고, 모바일에서는 화면 하단에 고정 문의 버튼을 둬 어디서나 문의할 수 있게 합니다.' },
       { q: '어떤 광고가 문의를 만드는지 알 수 있나요?', a: 'GA4와 메타·네이버 전환 픽셀, UTM 추적을 붙여 매체·소재별 성과를 측정합니다. 전화 클릭·카톡 클릭·폼 제출을 전환 이벤트로 잡아 광고비 대비 문의 수를 숫자로 확인할 수 있습니다.' },
       { q: '매물이 여러 개인데 각각 페이지가 필요해요.', a: '같은 틀을 복제해 매물별 랜딩을 빠르게 만들 수 있습니다. 광고 소재별로 첫 화면을 달리한 전용 랜딩을 나눠 A/B 비교하는 것도 가능합니다.' },
-      { q: '제작 비용은 얼마인가요?', a: '페이지 구성(매물 수·갤러리·지도·폼)과 광고 추적 범위로 정해집니다. 웹 라인 정액(스타터 49만 원부터)을 기준으로, 광고 추적·전환 세팅이 들어가면 웹+마케팅 라인으로 산정합니다. 상담에서 매물과 목표를 듣고 먼저 공개합니다.' },
+      { q: '제작 비용은 얼마인가요?', a: '페이지 구성(매물 수·갤러리·지도·폼)과 광고 추적 범위로 정해집니다. 웹 라인 정액(스타터 98만 원부터)을 기준으로, 광고 추적·전환 세팅이 들어가면 웹+마케팅 라인으로 산정합니다. 상담에서 매물과 목표를 듣고 먼저 공개합니다.' },
       { q: '완성 후 매물·문구를 직접 바꿀 수 있나요?', a: '네. 소스코드를 이관하고, 매물 정보·이미지·문구는 직접 수정하도록 1:1 교육을 제공합니다. 새 분양·캠페인마다 빠르게 교체해 쓸 수 있습니다.' },
     ],
     canonical: 'https://reumlab.com/realestate-landing/',
@@ -819,7 +819,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'app-agency': {
     title: '앱개발 업체 | 소스코드 주는 앱 제작 외주 — 름랩',
     description:
-      '앱개발 업체를 찾는 대표님께 — Flutter로 iOS·Android를 한 번에 만들고, 완성 후 소스코드·저장소·배포 권한을 통째로 넘깁니다. VAT 포함 290만 원부터 정액, 숨은 비용 없음. 동탄·수원 거점, 전국 어디서나 진행.',
+      '앱개발 업체를 찾는 대표님께 — Flutter로 iOS·Android를 한 번에 만들고, 완성 후 소스코드·저장소·배포 권한을 통째로 넘깁니다. VAT 포함 580만 원부터 정액, 숨은 비용 없음. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: [
       '앱개발 업체',
       '앱개발 회사',
@@ -839,20 +839,20 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       '앱개발 업체를 고를 때 가장 중요한 건 "만든 뒤에도 대표님이 통제할 수 있는가"입니다. 름랩은 Flutter로 iOS·Android를 한 번에 만들고, 완성 후 소스코드·GitHub 저장소·배포 권한·스토어 계정을 통째로 이관합니다. 견적과 일정을 먼저 공개하는 VAT 포함 정액이라 숨은 비용이 없고, 비개발자 대표도 간단한 수정은 직접 하도록 1:1 운영 교육을 드립니다.',
     whyPoints: [
       '소스코드·저장소·배포 권한 전체 이관 — 업체에 종속되지 않음',
-      'VAT 포함 정액·선공개 견적 — 추가 비용 협상 없음(290만 원부터)',
+      'VAT 포함 정액·선공개 견적 — 추가 비용 협상 없음(580만 원부터)',
       'Flutter로 iOS·Android 동시 제작 — 비용·기간 절감',
-      '대표가 직접 소통·직접 수정 교육 — 만든 뒤에도 스스로 운영',
+      '기획·개발·배포 단일 창구 + 직접 수정 교육 — 만든 뒤에도 스스로 운영',
     ],
     sections: [
       { h2: '앱개발 업체 고를 때 확인할 것', body: '소스코드와 저장소·배포 권한을 주는지, 견적이 정액인지 시간제인지, 담당자가 계속 소통 가능한지, 유지보수·이관 조건이 계약에 있는지를 먼저 확인하세요. 특히 소스코드를 안 주는 업체는 작은 수정도 계속 그 업체에만 맡겨야 해 종속됩니다. 름랩은 이 네 가지를 모두 계약 단계에서 명시합니다.' },
       { h2: '름랩이 다른 점', body: '많은 외주가 "완성 후 종속"으로 끝납니다. 름랩은 "운영 가능한 상태로 넘김"을 원칙으로, 소스코드·계정·문서를 대표님 명의로 이관하고 직접 수정 교육까지 제공합니다. 다른 개발사로 옮기거나 내부 팀이 이어받는 것도 자유롭습니다.' },
-      { h2: '비용과 기간', body: '앱 라이트 MVP는 VAT 포함 290만 원·약 14일, 회원·결제·관리자까지 갖춘 앱 스탠다드는 490만 원·약 21일입니다. 결제·복잡한 관리자·외부 연동은 범위에 따라 별도로 안내되며, 숨은 비용 없이 상담에서 미리 정합니다.' },
+      { h2: '비용과 기간', body: '앱 라이트 MVP는 VAT 포함 580만 원·약 14일, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원·약 21일입니다. 결제·복잡한 관리자·외부 연동은 범위에 따라 별도로 안내되며, 숨은 비용 없이 상담에서 미리 정합니다.' },
       { h2: '진행 방식', body: '아이디어·핵심 기능 정리 → 화면·흐름 확정 → 개발 → 중간 확인 → 스토어 등록 → 소스코드·권한 이관 → 운영 교육 순으로 진행합니다. 기획서가 없어도 꼭 필요한 기능 한두 가지만 있으면 상담을 시작할 수 있습니다.' },
     ],
     faqs: [
       { q: '앱개발 업체 중 소스코드를 주는 곳이 드물던데요?', a: '름랩은 모든 프로젝트에서 소스코드 전체·저장소·배포 권한·스토어 계정을 대표님 명의로 이관합니다. 계약서에도 소유권과 이관 범위를 명시합니다.' },
-      { q: '앱개발 업체 견적은 어떻게 받나요?', a: '기능 범위를 듣고 VAT 포함 정액으로 선공개합니다. 앱 라이트 290만 원, 앱 스탠다드 490만 원을 기준으로 범위에 맞춰 조정하며, 상담 단계에서 미리 확정합니다.' },
-      { q: '작은 회사인데 대형 업체보다 괜찮을까요?', a: '름랩은 대표가 직접 소통·진행하는 스튜디오라 의사결정이 빠르고, 정액·소스코드 이관으로 리스크가 낮습니다. MVP·중소 규모 서비스에는 오히려 합리적인 선택입니다.' },
+      { q: '앱개발 업체 견적은 어떻게 받나요?', a: '기능 범위를 듣고 VAT 포함 정액으로 선공개합니다. 앱 라이트 580만 원, 앱 스탠다드 980만 원을 기준으로 범위에 맞춰 조정하며, 상담 단계에서 미리 확정합니다.' },
+      { q: '작은 회사인데 대형 업체보다 괜찮을까요?', a: '름랩은 상담·기획·개발·배포가 한 흐름으로 이어지는 스튜디오라 의사결정이 빠르고, 정액·소스코드 이관으로 리스크가 낮습니다. MVP·중소 규모 서비스에는 오히려 합리적인 선택입니다.' },
       { q: '지역이 다른데 진행되나요?', a: '동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로 전국 어디든 같은 조건으로 진행합니다.' },
       { q: '만든 뒤 다른 업체로 옮길 수 있나요?', a: '네. 소스코드·저장소·권한을 통째로 이관하므로 다른 개발사로 옮기거나 직접 운영·유지보수할 수 있습니다. 종속되지 않는 것이 기본 원칙입니다.' },
     ],
@@ -860,9 +860,9 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   'website-agency': {
-    title: '홈페이지 제작 업체 | 검색되는 웹사이트 외주 49만원~ — 름랩',
+    title: '홈페이지 제작 업체 | 검색되는 웹사이트 외주 98만원~ — 름랩',
     description:
-      '홈페이지 제작 업체를 찾는 대표님께 — 검색에 잡히고 문의로 이어지는 반응형 웹사이트를 정액 49만 원부터. 소스코드 전체 이관·월 관리비 없음. SEO 기본기 포함. 동탄·수원 거점, 전국 어디서나 진행.',
+      '홈페이지 제작 업체를 찾는 대표님께 — 검색에 잡히고 문의로 이어지는 반응형 웹사이트를 정액 98만 원부터. 소스코드 전체 이관·월 관리비 없음. SEO 기본기 포함. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: [
       '홈페이지 제작 업체',
       '웹사이트 제작 업체',
@@ -872,30 +872,30 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       '반응형 홈페이지 제작',
     ],
     ogTitle: '홈페이지 제작 업체 — 검색되고 소스코드 주는 곳 | 름랩',
-    ogDescription: '광고비 없이도 검색에 잡히는 홈페이지를 정액 49만 원부터. 소스코드 이관·월 관리비 없음.',
+    ogDescription: '광고비 없이도 검색에 잡히는 홈페이지를 정액 98만 원부터. 소스코드 이관·월 관리비 없음.',
     h1: '홈페이지 제작 업체 찾을 때 — 검색되고 소스코드 주는 곳',
     primary: '홈페이지 제작 업체',
     secondary: ['웹사이트 제작 업체', '웹개발 업체', '소상공인 홈페이지 제작', '홈페이지 외주'],
     intent: '업체 비교/견적',
     funnel: '전환 직전',
     serviceDesc:
-      '홈페이지 제작 업체를 고를 때는 "검색에 잡히는가"와 "만든 뒤 직접 고칠 수 있는가"가 핵심입니다. 름랩은 메타·구조화 데이터·사이트맵 같은 SEO 기본기를 포함해 반응형 웹사이트를 정액 49만 원부터 제작하고, 소스코드를 통째로 이관해 월 관리비 없이 직접 운영하도록 합니다. 문구·이미지 수정은 대표님이 직접 하도록 1:1 교육을 드립니다.',
+      '홈페이지 제작 업체를 고를 때는 "검색에 잡히는가"와 "만든 뒤 직접 고칠 수 있는가"가 핵심입니다. 름랩은 메타·구조화 데이터·사이트맵 같은 SEO 기본기를 포함해 반응형 웹사이트를 정액 98만 원부터 제작하고, 소스코드를 통째로 이관해 월 관리비 없이 직접 운영하도록 합니다. 문구·이미지 수정은 대표님이 직접 하도록 1:1 교육을 드립니다.',
     whyPoints: [
       '검색 노출(메타·JSON-LD·사이트맵) 기본기 포함 — 광고 없이도 유입',
-      '정액 49만 원부터 · 월 관리비 없음 · 소스코드 전체 이관',
+      '정액 98만 원부터 · 월 관리비 없음 · 소스코드 전체 이관',
       '반응형(모바일·태블릿·PC) + 예약·문의 CTA·폼 연동',
       '문구·이미지 직접 수정 1:1 교육 — 업체에 매번 연락할 필요 없음',
     ],
     sections: [
       { h2: '홈페이지 제작 업체 고를 때 확인할 것', body: '검색 노출(SEO) 기본기가 들어가는지, 월 관리비·유지비 구조가 어떤지, 소스코드와 도메인·호스팅을 직접 보유하는지, 완성 후 직접 수정이 가능한지를 확인하세요. 저렴해 보여도 월 사용료·수정비가 누적되면 총비용이 커집니다. 름랩은 정액·월 관리비 없음·소스코드 이관을 기본으로 합니다.' },
       { h2: '검색되는 홈페이지', body: '단순히 예쁜 사이트가 아니라, 상호·지역·서비스 키워드로 검색에 잡혀 문의로 이어지는 것이 목적입니다. 메타 태그·구조화 데이터(JSON-LD)·사이트맵·모바일 반응형·속도 같은 기본기를 제작에 포함해, 광고 없이도 손님이 찾아오도록 구조를 잡습니다.' },
-      { h2: '비용과 패키지', body: '원페이지 랜딩 웹 스타터는 VAT 포함 49만 원부터, 멀티페이지+CMS+블로그를 갖춘 웹 비즈니스 패키지는 190만 원·약 14일입니다. 월 관리비가 없고, 호스팅·도메인은 대표님 명의로 직접 보유하도록 안내합니다.' },
-      { h2: '진행 방식', body: '목적·필요 페이지 정리 → 구조·디자인 확정 → 제작 → 검토 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 소상공인·1인 사업자는 꼭 필요한 페이지부터 작게 시작해 비용을 합리적으로 맞춥니다.' },
+      { h2: '비용과 패키지', body: '원페이지 랜딩 웹 스타터는 VAT 포함 98만 원부터, 멀티페이지+CMS+블로그를 갖춘 웹 비즈니스 패키지는 380만 원·약 14일입니다. 월 관리비가 없고, 호스팅·도메인은 대표님 명의로 직접 보유하도록 안내합니다.' },
+      { h2: '진행 방식', body: '목적·필요 페이지 정리 → 구조·디자인 확정 → 제작 → 검토 → 배포 → 소스코드·운영 교육 순으로 진행합니다. 소상공인·소규모 사업자는 꼭 필요한 페이지부터 작게 시작해 비용을 합리적으로 맞춥니다.' },
     ],
     faqs: [
       { q: '홈페이지 제작 업체인데 월 관리비가 정말 없나요?', a: '네. 름랩 웹은 월 관리비가 없습니다. 소스코드를 이관하고 호스팅·도메인은 대표님 명의로 직접 보유하도록 안내합니다. 문구·이미지 수정은 직접 하실 수 있습니다.' },
       { q: '검색에 잘 나오게 만들어 주나요?', a: '메타·구조화 데이터·사이트맵·모바일 반응형 같은 SEO 기본기를 제작에 포함합니다. 상호·지역·서비스 키워드로 검색에 잡히도록 구조를 잡아 문의로 이어지게 합니다.' },
-      { q: '가장 저렴한 홈페이지는 얼마인가요?', a: '원페이지 랜딩 웹 스타터가 VAT 포함 49만 원부터입니다. 필요한 페이지·기능이 늘면 웹 비즈니스 패키지(190만 원)로 확장하며, 상담에서 범위와 견적을 먼저 공개합니다.' },
+      { q: '가장 저렴한 홈페이지는 얼마인가요?', a: '원페이지 랜딩 웹 스타터가 VAT 포함 98만 원부터입니다. 필요한 페이지·기능이 늘면 웹 비즈니스 패키지(380만 원)로 확장하며, 상담에서 범위와 견적을 먼저 공개합니다.' },
       { q: '만든 뒤 제가 직접 수정할 수 있나요?', a: '네. 소스코드를 이관하고, 연락처·가격·문구·이미지·블로그를 직접 수정·게시하도록 관리 화면과 1:1 운영 교육을 제공합니다.' },
       { q: '지역이 다른데 제작 가능한가요?', a: '동탄·수원 거점이지만 비대면 협업으로 전국 어디든 같은 조건으로 진행합니다. 필요한 경우 일정을 조율해 대면도 가능합니다.' },
     ],

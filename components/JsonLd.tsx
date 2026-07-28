@@ -2,6 +2,24 @@ import type { PageSeo } from '@/lib/seo';
 import type { BlogPost } from '@/lib/blog-posts';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 
+/**
+ * JSON-LD 안전 직렬화.
+ *
+ * JSON.stringify 결과를 dangerouslySetInnerHTML로 그대로 넣으면, 값 안에 `</script>` 나
+ * `<!--` 가 섞이는 순간 script 블록이 조기 종료돼 (1) 구조화 데이터가 통째로 깨지고
+ * (2) 뒤따르는 문자열이 마크업으로 해석된다. 지금 콘텐츠에는 해당 문자열이 없지만,
+ * FAQ·포트폴리오 본문이 계속 늘어나는 구조라 한 번만 섞여도 조용히 깨진다.
+ * → HTML 파서가 반응하는 문자만 유니코드 이스케이프한다(JSON 의미는 그대로).
+ */
+function ldJson(data: unknown): string {
+  return JSON.stringify(data)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+}
+
 /** VAT 포함 정액 패키지 — 화면 표기와 1:1 일치 (price rich result 대응) */
 const PACKAGE_OFFERS = [
   {
@@ -62,7 +80,7 @@ export function OrganizationJsonLd() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
     />
   );
 }
@@ -89,7 +107,7 @@ export function BreadcrumbJsonLd({ slug }: { slug: string }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
     />
   );
 }
@@ -152,7 +170,7 @@ export function ReumHomeGraphJsonLd() {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }
@@ -180,7 +198,7 @@ export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
     inLanguage: 'ko-KR',
   };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }
 
@@ -197,7 +215,7 @@ export function BreadcrumbJsonLdCustom({ seo }: { seo: PageSeo }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
     />
   );
 }
@@ -249,7 +267,7 @@ export function LandingServiceJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }
@@ -263,14 +281,13 @@ export function WebSiteJsonLd() {
     alternateName: SITE.nameEn,
     url: SITE.domain + '/',
     inLanguage: 'ko-KR',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE.domain}/blog?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
+    publisher: { '@id': `${SITE.domain}/#organization` },
+    // SearchAction(`/blog?q=`)을 선언하고 있었으나 정적 export라 사이트 검색 기능 자체가 없다.
+    // 동작하지 않는 기능을 스키마로 주장하면 "화면에 없는 정보를 스키마에 넣는" 위반이라 제거.
+    // 사이트 내 검색을 실제로 붙이면 그때 다시 선언한다.
   };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }
 
@@ -287,7 +304,7 @@ export function FAQPageJsonLd({ items }: { items: FaqItem[] }) {
     })),
   };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }
 
@@ -368,7 +385,7 @@ export function RegionServiceJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }
@@ -423,7 +440,7 @@ export function IndustryServiceJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }
@@ -489,7 +506,7 @@ export function GuideArticleJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
     />
   );
 }
@@ -508,6 +525,6 @@ export function BreadcrumbJsonLdTrail({ items }: { items: Crumb[] }) {
     })),
   };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }

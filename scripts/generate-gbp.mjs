@@ -80,7 +80,7 @@ function buildDescription() {
   const primary = [
     `${biz.company}입니다. Flutter 앱개발·MVP 개발·홈페이지 제작·랜딩페이지·AI 기능 개발을 ${biz.areaServed.slice(0, 4).join('·')} 등 경기 남부와 전국 원격으로 진행합니다.`,
     `름랩은 두 가지가 다릅니다. 첫째, 완성물의 소스코드와 계정 권한을 전부 넘겨 드려 다른 곳으로 옮겨도 외주에 묶이지 않습니다. 둘째, AI 보조 개발과 1:1 운영 교육으로 비전공자 대표님도 납품 후 직접 수정·운영할 수 있습니다.`,
-    `견적은 VAT 포함 정액으로 먼저 공개합니다 — 웹 49만 원부터, 앱 290만 원부터. ${CONTACT_LINE}`,
+    `견적은 VAT 포함 정액으로 먼저 공개합니다 — 웹 98만 원부터, 앱 580만 원부터. ${CONTACT_LINE}`,
   ].join(' ');
   // GBP 사업설명은 750자 제한
   return {
@@ -179,7 +179,7 @@ function bodyForTopic(t, i) {
     const region = regionKo[t.regionKey] || '';
     return v === 0
       ? `${t.keyword} 맡길 곳 찾으신다면 름랩입니다. ${region ? region + ' 포함 ' : ''}전국 원격으로 진행하며, 소스코드·계정 권한을 전부 넘겨 드립니다. VAT 포함 정액 견적. ${CONTACT_LINE}`
-      : `${t.keyword}, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. ${CONTACT_LINE}`;
+      : `${t.keyword}, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. ${CONTACT_LINE}`;
   }
   if (t.kind === 'industry_service') {
     const industry = industryKo[t.industryKey] || '';

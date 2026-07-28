@@ -1,14 +1,27 @@
 <!DOCTYPE html>
+<!--
+  구 URL(/AI서비스개발/) 정리용 스텁.
+
+  주의: Netlify _redirects 의 `/AI서비스개발/ /ai-development/ 301` 규칙은 강제(!)가 아니라,
+  같은 경로에 이 정적 파일이 있으면 파일이 우선 서빙된다(301이 발동하지 않음).
+  따라서 이 스텁이 실제로 크롤러에게 200으로 노출되므로, canonical·refresh 목적지는
+  반드시 _redirects 와 같은 "최종" 목적지(/ai-development/)여야 한다.
+
+  이전에는 /솔루션SaaS/ 를 가리켰는데, 그 URL은 정적 생성 대상에서 제외돼 존재하지 않고
+  다시 /ai-development/ 로 301되는 주소였다 → canonical이 리디렉션되는 URL을 가리키는
+  체인이 만들어져 색인 통합이 흐려졌다.
+-->
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>이동 중… | 름랩</title>
-  <link rel="canonical" href="https://reumlab.com/솔루션SaaS/" />
-  <meta http-equiv="refresh" content="0;url=https://reumlab.com/솔루션SaaS/" />
-  <script>location.replace('https://reumlab.com/솔루션SaaS/');</script>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://reumlab.com/ai-development/" />
+  <meta http-equiv="refresh" content="0;url=https://reumlab.com/ai-development/" />
+  <script>location.replace('https://reumlab.com/ai-development/');</script>
 </head>
 <body>
-  <p>페이지가 <a href="https://reumlab.com/솔루션SaaS/">솔루션 SaaS</a>로 이동했습니다.</p>
+  <p>페이지가 <a href="https://reumlab.com/ai-development/">AI 외주개발</a>로 이동했습니다.</p>
 </body>
 </html>

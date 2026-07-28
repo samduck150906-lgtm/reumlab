@@ -158,7 +158,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               : [
                   '기획·디자인·개발·배포를 한 팀이 이어서 진행',
                   '주로 Flutter·React Native·Next.js로 작업합니다',
-                  '견적·일정을 미리 공개하고, 대표가 직접 소통합니다',
+                  '견적·일정을 미리 공개하고, 진행 내역을 단계별로 공유합니다',
                   `사업자 ${SITE.company} · 대표 ${SITE.representative} · ${SITE.phone}`,
                 ]
             ).map((pt) => (

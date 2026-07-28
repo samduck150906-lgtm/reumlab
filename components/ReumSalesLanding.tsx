@@ -524,6 +524,12 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 Flutter로 iOS·안드로이드를 한 번에. 가격은 먼저 공개하고, 결과물은 소스코드까지 전부 넘깁니다.
                 <strong className="font-semibold text-white"> 게다가 직접 수정·운영하는 법까지 1:1로 알려드립니다.</strong>
               </p>
+              {/* 엔티티 정의문 — index.html 히어로와 동일 문장을 유지한다(README "홈페이지·배포 구조"). */}
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-400 lg:mx-0">
+                <strong className="text-slate-200">름랩(REUMLAB)</strong>은 앱, 웹사이트, 관리자 페이지와 MVP를 기획부터
+                개발·배포까지 구축하는 <strong className="text-slate-200">앱·웹 개발 스튜디오</strong>입니다. 동탄·수원·화성을
+                거점으로 전국 비대면 진행합니다.
+              </p>
               <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
                 <a
                   href={TEL_HREF}
@@ -630,7 +636,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               외주에 묶이지 않습니다.
             </FeatureCard>
             <FeatureCard icon={<IconGraduate className="h-6 w-6" />} title="게다가, 직접 고치는 법까지 1:1로">
-              교육공학 석사 대표가 직접 가르칩니다. 코딩을 몰라도 AI 도구를 보조 개발자처럼 부려 글자·이미지 교체부터
+              교육공학 석사 전공자가 1:1로 진행합니다. 코딩을 몰라도 AI 도구를 보조 개발자처럼 부려 글자·이미지 교체부터
               간단한 수정까지 직접 — 매달 나가던 수정비를 0에 가깝게 줄입니다.
             </FeatureCard>
           </div>
@@ -805,7 +811,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
             dark
             eyebrow="패키지와 금액"
             title="가격을 먼저 공개합니다"
-            description="모두 VAT 포함 정액입니다. 웹은 49만 원부터, 앱은 290만 원부터 — 필요한 깊이만큼 고르세요. 패키지를 넘는 요구는 통화하며 솔직하게 별도 견적을 드립니다."
+            description="모두 VAT 포함 정액입니다. 웹은 98만 원부터, 앱은 580만 원부터 — 필요한 깊이만큼 고르세요. 패키지를 넘는 요구는 통화하며 솔직하게 별도 견적을 드립니다."
           />
 
           <div className="mx-auto mt-6 flex justify-center">
@@ -883,7 +889,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               </span>
               <h2 className="font-display text-xl font-bold tracking-tight text-navy-900 sm:text-2xl">
                 자영업자세요? 검색 노출까지 잡은<br />
-                <span className="text-amber-700">VAT 포함 49만원</span> 홈페이지가 따로 있습니다
+                <span className="text-amber-700">VAT 포함 98만원</span> 홈페이지가 따로 있습니다
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-600 max-w-lg">
                 음식점·카페·학원·뷰티 등 단일 브랜드 자영업자 전용. 네이버·구글 검색 노출 설계 + 모바일 반응형 · 소스코드 전체 이관 · 월 관리비 없음.
