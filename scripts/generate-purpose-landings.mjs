@@ -697,6 +697,34 @@ function jsonLd(land) {
   return `<script type="application/ld+json">\n${ldJson(graph)}\n</script>`;
 }
 
+/**
+ * 거점 지역 링크 블록.
+ *
+ * /mvp/ 는 Next 라우트(app/[slug])가 만든 페이지를 이 생성기가 덮어쓴다. 그런데 Next 쪽
+ * SeoServicePage 에는 거점 지역(동탄·화성·수원) 링크가 있었고 이 랜딩에는 없어서,
+ * 덮어쓰는 순간 "서비스 허브 → 지역 페이지" 역방향 내부링크가 /mvp/ 에서만 끊겼다.
+ * (실측: 다른 4개 서비스 허브는 3개씩, /mvp/ 만 0개)
+ * → 지역 페이지가 존재하는 슬러그에만 같은 링크 블록을 렌더해 링크 구조를 맞춘다.
+ */
+const REGION_SERVICE_SLUGS = new Set(['mvp']);
+const BASE_REGIONS = [
+  { slug: 'dongtan', ko: '동탄' },
+  { slug: 'hwaseong', ko: '화성' },
+  { slug: 'suwon', ko: '수원' },
+];
+function regionLinks(land) {
+  if (!REGION_SERVICE_SLUGS.has(land.slug)) return '';
+  const items = BASE_REGIONS.map(
+    (r) => `        <li><a href="/${land.slug}/${r.slug}/">${r.ko} ${esc(land.navLabel)}</a></li>`,
+  ).join('\n');
+  return `<section class="section"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">LOCAL</span><h2 class="sec-title">거점 지역 ${esc(land.navLabel)}</h2><p class="sec-sub">름랩 사업장이 있는 화성 동탄을 중심으로 한 지역별 안내입니다. 전국 어디든 비대면으로 같은 조건으로 진행합니다.</p></div>
+    <ul class="lx-feat-grid">
+${items}
+    </ul>
+  </div></section>`;
+}
+
 function renderLanding(land) {
   const url = `${DOMAIN}/${land.slug}/`;
   const audience = land.audience.map((x) => `        <li><span class="lx-fit__ck" aria-hidden="true">✓</span>${esc(x)}</li>`).join('\n');
@@ -776,6 +804,7 @@ ${cases}
 ${PROCESS}
 ${pricing}
 ${HANDOVER}
+${regionLinks(land)}
 ${faqSection()}
 ${contactSection(land)}
 </main>

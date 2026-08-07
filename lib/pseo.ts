@@ -9,6 +9,7 @@
  */
 import { SITE } from './seo';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { regionServiceProfile, remoteWorkNote } from './region-service';
 
 export interface RegionDef {
   /** 로마자 슬러그 (URL) */
@@ -27,6 +28,12 @@ export interface RegionDef {
   scene: string;
   /** 지역 특화 FAQ 1개 */
   faq: { q: string; a: string };
+  /**
+   * 실제로 인접한(또는 생활권이 겹치는) 지역 슬러그 3~6개.
+   * 이 값이 있는 지역만 화면에 "인근 지역"으로 표기한다. 없으면 같은 상권 그룹에서 채우되
+   * 헤딩을 "다른 지역"으로 낮춘다 — 붙어 있지도 않은 곳을 인근이라고 쓰지 않기 위해서다.
+   */
+  nearby?: string[];
 }
 
 export interface ServiceDef {
@@ -46,6 +53,31 @@ export interface ServiceDef {
   hubHref: string;
   /** 서비스 특화 FAQ 1개 */
   faq: { q: string; a: string };
+  /**
+   * title 꼬리말 — 서비스마다 다르게 둔다.
+   * 350개 페이지가 전부 `{지역} {서비스} | 소스코드 이관·정액 패키지 — 름랩` 한 패턴이면
+   * 지역명만 바뀌는 도어웨이로 읽힌다. 앞부분(`{지역} {서비스}`)은 기존 타깃 키워드라 유지하고,
+   * 뒤에 그 서비스의 실제 강점을 붙여 검색 의도를 구분한다.
+   */
+  titleTail: string;
+  /** description 앞머리 — 서비스별 검색 의도 한 줄 (지역명 단순 반복 방지) */
+  descLead: string;
+  /**
+   * "무엇을 만드나" 섹션 H2 문장.
+   * `어떤 ${short}을 만들 수 있나요?` 처럼 조립하면 "어떤 앱개발을 만들 수 있나요?" 같은
+   * 어색한 문장이 나오고 조사(을/를)도 어긋난다. 서비스마다 완성된 문장으로 둔다.
+   */
+  buildQuestion: string;
+  /**
+   * 이 서비스로 실제 만들 수 있는 결과물 유형.
+   * 화면의 "어떤 것을 만들 수 있나요?" 블록에 쓰인다. 제공하지 않는 기능은 넣지 않는다.
+   */
+  useCases: { h: string; body: string }[];
+  /**
+   * 같이 보면 좋은 기존 페이지 (내부링크). 실재하는 URL만 — 사이트맵으로 검증됨.
+   * 지역 페이지가 서비스 허브 하나로만 연결돼 고립되던 것을 푼다.
+   */
+  relatedLinks: { href: string; label: string }[];
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -65,6 +97,20 @@ export const SERVICES: ServiceDef[] = [
       '앱스토어·플레이스토어 등록 대행',
       '소스코드 전체 + 실행 문서 + 배포 권한 이관',
       'AI 도구로 직접 수정하는 1:1 운영 교육',
+    ],
+    titleTail: 'iOS·안드로이드 동시 제작 — 름랩',
+    descLead: '앱개발 외주를 맡길 곳을 찾고 계신가요.',
+    buildQuestion: '어떤 앱을 만들 수 있나요?',
+    useCases: [
+      { h: '예약·주문·멤버십 앱', body: '매장·학원·병원처럼 예약과 재방문이 매출로 이어지는 업종은, 예약 접수와 노쇼 방지·멤버십·간편결제를 한 흐름으로 묶는 것부터 만듭니다. 전화·수기 장부로 하던 접수를 앱에서 바로 처리하도록 옮기는 것이 목표입니다.' },
+      { h: '관리자 페이지가 함께 있는 앱', body: '앱만 만들면 운영이 안 됩니다. 주문·회원·재고·정산을 대표님이 직접 보고 고칠 수 있는 관리자 화면을 앱과 함께 설계합니다. 역할별 권한을 나눠 직원이 볼 화면과 대표만 볼 화면을 구분할 수 있습니다.' },
+      { h: '외부 서비스 연동', body: '국내 PG 결제, 문자·알림톡, 지도, 소셜 로그인처럼 실제 운영에 필요한 연동을 붙입니다. 이미 쓰는 시스템이 있으면 API 제공 여부를 먼저 확인하고 가능한 범위와 대안을 정리해 드립니다.' },
+      { h: '스토어 등록과 이관', body: 'App Store·Play Store 심사 제출까지 진행하고, 개발자 계정과 배포 권한을 대표님 명의로 넘깁니다. 소스코드와 저장소를 통째로 이관하므로 다음 수정을 어디에 맡길지는 대표님이 정합니다.' },
+    ],
+    relatedLinks: [
+      { href: '/app-agency/', label: '앱개발 업체 고를 때 확인할 것' },
+      { href: '/admin-page-development/', label: '관리자 페이지 개발' },
+      { href: '/platform/', label: '플랫폼·매칭 서비스 개발' },
     ],
     hubHref: '/app-development',
     faq: {
@@ -86,6 +132,20 @@ export const SERVICES: ServiceDef[] = [
       '소스코드 전체 이관 · 월 관리비 없음',
       'AI 도구로 직접 수정하는 운영 교육',
     ],
+    titleTail: '반응형·검색 노출 설계 — 름랩',
+    descLead: '검색에 잡히고 문의로 이어지는 웹사이트가 필요하신가요.',
+    buildQuestion: '어떤 웹사이트를 만들 수 있나요?',
+    useCases: [
+      { h: '문의로 이어지는 회사·매장 사이트', body: '방문자가 서비스를 이해하고 전화·카카오·폼 중 하나로 문의하게 되는 동선을 먼저 잡습니다. 페이지를 늘리기보다 무엇을 파는 곳인지, 어떻게 연락하는지가 첫 화면에서 보이도록 구성합니다.' },
+      { h: '검색 기본기 포함 제작', body: '메타 태그·구조화 데이터(JSON-LD)·사이트맵·모바일 반응형·페이지 속도를 제작에 포함합니다. 광고를 멈춰도 상호·지역·서비스 키워드로 유입이 남는 구조를 목표로 합니다.' },
+      { h: '직접 고칠 수 있는 구조', body: '문구·이미지·연락처·가격처럼 자주 바뀌는 항목은 대표님이 직접 수정하도록 관리 화면과 1:1 교육을 함께 드립니다. 작은 수정 때문에 매번 업체에 연락할 필요가 없습니다.' },
+      { h: '기존 사이트 이전·리뉴얼', body: '카페24·워드프레스·노코드에서 옮기는 경우 기존 콘텐츠와 유입 경로를 살려 이전하고, URL이 바뀌는 페이지는 301 리다이렉트를 설계해 검색 순위 손실을 줄입니다.' },
+    ],
+    relatedLinks: [
+      { href: '/website-agency/', label: '홈페이지 제작 업체 고를 때' },
+      { href: '/soho/', label: '소상공인 홈페이지 제작' },
+      { href: '/renewal/', label: '웹사이트 리뉴얼' },
+    ],
     hubHref: '/web-development',
     faq: {
       q: '웹사이트 제작 후에 월 관리비가 드나요?',
@@ -105,6 +165,20 @@ export const SERVICES: ServiceDef[] = [
       '중간 확인 단계로 방향 조정',
       '소스코드 전체 이관 · 확장 가능한 구조',
       '직접 운영 교육 포함',
+    ],
+    titleTail: '핵심 기능부터 빠르게 검증 — 름랩',
+    descLead: '아이디어를 먼저 시장에서 확인해 보고 싶으신가요.',
+    buildQuestion: 'MVP로 무엇부터 만드나요?',
+    useCases: [
+      { h: '검증에 필요한 기능만 추리기', body: '투자·영업·사용자 테스트 중 무엇을 확인할지부터 정하고, 거기에 직접 필요한 흐름만 남깁니다. 부가 기능·예외 처리·확장 옵션은 반응을 본 뒤로 미룹니다. 처음부터 다 넣으면 비용과 기간이 두세 배로 늘어납니다.' },
+      { h: '웹 MVP와 앱 MVP 중 선택', body: '빠른 검증이 목적이면 웹이 유리한 경우가 많고, 푸시·오프라인 사용·스토어 노출이 필요하면 앱이 맞습니다. 무엇을 검증할지 듣고 어느 쪽이 목적에 맞는지 먼저 정리해 드립니다.' },
+      { h: '중간 확인으로 방향 조정', body: '완성 직전에 처음 보여 드리지 않습니다. 화면 흐름이 잡히는 단계에서 함께 확인해 "생각과 다른 결과물"이 나오는 위험을 줄입니다.' },
+      { h: '검증 후 확장까지 같은 코드로', body: '소스코드와 저장소를 통째로 이관하므로 반응이 좋으면 같은 코드 위에서 기능을 단계적으로 얹습니다. 내부 개발팀이 생기면 그대로 이어받을 수 있습니다.' },
+    ],
+    relatedLinks: [
+      { href: '/mvp-development/', label: 'MVP 개발 서비스 안내' },
+      { href: '/source-handover/', label: '소스코드 이관 정책' },
+      { href: '/guide/mvp-cost/', label: 'MVP 개발 비용 가이드' },
     ],
     hubHref: '/mvp',
     faq: {
@@ -126,6 +200,20 @@ export const SERVICES: ServiceDef[] = [
       '소스코드 전체 이관 · 직접 수정 교육',
       '출시 후 간단 수정은 대표가 직접',
     ],
+    titleTail: '하나의 코드로 두 플랫폼 — 름랩',
+    descLead: 'iOS와 안드로이드를 한 번에 만들고 싶으신가요.',
+    buildQuestion: '어떤 Flutter 앱을 만들 수 있나요?',
+    useCases: [
+      { h: '두 플랫폼 동시 출시', body: '네이티브로 따로 만들면 인력·기간·유지보수가 두 벌 듭니다. Flutter는 하나의 코드베이스로 iOS·Android를 함께 만들어 개발 비용을 50~70% 줄이고, 이후 수정도 한 번에 양쪽에 반영됩니다.' },
+      { h: '커머스·예약·커뮤니티·구독 앱', body: '일반적인 비즈니스 앱에서는 Flutter와 네이티브의 사용자 체감 차이가 거의 없습니다. 화면이 많고 자주 바뀌는 서비스일수록 한 벌만 고치면 되는 구조의 이점이 커집니다.' },
+      { h: 'Flutter가 맞지 않는 경우', body: '고사양 3D 게임, 실시간 영상 처리, AR처럼 플랫폼 네이티브 성능이 핵심인 영역은 네이티브를 권합니다. 적합하지 않으면 상담에서 먼저 말씀드립니다.' },
+      { h: '유지보수까지 계산한 선택', body: '출시 비용만이 아니라 이후 운영비가 절반으로 줄어드는 것이 실제 이점입니다. 소스코드를 이관하고 간단한 수정은 직접 하도록 교육해 유지보수 부담을 더 낮춥니다.' },
+    ],
+    relatedLinks: [
+      { href: '/flutter-development/', label: 'Flutter 개발 스튜디오 안내' },
+      { href: '/app-agency/', label: '앱개발 업체 고를 때 확인할 것' },
+      { href: '/guide/flutter-cost/', label: 'Flutter 개발 비용 가이드' },
+    ],
     hubHref: '/flutter',
     faq: {
       q: 'Flutter로 만들면 네이티브 앱보다 품질이 떨어지지 않나요?',
@@ -145,6 +233,20 @@ export const SERVICES: ServiceDef[] = [
       '기존 앱·웹에 AI 기능 추가 연동',
       '소스코드 이관 · API 키 직접 보유',
       'AI에 정확히 지시하고 결과를 확인하는 운영 교육',
+    ],
+    titleTail: '챗봇·업무 자동화 실전형 — 름랩',
+    descLead: '반복되는 응대와 업무를 줄이고 싶으신가요.',
+    buildQuestion: '어떤 AI 기능을 붙일 수 있나요?',
+    useCases: [
+      { h: '반복 문의 자동 응답', body: '영업시간·가격·예약 방법처럼 매일 같은 질문이 반복된다면 챗봇으로 먼저 받게 합니다. 사람이 답해야 할 문의만 남기는 것이 목적이라, 효과를 가장 빨리 체감하는 지점입니다.' },
+      { h: '문서 요약·분류·추천', body: '상담 기록 정리, 접수 내용 분류, 조건에 맞는 항목 추천처럼 사람이 읽고 판단하던 작업을 자동화합니다. 어떤 업무를 얼마나 줄일지부터 정하고 시작합니다.' },
+      { h: '기존 앱·웹에 기능만 추가', body: '이미 운영 중인 서비스가 있으면 전체를 다시 만들지 않고 AI 기능만 붙이는 방식도 진행합니다. 현재 구조를 보고 연동 가능 범위를 먼저 확인합니다.' },
+      { h: 'API 키와 비용을 직접 관리', body: 'API 키를 대표님 명의로 보유하도록 이관하고, 사용량 기반 비용 구조와 줄이는 방법을 함께 안내합니다. AI에 정확히 지시하고 결과를 확인하는 운영 교육이 포함됩니다.' },
+    ],
+    relatedLinks: [
+      { href: '/ai-automation/', label: 'AI 업무 자동화' },
+      { href: '/erp/', label: 'ERP·업무 시스템 구축' },
+      { href: '/admin-page-development/', label: '관리자 페이지 개발' },
     ],
     hubHref: '/ai-development',
     faq: {
@@ -169,6 +271,7 @@ export const REGIONS: RegionDef[] = [
       q: '수원에서는 주로 어떤 프로젝트를 진행하나요?',
       a: '수원은 대기업·중소기업·자영업·스타트업이 섞여 있어, 로컬 사업자의 예약·주문 앱부터 스타트업 MVP까지 폭넓게 진행합니다. 기획서가 없어도 아이디어와 핵심 기능만 있으면 시작할 수 있습니다.',
     },
+    nearby: ['dongtan', 'hwaseong', 'yongin', 'uiwang', 'gunpo'],
   },
   {
     slug: 'seongnam', ko: '성남', full: '성남', group: '경기-인접',
@@ -229,6 +332,7 @@ export const REGIONS: RegionDef[] = [
       q: '화성·동탄 신도시 상권에 맞는 앱도 만들 수 있나요?',
       a: '네. 신도시 로컬 사업자에게 자주 필요한 예약·노쇼 방지·멤버십·간편결제 같은 기능을 핵심부터 추려 MVP로 제작합니다. 운영하며 반응을 본 뒤 기능을 확장하는 방식을 권장합니다.',
     },
+    nearby: ['dongtan', 'suwon', 'osan', 'pyeongtaek', 'ansan'],
   },
   {
     slug: 'dongtan', ko: '동탄', full: '동탄', group: '경기-인접',
@@ -241,6 +345,7 @@ export const REGIONS: RegionDef[] = [
       q: '동탄에서 창업 초기인데 기획서가 없어도 상담이 되나요?',
       a: '가능합니다. 아이디어와 꼭 필요한 기능 한두 가지만 있어도 상담을 시작할 수 있습니다. 동탄의 신축 상권에 맞춰 화면 흐름과 우선순위를 함께 정리해 드립니다.',
     },
+    nearby: ['hwaseong', 'suwon', 'osan', 'yongin', 'pyeongtaek'],
   },
   {
     slug: 'anyang', ko: '안양', full: '안양', group: '경기-인접',
@@ -1026,9 +1131,18 @@ export function siblingRegions(serviceSlug: string, regionSlug: string, n = 6): 
   const self = REGION_BY_SLUG[regionSlug];
   const others = REGIONS.filter((r) => r.slug !== regionSlug);
   if (!self) return others.slice(0, n);
+  // 실제 인접 지역이 지정돼 있으면 그것만 쓴다(3~6개). 지어낸 "인근"을 만들지 않는다.
+  if (self.nearby?.length) {
+    return self.nearby.map((sl) => REGION_BY_SLUG[sl]).filter(Boolean).slice(0, n);
+  }
   const sameGroup = others.filter((r) => r.group === self.group);
   const rest = others.filter((r) => r.group !== self.group);
   return [...sameGroup, ...rest].slice(0, n);
+}
+
+/** 이 지역이 "인근 지역"이라고 부를 수 있는 실제 인접 데이터를 가졌는가 */
+export function hasRealNearby(regionSlug: string): boolean {
+  return Boolean(REGION_BY_SLUG[regionSlug]?.nearby?.length);
 }
 
 export function regionServiceCanonical(serviceSlug: string, regionSlug: string): string {
@@ -1105,11 +1219,17 @@ export function regionServiceDecision(
     };
   }
 
-  const combinedQ = `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`;
+  const profile = regionServiceProfile(region.slug, service.slug);
+  const combinedFaq = profile?.faq ?? {
+    q: `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`,
+    a: '',
+  };
   // 내부링크는 라우트가 실제 렌더하는 수와 동기화한다:
-  // 브레드크럼(홈·서비스허브) 2 + 다른 지역 스포크 siblingRegions(최대 6)
-  // + 서비스 허브 "전체 보기" 1 + 하단 요금 링크 1
-  const internalLinks = 2 + siblingRegions(service.slug, region.slug, 6).length + 2;
+  // 브레드크럼 2 + 같은 지역 다른 서비스 4 + 서비스 관련 링크 3
+  // + 인근 지역 스포크 siblingRegions(최대 6) + 허브 "전체 보기" 1 + 하단 요금 링크 1
+  const internalLinks =
+    2 + (SERVICES.length - 1) + service.relatedLinks.length +
+    siblingRegions(service.slug, region.slug, 6).length + 2;
   return decideFromContent({
     title: `${region.full} ${service.ko} | 소스코드 이관·정액 패키지 — 름랩`,
     description: `${region.full} ${service.ko}. ${region.access} ${service.priceLine}. 소스코드 전체 이관과 직접 운영 교육 포함.`,
@@ -1122,10 +1242,18 @@ export function regionServiceDecision(
       service.intro,
       service.priceLine,
       service.deliverables,
+      // 라우트가 실제로 렌더하는 블록들 — 점수가 화면과 어긋나지 않게 함께 센다
+      profile?.lead,
+      // 거점(profile 보유)만 useCases 본문을 펼치고, 그 외는 제목 목록만 렌더한다 — 화면과 동일하게 센다
+      profile
+        ? service.useCases.map((u) => `${u.h} ${u.body}`)
+        : service.useCases.map((u) => u.h),
+      remoteWorkNote(region.group, region.full),
       region.faq.a,
       service.faq.a,
+      combinedFaq.a,
     ],
-    faqQuestions: [region.faq.q, service.faq.q, combinedQ],
+    faqQuestions: [region.faq.q, service.faq.q, combinedFaq.q],
     internalLinks,
     hasLocalAccessInfo: Boolean(region.access),
     // 라우트가 지역명 고유 alt를 가진 인라인 SVG 히어로를 항상 렌더 (regionServiceMedia)
