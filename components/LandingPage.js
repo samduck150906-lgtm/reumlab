@@ -222,9 +222,9 @@ export default function LandingPage({ slug }) {
               </ul>
             </div>
             <figure className="m-0">
-              <div className="mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-navy-950 shadow-card-hover" style={{ aspectRatio: '1080 / 1350', maxWidth: 408 }}>
+              <div className="cms-demo-frame mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-navy-950 shadow-card-hover" style={{ aspectRatio: '1080 / 1350', maxWidth: 408 }}>
                 <video
-                  className="h-full w-full object-cover"
+                  className="cms-demo-video h-full w-full object-cover"
                   autoPlay
                   muted
                   loop

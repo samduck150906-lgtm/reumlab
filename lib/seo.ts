@@ -5,6 +5,14 @@ export const SITE = {
   nameEn: 'REUMLAB',
   domain: 'https://reumlab.com',
   defaultOgImage: 'https://reumlab.com/og-image.jpg',
+  /**
+   * 구조화 데이터 Organization.logo 전용 정사각 로고.
+   *
+   * 이전에는 logo 에도 defaultOgImage(가로형 배너)를 넣었다. 구글 로고 리치결과는
+   * 배너가 아니라 로고 이미지를 기대하므로 og:image 와 분리한다.
+   * 파일은 이미 있던 아이콘을 재사용한다(새 이미지를 만들지 않음).
+   */
+  logo: 'https://reumlab.com/icon-512.png',
   phone: '010-8111-9370',
   /** tel: 링크용 (하이픈 제거) */
   phoneHref: 'tel:01081119370',

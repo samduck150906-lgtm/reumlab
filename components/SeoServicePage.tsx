@@ -91,8 +91,13 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             </p>
           </div>
           <figure style={{ margin: '8px auto 0', maxWidth: 400, width: '100%' }}>
-            <div style={{ overflow: 'hidden', borderRadius: 16, border: '1px solid rgba(255,255,255,0.12)', background: '#0a0f1c', aspectRatio: '1080 / 1350', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}>
+            {/* 움직임 최소화 설정에서는 영상 대신 포스터 정지 이미지를 보여 준다(globals.css .cms-demo-*) */}
+            <div
+              className="cms-demo-frame"
+              style={{ overflow: 'hidden', borderRadius: 16, border: '1px solid rgba(255,255,255,0.12)', background: '#0a0f1c', aspectRatio: '1080 / 1350', boxShadow: '0 24px 60px rgba(0,0,0,0.35)' }}
+            >
               <video
+                className="cms-demo-video"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 autoPlay
                 muted

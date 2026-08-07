@@ -67,8 +67,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/*
+          전역 웹폰트 — 실제로 쓰는 것만 받는다.
+          LCP 요소가 히어로 이미지가 아니라 H1 텍스트라서, 이 요청이 곧 LCP 임계 경로다.
+
+          제외한 것
+           · Outfit — app/soho/soho.css 에서만, 그것도 weight 800 하나만 쓴다.
+             1,400여 페이지가 쓰지도 않는 패밀리 6 weight 를 받고 있었다 → /soho/ 로 옮김.
+           · JetBrains Mono 500 — CSS 어디에서도 쓰지 않는다(.mono 계열은 400·600만).
+          남긴 것
+           · Plus Jakarta Sans 400~800 — 본문·제목 전반에서 5개 weight 모두 사용.
+           · Noto Sans KR 400~800 — 한글 본문·제목. weight 를 줄이면 합성 볼드가 생겨 유지.
+        */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
           rel="stylesheet"
         />
         <meta name="theme-color" content="#0f1f3a" />

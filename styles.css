@@ -1311,6 +1311,8 @@ body.pm-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .pf-card2, .pf-card2__more span, .pf-filter__btn { transition: none; }
   .pf-card2:hover { transform: none; }
+  /* 영상만 숨기면 어두운 빈 상자가 남으므로 같은 포스터를 배경으로 깐다 */
+  .handover__frame { background-image: url('/assets/images/cms-promo-poster.jpg'); background-size: cover; background-position: center; }
   .handover__video { display: none; }
 }
 

@@ -402,7 +402,7 @@ function header(activeSlug) {
   const macc = PURPOSES.map((p) => `      <a href="/${p.slug}/">${esc(p.label)}</a>`).join('\n');
   return `<header class="header" id="top">
   <div class="wrap header__inner">
-    <a class="logo" href="/" aria-label="REUMLAB 홈"><img class="logo__mark" src="/logo.png" alt="REUMLAB 로고" width="30" height="30" />REUMLAB <span class="logo__ko">· 름랩</span></a>
+    <a class="logo" href="/" aria-label="REUMLAB 홈"><img class="logo__mark" src="/logo.png" alt="" width="30" height="30" />REUMLAB <span class="logo__ko">· 름랩</span></a>
     <nav class="nav" aria-label="주요 메뉴">
       <div class="nav-dd">
         <button class="nav-dd__btn" type="button" aria-expanded="false" aria-haspopup="true">서비스 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -622,7 +622,7 @@ const FOOTER = `<footer class="footer">
   <div class="wrap">
     <div class="footer__grid">
       <div>
-        <a class="logo" href="/"><img class="logo__mark" src="/logo.png" alt="REUMLAB 로고" width="30" height="30" />REUMLAB <span class="logo__ko">· 름랩</span></a>
+        <a class="logo" href="/"><img class="logo__mark" src="/logo.png" alt="" width="30" height="30" />REUMLAB <span class="logo__ko">· 름랩</span></a>
         <p class="footer__tag">앱·웹·AI 개발 스튜디오 · 소스코드·운영 권한 이관 · 콘텐츠 수정 운영 교육</p>
         <p class="footer__local">화성 동탄(동탄첨단산업단지)에 위치한 앱·웹·AI 개발 스튜디오입니다. 경기 남부 전역과 전국 어디서든 의뢰하실 수 있습니다.</p>
         <nav class="footer__links" aria-label="제작 목적" style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;">
@@ -701,7 +701,8 @@ const SITE_ENTITY_NODES = [
     alternateName: 'REUMLAB',
     legalName: '앱·웹개발 스튜디오 름랩',
     url: DOMAIN + '/',
-    logo: `${DOMAIN}/og-image.jpg`,
+    // 로고는 정사각 아이콘, 공유 카드 이미지(og:image)는 별도 — 용도가 다르다
+    logo: `${DOMAIN}/icon-512.png`,
     description: BUSINESS_DESC,
     email: 'ceo@eternalsix.com',
     telephone: '010-8111-9370',

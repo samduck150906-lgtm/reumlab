@@ -68,10 +68,17 @@ fbq('init', '${metaPixelId}');
 fbq('track', 'PageView');`}
           </Script>
           <noscript>
+            {/*
+              JS 비활성 사용자용 추적 픽셀. loading="lazy" 가 반드시 필요하다 —
+              없으면 ReactDOM 이 이 <img> 를 보고 <link rel="preload" as="image"> 를
+              자동 생성해, 정작 쓰이지도 않는 1x1 픽셀이 첫 화면 리소스와 우선순위를 다툰다.
+            */}
             <img
               height="1"
               width="1"
               alt=""
+              loading="lazy"
+              decoding="async"
               style={{ display: 'none' }}
               src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
             />

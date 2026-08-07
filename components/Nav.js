@@ -8,8 +8,20 @@ export default function Nav({ site }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener('scroll', onScroll);
+    // 이 Nav 는 모든 Next 페이지에 들어간다.
+    //  · passive: true — 리스너가 preventDefault 를 부르지 않음을 브라우저에 알려
+    //    스크롤 처리가 메인 스레드를 기다리지 않게 한다.
+    //  · setScrolled 는 값이 실제로 바뀔 때만 — 스크롤 프레임마다 리렌더를 유발하지 않는다.
+    let last = window.scrollY > 60;
+    setScrolled(last);
+    const onScroll = () => {
+      const next = window.scrollY > 60;
+      if (next !== last) {
+        last = next;
+        setScrolled(next);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 

@@ -73,7 +73,8 @@ export function organizationNode() {
     alternateName: SITE.nameEn,
     legalName: SITE.company,
     url: SITE.domain + '/',
-    logo: SITE.defaultOgImage,
+    // 로고는 정사각 아이콘, 공유 카드 이미지(og:image)는 별도 — 용도가 다르다
+    logo: SITE.logo,
     email: SITE.email,
     telephone: SITE.phone,
     address: postalAddressNode(),

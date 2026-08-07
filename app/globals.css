@@ -1913,3 +1913,34 @@ a {
 .blog-body th, .blog-body td { border: 1px solid rgba(255,255,255,0.12); padding: 0.55rem 0.75rem; text-align: left; }
 .blog-body th { background: rgba(255,255,255,0.06); font-weight: 600; color: var(--text-main, #fff); }
 .blog-body strong { color: var(--text-main, #fff); font-weight: 600; }
+
+
+/* 움직임 최소화 설정 대응.
+   styles.css·reum.css(정적 홈·랜딩)에는 있었지만 Next 라우트가 쓰는 이 파일에는 없었다.
+   전정기관 이상 등으로 움직임에 민감한 사용자를 위해 트랜지션·애니메이션·부드러운 스크롤을 억제한다.
+   콘텐츠는 그대로 보이며 최종 상태로 즉시 렌더된다. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* 자동재생 데모 영상은 정지 이미지(포스터)로 대체한다.
+     영상만 숨기면 어두운 빈 상자가 남으므로 같은 포스터를 컨테이너 배경으로 깐다.
+     영상을 내려받지 않게 되는 부수 효과도 있다. */
+  .cms-demo-frame {
+    background-image: url('/assets/images/cms-promo-poster.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .cms-demo-video {
+    display: none;
+  }
+}
