@@ -261,9 +261,11 @@ export default function SohoPage() {
             </nav>
 
             <p className="s-brand">REUMLAB</p>
+            {/* H1 은 이 페이지가 파는 것을 먼저 밝힌다(검색 의도). 기존 강조 카피는
+                둘째 줄에 같은 스타일로 유지 — 마크업 구조·클래스는 그대로다. */}
             <h1 className="s-h s-hero-h">
-              언제까지 광고로만<br />
-              <span className="s-g">손님을 데려오실</span> 건가요?
+              소상공인 홈페이지 제작<br />
+              <span className="s-g">광고 없이 검색으로</span> 손님이 찾아오게
             </h1>
             <p className="s-lead">
               광고비 0원으로도 손님이 스스로 찾아오는 구조,<br />

@@ -33,7 +33,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           <nav className="seo-breadcrumb" aria-label="breadcrumb" style={{ marginBottom: 24, fontSize: 14, color: 'var(--text-dim)' }}>
             <Link href="/">홈</Link>
             <span style={{ margin: '0 8px' }}>/</span>
-            <span>{seo.h1.slice(0, 40)}…</span>
+            {/* 화면 breadcrumb 은 JSON-LD BreadcrumbList 의 name 과 같아야 한다.
+                이전에는 40자에서 무조건 잘라 "…" 를 붙여 스키마와 어긋났다. */}
+            <span>{seo.h1.length > 40 ? `${seo.h1.slice(0, 39)}…` : seo.h1}</span>
           </nav>
           <h1 className="hero-title" style={{ fontSize: 'clamp(28px, 4vw, 42px)', lineHeight: 1.25, marginBottom: 20 }}>
             {seo.h1}
@@ -59,8 +61,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             ))}
           </div>
           <div className="hero-btns" style={{ flexWrap: 'wrap' }}>
-            <a href={SITE.phoneHref} className="btn-primary">
-              📞 {SITE.phone} 전화 상담
+            {/* CTA 문구는 무엇을 문의하는지 드러낸다. 기존 문의 동선(전화·카톡·메일)은 그대로. */}
+            <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_service_call">
+              📞 {regionService ? regionService.ctaLabel : '전화 상담'} · {SITE.phone}
             </a>
             <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" className="btn-secondary" data-analytics="cta_service_kakao" style={{ background: '#FEE500', color: '#191919', fontWeight: 700 }}>
               💬 카카오톡 상담
@@ -178,6 +181,29 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               ))}
             </div>
           )}
+          {/*
+            허브 → 하위 업종 페이지. 112~294개를 전부 나열하지 않고 대표 4~6개만 노출한 뒤
+            인덱스 허브로 넘긴다(SEO용 링크 벽을 만들지 않기 위해서).
+          */}
+          {regionService && regionService.industryLinks.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
+                자주 만드는 {regionService.short} 유형
+              </h2>
+              <div className="link-grid">
+                {regionService.industryLinks.map((l) => (
+                  <Link key={l.href} href={l.href}>{l.label}</Link>
+                ))}
+              </div>
+              {regionService.industryIndex && (
+                <p style={{ marginTop: 14 }}>
+                  <Link href={regionService.industryIndex.href} style={{ color: 'var(--green)' }}>
+                    {regionService.industryIndex.label} →
+                  </Link>
+                </p>
+              )}
+            </div>
+          )}
           {regionService && (
             <div style={{ marginTop: 36 }}>
               <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
@@ -249,7 +275,32 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
             </div>
           </div>
 
-          <div style={{ marginTop: 40 }}>
+          <div style={{ marginTop: 40, paddingTop: 28, borderTop: '1px solid rgba(0,0,0,0.08)' }}>
+            <p style={{ marginBottom: 16, lineHeight: 1.75 }}>
+              기능 범위를 듣고 예상 비용과 일정을 먼저 알려 드립니다. 기획서가 없어도
+              만들려는 서비스와 꼭 필요한 기능 한두 가지만 있으면 상담을 시작할 수 있습니다.
+            </p>
+            <div className="hero-btns" style={{ flexWrap: 'wrap' }}>
+              <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_service_call_bottom">
+                📞 {regionService ? regionService.ctaLabel : '전화 상담'}
+              </a>
+              <a
+                href={SITE.kakaoChannel}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+                data-analytics="cta_service_kakao_bottom"
+                style={{ background: '#FEE500', color: '#191919', fontWeight: 700 }}
+              >
+                💬 카카오톡 상담
+              </a>
+              <Link href="/#pricing" className="btn-secondary" data-analytics="cta_service_pricing">
+                패키지 요금 보기
+              </Link>
+            </div>
+          </div>
+
+          <div style={{ marginTop: 32 }}>
             <Link href="/" className="btn-light">
               ← 메인으로
             </Link>

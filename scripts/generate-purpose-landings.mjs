@@ -77,7 +77,7 @@ const LANDINGS = [
     metaTitle: '앱·SaaS MVP 개발 — 아이디어를 실제 서비스로 | 름랩 REUMLAB',
     metaDesc: '기획서가 없어도 핵심 기능을 정리해 앱·웹·관리자까지 배포 가능한 MVP로 제작합니다. 소스코드·운영 권한 이관 포함. 름랩.',
     eyebrow: '앱·SaaS MVP',
-    h1: '아이디어를<br><span class="hl">사용자가 직접 써볼 수 있는 서비스</span>로',
+    h1: '앱·웹 MVP 개발<br><span class="hl">아이디어를 직접 써볼 수 있는 서비스로</span>',
     sub: '기획서가 없어도 괜찮습니다. 핵심 기능을 정리해 앱·웹·관리자까지 실제로 배포 가능한 MVP로 제작합니다.',
     subline: '기획 · 디자인 · 개발 · 배포 · 소스코드 이관',
     serviceType: '웹 MVP / 홈페이지',
@@ -102,7 +102,7 @@ const LANDINGS = [
     metaTitle: 'ERP·운영관리 시스템 개발 — 흩어진 업무를 하나로 | 름랩 REUMLAB',
     metaDesc: '회원·직원·예약·수납·상담·정산 데이터를 하나의 관리자 화면에서. 엑셀·수기 업무를 우리 회사에 맞는 운영 시스템으로 설계합니다. 름랩.',
     eyebrow: 'ERP·관리 시스템',
-    h1: '엑셀과 반복 입력을<br><span class="hl">우리 회사에 맞는 운영 시스템</span>으로',
+    h1: '맞춤형 ERP·관리 시스템 개발<br><span class="hl">엑셀과 반복 입력을 우리 회사 운영 시스템으로</span>',
     sub: '회원·직원·예약·수납·상담·정산 데이터를 하나의 관리자 화면에서 관리할 수 있도록 설계합니다.',
     subline: '업무 인터뷰 · 데이터·권한 설계 · 관리자 개발 · 이관',
     serviceType: '운영관리 ERP·SaaS',
@@ -130,7 +130,7 @@ const LANDINGS = [
     metaTitle: 'AI 업무 자동화 개발 — 반복 업무를 AI 흐름으로 | 름랩 REUMLAB',
     metaDesc: '문서 작성·검색·분류·콘텐츠·영업 업무를 귀사의 데이터와 운영 방식에 맞게 자동화합니다. 기존 서비스 AI 추가부터 AI SaaS 출시까지. 름랩.',
     eyebrow: 'AI 업무 자동화',
-    h1: '사람이 반복하던 업무를<br><span class="hl">AI가 처리하는 흐름</span>으로',
+    h1: 'AI 업무 자동화 개발<br><span class="hl">사람이 반복하던 일을 AI가 처리하는 흐름으로</span>',
     sub: '문서 작성, 검색, 분류, 콘텐츠 제작, 영업 업무를 귀사의 데이터와 운영 방식에 맞게 자동화합니다.',
     subline: '반복 업무 진단 · 자동화 설계 · AI 연동 · 검수 흐름',
     serviceType: 'AI 기능·업무 자동화',
@@ -158,7 +158,7 @@ const LANDINGS = [
     metaTitle: '플랫폼·중개·매칭 서비스 개발 — 전체 흐름 설계 | 름랩 REUMLAB',
     metaDesc: '회원 역할, 검색, 신청, 견적, 매칭, 결제, 관리자 운영까지 — 고객과 공급자를 연결하는 플랫폼의 전체 흐름을 설계합니다. 름랩.',
     eyebrow: '플랫폼·매칭',
-    h1: '고객과 공급자를 연결하는<br><span class="hl">플랫폼의 전체 흐름</span>을 설계합니다',
+    h1: '플랫폼·매칭 서비스 개발<br><span class="hl">고객과 공급자를 잇는 전체 흐름을 설계합니다</span>',
     sub: '회원 역할, 검색, 신청, 견적, 매칭, 결제, 관리자 운영까지 하나의 서비스로 구축합니다.',
     subline: '참여자 구조 설계 · 매칭 · 결제 · 정산 · 관리자',
     serviceType: '기타 / 잘 모르겠음',
@@ -186,7 +186,7 @@ const LANDINGS = [
     metaTitle: '예약·결제·회원제 서비스 개발 — 예약부터 운영까지 | 름랩 REUMLAB',
     metaDesc: '실시간 일정, 상품·시간 관리, 결제, 알림, 관리자 운영 화면을 사업 방식에 맞게 구축합니다. 예약 충돌 방지 구조까지. 름랩.',
     eyebrow: '예약·결제·회원제',
-    h1: '예약부터 결제와 운영까지<br><span class="hl">한곳에서 처리</span>할 수 있도록',
+    h1: '예약·결제 시스템 개발<br><span class="hl">예약부터 결제와 운영까지 한곳에서</span>',
     sub: '실시간 일정, 상품·시간 관리, 결제, 알림, 관리자 운영 화면을 사업 방식에 맞게 구축합니다.',
     subline: '예약 유형 설계 · 결제 · 충돌 방지 · 관리자',
     serviceType: '웹 MVP / 홈페이지',
@@ -215,7 +215,7 @@ const LANDINGS = [
     metaTitle: '홈페이지·랜딩페이지 제작 — 문의가 들어오는 구조 | 름랩 REUMLAB',
     metaDesc: '예쁜 홈페이지를 넘어, 고객이 상담·예약·구매로 이동하도록 전환 구조로 설계합니다. 반응형·기본 SEO·관리자 수정·소스코드 이관 포함. 름랩.',
     eyebrow: '홈페이지·랜딩',
-    h1: '예쁜 홈페이지를 넘어<br><span class="hl">문의가 들어오는 구조</span>로 만듭니다',
+    h1: '홈페이지·랜딩페이지 제작<br><span class="hl">예쁜 사이트를 넘어 문의가 들어오는 구조로</span>',
     sub: '고객이 필요한 정보를 빠르게 이해하고 상담·예약·구매로 이동할 수 있도록 설계합니다.',
     subline: '반응형 · 기본 SEO · 문의 폼 · 관리 기능 · 소스코드 이관',
     serviceType: '웹 MVP / 홈페이지',
@@ -240,7 +240,7 @@ const LANDINGS = [
     metaTitle: '데이터·SEO 시스템 구축 — 대규모 수집·검색·자동화 | 름랩 REUMLAB',
     metaDesc: '크롤링, 정제, 검색, 인덱싱, 대규모 SEO 페이지 생성까지. 수작업으로 만들 수 없는 규모를 데이터와 자동화로 구축합니다. 름랩.',
     eyebrow: '데이터·SEO',
-    h1: '수작업으로 만들 수 없는 규모를<br><span class="hl">데이터와 자동화</span>로 구축합니다',
+    h1: '데이터·SEO 자동화 구축<br><span class="hl">수작업으로 만들 수 없는 규모를 자동화로</span>',
     sub: '크롤링, 정제, 검색, 인덱싱, 대규모 SEO 페이지 생성까지 설계합니다.',
     subline: '수집 · 정제 · 인덱싱 · 페이지 자동화 · 색인 관리',
     serviceType: '데이터·SEO 시스템',
@@ -268,7 +268,7 @@ const LANDINGS = [
     metaTitle: '기존 서비스 오류 수정·리뉴얼·인수 개발 | 름랩 REUMLAB',
     metaDesc: '멈춰 있는 서비스를 다시 운영 가능한 상태로. 기존 소스코드·배포 환경을 먼저 점검한 뒤 오류 수정, 리뉴얼, 기능 추가, 인수 개발 가능 여부를 안내합니다. 름랩.',
     eyebrow: '기존 서비스 개선',
-    h1: '멈춰 있는 서비스를<br><span class="hl">다시 운영 가능한 상태</span>로',
+    h1: '기존 서비스 개선·인수 개발<br><span class="hl">멈춰 있는 서비스를 다시 운영 가능한 상태로</span>',
     sub: '기존 소스코드와 배포 환경을 먼저 점검한 뒤 오류 수정, 리뉴얼, 기능 추가 가능 여부를 안내합니다.',
     subline: '자료 점검 · 실행·빌드 확인 · 위험요소 파악 · 범위 제안',
     serviceType: '기타 / 잘 모르겠음',
@@ -671,6 +671,14 @@ function ldJson(data) {
     .replace(/\u2029/g, '\\u2029');
 }
 
+/** H1 첫 줄(서비스명)만 뽑아 낸다 — 화면 H1 과 Service.name 을 한 출처로 묶기 위해 */
+function h1Lead(land) {
+  return String(land.h1)
+    .split(/<br\s*\/?>/i)[0]
+    .replace(/<[^>]+>/g, '')
+    .trim();
+}
+
 function jsonLd(land) {
   const url = `${DOMAIN}/${land.slug}/`;
   const graph = {
@@ -680,7 +688,9 @@ function jsonLd(land) {
       {
         '@type': 'Service',
         '@id': `${url}#service`,
-        name: land.navLabel + ' 개발',
+        // Service.name 은 H1 첫 줄에서 파생한다. 예전에는 navLabel+'개발' 로 따로 만들어
+        // H1 을 고칠 때 스키마만 옛 문구로 남았다("플랫폼·매칭 개발" vs "플랫폼·매칭 서비스 개발").
+        name: h1Lead(land),
         serviceType: land.navLabel,
         url,
         description: land.metaDesc,
@@ -712,15 +722,42 @@ const BASE_REGIONS = [
   { slug: 'hwaseong', ko: '화성' },
   { slug: 'suwon', ko: '수원' },
 ];
+/**
+ * 이 랜딩이 덮어쓰는 Next 서비스 허브가 연결하던 하위 업종 페이지.
+ * lib/pseo.ts 의 SERVICES[].industryLinks 와 같은 역할 — 이 파일은 Next 번들 밖이라
+ * import 할 수 없어 같은 URL 을 손으로 맞춘다. (실재 여부는 빌드 후 검증 스크립트가 확인)
+ */
+const INDUSTRY_LINKS = {
+  mvp: {
+    index: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
+    items: [
+      { href: '/cost/hospital/', label: '병원 앱 개발 비용' },
+      { href: '/cost/fitness/', label: '피트니스 앱 개발 비용' },
+      { href: '/cost/academy/', label: '학원 앱 개발 비용' },
+      { href: '/cost/shopping/', label: '쇼핑몰 앱 개발 비용' },
+    ],
+  },
+};
+
 function regionLinks(land) {
   if (!REGION_SERVICE_SLUGS.has(land.slug)) return '';
-  const items = BASE_REGIONS.map(
+  const regions = BASE_REGIONS.map(
     (r) => `        <li><a href="/${land.slug}/${r.slug}/">${r.ko} ${esc(land.navLabel)}</a></li>`,
   ).join('\n');
-  return `<section class="section"><div class="wrap">
+  const ind = INDUSTRY_LINKS[land.slug];
+  const industrySection = ind
+    ? `<section class="section"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">TYPES</span><h2 class="sec-title">자주 만드는 ${esc(land.navLabel)} 유형</h2><p class="sec-sub">업종마다 먼저 만들어야 할 기능이 다릅니다. 대표적인 유형별 비용과 범위를 정리해 두었습니다.</p></div>
+    <ul class="lx-feat-grid">
+${ind.items.map((i) => `        <li><a href="${i.href}">${esc(i.label)}</a></li>`).join('\n')}
+    </ul>
+    <p style="margin-top:14px"><a href="${ind.index.href}">${esc(ind.index.label)} →</a></p>
+  </div></section>`
+    : '';
+  return `${industrySection}<section class="section"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">LOCAL</span><h2 class="sec-title">거점 지역 ${esc(land.navLabel)}</h2><p class="sec-sub">름랩 사업장이 있는 화성 동탄을 중심으로 한 지역별 안내입니다. 전국 어디든 비대면으로 같은 조건으로 진행합니다.</p></div>
     <ul class="lx-feat-grid">
-${items}
+${regions}
     </ul>
   </div></section>`;
 }

@@ -78,6 +78,16 @@ export interface ServiceDef {
    * 지역 페이지가 서비스 허브 하나로만 연결돼 고립되던 것을 푼다.
    */
   relatedLinks: { href: string; label: string }[];
+  /**
+   * 이 서비스 허브에서 보여 줄 대표 업종 페이지 (§허브 → 하위 업종).
+   * 112~294개를 전부 나열하지 않고 4~6개만 노출한 뒤 인덱스 허브로 넘긴다.
+   * 실재하는 슬러그만 — 빌드 후 scripts/verify-region-pages.mjs 가 404 링크를 잡는다.
+   */
+  industryLinks: { href: string; label: string }[];
+  /** 업종 전체 목록 인덱스 (없으면 생략) */
+  industryIndex?: { href: string; label: string };
+  /** 서비스별 상담 CTA 문구 — "전화 상담" 같은 범용 문구 대신 무엇을 문의하는지 드러낸다 */
+  ctaLabel: string;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -112,6 +122,16 @@ export const SERVICES: ServiceDef[] = [
       { href: '/admin-page-development/', label: '관리자 페이지 개발' },
       { href: '/platform/', label: '플랫폼·매칭 서비스 개발' },
     ],
+    industryLinks: [
+      { href: '/app/booking/', label: '예약 앱 개발' },
+      { href: '/app/delivery/', label: '배달·주문 앱 개발' },
+      { href: '/app/franchise/', label: '프랜차이즈 앱 개발' },
+      { href: '/app/community/', label: '커뮤니티 앱 개발' },
+      { href: '/app/marketplace/', label: '중고거래·마켓 앱 개발' },
+      { href: '/app/subscription/', label: '구독 서비스 앱 개발' },
+    ],
+    industryIndex: { href: '/app/', label: '업종별 앱개발 전체 보기' },
+    ctaLabel: '앱 개발 상담하기',
     hubHref: '/app-development',
     faq: {
       q: '앱개발 외주를 맡기면 소스코드도 받을 수 있나요?',
@@ -146,6 +166,14 @@ export const SERVICES: ServiceDef[] = [
       { href: '/soho/', label: '소상공인 홈페이지 제작' },
       { href: '/renewal/', label: '웹사이트 리뉴얼' },
     ],
+    industryLinks: [
+      { href: '/website/byeongwon/', label: '병원 홈페이지 제작' },
+      { href: '/website/chigwa/', label: '치과 홈페이지 제작' },
+      { href: '/website/hanuiwon/', label: '한의원 홈페이지 제작' },
+      { href: '/website/pibugwa/', label: '피부과 홈페이지 제작' },
+    ],
+    industryIndex: { href: '/website/', label: '업종별 홈페이지 제작 전체 보기' },
+    ctaLabel: '웹사이트 제작 상담하기',
     hubHref: '/web-development',
     faq: {
       q: '웹사이트 제작 후에 월 관리비가 드나요?',
@@ -180,6 +208,14 @@ export const SERVICES: ServiceDef[] = [
       { href: '/source-handover/', label: '소스코드 이관 정책' },
       { href: '/guide/mvp-cost/', label: 'MVP 개발 비용 가이드' },
     ],
+    industryLinks: [
+      { href: '/cost/hospital/', label: '병원 앱 개발 비용' },
+      { href: '/cost/fitness/', label: '피트니스 앱 개발 비용' },
+      { href: '/cost/academy/', label: '학원 앱 개발 비용' },
+      { href: '/cost/shopping/', label: '쇼핑몰 앱 개발 비용' },
+    ],
+    industryIndex: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
+    ctaLabel: 'MVP 견적 문의하기',
     hubHref: '/mvp',
     faq: {
       q: 'MVP는 일반 앱개발과 무엇이 다른가요?',
@@ -214,6 +250,14 @@ export const SERVICES: ServiceDef[] = [
       { href: '/app-agency/', label: '앱개발 업체 고를 때 확인할 것' },
       { href: '/guide/flutter-cost/', label: 'Flutter 개발 비용 가이드' },
     ],
+    industryLinks: [
+      { href: '/app/booking/', label: '예약 앱 개발' },
+      { href: '/app/fitness/', label: '피트니스 앱 개발' },
+      { href: '/app/hospital/', label: '병원 앱 개발' },
+      { href: '/app/pet/', label: '펫 서비스 앱 개발' },
+    ],
+    industryIndex: { href: '/app/', label: '업종별 앱개발 전체 보기' },
+    ctaLabel: 'Flutter 앱 개발 상담하기',
     hubHref: '/flutter',
     faq: {
       q: 'Flutter로 만들면 네이티브 앱보다 품질이 떨어지지 않나요?',
@@ -248,6 +292,14 @@ export const SERVICES: ServiceDef[] = [
       { href: '/erp/', label: 'ERP·업무 시스템 구축' },
       { href: '/admin-page-development/', label: '관리자 페이지 개발' },
     ],
+    industryLinks: [
+      { href: '/solution/hospital/', label: '병원 업무 시스템 구축' },
+      { href: '/solution/dental/', label: '치과 업무 시스템 구축' },
+      { href: '/solution/fitness/', label: '피트니스 운영 시스템 구축' },
+      { href: '/erp/', label: 'ERP·관리 시스템 구축' },
+    ],
+    industryIndex: { href: '/solution/', label: '업종별 솔루션 구축 전체 보기' },
+    ctaLabel: 'AI 자동화 상담하기',
     hubHref: '/ai-development',
     faq: {
       q: 'AI 기능을 작게 시작했다가 나중에 확장할 수 있나요?',
