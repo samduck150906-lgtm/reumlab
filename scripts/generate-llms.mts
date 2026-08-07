@@ -15,7 +15,7 @@
  */
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { SITE, PAGE_SEO_MAP } from '../lib/seo';
+import { SITE, PAGE_SEO_MAP, REDIRECTED_PILLAR_SLUGS, NOINDEX_PILLAR_SLUGS } from '../lib/seo';
 import { GUIDES, guideCanonical, guideDecision } from '../lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
@@ -54,11 +54,9 @@ const L: string[] = [];
 
 L.push(`# ${SITE.name} (${SITE.nameEn})`);
 L.push('');
-L.push(
-  `> ${SITE.name}(${SITE.nameEn})은 앱, 웹사이트, 관리자 페이지와 MVP를 기획부터 개발·배포까지 구축하는 ` +
-    `앱·웹 개발 스튜디오입니다. 완성 후 소스코드와 운영 권한을 고객에게 이관하며, ` +
-    `VAT 포함 정액 패키지로 가격과 기간을 먼저 공개합니다.`,
-);
+// 사업 설명은 lib/seo.ts SITE.description 하나만 쓴다.
+// 여기서 문장을 따로 쓰면 JSON-LD·홈·랜딩과 회사 소개가 갈린다(AI 는 이 문장을 그대로 인용한다).
+L.push(`> ${SITE.description}`);
 L.push('');
 L.push('## 기본 정보');
 L.push('');
@@ -96,11 +94,44 @@ for (const [q, a] of FACTS) L.push(`- **${q}** ${a}`);
 L.push('');
 L.push('## 주요 페이지');
 L.push('');
-const KEY_SLUGS = ['', 'mvp', 'flutter', 'web-development', 'app-development', 'ai-development', 'source-handover'];
-for (const slug of KEY_SLUGS) {
+/**
+ * 문장 경계에서 자른다. 이전에는 slice(0, 120) 이라 "전국 어디서나 진", "From" 처럼
+ * 단어 중간에서 끊긴 설명이 나갔다 — AI 가 그대로 인용하면 깨진 문장이 된다.
+ */
+function firstSentences(text: string, max = 180): string {
+  const parts = text.split(/(?<=[.!?])\s+/);
+  let out = '';
+  for (const part of parts) {
+    if (out && (out + ' ' + part).length > max) break;
+    out = out ? `${out} ${part}` : part;
+  }
+  return out || text.slice(0, max);
+}
+
+/**
+ * 주요 페이지 — Next 필러(PAGE_SEO_MAP)와 정적 목적별 랜딩을 함께 싣는다.
+ * 이전에는 7개만 하드코딩해 /erp/·/platform/·/reservation-commerce/ 같은 실제 서비스 허브가
+ * 빠져 있었다. "름랩이 ERP도 하는가?" 라는 질문에 이 문서만 읽고는 답할 수 없었다.
+ */
+const PILLAR_SLUGS = ['', 'mvp', 'flutter', 'app-development', 'web-development', 'ai-development',
+  'app-agency', 'website-agency', 'admin-page-development', 'source-handover', 'maintenance'];
+for (const slug of PILLAR_SLUGS) {
   const seo = PAGE_SEO_MAP[slug];
-  if (!seo) continue;
-  L.push(`- [${seo.h1}](${seo.canonical}): ${seo.description.slice(0, 120)}`);
+  if (!seo || REDIRECTED_PILLAR_SLUGS.has(slug) || NOINDEX_PILLAR_SLUGS.has(slug)) continue;
+  L.push(`- [${seo.h1}](${seo.canonical}): ${firstSentences(seo.description)}`);
+}
+// 정적 생성 목적별 랜딩 — Next 라우트가 아니라 PAGE_SEO_MAP 에 없다(scripts/generate-purpose-landings.mjs).
+// 슬러그·한 줄 설명을 그 생성기의 LANDINGS 와 맞춰 둔다.
+const PURPOSE_LANDINGS: [string, string, string][] = [
+  ['erp', '맞춤형 ERP·관리 시스템 개발', '주문·재고·정산처럼 엑셀과 수기로 하던 업무를 회사 방식에 맞춘 운영 시스템으로 만듭니다.'],
+  ['ai-automation', 'AI 업무 자동화 개발', '반복 문의 응답, 접수 분류, 문서 요약처럼 같은 일이 반복되는 업무부터 자동화합니다.'],
+  ['platform', '플랫폼·매칭 서비스 개발', '수요자·공급자·운영자가 각각 다른 화면을 쓰는 중개 플랫폼의 흐름과 정산을 설계합니다.'],
+  ['reservation-commerce', '예약·결제 시스템 개발', '예약 신청부터 결제·확정 알림·취소·환불까지 하나의 흐름으로 구축합니다.'],
+  ['data-seo', '데이터·SEO 자동화 구축', '검색 유입을 위한 페이지 구조·색인 관리·구조화 데이터를 설계합니다. 순위는 보장하지 않습니다.'],
+  ['service-renewal', '기존 서비스 개선·인수 개발', '다른 곳에서 만든 앱·웹을 인수해 점검·수정·재배포합니다. 소스코드가 없으면 이관 가능 범위부터 확인합니다.'],
+];
+for (const [slug, title, desc] of PURPOSE_LANDINGS) {
+  L.push(`- [${title}](${SITE.domain}/${slug}/): ${desc}`);
 }
 L.push('');
 L.push('## 비용·계약 가이드');
@@ -131,3 +162,98 @@ L.push('');
 const txt = L.join('\n');
 writeFileSync(join(OUT, 'llms.txt'), txt);
 console.log(`✓ llms.txt generated: ${txt.length} bytes → out/llms.txt`);
+
+/* ────────────────────────────────────────────────────────────────────────────
+ * llms-full.txt — 서비스 페이지 본문까지 담은 확장판.
+ *
+ * llms.txt 가 "무엇이 어디 있는지"를 알려 주는 색인이라면, 이 파일은 핵심 서비스
+ * 페이지의 실제 본문을 한 파일에 모아 크롤링 없이도 답할 수 있게 한다.
+ *
+ * 중요 — 새 문장을 쓰지 않는다.
+ *  본문은 전부 lib/seo.ts PAGE_SEO_MAP(화면에 실제로 렌더되는 whyPoints·sections·faqs)에서
+ *  그대로 가져온다. 사람이 보는 페이지와 AI 가 읽는 파일이 다른 내용이 되지 않게 하기 위해서다.
+ *  화면에 없는 설명·가격·실적을 이 파일에만 넣는 것은 금지다.
+ *
+ * 한계는 llms.txt 와 같다 — 어떤 검색엔진도 이 파일을 랭킹 요소로 보장하지 않는다.
+ * ──────────────────────────────────────────────────────────────────────────── */
+const F: string[] = [];
+F.push(`# ${SITE.name} (${SITE.nameEn}) — 전체 서비스 안내`);
+F.push('');
+F.push(`> ${SITE.description}`);
+F.push('');
+F.push('이 문서는 https://reumlab.com 의 핵심 서비스 페이지 본문을 그대로 모은 것입니다.');
+F.push('요약본은 https://reumlab.com/llms.txt 를 참고하세요.');
+F.push('');
+F.push('## 사업자 정보');
+F.push('');
+F.push(`- 상호: ${SITE.company}`);
+F.push(`- 대표: ${SITE.representative}`);
+F.push(`- 사업자등록번호: ${SITE.bizNo}`);
+F.push(`- 주소: ${SITE.address}`);
+F.push(`- 전화: ${SITE.phone} / 이메일: ${SITE.email}`);
+F.push(`- 카카오톡 채널: ${SITE.kakaoChannel}`);
+F.push('- 상담 가능 시간: 평일 10:00–18:00');
+F.push('- 사업장은 화성 동탄 한 곳이며, 지역 페이지는 지점이 아니라 서비스 가능 지역입니다.');
+F.push('');
+F.push('## 정액 패키지 (VAT 포함)');
+F.push('');
+F.push('| 패키지 | 금액 | 기간 | 범위 |');
+F.push('| --- | --- | --- | --- |');
+for (const [n, p2, d, sc] of PACKAGES) F.push(`| ${n} | ${p2} | ${d} | ${sc} |`);
+F.push('');
+F.push('패키지 범위를 넘는 기능은 상담 후 별도 견적으로 안내합니다. 모든 패키지에 소스코드 전체 이관이 포함됩니다.');
+F.push('');
+F.push('## 서비스 페이지 전문');
+F.push('');
+/**
+ * 정적 목적별 랜딩(scripts/generate-purpose-landings.mjs)이 Next 출력물을 덮어쓰는 슬러그.
+ * 이 URL 들의 실제 화면은 랜딩 쪽 본문·FAQ 이므로, PAGE_SEO_MAP 의 Next 본문을 실으면
+ * "AI 가 읽는 내용"과 "사람이 보는 화면"이 달라진다. → 본문 대신 요약만 싣는다.
+ */
+const OVERWRITTEN_BY_LANDING = new Set(['mvp', 'website']);
+for (const [slug, seo] of Object.entries(PAGE_SEO_MAP)) {
+  if (slug === '' || REDIRECTED_PILLAR_SLUGS.has(slug) || NOINDEX_PILLAR_SLUGS.has(slug)) continue;
+  if (OVERWRITTEN_BY_LANDING.has(slug)) continue;
+  F.push(`### ${seo.h1}`);
+  F.push('');
+  F.push(`URL: ${seo.canonical}`);
+  F.push('');
+  F.push(seo.serviceDesc ?? seo.description);
+  F.push('');
+  if (seo.whyPoints?.length) {
+    for (const w of seo.whyPoints) F.push(`- ${w}`);
+    F.push('');
+  }
+  for (const sec of seo.sections ?? []) {
+    F.push(`#### ${sec.h2}`);
+    F.push('');
+    F.push(sec.body);
+    F.push('');
+  }
+  for (const f of seo.faqs ?? []) {
+    F.push(`- **${f.q}** ${f.a}`);
+  }
+  if (seo.faqs?.length) F.push('');
+}
+// 목적별 랜딩 — 본문은 정적 생성기가 갖고 있어 여기서 복제하지 않는다(복제하면 갈린다).
+// 어떤 서비스인지와 URL 만 싣고 상세는 페이지를 읽도록 안내한다.
+F.push('### 목적별 서비스 랜딩');
+F.push('');
+F.push('아래 페이지는 각 목적에 맞춘 상세 안내와 FAQ 를 담고 있습니다. 전문은 각 URL 에서 확인하세요.');
+F.push('');
+for (const [slug, title, desc] of PURPOSE_LANDINGS) {
+  F.push(`- [${title}](${SITE.domain}/${slug}/): ${desc}`);
+}
+F.push('');
+F.push('## 사실 확인 안내');
+F.push('');
+F.push('- 이 문서의 모든 내용은 사이트에 실제로 게시된 문장을 그대로 옮긴 것입니다.');
+F.push('- 금액은 VAT 포함 정액 기준이며 사이트 가격표와 동일합니다. 범위 밖 기능은 별도 견적입니다.');
+F.push('- 공개 가능한 고객사명·후기 수치·수상 이력은 보유하고 있지 않아 포함하지 않습니다.');
+F.push('- 검색 순위나 AI 답변 노출을 보장하지 않으며, 이 문서도 그런 목적의 파일이 아닙니다.');
+F.push(`- 최종 갱신: ${gitLastModified('lib/seo.ts').toISOString().slice(0, 10)}`);
+F.push('');
+
+const full = F.join('\n');
+writeFileSync(join(OUT, 'llms-full.txt'), full);
+console.log(`✓ llms-full.txt generated: ${full.length} bytes → out/llms-full.txt`);

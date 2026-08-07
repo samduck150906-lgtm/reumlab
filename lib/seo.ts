@@ -26,6 +26,25 @@ export const SITE = {
   /** 카카오톡 채널 — 전화 부담을 낮춘 저마찰 상담 채널(홈·전 페이지 CTA·플로팅 버튼 공용) */
   kakaoChannel: 'https://pf.kakao.com/_xkxjQxgn',
   company: '앱·웹개발 스튜디오 름랩',
+  /**
+   * 사업 설명 단일 출처 — "름랩은 무엇을 하는 회사인가"에 대한 사이트 공식 답변.
+   *
+   * 왜 필요한가
+   *  이 문장이 소스마다 달랐다. SITE.company 는 "앱·웹개발 스튜디오", JSON-LD 는
+   *  "화성 동탄 외주개발 스튜디오", index.html 은 "앱·웹·AI MVP 개발 스튜디오",
+   *  llms.txt 는 "앱·웹 개발 스튜디오" — 어디에도 ERP·업무 시스템은 서비스 범주로
+   *  들어가 있지 않았다. 실제로는 /erp/·/admin-page-development/·/solution/* 를 운영한다.
+   *  AI 답변 시스템은 이런 문장을 그대로 인용하므로, 표현이 갈리면 회사 정체성도 갈린다.
+   *
+   * 어디에 쓰나 — 엔티티(사실) 성격의 출력에만 쓴다.
+   *  lib/schema.ts 의 Organization·ProfessionalService description,
+   *  llms.txt 요약, 목적별 랜딩 JSON-LD. (페이지별 meta description 은 검색결과 문구라
+   *  이 문장으로 통일하지 않는다 — 페이지마다 다른 것이 정상이다.)
+   *
+   * 내용은 전부 사이트에서 확인 가능한 사실만 담는다. 고객 수·실적·수상은 넣지 않는다.
+   */
+  description:
+    '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 동탄·화성·수원을 거점으로 전국 비대면으로 진행합니다.',
   representative: '성아름',
   bizNo: '793-12-03247',
   /**

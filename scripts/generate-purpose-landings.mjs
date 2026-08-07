@@ -680,8 +680,9 @@ const POSTAL_ADDRESS = {
   postalCode: '18469',
   addressCountry: 'KR',
 };
+/** lib/seo.ts SITE.description 과 같은 문장 — 사업 설명 단일 출처(수동 동기화) */
 const BUSINESS_DESC =
-  '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 98만 원부터, 앱 580만 원부터(VAT 포함 정액).';
+  '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 동탄·화성·수원을 거점으로 전국 비대면으로 진행합니다.';
 
 const SITE_ENTITY_NODES = [
   {
@@ -701,6 +702,7 @@ const SITE_ENTITY_NODES = [
     legalName: '앱·웹개발 스튜디오 름랩',
     url: DOMAIN + '/',
     logo: `${DOMAIN}/og-image.jpg`,
+    description: BUSINESS_DESC,
     email: 'ceo@eternalsix.com',
     telephone: '010-8111-9370',
     address: POSTAL_ADDRESS,

@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           루트로 서빙되는 홈은 정적 index.html 이라 이 레이아웃을 타지 않는다 —
           index.html 안에 같은 @id·같은 값의 그래프가 따로 들어 있다.
         */}
-        <SiteEntityJsonLd description={home.description} />
+        <SiteEntityJsonLd />
         <Analytics />
         <AnalyticsDataLayer />
         <Nav site={site} />

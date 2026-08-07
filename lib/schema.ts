@@ -86,6 +86,7 @@ export function organizationNode() {
       areaServed: 'KR',
       availableLanguage: ['Korean'],
     },
+    description: SITE.description,
     // 사업자등록번호 — 공개 정보이며 화면(BusinessFooter)에도 표기된다.
     identifier: {
       '@type': 'PropertyValue',
@@ -102,7 +103,7 @@ export function organizationNode() {
  * (ProfessionalService 는 LocalBusiness 의 하위 타입이라 둘을 함께 선언할 필요가 없다.)
  * 사업장은 동탄 한 곳뿐이므로 이 노드는 사이트 전체에서 이 @id 하나만 존재한다.
  */
-export function businessNode(description: string) {
+export function businessNode(description: string = SITE.description) {
   return {
     '@type': 'ProfessionalService',
     '@id': SCHEMA_ID.business,
@@ -129,8 +130,12 @@ export function businessNode(description: string) {
   };
 }
 
-/** 사이트 전역 그래프 — 루트 레이아웃에서 1회만 출력한다. */
-export function siteGraph(description: string) {
+/**
+ * 사이트 전역 그래프 — 루트 레이아웃에서 1회만 출력한다.
+ * 설명은 SITE.description(사업 설명 단일 출처)을 쓴다 — 페이지별 meta description 과
+ * 섞이면 같은 @id 노드가 페이지마다 다른 소개 문장을 갖게 된다.
+ */
+export function siteGraph(description: string = SITE.description) {
   return [websiteNode(), organizationNode(), businessNode(description)];
 }
 

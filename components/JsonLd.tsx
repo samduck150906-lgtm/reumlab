@@ -56,7 +56,7 @@ function LdGraph({ graph }: { graph: Record<string, unknown>[] }) {
  * 같은 @id 노드가 한 문서에 두 번 나온다. 서비스·랜딩·지역 페이지는 이 노드를 다시
  * 선언하지 말고 `provider: {"@id": SCHEMA_ID.business}` 로 참조만 하면 된다.
  */
-export function SiteEntityJsonLd({ description }: { description: string }) {
+export function SiteEntityJsonLd({ description }: { description?: string } = {}) {
   return <LdGraph graph={siteGraph(description)} />;
 }
 
