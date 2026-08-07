@@ -126,6 +126,28 @@ export default function BlogPostPage({ params }: Props) {
               )}
             </div>
 
+            {/*
+              FAQ — 이 글의 FAQPage 구조화 데이터와 같은 배열을 화면에도 렌더한다.
+              이전에는 FAQPageJsonLd 만 내보내고 화면에는 아무것도 없어서,
+              "스키마에만 존재하는 FAQ" 상태였다(구글 구조화 데이터 정책 위반).
+              같은 post.faqs 하나를 화면과 스키마가 공유하므로 어긋날 수 없다.
+            */}
+            {post.faqs && post.faqs.length > 0 && (
+              <div style={{ marginTop: 44 }}>
+                <h2 className="section-title" style={{ fontSize: '1.15rem' }}>
+                  자주 묻는 질문
+                </h2>
+                <div className="faq-grid">
+                  {post.faqs.map((f) => (
+                    <div className="faq-item" key={f.q}>
+                      <p className="faq-q">{f.q}</p>
+                      <p className="faq-a">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* 관련 서비스 — 글 주제에 맞춰 머니페이지로 링크 자산 전달(§7·§10) */}
             <div style={{ marginTop: 44 }}>
               <p className="section-tag" style={{ marginBottom: 16 }}>관련 서비스</p>

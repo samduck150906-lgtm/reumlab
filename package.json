@@ -21,6 +21,7 @@
     "seo:verify": "node scripts/verify-sitemap.mjs",
     "seo:verify:regions": "node scripts/verify-region-pages.mjs",
     "seo:verify:services": "node scripts/verify-service-hubs.mjs",
+    "seo:verify:faq": "node scripts/verify-faq.mjs",
     "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && npm run gen:feed && node scripts/prepare-next-public.mjs && next build && npm run copy:home && node scripts/generate-purpose-landings.mjs && npm run gen:llms",
     "gen:llms": "tsx scripts/generate-llms.mts",

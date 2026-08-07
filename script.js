@@ -443,16 +443,34 @@
     });
   }
 
-  document.querySelectorAll(".faq-item").forEach(function (item) {
+  /* FAQ 아코디언 — 열림 상태를 보조기기에도 알린다.
+     버튼과 답변 영역을 aria-expanded / aria-controls 로 연결하고, 닫힌 답변은
+     aria-hidden 으로 표시한다. 마크업은 이미 <button> 이라 키보드 접근은 기본 동작한다. */
+  document.querySelectorAll(".faq-item").forEach(function (item, i) {
     var q = item.querySelector(".faq-q");
     var a = item.querySelector(".faq-a");
+    if (!q || !a) return;
+    if (!a.id) a.id = "faq-a-" + (i + 1) + "-" + Math.abs(String(q.textContent).length);
+    q.setAttribute("type", "button");
+    q.setAttribute("aria-controls", a.id);
+    q.setAttribute("aria-expanded", item.classList.contains("open") ? "true" : "false");
+    a.setAttribute("role", "region");
+    a.setAttribute("aria-hidden", item.classList.contains("open") ? "false" : "true");
+    function setState(el, open) {
+      var btn = el.querySelector(".faq-q");
+      var ans = el.querySelector(".faq-a");
+      el.classList.toggle("open", open);
+      ans.style.maxHeight = open ? ans.scrollHeight + "px" : null;
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      ans.setAttribute("aria-hidden", open ? "false" : "true");
+    }
     q.addEventListener("click", function () {
       var isOpen = item.classList.contains("open");
       document.querySelectorAll(".faq-item.open").forEach(function (o) {
-        if (o !== item) { o.classList.remove("open"); o.querySelector(".faq-a").style.maxHeight = null; }
+        if (o !== item) setState(o, false);
       });
-      if (isOpen) { item.classList.remove("open"); a.style.maxHeight = null; }
-      else { item.classList.add("open"); a.style.maxHeight = a.scrollHeight + "px"; if (!item.dataset.f) { item.dataset.f = "1"; pushDL({ event: "faq_open" }); } }
+      setState(item, !isOpen);
+      if (!isOpen && !item.dataset.f) { item.dataset.f = "1"; pushDL({ event: "faq_open" }); }
     });
   });
 

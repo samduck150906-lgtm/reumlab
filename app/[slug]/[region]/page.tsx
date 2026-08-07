@@ -100,11 +100,11 @@ export default function RegionServicePage({ params }: Props) {
   // 없으면 기존 조합 FAQ 로 대체 — 없는 지역 사정을 지어내지 않는다.
   const profile = regionServiceProfile(region.slug, service.slug);
 
-  // 고유 FAQ 3개: 지역 FAQ + 서비스 FAQ + 조합 FAQ
-  const combinedFaq = profile?.faq ?? {
-    q: `${region.full}에서 ${service.ko}, 어떻게 진행되나요?`,
-    a: `${region.access} ${service.intro.split('.')[0]}. ${service.priceLine}이며, 소스코드 전체와 실행 문서를 이관해 ${region.full}에서도 종속 없이 직접 운영하실 수 있습니다.`,
-  };
+  // FAQ 3개 — 지역 FAQ(지역 고유) + 서비스 FAQ + 세 번째.
+  // 세 번째는 거점이면 조합 고유 FAQ, 그 외는 서비스 FAQ 2번째를 쓴다.
+  // 이전에는 "{지역}에서 {서비스}, 어떻게 진행되나요?" 라는 지역명 치환 질문이
+  // 335개 페이지에 똑같이 깔려 있었다.
+  const combinedFaq = profile?.faq ?? service.faq2;
   const faqs = [region.faq, service.faq, combinedFaq];
 
   // 같은 지역의 다른 서비스 — 지역 페이지가 서비스 허브 하나로만 이어지던 고립을 푼다.
