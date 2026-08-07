@@ -29,7 +29,9 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title,
       description,
-      url,
+      // og:url 은 canonical 과 같아야 한다. 중복 허브(mobile-app)는 canonical 이
+      // 대표 허브를 가리키므로 og:url 도 같은 URL 을 쓴다(이전엔 자기 자신을 가리켜 신호가 갈렸다).
+      url: canonical,
       images: ['/og-default.png'],
     },
     alternates: { canonical },

@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   title: { absolute: '페이지를 찾을 수 없습니다 (404) | 름랩 REUMLAB' },
   description:
     '요청하신 주소가 바뀌었거나 삭제된 페이지입니다. 름랩의 앱 MVP·Flutter 앱개발·웹사이트 제작·AI 개발 페이지에서 필요한 서비스를 찾아보세요.',
-  alternates: { canonical: `${SITE.domain}/404` },
+  // canonical·og:url 은 실제로 서빙되는 문서(out/404.html)를 가리킨다.
+  // 루트 layout 의 값을 그대로 상속하면 홈을 가리켜 soft-404 로 읽히고,
+  // og:url 만 남겨 두면 canonical 과 어긋난다.
+  alternates: { canonical: `${SITE.domain}/404.html` },
+  openGraph: { url: `${SITE.domain}/404.html` },
   robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
 };
 
