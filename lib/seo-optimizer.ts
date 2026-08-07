@@ -1,4 +1,11 @@
 // SEO 최적화 엔진 - Google & Naver 상위노출 전문
+//
+// ⚠️ 현재 이 모듈은 어디에서도 import 하지 않는다(빌드 산출물에 나가지 않음).
+//    아래 generateLocalBusinessSchema() 는 "수원지점/서울지점/경기지점/인천지점" 처럼
+//    실재하지 않는 지점과 주소를 만들어 낸다. 름랩의 사업장은 동탄 한 곳뿐이며,
+//    지역 페이지는 지점이 아니라 서비스 가능 지역일 뿐이다.
+//    → 이 파일의 스키마 생성기를 다시 배선하지 말 것. 구조화 데이터의 단일 출처는
+//      lib/schema.ts 이고, 지역은 Service.areaServed(Place)로만 표현한다.
 
 export interface SEOMetrics {
   title: string;

@@ -40,7 +40,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:title" content="름랩 REUMLAB | 앱·웹·AI MVP 개발 스튜디오">
 <meta name="twitter:description" content="아이디어를 실제로 운영 가능한 서비스로. 소스코드·운영 권한까지 이관하는 앱·웹·AI 개발 스튜디오, 름랩.">
 <meta name="twitter:image" content="https://reumlab.com/og-image.jpg">
-<!-- Schema.org JSON-LD -->
+<!-- Schema.org JSON-LD
+     ⚠️ 사이트 전역 엔티티(WebSite/#website · Organization/#organization · ProfessionalService/#business)의
+     단일 출처는 lib/schema.ts 다. 이 파일은 Next 레이아웃을 타지 않는 정적 홈이라 같은 값을 손으로
+     맞춰 둔다. lib/schema.ts 의 @id·값을 바꾸면 여기와 scripts/generate-purpose-landings.mjs 도 함께 고칠 것.
+     사업장은 동탄 한 곳뿐 — 지역 페이지가 많다는 이유로 사업체 노드를 복제하지 않는다.
+     가격표(hasOfferCatalog)는 실제 가격 섹션이 렌더되는 이 홈에서만 선언한다. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,21 +54,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@type": "WebSite",
       "@id": "https://reumlab.com/#website",
       "url": "https://reumlab.com/",
-      "name": "REUMLAB · 름랩",
-      "description": "앱·웹·AI MVP 개발, Flutter 앱개발, ERP·SaaS 개발, 소스코드·운영 권한 이관을 제공하는 개발 스튜디오",
+      "name": "름랩",
+      "alternateName": "REUMLAB",
       "inLanguage": "ko-KR",
       "publisher": {"@id": "https://reumlab.com/#organization"}
     },
     {
       "@type": "Organization",
       "@id": "https://reumlab.com/#organization",
-      "name": "REUMLAB · 름랩",
-      "alternateName": "앱·웹·AI MVP 개발 스튜디오 름랩",
+      "name": "름랩",
+      "alternateName": "REUMLAB",
+      "legalName": "앱·웹개발 스튜디오 름랩",
       "url": "https://reumlab.com/",
       "logo": "https://reumlab.com/og-image.jpg",
       "email": "ceo@eternalsix.com",
       "telephone": "010-8111-9370",
-      "sameAs": ["https://naver.me/FORRCoFc", "https://blog.naver.com/reumlab", "https://www.instagram.com/reumlab/", "https://pf.kakao.com/_xkxjQxgn", "https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8"],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "동탄첨단산업1로 58, 307호",
@@ -72,14 +77,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "postalCode": "18469",
         "addressCountry": "KR"
       },
-      "identifier": {"@type": "PropertyValue", "name": "사업자등록번호", "value": "793-12-03247"}
+      "founder": {"@type": "Person", "name": "성아름", "jobTitle": "대표"},
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "010-8111-9370",
+        "email": "ceo@eternalsix.com",
+        "areaServed": "KR",
+        "availableLanguage": ["Korean"]
+      },
+      "identifier": {"@type": "PropertyValue", "name": "사업자등록번호", "value": "793-12-03247"},
+      "sameAs": ["https://naver.me/FORRCoFc", "https://blog.naver.com/reumlab", "https://www.instagram.com/reumlab/", "https://pf.kakao.com/_xkxjQxgn", "https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8"]
     },
     {
-      "@type": ["LocalBusiness", "ProfessionalService"],
-      "@id": "https://reumlab.com/#localbusiness",
-      "name": "REUMLAB · 름랩",
-      "alternateName": "앱·웹·AI MVP 개발 스튜디오 름랩",
-      "description": "앱·웹·AI MVP 개발, Flutter 앱개발, ERP·SaaS 개발, 소스코드·운영 권한 이관을 제공하는 개발 스튜디오. 비개발자 대표도 직접 운영할 수 있는 서비스를 만듭니다.",
+      "@type": "ProfessionalService",
+      "@id": "https://reumlab.com/#business",
+      "name": "름랩",
+      "alternateName": "REUMLAB",
+      "description": "화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 98만 원부터, 앱 580만 원부터(VAT 포함 정액).",
       "url": "https://reumlab.com/",
       "telephone": "010-8111-9370",
       "email": "ceo@eternalsix.com",
@@ -98,15 +113,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "postalCode": "18469",
         "addressCountry": "KR"
       },
-      "areaServed": [
-        {"@type": "Country", "name": "대한민국"},
-        {"@type": "City", "name": "수원"},
-        {"@type": "City", "name": "서울"},
-        {"@type": "AdministrativeArea", "name": "경기도"},
-        {"@type": "City", "name": "화성"},
-        {"@type": "City", "name": "용인"},
-        {"@type": "City", "name": "동탄"}
-      ],
+      "areaServed": {"@type": "Country", "name": "대한민국"},
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],

@@ -2,7 +2,7 @@
 //    홈 내용을 바꾸면 `index.html`과 이 React 트윈을 함께 갱신하세요. 자세히는 README "홈페이지·배포 구조".
 import ReumSalesLanding from '../components/ReumSalesLanding';
 import { getSite } from '../lib/data';
-import { ReumHomeGraphJsonLd, BreadcrumbJsonLd, WebSiteJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
+import { FAQPageJsonLd } from '@/components/JsonLd';
 
 const HOME_FAQS = [
   { q: '앱개발 외주 비용은 보통 얼마인가요?', a: '앱개발 외주 비용은 기능 범위, 화면 수, 관리자 기능, 외부 API 연동 여부에 따라 크게 달라집니다. 름랩의 Flutter 앱 MVP는 앱 라이트 580만 원부터, 회원·결제까지 갖춘 앱 스탠다드는 980만 원입니다(VAT 포함 정액). 정확한 견적은 30분 무료 상담에서 안내드립니다.' },
@@ -19,9 +19,11 @@ export default function Home() {
   const site = getSite();
   return (
     <>
-      <WebSiteJsonLd />
-      <ReumHomeGraphJsonLd />
-      <BreadcrumbJsonLd slug="" />
+      {/*
+        WebSite·Organization·ProfessionalService 는 루트 레이아웃(SiteEntityJsonLd)이 낸다.
+        홈 브레드크럼은 항목이 "홈" 하나뿐이라 의미가 없어 내지 않는다(실제 서빙되는
+        index.html 과도 동일한 구성).
+      */}
       <FAQPageJsonLd items={HOME_FAQS} />
       <ReumSalesLanding site={site} />
     </>

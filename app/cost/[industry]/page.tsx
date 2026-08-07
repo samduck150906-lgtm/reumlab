@@ -67,6 +67,7 @@ export default function CostPage({ params }: Props) {
     <>
       <IndustryServiceJsonLd
         name={name}
+        serviceType="모바일 앱 개발"
         description={`${name} — 간단형·표준형·고급형 가격대와 비용 요인·유지비·절감 방법. 소스코드 이관 포함.`}
         url={canonical}
         faqs={c.faqs}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { SITE } from '@/lib/seo';
+import { SITE, pillarServiceType } from '@/lib/seo';
 import {
   SERVICES,
   REGIONS,
@@ -92,6 +92,7 @@ export default function RegionServicePage({ params }: Props) {
     <>
       <RegionServiceJsonLd
         serviceName={service.ko}
+        serviceType={pillarServiceType(service.slug)}
         regionName={region.full}
         description={`${region.full} ${service.ko} — ${service.priceLine}. 소스코드 이관·직접 운영 교육 포함.`}
         url={canonical}

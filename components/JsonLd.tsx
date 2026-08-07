@@ -1,6 +1,13 @@
-import type { PageSeo } from '@/lib/seo';
 import type { BlogPost } from '@/lib/blog-posts';
-import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
+import { SITE } from '@/lib/seo';
+import {
+  SCHEMA_ID,
+  AREA_KOREA,
+  breadcrumbNode,
+  serviceNode,
+  siteGraph,
+  type Crumb,
+} from '@/lib/schema';
 
 /**
  * JSON-LD 안전 직렬화.
@@ -20,297 +27,152 @@ function ldJson(data: unknown): string {
     .replace(/\u2029/g, '\\u2029');
 }
 
-/** VAT 포함 정액 패키지 — 화면 표기와 1:1 일치 (price rich result 대응) */
-const PACKAGE_OFFERS = [
-  {
-    '@type': 'Offer',
-    name: '웹 스타터',
-    price: '980000',
-    priceCurrency: 'KRW',
-    description: '원페이지 랜딩 · 모바일 반응형 · 약 5일 · 소스코드 전체 이관 · VAT 포함 정액',
-    itemOffered: { '@type': 'Service', name: '웹 MVP 개발', serviceType: '웹사이트·랜딩페이지 제작' },
-  },
-  {
-    '@type': 'Offer',
-    name: '앱 라이트 MVP',
-    price: '5800000',
-    priceCurrency: 'KRW',
-    description: 'Flutter iOS·Android 앱 MVP · 핵심 화면 3~5개 · 약 14일 · 소스코드 전체 이관 · VAT 포함 정액',
-    itemOffered: { '@type': 'Service', name: '앱 MVP 개발', serviceType: 'Flutter 앱개발' },
-  },
-  {
-    '@type': 'Offer',
-    name: '앱 AI',
-    price: '13800000',
-    priceCurrency: 'KRW',
-    description: 'AI 기능 1종(챗봇·추천·요약) + 업무 자동화 · 약 30일 · 소스코드 전체 이관 + 직접 운영 교육 · VAT 포함 정액',
-    itemOffered: { '@type': 'Service', name: 'AI 외주개발·고도화', serviceType: 'AI 기능 개발' },
-  },
-];
-
-export function OrganizationJsonLd() {
-  const home = PAGE_SEO_MAP[''];
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: SITE.name,
-    alternateName: SITE.nameEn,
-    url: SITE.domain + '/',
-    logo: SITE.defaultOgImage,
-    founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: SITE.phone,
-      contactType: 'customer service',
-      email: SITE.email,
-      areaServed: 'KR',
-      availableLanguage: ['Korean'],
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '동탄첨단산업1로 58, 307호',
-      addressLocality: '화성시',
-      addressRegion: '경기도',
-      addressCountry: 'KR',
-    },
-    description: home.description,
-    sameAs: SITE.sameAs,
-  };
-
+/** 단일 노드 스크립트 */
+function LdScript({ data }: { data: Record<string, unknown> }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
+      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', ...data }) }}
     />
   );
 }
 
-export function BreadcrumbJsonLd({ slug }: { slug: string }) {
-  const seo = slug === '' ? PAGE_SEO_MAP[''] : PAGE_SEO_MAP[slug];
-  if (!seo) return null;
-
-  const homeUrl = SITE.domain + '/';
-  const items =
-    slug === ''
-      ? [{ '@type': 'ListItem' as const, position: 1, name: '홈', item: homeUrl }]
-      : [
-          { '@type': 'ListItem' as const, position: 1, name: '홈', item: homeUrl },
-          { '@type': 'ListItem' as const, position: 2, name: seo.h1.slice(0, 100), item: seo.canonical },
-        ];
-
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items,
-  };
-
+/** @graph 스크립트 — 여러 노드를 하나의 블록으로 묶어 @id 참조가 같은 문서 안에서 풀리게 한다 */
+function LdGraph({ graph }: { graph: Record<string, unknown>[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
+      dangerouslySetInnerHTML={{
+        __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }),
+      }}
     />
   );
 }
 
-/** PAGE_SEO_MAP 밖 페이지 */
-/** 홈: Organization + LocalBusiness + 교육/개발 서비스(ProfessionalService) 그래프 */
-export function ReumHomeGraphJsonLd() {
-  const home = PAGE_SEO_MAP[''];
-  const graph = [
-    {
-      '@type': 'Organization',
-      '@id': `${SITE.domain}/#organization`,
-      name: SITE.name,
-      alternateName: SITE.nameEn,
-      url: SITE.domain + '/',
-      logo: SITE.defaultOgImage,
-      founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
-      description: home.description,
-      sameAs: SITE.sameAs,
-    },
-    {
-      '@type': 'LocalBusiness',
-      '@id': `${SITE.domain}/#localbusiness`,
-      name: SITE.company,
-      image: SITE.defaultOgImage,
-      telephone: SITE.phone,
-      email: SITE.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '동탄첨단산업1로 58, 307호',
-        addressLocality: '화성시',
-        addressRegion: '경기도',
-        addressCountry: 'KR',
-      },
-      url: SITE.domain + '/',
-      priceRange: '₩₩',
-      makesOffer: PACKAGE_OFFERS,
-      openingHours: ['Mo-Fr 10:00-18:00'],
-      areaServed: ['KR', '서울', '경기', '수원', '화성', '용인', '동탄'],
-      sameAs: SITE.sameAs,
-      identifier: {
-        '@type': 'PropertyValue',
-        name: '사업자등록번호',
-        value: SITE.bizNo,
-      },
-    },
-    {
-      '@type': 'ProfessionalService',
-      '@id': `${SITE.domain}/#service`,
-      name: `${SITE.name} 앱·웹 개발 및 유지보수 교육`,
-      image: SITE.defaultOgImage,
-      url: SITE.domain + '/',
-      telephone: SITE.phone,
-      description:
-        'AI 보조 개발과 1:1 교육으로 비전공자 대표도 앱·웹을 직접 운영·수정할 수 있도록 돕는 개발 에이전시 서비스.',
-      areaServed: 'KR',
-      provider: { '@id': `${SITE.domain}/#organization` },
-    },
-  ];
+/**
+ * 사이트 전역 엔티티 — WebSite + Organization + ProfessionalService.
+ *
+ * 루트 레이아웃(app/layout.tsx)에서만 호출한다. 개별 페이지에서 또 부르면
+ * 같은 @id 노드가 한 문서에 두 번 나온다. 서비스·랜딩·지역 페이지는 이 노드를 다시
+ * 선언하지 말고 `provider: {"@id": SCHEMA_ID.business}` 로 참조만 하면 된다.
+ */
+export function SiteEntityJsonLd({ description }: { description: string }) {
+  return <LdGraph graph={siteGraph(description)} />;
+}
+
+/** 서비스 페이지: Service + BreadcrumbList */
+export function ServiceJsonLd({
+  url,
+  name,
+  description,
+  serviceType,
+  areaServed,
+  crumbs,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  serviceType?: string;
+  areaServed?: Record<string, unknown>;
+  crumbs: Crumb[];
+}) {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
+    <LdGraph
+      graph={[
+        serviceNode({ url, name, description, serviceType, areaServed }),
+        breadcrumbNode(crumbs, url),
+      ]}
     />
   );
+}
+
+/** BreadcrumbList 단독 (임의 깊이) */
+export function BreadcrumbJsonLdTrail({ items, pageUrl }: { items: Crumb[]; pageUrl?: string }) {
+  return <LdScript data={breadcrumbNode(items, pageUrl)} />;
 }
 
 export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.publishedAt,
-    dateModified: post.publishedAt,
-    author: {
-      '@type': 'Organization',
-      name: SITE.name,
-      url: SITE.domain + '/',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: SITE.name,
-      logo: { '@type': 'ImageObject', url: SITE.defaultOgImage },
-    },
-    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-    keywords: post.keywords.join(', '),
-    inLanguage: 'ko-KR',
-  };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
-  );
-}
-
-export function BreadcrumbJsonLdCustom({ seo }: { seo: PageSeo }) {
-  const homeUrl = SITE.domain + '/';
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem' as const, position: 1, name: '홈', item: homeUrl },
-      { '@type': 'ListItem' as const, position: 2, name: seo.h1.slice(0, 100), item: seo.canonical },
-    ],
-  };
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson(data) }}
+    <LdScript
+      data={{
+        '@type': 'Article',
+        '@id': `${url}#article`,
+        headline: post.title,
+        description: post.description,
+        datePublished: post.publishedAt,
+        dateModified: post.publishedAt,
+        // 사이트 전역 그래프(루트 레이아웃)의 Organization 을 참조 — 별도 조직 노드를 만들지 않는다
+        author: { '@id': SCHEMA_ID.organization },
+        publisher: { '@id': SCHEMA_ID.organization },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        keywords: post.keywords.join(', '),
+        inLanguage: 'ko-KR',
+      }}
     />
   );
 }
 
-/** 프로그래매틱 랜딩·허브 페이지용 ProfessionalService + BreadcrumbList 그래프 */
+/**
+ * 랜딩·허브 페이지(/l/*, /h/*, /soho) — Service + BreadcrumbList.
+ *
+ * 이전에는 페이지마다 ProfessionalService 를 주소·전화까지 붙여 선언했다. 그러면 지역
+ * 랜딩 수백 개가 각각 별도 사업장으로 읽힌다(실제 사업장은 동탄 한 곳뿐).
+ * → 사업체 노드는 루트의 #business 하나만 두고, 여기서는 provider 로 참조만 한다.
+ */
 export function LandingServiceJsonLd({
   name,
   description,
   url,
+  serviceType,
+  areaServed,
   crumbs,
 }: {
   name: string;
   description: string;
   url: string;
-  crumbs: { name: string; url: string }[];
+  serviceType?: string;
+  areaServed?: Record<string, unknown>;
+  crumbs: Crumb[];
 }) {
-  const graph = [
-    {
-      '@type': 'ProfessionalService',
-      '@id': `${url}#service`,
-      name,
-      description,
-      url,
-      image: SITE.defaultOgImage,
-      telephone: SITE.phone,
-      email: SITE.email,
-      areaServed: 'KR',
-      priceRange: '₩₩',
-      provider: { '@id': `${SITE.domain}/#organization` },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '동탄첨단산업1로 58, 307호',
-        addressLocality: '화성시',
-        addressRegion: '경기도',
-        addressCountry: 'KR',
-      },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${url}#breadcrumb`,
-      itemListElement: crumbs.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        item: c.url,
-      })),
-    },
-  ];
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
+    <ServiceJsonLd
+      url={url}
+      name={name}
+      description={description}
+      serviceType={serviceType}
+      areaServed={areaServed}
+      crumbs={crumbs}
     />
-  );
-}
-
-export function WebSiteJsonLd() {
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': `${SITE.domain}/#website`,
-    name: SITE.name,
-    alternateName: SITE.nameEn,
-    url: SITE.domain + '/',
-    inLanguage: 'ko-KR',
-    publisher: { '@id': `${SITE.domain}/#organization` },
-    // SearchAction(`/blog?q=`)을 선언하고 있었으나 정적 export라 사이트 검색 기능 자체가 없다.
-    // 동작하지 않는 기능을 스키마로 주장하면 "화면에 없는 정보를 스키마에 넣는" 위반이라 제거.
-    // 사이트 내 검색을 실제로 붙이면 그때 다시 선언한다.
-  };
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
   );
 }
 
 type FaqItem = { q: string; a: string };
 
 export function FAQPageJsonLd({ items }: { items: FaqItem[] }) {
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: items.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: { '@type': 'Answer', text: item.a },
-    })),
-  };
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
+    <LdScript
+      data={{
+        '@type': 'FAQPage',
+        mainEntity: items.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: { '@type': 'Answer', text: item.a },
+        })),
+      }}
+    />
   );
 }
 
-/** 지역×서비스 페이지: LocalBusiness + Service + FAQPage + BreadcrumbList 그래프 */
+/**
+ * 지역×서비스 페이지 — Service + BreadcrumbList (+ 기존 FAQPage 유지).
+ *
+ * 지역 페이지는 지점이 아니다. 예전에는 페이지마다 LocalBusiness 를 같은 동탄 주소로
+ * 복제해 350개 지점이 있는 것처럼 보였다 → 제거하고, 지역은 Service.areaServed(Place)로만
+ * 표현한다. 사업장 정보는 루트의 #business 하나가 담당한다.
+ */
 export function RegionServiceJsonLd({
   serviceName,
+  serviceType,
   regionName,
   description,
   url,
@@ -318,58 +180,22 @@ export function RegionServiceJsonLd({
   crumbs,
 }: {
   serviceName: string;
+  serviceType?: string;
   regionName: string;
   description: string;
   url: string;
-  faqs: { q: string; a: string }[];
-  crumbs: { name: string; url: string }[];
+  faqs: FaqItem[];
+  crumbs: Crumb[];
 }) {
   const graph: Record<string, unknown>[] = [
-    {
-      '@type': 'LocalBusiness',
-      '@id': `${url}#localbusiness`,
-      name: `${SITE.company} — ${regionName} ${serviceName}`,
-      image: SITE.defaultOgImage,
+    serviceNode({
       url,
-      telephone: SITE.phone,
-      email: SITE.email,
-      priceRange: '₩₩',
-      openingHours: ['Mo-Fr 10:00-18:00'],
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '동탄첨단산업1로 58, 307호',
-        addressLocality: '화성시',
-        addressRegion: '경기도',
-        addressCountry: 'KR',
-      },
-      areaServed: { '@type': 'Place', name: regionName },
-      sameAs: SITE.sameAs,
-      identifier: {
-        '@type': 'PropertyValue',
-        name: '사업자등록번호',
-        value: SITE.bizNo,
-      },
-    },
-    {
-      '@type': 'Service',
-      '@id': `${url}#service`,
       name: `${regionName} ${serviceName}`,
-      serviceType: serviceName,
       description,
-      url,
+      serviceType: serviceType ?? serviceName,
       areaServed: { '@type': 'Place', name: regionName },
-      provider: { '@id': `${SITE.domain}/#organization` },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${url}#breadcrumb`,
-      itemListElement: crumbs.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        item: c.url,
-      })),
-    },
+    }),
+    breadcrumbNode(crumbs, url),
   ];
   if (faqs.length > 0) {
     graph.push({
@@ -382,49 +208,28 @@ export function RegionServiceJsonLd({
       })),
     });
   }
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
-    />
-  );
+  return <LdGraph graph={graph} />;
 }
 
-/** 업종×앱개발 페이지: Service + FAQPage + BreadcrumbList 그래프 */
+/** 업종×서비스 페이지 — Service + BreadcrumbList (+ 기존 FAQPage 유지) */
 export function IndustryServiceJsonLd({
   name,
+  serviceType,
   description,
   url,
   faqs,
   crumbs,
 }: {
   name: string;
+  serviceType?: string;
   description: string;
   url: string;
-  faqs: { q: string; a: string }[];
-  crumbs: { name: string; url: string }[];
+  faqs: FaqItem[];
+  crumbs: Crumb[];
 }) {
   const graph: Record<string, unknown>[] = [
-    {
-      '@type': 'Service',
-      '@id': `${url}#service`,
-      name,
-      serviceType: name,
-      description,
-      url,
-      areaServed: 'KR',
-      provider: { '@id': `${SITE.domain}/#organization` },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${url}#breadcrumb`,
-      itemListElement: crumbs.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        item: c.url,
-      })),
-    },
+    serviceNode({ url, name, description, serviceType: serviceType ?? name, areaServed: AREA_KOREA }),
+    breadcrumbNode(crumbs, url),
   ];
   if (faqs.length > 0) {
     graph.push({
@@ -437,15 +242,10 @@ export function IndustryServiceJsonLd({
       })),
     });
   }
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
-    />
-  );
+  return <LdGraph graph={graph} />;
 }
 
-/** 가이드·비교 페이지: Article (+ FAQPage) + BreadcrumbList 그래프 */
+/** 가이드·비교 페이지 — Article + BreadcrumbList (+ 기존 FAQPage 유지) */
 export function GuideArticleJsonLd({
   title,
   description,
@@ -460,8 +260,8 @@ export function GuideArticleJsonLd({
   url: string;
   publishedAt: string;
   keywords: string[];
-  faqs?: { q: string; a: string }[];
-  crumbs: { name: string; url: string }[];
+  faqs?: FaqItem[];
+  crumbs: Crumb[];
 }) {
   const graph: Record<string, unknown>[] = [
     {
@@ -471,26 +271,13 @@ export function GuideArticleJsonLd({
       description,
       datePublished: publishedAt,
       dateModified: publishedAt,
-      author: { '@type': 'Organization', name: SITE.name, url: SITE.domain + '/' },
-      publisher: {
-        '@type': 'Organization',
-        name: SITE.name,
-        logo: { '@type': 'ImageObject', url: SITE.defaultOgImage },
-      },
+      author: { '@id': SCHEMA_ID.organization },
+      publisher: { '@id': SCHEMA_ID.organization },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       keywords: keywords.join(', '),
       inLanguage: 'ko-KR',
     },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${url}#breadcrumb`,
-      itemListElement: crumbs.map((c, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        name: c.name,
-        item: c.url,
-      })),
-    },
+    breadcrumbNode(crumbs, url),
   ];
   if (faqs && faqs.length > 0) {
     graph.push({
@@ -503,28 +290,8 @@ export function GuideArticleJsonLd({
       })),
     });
   }
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: ldJson({ '@context': 'https://schema.org', '@graph': graph }) }}
-    />
-  );
+  return <LdGraph graph={graph} />;
 }
 
-type Crumb = { name: string; url: string };
-
-export function BreadcrumbJsonLdTrail({ items }: { items: Crumb[] }) {
-  const data = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((c, i) => ({
-      '@type': 'ListItem' as const,
-      position: i + 1,
-      name: c.name,
-      item: c.url,
-    })),
-  };
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: ldJson(data) }} />
-  );
-}
+/** 홈 URL — 브레드크럼 1단계 공용 */
+export const HOME_CRUMB: Crumb = { name: '홈', url: SITE.domain + '/' };

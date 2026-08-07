@@ -241,6 +241,7 @@ export default function SohoPage() {
       <LandingServiceJsonLd
         name="검색 노출되는 소상공인·자영업자 홈페이지 제작"
         description="광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음."
+        serviceType="웹사이트 개발"
         url={PAGE_URL}
         crumbs={[
           { name: '홈', url: `${SITE.domain}/` },

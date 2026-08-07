@@ -571,20 +571,130 @@ ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).joi
 </div>
 <script src="/script.js"></script>`;
 
+/**
+ * 사이트 전역 엔티티 — WebSite / Organization / ProfessionalService.
+ *
+ * ⚠️ 단일 출처는 `lib/schema.ts` 다. 이 파일은 Next 번들 밖(순수 node)이라 TS 를 import 할 수
+ * 없어 같은 값을 손으로 맞춰 둔다. lib/schema.ts 의 @id·값을 바꾸면 여기와 index.html 도
+ * 함께 고칠 것. (@id 가 어긋나면 홈·하위 페이지의 엔티티가 서로 다른 것으로 읽힌다.)
+ *
+ * 사업장은 동탄 한 곳뿐이다. 목적별 랜딩마다 별도 사업체를 만들지 않고,
+ * 아래 #business 하나를 Service.provider 가 참조한다.
+ */
+const SCHEMA_ID = {
+  website: `${DOMAIN}/#website`,
+  organization: `${DOMAIN}/#organization`,
+  business: `${DOMAIN}/#business`,
+};
+const SAME_AS = [
+  'https://naver.me/FORRCoFc',
+  'https://blog.naver.com/reumlab',
+  'https://www.instagram.com/reumlab/',
+  'https://pf.kakao.com/_xkxjQxgn',
+  'https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8',
+];
+const POSTAL_ADDRESS = {
+  '@type': 'PostalAddress',
+  streetAddress: '동탄첨단산업1로 58, 307호',
+  addressLocality: '화성시',
+  addressRegion: '경기도',
+  postalCode: '18469',
+  addressCountry: 'KR',
+};
+const BUSINESS_DESC =
+  '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 98만 원부터, 앱 580만 원부터(VAT 포함 정액).';
+
+const SITE_ENTITY_NODES = [
+  {
+    '@type': 'WebSite',
+    '@id': SCHEMA_ID.website,
+    url: DOMAIN + '/',
+    name: '름랩',
+    alternateName: 'REUMLAB',
+    inLanguage: 'ko-KR',
+    publisher: { '@id': SCHEMA_ID.organization },
+  },
+  {
+    '@type': 'Organization',
+    '@id': SCHEMA_ID.organization,
+    name: '름랩',
+    alternateName: 'REUMLAB',
+    legalName: '앱·웹개발 스튜디오 름랩',
+    url: DOMAIN + '/',
+    logo: `${DOMAIN}/og-image.jpg`,
+    email: 'ceo@eternalsix.com',
+    telephone: '010-8111-9370',
+    address: POSTAL_ADDRESS,
+    founder: { '@type': 'Person', name: '성아름', jobTitle: '대표' },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      telephone: '010-8111-9370',
+      email: 'ceo@eternalsix.com',
+      areaServed: 'KR',
+      availableLanguage: ['Korean'],
+    },
+    identifier: { '@type': 'PropertyValue', name: '사업자등록번호', value: '793-12-03247' },
+    sameAs: SAME_AS,
+  },
+  {
+    '@type': 'ProfessionalService',
+    '@id': SCHEMA_ID.business,
+    name: '름랩',
+    alternateName: 'REUMLAB',
+    url: DOMAIN + '/',
+    image: `${DOMAIN}/og-image.jpg`,
+    description: BUSINESS_DESC,
+    telephone: '010-8111-9370',
+    email: 'ceo@eternalsix.com',
+    address: POSTAL_ADDRESS,
+    areaServed: { '@type': 'Country', name: '대한민국' },
+    priceRange: '₩₩',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
+      closes: '18:00',
+    },
+    parentOrganization: { '@id': SCHEMA_ID.organization },
+    sameAs: SAME_AS,
+  },
+];
+
+/** JSON-LD 안전 직렬화 — 값에 `</script>` 가 섞여 script 가 조기 종료되는 것을 막는다 */
+function ldJson(data) {
+  return JSON.stringify(data)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+}
+
 function jsonLd(land) {
   const url = `${DOMAIN}/${land.slug}/`;
   const graph = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Service', name: land.navLabel + ' 개발', serviceType: land.navLabel, provider: { '@type': 'Organization', name: 'REUMLAB · 름랩', url: DOMAIN + '/' }, areaServed: { '@type': 'Country', name: '대한민국' }, description: land.metaDesc, url },
-      { '@type': 'BreadcrumbList', itemListElement: [
+      ...SITE_ENTITY_NODES,
+      {
+        '@type': 'Service',
+        '@id': `${url}#service`,
+        name: land.navLabel + ' 개발',
+        serviceType: land.navLabel,
+        url,
+        description: land.metaDesc,
+        provider: { '@id': SCHEMA_ID.business },
+        areaServed: { '@type': 'Country', name: '대한민국' },
+      },
+      { '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`, itemListElement: [
         { '@type': 'ListItem', position: 1, name: '홈', item: DOMAIN + '/' },
         { '@type': 'ListItem', position: 2, name: land.navLabel, item: url },
       ] },
-      { '@type': 'FAQPage', mainEntity: FAQ_COMMON.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+      { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: FAQ_COMMON.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
     ],
   };
-  return `<script type="application/ld+json">\n${JSON.stringify(graph)}\n</script>`;
+  return `<script type="application/ld+json">\n${ldJson(graph)}\n</script>`;
 }
 
 function renderLanding(land) {

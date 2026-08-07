@@ -10,6 +10,19 @@ export const SITE = {
   phoneHref: 'tel:01081119370',
   address: '경기도 화성시 동탄첨단산업1로 58, 307호(영천동)',
   email: 'ceo@eternalsix.com',
+  /**
+   * 구조화 데이터(PostalAddress)용 주소 분해 — 위 `address` 문자열과 같은 사업장 하나다.
+   * JSON-LD가 여러 파일에서 주소를 각자 하드코딩하던 것을 여기로 모은다(lib/schema.ts 단일 소비).
+   * 값은 기존 index.html / components/JsonLd.tsx 에 이미 있던 실제 값을 그대로 옮긴 것이며,
+   * 새로 만들어 낸 정보가 아니다.
+   */
+  addressParts: {
+    streetAddress: '동탄첨단산업1로 58, 307호',
+    addressLocality: '화성시',
+    addressRegion: '경기도',
+    postalCode: '18469',
+    addressCountry: 'KR',
+  },
   /** 카카오톡 채널 — 전화 부담을 낮춘 저마찰 상담 채널(홈·전 페이지 CTA·플로팅 버튼 공용) */
   kakaoChannel: 'https://pf.kakao.com/_xkxjQxgn',
   company: '앱·웹개발 스튜디오 름랩',
@@ -922,6 +935,44 @@ export const NOINDEX_PILLAR_SLUGS = new Set(['웹개발', '플랫폼개발', '�
 export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter(
   (s) => s !== '' && !REDIRECTED_PILLAR_SLUGS.has(s),
 );
+
+/**
+ * 필러 페이지의 `Service.serviceType` — "무엇을 파는가"의 분류다.
+ *
+ * 검색 키워드(`primary`/`keywords`)를 그대로 넣지 않는다. serviceType 은 랭킹 필드가 아니라
+ * 서비스 종류를 알려주는 값이라, 키워드를 밀어 넣으면 스터핑일 뿐 얻는 게 없다.
+ * 여기 없는 슬러그는 Service 스키마를 내지 않는다(= 서비스 판매 페이지가 아니라고 판단한 것).
+ */
+export const PILLAR_SERVICE_TYPE: Record<string, string> = {
+  // 한글 필러 (현재 noindex 이지만 렌더는 되므로 스키마도 함께 유지)
+  웹개발: '웹사이트 개발',
+  플랫폼개발: '플랫폼 개발',
+  기업용ERP: 'ERP 시스템 개발',
+  // 영문 랜딩
+  'app-development': '모바일 앱 개발',
+  'web-development': '웹사이트 개발',
+  'mvp-development': 'MVP 개발',
+  'flutter-development': '모바일 앱 개발',
+  // 한글 서비스 허브
+  mvp: 'MVP 개발',
+  flutter: '모바일 앱 개발',
+  'ai-development': 'AI 자동화 구축',
+  'windows-app-development': '데스크톱 앱 개발',
+  'source-handover': '소스코드 이관',
+  'admin-page-development': '관리자 시스템 개발',
+  'academy-shopping-mall': '쇼핑몰 개발',
+  'realestate-landing': '랜딩페이지 제작',
+  maintenance: '앱·웹 유지보수',
+  renewal: '웹사이트 리뉴얼',
+  'cafe24-limit': '쇼핑몰 맞춤 개발',
+  'nocode-limit': '맞춤 개발 전환',
+  'app-agency': '모바일 앱 개발',
+  'website-agency': '웹사이트 개발',
+};
+
+export function pillarServiceType(slug: string): string | undefined {
+  return PILLAR_SERVICE_TYPE[slug];
+}
 
 export function getSeoBySlug(slug: string): PageSeo | undefined {
   return PAGE_SEO_MAP[slug];

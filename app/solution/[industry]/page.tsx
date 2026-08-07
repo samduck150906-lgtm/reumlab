@@ -67,6 +67,7 @@ export default function SolutionPage({ params }: Props) {
     <>
       <IndustryServiceJsonLd
         name={`${name} 구축`}
+        serviceType="업무 시스템 구축"
         description={`${name} — 기능 모듈·기술 스택·연동·단계별 도입 로드맵. 소스코드 이관 포함.`}
         url={canonical}
         faqs={s.faqs}

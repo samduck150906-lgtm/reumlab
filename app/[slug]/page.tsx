@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { ALL_SLUGS, PAGE_SEO_MAP, SITE, NOINDEX_PILLAR_SLUGS } from '@/lib/seo';
-import { OrganizationJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
+import { ALL_SLUGS, PAGE_SEO_MAP, SITE, NOINDEX_PILLAR_SLUGS, pillarServiceType } from '@/lib/seo';
+import { ServiceJsonLd, HOME_CRUMB } from '@/components/JsonLd';
 import SeoServicePage from '@/components/SeoServicePage';
 
 type Props = { params: { slug: string } };
@@ -77,10 +77,17 @@ export default function SeoSlugPage({ params }: Props) {
   const seo = PAGE_SEO_MAP[slug];
   if (!seo) notFound();
 
+  // Organization·사업체 노드는 루트 레이아웃(SiteEntityJsonLd)이 이미 내보낸다.
+  // 여기서는 이 페이지가 파는 서비스 하나만 선언하고 provider 로 #business 를 참조한다.
   return (
     <>
-      <OrganizationJsonLd />
-      <BreadcrumbJsonLd slug={slug} />
+      <ServiceJsonLd
+        url={seo.canonical}
+        name={seo.h1}
+        description={seo.serviceDesc || seo.description}
+        serviceType={pillarServiceType(slug)}
+        crumbs={[HOME_CRUMB, { name: seo.h1.slice(0, 100), url: seo.canonical }]}
+      />
       <SeoServicePage seo={seo} pageSlug={slug} />
     </>
   );

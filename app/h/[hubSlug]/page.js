@@ -42,7 +42,10 @@ export async function generateMetadata({ params }) {
 
 export default function HubRoute({ params }) {
   const hub = getHubBySlug(params.hubSlug);
-  const url = `${BASE}/h/${params.hubSlug}/`;
+  // 구조화 데이터 URL은 metadata의 canonical과 같아야 한다.
+  // 중복 허브(mobile-app)는 canonical이 대표 허브를 가리키므로 스키마도 같은 URL을 쓴다.
+  const canonicalSlug = DUP_HUB_CANONICAL[params.hubSlug] || params.hubSlug;
+  const url = `${BASE}/h/${canonicalSlug}/`;
   // 색인되는 허브에만 고유 본문/FAQ가 있으므로, 그 경우에만 FAQPage 스키마를 낸다
   const content = hubShouldIndex(params.hubSlug) ? getHubContent(params.hubSlug) : undefined;
   return (

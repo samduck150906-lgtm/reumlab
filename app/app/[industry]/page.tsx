@@ -66,6 +66,7 @@ export default function IndustryPage({ params }: Props) {
     <>
       <IndustryServiceJsonLd
         name={ind.keyword}
+        serviceType="모바일 앱 개발"
         description={`${ind.keyword} — ${ind.coreFeatures}. ${ind.ko} 운영에 필요한 핵심 기능 MVP. 소스코드 이관 포함.`}
         url={canonical}
         faqs={ind.faqs}

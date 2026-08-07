@@ -82,6 +82,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
     <>
       <IndustryServiceJsonLd
         name={`${d.ko} 홈페이지 제작`}
+        serviceType="웹사이트 개발"
         description={`${d.ko} 홈페이지 제작 — 페이지 구성·검색 노출·비용. 월 관리비 없이 소스코드 이관·직접 수정.`}
         url={canonical}
         faqs={c.faqs}
