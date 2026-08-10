@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: CANONICAL,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '개발 가이드 모음 | 름랩',
     description: '앱개발 비용·견적·MVP·업종별 앱 만들기까지 실전 가이드 모음.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '개발 가이드 모음 — 름랩' }],

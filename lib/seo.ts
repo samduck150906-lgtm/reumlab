@@ -1,7 +1,17 @@
 import { RELATED_KEYWORDS_BY_PILLAR, mergeRelatedKeywords } from './keyword-coverage';
 
 export const SITE = {
+  /**
+   * 사이트 대표 상호. 검색엔진이 "이 사이트의 이름"으로 읽는 모든 출력이 이 값을 쓴다
+   * — og:site_name, 구조화 데이터 WebSite.name·Organization.name, title 템플릿.
+   * 한국어 검색(네이버)에서 사이트명 인식의 1차 신호라 표기를 갈라 쓰면 안 된다.
+   */
   name: '름랩',
+  /**
+   * 영문 표기. alternateName(구조화 데이터)과 사람이 읽는 본문 문구 전용이다.
+   * og:site_name 에는 쓰지 말 것 — 한때 라우트 16곳이 여기를 참조해 페이지 1,053개가
+   * "REUMLAB", 정적 페이지 9개가 "REUMLAB · 름랩", schema 는 "름랩" 이라 3중으로 갈렸다.
+   */
   nameEn: 'REUMLAB',
   domain: 'https://reumlab.com',
   defaultOgImage: 'https://reumlab.com/og-image.jpg',

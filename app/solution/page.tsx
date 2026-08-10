@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: CANONICAL,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '업종별 솔루션·시스템 구축 100개 업종 | 름랩',
     description: '업종마다 기능 모듈·기술 스택·연동·도입 단계를 정리한 업종별 솔루션 구축 인덱스.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 솔루션 구축 — 름랩' }],

@@ -1,6 +1,7 @@
 import { getLandings, getLandingBySlug, getHubBySlug, landingIndexable, landingRedirectTarget } from '../../../lib/data';
 import LandingPage from '../../../components/LandingPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
+import { SITE } from '../../../lib/seo';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -17,7 +18,13 @@ export async function generateMetadata({ params }) {
   return {
     title: { absolute: landing.title },
     description: landing.description,
+    // ⚠️ 페이지 metadata 의 openGraph 는 루트 layout 의 openGraph 를 "대체"한다(병합이 아니다).
+    //    여기서 type·locale·siteName 을 다시 적지 않으면 이 라우트에서만 통째로 사라진다.
+    //    실제로 /l/ 311개 · /h/ 38개에서 og:type·og:locale·og:site_name 이 빠져 있었다.
     openGraph: {
+      type: 'website',
+      locale: 'ko_KR',
+      siteName: SITE.name,
       title: landing.title,
       description: landing.description,
       url,

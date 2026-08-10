@@ -203,10 +203,10 @@ const LANDINGS = [
   {
     slug: 'ai-automation', navLabel: 'AI 업무 자동화',
     metaTitle: 'AI 업무 자동화 개발 — 반복 업무를 AI 흐름으로 | 름랩 REUMLAB',
-    metaDesc: '문서 작성·검색·분류·콘텐츠·영업 업무를 귀사의 데이터와 운영 방식에 맞게 자동화합니다. 기존 서비스 AI 추가부터 AI SaaS 출시까지. 름랩.',
+    metaDesc: '문서 작성·검색·분류·콘텐츠·영업 업무를 회사가 실제로 쓰는 데이터와 업무 방식에 맞게 자동화합니다. 기존 서비스 AI 추가부터 AI SaaS 출시까지. 름랩.',
     eyebrow: 'AI 업무 자동화',
     h1: 'AI 업무 자동화 개발<br><span class="hl">사람이 반복하던 일을 AI가 처리하는 흐름으로</span>',
-    sub: '문서 작성, 검색, 분류, 콘텐츠 제작, 영업 업무를 귀사의 데이터와 운영 방식에 맞게 자동화합니다.',
+    sub: '문서 작성, 검색, 분류, 콘텐츠 제작, 영업 업무를 회사가 실제로 쓰는 데이터와 업무 방식에 맞게 자동화합니다.',
     subline: '반복 업무 진단 · 자동화 설계 · AI 연동 · 검수 흐름',
     serviceType: 'AI 기능·업무 자동화',
     audience: ['매일 같은 문서·콘텐츠를 반복 작성하는 회사', '영업 자료·제안서를 자동화하려는 기업', '내부 문서 검색이 어려운 조직', '기존 서비스에 AI 기능을 넣으려는 사업자', 'AI SaaS를 상품화하려는 창업자'],
@@ -862,7 +862,7 @@ ${TRACKING_HEAD}
 <meta name="theme-color" content="#0a1830">
 <meta name="description" content="${esc(land.metaDesc)}">
 <link rel="canonical" href="${url}">
-<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:url" content="${url}"><meta property="og:site_name" content="REUMLAB · 름랩">
+<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR"><meta property="og:url" content="${url}"><meta property="og:site_name" content="름랩">
 <meta property="og:title" content="${esc(land.metaTitle)}"><meta property="og:description" content="${esc(land.metaDesc)}">
 <meta property="og:image" content="${DOMAIN}/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(land.metaTitle)}"><meta name="twitter:description" content="${esc(land.metaDesc)}"><meta name="twitter:image" content="${DOMAIN}/og-image.jpg">

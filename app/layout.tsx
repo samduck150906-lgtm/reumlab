@@ -30,7 +30,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: home.canonical,
-    siteName: SITE.nameEn,
+    /*
+      og:site_name 은 구조화 데이터 WebSite.name 과 같아야 한다.
+      schema 는 name="름랩" · alternateName="REUMLAB" 인데 여기만 영문을 쓰고 있었고,
+      정적으로 서빙되는 홈(index.html)과 목적별 랜딩 9개는 또 "REUMLAB · 름랩" 이라
+      한 사이트가 사이트명 세 가지를 동시에 말하고 있었다. 한국어 검색(네이버)에서
+      사이트명 인식의 1차 신호라 대표 한국어 상호로 통일한다. 영문은 alternateName 이 맡는다.
+    */
+    siteName: SITE.name,
     title: home.ogTitle,
     description: home.ogDescription,
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: home.ogTitle }],

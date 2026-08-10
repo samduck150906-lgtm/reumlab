@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: 'ko_KR',
       url: canonical,
-      siteName: SITE.nameEn,
+      siteName: SITE.name,
       title: post.title,
       description: post.description,
       publishedTime: post.publishedAt,

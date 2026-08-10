@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: CANONICAL,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '업종별 앱 개발 비용 100개 업종 | 름랩',
     description: '업종마다 가격대·비용 요인·절감 방법을 정리한 업종별 앱 개발 비용 인덱스. VAT 포함 정액.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 앱 개발 비용 — 름랩' }],

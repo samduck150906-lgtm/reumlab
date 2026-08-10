@@ -71,7 +71,10 @@ function buildServiceIntentLandings() {
         slug,
         keyword,
         title: `${keyword} | 름랩 REUMLAB`,
-        description: `${keyword} 문의하세요. ${svc.koFull} 견적·상담 - 이터널식스 름랩.`,
+        // 사이트명 표기는 '름랩'(= WebSite.name)으로 통일한다.
+        // '이터널식스 름랩'은 이 108개 description 에만 나오고 title·footer·schema·llms.txt
+        // 어디에도 없던 표기라, 검색결과에 노출되는 문장에서만 다른 상호가 보이던 상태였다.
+        description: `${keyword} 문의하세요. ${svc.koFull} 견적·상담 - 름랩.`,
         pattern: 'service_intent',
         serviceKey: svc.key,
         intentKey: intent.key,

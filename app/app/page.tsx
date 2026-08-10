@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: CANONICAL,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '업종별 앱 개발 100개 업종 | 름랩',
     description: '업종마다 기능·비용·솔루션을 정리한 업종별 앱 개발 인덱스. Flutter MVP·소스코드 이관.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 앱 개발 — 름랩' }],

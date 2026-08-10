@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: PAGE_URL,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩',
     description:
       '광고비 0원으로도 손님이 먼저 찾아오는 검색 최적화 홈페이지. 49만원부터 · 소스코드 전체 이관 · 월 관리비 없음.',

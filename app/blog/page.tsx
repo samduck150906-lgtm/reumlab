@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     url: canonical,
-    siteName: SITE.nameEn,
+    siteName: SITE.name,
     title: '창업자를 위한 앱·웹·외주 인사이트 | 름랩',
     description: '비전공 대표도 읽을 수 있는 개발·운영 칼럼. 검색 유입용 롱테일 주제를 꾸준히 확장합니다.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: 'Reum Lab 블로그' }],

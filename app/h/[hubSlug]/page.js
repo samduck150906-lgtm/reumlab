@@ -2,6 +2,7 @@ import { getClusters, getHubBySlug, hubShouldIndex } from '../../../lib/data';
 import { getHubContent } from '../../../lib/hub-content';
 import HubPage from '../../../components/HubPage';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '../../../components/JsonLd';
+import { SITE } from '../../../lib/seo';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 
@@ -26,7 +27,12 @@ export async function generateMetadata({ params }) {
   return {
     title: { absolute: title },
     description,
+    // ⚠️ 페이지 openGraph 는 루트 layout 의 것을 대체한다 — type·locale·siteName 을 다시 적지 않으면
+    //    이 라우트에서만 사라진다(실제로 허브 38개에서 빠져 있었다).
     openGraph: {
+      type: 'website',
+      locale: 'ko_KR',
+      siteName: SITE.name,
       title,
       description,
       // og:url 은 canonical 과 같아야 한다. 중복 허브(mobile-app)는 canonical 이

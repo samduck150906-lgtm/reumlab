@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: 'ko_KR',
       url: seo.canonical,
-      siteName: SITE.nameEn,
+      siteName: SITE.name,
       title: seo.ogTitle,
       description: seo.ogDescription,
       images: [
