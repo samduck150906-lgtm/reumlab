@@ -22,6 +22,16 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/website/">업종별 홈페이지 제작</Link>
           <Link href="/blog/">블로그</Link>
         </nav>
+        {/*
+          정보성·신뢰 콘텐츠 허브.
+          가이드 40건과 개발 사례 15건이 있는데도 /guide/ 허브 인바운드가 12개뿐이었다
+          (블로그 허브는 여기에 있어 1,400여 개). 발견 경로를 같은 수준으로 맞춘다.
+        */}
+        <nav className="footer-info" aria-label="자료" style={{ marginBottom: 14, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
+          <Link href="/guide/">개발 가이드</Link>
+          <Link href="/portfolio/">개발 사례</Link>
+          <Link href="/cost/">업종별 개발 비용</Link>
+        </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
           {SITE.company}
           <br />

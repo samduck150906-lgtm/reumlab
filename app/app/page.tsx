@@ -6,6 +6,10 @@ import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
 import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import { guidesForService, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 
 const CANONICAL = `${SITE.domain}/app/`;
 
@@ -131,6 +135,22 @@ export default function IndustryHubPage() {
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
+          {/* 문의 전 판단에 필요한 정보성 가이드 — 매핑은 lib/content-cluster.ts 단일 출처 */}
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>문의 전에 확인하면 좋은 가이드</h2>
+            <div className="link-grid">
+              {resolveCluster(guidesForService('/app/'), {
+                guide: getGuide,
+                compare: getCompare,
+                blog: getBlogPostBySlug,
+              }).map((g) => (
+                <Link key={g.href} href={g.href}>
+                  {g.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 인덱스·서비스</h2>
             <div className="link-grid">
               <Link href="/cost/">업종별 앱 개발 비용</Link>

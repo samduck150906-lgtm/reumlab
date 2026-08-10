@@ -4,6 +4,10 @@ import { SITE } from '@/lib/seo';
 import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
 import { projectsForService, CATEGORIES, projectCategories } from '@/lib/portfolio';
+import { guidesForService, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 
 // 실제 존재하는 블로그 슬러그로만 매칭한다(404 방지). 위에서부터 first-match.
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
@@ -28,6 +32,15 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
   // 이 서비스와 이어지는 실제 개발 사례(lib/portfolio). 매핑이 없는 허브는 빈 배열이므로
   // 사례가 없는 서비스에 무관한 사례가 붙는 일이 없다.
   const cases = pageSlug ? projectsForService(`/${pageSlug}/`) : [];
+  // 이 서비스를 검토하는 사람이 문의 전에 확인할 정보성 콘텐츠(lib/content-cluster).
+  // 매핑이 없는 허브는 빈 배열 → 관련 없는 가이드가 붙지 않는다.
+  const guides = pageSlug
+    ? resolveCluster(guidesForService(`/${pageSlug}/`), {
+        guide: getGuide,
+        compare: getCompare,
+        blog: getBlogPostBySlug,
+      })
+    : [];
   return (
     <>
       {seo.faqs && seo.faqs.length > 0 ? <FAQPageJsonLd items={seo.faqs} /> : null}
@@ -230,6 +243,24 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
                 <strong> 전국 어디서나 동일한 조건</strong>으로 진행합니다.
               </p>
+            </div>
+          )}
+          {guides.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 8 }}>
+                문의 전에 확인하면 좋은 가이드
+              </h2>
+              <p style={{ fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7, marginBottom: 16 }}>
+                비용과 기간이 어떻게 정해지는지, 진행이 어떤 순서로 이뤄지는지 먼저 보시면
+                상담에서 범위를 훨씬 빨리 좁힐 수 있습니다.
+              </p>
+              <div className="link-grid">
+                {guides.map((g) => (
+                  <Link key={g.href} href={g.href}>
+                    {g.label} <span style={{ color: 'var(--text-dim)', fontSize: 12 }}>({g.kind})</span>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
           {cases.length > 0 && (

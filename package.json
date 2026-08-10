@@ -4,7 +4,7 @@
   "description": "REUMLAB SEO 키워드 랜딩 자동생성 시스템",
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/generate-landings.mjs && node scripts/extract-portfolio.mjs",
+    "prebuild": "node scripts/generate-landings.mjs && node scripts/extract-portfolio.mjs && npx tsx scripts/extract-content-cluster.mjs",
     "dev": "next dev",
     "gen:feed": "tsx scripts/generate-feed.mts",
     "gen:blog": "node scripts/generate-blog-posts.mjs",
@@ -26,6 +26,7 @@
     "seo:verify:media": "node scripts/verify-media.mjs",
     "seo:verify:naver": "node scripts/verify-naver.mjs",
     "seo:verify:portfolio": "node scripts/verify-portfolio.mjs",
+    "seo:verify:content": "node scripts/verify-content.mjs",
     "seo:audit:index": "node scripts/audit-indexability.mjs",
     "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && npm run gen:feed && node scripts/prepare-next-public.mjs && next build && npm run copy:home && node scripts/generate-purpose-landings.mjs && npm run gen:llms && node scripts/finalize-out.mjs",

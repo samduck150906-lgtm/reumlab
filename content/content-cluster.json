@@ -1,0 +1,423 @@
+{
+  "/flutter/": [
+    {
+      "href": "/guide/flutter-cost/",
+      "label": "Flutter 앱개발 비용이 합리적인 이유",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/compare/flutter-vs-react-native/",
+      "label": "Flutter vs React Native: MVP 관점 선택 기준",
+      "kind": "비교"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "/app-development/": [
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/non-developer-app/",
+      "label": "비개발자 대표의 앱개발 외주 가이드",
+      "kind": "가이드"
+    }
+  ],
+  "/app-agency/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/outsourcing-cost/",
+      "label": "앱개발 외주 비용, 숨은 비용 없이 잡는 법",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    },
+    {
+      "href": "/compare/outsourcing-vs-inhouse/",
+      "label": "외주개발 vs 자체개발: 초기 창업자의 의사결정",
+      "kind": "비교"
+    }
+  ],
+  "/app/": [
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/mvp/": [
+    {
+      "href": "/guide/mvp-cost/",
+      "label": "MVP 개발 비용, 범위 분할로 줄이기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/startup-mvp/",
+      "label": "스타트업 MVP 개발, 빠른 검증을 위한 전략",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/mvp-development/": [
+    {
+      "href": "/guide/mvp-cost/",
+      "label": "MVP 개발 비용, 범위 분할로 줄이기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/startup-mvp/",
+      "label": "스타트업 MVP 개발, 빠른 검증을 위한 전략",
+      "kind": "가이드"
+    },
+    {
+      "href": "/compare/outsourcing-vs-inhouse/",
+      "label": "외주개발 vs 자체개발: 초기 창업자의 의사결정",
+      "kind": "비교"
+    }
+  ],
+  "/website/": [
+    {
+      "href": "/guide/web-cost/",
+      "label": "웹사이트 제작 비용, 어떻게 책정될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/blog/website-or-app-first/",
+      "label": "소상공인, 홈페이지부터일까 앱부터일까? 선택 기준 5가지",
+      "kind": "칼럼"
+    }
+  ],
+  "/web-development/": [
+    {
+      "href": "/guide/web-cost/",
+      "label": "웹사이트 제작 비용, 어떻게 책정될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ],
+  "/website-agency/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/web-cost/",
+      "label": "웹사이트 제작 비용, 어떻게 책정될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "/soho/": [
+    {
+      "href": "/guide/web-cost/",
+      "label": "웹사이트 제작 비용, 어떻게 책정될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/blog/website-or-app-first/",
+      "label": "소상공인, 홈페이지부터일까 앱부터일까? 선택 기준 5가지",
+      "kind": "칼럼"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/erp/": [
+    {
+      "href": "/guide/erp-cost/",
+      "label": "맞춤형 ERP 구축 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ],
+  "/admin-page-development/": [
+    {
+      "href": "/guide/erp-cost/",
+      "label": "맞춤형 ERP 구축 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/platform/": [
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/reservation-commerce/": [
+    {
+      "href": "/guide/booking-app-guide/",
+      "label": "예약 앱 만들기, 노쇼와 응대를 함께 줄여라",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/ai-automation/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/chatbot-cost/",
+      "label": "AI 챗봇 개발 비용, 단계별로 접근하기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/ai-development/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/chatbot-cost/",
+      "label": "AI 챗봇 개발 비용, 단계별로 접근하기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ],
+  "/data-seo/": [
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ],
+  "/service-renewal/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/compare/outsourcing-vs-nocode/",
+      "label": "앱 외주 vs 노코드: 통제권·확장성 관점 비교",
+      "kind": "비교"
+    }
+  ],
+  "/source-handover/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "/maintenance/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/renewal/": [
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/compare/outsourcing-vs-nocode/",
+      "label": "앱 외주 vs 노코드: 통제권·확장성 관점 비교",
+      "kind": "비교"
+    }
+  ],
+  "/cost/": [
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "__region__": [
+    {
+      "href": "/guide/app-cost/",
+      "label": "앱개발 비용, 무엇이 가격을 결정할까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/app-duration/",
+      "label": "앱개발 기간은 무엇으로 정해질까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/agency-choice/",
+      "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ]
+}

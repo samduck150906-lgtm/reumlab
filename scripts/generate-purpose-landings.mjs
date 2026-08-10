@@ -838,6 +838,29 @@ const INDUSTRY_LINKS = {
   },
 };
 
+/**
+ * 서비스 허브 → 정보성 가이드 (§44).
+ *
+ * 매핑과 라벨은 lib/content-cluster.ts 가 단일 출처다. TS 를 여기서 import 할 수 없어
+ * scripts/extract-content-cluster.mjs 가 content/content-cluster.json 으로 내려 준다.
+ * 매핑이 없는 랜딩은 빈 문자열 → 관련 없는 가이드가 붙지 않는다.
+ */
+const CLUSTER = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'content', 'content-cluster.json'), 'utf8'),
+);
+
+function guideLinks(land) {
+  const links = CLUSTER[`/${land.slug}/`];
+  if (!links || !links.length) return '';
+  return `<section class="section"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">GUIDES</span><h2 class="sec-title">문의 전에 확인하면 좋은 가이드</h2><p class="sec-sub">비용과 기간이 어떻게 정해지는지, 진행이 어떤 순서로 이뤄지는지 먼저 보시면 상담에서 범위를 훨씬 빨리 좁힐 수 있습니다.</p></div>
+    <ul class="lx-feat-grid">
+${links.map((l) => `        <li><a href="${l.href}">${esc(l.label)}</a></li>`).join('\n')}
+    </ul>
+    <p style="margin-top:14px"><a href="/guide/">개발 가이드 전체 보기 →</a></p>
+  </div></section>`;
+}
+
 function regionLinks(land) {
   if (!REGION_SERVICE_SLUGS.has(land.slug)) return '';
   const regions = BASE_REGIONS.map(
@@ -937,6 +960,7 @@ ${feats}
 ${bespoke ? `<section class="section"><div class="wrap"><div class="lx-bespokes">${bespoke}</div></div></section>` : ''}
 
 ${cases}
+${guideLinks(land)}
 ${PROCESS}
 ${pricing}
 ${HANDOVER}

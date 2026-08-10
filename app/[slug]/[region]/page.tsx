@@ -17,6 +17,10 @@ import { robotsFor } from '@/lib/index-quality';
 import { regionServiceProfile, remoteWorkNote } from '@/lib/region-service';
 import { RegionServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import { REGION_GUIDES, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 
 type Props = { params: { slug: string; region: string } };
 
@@ -318,6 +322,28 @@ export default function RegionServicePage({ params }: Props) {
               {siblings.map((r) => (
                 <Link key={r.slug} href={`/${service.slug}/${r.slug}/`}>
                   {r.full} {service.short}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/*
+            §45 — 지역마다 "수원 앱개발 비용" 같은 별도 글을 만들지 않는다.
+            비용·기간·진행 과정은 지역과 무관한 공통 판단 기준이므로, 지역 페이지에서
+            지역명 없는 공통 가이드로 보낸다. 링크 목록은 lib/content-cluster.ts 가 단일 출처.
+          */}
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>
+              문의 전에 확인하면 좋은 가이드
+            </h2>
+            <div className="link-grid">
+              {resolveCluster(REGION_GUIDES, {
+                guide: getGuide,
+                compare: getCompare,
+                blog: getBlogPostBySlug,
+              }).map((g) => (
+                <Link key={g.href} href={g.href}>
+                  {g.label}
                 </Link>
               ))}
             </div>

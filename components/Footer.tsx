@@ -4,6 +4,17 @@ function Footer() {
   return (
     <footer style={{ padding: '28px 20px', backgroundColor: '#f9fafb', borderTop: '1px solid #f3f4f6', color: '#6b7280', fontSize: '12px', lineHeight: '1.6', marginTop: 'auto' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+        {/*
+          정보성·신뢰 콘텐츠 허브 — Next 라우트 1,400여 페이지의 푸터에는 법적 고지 링크만
+          있어서 /guide/(가이드 40건)와 /portfolio/(사례 15건)가 사실상 발견되지 않았다.
+          (정적 홈·목적별 랜딩 푸터에는 이미 있었지만 그쪽은 9페이지뿐이다.)
+        */}
+        <nav aria-label="콘텐츠" style={{ marginBottom: '12px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          <a href="/guide/" style={{ color: '#374151', textDecoration: 'none' }}>개발 가이드</a>
+          <a href="/portfolio/" style={{ color: '#374151', textDecoration: 'none' }}>개발 사례</a>
+          <a href="/blog/" style={{ color: '#374151', textDecoration: 'none' }}>블로그</a>
+          <a href="/cost/" style={{ color: '#374151', textDecoration: 'none' }}>업종별 개발 비용</a>
+        </nav>
         <div style={{ marginBottom: '16px', display: 'flex', gap: '16px', flexWrap: 'wrap', fontWeight: 'bold' }}>
           <a href="/terms/" style={{ color: '#374151', textDecoration: 'none' }}>이용약관</a>
           <a href="/privacy/" style={{ color: '#374151', textDecoration: 'none' }}>개인정보처리방침</a>

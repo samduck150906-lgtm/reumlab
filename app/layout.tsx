@@ -3,7 +3,6 @@ import type { ReactNode } from 'react';
 import './globals.css';
 import './reum-sales.css';
 import Nav from '../components/Nav';
-import Footer from '../components/Footer';
 import { Analytics } from '../components/Analytics';
 import { AnalyticsDataLayer } from '../components/AnalyticsDataLayer';
 import FloatingContact from '../components/FloatingContact';

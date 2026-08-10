@@ -979,3 +979,10 @@
   .soho .s-vs-hc { font-size: 14px; padding: 13px 10px; }
   .soho .s-vs-cell { font-size: 13.5px; padding: 13px 11px; gap: 7px; }
 }
+
+
+/* 문의 전 가이드 목록 (12단계 콘텐츠 클러스터) */
+.s-guides { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.s-guides li { padding: 14px 16px; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 12px; background: rgba(255, 255, 255, 0.6); }
+.s-guides a { font-weight: 600; text-decoration: none; color: inherit; }
+.s-guides a:hover { text-decoration: underline; }

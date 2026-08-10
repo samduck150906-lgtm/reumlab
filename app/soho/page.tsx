@@ -7,6 +7,10 @@ import BusinessFooter from '@/components/BusinessFooter';
 import SohoForm from './SohoForm';
 import SohoCountdown from './SohoCountdown';
 import './soho.css';
+import { guidesForService, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 
 const PAGE_URL = `${SITE.domain}/soho/`;
 
@@ -671,6 +675,25 @@ export default function SohoPage() {
                 </details>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── 문의 전 가이드 — 매핑은 lib/content-cluster.ts 단일 출처 ── */}
+        <section className="s-sec t-light2">
+          <div className="s-wrap">
+            <p className="s-label">GUIDES</p>
+            <h2 className="s-h">문의 전에 확인하면 좋은 가이드</h2>
+            <ul className="s-guides">
+              {resolveCluster(guidesForService('/soho/'), {
+                guide: getGuide,
+                compare: getCompare,
+                blog: getBlogPostBySlug,
+              }).map((g) => (
+                <li key={g.href}>
+                  <Link href={g.href}>{g.label}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
