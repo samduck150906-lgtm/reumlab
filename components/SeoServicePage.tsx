@@ -3,6 +3,7 @@ import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
 import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
+import { projectsForService, CATEGORIES, projectCategories } from '@/lib/portfolio';
 
 // 실제 존재하는 블로그 슬러그로만 매칭한다(404 방지). 위에서부터 first-match.
 const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
@@ -24,6 +25,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
   // 지역×서비스 허브(app-development, web-development, mvp, flutter, ai-development)면
   // 지역 스포크 페이지로 내부링크를 노출 (허브-스포크 클러스터링)
   const regionService = pageSlug ? getService(pageSlug) : undefined;
+  // 이 서비스와 이어지는 실제 개발 사례(lib/portfolio). 매핑이 없는 허브는 빈 배열이므로
+  // 사례가 없는 서비스에 무관한 사례가 붙는 일이 없다.
+  const cases = pageSlug ? projectsForService(`/${pageSlug}/`) : [];
   return (
     <>
       {seo.faqs && seo.faqs.length > 0 ? <FAQPageJsonLd items={seo.faqs} /> : null}
@@ -225,6 +229,27 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               <p style={{ marginTop: 14, fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7 }}>
                 동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
                 <strong> 전국 어디서나 동일한 조건</strong>으로 진행합니다.
+              </p>
+            </div>
+          )}
+          {cases.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 8 }}>
+                관련 개발 사례
+              </h2>
+              <p style={{ fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7, marginBottom: 16 }}>
+                실제로 구축한 사례입니다. 고객사 요청에 따라 프로젝트명·서비스 URL은 비공개이며,
+                해결한 문제와 구현 범위는 그대로 공개합니다.
+              </p>
+              <div className="link-grid">
+                {cases.map((c) => (
+                  <Link key={c.id} href={`/portfolio/${c.id}/`}>
+                    {c.title} — {projectCategories(c).map((k) => CATEGORIES[k].label).join(' · ')}
+                  </Link>
+                ))}
+              </div>
+              <p style={{ marginTop: 14 }}>
+                <Link href="/portfolio/" style={{ color: 'var(--green)' }}>개발 사례 전체 보기 →</Link>
               </p>
             </div>
           )}

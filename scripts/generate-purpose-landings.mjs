@@ -19,23 +19,37 @@ const DOMAIN = 'https://reumlab.com';
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 /* ---------------- 익명 프로젝트(문제→해결→범위) — 확정 15건 부분집합 ---------------- */
-const PROJECTS = {
-  'edu-erp': { title: '교육기관 운영 ERP', chip: 'ERP · 웹', shot: 'erp', problem: '수납·출결·상담이 여러 채널에 흩어져 매번 수기로 취합해야 했습니다.', build: '수강생·학부모 통합 관리, 수납·출결·상담 기록 일원화, 역할별 권한, 사용자 앱과 실시간 연동을 구현했습니다.', scope: '서비스 구조 설계 · 관리자 웹 · 데이터베이스 · 배포' },
-  'edu-review': { title: '지역 교육정보 탐색·리뷰 앱', chip: '모바일 앱', shot: 'mobile', problem: '정보가 흩어져 조건에 맞는 곳을 비교하기 어려웠습니다.', build: '조건별 검색·필터, 지도 탐색, 리뷰·평점, 맞춤 추천과 운영자 관리를 함께 구축했습니다.', scope: '앱 기획 · Flutter 앱 · 추천 로직 · 관리자' },
-  'life-match': { title: '생활서비스 매칭 플랫폼', chip: '웹 · 앱', shot: 'matching', problem: '견적 요청과 업체 배정이 전화·수기로 이뤄져 누락·중복이 잦았습니다.', build: '요청서 기반 매칭, 업체·고객 양면 관리, 견적·정산 흐름, 문자·카카오 알림을 구현했습니다.', scope: '플랫폼 구조 설계 · 웹/앱 · 알림 · 관리자' },
-  'b2b-lead': { title: 'B2B 파트너·리드 관리 앱', chip: '앱 · 관리자', shot: 'kanban', problem: '파트너별 리드 현황이 엑셀로만 관리돼 실시간 공유가 안 됐습니다.', build: '리드 등록·단계 관리, 파트너 앱 + 본사 대시보드, 실적·정산 집계, 알림을 구현했습니다.', scope: '모노레포 설계 · 앱 + 관리자 웹 · 배포' },
-  'ai-sales': { title: 'AI 기반 영업 자동화 SaaS', chip: 'AI · SaaS', shot: 'saas', problem: '반복되는 리드 정리·메시지 작성에 시간이 과도하게 들었습니다.', build: '리드 관리·시퀀스 빌더, AI 카피 초안, CRM·애널리틱스, 플랜별 요금·권한을 설계했습니다.', scope: '서비스 기획 · 웹 · AI 연동 · 결제·권한' },
-  'space-booking': { title: '공간 예약·운영 웹', chip: '웹 · 예약', shot: 'calendar', problem: '예약이 여러 채널로 들어와 이중 예약·누락이 발생했습니다.', build: '실시간 예약 캘린더, 결제·환불, 운영자 관리자, 이용 안내 자동화를 구현했습니다.', scope: '예약 구조 설계 · 웹 · 결제 연동 · 관리자' },
-  'soho-saas': { title: '소상공인 운영 SaaS', chip: 'SaaS', shot: 'saas', problem: '예약·고객·매출을 서로 다른 도구로 나눠 써 데이터가 흩어졌습니다.', build: '예약·고객·매출 통합, 간편 정산, 멀티 매장·권한, 모바일 대응을 구현했습니다.', scope: '서비스 구조 설계 · 웹앱 · 데이터 모델 · 배포' },
-  'ai-work-hub': { title: 'AI 업무 자동화 허브', chip: 'AI · 자동화', shot: 'ai', problem: '반복 문서·요청 작성을 매번 사람이 처리해 병목이 생겼습니다.', build: '업무별 자동 생성 템플릿, 입력 몇 개로 결과 산출, 결과 관리·재사용, 사용량 기반 과금을 구현했습니다.', scope: '서비스 기획 · 웹 · AI 연동 · 과금' },
-  'sns-content': { title: 'SNS 콘텐츠 자동화 서비스', chip: 'AI · 자동화', shot: 'ai', problem: '채널 콘텐츠를 매번 수작업으로 기획·제작해 발행이 밀렸습니다.', build: '주제 입력→초안 자동 생성, 이미지·문구 세트, 발행 캘린더, 톤 설정을 구현했습니다.', scope: '서비스 기획 · 웹 · AI 연동' },
-  'gov-search': { title: '공공정보 AI 탐색 서비스', chip: 'AI · 검색', shot: 'search', problem: '정보가 흩어져 조건에 맞는 항목을 찾기 어려웠습니다.', build: '대화형 조건 좁히기, 조건 매칭 검색, 결과 요약, 재시도·fallback 안정성을 구현했습니다.', scope: '서비스 기획 · 웹 · AI·검색 연동' },
-  'digital-market': { title: '디지털 상품 마켓플레이스', chip: '웹 · 커머스', shot: 'market', problem: '디지털 상품 판매·정산을 수기로 처리해 운영 부담이 컸습니다.', build: '상품 등록·판매, 결제·정산, 구매자·판매자 관리, 셀프 편집 관리자를 구현했습니다.', scope: '커머스 구조 설계 · 웹 · 결제 · 관리자' },
-  'quote-doc': { title: '견적·청구 문서 자동화 도구', chip: '웹 · 자동화', shot: 'doc', problem: '견적서·인보이스를 매번 수기로 작성해 실수·재작업이 잦았습니다.', build: '항목 입력→문서 자동 생성, 템플릿·브랜딩, PDF 출력·발송, 이력 관리를 구현했습니다.', scope: '서비스 기획 · 웹 · 문서 생성 로직' },
-  'research-writer': { title: '연구·문서 작성 보조 서비스', chip: 'AI · 문서', shot: 'doc', problem: '자료 정리와 초안 작성에 반복 작업이 많아 시간이 오래 걸렸습니다.', build: '자료 기반 초안 보조, 구조·형식 정리, 인용·근거 관리, 내보내기를 구현했습니다.', scope: '서비스 기획 · 웹 · AI 연동' },
-  'data-crawl': { title: '대규모 데이터 수집·검색 시스템', chip: '데이터', shot: 'data', problem: '흩어진 대량 데이터를 수집·정리·검색할 방법이 없었습니다.', build: '대규모 수집 파이프라인, 정제·인덱싱, 빠른 검색, 중복·오류 처리를 구현했습니다.', scope: '시스템 설계 · 수집·인덱싱 · 검색 API' },
-  'pseo-engine': { title: '대규모 SEO 페이지 자동화 시스템', chip: '데이터 · SEO', shot: 'data', problem: '지역·서비스 조합이 많아 수작업으로 페이지를 만들 수 없었습니다.', build: '키워드 매트릭스 자동 생성, 대량 정적 페이지 빌드, 내부 링크 클러스터링, 구조화 데이터를 구현했습니다.', scope: '시스템 설계 · 빌드 스크립트 · SEO 구조 · 사이트맵' },
-};
+/*
+  개발 사례 — 단일 출처는 content/portfolio.json(= script.js 의 PROJECTS)이다.
+
+  전에는 여기에 같은 15건을 따로 적어 두었는데, 그러다 보니 같은 프로젝트가 화면마다
+  다른 설명을 갖게 됐다. b2b-lead 는 홈에서 "모바일 앱 · 관리자", 이 랜딩에서 "앱 · 관리자"
+  였고, edu-erp 의 담당 범위도 "관리자 웹 개발" 과 "관리자 웹" 으로 갈렸다.
+  같은 실적이 페이지마다 다르게 적히면 신뢰 신호가 약해진다.
+  → 사례를 고칠 때는 script.js 의 PROJECTS 만 고친다.
+*/
+
+/** 목적어 조사 을/를 — 마지막 글자에 받침이 있으면 '을' */
+function josa(word) {
+  const ch = String(word).trim().slice(-1).charCodeAt(0);
+  if (ch < 0xac00 || ch > 0xd7a3) return '를';
+  return (ch - 0xac00) % 28 === 0 ? '를' : '을';
+}
+
+const PROJECTS = Object.fromEntries(
+  JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'content', 'portfolio.json'), 'utf8')).map((p) => [
+    p.id,
+    {
+      title: p.title,
+      chip: p.chip,
+      shot: p.shot,
+      problem: p.problem,
+      // 카드용 한 문장 — features 를 그대로 이어 붙인다(없는 내용을 덧붙이지 않는다)
+      build: `${p.features.join(', ')}${josa(p.features[p.features.length - 1])} 구현했습니다.`,
+      scope: p.scope,
+    },
+  ]),
+);
 
 /* ---------------- 가격 플랜 (index.html 과 동일, VAT 포함 정액) ---------------- */
 const PRICING = {
@@ -459,6 +473,7 @@ function casesSection(caseIds, angles = {}) {
           <p class="lx-case__lbl">문제</p><p class="lx-case__t">${esc(p.problem)}</p>
           <p class="lx-case__lbl">구현</p><p class="lx-case__t">${esc(p.build)}</p>
           <p class="lx-case__scope"><b>담당 범위</b> ${esc(p.scope)}</p>
+          <p class="lx-case__more"><a href="/portfolio/${esc(id)}/">이 사례 자세히 보기 →</a></p>
         </div>
       </article>`;
   }).join('\n');
@@ -468,6 +483,7 @@ function casesSection(caseIds, angles = {}) {
     <div class="lx-cases">
 ${cards}
     </div>
+    <p class="lx-cases__all"><a href="/portfolio/">개발 사례 15건 전체 보기 →</a></p>
   </div>
 </section>`;
 }
@@ -627,6 +643,7 @@ const FOOTER = `<footer class="footer">
         <p class="footer__local">화성 동탄(동탄첨단산업단지)에 위치한 앱·웹·AI 개발 스튜디오입니다. 경기 남부 전역과 전국 어디서든 의뢰하실 수 있습니다.</p>
         <nav class="footer__links" aria-label="제작 목적" style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;">
 ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).join('\n')}
+          <a href="/portfolio/">개발 사례</a>
           <a href="/">메인 허브</a>
         </nav>
       </div>

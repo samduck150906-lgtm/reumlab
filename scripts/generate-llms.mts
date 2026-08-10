@@ -19,6 +19,7 @@ import { SITE, PAGE_SEO_MAP, REDIRECTED_PILLAR_SLUGS, NOINDEX_PILLAR_SLUGS } fro
 import { GUIDES, guideCanonical, guideDecision } from '../lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
+import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB, projectCategories, CATEGORIES } from '../lib/portfolio';
 
 const OUT = 'out';
 
@@ -133,6 +134,23 @@ const PURPOSE_LANDINGS: [string, string, string][] = [
 for (const [slug, title, desc] of PURPOSE_LANDINGS) {
   L.push(`- [${title}](${SITE.domain}/${slug}/): ${desc}`);
 }
+L.push('');
+L.push('## 개발 사례');
+L.push('');
+L.push(`실제로 구축한 ${PROJECTS.length}건입니다. 고객사 요청에 따라 프로젝트명·고객사·서비스 URL은 비공개이며,`);
+L.push('해결한 문제·구현 범위·사용 기술은 아래와 각 상세 페이지에서 그대로 공개합니다.');
+L.push('성과 수치(사용자 수·매출·전환율)는 보유·공개하고 있지 않아 포함하지 않습니다.');
+L.push('');
+L.push(`- [개발 사례 전체](${PORTFOLIO_HUB})`);
+for (const p of PROJECTS) {
+  const cats = projectCategories(p).map((c) => CATEGORIES[c].full).join('·');
+  L.push(
+    `- [${p.title}](${portfolioCanonical(p.id)}) — ${cats} · ` +
+      `문제: ${p.problem} 구현: ${p.features.join(', ')}. ` +
+      `기술: ${p.detail.tech.join(', ')}. 담당 범위: ${p.scope}.`,
+  );
+}
+
 L.push('');
 L.push('## 비용·계약 가이드');
 L.push('');

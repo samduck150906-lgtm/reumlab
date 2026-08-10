@@ -9,6 +9,7 @@ import { COSTS, costCanonical, costDecision } from '@/lib/cost';
 import { SOLUTIONS, solutionCanonical, solutionDecision } from '@/lib/solution';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
+import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -241,6 +242,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: landingsMod,
       changeFrequency: 'monthly',
       priority: 0.65,
+    });
+  }
+
+  // 개발 사례 — 허브 + 상세 15건.
+  // 데이터 출처가 script.js(PROJECTS)이므로 lastmod 도 그 파일의 커밋 날짜를 따른다.
+  // 사례에는 발행일 개념이 없어(원본에 날짜 필드 없음) 임의 날짜를 만들지 않는다.
+  const portfolioMod = gitLastModified('script.js');
+  out.push({
+    url: PORTFOLIO_HUB,
+    lastModified: portfolioMod,
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  });
+  for (const p of PROJECTS) {
+    out.push({
+      url: portfolioCanonical(p.id),
+      lastModified: portfolioMod,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     });
   }
 
