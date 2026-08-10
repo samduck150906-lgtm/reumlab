@@ -112,6 +112,16 @@ export default function GuidePage({ params }: Props) {
             <p className="hub-intro">가격을 선공개합니다. 30분 무료 상담으로 범위와 견적을 안내해 드립니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_guide_call">📞 무료 상담</a>
+              {/* 카카오는 전화보다 문턱이 낮은 기존 채널이다. 새 채널을 만든 것이 아니라 이미 쓰는 링크를 노출한다. */}
+              <a
+                href={SITE.kakaoChannel}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+                data-analytics="cta_guide_kakao"
+              >
+                💬 카카오톡 상담
+              </a>
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_guide_pricing">패키지 요금 보기</Link>
             </div>
           </div>

@@ -884,6 +884,24 @@ ${regions}
   </div></section>`;
 }
 
+/**
+ * 서비스 축 — lib/analytics.ts 의 SERVICE_BY_FIRST_SEGMENT 와 같은 값이어야 한다.
+ * script.js 는 <body data-page-type/data-service> 를 읽기만 하므로 분류 로직이
+ * 두 곳에 복제되지는 않지만, 이 값이 어긋나면 GA4 에서 같은 서비스가 갈린다.
+ * service-renewal 은 서비스 축이 하나로 정해지지 않아 비워 둔다(값을 지어내지 않는다).
+ */
+const SERVICE_AXIS = {
+  mvp: 'mvp',
+  erp: 'erp',
+  'ai-automation': 'ai',
+  platform: 'platform',
+  'reservation-commerce': 'platform',
+  website: 'web',
+  'data-seo': 'data',
+  'service-renewal': '',
+  soho: 'web',
+};
+
 function renderLanding(land) {
   const url = `${DOMAIN}/${land.slug}/`;
   const audience = land.audience.map((x) => `        <li><span class="lx-fit__ck" aria-hidden="true">✓</span>${esc(x)}</li>`).join('\n');
@@ -914,7 +932,7 @@ ${jsonLd(land)}
 ${PIXEL}
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 </head>
-<body>
+<body data-page-type="service"${SERVICE_AXIS[land.slug] ? ` data-service="${SERVICE_AXIS[land.slug]}"` : ''}>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHLMP8ZD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ${header(land.slug)}
 <main>

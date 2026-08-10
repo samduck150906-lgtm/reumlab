@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
 
 /**
  * 무료 진단 신청 폼 — Netlify Forms 연동.
@@ -45,6 +46,14 @@ export default function SohoForm() {
   const [mid, setMid] = useState('');
   const [last, setLast] = useState('');
   const [utm, setUtm] = useState<Record<string, string>>({});
+  // 폼 최초 상호작용 1회만 기록 — 이 폼에는 form_start 측정이 아예 없었다.
+  const [started, setStarted] = useState(false);
+
+  function onFirstInteract() {
+    if (started) return;
+    setStarted(true);
+    pushEvent(EVENT.formStart, { form_name: FORM_NAME, ...pageContext(window.location.pathname) });
+  }
 
   const phone = [prefix, mid, last].filter(Boolean).join('-');
 
@@ -87,24 +96,38 @@ export default function SohoForm() {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       });
-      if (!res.ok) throw new Error(`status ${res.status}`);
+      if (!res.ok) throw new Error(`http ${res.status}`);
+      // ── 여기부터가 실제 문의 성공. 제출 클릭이 아니라 서버 성공 응답 이후다.
       setStatus('success');
       form.reset();
       setPrefix('010');
       setMid('');
       setLast('');
       if (typeof window !== 'undefined') {
+        const ctx = pageContext(window.location.pathname);
         const w = window as any;
         // 메타 픽셀 전환 이벤트(웹사이트 전환 광고 최적화 기준).
         if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
-        // GTM/GA4 등 dataLayer 트리거용.
-        if (w.dataLayer) w.dataLayer.push({ event: 'soho_diagnosis_submit' });
-        // 폼 제출 성공 커스텀 이벤트 — GTM 맞춤 이벤트 트리거(form_submit_success)로 GA4 전환 수집.
+        // 기존 GTM 트리거 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
         w.dataLayer = w.dataLayer || [];
-        w.dataLayer.push({ event: 'form_submit_success' });
+        w.dataLayer.push({ event: 'soho_diagnosis_submit', ...ctx });
+        w.dataLayer.push({ event: 'form_submit_success', ...ctx });
+        // GA4 권장 이름 추가 — key event 는 GA4/GTM 에서 하나만 고른다.
+        pushEvent(EVENT.lead, {
+          form_name: FORM_NAME,
+          cta_type: 'form',
+          source_page: window.location.pathname,
+          ...ctx,
+        });
       }
-    } catch {
+    } catch (err) {
       setStatus('error');
+      const msg = err instanceof Error ? err.message : '';
+      pushEvent(EVENT.formError, {
+        form_name: FORM_NAME,
+        error_type: msg.startsWith('http') ? 'server' : 'network',
+        ...pageContext(window.location.pathname),
+      });
     }
   }
 
@@ -143,6 +166,7 @@ export default function SohoForm() {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
+        onFocusCapture={onFirstInteract}
         className="sf-form"
         noValidate={false}
       >

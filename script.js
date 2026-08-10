@@ -11,6 +11,24 @@
   var fired = {}; // 1회성 이벤트 가드
   function once(key, obj) { if (fired[key]) return; fired[key] = true; pushDL(obj); }
 
+  /* 페이지 컨텍스트 — lib/analytics.ts 의 분류와 같은 값·같은 키를 쓴다.
+     이 파일은 홈(index.html)과 목적별 랜딩 8개가 함께 쓰므로 page_type 을 여기서
+     하드코딩하면 랜딩에서 "home" 이 잘못 찍힌다. 각 문서가 <body data-page-type=…>
+     으로 선언하고 여기서는 읽기만 한다(분류 로직을 두 곳에 복제하지 않는다). */
+  var CTX = (function () {
+    var b = document.body || {};
+    var d = b.dataset || {};
+    return { page_type: d.pageType || "home", service: d.service || "" };
+  })();
+  function withCtx(obj) {
+    var o = {};
+    for (var k in obj) if (Object.prototype.hasOwnProperty.call(obj, k)) o[k] = obj[k];
+    o.page_type = CTX.page_type;
+    if (CTX.service) o.service = CTX.service;
+    return o;
+  }
+  pushDL(withCtx({ event: "page_context" }));
+
   /* ============================================================
      1) 익명 포트폴리오 데이터 — 실제 프로젝트를 분야·기능 중심으로 익명화.
         고객사·서비스명·URL·개인정보 없음. 화면은 예시 데이터 목업.
@@ -496,7 +514,7 @@
       });
 
       // 폼 시작(최초 포커스 1회)
-      form.addEventListener("focusin", function () { once("inquiry_form_start", { event: "inquiry_form_start" }); }, { once: false });
+      form.addEventListener("focusin", function () { once("inquiry_form_start", withCtx({ event: "inquiry_form_start", form_name: "main-apply" })); }, { once: false });
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -520,11 +538,19 @@
             if (done) done.hidden = false;
             if (card) card.scrollIntoView({ behavior: "smooth", block: "center" });
             try { if (typeof window.fbq === "function") window.fbq("track", "Lead"); } catch (e2) {}
-            pushDL({ event: "inquiry_form_submit" });
-            pushDL({ event: "main_apply_submit" });
-            pushDL({ event: "form_submit_success" }); // 기존 GTM 전환 트리거 호환
+            /* 여기부터가 실제 문의 성공 — 서버 성공 응답 이후에만 전환을 집계한다. */
+            pushDL(withCtx({ event: "inquiry_form_submit" }));
+            pushDL(withCtx({ event: "main_apply_submit" }));
+            pushDL(withCtx({ event: "form_submit_success" })); // 기존 GTM 전환 트리거 호환
+            /* GA4 권장 이름 추가. key event 는 GA4/GTM 에서 하나만 고른다. */
+            pushDL(withCtx({ event: "generate_lead", form_name: "main-apply", cta_type: "form", source_page: location.pathname }));
           })
-          .catch(function () { if (errEl) errEl.hidden = false; })
+          .catch(function (err) {
+            if (errEl) errEl.hidden = false;
+            /* 진단용 — 입력값·서버 메시지 원문은 싣지 않고 분류만 보낸다. */
+            var m = (err && err.message) || "";
+            pushDL(withCtx({ event: "form_error", form_name: "main-apply", error_type: m.indexOf("status") === 0 ? "server" : "network" }));
+          })
           .then(function () { form.dataset.submitting = "0"; if (btn) { btn.disabled = false; btn.textContent = origLabel; } });
       });
     });
@@ -546,11 +572,11 @@
     el.addEventListener("click", function () {
       var type = el.getAttribute("data-cta");
       var loc = el.getAttribute("data-cta-loc") || "";
-      pushDL({ event: "cta_click", cta_type: type, cta_location: loc });
+      pushDL(withCtx({ event: "cta_click", cta_type: type, cta_location: loc }));
       if (loc === "sticky-bar") pushDL({ event: "sticky_cta_click", cta_type: type });
-      if (type === "kakao") pushDL({ event: "kakao_or_chat_click", cta_location: loc });
-      if (type === "phone" || type === "call") pushDL({ event: "phone_click", cta_location: loc });
-      if (type === "email") pushDL({ event: "email_click", cta_location: loc });
+      if (type === "kakao") pushDL(withCtx({ event: "kakao_or_chat_click", cta_location: loc }));
+      if (type === "phone" || type === "call") pushDL(withCtx({ event: "phone_click", cta_location: loc }));
+      if (type === "email") pushDL(withCtx({ event: "email_click", cta_location: loc }));
       try {
         if (typeof window.fbq === "function" && (type === "kakao" || type === "call")) window.fbq("track", "Contact", { method: type });
       } catch (e2) {}

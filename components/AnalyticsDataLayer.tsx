@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
 
 /**
  * GTM dataLayer 이벤트 브리지.
@@ -26,6 +27,15 @@ export function AnalyticsDataLayer() {
       w.dataLayer.push(obj);
     };
 
+    /*
+      페이지 공통 컨텍스트.
+      이게 없으면 GA4 에서 "지역 랜딩에서 온 문의"와 "가이드에서 온 문의"를 구분하려고
+      URL 을 정규식으로 파싱해야 한다. 경로에서 한 번 계산해 모든 이벤트에 실어 보낸다.
+      개인정보는 들어가지 않는다 — 경로 기반 분류값뿐이다.
+    */
+    const ctx = pageContext(window.location.pathname);
+    push({ event: 'page_context', ...ctx });
+
     /** 링크 href로 상담 채널 종류를 판별 */
     const channelOf = (el: Element | null): 'phone' | 'email' | 'kakao' | null => {
       const a = el?.closest('a');
@@ -42,16 +52,18 @@ export function AnalyticsDataLayer() {
       // 1) 기존 범용 클릭 이벤트 (data-analytics 속성)
       const tagged = target.closest('[data-analytics]');
       const name = tagged?.getAttribute('data-analytics');
-      if (name) push({ event: 'reum_click', reum_action: name });
+      if (name) push({ event: 'reum_click', reum_action: name, ...ctx });
 
       // 2) 상담 채널 전환 이벤트 — 홈(script.js)과 동일한 이벤트 이름 사용
       const channel = channelOf(target);
       if (!channel) return;
       const location = tagged?.getAttribute('data-analytics') || 'page';
-      if (channel === 'phone') push({ event: 'phone_click', cta_location: location });
-      if (channel === 'email') push({ event: 'email_click', cta_location: location });
-      if (channel === 'kakao') push({ event: 'kakao_or_chat_click', cta_location: location });
-      push({ event: 'cta_click', cta_type: channel, cta_location: location });
+      // 기존 GTM 전환 트리거가 쓰는 이름은 그대로 둔다(이름을 바꾸면 운영 중인 전환이 끊긴다).
+      if (channel === 'phone') push({ event: 'phone_click', cta_location: location, ...ctx });
+      if (channel === 'email') push({ event: 'email_click', cta_location: location, ...ctx });
+      if (channel === 'kakao') push({ event: 'kakao_or_chat_click', cta_location: location, ...ctx });
+      // 상담 채널 클릭은 secondary conversion 이다 — 문의 완료(generate_lead)로 집계하지 않는다.
+      pushEvent(EVENT.ctaClick, { cta_type: channel, cta_location: location, ...ctx });
 
       // Meta 픽셀 Contact — 홈과 동일 기준(전화·카카오)만 집계
       try {

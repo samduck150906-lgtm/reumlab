@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
 
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
@@ -74,7 +75,8 @@ export default function LandingInquiryForm({
   function onFirstInteract() {
     if (started) return;
     setStarted(true);
-    pushDL({ event: 'inquiry_form_start' });
+    // 폼 1회당 한 번만 — 모든 input focus 마다 반복되면 안 된다.
+    pushEvent(EVENT.formStart, { form_name: FORM_NAME, ...pageContext(window.location.pathname) });
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -89,16 +91,33 @@ export default function LandingInquiryForm({
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
       });
-      if (!res.ok) throw new Error(`status ${res.status}`);
+      if (!res.ok) throw new Error(`http ${res.status}`);
+      // ── 여기부터가 실제 문의 성공. 제출 버튼 클릭이 아니라 서버 성공 응답 이후다.
       setStatus('success');
       form.reset();
+      const ctx = pageContext(window.location.pathname);
       const w = window as any;
       if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
-      pushDL({ event: 'inquiry_form_submit' });
-      pushDL({ event: 'main_apply_submit' });
-      pushDL({ event: 'form_submit_success' });
-    } catch {
+      // 기존 GTM 트리거가 쓰는 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
+      pushDL({ event: 'inquiry_form_submit', ...ctx });
+      pushDL({ event: 'main_apply_submit', ...ctx });
+      pushDL({ event: 'form_submit_success', ...ctx });
+      // GA4 권장 이름 추가. 어느 것을 key event 로 쓸지는 GA4/GTM 에서 하나만 고른다.
+      pushEvent(EVENT.lead, {
+        form_name: FORM_NAME,
+        cta_type: 'form',
+        source_page: window.location.pathname,
+        ...ctx,
+      });
+    } catch (err) {
       setStatus('error');
+      // 진단용 — 사용자 입력값이나 서버 메시지 원문은 싣지 않고 분류만 보낸다.
+      const msg = err instanceof Error ? err.message : '';
+      pushEvent(EVENT.formError, {
+        form_name: FORM_NAME,
+        error_type: msg.startsWith('http') ? 'server' : 'network',
+        ...pageContext(window.location.pathname),
+      });
     }
   }
 

@@ -121,8 +121,11 @@ export default function PortfolioHub() {
           어떤 구조로 풀 수 있을지부터 함께 정리합니다.
         </p>
         <p className="pfh-cta__links">
-          <a href={SITE.phoneHref}>{SITE.phone}</a>
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          <a href={SITE.phoneHref} data-analytics="portfolio-hub-cta">{SITE.phone}</a>
+          <a href={`mailto:${SITE.email}`} data-analytics="portfolio-hub-cta">{SITE.email}</a>
+          <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" data-analytics="portfolio-hub-cta">
+            카카오톡 상담
+          </a>
         </p>
       </section>
 

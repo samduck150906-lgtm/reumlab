@@ -215,9 +215,16 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
           지금 겪고 있는 문제를 알려 주시면 어떤 구조로 풀 수 있을지, 어떤 범위까지 필요한지부터
           정리해 드립니다.
         </p>
+        {/*
+          data-analytics 가 cta_location 이 된다(components/AnalyticsDataLayer 가 전역에서 읽는다).
+          속성이 없으면 nav·푸터 클릭과 구분되지 않고 전부 'page' 로 뭉뚱그려진다.
+        */}
         <p className="pfd-cta__links">
-          <a href={SITE.phoneHref}>{SITE.phone}</a>
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          <a href={SITE.phoneHref} data-analytics="portfolio-detail-cta">{SITE.phone}</a>
+          <a href={`mailto:${SITE.email}`} data-analytics="portfolio-detail-cta">{SITE.email}</a>
+          <a href={SITE.kakaoChannel} target="_blank" rel="noopener noreferrer" data-analytics="portfolio-detail-cta">
+            카카오톡 상담
+          </a>
         </p>
       </section>
     </main>
