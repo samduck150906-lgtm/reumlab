@@ -28,6 +28,11 @@
   ],
   "/app-development/": [
     {
+      "href": "/guide/outsourcing-checklist/",
+      "label": "외주 개발을 맡기기 전에 확인할 15가지",
+      "kind": "가이드"
+    },
+    {
       "href": "/guide/app-cost/",
       "label": "앱개발 비용, 무엇이 가격을 결정할까",
       "kind": "가이드"
@@ -54,6 +59,11 @@
     }
   ],
   "/app-agency/": [
+    {
+      "href": "/guide/outsourcing-checklist/",
+      "label": "외주 개발을 맡기기 전에 확인할 15가지",
+      "kind": "가이드"
+    },
     {
       "href": "/guide/agency-choice/",
       "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
@@ -94,6 +104,11 @@
   ],
   "/mvp/": [
     {
+      "href": "/guide/mvp-priority/",
+      "label": "MVP에 넣을 기능은 어떻게 고를까",
+      "kind": "가이드"
+    },
+    {
       "href": "/guide/mvp-cost/",
       "label": "MVP 개발 비용, 범위 분할로 줄이기",
       "kind": "가이드"
@@ -115,6 +130,11 @@
     }
   ],
   "/mvp-development/": [
+    {
+      "href": "/guide/mvp-priority/",
+      "label": "MVP에 넣을 기능은 어떻게 고를까",
+      "kind": "가이드"
+    },
     {
       "href": "/guide/mvp-cost/",
       "label": "MVP 개발 비용, 범위 분할로 줄이기",
@@ -176,6 +196,11 @@
     }
   ],
   "/website-agency/": [
+    {
+      "href": "/guide/outsourcing-checklist/",
+      "label": "외주 개발을 맡기기 전에 확인할 15가지",
+      "kind": "가이드"
+    },
     {
       "href": "/guide/agency-choice/",
       "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
@@ -341,6 +366,11 @@
     }
   ],
   "/source-handover/": [
+    {
+      "href": "/guide/outsourcing-checklist/",
+      "label": "외주 개발을 맡기기 전에 확인할 15가지",
+      "kind": "가이드"
+    },
     {
       "href": "/guide/agency-choice/",
       "label": "개발 업체를 고를 때 무엇을 확인해야 할까",

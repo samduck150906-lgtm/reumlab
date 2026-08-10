@@ -199,6 +199,45 @@ for (const p of content) {
   }
 }
 
+// ─── 7-b. 인용 구조 (14단계) — 앵커 안정성·표·출처·날짜
+let brokenAnchor = 0, noAnchor = 0, imgTable = 0;
+const guides = byPrefix('/guide/');
+for (const p of guides) {
+  const ids = new Set([...p.html.matchAll(/<h[1-6][^>]*\sid="([^"]+)"/g)].map((m) => m[1]));
+  // 페이지 안의 #앵커 링크가 실제 heading 을 가리키는가 (목차·인용 링크가 죽으면 안 된다)
+  for (const m of p.html.matchAll(/href="#([a-zA-Z0-9_-]+)"/g)) {
+    if (m[1] === 'top' || ids.has(m[1])) continue;
+    brokenAnchor++;
+    add(fail, 'anchor', `깨진 앵커: ${p.pathname}#${m[1]}`);
+  }
+  // 외부에서 특정 섹션만 인용하려면 H2 에 안정적인 ID 가 있어야 한다
+  if (!ids.size) {
+    noAnchor++;
+    add(fail, 'anchor', `섹션 앵커가 하나도 없음(특정 항목 링크 불가): ${p.pathname}`);
+  }
+  // 작성 주체 — 인용할 때 출처를 확인할 수 있어야 한다
+  if (!/작성 름랩|guide-byline/.test(p.html)) {
+    add(fail, 'citation', `화면에 작성 주체 표시가 없음: ${p.pathname}`);
+  }
+  // 표를 이미지로만 만들지 않았는가
+  if (/<img[^>]+alt="[^"]*(비교|표|차트)[^"]*"/.test(p.html) && !/<table/.test(p.html)) {
+    imgTable++;
+    add(fail, 'citation', `표를 이미지로만 제공(검색엔진·스크린리더가 못 읽음): ${p.pathname}`);
+  }
+}
+
+// 정보성 페이지의 dateModified 가 빌드 시각으로 덮이지 않았는가는 아래 §6 검사와 함께 본다.
+// 여기서는 실제 수정일이 발행일보다 앞서는 모순만 잡는다.
+let badDate = 0;
+for (const p of content) {
+  const pub = (p.html.match(/"datePublished":"([^"]{10})/) || [])[1];
+  const mod = (p.html.match(/"dateModified":"([^"]{10})/) || [])[1];
+  if (pub && mod && mod < pub) {
+    badDate++;
+    add(fail, 'date', `dateModified(${mod}) 가 datePublished(${pub}) 보다 이름: ${p.pathname}`);
+  }
+}
+
 // ─── 8. draft / 사이트맵
 const sitemap = existsSync(join(OUT, 'sitemap.xml')) ? read(join(OUT, 'sitemap.xml')) : '';
 let noindexInSitemap = 0;
@@ -228,6 +267,7 @@ console.log(`검색의도  같은 H1 을 쓰는 묶음 ${[...h1Map.values()].fil
 console.log(`클러스터  가이드가 배선된 허브 ${hubsWired}/${Object.keys(cluster).filter((k) => k !== '__region__' && cluster[k].length).length} · 상업 링크 없는 가이드 ${noCta}`);
 console.log(`링크      깨짐 ${broken} · 고아 ${orphan}`);
 console.log(`스키마    Article/BlogPosting ${articles} · datePublished 종류 ${dates.size}`);
+console.log(`인용구조  가이드 ${guides.length} · 앵커 없음 ${noAnchor} · 깨진 앵커 ${brokenAnchor} · 이미지 전용 표 ${imgTable} · 날짜 모순 ${badDate}`);
 console.log(`사이트맵  noindex 혼입 ${noindexInSitemap} · 누락 ${missingFromSitemap}`);
 console.log('───────────────────────────────────────────');
 if (warn.length) {

@@ -251,6 +251,7 @@ export function GuideArticleJsonLd({
   description,
   url,
   publishedAt,
+  updatedAt,
   keywords,
   faqs,
   crumbs,
@@ -259,6 +260,8 @@ export function GuideArticleJsonLd({
   description: string;
   url: string;
   publishedAt: string;
+  /** 실제로 내용을 고친 날짜만. 없으면 발행일을 그대로 쓴다(빌드 시각을 넣지 않는다). */
+  updatedAt?: string;
   keywords: string[];
   faqs?: FaqItem[];
   crumbs: Crumb[];
@@ -270,7 +273,10 @@ export function GuideArticleJsonLd({
       headline: title,
       description,
       datePublished: publishedAt,
-      dateModified: publishedAt,
+      dateModified: updatedAt || publishedAt,
+      // 인용·공유 시 미리보기에 쓰이는 대표 이미지. 글마다 고유 이미지가 없어
+      // 사이트 공통 OG 이미지를 쓴다(없는 이미지를 만들어 넣지 않는다).
+      image: SITE.defaultOgImage,
       author: { '@id': SCHEMA_ID.organization },
       publisher: { '@id': SCHEMA_ID.organization },
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },

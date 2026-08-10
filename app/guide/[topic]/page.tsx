@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
-import { GUIDES, getGuide, guideCanonical, guideDecision } from '@/lib/guides';
+import { GUIDES, getGuide, guideCanonical, guideDecision, sectionAnchor } from '@/lib/guides';
 import { robotsFor } from '@/lib/index-quality';
 import { GuideArticleJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -59,6 +59,7 @@ export default function GuidePage({ params }: Props) {
         description={guide.description}
         url={canonical}
         publishedAt={guide.publishedAt}
+        updatedAt={guide.updatedAt}
         keywords={guide.keywords}
         faqs={guide.faqs}
         crumbs={crumbs}
@@ -76,14 +77,101 @@ export default function GuidePage({ params }: Props) {
           <div className="section-inner">
             <p className="section-tag">{guide.tag}</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>{guide.h1}</h1>
+            {/*
+              작성 주체와 날짜를 화면에도 보여준다. 구조화 데이터에는 있었지만 화면에는 없어서
+              사람이 인용할 때 출처·시점을 확인할 방법이 없었다(§42·§43).
+              날짜는 lib/guides.ts 의 실제 값이며 빌드 시각이 아니다.
+            */}
+            <p className="guide-byline">
+              작성 {SITE.name}
+              <span aria-hidden="true"> · </span>
+              <time dateTime={guide.publishedAt}>{guide.publishedAt} 발행</time>
+              {guide.updatedAt && guide.updatedAt !== guide.publishedAt && (
+                <>
+                  <span aria-hidden="true"> · </span>
+                  <time dateTime={guide.updatedAt}>{guide.updatedAt} 수정</time>
+                </>
+              )}
+            </p>
             <p className="hub-intro">{guide.intro}</p>
 
-            {guide.sections.map((s) => (
-              <div key={s.h} style={{ marginTop: 28 }}>
-                <h2 className="section-title" style={{ fontSize: '1.2rem' }}>{s.h}</h2>
-                <p className="hub-intro">{s.body}</p>
+            {guide.summary && guide.summary.length > 0 && (
+              /* 핵심 요약 — 본문을 읽지 않아도 결론을 가져갈 수 있게. 본문과 내용이 일치해야 한다. */
+              <aside className="guide-summary" aria-label="핵심 요약">
+                <h2 id="summary" style={{ scrollMarginTop: 80 }}>핵심 요약</h2>
+                <ul>
+                  {guide.summary.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+              </aside>
+            )}
+
+            {guide.sections.length >= 6 && (
+              /* 목차 — 항목이 많은 가이드에만. 모든 글에 억지로 붙이지 않는다(§52). */
+              <nav className="guide-toc" aria-label="목차">
+                <h2 style={{ scrollMarginTop: 80 }}>목차</h2>
+                <ol>
+                  {guide.sections.map((sec, i) => (
+                    <li key={sec.h}>
+                      <a href={`#${sectionAnchor(sec, i)}`}>{sec.h}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
+
+            {guide.sections.map((sec, i) => {
+              const anchor = sectionAnchor(sec, i);
+              return (
+                <div key={sec.h} style={{ marginTop: 28 }}>
+                  {/*
+                    섹션마다 안정적인 앵커를 준다 — 외부에서 특정 항목만 인용·링크할 수 있게.
+                    ID 는 lib/guides.ts 의 명시값을 쓰고, 없으면 순서 기반이라 문구를 다듬어도 안 깨진다.
+                  */}
+                  <h2 id={anchor} className="section-title" style={{ fontSize: '1.2rem', scrollMarginTop: 80 }}>
+                    <a href={`#${anchor}`} className="guide-anchor" aria-label={`${sec.h} 섹션 링크`}>
+                      {sec.h}
+                    </a>
+                  </h2>
+                  <p className="hub-intro">{sec.body}</p>
+                  {sec.items && sec.items.length > 0 && (
+                    <ul className="guide-checklist">
+                      {sec.items.map((it) => (
+                        <li key={it}>{it}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+
+            {guide.table && (
+              /* 표는 이미지가 아니라 실제 HTML table 이어야 검색엔진·AI·스크린리더가 읽는다.
+                 모바일에서는 바깥 래퍼가 가로 스크롤을 흡수한다(본문이 밀리지 않게). */
+              <div className="guide-table-wrap" style={{ marginTop: 32 }}>
+                <table className="guide-table">
+                  <caption>{guide.table.caption}</caption>
+                  <thead>
+                    <tr>
+                      {guide.table.head.map((h) => (
+                        <th key={h} scope="col">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {guide.table.rows.map((row) => (
+                      <tr key={row[0]}>
+                        <th scope="row">{row[0]}</th>
+                        {row.slice(1).map((cell, ci) => (
+                          <td key={`${row[0]}-${ci}`}>{cell}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-            ))}
+            )}
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>

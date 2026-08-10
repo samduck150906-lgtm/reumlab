@@ -1944,3 +1944,138 @@ a {
     display: none;
   }
 }
+
+/* ── 가이드 인용 구조 (14단계) ─────────────────────────────────────
+   섹션 앵커·핵심 요약·목차·체크리스트·비교표.
+   외부에서 특정 항목만 링크하거나 표를 그대로 인용할 수 있게 하는 게 목적이라,
+   장식이 아니라 "읽고 복사할 수 있는 형태"를 우선한다. */
+.guide-byline {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin: 6px 0 18px;
+}
+.guide-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+.guide-anchor:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 4px;
+}
+
+.guide-summary {
+  margin: 24px 0 8px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: var(--radius-sm);
+  background: var(--bg-warm);
+}
+.guide-summary h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin: 0 0 10px;
+}
+.guide-summary ul {
+  margin: 0;
+  padding-left: 1.15em;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--text-sub);
+}
+
+.guide-toc {
+  margin: 22px 0 8px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+}
+.guide-toc h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: var(--text-dim);
+}
+.guide-toc ol {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.guide-toc a {
+  color: var(--text-sub);
+  text-decoration: none;
+}
+.guide-toc a:hover {
+  color: var(--green);
+  text-decoration: underline;
+}
+
+.guide-checklist {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.guide-checklist li {
+  position: relative;
+  padding: 7px 0 7px 26px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-sub);
+  border-bottom: 1px solid var(--border);
+}
+.guide-checklist li:last-child {
+  border-bottom: 0;
+}
+.guide-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 13px;
+  width: 13px;
+  height: 13px;
+  border: 1.5px solid var(--green);
+  border-radius: 3px;
+}
+
+/* 표는 바깥 래퍼가 가로 스크롤을 흡수한다 — 본문(body)이 가로로 밀리면 안 된다 */
+.guide-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.guide-table {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+.guide-table caption {
+  caption-side: top;
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-dim);
+  padding-bottom: 8px;
+}
+.guide-table th,
+.guide-table td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.guide-table thead th {
+  background: var(--green-dim);
+  color: var(--green-deep);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.guide-table tbody th {
+  background: var(--bg-warm);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}

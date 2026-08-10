@@ -43,6 +43,7 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { guide: 'quote' },
   ],
   '/app-development/': [
+    { guide: 'outsourcing-checklist' },
     { guide: 'app-cost' },
     { guide: 'app-duration' },
     { guide: 'dev-process' },
@@ -50,6 +51,7 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { guide: 'non-developer-app' },
   ],
   '/app-agency/': [
+    { guide: 'outsourcing-checklist' },
     { guide: 'agency-choice' },
     { guide: 'outsourcing-cost' },
     { guide: 'quote' },
@@ -63,12 +65,14 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
 
   // ── MVP
   '/mvp/': [
+    { guide: 'mvp-priority' },
     { guide: 'mvp-cost' },
     { guide: 'startup-mvp' },
     { guide: 'app-duration' },
     { guide: 'dev-process' },
   ],
   '/mvp-development/': [
+    { guide: 'mvp-priority' },
     { guide: 'mvp-cost' },
     { guide: 'startup-mvp' },
     { compare: 'outsourcing-vs-inhouse' },
@@ -88,6 +92,7 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { guide: 'agency-choice' },
   ],
   '/website-agency/': [
+    { guide: 'outsourcing-checklist' },
     { guide: 'agency-choice' },
     { guide: 'web-cost' },
     { guide: 'quote' },
@@ -140,6 +145,7 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { compare: 'outsourcing-vs-nocode' },
   ],
   '/source-handover/': [
+    { guide: 'outsourcing-checklist' },
     { guide: 'agency-choice' },
     { guide: 'dev-process' },
     { guide: 'quote' },
