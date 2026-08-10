@@ -1,4 +1,15 @@
 # Netlify 등 정적 호스팅용 301 (있으면 우선 적용)
+
+# /404 는 "이 주소는 없습니다" 라고 알리는 문서다. 200 으로 응답하면 soft 404 가 된다.
+#
+# 배포 후 실측: /404/ → 301 → /404 → 200.
+# scripts/finalize-out.mjs 가 out/404/index.html 을 지워 /404/ 의 직접 200 은 없앴지만,
+# Netlify 가 트레일링 슬래시를 정규화해 /404 로 보내고 거기서 404.html 이 200 으로 나갔다.
+# 상태코드만 바로잡는다 — 본문은 그대로 404.html 이고, 어디에서도 링크되지 않는 주소다.
+# (rewrite + 상태코드 지정이라 사용자가 보는 화면은 달라지지 않는다.)
+/404      /404.html   404
+/404/     /404.html   404
+
 # 법적 고지 flat .html → pretty URL 통합 (canonical 없는 중복 제거, GSC "Duplicate without user-selected canonical" 해소)
 /privacy.html   /privacy/   301!
 /terms.html     /terms/     301!
