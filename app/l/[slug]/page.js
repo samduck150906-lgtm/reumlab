@@ -44,9 +44,14 @@ export default function LandingRoute({ params }) {
 
   const url = `${BASE}/l/${params.slug}/`;
   const hub = landing.hubId ? getHubBySlug(landing.hubId) : null;
+  // 중복 허브(mobile-app)는 canonical 이 대표 허브(app-dev)를 가리킨다.
+  // breadcrumb item 이 canonical 과 다른 URL 을 가리키면 계층 신호가 갈린다.
+  // app/h/[hubSlug]/page.js 의 DUP_HUB_CANONICAL 과 같은 표를 쓴다.
+  const DUP_HUB_CANONICAL = { 'mobile-app': 'app-dev' };
+  const hubSlug = landing.hubId ? DUP_HUB_CANONICAL[landing.hubId] || landing.hubId : null;
   const crumbs = [
     { name: '홈', url: `${BASE}/` },
-    ...(hub ? [{ name: hub.ko, url: `${BASE}/h/${landing.hubId}/` }] : []),
+    ...(hub ? [{ name: hub.ko, url: `${BASE}/h/${hubSlug}/` }] : []),
     { name: landing.keyword || landing.title, url },
   ];
 

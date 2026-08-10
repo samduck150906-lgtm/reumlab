@@ -30,6 +30,7 @@
     "seo:verify:conversion": "node scripts/verify-conversion.mjs",
     "test": "node --import tsx --test scripts/analytics.test.mts",
     "seo:audit:index": "node scripts/audit-indexability.mjs",
+    "seo:qa": "node scripts/qa-final.mjs",
     "deploy:campaigns": "node scripts/deploy-campaigns-to-platforms.mjs",
     "build": "npm run prebuild && npm run gen:feed && node scripts/prepare-next-public.mjs && next build && npm run copy:home && node scripts/generate-purpose-landings.mjs && npm run gen:llms && node scripts/finalize-out.mjs",
     "gen:llms": "tsx scripts/generate-llms.mts",

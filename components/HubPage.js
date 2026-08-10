@@ -21,7 +21,20 @@ export default function HubPage({ hubSlug }) {
   const bodyText = (content && content.intro) || getHubBodyTemplate(hub);
   const tel = `tel:${String(site.tel || '').replace(/-/g, '')}`;
   const mail = `mailto:${site.email}`;
-  const landings = (hub.landings || []).slice(0, 60);
+  /*
+    중복 허브로 통합된 쪽의 랜딩도 함께 싣는다.
+
+    /h/mobile-app/ 은 canonical 이 /h/app-dev/ 를 가리키는 중복 허브라 noindex 다.
+    그런데 그 밑의 색인 랜딩 8개(/l/mobile-app-*)는 이 허브에서만 링크되고 있어서,
+    "색인 대상인데 도달 경로가 noindex 페이지뿐"인 상태였다(홈에서 도달 불가).
+    canonical 을 흡수한 대표 허브가 링크도 함께 흡수해야 링크 그래프와 색인 판정이 어긋나지 않는다.
+    표는 app/h/[hubSlug]/page.js 의 DUP_HUB_CANONICAL 과 같아야 한다.
+  */
+  const DUP_HUB_CANONICAL = { 'mobile-app': 'app-dev' };
+  const absorbed = Object.entries(DUP_HUB_CANONICAL)
+    .filter(([, canonical]) => canonical === hubSlug)
+    .flatMap(([dup]) => getHubBySlug(dup)?.landings || []);
+  const landings = [...new Set([...(hub.landings || []), ...absorbed])].slice(0, 60);
 
   return (
     <div className="bg-white font-sans text-slate-800">

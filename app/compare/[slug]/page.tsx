@@ -48,7 +48,10 @@ export default function ComparePage({ params }: Props) {
   const canonical = compareCanonical(cmp.slug);
   const crumbs = [
     { name: '홈', url: `${SITE.domain}/` },
-    { name: '비교', url: `${SITE.domain}/compare/` },
+    // /compare/ 허브 페이지는 없다(비교 글이 3건뿐이라 만들지 않았다 — 빈약한 카테고리 페이지 금지).
+    // 비교 글 3건을 실제로 나열하는 곳은 /guide/ 허브이므로 그쪽을 가리킨다.
+    // 존재하지 않는 URL 을 BreadcrumbList item 으로 내보내면 안 된다.
+    { name: '가이드', url: `${SITE.domain}/guide/` },
     { name: cmp.h1.slice(0, 48), url: canonical },
   ];
 

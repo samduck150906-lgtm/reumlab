@@ -826,7 +826,33 @@ const BASE_REGIONS = [
  * lib/pseo.ts 의 SERVICES[].industryLinks 와 같은 역할 — 이 파일은 Next 번들 밖이라
  * import 할 수 없어 같은 URL 을 손으로 맞춘다. (실재 여부는 빌드 후 검증 스크립트가 확인)
  */
+/*
+  ⚠️ /website/ 는 Next 라우트(app/website/page.tsx)가 업종 294개를 전부 나열하는
+     인덱스를 만들지만, 이 생성기가 같은 경로를 덮어써서 그 인덱스는 배포되지 않는다.
+     그 결과 /website/<업종>/ 194개가 서로만 링크하는 사슬이 되어 홈 기준 깊이 6~16 에 있었다.
+     아래 items 로 카테고리별 대표 업종을 노출해 사슬 시작점을 앞으로 당긴다.
+     (근본 해결 — 별도 업종 인덱스 URL 을 둘지 — 는 IA 결정이라 보고서 REPORT ONLY 로 남긴다.)
+*/
 const INDUSTRY_LINKS = {
+  website: {
+    index: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
+    items: [
+      { href: '/website/kape/', label: '카페 홈페이지 제작' },
+      { href: '/website/sigdang/', label: '식당 홈페이지 제작' },
+      { href: '/website/pensyeon/', label: '펜션 홈페이지 제작' },
+      { href: '/website/syopingmol/', label: '쇼핑몰 홈페이지 제작' },
+      { href: '/website/jejoeob/', label: '제조업 홈페이지 제작' },
+      { href: '/website/geonseolhoesa/', label: '건설회사 홈페이지 제작' },
+      { href: '/website/budongsan/', label: '부동산 홈페이지 제작' },
+      { href: '/website/beobmubeobin/', label: '법무법인 홈페이지 제작' },
+      { href: '/website/semusa/', label: '세무사 홈페이지 제작' },
+      { href: '/website/jadongcha-jeongbiso/', label: '자동차 정비소 홈페이지 제작' },
+      { href: '/website/wedinghol/', label: '웨딩홀 홈페이지 제작' },
+      { href: '/website/cheongsoeobche/', label: '청소업체 홈페이지 제작' },
+      { href: '/website/it-company/', label: 'IT기업 홈페이지 제작' },
+      { href: '/website/gieob/', label: '기업 홈페이지 제작' },
+    ],
+  },
   mvp: {
     index: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
     items: [
@@ -862,11 +888,17 @@ ${links.map((l) => `        <li><a href="${l.href}">${esc(l.label)}</a></li>`).j
 }
 
 function regionLinks(land) {
-  if (!REGION_SERVICE_SLUGS.has(land.slug)) return '';
-  const regions = BASE_REGIONS.map(
-    (r) => `        <li><a href="/${land.slug}/${r.slug}/">${r.ko} ${esc(land.navLabel)}</a></li>`,
-  ).join('\n');
+  // 업종 블록과 지역 블록은 조건이 다르다.
+  //  · 지역 — 지역 스포크 페이지가 실제로 생성되는 슬러그만(REGION_SERVICE_SLUGS)
+  //  · 업종 — INDUSTRY_LINKS 에 항목이 있는 슬러그면 지역 여부와 무관하게 노출
+  // 전에는 지역 조건에서 먼저 return 해 버려서, /website/ 에 업종 링크를 넣어도 나가지 않았다.
+  const regions = REGION_SERVICE_SLUGS.has(land.slug)
+    ? BASE_REGIONS.map(
+        (r) => `        <li><a href="/${land.slug}/${r.slug}/">${r.ko} ${esc(land.navLabel)}</a></li>`,
+      ).join('\n')
+    : '';
   const ind = INDUSTRY_LINKS[land.slug];
+  if (!ind && !regions) return '';
   const industrySection = ind
     ? `<section class="section"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">TYPES</span><h2 class="sec-title">자주 만드는 ${esc(land.navLabel)} 유형</h2><p class="sec-sub">업종마다 먼저 만들어야 할 기능이 다릅니다. 대표적인 유형별 비용과 범위를 정리해 두었습니다.</p></div>
@@ -876,12 +908,15 @@ ${ind.items.map((i) => `        <li><a href="${i.href}">${esc(i.label)}</a></li>
     <p style="margin-top:14px"><a href="${ind.index.href}">${esc(ind.index.label)} →</a></p>
   </div></section>`
     : '';
-  return `${industrySection}<section class="section"><div class="wrap">
+  const regionSection = regions
+    ? `<section class="section"><div class="wrap">
     <div class="sec-head"><span class="eyebrow">LOCAL</span><h2 class="sec-title">거점 지역 ${esc(land.navLabel)}</h2><p class="sec-sub">름랩 사업장이 있는 화성 동탄을 중심으로 한 지역별 안내입니다. 전국 어디든 비대면으로 같은 조건으로 진행합니다.</p></div>
     <ul class="lx-feat-grid">
 ${regions}
     </ul>
-  </div></section>`;
+  </div></section>`
+    : '';
+  return `${industrySection}${regionSection}`;
 }
 
 /**

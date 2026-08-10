@@ -24,10 +24,15 @@
 /consultation         /#contact   301
 /consultation/        /#contact   301
 
-# 포트폴리오 섹션 전체 제거 — 구 색인 URL(/portfolio, /portfolio/*, 익명화 슬러그 포함)은
-# 홈 "작업 사례"(#portfolio) 섹션으로 통합해 soft-404 방지. 페이지 자체가 삭제돼 out/portfolio 파일이 없으므로 일반 301로 발동.
-/portfolio            /#portfolio   301
-/portfolio/*          /#portfolio   301
+# 구 포트폴리오 URL 정리.
+#
+# 한때 포트폴리오 섹션을 없애고 홈 앵커(/#portfolio)로 보냈지만, 지금은 /portfolio/ 허브와
+# /portfolio/<id>/ 상세 15건이 실제 페이지로 존재한다. 목적지를 홈 앵커에서 실제 허브로 바꾼다.
+#   · 새 페이지는 파일이 있으므로 Netlify 가 파일을 먼저 서빙한다(비강제 규칙이라 301 이 발동하지 않음).
+#   · 파일이 없는 구 익명화 슬러그만 이 규칙에 걸려 허브로 간다.
+# ⚠️ 여기에 ! (강제)를 붙이면 실제 사례 페이지 16개가 통째로 301 되어 사라진다. 붙이지 말 것.
+/portfolio            /portfolio/   301
+/portfolio/*          /portfolio/   301
 
 # /l/ 지역 랜딩 → 앱 pSEO 지역×서비스 통합 (자기잠식 제거, lib/data.js REDIRECTED_LANDING_SLUGS와 동기화)
 # 정적 생성에서 제외돼 out/에 파일이 없으므로 일반 301로 발동한다. (/soho·service_intent 대표키워드·쇼핑몰 랜딩은 유지)
