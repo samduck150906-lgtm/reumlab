@@ -392,7 +392,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   'flutter-development': {
     title: 'Flutter App Development Studio Korea | REUMLAB',
     description:
-      'Flutter specialist studio in Hwaseong (Dongtan), Korea. One codebase for iOS and Android. 50–70% cost vs native. Full source handover + operation training.',
+      'Flutter specialist studio in Hwaseong (Dongtan), Korea. One codebase for iOS and Android instead of two. Full source handover + operation training.',
     keywords: [
       'Flutter 개발',
       'Flutter 앱개발',
@@ -407,9 +407,9 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주'],
     intent: '업체/정보',
     funnel: '전환',
-    serviceDesc: 'Flutter 크로스플랫폼은 네이티브 2벌 대비 비용 50~70% 절감. 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. 앱 라이트 MVP 580만 원부터, 회원·결제까지 갖춘 앱 스탠다드 980만 원.',
+    serviceDesc: 'Flutter 크로스플랫폼은 코드 한 벌로 iOS·Android를 함께 만들어 네이티브 2벌보다 개발 비용이 낮습니다. 수정도 한 번에 반영돼 유지보수 부담이 적습니다. 소스코드 전체 이관, 직접 수정 교육 포함. 앱 라이트 MVP 580만 원부터, 회원·결제까지 갖춘 앱 스탠다드 980만 원.',
     sections: [
-      { h2: 'Why Flutter is cheaper to build and maintain', body: 'Building iOS and Android natively means two codebases, two teams, and two maintenance streams. Flutter uses a single codebase for both platforms, cutting development cost by roughly 50–70% and halving long-term maintenance — every fix and update ships to both platforms at once.' },
+      { h2: 'Why Flutter is cheaper to build and maintain', body: 'Building iOS and Android natively means two codebases, two teams, and two maintenance streams. Flutter uses a single codebase for both platforms, so you build and maintain one instead of two — every fix and update ships to both platforms at once. How much that saves depends on your screen count and feature scope; we work it out against your actual scope before quoting.' },
       { h2: 'When Flutter fits — and when native is better', body: 'Flutter is ideal for commerce, booking, community, and subscription apps, and for MVPs that need to launch on both platforms fast. For high-end 3D games, real-time video, or AR that depend on native performance, we recommend native and say so up front. We assess fit before quoting.' },
       { h2: 'Cost, delivery, and handover', body: 'A Flutter app MVP starts at ₩5,800,000 (App Lite, ~14 days) and ₩9,800,000 for App Standard with members, payments, and admin (~21 days) — fixed, VAT-included pricing. We handle App Store and Play Store submission, then transfer the full source code, repository, and deployment rights to you, with 1:1 operation training.' },
     ],
@@ -495,7 +495,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   flutter: {
     title: 'Flutter 앱개발 외주 | iOS·안드로이드 동시 — 름랩 REUMLAB',
     description:
-      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브 2벌 대비 개발 비용 50~70% 절감, 유지보수도 절반. VAT 포함 580만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
+      'Flutter 하나로 iOS·Android 앱을 동시에. 네이티브를 두 벌 만드는 것보다 개발 비용이 낮고 유지보수도 한 번에 끝납니다. VAT 포함 580만 원부터, 소스코드 전체 이관 + 직접 운영 교육. 동탄·수원 거점, 전국 어디서나 진행.',
     keywords: ['Flutter 앱개발', 'Flutter 외주', '크로스플랫폼 개발', 'Flutter MVP', '앱개발 외주', 'iOS 안드로이드 앱'],
     ogTitle: 'Flutter 앱개발 외주 | 하나의 코드로 두 플랫폼 — 름랩',
     ogDescription: '하나의 코드로 iOS·Android 동시 제작. MVP 단계 시간·비용을 줄이는 Flutter 앱개발.',
@@ -505,15 +505,15 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     intent: '정보/전환',
     funnel: '중간',
     serviceDesc:
-      'Flutter 크로스플랫폼으로 iOS·Android를 한 번에 만듭니다. 네이티브 2벌 대비 비용 50~70% 절감, 유지보수도 구조적으로 절반. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 포함 580만 원부터.',
+      'Flutter 크로스플랫폼으로 iOS·Android를 한 번에 만듭니다. 네이티브를 두 벌 만드는 것보다 비용이 낮고, 수정도 한 번에 반영됩니다. 소스코드 전체 이관, 직접 수정 교육 포함. VAT 포함 580만 원부터.',
     whyPoints: [
-      '하나의 코드로 iOS·Android 동시 출시 — 네이티브 2벌 대비 비용 50~70% 절감',
-      '유지보수도 구조적으로 절반 — 출시 후 운영비까지 줄임',
+      '하나의 코드로 iOS·Android 동시 출시 — 두 벌을 따로 만드는 것보다 낮은 비용',
+      '수정·업데이트가 한 번에 양쪽 반영 — 출시 후 운영 부담까지 줄임',
       'VAT 포함 580만 원부터 정액, 소스코드 전체 이관',
       'MVP·중소 규모 서비스 앱에 최적, 직접 수정 교육 포함',
     ],
     sections: [
-      { h2: 'Flutter가 비용을 줄이는 이유', body: 'iOS·Android를 따로 만들면 인력·기간·유지보수가 두 벌 듭니다. Flutter는 하나의 코드베이스로 두 플랫폼을 함께 만들어 개발 비용을 50~70% 줄이고, 이후 수정·업데이트도 한 번에 반영돼 유지보수가 구조적으로 절반입니다.' },
+      { h2: 'Flutter가 비용을 줄이는 이유', body: 'iOS·Android를 따로 만들면 인력·기간·유지보수가 두 벌 듭니다. Flutter는 하나의 코드베이스로 두 플랫폼을 함께 만들기 때문에 두 벌을 따로 개발할 때보다 비용이 낮고, 이후 수정·업데이트도 한 번에 양쪽에 반영됩니다. 줄어드는 폭은 화면 수와 기능 범위에 따라 달라지므로, 상담에서 실제 범위를 놓고 계산해 드립니다.' },
       { h2: 'Flutter가 맞는 경우 / 아닌 경우', body: '맞는 경우: 커머스·예약·커뮤니티·구독처럼 일반 비즈니스 앱, iOS·Android 동시 출시가 필요한 MVP. 아닌 경우: 고사양 3D 게임, 실시간 영상 처리처럼 플랫폼 네이티브 성능이 핵심인 영역은 네이티브를 검토합니다. 상담에서 적합성을 먼저 판단합니다.' },
       { h2: '진행 방식과 산출물', body: '화면·흐름 확정 → 핵심 기능 중심 개발 → 중간 확인 → 스토어 등록 → 소스코드·저장소·배포 권한 이관 순으로 진행합니다. 산출물은 iOS·Android 앱, 관리자/연동 기능, 소스코드 전체, 실행 문서, 1:1 운영 교육입니다.' },
       { h2: '비용·기간', body: 'Flutter 앱 MVP는 핵심 화면 중심 앱 라이트 580만 원(약 14일)부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원(약 21일)입니다(VAT 포함 정액). 결제·복잡한 관리자·외부 API·서버 비용·스토어 계정은 범위에 따라 별도 안내되며, 숨은 비용 없이 상담 단계에서 미리 정합니다.' },
