@@ -141,6 +141,9 @@ export const GUIDES: GuideDef[] = [
     ],
     related: [
       { href: '/mvp', label: 'MVP 개발 서비스 보기' },
+      // 검색 의도가 인접한 글이라 서로 링크해 둔다.
+      // 이 가이드는 "범위를 나눠 줄이는 법", 저 글은 "견적을 비교하기 전 기준" 이다.
+      { href: '/blog/mvp-cost-before-quote/', label: 'MVP 견적 전 확인할 5가지' },
       { href: '/guide/startup-mvp', label: '스타트업 MVP 개발 가이드' },
       { href: '/guide/app-cost', label: '앱개발 비용 결정 구조' },
     ],

@@ -103,7 +103,7 @@ export default function BlogPostPage({ params }: Props) {
           <div className="section-inner" style={{ paddingBottom: 48 }}>
             <p className="section-tag">Column</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.35rem, 3vw, 1.85rem)' }}>
-              {post.title}
+              {post.h1 || post.title}
             </h1>
             <p className="hub-intro">
               <time dateTime={post.publishedAt}>{post.publishedAt}</time>
