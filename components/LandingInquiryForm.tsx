@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
+import { EVENT, pageContext, pageTypeOf, serviceOf, pushEvent } from '@/lib/analytics';
 
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
@@ -41,6 +41,13 @@ export default function LandingInquiryForm({
   const [status, setStatus] = useState<Status>('idle');
   const [utm, setUtm] = useState<Record<string, string>>({});
   const [started, setStarted] = useState(false);
+  /**
+   * 유입 맥락 — "어떤 SEO 페이지가 실제 문의를 만드는가"에 답하기 위한 값들.
+   * 접수 내역(Netlify)에 함께 저장되므로, GA4 를 열지 않아도 문의 한 건이
+   * 어느 페이지·어느 유형에서 왔는지 바로 읽을 수 있다.
+   * 개인정보는 담지 않는다 — 경로와 분류, 외부 유입 도메인까지만 싣는다.
+   */
+  const [ctx, setCtx] = useState({ path: '', pageType: '', service: '', referrer: '' });
 
   useEffect(() => {
     try {
@@ -59,6 +66,21 @@ export default function LandingInquiryForm({
       }
     } catch {
       /* sessionStorage 차단 환경 무시 */
+    }
+
+    try {
+      const path = window.location.pathname;
+      // 리퍼러는 도메인까지만 남긴다. 전체 URL 은 검색어·개인 식별 정보를 품을 수 있다.
+      let ref = '';
+      if (document.referrer) {
+        const r = new URL(document.referrer);
+        ref = r.host === window.location.host ? '(사이트 내부)' : r.host;
+      } else {
+        ref = '(직접 유입)';
+      }
+      setCtx({ path, pageType: pageTypeOf(path), service: serviceOf(path), referrer: ref });
+    } catch {
+      /* URL 파싱 실패 시 맥락 없이 진행 — 폼 제출이 우선이다 */
     }
   }, []);
 
@@ -147,6 +169,10 @@ export default function LandingInquiryForm({
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <input type="hidden" name="유입_랜딩" value={`l/${landingSlug}`} />
+      <input type="hidden" name="유입_경로" value={ctx.path} />
+      <input type="hidden" name="페이지_유형" value={ctx.pageType} />
+      <input type="hidden" name="관심_서비스축" value={ctx.service} />
+      <input type="hidden" name="유입_출처" value={ctx.referrer} />
       {UTM_KEYS.map((k) => (
         <input key={k} type="hidden" name={k} value={utm[k] || ''} />
       ))}

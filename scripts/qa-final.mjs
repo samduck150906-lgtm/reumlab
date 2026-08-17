@@ -24,6 +24,7 @@
  */
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { readSitemapXml } from './read-sitemap.mjs';
 
 const OUT = process.argv[2] || 'out';
 const DOMAIN = 'https://reumlab.com';
@@ -55,7 +56,8 @@ const indexed = pages.filter((p) => !p.noindex);
 const byPath = new Map(pages.map((p) => [p.pathname, p]));
 
 // 사이트맵
-const sitemapXml = existsSync(join(OUT, 'sitemap.xml')) ? read(join(OUT, 'sitemap.xml')) : '';
+// 사이트맵은 빌드 마지막에 index 로 분할된다 — 자식까지 합쳐 읽는다(scripts/read-sitemap.mjs).
+const sitemapXml = readSitemapXml(OUT);
 const sitemapUrls = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
 
 // 리다이렉트 출발지

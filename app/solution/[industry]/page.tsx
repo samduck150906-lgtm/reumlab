@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import { getIndustry } from '@/lib/industries';
-import { SOLUTIONS, getSolution, solutionCanonical, solutionDecision, solutionTitleName } from '@/lib/solution';
+import { SOLUTIONS, getSolution, solutionCanonical, solutionDecision, solutionTitleName, solutionTitle, solutionDescription } from '@/lib/solution';
+import { systemsForIndustry } from '@/lib/systems';
 import { hasCost } from '@/lib/cost';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
@@ -24,8 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!s) notFound();
 
   const name = solutionTitleName(s.slug);
-  const title = `${name} 구축 | 기능 모듈·기술 스택·연동·도입 단계 — 름랩`;
-  const description = `${name} 어떻게 구축하나요? 기능 모듈 구성, 기술 스택, 연동 포인트, 단계별 도입 로드맵을 정리했습니다. 소스코드 이관·직접 운영.`;
+  // 색인 게이트(solutionDecision)와 같은 문자열을 쓴다 — lib/solution.ts 단일 출처.
+  const title = solutionTitle(s.slug);
+  const description = solutionDescription(s.slug);
   const canonical = solutionCanonical(s.slug);
   const ind = getIndustry(s.slug);
 
@@ -62,6 +64,8 @@ export default function SolutionPage({ params }: Props) {
     { name: `${name} 구축`, url: canonical },
   ];
   const others = pickSiblings(SOLUTIONS, s.slug, 6);
+  // 기능/시스템 축으로 넘어가는 문맥 앵커 — /system 페이지가 고아로 뜨지 않게 한다.
+  const relatedSystems = systemsForIndustry(s.slug);
 
   return (
     <>
@@ -164,6 +168,17 @@ export default function SolutionPage({ params }: Props) {
               {hasCost(s.slug) && <Link href={`/cost/${s.slug}/`}>{ind?.ko ?? ''} 앱 개발 비용·견적</Link>}
             </div>
           </div>
+
+          {relatedSystems.length > 0 && (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>이 업종에서 자주 함께 찾는 기능</h2>
+              <div className="link-grid">
+                {relatedSystems.map((sys) => (
+                  <Link key={sys.slug} href={`/system/${sys.slug}/`}>{sys.primary}</Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>

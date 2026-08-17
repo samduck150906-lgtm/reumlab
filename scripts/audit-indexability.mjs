@@ -26,6 +26,7 @@
  */
 import { readFileSync, readdirSync, statSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, relative, dirname } from 'node:path';
+import { readSitemapLocs } from './read-sitemap.mjs';
 
 const args = process.argv.slice(2);
 const OUT = args.find((a) => !a.startsWith('--')) || 'out';
@@ -77,10 +78,7 @@ for (const file of pages) {
 }
 
 // ─────────────────────────────── 사이트맵
-const smPath = join(OUT, 'sitemap.xml');
-const sitemap = existsSync(smPath)
-  ? new Set([...readFileSync(smPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => decodeURIComponent(m[1])))
-  : new Set();
+const sitemap = new Set(readSitemapLocs(OUT).map((u) => decodeURIComponent(u)));
 
 // ─────────────────────────────── 리다이렉트 규칙
 const redirects = [];

@@ -973,6 +973,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="hidden" name="utm_content" data-utm="utm_content" />
             <input type="hidden" name="utm_term" data-utm="utm_term" />
             <input type="hidden" name="fbclid" data-utm="fbclid" />
+            <!-- 유입 맥락 — 어떤 페이지·어떤 경로로 들어와 문의했는지 접수 내역에 함께 남긴다.
+                 값은 script.js 의 fillContext() 가 채운다. 개인정보는 담지 않는다(경로·분류·유입 도메인까지). -->
+            <input type="hidden" name="유입_경로" data-ctx="path" />
+            <input type="hidden" name="페이지_유형" data-ctx="pageType" />
+            <input type="hidden" name="유입_출처" data-ctx="referrer" />
             <div class="af-row">
               <div class="af-field">
                 <label class="af-label" for="af-name">이름 또는 업체명 <span class="af-req">*</span></label>

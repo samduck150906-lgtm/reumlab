@@ -6,7 +6,10 @@
     "description": "앱개발 비용 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "app-dev"
   },
   {
@@ -16,7 +19,10 @@
     "description": "앱개발 견적 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "app-dev"
   },
   {
@@ -26,7 +32,10 @@
     "description": "앱개발 가격 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "app-dev"
   },
   {
@@ -36,7 +45,10 @@
     "description": "앱개발 제작비 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "app-dev"
   },
   {
@@ -46,7 +58,10 @@
     "description": "앱개발 개발비 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "app-dev"
   },
   {
@@ -56,7 +71,10 @@
     "description": "앱개발 견적문의 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "app-dev"
   },
   {
@@ -66,7 +84,10 @@
     "description": "앱개발 비용상담 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "app-dev"
   },
   {
@@ -76,7 +97,10 @@
     "description": "앱개발 외주비 문의하세요. 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "app-dev"
   },
   {
@@ -86,7 +110,10 @@
     "description": "홈페이지제작 비용 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "homepage-dev"
   },
   {
@@ -96,7 +123,10 @@
     "description": "홈페이지제작 견적 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "homepage-dev"
   },
   {
@@ -106,7 +136,10 @@
     "description": "홈페이지제작 가격 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "homepage-dev"
   },
   {
@@ -116,7 +149,10 @@
     "description": "홈페이지제작 제작비 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "homepage-dev"
   },
   {
@@ -126,7 +162,10 @@
     "description": "홈페이지제작 개발비 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "homepage-dev"
   },
   {
@@ -136,7 +175,10 @@
     "description": "홈페이지제작 견적문의 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "homepage-dev"
   },
   {
@@ -146,7 +188,10 @@
     "description": "홈페이지제작 비용상담 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "homepage-dev"
   },
   {
@@ -156,7 +201,10 @@
     "description": "홈페이지제작 외주비 문의하세요. 홈페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "homepage-dev"
   },
   {
@@ -166,7 +214,10 @@
     "description": "웹개발 비용 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "web-dev"
   },
   {
@@ -176,7 +227,10 @@
     "description": "웹개발 견적 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "web-dev"
   },
   {
@@ -186,7 +240,10 @@
     "description": "웹개발 가격 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "web-dev"
   },
   {
@@ -196,7 +253,10 @@
     "description": "웹개발 제작비 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "web-dev"
   },
   {
@@ -206,7 +266,10 @@
     "description": "웹개발 개발비 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "web-dev"
   },
   {
@@ -216,7 +279,10 @@
     "description": "웹개발 견적문의 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "web-dev"
   },
   {
@@ -226,7 +292,10 @@
     "description": "웹개발 비용상담 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "web-dev"
   },
   {
@@ -236,7 +305,10 @@
     "description": "웹개발 외주비 문의하세요. 웹 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "web-dev"
   },
   {
@@ -246,7 +318,10 @@
     "description": "랜딩페이지제작 비용 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "landing-page"
   },
   {
@@ -256,7 +331,10 @@
     "description": "랜딩페이지제작 견적 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "landing-page"
   },
   {
@@ -266,7 +344,10 @@
     "description": "랜딩페이지제작 가격 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "landing-page"
   },
   {
@@ -276,7 +357,10 @@
     "description": "랜딩페이지제작 제작비 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "landing-page"
   },
   {
@@ -286,7 +370,10 @@
     "description": "랜딩페이지제작 개발비 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "landing-page"
   },
   {
@@ -296,7 +383,10 @@
     "description": "랜딩페이지제작 견적문의 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "landing-page"
   },
   {
@@ -306,7 +396,10 @@
     "description": "랜딩페이지제작 비용상담 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "landing-page"
   },
   {
@@ -316,7 +409,10 @@
     "description": "랜딩페이지제작 외주비 문의하세요. 랜딩페이지 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "landing-page"
   },
   {
@@ -326,7 +422,10 @@
     "description": "MVP개발 비용 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "mvp-dev"
   },
   {
@@ -336,7 +435,10 @@
     "description": "MVP개발 견적 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "mvp-dev"
   },
   {
@@ -346,7 +448,10 @@
     "description": "MVP개발 가격 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "mvp-dev"
   },
   {
@@ -356,7 +461,10 @@
     "description": "MVP개발 제작비 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "mvp-dev"
   },
   {
@@ -366,7 +474,10 @@
     "description": "MVP개발 개발비 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "mvp-dev"
   },
   {
@@ -376,7 +487,10 @@
     "description": "MVP개발 견적문의 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "mvp-dev"
   },
   {
@@ -386,7 +500,10 @@
     "description": "MVP개발 비용상담 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "mvp-dev"
   },
   {
@@ -396,7 +513,10 @@
     "description": "MVP개발 외주비 문의하세요. MVP 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "mvp-dev"
   },
   {
@@ -406,7 +526,10 @@
     "description": "쇼핑몰제작 비용 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "shopping-mall"
   },
   {
@@ -416,7 +539,10 @@
     "description": "쇼핑몰제작 견적 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "shopping-mall"
   },
   {
@@ -426,7 +552,10 @@
     "description": "쇼핑몰제작 가격 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "shopping-mall"
   },
   {
@@ -436,7 +565,10 @@
     "description": "쇼핑몰제작 제작비 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "shopping-mall"
   },
   {
@@ -446,7 +578,10 @@
     "description": "쇼핑몰제작 개발비 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "shopping-mall"
   },
   {
@@ -456,7 +591,10 @@
     "description": "쇼핑몰제작 견적문의 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "shopping-mall"
   },
   {
@@ -466,7 +604,10 @@
     "description": "쇼핑몰제작 비용상담 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "shopping-mall"
   },
   {
@@ -476,7 +617,10 @@
     "description": "쇼핑몰제작 외주비 문의하세요. 쇼핑몰 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "shopping-mall"
   },
   {
@@ -486,7 +630,10 @@
     "description": "앱개발외주 비용 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "app-dev-out"
   },
   {
@@ -496,7 +643,10 @@
     "description": "앱개발외주 견적 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "app-dev-out"
   },
   {
@@ -506,7 +656,10 @@
     "description": "앱개발외주 가격 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "app-dev-out"
   },
   {
@@ -516,7 +669,10 @@
     "description": "앱개발외주 제작비 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "app-dev-out"
   },
   {
@@ -526,7 +682,10 @@
     "description": "앱개발외주 개발비 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "app-dev-out"
   },
   {
@@ -536,7 +695,10 @@
     "description": "앱개발외주 견적문의 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "app-dev-out"
   },
   {
@@ -546,7 +708,10 @@
     "description": "앱개발외주 비용상담 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "app-dev-out"
   },
   {
@@ -556,7 +721,10 @@
     "description": "앱개발외주 외주비 문의하세요. 앱 개발 외주 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "app-dev-out"
   },
   {
@@ -566,7 +734,10 @@
     "description": "웹사이트제작 비용 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "website-dev"
   },
   {
@@ -576,7 +747,10 @@
     "description": "웹사이트제작 견적 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "website-dev"
   },
   {
@@ -586,7 +760,10 @@
     "description": "웹사이트제작 가격 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "website-dev"
   },
   {
@@ -596,7 +773,10 @@
     "description": "웹사이트제작 제작비 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "website-dev"
   },
   {
@@ -606,7 +786,10 @@
     "description": "웹사이트제작 개발비 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "website-dev"
   },
   {
@@ -616,7 +799,10 @@
     "description": "웹사이트제작 견적문의 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "website-dev"
   },
   {
@@ -626,7 +812,10 @@
     "description": "웹사이트제작 비용상담 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "website-dev"
   },
   {
@@ -636,7 +825,10 @@
     "description": "웹사이트제작 외주비 문의하세요. 웹사이트 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "website-dev"
   },
   {
@@ -646,7 +838,10 @@
     "description": "서비스기획 비용 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "service-plan"
   },
   {
@@ -656,7 +851,10 @@
     "description": "서비스기획 견적 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "service-plan"
   },
   {
@@ -666,7 +864,10 @@
     "description": "서비스기획 가격 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "service-plan"
   },
   {
@@ -676,7 +877,10 @@
     "description": "서비스기획 제작비 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "service-plan"
   },
   {
@@ -686,7 +890,10 @@
     "description": "서비스기획 개발비 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "service-plan"
   },
   {
@@ -696,7 +903,10 @@
     "description": "서비스기획 견적문의 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "service-plan"
   },
   {
@@ -706,7 +916,10 @@
     "description": "서비스기획 비용상담 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "service-plan"
   },
   {
@@ -716,7 +929,10 @@
     "description": "서비스기획 외주비 문의하세요. 서비스 기획 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "service-plan",
+    "serviceKo": "서비스 기획",
+    "svcType": "plan",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "service-plan"
   },
   {
@@ -726,7 +942,10 @@
     "description": "반응형웹제작 비용 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "responsive-web"
   },
   {
@@ -736,7 +955,10 @@
     "description": "반응형웹제작 견적 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "responsive-web"
   },
   {
@@ -746,7 +968,10 @@
     "description": "반응형웹제작 가격 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "responsive-web"
   },
   {
@@ -756,7 +981,10 @@
     "description": "반응형웹제작 제작비 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "responsive-web"
   },
   {
@@ -766,7 +994,10 @@
     "description": "반응형웹제작 개발비 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "responsive-web"
   },
   {
@@ -776,7 +1007,10 @@
     "description": "반응형웹제작 견적문의 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "responsive-web"
   },
   {
@@ -786,7 +1020,10 @@
     "description": "반응형웹제작 비용상담 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "responsive-web"
   },
   {
@@ -796,7 +1033,10 @@
     "description": "반응형웹제작 외주비 문의하세요. 반응형 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "responsive-web",
+    "serviceKo": "반응형 웹 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "responsive-web"
   },
   {
@@ -806,7 +1046,10 @@
     "description": "모바일앱개발 비용 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "mobile-app"
   },
   {
@@ -816,7 +1059,10 @@
     "description": "모바일앱개발 견적 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "mobile-app"
   },
   {
@@ -826,7 +1072,10 @@
     "description": "모바일앱개발 가격 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "mobile-app"
   },
   {
@@ -836,7 +1085,10 @@
     "description": "모바일앱개발 제작비 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "mobile-app"
   },
   {
@@ -846,7 +1098,10 @@
     "description": "모바일앱개발 개발비 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "mobile-app"
   },
   {
@@ -856,7 +1111,10 @@
     "description": "모바일앱개발 견적문의 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "mobile-app"
   },
   {
@@ -866,7 +1124,10 @@
     "description": "모바일앱개발 비용상담 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "mobile-app"
   },
   {
@@ -876,7 +1137,10 @@
     "description": "모바일앱개발 외주비 문의하세요. 모바일 앱 개발 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "mobile-app",
+    "serviceKo": "모바일 앱 개발",
+    "svcType": "app",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "mobile-app"
   },
   {
@@ -886,7 +1150,10 @@
     "description": "웹제작 비용 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "web-dev-simple"
   },
   {
@@ -896,7 +1163,10 @@
     "description": "웹제작 견적 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "web-dev-simple"
   },
   {
@@ -906,7 +1176,10 @@
     "description": "웹제작 가격 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "price",
+    "intentKo": "가격",
     "hubId": "web-dev-simple"
   },
   {
@@ -916,7 +1189,10 @@
     "description": "웹제작 제작비 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "production-cost",
+    "intentKo": "제작비",
     "hubId": "web-dev-simple"
   },
   {
@@ -926,7 +1202,10 @@
     "description": "웹제작 개발비 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "dev-cost",
+    "intentKo": "개발비",
     "hubId": "web-dev-simple"
   },
   {
@@ -936,7 +1215,10 @@
     "description": "웹제작 견적문의 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "quote-inquiry",
+    "intentKo": "견적문의",
     "hubId": "web-dev-simple"
   },
   {
@@ -946,7 +1228,10 @@
     "description": "웹제작 비용상담 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "cost-consult",
+    "intentKo": "비용상담",
     "hubId": "web-dev-simple"
   },
   {
@@ -956,7 +1241,10 @@
     "description": "웹제작 외주비 문의하세요. 웹 제작 견적·상담 - 름랩.",
     "pattern": "service_intent",
     "serviceKey": "web-dev-simple",
+    "serviceKo": "웹 제작",
+    "svcType": "web",
     "intentKey": "out-source-cost",
+    "intentKo": "외주비",
     "hubId": "web-dev-simple"
   },
   {
@@ -966,7 +1254,10 @@
     "description": "수원 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "suwon"
   },
   {
@@ -976,7 +1267,10 @@
     "description": "수원 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "suwon"
   },
   {
@@ -986,7 +1280,10 @@
     "description": "수원 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "suwon"
   },
   {
@@ -996,7 +1293,10 @@
     "description": "수원 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "suwon"
   },
   {
@@ -1006,7 +1306,10 @@
     "description": "수원 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "suwon"
   },
   {
@@ -1016,7 +1319,10 @@
     "description": "수원 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "suwon"
   },
   {
@@ -1026,7 +1332,10 @@
     "description": "수원 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "suwon"
   },
   {
@@ -1036,7 +1345,10 @@
     "description": "수원 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "suwon"
   },
   {
@@ -1046,7 +1358,10 @@
     "description": "강남 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "gangnam"
   },
   {
@@ -1056,7 +1371,10 @@
     "description": "강남 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "gangnam"
   },
   {
@@ -1066,7 +1384,10 @@
     "description": "강남 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "gangnam"
   },
   {
@@ -1076,7 +1397,10 @@
     "description": "강남 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "gangnam"
   },
   {
@@ -1086,7 +1410,10 @@
     "description": "강남 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "gangnam"
   },
   {
@@ -1096,7 +1423,10 @@
     "description": "강남 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "gangnam"
   },
   {
@@ -1106,7 +1436,10 @@
     "description": "강남 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "gangnam"
   },
   {
@@ -1116,7 +1449,10 @@
     "description": "강남 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "gangnam"
   },
   {
@@ -1126,7 +1462,10 @@
     "description": "판교 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "pangyo"
   },
   {
@@ -1136,7 +1475,10 @@
     "description": "판교 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "pangyo"
   },
   {
@@ -1146,7 +1488,10 @@
     "description": "판교 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "pangyo"
   },
   {
@@ -1156,7 +1501,10 @@
     "description": "판교 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "pangyo"
   },
   {
@@ -1166,7 +1514,10 @@
     "description": "판교 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "pangyo"
   },
   {
@@ -1176,7 +1527,10 @@
     "description": "판교 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "pangyo"
   },
   {
@@ -1186,7 +1540,10 @@
     "description": "판교 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "pangyo"
   },
   {
@@ -1196,7 +1553,10 @@
     "description": "판교 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "pangyo"
   },
   {
@@ -1206,7 +1566,10 @@
     "description": "분당 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "bundang"
   },
   {
@@ -1216,7 +1579,10 @@
     "description": "분당 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "bundang"
   },
   {
@@ -1226,7 +1592,10 @@
     "description": "분당 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "bundang"
   },
   {
@@ -1236,7 +1605,10 @@
     "description": "분당 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "bundang"
   },
   {
@@ -1246,7 +1618,10 @@
     "description": "분당 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "bundang"
   },
   {
@@ -1256,7 +1631,10 @@
     "description": "분당 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "bundang"
   },
   {
@@ -1266,7 +1644,10 @@
     "description": "분당 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "bundang"
   },
   {
@@ -1276,7 +1657,10 @@
     "description": "분당 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "bundang"
   },
   {
@@ -1286,7 +1670,10 @@
     "description": "일산 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "ilsan"
   },
   {
@@ -1296,7 +1683,10 @@
     "description": "일산 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "ilsan"
   },
   {
@@ -1306,7 +1696,10 @@
     "description": "일산 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "ilsan"
   },
   {
@@ -1316,7 +1709,10 @@
     "description": "일산 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "ilsan"
   },
   {
@@ -1326,7 +1722,10 @@
     "description": "일산 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "ilsan"
   },
   {
@@ -1336,7 +1735,10 @@
     "description": "일산 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "ilsan"
   },
   {
@@ -1346,7 +1748,10 @@
     "description": "일산 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "ilsan"
   },
   {
@@ -1356,7 +1761,10 @@
     "description": "일산 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "ilsan"
   },
   {
@@ -1366,7 +1774,10 @@
     "description": "부천 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "bucheon"
   },
   {
@@ -1376,7 +1787,10 @@
     "description": "부천 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "bucheon"
   },
   {
@@ -1386,7 +1800,10 @@
     "description": "부천 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "bucheon"
   },
   {
@@ -1396,7 +1813,10 @@
     "description": "부천 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "bucheon"
   },
   {
@@ -1406,7 +1826,10 @@
     "description": "부천 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "bucheon"
   },
   {
@@ -1416,7 +1839,10 @@
     "description": "부천 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "bucheon"
   },
   {
@@ -1426,7 +1852,10 @@
     "description": "부천 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "bucheon"
   },
   {
@@ -1436,7 +1865,10 @@
     "description": "부천 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "bucheon"
   },
   {
@@ -1446,7 +1878,10 @@
     "description": "안양 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "anyang"
   },
   {
@@ -1456,7 +1891,10 @@
     "description": "안양 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "anyang"
   },
   {
@@ -1466,7 +1904,10 @@
     "description": "안양 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "anyang"
   },
   {
@@ -1476,7 +1917,10 @@
     "description": "안양 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "anyang"
   },
   {
@@ -1486,7 +1930,10 @@
     "description": "안양 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "anyang"
   },
   {
@@ -1496,7 +1943,10 @@
     "description": "안양 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "anyang"
   },
   {
@@ -1506,7 +1956,10 @@
     "description": "안양 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "anyang"
   },
   {
@@ -1516,7 +1969,10 @@
     "description": "안양 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "anyang"
   },
   {
@@ -1526,7 +1982,10 @@
     "description": "성남 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "seongnam"
   },
   {
@@ -1536,7 +1995,10 @@
     "description": "성남 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "seongnam"
   },
   {
@@ -1546,7 +2008,10 @@
     "description": "성남 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "seongnam"
   },
   {
@@ -1556,7 +2021,10 @@
     "description": "성남 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "seongnam"
   },
   {
@@ -1566,7 +2034,10 @@
     "description": "성남 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "seongnam"
   },
   {
@@ -1576,7 +2047,10 @@
     "description": "성남 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "seongnam"
   },
   {
@@ -1586,7 +2060,10 @@
     "description": "성남 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "seongnam"
   },
   {
@@ -1596,7 +2073,10 @@
     "description": "성남 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "seongnam"
   },
   {
@@ -1606,7 +2086,10 @@
     "description": "용인 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "yongin"
   },
   {
@@ -1616,7 +2099,10 @@
     "description": "용인 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "yongin"
   },
   {
@@ -1626,7 +2112,10 @@
     "description": "용인 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "yongin"
   },
   {
@@ -1636,7 +2125,10 @@
     "description": "용인 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "yongin"
   },
   {
@@ -1646,7 +2138,10 @@
     "description": "용인 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "yongin"
   },
   {
@@ -1656,7 +2151,10 @@
     "description": "용인 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "yongin"
   },
   {
@@ -1666,7 +2164,10 @@
     "description": "용인 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "yongin"
   },
   {
@@ -1676,7 +2177,10 @@
     "description": "용인 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "yongin"
   },
   {
@@ -1686,7 +2190,10 @@
     "description": "인천 앱 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "incheon"
   },
   {
@@ -1696,7 +2203,10 @@
     "description": "인천 홈페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "incheon"
   },
   {
@@ -1706,7 +2216,10 @@
     "description": "인천 웹 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "incheon"
   },
   {
@@ -1716,7 +2229,10 @@
     "description": "인천 랜딩페이지 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "incheon"
   },
   {
@@ -1726,7 +2242,10 @@
     "description": "인천 MVP 개발 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "incheon"
   },
   {
@@ -1736,7 +2255,10 @@
     "description": "인천 쇼핑몰 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "incheon"
   },
   {
@@ -1746,7 +2268,10 @@
     "description": "인천 앱 개발 외주 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "incheon"
   },
   {
@@ -1756,7 +2281,10 @@
     "description": "인천 웹사이트 제작 견적·외주 - 름랩. 원격 진행 가능.",
     "pattern": "region_service",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "incheon"
   },
   {
@@ -1766,7 +2294,10 @@
     "description": "스타트업 앱 개발 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "startup"
   },
   {
@@ -1776,7 +2307,10 @@
     "description": "스타트업 홈페이지 제작 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "startup"
   },
   {
@@ -1786,7 +2320,10 @@
     "description": "스타트업 웹 개발 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "startup"
   },
   {
@@ -1796,7 +2333,10 @@
     "description": "스타트업 랜딩페이지 제작 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "startup"
   },
   {
@@ -1806,7 +2346,10 @@
     "description": "스타트업 MVP 개발 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "startup"
   },
   {
@@ -1816,7 +2359,10 @@
     "description": "스타트업 쇼핑몰 제작 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "startup"
   },
   {
@@ -1826,7 +2372,10 @@
     "description": "스타트업 앱 개발 외주 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "startup"
   },
   {
@@ -1836,7 +2385,10 @@
     "description": "스타트업 웹사이트 제작 - 스타트업 서비스 개발 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "startup",
+    "industryKo": "스타트업",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "startup"
   },
   {
@@ -1846,7 +2398,10 @@
     "description": "카페 앱 개발 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "cafe"
   },
   {
@@ -1856,7 +2411,10 @@
     "description": "카페 홈페이지 제작 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "cafe"
   },
   {
@@ -1866,7 +2424,10 @@
     "description": "카페 웹 개발 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "cafe"
   },
   {
@@ -1876,7 +2437,10 @@
     "description": "카페 랜딩페이지 제작 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "cafe"
   },
   {
@@ -1886,7 +2450,10 @@
     "description": "카페 MVP 개발 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "cafe"
   },
   {
@@ -1896,7 +2463,10 @@
     "description": "카페 쇼핑몰 제작 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "cafe"
   },
   {
@@ -1906,7 +2476,10 @@
     "description": "카페 앱 개발 외주 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "cafe"
   },
   {
@@ -1916,7 +2489,10 @@
     "description": "카페 웹사이트 제작 - 카페 예약·주문 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "cafe",
+    "industryKo": "카페",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "cafe"
   },
   {
@@ -1926,7 +2502,10 @@
     "description": "식당 앱 개발 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "restaurant"
   },
   {
@@ -1936,7 +2515,10 @@
     "description": "식당 홈페이지 제작 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "restaurant"
   },
   {
@@ -1946,7 +2528,10 @@
     "description": "식당 웹 개발 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "restaurant"
   },
   {
@@ -1956,7 +2541,10 @@
     "description": "식당 랜딩페이지 제작 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "restaurant"
   },
   {
@@ -1966,7 +2554,10 @@
     "description": "식당 MVP 개발 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "restaurant"
   },
   {
@@ -1976,7 +2567,10 @@
     "description": "식당 쇼핑몰 제작 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "restaurant"
   },
   {
@@ -1986,7 +2580,10 @@
     "description": "식당 앱 개발 외주 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "restaurant"
   },
   {
@@ -1996,7 +2593,10 @@
     "description": "식당 웹사이트 제작 - 식당 주문·예약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "restaurant",
+    "industryKo": "식당",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "restaurant"
   },
   {
@@ -2006,7 +2606,10 @@
     "description": "학원 앱 개발 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "academy"
   },
   {
@@ -2016,7 +2619,10 @@
     "description": "학원 홈페이지 제작 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "academy"
   },
   {
@@ -2026,7 +2632,10 @@
     "description": "학원 웹 개발 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "academy"
   },
   {
@@ -2036,7 +2645,10 @@
     "description": "학원 랜딩페이지 제작 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "academy"
   },
   {
@@ -2046,7 +2658,10 @@
     "description": "학원 MVP 개발 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "academy"
   },
   {
@@ -2056,7 +2671,10 @@
     "description": "학원 쇼핑몰 제작 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "academy"
   },
   {
@@ -2066,7 +2684,10 @@
     "description": "학원 앱 개발 외주 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "academy"
   },
   {
@@ -2076,7 +2697,10 @@
     "description": "학원 웹사이트 제작 - 학원 수강·관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "academy",
+    "industryKo": "학원",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "academy"
   },
   {
@@ -2086,7 +2710,10 @@
     "description": "병원 앱 개발 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "hospital"
   },
   {
@@ -2096,7 +2723,10 @@
     "description": "병원 홈페이지 제작 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "hospital"
   },
   {
@@ -2106,7 +2736,10 @@
     "description": "병원 웹 개발 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "hospital"
   },
   {
@@ -2116,7 +2749,10 @@
     "description": "병원 랜딩페이지 제작 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "hospital"
   },
   {
@@ -2126,7 +2762,10 @@
     "description": "병원 MVP 개발 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "hospital"
   },
   {
@@ -2136,7 +2775,10 @@
     "description": "병원 쇼핑몰 제작 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "hospital"
   },
   {
@@ -2146,7 +2788,10 @@
     "description": "병원 앱 개발 외주 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "hospital"
   },
   {
@@ -2156,7 +2801,10 @@
     "description": "병원 웹사이트 제작 - 병원 예약·진료 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "hospital",
+    "industryKo": "병원",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "hospital"
   },
   {
@@ -2166,7 +2814,10 @@
     "description": "쇼핑몰 앱 개발 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "shopping"
   },
   {
@@ -2176,7 +2827,10 @@
     "description": "쇼핑몰 홈페이지 제작 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "shopping"
   },
   {
@@ -2186,7 +2840,10 @@
     "description": "쇼핑몰 웹 개발 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "shopping"
   },
   {
@@ -2196,7 +2853,10 @@
     "description": "쇼핑몰 랜딩페이지 제작 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "shopping"
   },
   {
@@ -2206,7 +2866,10 @@
     "description": "쇼핑몰 MVP 개발 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "shopping"
   },
   {
@@ -2216,7 +2879,10 @@
     "description": "쇼핑몰 쇼핑몰 제작 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "shopping"
   },
   {
@@ -2226,7 +2892,10 @@
     "description": "쇼핑몰 앱 개발 외주 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "shopping"
   },
   {
@@ -2236,7 +2905,10 @@
     "description": "쇼핑몰 웹사이트 제작 - 쇼핑몰·이커머스 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "shopping",
+    "industryKo": "쇼핑몰",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "shopping"
   },
   {
@@ -2246,7 +2918,10 @@
     "description": "부동산 앱 개발 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "realestate"
   },
   {
@@ -2256,7 +2931,10 @@
     "description": "부동산 홈페이지 제작 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "realestate"
   },
   {
@@ -2266,7 +2944,10 @@
     "description": "부동산 웹 개발 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "realestate"
   },
   {
@@ -2276,7 +2957,10 @@
     "description": "부동산 랜딩페이지 제작 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "realestate"
   },
   {
@@ -2286,7 +2970,10 @@
     "description": "부동산 MVP 개발 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "realestate"
   },
   {
@@ -2296,7 +2983,10 @@
     "description": "부동산 쇼핑몰 제작 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "realestate"
   },
   {
@@ -2306,7 +2996,10 @@
     "description": "부동산 앱 개발 외주 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "realestate"
   },
   {
@@ -2316,7 +3009,10 @@
     "description": "부동산 웹사이트 제작 - 부동산 매물·계약 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "realestate",
+    "industryKo": "부동산",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "realestate"
   },
   {
@@ -2326,7 +3022,10 @@
     "description": "헬스장 앱 개발 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "gym"
   },
   {
@@ -2336,7 +3035,10 @@
     "description": "헬스장 홈페이지 제작 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "gym"
   },
   {
@@ -2346,7 +3048,10 @@
     "description": "헬스장 웹 개발 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "gym"
   },
   {
@@ -2356,7 +3061,10 @@
     "description": "헬스장 랜딩페이지 제작 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "gym"
   },
   {
@@ -2366,7 +3074,10 @@
     "description": "헬스장 MVP 개발 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "gym"
   },
   {
@@ -2376,7 +3087,10 @@
     "description": "헬스장 쇼핑몰 제작 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "gym"
   },
   {
@@ -2386,7 +3100,10 @@
     "description": "헬스장 앱 개발 외주 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "gym"
   },
   {
@@ -2396,7 +3113,10 @@
     "description": "헬스장 웹사이트 제작 - 헬스장 회원·수업 관리 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "gym",
+    "industryKo": "헬스장",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "gym"
   },
   {
@@ -2406,7 +3126,10 @@
     "description": "숙박 앱 개발 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "hubId": "lodging"
   },
   {
@@ -2416,7 +3139,10 @@
     "description": "숙박 홈페이지 제작 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "hubId": "lodging"
   },
   {
@@ -2426,7 +3152,10 @@
     "description": "숙박 웹 개발 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "hubId": "lodging"
   },
   {
@@ -2436,7 +3165,10 @@
     "description": "숙박 랜딩페이지 제작 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "hubId": "lodging"
   },
   {
@@ -2446,7 +3178,10 @@
     "description": "숙박 MVP 개발 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "mvp-dev",
+    "serviceKo": "MVP 개발",
+    "svcType": "app",
     "hubId": "lodging"
   },
   {
@@ -2456,7 +3191,10 @@
     "description": "숙박 쇼핑몰 제작 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "shopping-mall",
+    "serviceKo": "쇼핑몰 제작",
+    "svcType": "web",
     "hubId": "lodging"
   },
   {
@@ -2466,7 +3204,10 @@
     "description": "숙박 앱 개발 외주 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "app-dev-out",
+    "serviceKo": "앱 개발 외주",
+    "svcType": "app",
     "hubId": "lodging"
   },
   {
@@ -2476,7 +3217,10 @@
     "description": "숙박 웹사이트 제작 - 숙박 예약 관리 시스템 견적 문의.",
     "pattern": "industry_service",
     "industryKey": "lodging",
+    "industryKo": "숙박",
     "serviceKey": "website-dev",
+    "serviceKo": "웹사이트 제작",
+    "svcType": "web",
     "hubId": "lodging"
   },
   {
@@ -2486,8 +3230,12 @@
     "description": "수원 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "suwon"
   },
   {
@@ -2497,8 +3245,12 @@
     "description": "수원 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "suwon"
   },
   {
@@ -2508,8 +3260,12 @@
     "description": "수원 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "suwon"
   },
   {
@@ -2519,8 +3275,12 @@
     "description": "수원 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "suwon"
   },
   {
@@ -2530,8 +3290,12 @@
     "description": "수원 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "suwon"
   },
   {
@@ -2541,8 +3305,12 @@
     "description": "수원 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "suwon"
   },
   {
@@ -2552,8 +3320,12 @@
     "description": "수원 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "suwon"
   },
   {
@@ -2563,8 +3335,12 @@
     "description": "수원 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "suwon",
+    "regionKo": "수원",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "suwon"
   },
   {
@@ -2574,8 +3350,12 @@
     "description": "강남 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "gangnam"
   },
   {
@@ -2585,8 +3365,12 @@
     "description": "강남 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "gangnam"
   },
   {
@@ -2596,8 +3380,12 @@
     "description": "강남 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "gangnam"
   },
   {
@@ -2607,8 +3395,12 @@
     "description": "강남 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "gangnam"
   },
   {
@@ -2618,8 +3410,12 @@
     "description": "강남 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "gangnam"
   },
   {
@@ -2629,8 +3425,12 @@
     "description": "강남 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "gangnam"
   },
   {
@@ -2640,8 +3440,12 @@
     "description": "강남 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "gangnam"
   },
   {
@@ -2651,8 +3455,12 @@
     "description": "강남 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "gangnam",
+    "regionKo": "강남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "gangnam"
   },
   {
@@ -2662,8 +3470,12 @@
     "description": "판교 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "pangyo"
   },
   {
@@ -2673,8 +3485,12 @@
     "description": "판교 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "pangyo"
   },
   {
@@ -2684,8 +3500,12 @@
     "description": "판교 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "pangyo"
   },
   {
@@ -2695,8 +3515,12 @@
     "description": "판교 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "pangyo"
   },
   {
@@ -2706,8 +3530,12 @@
     "description": "판교 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "pangyo"
   },
   {
@@ -2717,8 +3545,12 @@
     "description": "판교 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "pangyo"
   },
   {
@@ -2728,8 +3560,12 @@
     "description": "판교 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "pangyo"
   },
   {
@@ -2739,8 +3575,12 @@
     "description": "판교 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "pangyo",
+    "regionKo": "판교",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "pangyo"
   },
   {
@@ -2750,8 +3590,12 @@
     "description": "분당 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bundang"
   },
   {
@@ -2761,8 +3605,12 @@
     "description": "분당 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bundang"
   },
   {
@@ -2772,8 +3620,12 @@
     "description": "분당 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bundang"
   },
   {
@@ -2783,8 +3635,12 @@
     "description": "분당 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bundang"
   },
   {
@@ -2794,8 +3650,12 @@
     "description": "분당 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bundang"
   },
   {
@@ -2805,8 +3665,12 @@
     "description": "분당 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bundang"
   },
   {
@@ -2816,8 +3680,12 @@
     "description": "분당 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bundang"
   },
   {
@@ -2827,8 +3695,12 @@
     "description": "분당 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bundang",
+    "regionKo": "분당",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bundang"
   },
   {
@@ -2838,8 +3710,12 @@
     "description": "일산 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "ilsan"
   },
   {
@@ -2849,8 +3725,12 @@
     "description": "일산 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "ilsan"
   },
   {
@@ -2860,8 +3740,12 @@
     "description": "일산 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "ilsan"
   },
   {
@@ -2871,8 +3755,12 @@
     "description": "일산 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "ilsan"
   },
   {
@@ -2882,8 +3770,12 @@
     "description": "일산 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "ilsan"
   },
   {
@@ -2893,8 +3785,12 @@
     "description": "일산 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "ilsan"
   },
   {
@@ -2904,8 +3800,12 @@
     "description": "일산 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "ilsan"
   },
   {
@@ -2915,8 +3815,12 @@
     "description": "일산 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "ilsan",
+    "regionKo": "일산",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "ilsan"
   },
   {
@@ -2926,8 +3830,12 @@
     "description": "부천 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bucheon"
   },
   {
@@ -2937,8 +3845,12 @@
     "description": "부천 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bucheon"
   },
   {
@@ -2948,8 +3860,12 @@
     "description": "부천 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bucheon"
   },
   {
@@ -2959,8 +3875,12 @@
     "description": "부천 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bucheon"
   },
   {
@@ -2970,8 +3890,12 @@
     "description": "부천 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bucheon"
   },
   {
@@ -2981,8 +3905,12 @@
     "description": "부천 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bucheon"
   },
   {
@@ -2992,8 +3920,12 @@
     "description": "부천 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "bucheon"
   },
   {
@@ -3003,8 +3935,12 @@
     "description": "부천 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "bucheon",
+    "regionKo": "부천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "bucheon"
   },
   {
@@ -3014,8 +3950,12 @@
     "description": "안양 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "anyang"
   },
   {
@@ -3025,8 +3965,12 @@
     "description": "안양 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "anyang"
   },
   {
@@ -3036,8 +3980,12 @@
     "description": "안양 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "anyang"
   },
   {
@@ -3047,8 +3995,12 @@
     "description": "안양 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "anyang"
   },
   {
@@ -3058,8 +4010,12 @@
     "description": "안양 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "anyang"
   },
   {
@@ -3069,8 +4025,12 @@
     "description": "안양 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "anyang"
   },
   {
@@ -3080,8 +4040,12 @@
     "description": "안양 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "anyang"
   },
   {
@@ -3091,8 +4055,12 @@
     "description": "안양 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "anyang",
+    "regionKo": "안양",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "anyang"
   },
   {
@@ -3102,8 +4070,12 @@
     "description": "성남 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "seongnam"
   },
   {
@@ -3113,8 +4085,12 @@
     "description": "성남 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "seongnam"
   },
   {
@@ -3124,8 +4100,12 @@
     "description": "성남 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "seongnam"
   },
   {
@@ -3135,8 +4115,12 @@
     "description": "성남 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "seongnam"
   },
   {
@@ -3146,8 +4130,12 @@
     "description": "성남 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "seongnam"
   },
   {
@@ -3157,8 +4145,12 @@
     "description": "성남 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "seongnam"
   },
   {
@@ -3168,8 +4160,12 @@
     "description": "성남 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "seongnam"
   },
   {
@@ -3179,8 +4175,12 @@
     "description": "성남 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "seongnam",
+    "regionKo": "성남",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "seongnam"
   },
   {
@@ -3190,8 +4190,12 @@
     "description": "용인 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "yongin"
   },
   {
@@ -3201,8 +4205,12 @@
     "description": "용인 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "yongin"
   },
   {
@@ -3212,8 +4220,12 @@
     "description": "용인 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "yongin"
   },
   {
@@ -3223,8 +4235,12 @@
     "description": "용인 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "yongin"
   },
   {
@@ -3234,8 +4250,12 @@
     "description": "용인 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "yongin"
   },
   {
@@ -3245,8 +4265,12 @@
     "description": "용인 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "yongin"
   },
   {
@@ -3256,8 +4280,12 @@
     "description": "용인 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "yongin"
   },
   {
@@ -3267,8 +4295,12 @@
     "description": "용인 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "yongin",
+    "regionKo": "용인",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "yongin"
   },
   {
@@ -3278,8 +4310,12 @@
     "description": "인천 앱 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "incheon"
   },
   {
@@ -3289,8 +4325,12 @@
     "description": "인천 앱 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "app-dev",
+    "serviceKo": "앱 개발",
+    "svcType": "app",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "incheon"
   },
   {
@@ -3300,8 +4340,12 @@
     "description": "인천 홈페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "incheon"
   },
   {
@@ -3311,8 +4355,12 @@
     "description": "인천 홈페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "homepage-dev",
+    "serviceKo": "홈페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "incheon"
   },
   {
@@ -3322,8 +4370,12 @@
     "description": "인천 웹 개발 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "incheon"
   },
   {
@@ -3333,8 +4385,12 @@
     "description": "인천 웹 개발 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "web-dev",
+    "serviceKo": "웹 개발",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "incheon"
   },
   {
@@ -3344,8 +4400,12 @@
     "description": "인천 랜딩페이지 제작 비용 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "cost",
+    "intentKo": "비용",
     "hubId": "incheon"
   },
   {
@@ -3355,8 +4415,12 @@
     "description": "인천 랜딩페이지 제작 견적 - 름랩 견적 상담.",
     "pattern": "region_service_intent",
     "regionKey": "incheon",
+    "regionKo": "인천",
     "serviceKey": "landing-page",
+    "serviceKo": "랜딩페이지 제작",
+    "svcType": "web",
     "intentKey": "quote",
+    "intentKo": "견적",
     "hubId": "incheon"
   }
 ]

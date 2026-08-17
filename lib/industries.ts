@@ -5,6 +5,7 @@
  */
 import { SITE } from './seo';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { buildAppTitle, buildAppDescription, appProfile, type IntentProfile } from './search-intent';
 
 export interface IndustryDef {
   slug: string;
@@ -1774,13 +1775,39 @@ export function industryCanonical(slug: string): string {
  * 신호를 측정한다. 내부링크는 라우트가 렌더하는 수와 동기화: 브레드크럼 2 +
  * 다른 업종 8 + (관련 사례 있으면 +) → 최소 10.
  */
+/**
+ * 업종 앱 페이지의 검색결과 문구.
+ *
+ * 이 축의 검색 의도는 "우리 업종도 만들 수 있나 / 무슨 기능이 들어가나"다(비용은 /cost 축).
+ * 113개가 같은 문형으로 나가지 않도록 slug 를 시드로 문형을 고르고, description 은
+ * 그 업종의 실제 기능·운영 시나리오에서 조립한다.
+ * 라우트와 색인 게이트가 같은 함수를 쓴다.
+ */
+export function industryTitle(slug: string): string {
+  const ind = getIndustry(slug);
+  if (!ind) return '';
+  return buildAppTitle(ind.ko, ind.coreFeatures, slug);
+}
+
+export function industryDescription(slug: string): string {
+  const ind = getIndustry(slug);
+  if (!ind) return '';
+  return buildAppDescription({ ko: ind.ko, coreFeatures: ind.coreFeatures, scenario: ind.scenario });
+}
+
+/** 자기잠식 판정용 */
+export function industryIntentProfile(slug: string): IntentProfile | null {
+  const ind = getIndustry(slug);
+  return ind ? appProfile(ind.ko) : null;
+}
+
 export function industryDecision(slug: string): IndexDecision | null {
   const ind = getIndustry(slug);
   if (!ind) return null;
   const others = INDUSTRIES.filter((i) => i.slug !== ind.slug);
   return decideFromContent({
-    title: `${ind.keyword} | ${ind.coreFeatures} MVP — 름랩`,
-    description: `${ind.keyword}. ${ind.coreFeatures} 등 ${ind.ko} 운영에 필요한 핵심 기능부터 MVP로. 소스코드 이관·직접 운영 교육 포함.`,
+    title: industryTitle(slug),
+    description: industryDescription(slug),
     h1: ind.keyword,
     bodyParts: [ind.coreFeatures, ind.intro, ind.features, ind.costRange, ind.scenario, ind.benefits, ...ind.faqs.map((f) => f.a)],
     faqQuestions: ind.faqs.map((f) => f.q),

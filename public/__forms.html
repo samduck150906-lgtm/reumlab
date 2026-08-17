@@ -36,7 +36,8 @@
     <!--
       메인 페이지(index.html) 상단·하단 신청 폼(name="main-apply") 감지용 정적 폼.
       index.html은 정적 파일이라 그대로도 감지되지만, 확실히 하기 위해 함께 등록합니다.
-      수집 항목: 이름 · 업체명 · 휴대폰번호 (+ 광고 유입 추적 utm_*·fbclid).
+      수집 항목: 이름 · 업체명 · 휴대폰번호 (+ 광고 유입 추적 utm_*·fbclid,
+      + 유입 맥락 유입_경로·페이지_유형·관심_서비스축·유입_출처 — 어떤 SEO 페이지가 문의를 만드는지 추적용).
     -->
     <form name="main-apply" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="hidden" name="form-name" value="main-apply" />
@@ -56,6 +57,10 @@
       <input type="hidden" name="utm_content" />
       <input type="hidden" name="utm_term" />
       <input type="hidden" name="fbclid" />
+      <input type="hidden" name="유입_경로" />
+      <input type="hidden" name="페이지_유형" />
+      <input type="hidden" name="관심_서비스축" />
+      <input type="hidden" name="유입_출처" />
       <input name="bot-field" />
     </form>
   </body>

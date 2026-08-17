@@ -22,6 +22,8 @@ import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const OUT = process.argv[2] || 'out';
+import { readSitemapXml } from './read-sitemap.mjs';
+
 const ORIGIN = 'https://reumlab.com';
 
 const fail = [];
@@ -46,14 +48,16 @@ if (!xml.includes('http://www.sitemaps.org/schemas/sitemap/0.9')) {
   note(fail, 'xml', 'sitemap 0.9 네임스페이스가 없습니다');
 }
 // 태그 균형 — 파서 없이도 잡히는 대표적 파손
-for (const tag of ['urlset', 'url', 'loc']) {
+// 루트가 sitemapindex 면 urlset·url 은 루트에 없고 자식에 있다 — 태그 짝은 형식에 맞춰 검사한다.
+for (const tag of xml.includes('<sitemapindex') ? ['sitemapindex', 'sitemap', 'loc'] : ['urlset', 'url', 'loc']) {
   const open = (xml.match(new RegExp(`<${tag}[\\s>]`, 'g')) || []).length;
   const close = (xml.match(new RegExp(`</${tag}>`, 'g')) || []).length;
   if (open !== close) note(fail, 'xml', `<${tag}> 태그 짝이 맞지 않습니다 (열림 ${open} / 닫힘 ${close})`);
 }
 const isIndex = xml.includes('<sitemapindex');
 
-const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
+// URL 목록은 항상 "사이트맵 전체" 기준이다 — index 면 자식 사이트맵까지 합쳐서 읽는다.
+const locs = [...readSitemapXml(OUT).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) =>
   m[1].replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>'),
 );
 

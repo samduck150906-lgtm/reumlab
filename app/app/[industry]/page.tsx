@@ -2,12 +2,13 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
-import { INDUSTRIES, getIndustry, industryCanonical, industryDecision } from '@/lib/industries';
+import { INDUSTRIES, getIndustry, industryCanonical, industryDecision , industryTitle, industryDescription } from '@/lib/industries';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { hasCost } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
+import { systemsForIndustry } from '@/lib/systems';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 import { getDeepDive } from '@/lib/deep-dive';
 import { pickSiblings } from '@/lib/sibling-picker';
@@ -24,8 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ind = getIndustry(params.industry);
   if (!ind) notFound();
 
-  const title = `${ind.keyword} | ${ind.coreFeatures} MVP — 름랩`;
-  const description = `${ind.keyword}. ${ind.coreFeatures} 등 ${ind.ko} 운영에 필요한 핵심 기능부터 MVP로. 소스코드 이관·직접 운영 교육 포함.`;
+  // 색인 게이트(industryDecision)와 같은 문자열을 쓴다 — lib/industries.ts 단일 출처.
+  const title = industryTitle(ind.slug);
+  const description = industryDescription(ind.slug);
   const canonical = industryCanonical(ind.slug);
 
   return {
@@ -60,6 +62,8 @@ export default function IndustryPage({ params }: Props) {
     { name: ind.keyword, url: canonical },
   ];
   const others = pickSiblings(INDUSTRIES, ind.slug, 8);
+  // 기능/시스템 축으로 넘어가는 문맥 앵커 — /system 페이지가 고아로 뜨지 않게 한다.
+  const relatedSystems = systemsForIndustry(ind.slug);
   const deep = getDeepDive(ind.slug);
 
   return (
@@ -166,6 +170,17 @@ export default function IndustryPage({ params }: Props) {
               ))}
             </div>
           </div>
+
+          {relatedSystems.length > 0 && (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>이 업종에서 자주 함께 찾는 기능</h2>
+              <div className="link-grid">
+                {relatedSystems.map((sys) => (
+                  <Link key={sys.slug} href={`/system/${sys.slug}/`}>{sys.primary}</Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>함께 보면 좋은 서비스</h2>

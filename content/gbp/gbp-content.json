@@ -114,19 +114,19 @@
   "products": [
     {
       "name": "웹 스타터",
-      "price": "490,000원부터",
+      "price": "980,000원부터",
       "description": "원페이지 랜딩 · 모바일 반응형 · 약 5일 · 소스코드 전체 이관 · VAT 포함 정액",
       "url": "https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
     },
     {
       "name": "앱 라이트 MVP",
-      "price": "2,900,000원부터",
+      "price": "5,800,000원부터",
       "description": "Flutter iOS·Android 앱 MVP · 핵심 화면 3~5개 · 약 14일 · 소스코드 전체 이관 · VAT 포함 정액",
       "url": "https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
     },
     {
       "name": "앱 AI",
-      "price": "6,900,000원부터",
+      "price": "13,800,000원부터",
       "description": "AI 기능 1종(챗봇·추천·요약) + 업무 자동화 · 약 30일 · 소스코드 이관 + 직접 운영 1:1 교육 · VAT 포함 정액",
       "url": "https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
     }

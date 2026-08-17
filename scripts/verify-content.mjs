@@ -16,6 +16,7 @@
  */
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { readSitemapXml } from './read-sitemap.mjs';
 
 const OUT = process.argv[2] || 'out';
 const fail = [];
@@ -239,7 +240,7 @@ for (const p of content) {
 }
 
 // ─── 8. draft / 사이트맵
-const sitemap = existsSync(join(OUT, 'sitemap.xml')) ? read(join(OUT, 'sitemap.xml')) : '';
+const sitemap = readSitemapXml(OUT);
 let noindexInSitemap = 0;
 for (const p of all) {
   if (!p.isContent || !p.noindex) continue;

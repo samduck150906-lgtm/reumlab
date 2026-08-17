@@ -1,3 +1,8 @@
+/*
+ * ⚠️ 레거시 컴포넌트 — 현재 어떤 라우트에서도 import 하지 않는다(홈은 정적 index.html 로 서빙).
+ * 가격은 lib/pricing.ts(PACKAGES)의 정가와 같은 값으로 맞춰 둔다. 되살릴 때 구가격이
+ * 딸려 나오지 않게 하기 위함이며, 금액을 고칠 일이 생기면 lib/pricing.ts 를 먼저 고친다.
+ */
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
@@ -231,18 +236,18 @@ export default function HomePage({ site }) {
           <div className={`pricing-content ${pricingTab === 'app' ? 'active' : ''}`} id="app-pricing">
             <div className="pricing-grid">
               <div className="price-card featured rv">
-                <div className="price-tier">개발 외주 패키지</div>
-                <div className="price-amount">300만원~</div>
-                <div className="price-period">약 7~10일</div>
+                <div className="price-tier">앱 라이트 MVP</div>
+                <div className="price-amount">580만원~</div>
+                <div className="price-period">약 14일</div>
                 <ul className="price-features">
                   <li>로그인 / 회원가입</li><li>데이터베이스 설계</li><li>핵심 기능 1~3개 개발</li><li>기본 UI 제작</li><li>결제 연동</li><li>도메인 연결 &amp; 배포</li><li>2회 수정 포함</li>
                 </ul>
                 <Link href="tel:01081119370" className="price-btn price-btn-fill">상담하기</Link>
               </div>
               <div className="price-card rv rv-d1">
-                <div className="price-tier">Standard</div>
-                <div className="price-amount">490만원~</div>
-                <div className="price-period">3~5주</div>
+                <div className="price-tier">앱 스탠다드</div>
+                <div className="price-amount">980만원~</div>
+                <div className="price-period">약 21일</div>
                 <ul className="price-features">
                   <li>풀 기능 + 맞춤 UI/UX</li><li>소셜 로그인 + 결제</li><li>관리자 대시보드</li><li>유지보수 1개월</li>
                 </ul>
@@ -262,27 +267,27 @@ export default function HomePage({ site }) {
           <div className={`pricing-content ${pricingTab === 'web' ? 'active' : ''}`} id="web-pricing">
             <div className="pricing-grid">
               <div className="price-card rv">
-                <div className="price-tier">Basic</div>
-                <div className="price-amount">99만원~</div>
-                <div className="price-period">7일</div>
+                <div className="price-tier">웹 스타터</div>
+                <div className="price-amount">98만원~</div>
+                <div className="price-period">약 5일</div>
                 <ul className="price-features">
                   <li>원페이지 랜딩</li><li>반응형 디자인</li><li>기본 SEO</li><li>수정 2회 + 호스팅 1년</li>
                 </ul>
                 <Link href="tel:01081119370" className="price-btn price-btn-outline">상담하기</Link>
               </div>
               <div className="price-card featured rv rv-d1">
-                <div className="price-tier">Standard</div>
-                <div className="price-amount">199만원~</div>
-                <div className="price-period">10~14일</div>
+                <div className="price-tier">웹 + 강력 마케팅</div>
+                <div className="price-amount">196만원~</div>
+                <div className="price-period">약 10일</div>
                 <ul className="price-features">
                   <li>멀티페이지 (5P)</li><li>맞춤 UI/UX</li><li>고급 SEO + 애널리틱스</li><li>수정 5회 + 유지보수 1개월</li>
                 </ul>
                 <Link href="tel:01081119370" className="price-btn price-btn-fill">상담하기</Link>
               </div>
               <div className="price-card rv rv-d2">
-                <div className="price-tier">Premium</div>
-                <div className="price-amount">399만원~</div>
-                <div className="price-period">협의</div>
+                <div className="price-tier">웹 비즈니스</div>
+                <div className="price-amount">380만원~</div>
+                <div className="price-period">약 14일</div>
                 <ul className="price-features">
                   <li>풀커스텀 디자인+기능</li><li>결제/예약 시스템</li><li>관리자 페이지 + API</li><li>수정 무제한 + 유지보수 3개월</li>
                 </ul>

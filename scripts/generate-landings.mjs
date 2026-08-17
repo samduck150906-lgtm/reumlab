@@ -77,7 +77,12 @@ function buildServiceIntentLandings() {
         description: `${keyword} 문의하세요. ${svc.koFull} 견적·상담 - 름랩.`,
         pattern: 'service_intent',
         serviceKey: svc.key,
+        // 표시명·서비스 유형을 함께 싣는다 — 라우트(app/l/[slug])가 검색 의도별 title/description 을
+        // 조립할 때 키(key)만으로는 문장을 만들 수 없다. slug·URL 은 그대로다(추가 필드일 뿐).
+        serviceKo: svc.koFull,
+        svcType: svc.svcType,
         intentKey: intent.key,
+        intentKo: intent.ko,
         hubId: svc.key,
       });
     }
@@ -100,7 +105,10 @@ function buildRegionServiceLandings() {
         description: `${region.ko} ${svc.koFull} 견적·외주 - 름랩. 원격 진행 가능.`,
         pattern: 'region_service',
         regionKey: region.key,
+        regionKo: region.ko,
         serviceKey: svc.key,
+        serviceKo: svc.koFull,
+        svcType: svc.svcType,
         hubId: region.key,
       });
     }
@@ -123,7 +131,10 @@ function buildIndustryServiceLandings() {
         description: `${ind.ko} ${svc.koFull} - ${ind.desc || ''} 견적 문의.`,
         pattern: 'industry_service',
         industryKey: ind.key,
+        industryKo: ind.ko,
         serviceKey: svc.key,
+        serviceKo: svc.koFull,
+        svcType: svc.svcType,
         hubId: ind.key,
       });
     }
@@ -148,8 +159,12 @@ function buildRegionServiceIntentLandings() {
           description: `${region.ko} ${svc.koFull} ${intent.ko} - 름랩 견적 상담.`,
           pattern: 'region_service_intent',
           regionKey: region.key,
+          regionKo: region.ko,
           serviceKey: svc.key,
+          serviceKo: svc.koFull,
+          svcType: svc.svcType,
           intentKey: intent.key,
+          intentKo: intent.ko,
           hubId: region.key,
         });
       }

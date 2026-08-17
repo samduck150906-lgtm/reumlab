@@ -13,6 +13,7 @@
 import { SITE } from './seo';
 import { getIndustry } from './industries';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { buildSolutionTitle, buildSolutionDescription, solutionProfile, type IntentProfile } from './search-intent';
 
 export interface SolutionPhase {
   /** 단계 (1차 MVP / 2차 / 3차) */
@@ -1450,6 +1451,35 @@ export function solutionTitleName(slug: string): string {
 }
 
 /**
+ * 솔루션 페이지의 검색결과 문구.
+ * 이 축의 의도는 "어떻게 구축하나"다 — 모듈 구성·기술 스택·도입 순서.
+ * 문형을 slug 시드로 갈라 113개가 같은 문장으로 늘어서지 않게 하고,
+ * description 은 그 업종의 실제 모듈·스택에서 조립한다.
+ */
+export function solutionTitle(slug: string): string {
+  const s = getSolution(slug);
+  return buildSolutionTitle(solutionTitleName(slug), s?.modules, slug);
+}
+
+export function solutionDescription(slug: string): string {
+  const s = getSolution(slug);
+  const name = solutionTitleName(slug);
+  if (!s) return `${name} 구축 기준을 정리했습니다. 단계별 도입 · 소스코드 이관.`;
+  return buildSolutionDescription({
+    name,
+    modules: s.modules,
+    integrations: s.integrations,
+    lead: s.lead,
+  });
+}
+
+/** 자기잠식 판정용 */
+export function solutionIntentProfile(slug: string): IntentProfile | null {
+  const ind = getIndustry(slug);
+  return ind ? solutionProfile(`${ind.ko} 솔루션`) : null;
+}
+
+/**
  * 솔루션 페이지 색인 판정 — 렌더되는 본문(lead·modules·stack·integrations·roadmap·FAQ)에서
  * 신호를 측정한다. peerFingerprints 는 다른 솔루션 페이지의 고유 지문(lead+modules+integrations)과
  * 대조해 솔루션 페이지끼리의 중복만 검사한다(/app·/cost 와는 검색 의도가 분리됨).
@@ -1463,8 +1493,8 @@ export function solutionDecision(slug: string): IndexDecision | null {
   const others = SOLUTIONS.filter((x) => x.slug !== s.slug);
   const internalLinks = 2 + 1 + 1 + Math.min(others.length, 6) + 1;
   return decideFromContent({
-    title: `${name} 구축 | 기능 모듈·기술 스택·연동·도입 단계 — 름랩`,
-    description: `${name} 어떻게 구축하나요? 기능 모듈 구성, 기술 스택, 연동 포인트, 단계별 도입 로드맵을 정리했습니다. 소스코드 이관·직접 운영.`,
+    title: solutionTitle(slug),
+    description: solutionDescription(slug),
     h1: `${name} 구축`,
     bodyParts: [
       s.lead,

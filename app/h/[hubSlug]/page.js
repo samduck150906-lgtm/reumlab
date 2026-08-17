@@ -1,5 +1,6 @@
 import { getClusters, getHubBySlug, hubShouldIndex } from '../../../lib/data';
 import { getHubContent } from '../../../lib/hub-content';
+import { clampTitle, composeDescription, pickVariant } from '../../../lib/search-intent';
 import HubPage from '../../../components/HubPage';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '../../../components/JsonLd';
 import { SITE } from '../../../lib/seo';
@@ -18,9 +19,26 @@ export async function generateMetadata({ params }) {
   const hub = getHubBySlug(params.hubSlug);
   if (!hub) return { title: { absolute: '름랩 REUMLAB' } };
   // 허브는 키워드 모음(집합) 페이지 → 개별 랜딩(/l/*)과 제목이 겹치지 않도록
-  // '총정리' 접미로 정보형 의도를 명확히 하고 중복 title을 방지한다.
-  const title = `${hub.ko} 총정리 | 지역별 견적·업체 — 름랩 REUMLAB`;
-  const description = `${hub.ko} 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.`;
+  // 정보형 의도를 제목에 명시하고 중복 title을 방지한다.
+  // description 은 이 허브에 고유 본문(HUB_CONTENT)이 있으면 그 도입부를 쓴다.
+  // 예전 문구("… 견적·외주 - 름랩 앱·웹 개발. 키워드별 상담 페이지 모음.")는 37자짜리
+  // 상수라 검색결과에서 이 허브가 무엇을 모아 둔 곳인지 전혀 알려 주지 못했다.
+  const hubTitles = [
+    `${hub.ko} 총정리 | 비용·업체 선택 기준 한 번에 | 름랩`,
+    `${hub.ko} | 무엇부터 정해야 하나·얼마나 드나 | 름랩`,
+    `${hub.ko} 가이드 | 기능 범위별 견적과 진행 순서 | 름랩`,
+  ];
+  const title = clampTitle(pickVariant(hubTitles, params.hubSlug, 'hub-title'));
+  const hubBody = getHubContent(params.hubSlug);
+  const description = composeDescription(
+    hubBody
+      ? [hubBody.intro]
+      : [
+          `${hub.ko}을(를) 어떤 범위로, 얼마에 만들 수 있는지 정리했습니다.`,
+          '기능별 견적 기준과 진행 순서, 관련 상담 페이지를 한곳에 모았습니다.',
+          'VAT 포함 정액 · 소스코드 이관 · 월 관리비 없음.',
+        ],
+  );
   const url = `${BASE}/h/${params.hubSlug}/`;
   const canonicalSlug = DUP_HUB_CANONICAL[params.hubSlug] || params.hubSlug;
   const canonical = `${BASE}/h/${canonicalSlug}/`;

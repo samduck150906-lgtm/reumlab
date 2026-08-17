@@ -174,7 +174,8 @@ export const GUIDES: GuideDef[] = [
     related: [
       { href: '/web-development', label: '웹사이트 제작 서비스 보기' },
       { href: '/guide/app-cost', label: '앱개발 비용 구조' },
-      { href: '/soho/', label: '소상공인 홈페이지 98만원' },
+      // 앵커에 금액을 박으면 /soho/ 의 프로모션가(49만원)와 어긋난다 — 문맥 앵커로 둔다.
+      { href: '/soho/', label: '소상공인 홈페이지 제작' },
     ],
     publishedAt: '2026-06-22',
   },

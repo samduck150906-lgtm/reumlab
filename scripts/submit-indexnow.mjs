@@ -22,6 +22,7 @@
  *   → 파일명 = 키 값과 동일해야 키 검증을 통과(403 방지)한다.
  */
 import fs from 'fs';
+import { readSitemapXml } from './read-sitemap.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -41,7 +42,8 @@ const DRY_RUN = args.has('--dry-run');
 /** out/sitemap.xml → [{ url, lastmod }] (색인 대상 URL만 들어 있음) */
 function readSitemap() {
   if (!fs.existsSync(SITEMAP_PATH)) return null;
-  const xml = fs.readFileSync(SITEMAP_PATH, 'utf8');
+  // 사이트맵은 index 로 분할돼 있을 수 있다 — 자식까지 합쳐 읽는다.
+  const xml = readSitemapXml(path.join(ROOT, 'out'));
   const entries = [];
   const urlRe = /<url>([\s\S]*?)<\/url>/g;
   let m;

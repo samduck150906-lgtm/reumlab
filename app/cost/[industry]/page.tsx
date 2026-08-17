@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import { getIndustry } from '@/lib/industries';
-import { COSTS, getCost, costCanonical, costDecision, costTitleName } from '@/lib/cost';
+import { COSTS, getCost, costCanonical, costDecision, costTitleName, costTitle, costDescription } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
+import { systemsForIndustry } from '@/lib/systems';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -24,8 +25,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!c) notFound();
 
   const name = costTitleName(c.slug);
-  const title = `${name} | 가격대·비용 구성·절감 방법 — 름랩`;
-  const description = `${name} 얼마나 들까요? 간단형·표준형·고급형 가격대와 비용을 좌우하는 요인, 유지비, 절감 방법까지 정리했습니다. 소스코드 이관·월 관리비 없음.`;
+  // 제목·설명은 lib/cost.ts 의 단일 출처를 쓴다 — 색인 게이트(costDecision)가 채점하는
+  // 문자열과 실제로 렌더되는 메타가 어긋나면 점수와 결과가 따로 논다.
+  const title = costTitle(c.slug);
+  const description = costDescription(c.slug);
   const canonical = costCanonical(c.slug);
   const ind = getIndustry(c.slug);
 
@@ -62,6 +65,8 @@ export default function CostPage({ params }: Props) {
     { name, url: canonical },
   ];
   const others = pickSiblings(COSTS, c.slug, 6);
+  // 기능/시스템 축으로 넘어가는 문맥 앵커 — /system 페이지가 고아로 뜨지 않게 한다.
+  const relatedSystems = systemsForIndustry(c.slug);
 
   return (
     <>
@@ -161,6 +166,17 @@ export default function CostPage({ params }: Props) {
                 {hasSolution(c.slug) && (
                   <Link href={`/solution/${c.slug}/`}>{ind.ko} 솔루션 구축 — 모듈·기술 스택·연동 보기</Link>
                 )}
+              </div>
+            </div>
+          )}
+
+          {relatedSystems.length > 0 && (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.15rem' }}>이 업종에서 자주 함께 찾는 기능</h2>
+              <div className="link-grid">
+                {relatedSystems.map((sys) => (
+                  <Link key={sys.slug} href={`/system/${sys.slug}/`}>{sys.primary}</Link>
+                ))}
               </div>
             </div>
           )}

@@ -14,6 +14,7 @@
 import { SITE } from './seo';
 import { getIndustry } from './industries';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { buildCostTitle, buildCostDescription, costProfile, type IntentProfile } from './search-intent';
 
 export interface CostTier {
   /** 단계 이름 (간단형/표준형/고급형 등) */
@@ -2014,6 +2015,35 @@ export function costTitleName(slug: string): string {
 }
 
 /**
+ * 비용 페이지의 검색결과 문구.
+ *
+ * 예전에는 113개 페이지가 "{업종} 앱 개발 비용 | 가격대·비용 구성·절감 방법 — 름랩" 하나로
+ * 찍혀 나왔다. 중복은 아니지만(업종명이 다르니까) 검색결과에서는 같은 문장이 줄지어 보여
+ * 어떤 결과가 내 질문에 답하는지 알 수 없었다. 의도(비용)는 유지한 채 문형을 갈라 주고,
+ * description 은 그 페이지가 실제로 가진 단계별 가격대·비용 요인으로 조립한다.
+ * 라우트(generateMetadata)와 색인 게이트(costDecision)가 이 두 함수만 쓴다 — 신호가 갈리지 않게.
+ */
+export function costTitle(slug: string): string {
+  const c = getCost(slug);
+  const name = costTitleName(slug);
+  return buildCostTitle(name, c?.tiers[0]?.range ?? '', slug);
+}
+
+export function costDescription(slug: string): string {
+  const c = getCost(slug);
+  const name = costTitleName(slug);
+  if (!c) return `${name} 기준을 공개합니다. VAT 포함 정액 · 소스코드 이관 · 월 관리비 없음.`;
+  return buildCostDescription({ name, tiers: c.tiers, drivers: c.drivers, running: c.running });
+}
+
+/** 자기잠식 판정용 — 이 축이 노리는 검색어와 다른 축과의 차이 */
+export function costIntentProfile(slug: string): IntentProfile | null {
+  const ind = getIndustry(slug);
+  if (!ind) return null;
+  return costProfile(ind.ko);
+}
+
+/**
  * 비용 페이지 색인 판정 — 실제 렌더되는 본문(lead·tiers·drivers·running·save·FAQ)에서
  * 신호를 측정한다. peerFingerprints 는 다른 비용 페이지의 고유 지문(lead+drivers+running)과
  * 대조해 비용 페이지끼리의 중복만 검사한다(/app 축과는 검색 의도가 분리되어 있음).
@@ -2027,8 +2057,8 @@ export function costDecision(slug: string): IndexDecision | null {
   const others = COSTS.filter((x) => x.slug !== c.slug);
   const internalLinks = 2 + 1 + Math.min(others.length, 6) + 1;
   return decideFromContent({
-    title: `${name} | 가격대·비용 구성·절감 방법 — 름랩`,
-    description: `${name} 얼마나 들까요? 간단형·표준형·고급형 가격대와 비용을 좌우하는 요인, 유지비, 절감 방법까지 정리했습니다. 소스코드 이관·월 관리비 없음.`,
+    title: costTitle(slug),
+    description: costDescription(slug),
     h1: name,
     bodyParts: [
       c.lead,

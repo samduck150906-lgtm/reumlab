@@ -21,7 +21,7 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ## 3. 사업 설명 (333/750자)
 ```
-앱·웹개발 스튜디오 름랩입니다. Flutter 앱개발·MVP 개발·홈페이지 제작·랜딩페이지·AI 기능 개발을 화성·동탄·수원·용인 등 경기 남부와 전국 원격으로 진행합니다. 름랩은 두 가지가 다릅니다. 첫째, 완성물의 소스코드와 계정 권한을 전부 넘겨 드려 다른 곳으로 옮겨도 외주에 묶이지 않습니다. 둘째, AI 보조 개발과 1:1 운영 교육으로 비전공자 대표님도 납품 후 직접 수정·운영할 수 있습니다. 견적은 VAT 포함 정액으로 먼저 공개합니다 — 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+앱·웹개발 스튜디오 름랩입니다. Flutter 앱개발·MVP 개발·홈페이지 제작·랜딩페이지·AI 기능 개발을 화성·동탄·수원·용인 등 경기 남부와 전국 원격으로 진행합니다. 름랩은 두 가지가 다릅니다. 첫째, 완성물의 소스코드와 계정 권한을 전부 넘겨 드려 다른 곳으로 옮겨도 외주에 묶이지 않습니다. 둘째, AI 보조 개발과 1:1 운영 교육으로 비전공자 대표님도 납품 후 직접 수정·운영할 수 있습니다. 견적은 VAT 포함 정액으로 먼저 공개합니다 — 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 
 ## 4. 서비스 (12개)
@@ -63,20 +63,20 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 - 연결: https://reumlab.com/h/web-dev-simple/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=web-dev-simple
 
 ## 5. 상품/패키지 (3개)
-### 웹 스타터 — 490,000원부터
+### 웹 스타터 — 980,000원부터
 - 원페이지 랜딩 · 모바일 반응형 · 약 5일 · 소스코드 전체 이관 · VAT 포함 정액
 - 링크: https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
-### 앱 라이트 MVP — 2,900,000원부터
+### 앱 라이트 MVP — 5,800,000원부터
 - Flutter iOS·Android 앱 MVP · 핵심 화면 3~5개 · 약 14일 · 소스코드 전체 이관 · VAT 포함 정액
 - 링크: https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
-### 앱 AI — 6,900,000원부터
+### 앱 AI — 13,800,000원부터
 - AI 기능 1종(챗봇·추천·요약) + 업무 자동화 · 약 30일 · 소스코드 이관 + 직접 운영 1:1 교육 · VAT 포함 정액
 - 링크: https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ## 6. 소식 포스트 (25개 · 매주 발행 권장)
 발행일은 `content/gbp.json` 의 `posts.schedule` 로 계산됩니다. 각 포스트를 발행일에 맞춰 올리세요.
 
-### #1 · 2026-07-13 · OFFER — 이번 달 정액 특가 — 웹 스타터 49만 원부터
+### #1 · 2026-07-13 · OFFER — 이번 달 정액 특가 — 웹 스타터 98만 원부터
 ```
 이번 달 신규 문의 한정, 웹 스타터·앱 라이트 MVP 를 VAT 포함 정액가로 진행합니다. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함이라, 납품 후 대표님이 직접 수정·운영할 수 있습니다. 전화·이메일로 편하게 견적 문의 주세요. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
@@ -92,7 +92,7 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ### #3 · 2026-07-27 · UPDATE — [진행 안내] 수원 앱개발
 ```
-수원 앱개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 앱개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-app-dev/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-app-dev
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)
@@ -120,7 +120,7 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ### #7 · 2026-08-24 · UPDATE — [진행 안내] 수원 홈페이지제작
 ```
-수원 홈페이지제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 홈페이지제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-homepage-dev/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-homepage-dev
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)
@@ -148,7 +148,7 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ### #11 · 2026-09-21 · UPDATE — [진행 안내] 수원 웹개발
 ```
-수원 웹개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 웹개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-web-dev/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-web-dev
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)
@@ -176,7 +176,7 @@ https://reumlab.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp
 
 ### #15 · 2026-10-19 · UPDATE — [진행 안내] 수원 랜딩페이지제작
 ```
-수원 랜딩페이지제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 랜딩페이지제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-landing-page/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-landing-page
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)
@@ -204,7 +204,7 @@ MVP 개발, 어디에 맡길지 고민이라면 름랩과 상담해 보세요. �
 
 ### #19 · 2026-11-16 · UPDATE — [진행 안내] 수원 MVP개발
 ```
-수원 MVP개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 MVP개발, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-mvp-dev/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-mvp-dev
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)
@@ -232,7 +232,7 @@ MVP 개발, 어디에 맡길지 고민이라면 름랩과 상담해 보세요. �
 
 ### #23 · 2026-12-14 · UPDATE — [진행 안내] 수원 쇼핑몰제작
 ```
-수원 쇼핑몰제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 49만 원부터, 앱 290만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
+수원 쇼핑몰제작, 원격으로도 문제없습니다. 화면 공유 미팅으로 기획부터 런칭까지 함께하고, 완성물은 소스코드까지 통째로 이관합니다. 웹 98만 원부터, 앱 580만 원부터. 문의: 010-8111-9370 · ceo@eternalsix.com (평일 10:00–18:00)
 ```
 - 버튼: 자세히 알아보기 → https://reumlab.com/l/suwon-shopping-mall/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=suwon-shopping-mall
 - 이미지: 작업/사무실/교육 관련 실사진 권장(스톡·과장 이미지 지양)

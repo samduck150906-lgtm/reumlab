@@ -18,10 +18,12 @@
  */
 import { readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { readSitemapLocs } from './read-sitemap.mjs';
 
 const OUT = process.argv[2] || 'out';
 /** 서비스 허브가 아닌 1-depth URL */
-const NOT_SERVICE = new Set(['blog', 'privacy', 'terms', 'refund', 'guide', 'app', 'website', 'cost', 'solution']);
+// 인덱스 허브(목록 페이지)는 서비스 허브가 아니다 — CollectionPage 로 나가고 Service 스키마를 두지 않는다.
+const NOT_SERVICE = new Set(['blog', 'privacy', 'terms', 'refund', 'guide', 'app', 'website', 'cost', 'solution', 'system']);
 const MIN_BODY = 900;
 
 const fail = [];
@@ -42,7 +44,7 @@ if (!existsSync(sitemapPath)) {
   console.error(`✗ ${sitemapPath} 없음. 먼저 npm run build 를 실행하세요.`);
   process.exit(1);
 }
-const locs = [...readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+const locs = readSitemapLocs(OUT);
 
 const pages = [];
 for (const loc of locs) {

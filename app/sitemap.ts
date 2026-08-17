@@ -10,6 +10,7 @@ import { SOLUTIONS, solutionCanonical, solutionDecision } from '@/lib/solution';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
+import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/systems';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -189,6 +190,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: solutionMod,
       changeFrequency: 'monthly',
       priority: 0.72,
+    });
+  }
+
+  // 7축 — 기능·시스템별 개발 (/system). 업종이 아니라 기능 이름으로 들어오는 검색어를 받는다.
+  // 개수를 의도적으로 적게 유지한다 — 조합으로 페이지를 불리지 않는다.
+  const systemMod = gitLastModified('lib/systems.ts');
+  out.push({
+    url: SYSTEM_HUB,
+    lastModified: systemMod,
+    changeFrequency: 'monthly',
+    priority: 0.82,
+  });
+  for (const sys of SYSTEMS) {
+    const decision = systemDecision(sys.slug);
+    if (decision && !decision.inSitemap) continue;
+    out.push({
+      url: systemCanonical(sys.slug),
+      lastModified: systemMod,
+      changeFrequency: 'monthly',
+      priority: 0.78,
     });
   }
 

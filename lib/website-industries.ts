@@ -14,6 +14,7 @@
  */
 import { SITE } from './seo';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { buildWebsiteTitle, buildWebsiteDescription, websiteProfile, type IntentProfile } from './search-intent';
 
 export type WebsiteCategory =
   | 'medical' | 'care' | 'funeral' | 'education' | 'fitness' | 'beauty'
@@ -469,11 +470,45 @@ export function allWebsiteSlugs(): string[] {
 export function websiteCanonical(slug: string): string {
   return `${SITE.domain}/website/${slug}/`;
 }
+/**
+ * 업종 홈페이지 페이지의 검색결과 문구.
+ *
+ * 이 축은 "요양병원 홈페이지 제작"처럼 이미 노출이 붙기 시작한 검색어를 받는다.
+ * 295개가 한 문형으로 나가면 검색결과에서 서로 구분되지 않아 클릭이 붙지 않으므로,
+ * slug 를 시드로 문형(구성형·비용형·범위형·업체형)을 갈라 준다.
+ * description 은 그 업종 아키타입의 실제 페이지 목록·검색 노출 문장에서 조립한다.
+ * 금액은 lib/pricing.ts 를 통해서만 들어온다(문장 안에 하드코딩하지 않는다).
+ */
 export function websiteTitle(d: WebsiteIndustryDef): string {
-  return `${d.ko} 홈페이지 제작 | 비용·페이지 구성·검색 노출 — 름랩`;
+  return buildWebsiteTitle(d.ko, WEBSITE_ARCHETYPES[d.category]?.pages, d.slug);
 }
+/**
+ * 본문 문장 중 검색결과에 그대로 실어도 자연스러운 것 하나를 고른다.
+ *
+ * 본문 생성기는 키워드 커버리지를 위해 '{업종}제작'·'{업종}업체'·'{업종}예약' 같은
+ * 붙임 표기를 일부러 섞는다(본문에서는 검색어 변형으로 기능한다). 그러나 그대로
+ * 메타 설명에 실리면 "안과제작 후 실제로…"처럼 사람이 읽기 어색한 문장이 검색결과에
+ * 노출된다. 붙임 표기가 없는 문장을 우선 고르고, 없으면 설명에서 생략한다.
+ */
+function cleanSentence(text: string, ko: string): string | undefined {
+  const glued = ['제작', '업체', '마케팅', '창업', '홈페이지', '상담', '예약'].map((sfx) => `${ko}${sfx}`);
+  const sentences = text.split(/(?<=[.])\s+/).map((x) => x.trim()).filter(Boolean);
+  return sentences.find((x) => x.length <= 70 && !glued.some((g) => x.includes(g)));
+}
+
 export function websiteDescription(d: WebsiteIndustryDef): string {
-  return `${d.ko} 홈페이지 제작 — ${d.ko} 운영에 필요한 페이지 구성과 비용(98만 원부터), 검색 노출까지. 월 관리비 없이 소스코드 이관·직접 수정. 동탄·수원 거점, 전국 진행.`;
+  const c = buildWebsiteContent(d);
+  return buildWebsiteDescription({
+    ko: d.ko,
+    pages: WEBSITE_ARCHETYPES[d.category]?.pages,
+    scenario: cleanSentence(c.scenario, d.ko) ?? cleanSentence(c.intro, d.ko),
+  });
+}
+
+/** 자기잠식 판정용 */
+export function websiteIntentProfile(slug: string): IntentProfile | null {
+  const d = getWebsiteIndustry(slug);
+  return d ? websiteProfile(d.ko) : null;
 }
 
 // 색인 게이트 — 실제 렌더 본문(intro·features·searchLine·scenario·priceLine·FAQ)에서 측정.

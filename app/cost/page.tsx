@@ -138,6 +138,7 @@ export default function CostHubPage() {
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 인덱스·서비스</h2>
             <div className="link-grid">
               <Link href="/app/">업종별 앱개발(기능)</Link>
+              <Link href="/system/">기능·시스템별 개발 — QR 주문·웨이팅·정기배송</Link>
               <Link href="/solution/">업종별 솔루션 구축</Link>
               <Link href="/guide/">개발 가이드 모음</Link>
               <Link href="/mvp-development/">MVP 개발 비용</Link>

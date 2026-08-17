@@ -119,6 +119,7 @@ export default function SolutionHubPage() {
             <div className="link-grid">
               <Link href="/app/">업종별 앱개발(기능)</Link>
               <Link href="/cost/">업종별 앱 개발 비용</Link>
+              <Link href="/system/">기능·시스템별 개발 — QR 주문·웨이팅·정기배송</Link>
               <Link href="/guide/">개발 가이드 모음</Link>
               <Link href="/admin-page-development/">관리자 페이지 개발</Link>
               <Link href="/source-handover/">소스코드 이관</Link>

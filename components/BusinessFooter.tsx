@@ -31,6 +31,7 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/guide/">개발 가이드</Link>
           <Link href="/portfolio/">개발 사례</Link>
           <Link href="/cost/">업종별 개발 비용</Link>
+          <Link href="/system/">기능·시스템별 개발</Link>
         </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
           {SITE.company}

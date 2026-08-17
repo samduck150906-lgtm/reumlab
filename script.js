@@ -513,6 +513,21 @@
         var k = input.getAttribute("data-utm"); if (utm[k]) input.value = utm[k];
       });
 
+      /* 유입 맥락 — 접수 내역에 "어느 페이지·어느 경로로 들어온 문의인지"를 함께 남긴다.
+         GA4 를 열지 않고도 문의 한 건의 출처를 읽을 수 있게 하는 것이 목적이다.
+         개인정보·검색어는 담지 않는다 — 경로, 페이지 분류, 유입 도메인까지만. */
+      var ctx = { path: location.pathname, pageType: CTX.page_type || "", referrer: "(직접 유입)" };
+      try {
+        if (document.referrer) {
+          var r = new URL(document.referrer);
+          ctx.referrer = r.host === location.host ? "(사이트 내부)" : r.host;
+        }
+      } catch (e) {}
+      form.querySelectorAll("[data-ctx]").forEach(function (input) {
+        var k = input.getAttribute("data-ctx");
+        if (ctx[k]) input.value = ctx[k];
+      });
+
       // 폼 시작(최초 포커스 1회)
       form.addEventListener("focusin", function () { once("inquiry_form_start", withCtx({ event: "inquiry_form_start", form_name: "main-apply" })); }, { once: false });
 
