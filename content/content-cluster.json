@@ -242,7 +242,7 @@
     },
     {
       "href": "/guide/enterprise-ai-adoption/",
-      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
       "kind": "가이드"
     },
     {
@@ -320,7 +320,7 @@
     },
     {
       "href": "/guide/enterprise-ai-adoption/",
-      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
       "kind": "가이드"
     },
     {
@@ -341,8 +341,8 @@
       "kind": "가이드"
     },
     {
-      "href": "/guide/rag-explained/",
-      "label": "RAG, 회사 자료로 답하게 만드는 방식",
+      "href": "/guide/rag-development/",
+      "label": "RAG 구축, 사내 문서를 AI에 연결하는 방법",
       "kind": "가이드"
     },
     {
@@ -353,18 +353,18 @@
   ],
   "/enterprise-ai/": [
     {
-      "href": "/guide/rag-explained/",
-      "label": "RAG, 회사 자료로 답하게 만드는 방식",
+      "href": "/guide/rag-development/",
+      "label": "RAG 구축, 사내 문서를 AI에 연결하는 방법",
       "kind": "가이드"
     },
     {
       "href": "/guide/enterprise-ai-cost/",
-      "label": "사내 AI 구축 비용, 무엇이 금액을 움직이나",
+      "label": "사내 AI 구축 비용은 무엇에 따라 달라질까?",
       "kind": "가이드"
     },
     {
       "href": "/guide/enterprise-ai-adoption/",
-      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
       "kind": "가이드"
     },
     {

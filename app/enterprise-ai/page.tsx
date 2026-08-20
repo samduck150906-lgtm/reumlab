@@ -224,7 +224,7 @@ export default function EnterpriseAiPage() {
               ))}
             </ul>
             <p className="hub-intro" style={{ marginTop: 12 }}>
-              RAG 자체를 더 알고 싶으시면 <Link href="/guide/rag-explained/">RAG 동작 방식을 정리한 가이드</Link>를 참고하세요.
+              문서 분할·검색 품질·권한 설계까지 구축 관점에서 더 보시려면 <Link href="/guide/rag-development/">RAG 구축 가이드</Link>를 참고하세요.
             </p>
           </div>
 

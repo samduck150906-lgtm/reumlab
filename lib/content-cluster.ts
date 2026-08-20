@@ -137,13 +137,13 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
   '/ai-development/': [
     { guide: 'ai-automation-guide' },
     { guide: 'chatbot-cost' },
-    { guide: 'rag-explained' },
+    { guide: 'rag-development' },
     { guide: 'agency-choice' },
   ],
   // 사내 AI — 개념(RAG) → 비용 → 도입 준비 순으로 배선한다.
   // 정보 검색으로 들어온 방문자가 상업 페이지로, 상업 페이지에서 판단 근거로 오갈 수 있게 한다.
   '/enterprise-ai/': [
-    { guide: 'rag-explained' },
+    { guide: 'rag-development' },
     { guide: 'enterprise-ai-cost' },
     { guide: 'enterprise-ai-adoption' },
     { guide: 'ai-automation-guide' },
