@@ -1,0 +1,15 @@
+{
+  "_comment": "상단 '서비스' 메뉴 단일 출처. 이 파일만 고치면 홈 드롭다운·홈 모바일 아코디언·목적별 랜딩 내비가 함께 바뀝니다. 순서가 곧 화면 순서입니다. slug 는 실제 존재하는 페이지여야 하며(빌드 시 scripts/verify-service-menu.mjs 가 검사), href 는 /<slug>/ 로 만들어집니다.",
+  "items": [
+    { "slug": "mvp", "label": "앱·SaaS MVP", "short": "새로운 서비스 출시" },
+    { "slug": "erp", "label": "ERP·관리 시스템", "short": "업무를 한곳에서 관리" },
+    { "slug": "ai-automation", "label": "AI 업무 자동화", "short": "반복 업무를 AI로" },
+    { "slug": "enterprise-ai", "label": "사내 AI·기업용 AI", "short": "회사 자료로 답하는 AI" },
+    { "slug": "platform", "label": "플랫폼·매칭", "short": "고객과 공급자 연결" },
+    { "slug": "reservation-commerce", "label": "예약·결제", "short": "예약·결제·회원제" },
+    { "slug": "website", "label": "홈페이지·랜딩", "short": "문의가 들어오는 사이트" },
+    { "slug": "data-seo", "label": "데이터·SEO", "short": "대규모 수집·노출" },
+    { "slug": "service-renewal", "label": "기존 서비스 개선", "short": "오류 수정·리뉴얼·인수" },
+    { "slug": "soho", "label": "소상공인 홈페이지", "short": "자영업자·소상공인 전용" }
+  ]
+}
