@@ -241,6 +241,11 @@
       "kind": "가이드"
     },
     {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "kind": "가이드"
+    },
+    {
       "href": "/guide/dev-process/",
       "label": "외주 개발은 어떤 순서로 진행될까",
       "kind": "가이드"
@@ -314,6 +319,11 @@
       "kind": "가이드"
     },
     {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "kind": "가이드"
+    },
+    {
       "href": "/guide/dev-process/",
       "label": "외주 개발은 어떤 순서로 진행될까",
       "kind": "가이드"
@@ -331,8 +341,40 @@
       "kind": "가이드"
     },
     {
+      "href": "/guide/rag-explained/",
+      "label": "RAG, 회사 자료로 답하게 만드는 방식",
+      "kind": "가이드"
+    },
+    {
       "href": "/guide/agency-choice/",
       "label": "개발 업체를 고를 때 무엇을 확인해야 할까",
+      "kind": "가이드"
+    }
+  ],
+  "/enterprise-ai/": [
+    {
+      "href": "/guide/rag-explained/",
+      "label": "RAG, 회사 자료로 답하게 만드는 방식",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/enterprise-ai-cost/",
+      "label": "사내 AI 구축 비용, 무엇이 금액을 움직이나",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "사내 AI 도입 전에 회사가 먼저 정해야 할 것",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
       "kind": "가이드"
     }
   ],

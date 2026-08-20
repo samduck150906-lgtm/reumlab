@@ -60,6 +60,8 @@ const GROUPS = [
   { name: 'website', label: '업종별 홈페이지 제작', test: (p) => p.startsWith('/website/') && p !== '/website/' },
   { name: 'solutions', label: '업종별 솔루션 구축', test: (p) => p.startsWith('/solution/') && p !== '/solution/' },
   { name: 'systems', label: '기능·시스템별 개발', test: (p) => p.startsWith('/system/') && p !== '/system/' },
+  // 사내 AI 클러스터 — 상업 1 + 가이드 3. 서치콘솔에서 이 클러스터만 따로 보려고 나눈다.
+  { name: 'enterprise-ai', label: '사내 AI 클러스터', test: (p) => p === '/enterprise-ai/' || /^\/guide\/(rag-explained|enterprise-ai-cost|enterprise-ai-adoption)\/$/.test(p) },
   { name: 'guides', label: '가이드·비교', test: (p) => p.startsWith('/guide/') || p.startsWith('/compare/') },
   { name: 'blog', label: '블로그', test: (p) => p.startsWith('/blog/') },
   { name: 'portfolio', label: '개발 사례', test: (p) => p.startsWith('/portfolio/') },

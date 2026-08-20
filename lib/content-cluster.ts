@@ -106,6 +106,7 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
   // ── 업무 시스템
   '/erp/': [
     { guide: 'erp-cost' },
+    { guide: 'enterprise-ai-adoption' },
     { guide: 'dev-process' },
     { guide: 'agency-choice' },
   ],
@@ -129,12 +130,24 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
   '/ai-automation/': [
     { guide: 'ai-automation-guide' },
     { guide: 'chatbot-cost' },
+    // 자동화(실행)를 찾다가 "회사 자료로 답하는 AI"가 필요하다고 깨닫는 흐름이 실제로 있다.
+    { guide: 'enterprise-ai-adoption' },
     { guide: 'dev-process' },
   ],
   '/ai-development/': [
     { guide: 'ai-automation-guide' },
     { guide: 'chatbot-cost' },
+    { guide: 'rag-explained' },
     { guide: 'agency-choice' },
+  ],
+  // 사내 AI — 개념(RAG) → 비용 → 도입 준비 순으로 배선한다.
+  // 정보 검색으로 들어온 방문자가 상업 페이지로, 상업 페이지에서 판단 근거로 오갈 수 있게 한다.
+  '/enterprise-ai/': [
+    { guide: 'rag-explained' },
+    { guide: 'enterprise-ai-cost' },
+    { guide: 'enterprise-ai-adoption' },
+    { guide: 'ai-automation-guide' },
+    { guide: 'dev-process' },
   ],
 
   // ── 기타 허브

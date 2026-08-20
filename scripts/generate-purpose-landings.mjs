@@ -74,6 +74,9 @@ const PURPOSES = [
   { slug: 'data-seo', label: '데이터·SEO', short: '대규모 수집·노출' },
   { slug: 'service-renewal', label: '기존 서비스 개선', short: '오류 수정·리뉴얼·인수' },
   { slug: 'soho', label: '소상공인 홈페이지', short: '자영업자·소상공인 전용' },
+  // Next 라우트(app/enterprise-ai)라 이 생성기가 만들지는 않지만, 목적 내비에는 함께 노출한다.
+  // (soho 와 같은 방식) — AI 자동화를 보러 온 방문자가 "사내 자료 검색"으로 갈 길을 만든다.
+  { slug: 'enterprise-ai', label: '사내 AI·기업용 AI', short: '회사 자료로 답하는 AI' },
 ];
 
 /**
@@ -229,6 +232,9 @@ const LANDINGS = [
       { title: '구축 유형', type: 'cards3', items: [['기존 서비스에 AI 추가', '현재 앱·웹에 요약·추천·검색·생성 기능을 추가'], ['사내용 AI 도구', '직원만 사용하는 문서·영업·관리 자동화 시스템'], ['AI SaaS 출시', '외부 고객에게 판매할 수 있는 AI 기반 구독 서비스']] },
       { title: '자동화 전후 예시', type: 'flow2', before: '직원이 고객 정보를 확인하고 매번 제안서 작성', after: ['고객 정보 입력', '자료 검색', '제안서 초안 생성', '직원 검수', 'PDF 출력'] },
       { title: '데이터 보안은 과장 없이 설명합니다', type: 'note', text: '어떤 데이터가 외부 AI API로 전달되는지, 저장 여부와 접근 권한을 사전에 정의합니다. "무엇이든 다 된다"고 말하지 않습니다.' },
+      // 이 페이지는 "반복 업무를 실행"하는 축이다. 사내 문서에서 찾아 답하는 것이 목적이면
+      // 검색·질의응답 축(/enterprise-ai/)이 맞다 — 의도가 갈리는 지점에서 길을 나눠 준다.
+      { title: '사내 문서에서 찾아 답하는 것이 목적이라면', type: 'linknote', text: '반복 업무를 대신 실행하는 것이 아니라 사내 문서와 데이터를 검색해 답하는 AI가 필요하시다면, 검색·질의응답을 다루는 별도 페이지가 있습니다.', href: '/enterprise-ai/', linkLabel: '사내 AI 구축 알아보기' },
     ],
     caseIds: ['ai-work-hub', 'ai-sales', 'sns-content', 'gov-search', 'research-writer'],
     caseAngles: {
@@ -493,6 +499,9 @@ function bespokeSection(b) {
   if (b.type === 'list') inner = `<ul class="lx-list">${b.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
   else if (b.type === 'chips') inner = `<div class="lx-chips">${b.items.map((x) => `<span>${esc(x)}</span>`).join('')}</div>`;
   else if (b.type === 'note') inner = `<div class="lx-note"><span class="lx-note__i" aria-hidden="true">!</span><p>${esc(b.text)}</p></div>`;
+  // linknote — note 와 같은 모양이되 문장 끝에 실제 내부링크를 붙인다.
+  // 앵커 텍스트는 링크 대상의 주제를 그대로 쓴다("자세히 보기" 같은 앵커를 쓰지 않는다).
+  else if (b.type === 'linknote') inner = `<div class="lx-note"><span class="lx-note__i" aria-hidden="true">!</span><p>${esc(b.text)} <a href="${esc(b.href)}">${esc(b.linkLabel)}</a></p></div>`;
   else if (b.type === 'flow') inner = `<div class="lx-flow">${b.steps.map((s, i) => `<span class="lx-flow__s">${esc(s)}</span>${i < b.steps.length - 1 ? '<span class="lx-flow__a" aria-hidden="true">→</span>' : ''}`).join('')}</div>`;
   else if (b.type === 'flow2') inner = `<div class="lx-flow2"><div class="lx-flow2__b"><span class="lx-flow2__lbl">기존</span>${esc(b.before)}</div><div class="lx-flow2__arrow" aria-hidden="true">↓</div><div class="lx-flow">${b.after.map((s, i) => `<span class="lx-flow__s">${esc(s)}</span>${i < b.after.length - 1 ? '<span class="lx-flow__a" aria-hidden="true">→</span>' : ''}`).join('')}</div></div>`;
   else if (b.type === 'scope') inner = `<div class="lx-scope">${b.rows.map((r) => `<div class="lx-scope__row"><span class="lx-scope__k">${esc(r[0])}</span><span class="lx-scope__v">${esc(r[1])}</span></div>`).join('')}</div>`;

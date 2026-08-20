@@ -77,6 +77,7 @@ L.push('- 앱 개발 (Flutter 기반 iOS·Android 동시 개발)');
 L.push('- 웹사이트·홈페이지·랜딩페이지 제작 (Next.js)');
 L.push('- MVP 개발 (시장 검증용 최소 기능 제품)');
 L.push('- AI 챗봇·AI 업무 자동화 기능 개발');
+L.push('- 사내 AI·기업용 AI 구축 (사내 문서 기반 지식검색·RAG 질의응답)');
 L.push('- 관리자 페이지·ERP·사내 시스템 구축');
 L.push('- 예약·중개·O2O 플랫폼 개발');
 L.push('- 기존 서비스 유지보수·고도화');
@@ -130,6 +131,9 @@ const PURPOSE_LANDINGS: [string, string, string][] = [
   ['reservation-commerce', '예약·결제 시스템 개발', '예약 신청부터 결제·확정 알림·취소·환불까지 하나의 흐름으로 구축합니다.'],
   ['data-seo', '데이터·SEO 자동화 구축', '검색 유입을 위한 페이지 구조·색인 관리·구조화 데이터를 설계합니다. 순위는 보장하지 않습니다.'],
   ['service-renewal', '기존 서비스 개선·인수 개발', '다른 곳에서 만든 앱·웹을 인수해 점검·수정·재배포합니다. 소스코드가 없으면 이관 가능 범위부터 확인합니다.'],
+  // 사내 AI 는 Next 라우트(app/enterprise-ai)라 PAGE_SEO_MAP 에 없다. 목적별 랜딩과 같은 방식으로 싣는다.
+  // canonical URL 하나만 연결한다 — 키워드를 나열하지 않는다.
+  ['enterprise-ai', '사내 AI·기업용 AI 구축', '사내 문서와 업무 데이터를 검색해 임직원 질문에 답하는 AI를 구축합니다. 사내 지식검색, 문서 기반 질의응답(RAG), 답변 근거 문서 표시, 기존 시스템 연동을 다룹니다. AI 업무 자동화(실행)와는 다른 서비스입니다.'],
 ];
 for (const [slug, title, desc] of PURPOSE_LANDINGS) {
   L.push(`- [${title}](${SITE.domain}/${slug}/): ${desc}`);

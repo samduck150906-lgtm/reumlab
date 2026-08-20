@@ -203,6 +203,25 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               ))}
             </div>
           )}
+          {/* 검색 의도가 갈리는 지점에서 다른 서비스로 보내는 문맥 링크 (PageSeo.crossLinks) */}
+          {seo.crossLinks && seo.crossLinks.length > 0 && (
+            <div style={{ marginTop: 36 }}>
+              {seo.crossLinks.map((c) => (
+                <div
+                  key={c.href}
+                  style={{ borderLeft: '3px solid var(--green)', paddingLeft: 14, marginBottom: 18 }}
+                >
+                  <h2 className="sec-title" style={{ fontSize: 'clamp(17px, 2.2vw, 20px)', marginBottom: 8 }}>
+                    {c.heading}
+                  </h2>
+                  <p style={{ lineHeight: 1.75, marginBottom: 8 }}>{c.note}</p>
+                  <Link href={c.href} style={{ color: 'var(--green)', fontWeight: 600 }}>
+                    {c.label} →
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
           {/*
             허브 → 하위 업종 페이지. 112~294개를 전부 나열하지 않고 대표 4~6개만 노출한 뒤
             인덱스 허브로 넘긴다(SEO용 링크 벽을 만들지 않기 위해서).

@@ -11,6 +11,7 @@ import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
 import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/systems';
+import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-ai';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -210,6 +211,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: systemMod,
       changeFrequency: 'monthly',
       priority: 0.78,
+    });
+  }
+
+  // 사내 AI·기업용 AI 구축 — 기존 두 AI 페이지(/ai-development·/ai-automation)와
+  // 검색 의도가 분리된 독립 페이지라 self-canonical 로 사이트맵에 싣는다.
+  const entAiDecision = enterpriseAiDecision();
+  if (entAiDecision.inSitemap) {
+    out.push({
+      url: ENTERPRISE_AI_CANONICAL,
+      lastModified: gitLastModified('lib/enterprise-ai.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
     });
   }
 
