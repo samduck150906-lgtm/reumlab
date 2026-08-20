@@ -1776,6 +1776,11 @@ export const GUIDES: GuideDef[] = [
         body: 'RAG는 정보를 찾아 답하는 구조이고, AI 업무 자동화는 업무 흐름을 대신 실행하는 구조입니다. "휴가 규정 알려줘"는 RAG이고, "승인된 신청서를 담당자에게 전달해줘"는 자동화입니다. 두 가지를 이어 붙여 직원이 정보를 찾고 그 자리에서 요청을 실행하는 흐름을 만들 수도 있지만, 중요한 업무를 사람 확인 없이 실행하도록 만드는 구성은 권하지 않습니다.',
       },
       {
+        id: 'vs-agent',
+        h: 'RAG와 AI Agent는 같은 개념이 아닙니다',
+        body: 'RAG 는 관련 자료를 검색해 답변의 근거로 쓰는 구조이고, AI Agent 는 요청을 해석해 필요한 도구를 고르고 여러 단계 작업을 수행하도록 설계한 시스템입니다. Agent 안에서 RAG 를 자료 조회 수단(knowledge layer)으로 쓰는 경우는 있지만, RAG 자체가 Agent 인 것은 아닙니다. 자료를 찾아 답하기만 하면 되는 업무라면 Agent 없이 RAG 구조로 충분하고, 만들 것도 확인할 것도 훨씬 적습니다. 요청마다 써야 할 도구와 순서가 달라질 때만 Agent 구조를 검토합니다.',
+      },
+      {
         id: 'process',
         h: 'RAG 구축은 이 순서로 진행합니다',
         body: '순서가 중요한 이유는 앞 단계에서 정한 것이 뒤 단계의 범위를 정하기 때문입니다. 특히 1~2번을 건너뛰고 개발부터 시작하면 대부분 되돌아옵니다.',
@@ -1824,6 +1829,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/enterprise-ai/', label: '사내 AI 구축 — 개발 범위와 진행 방식' },
       { href: '/guide/enterprise-ai-cost/', label: '사내 AI 구축 비용을 정하는 요소' },
       { href: '/guide/enterprise-ai-adoption/', label: '기업 AI 도입 전 확인할 것' },
+      { href: '/enterprise-ai/#ai-agent', label: 'AI Agent 와의 경계' },
       { href: '/ai-automation/', label: 'AI 업무 자동화 — 실행이 필요한 경우' },
     ],
     publishedAt: '2026-08-20',

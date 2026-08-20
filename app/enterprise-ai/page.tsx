@@ -34,6 +34,7 @@ import {
   COST_FACTORS,
   COST_NOTE,
   VS_AUTOMATION,
+  AGENT,
   FAQS,
   RELATED_LINKS,
   enterpriseAiDecision,
@@ -377,6 +378,108 @@ export default function EnterpriseAiPage() {
               ))}
             </div>
             <p className="hub-intro" style={{ marginTop: 12 }}>{VS_AUTOMATION.combined}</p>
+          </div>
+
+          {/* ── AI Agent (전용 페이지 대신 섹션으로 — lib/enterprise-ai.ts 주석 참고) ── */}
+          <div className="section-inner" style={SECTION} id="ai-agent">
+            <h2 className="section-title" style={H2}>{AGENT.heading}</h2>
+            <p className="hub-intro"><strong>{AGENT.definition}</strong></p>
+            <p className="hub-intro" style={{ marginTop: 12 }}>{AGENT.lead}</p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>네 가지 방식의 역할</h3>
+            <div className="link-grid" style={{ gridTemplateColumns: '1fr', gap: 10, marginTop: 8 }}>
+              {AGENT.taxonomy.map((t) => (
+                <div key={t.type} className="faq-item">
+                  <p className="faq-q" style={{ color: 'var(--green)' }}>
+                    {t.href ? <Link href={t.href}>{t.type}</Link> : t.type}
+                  </p>
+                  <p className="faq-a">{t.role}</p>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>일반 AI 챗봇과의 차이</h3>
+            <div style={{ overflowX: 'auto', marginTop: 8 }}>
+              <table style={{ width: '100%', minWidth: 520, borderCollapse: 'collapse', fontSize: '0.95rem' }}>
+                <thead>
+                  <tr>
+                    <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '2px solid var(--green)' }}>항목</th>
+                    <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '2px solid var(--green)' }}>일반 AI 챗봇</th>
+                    <th scope="col" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '2px solid var(--green)' }}>AI Agent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {AGENT.compare.map((c) => (
+                    <tr key={c.item}>
+                      <th scope="row" style={{ textAlign: 'left', padding: '10px 12px', borderBottom: '1px solid rgba(128,128,128,0.2)', fontWeight: 600 }}>{c.item}</th>
+                      <td style={{ padding: '10px 12px', borderBottom: '1px solid rgba(128,128,128,0.2)' }}>{c.chatbot}</td>
+                      <td style={{ padding: '10px 12px', borderBottom: '1px solid rgba(128,128,128,0.2)' }}>{c.agent}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>이런 형태로 설계할 수 있습니다</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.examples.map((e) => (
+                <li key={e.area}><strong>{e.area}</strong> — {e.flow}</li>
+              ))}
+            </ul>
+            <p className="hub-intro" style={{ marginTop: 8, fontSize: '0.92rem', opacity: 0.85 }}>
+              * 일반적인 활용 예시이며 특정 고객사의 도입 사례가 아닙니다.
+            </p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>도구 연결(Tool Calling)이란</h3>
+            <p className="hub-intro">{AGENT.toolCalling}</p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>AI Agent는 무엇이든 실행하게 만들면 안 됩니다</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.guardrails.map((g) => (
+                <li key={g}>{g}</li>
+              ))}
+            </ul>
+            <p className="hub-intro" style={{ marginTop: 12 }}>{AGENT.humanInLoop}</p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>Agent가 필요하지 않을 수도 있는 경우</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.notNeeded.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ul>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>Agent 구조를 검토할 만한 경우</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.needed.map((n) => (
+                <li key={n}>{n}</li>
+              ))}
+            </ul>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>실패했을 때 어떻게 되나</h3>
+            <p className="hub-intro">{AGENT.failure}</p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>무엇으로 평가하나</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.evaluation.map((e) => (
+                <li key={e}>{e}</li>
+              ))}
+            </ul>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>여러 Agent가 필요한가</h3>
+            <p className="hub-intro">{AGENT.multiAgent}</p>
+
+            <h3 className="section-title" style={{ ...H2_SMALL, marginTop: 24 }}>비용을 좌우하는 것</h3>
+            <ul className="hub-intro" style={LIST}>
+              {AGENT.costFactors.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+
+            {/* 가장 중요한 문단 — 해 본 것과 안 해 본 것을 구분한다 */}
+            <div className="faq-item" style={{ borderLeft: '3px solid var(--green)', marginTop: 24 }}>
+              <p className="faq-q">름랩이 지금 제공할 수 있는 범위</p>
+              <p className="faq-a">{AGENT.scope}</p>
+            </div>
           </div>
 
           {/* ── FAQ (§33·§34 — 화면에 보이는 것만 스키마로) ── */}
