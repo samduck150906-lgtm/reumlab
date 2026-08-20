@@ -68,15 +68,17 @@ const PURPOSES = [
   { slug: 'mvp', label: '앱·SaaS MVP', short: '새로운 서비스 출시' },
   { slug: 'erp', label: 'ERP·관리 시스템', short: '업무를 한곳에서 관리' },
   { slug: 'ai-automation', label: 'AI 업무 자동화', short: '반복 업무를 AI로' },
+  // Next 라우트(app/enterprise-ai)라 이 생성기가 만들지는 않지만, 목적 내비에는 함께 노출한다.
+  // (soho 와 같은 방식) — AI 자동화를 보러 온 방문자가 "사내 자료 검색"으로 갈 길을 만든다.
+  // ⚠️ 순서·문구는 index.html 의 nav-dd__menu / mnav-acc__panel 과 같이 맞춘다.
+  //    두 곳이 손으로 관리되는 별도 목록이라, 한쪽만 고치면 홈과 랜딩의 메뉴가 갈린다.
+  { slug: 'enterprise-ai', label: '사내 AI·기업용 AI', short: '회사 자료로 답하는 AI' },
   { slug: 'platform', label: '플랫폼·매칭', short: '고객과 공급자 연결' },
   { slug: 'reservation-commerce', label: '예약·결제', short: '예약·결제·회원제' },
   { slug: 'website', label: '홈페이지·랜딩', short: '문의가 들어오는 사이트' },
   { slug: 'data-seo', label: '데이터·SEO', short: '대규모 수집·노출' },
   { slug: 'service-renewal', label: '기존 서비스 개선', short: '오류 수정·리뉴얼·인수' },
   { slug: 'soho', label: '소상공인 홈페이지', short: '자영업자·소상공인 전용' },
-  // Next 라우트(app/enterprise-ai)라 이 생성기가 만들지는 않지만, 목적 내비에는 함께 노출한다.
-  // (soho 와 같은 방식) — AI 자동화를 보러 온 방문자가 "사내 자료 검색"으로 갈 길을 만든다.
-  { slug: 'enterprise-ai', label: '사내 AI·기업용 AI', short: '회사 자료로 답하는 AI' },
 ];
 
 /**
