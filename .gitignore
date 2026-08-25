@@ -16,3 +16,6 @@ public/feed.xml
 
 # Generated output files (marketing campaigns, reports)
 .output/
+
+# 마케팅 소스 킷 패키징 산출물
+dist-kit/
