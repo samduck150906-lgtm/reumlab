@@ -71,21 +71,17 @@ export function organizationNode() {
     '@id': SCHEMA_ID.organization,
     name: SITE.name,
     alternateName: SITE.nameEn,
-    legalName: SITE.company,
+    // SITE.company는 서비스 설명이지 법적 상호가 아니다. 확인 전에는 legalName을 내지 않는다.
+    ...(SITE.legalName ? { legalName: SITE.legalName } : {}),
     url: SITE.domain + '/',
     // 로고는 정사각 아이콘, 공유 카드 이미지(og:image)는 별도 — 용도가 다르다
     logo: SITE.logo,
     email: SITE.email,
     telephone: SITE.phone,
     address: postalAddressNode(),
-    founder: { '@type': 'Person', name: SITE.representative, jobTitle: '대표' },
     contactPoint: {
       '@type': 'ContactPoint',
-      contactType: 'customer service',
-      telephone: SITE.phone,
-      email: SITE.email,
-      areaServed: 'KR',
-      availableLanguage: ['Korean'],
+      ...SITE.contactPoint,
     },
     description: SITE.description,
     // 사업자등록번호 — 공개 정보이며 화면(BusinessFooter)에도 표기된다.

@@ -24,7 +24,7 @@
 ## ⚠️ 홈페이지·배포 구조 (편집 전 필독)
 
 현재 운영 배포는 **Next.js 정적 export** 기준입니다 (`netlify.toml`: `npm run build` → `publish = out`).
-빌드 마지막 단계 `copy:home`(`cp index.html styles.css script.js out/`)이 Next가 생성한 홈을 덮어쓰므로,
+빌드 마지막 단계 `copy:home`(`node scripts/copy-home-assets.mjs`)이 홈 원본과 자산을 `out/`에 복사해 Next가 생성한 홈을 덮어쓰므로,
 **`reumlab.com/`(루트)에 실제로 서비스되는 파일은 정적 `index.html`** 입니다.
 
 - 홈 화면(가격·히어로·카피 등)을 바꾸려면 **`index.html`을 직접 수정**해야 반영됩니다.

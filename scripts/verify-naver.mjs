@@ -40,7 +40,7 @@ const pages = [];
     const p = join(d, e);
     if (statSync(p).isDirectory()) walk(p);
     else if (e.endsWith('.html')) {
-      const pathname = '/' + relative(OUT, p).replace(/index\.html$/, '');
+      const pathname = '/' + relative(OUT, p).replace(/\\/g, '/').replace(/index\.html$/, '');
       if (NOT_A_PAGE.test(pathname)) continue;
       const html = read(p);
       pages.push({

@@ -47,7 +47,6 @@ export const metadata: Metadata = {
     description: home.ogDescription,
     images: [SITE.defaultOgImage],
   },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
   manifest: '/site.webmanifest',
   icons: {
     icon: [

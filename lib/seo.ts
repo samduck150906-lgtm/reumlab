@@ -1,6 +1,21 @@
 import { RELATED_KEYWORDS_BY_PILLAR, mergeRelatedKeywords } from './keyword-coverage';
 
+const SOCIAL_PROFILES = [
+  { label: '네이버 플레이스', url: 'https://naver.me/FORRCoFc' },
+  { label: '네이버 블로그', url: 'https://blog.naver.com/reumlab' },
+  { label: '인스타그램', url: 'https://www.instagram.com/reumlab/' },
+  { label: '카카오톡 채널', url: 'https://pf.kakao.com/_xkxjQxgn' },
+  { label: '구글 지도', url: 'https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8' },
+] as const;
+
 export const SITE = {
+  brandName: '름랩',
+  alternateName: 'REUMLAB',
+  /** 법적 상호는 공개 자료만으로 확정하지 못해 비워 둔다. 마케팅 설명인 company와 구분한다. */
+  legalName: '',
+  founderOrRepresentative: '성아름',
+  businessRegistrationNumber: '793-12-03247',
+  canonicalOrigin: 'https://reumlab.com',
   /**
    * 사이트 대표 상호. 검색엔진이 "이 사이트의 이름"으로 읽는 모든 출력이 이 값을 쓴다
    * — og:site_name, 구조화 데이터 WebSite.name·Organization.name, title 템플릿.
@@ -41,6 +56,13 @@ export const SITE = {
     postalCode: '18469',
     addressCountry: 'KR',
   },
+  postalCode: '18469',
+  addressCountry: 'KR',
+  telephoneDisplay: '010-8111-9370',
+  telephoneMachine: '+82-10-8111-9370',
+  areaServed: ['대한민국'],
+  availableLanguage: ['ko'],
+  serviceMode: '화성 동탄 사업장 및 전국 비대면 진행',
   /** 카카오톡 채널 — 전화 부담을 낮춘 저마찰 상담 채널(홈·전 페이지 CTA·플로팅 버튼 공용) */
   kakaoChannel: 'https://pf.kakao.com/_xkxjQxgn',
   company: '앱·웹개발 스튜디오 름랩',
@@ -65,19 +87,20 @@ export const SITE = {
     '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 동탄·화성·수원을 거점으로 전국 비대면으로 진행합니다.',
   representative: '성아름',
   bizNo: '793-12-03247',
+  contactPoint: {
+    contactType: 'customer service',
+    telephone: '010-8111-9370',
+    email: 'ceo@eternalsix.com',
+    areaServed: 'KR',
+    availableLanguage: ['Korean'],
+  },
+  socialProfiles: SOCIAL_PROFILES,
   /**
    * 외부 채널 — 엔티티(신뢰) 신호용 sameAs 단일 출처.
    * 채널을 실제로 개설한 뒤 여기에만 실 URL을 추가하면 전 페이지 JSON-LD에 반영됩니다.
    * 가짜/추정 URL 금지 — 실제로 존재하는 채널만 등록.
    */
-  sameAs: [
-    'https://naver.me/FORRCoFc', // 네이버 플레이스
-    'https://blog.naver.com/reumlab', // 네이버 블로그
-    'https://www.instagram.com/reumlab/', // 인스타그램
-    'https://pf.kakao.com/_xkxjQxgn', // 카카오톡 채널
-    'https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8', // 구글 비즈니스 프로필(지도)
-    // 'https://www.youtube.com/@...',   // 유튜브 (개설 시 추가)
-  ] as string[],
+  sameAs: SOCIAL_PROFILES.map((profile) => profile.url),
 };
 
 export interface PageSeo {

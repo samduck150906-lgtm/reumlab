@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { EVENT, pageContext, pageTypeOf, serviceOf, pushEvent } from '@/lib/analytics';
+import { EVENT, leadSourceOf, pageContext, pageTypeOf, serviceOf, pushEvent } from '@/lib/analytics';
 
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
@@ -12,7 +12,7 @@ import { EVENT, pageContext, pageTypeOf, serviceOf, pushEvent } from '@/lib/anal
  */
 
 const FORM_NAME = 'main-apply';
-const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
 const SERVICE_TYPES = [
   '웹 MVP / 홈페이지',
@@ -47,9 +47,12 @@ export default function LandingInquiryForm({
    * 어느 페이지·어느 유형에서 왔는지 바로 읽을 수 있다.
    * 개인정보는 담지 않는다 — 경로와 분류, 외부 유입 도메인까지만 싣는다.
    */
-  const [ctx, setCtx] = useState({ path: '', pageType: '', service: '', referrer: '' });
+  const [ctx, setCtx] = useState({
+    path: '', pageType: '', service: '', referrer: '', firstLanding: '', leadSource: '',
+  });
 
   useEffect(() => {
+    let resolvedUtm: Record<string, string> = {};
     try {
       const params = new URLSearchParams(window.location.search);
       const fromUrl: Record<string, string> = {};
@@ -59,10 +62,14 @@ export default function LandingInquiryForm({
       });
       if (Object.keys(fromUrl).length > 0) {
         sessionStorage.setItem('reum_utm', JSON.stringify(fromUrl));
+        resolvedUtm = fromUrl;
         setUtm(fromUrl);
       } else {
         const saved = sessionStorage.getItem('reum_utm');
-        if (saved) setUtm(JSON.parse(saved));
+        if (saved) {
+          resolvedUtm = JSON.parse(saved);
+          setUtm(resolvedUtm);
+        }
       }
     } catch {
       /* sessionStorage 차단 환경 무시 */
@@ -74,11 +81,20 @@ export default function LandingInquiryForm({
       let ref = '';
       if (document.referrer) {
         const r = new URL(document.referrer);
-        ref = r.host === window.location.host ? '(사이트 내부)' : r.host;
-      } else {
-        ref = '(직접 유입)';
+        ref = r.hostname === window.location.hostname ? window.location.hostname : r.hostname;
       }
-      setCtx({ path, pageType: pageTypeOf(path), service: serviceOf(path), referrer: ref });
+      const firstLanding = sessionStorage.getItem('reum_first_landing') || path;
+      const firstReferrer = sessionStorage.getItem('reum_first_referrer') ?? ref;
+      sessionStorage.setItem('reum_first_landing', firstLanding);
+      sessionStorage.setItem('reum_first_referrer', firstReferrer);
+      setCtx({
+        path,
+        pageType: pageTypeOf(path),
+        service: serviceOf(path),
+        referrer: firstReferrer || '(직접 유입)',
+        firstLanding,
+        leadSource: leadSourceOf(firstReferrer, resolvedUtm.utm_source || ''),
+      });
     } catch {
       /* URL 파싱 실패 시 맥락 없이 진행 — 폼 제출이 우선이다 */
     }
@@ -98,7 +114,12 @@ export default function LandingInquiryForm({
     if (started) return;
     setStarted(true);
     // 폼 1회당 한 번만 — 모든 input focus 마다 반복되면 안 된다.
-    pushEvent(EVENT.formStart, { form_name: FORM_NAME, ...pageContext(window.location.pathname) });
+    pushEvent(EVENT.formStart, {
+      form_name: FORM_NAME,
+      source_page: ctx.firstLanding || window.location.pathname,
+      lead_source: ctx.leadSource,
+      ...pageContext(window.location.pathname),
+    });
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -117,19 +138,20 @@ export default function LandingInquiryForm({
       // ── 여기부터가 실제 문의 성공. 제출 버튼 클릭이 아니라 서버 성공 응답 이후다.
       setStatus('success');
       form.reset();
-      const ctx = pageContext(window.location.pathname);
+      const eventCtx = pageContext(window.location.pathname);
       const w = window as any;
       if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
       // 기존 GTM 트리거가 쓰는 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
-      pushDL({ event: 'inquiry_form_submit', ...ctx });
-      pushDL({ event: 'main_apply_submit', ...ctx });
-      pushDL({ event: 'form_submit_success', ...ctx });
+      pushDL({ event: 'inquiry_form_submit', ...eventCtx, lead_source: ctx.leadSource });
+      pushDL({ event: 'main_apply_submit', ...eventCtx, lead_source: ctx.leadSource });
+      pushDL({ event: 'form_submit_success', ...eventCtx, lead_source: ctx.leadSource });
       // GA4 권장 이름 추가. 어느 것을 key event 로 쓸지는 GA4/GTM 에서 하나만 고른다.
       pushEvent(EVENT.lead, {
         form_name: FORM_NAME,
         cta_type: 'form',
-        source_page: window.location.pathname,
-        ...ctx,
+        source_page: ctx.firstLanding || window.location.pathname,
+        lead_source: ctx.leadSource,
+        ...eventCtx,
       });
     } catch (err) {
       setStatus('error');
@@ -173,6 +195,8 @@ export default function LandingInquiryForm({
       <input type="hidden" name="페이지_유형" value={ctx.pageType} />
       <input type="hidden" name="관심_서비스축" value={ctx.service} />
       <input type="hidden" name="유입_출처" value={ctx.referrer} />
+      <input type="hidden" name="최초_유입_페이지" value={ctx.firstLanding} />
+      <input type="hidden" name="유입_채널" value={ctx.leadSource} />
       {UTM_KEYS.map((k) => (
         <input key={k} type="hidden" name={k} value={utm[k] || ''} />
       ))}

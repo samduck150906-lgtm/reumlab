@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
+import { EVENT, leadSourceOf, pageContext, pushEvent } from '@/lib/analytics';
 
 /**
  * GTM dataLayer 이벤트 브리지.
@@ -34,7 +34,34 @@ export function AnalyticsDataLayer() {
       개인정보는 들어가지 않는다 — 경로 기반 분류값뿐이다.
     */
     const ctx = pageContext(window.location.pathname);
-    push({ event: 'page_context', ...ctx });
+    let firstLanding = window.location.pathname;
+    let firstReferrer = '';
+    let utmSource = '';
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const allowedUtm = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+      const fromUrl: Record<string, string> = {};
+      allowedUtm.forEach((key) => {
+        const value = params.get(key);
+        if (value) fromUrl[key] = value;
+      });
+      const savedUtm = sessionStorage.getItem('reum_utm');
+      if (Object.keys(fromUrl).length) sessionStorage.setItem('reum_utm', JSON.stringify(fromUrl));
+      const resolvedUtm = Object.keys(fromUrl).length ? fromUrl : savedUtm ? JSON.parse(savedUtm) : {};
+      utmSource = resolvedUtm.utm_source || '';
+
+      firstLanding = sessionStorage.getItem('reum_first_landing') || window.location.pathname;
+      sessionStorage.setItem('reum_first_landing', firstLanding);
+
+      const currentReferrer = document.referrer ? new URL(document.referrer).hostname : '';
+      firstReferrer = sessionStorage.getItem('reum_first_referrer') ?? currentReferrer;
+      sessionStorage.setItem('reum_first_referrer', firstReferrer);
+    } catch {
+      /* 저장소·URL 파싱 차단 시 현재 경로만 사용 */
+    }
+    const leadSource = leadSourceOf(firstReferrer, utmSource);
+    const acquisition = { source_page: firstLanding, lead_source: leadSource };
+    push({ event: 'page_context', ...ctx, ...acquisition });
 
     /** 링크 href로 상담 채널 종류를 판별 */
     const channelOf = (el: Element | null): 'phone' | 'email' | 'kakao' | null => {
@@ -52,18 +79,18 @@ export function AnalyticsDataLayer() {
       // 1) 기존 범용 클릭 이벤트 (data-analytics 속성)
       const tagged = target.closest('[data-analytics]');
       const name = tagged?.getAttribute('data-analytics');
-      if (name) push({ event: 'reum_click', reum_action: name, ...ctx });
+      if (name) push({ event: 'reum_click', reum_action: name, ...ctx, ...acquisition });
 
       // 2) 상담 채널 전환 이벤트 — 홈(script.js)과 동일한 이벤트 이름 사용
       const channel = channelOf(target);
       if (!channel) return;
       const location = tagged?.getAttribute('data-analytics') || 'page';
       // 기존 GTM 전환 트리거가 쓰는 이름은 그대로 둔다(이름을 바꾸면 운영 중인 전환이 끊긴다).
-      if (channel === 'phone') push({ event: 'phone_click', cta_location: location, ...ctx });
-      if (channel === 'email') push({ event: 'email_click', cta_location: location, ...ctx });
-      if (channel === 'kakao') push({ event: 'kakao_or_chat_click', cta_location: location, ...ctx });
+      if (channel === 'phone') push({ event: 'phone_click', cta_location: location, ...ctx, ...acquisition });
+      if (channel === 'email') push({ event: 'email_click', cta_location: location, ...ctx, ...acquisition });
+      if (channel === 'kakao') push({ event: 'kakao_or_chat_click', cta_location: location, ...ctx, ...acquisition });
       // 상담 채널 클릭은 secondary conversion 이다 — 문의 완료(generate_lead)로 집계하지 않는다.
-      pushEvent(EVENT.ctaClick, { cta_type: channel, cta_location: location, ...ctx });
+      pushEvent(EVENT.ctaClick, { cta_type: channel, cta_location: location, ...ctx, ...acquisition });
 
       // Meta 픽셀 Contact — 홈과 동일 기준(전화·카카오)만 집계
       try {

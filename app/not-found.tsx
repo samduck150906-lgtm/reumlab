@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   // og:url 만 남겨 두면 canonical 과 어긋난다.
   alternates: { canonical: `${SITE.domain}/404.html` },
   openGraph: { url: `${SITE.domain}/404.html` },
-  robots: { index: false, follow: true, googleBot: { index: false, follow: true } },
+  // Next.js가 not-found 문서에 noindex를 자동 출력하므로 중복 meta를 추가하지 않는다.
 };
 
 export default function NotFound() {

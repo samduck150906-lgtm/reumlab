@@ -88,7 +88,7 @@ Next.js 14 App Router  ·  output: 'export' (정적 export)  ·  trailingSlash: 
 - **priority 남발 금지**: 홈 1.0, 본거지(동탄·화성·수원) 0.8, 나머지 프로그래매틱 0.65–0.75로 이미 계층화됨. 유지.
 
 ### 4-2. 즉시 색인 (IndexNow) ✅ 변경분만 제출로 개선됨
-- `scripts/submit-indexnow.mjs`가 Naver·Bing에 제출. 키 파일 `public/reumlab2026indexnow9370.txt`. Netlify 빌드(`netlify.toml`)가 빌드 후 자동 실행.
+- `scripts/submit-indexnow.mjs`가 Naver·Bing에 제출. 키 파일 `public/67cc4ff3436125d6a5eb18de9bb63dd0.txt`. Netlify 빌드(`netlify.toml`)가 빌드 후 자동 실행.
 - **개선 완료**: `out/sitemap.xml`(색인 대상 URL만)을 읽어 커밋된 매니페스트(`scripts/.indexnow-manifest.json`)와 **lastmod를 비교해 변경분만** 제출한다. lastmod가 git 커밋 기준으로 안정화됐으므로, **같은 커밋 재배포 시 변경분 0 → 호스트 호출 안 함**(스팸 신호 방지). 플래그: `--all`(전량), `--dry-run`(제출 없이 변경분만 출력). 수동 실행: `npm run seo:indexnow`.
 - **매니페스트 지속성 주의**: Netlify 빌드는 ephemeral(fresh clone)이라 스크립트가 갱신한 매니페스트가 커밋되지 않으면 다음 배포에서 "전량 신규"로 보일 수 있다. 진짜 변경분만 제출하려면 콘텐츠 커밋과 함께 `scripts/.indexnow-manifest.json`을 커밋하거나 Netlify build cache 플러그인으로 보존할 것.
 - 구글은 IndexNow 미지원 → 사이트맵 + GSC "URL 검사 > 색인 요청"으로 커버.

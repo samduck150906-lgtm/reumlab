@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { EVENT, pageContext, pushEvent } from '@/lib/analytics';
+import { EVENT, leadSourceOf, pageContext, pushEvent } from '@/lib/analytics';
 
 /**
  * 무료 진단 신청 폼 — Netlify Forms 연동.
@@ -36,7 +36,7 @@ const DIAGNOSE_CHECKLIST = [
 ];
 
 /** 광고 유입 추적용 — 폼 제출에 함께 담아 어떤 캠페인에서 온 신청인지 남깁니다. */
-const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -46,13 +46,19 @@ export default function SohoForm() {
   const [mid, setMid] = useState('');
   const [last, setLast] = useState('');
   const [utm, setUtm] = useState<Record<string, string>>({});
+  const [acquisition, setAcquisition] = useState({ firstLanding: '', leadSource: '' });
   // 폼 최초 상호작용 1회만 기록 — 이 폼에는 form_start 측정이 아예 없었다.
   const [started, setStarted] = useState(false);
 
   function onFirstInteract() {
     if (started) return;
     setStarted(true);
-    pushEvent(EVENT.formStart, { form_name: FORM_NAME, ...pageContext(window.location.pathname) });
+    pushEvent(EVENT.formStart, {
+      form_name: FORM_NAME,
+      source_page: acquisition.firstLanding || window.location.pathname,
+      lead_source: acquisition.leadSource,
+      ...pageContext(window.location.pathname),
+    });
   }
 
   const phone = [prefix, mid, last].filter(Boolean).join('-');
@@ -66,13 +72,27 @@ export default function SohoForm() {
         const v = params.get(k);
         if (v) fromUrl[k] = v;
       });
+      let resolvedUtm = fromUrl;
       if (Object.keys(fromUrl).length > 0) {
         sessionStorage.setItem('reum_utm', JSON.stringify(fromUrl));
         setUtm(fromUrl);
       } else {
         const saved = sessionStorage.getItem('reum_utm');
-        if (saved) setUtm(JSON.parse(saved));
+        if (saved) {
+          resolvedUtm = JSON.parse(saved);
+          setUtm(resolvedUtm);
+        }
       }
+
+      const firstLanding = sessionStorage.getItem('reum_first_landing') || window.location.pathname;
+      const referrerHost = document.referrer ? new URL(document.referrer).hostname : '';
+      const firstReferrer = sessionStorage.getItem('reum_first_referrer') ?? referrerHost;
+      sessionStorage.setItem('reum_first_landing', firstLanding);
+      sessionStorage.setItem('reum_first_referrer', firstReferrer);
+      setAcquisition({
+        firstLanding,
+        leadSource: leadSourceOf(firstReferrer, resolvedUtm.utm_source || ''),
+      });
     } catch {
       /* sessionStorage 차단 환경 등은 무시 */
     }
@@ -116,7 +136,8 @@ export default function SohoForm() {
         pushEvent(EVENT.lead, {
           form_name: FORM_NAME,
           cta_type: 'form',
-          source_page: window.location.pathname,
+          source_page: acquisition.firstLanding || window.location.pathname,
+          lead_source: acquisition.leadSource,
           ...ctx,
         });
       }
@@ -172,10 +193,12 @@ export default function SohoForm() {
       >
         {/* Netlify 폼 인식·동작용 필수 hidden */}
         <input type="hidden" name="form-name" value={FORM_NAME} />
-        {/* 광고 유입 추적 (utm_*·fbclid) — 어떤 캠페인에서 온 신청인지 기록 */}
+        {/* 광고·검색 유입 추적 — 개인 식별 가능한 click id는 저장하지 않음 */}
         {UTM_KEYS.map((k) => (
           <input key={k} type="hidden" name={k} value={utm[k] || ''} />
         ))}
+        <input type="hidden" name="최초_유입_페이지" value={acquisition.firstLanding} />
+        <input type="hidden" name="유입_채널" value={acquisition.leadSource} />
         {/* honeypot (사람에겐 숨김) */}
         <p className="sf-hp" aria-hidden="true">
           <label>

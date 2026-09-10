@@ -18,7 +18,7 @@
  * 커밋하거나 캐시에 보존할 것.
  *
  * 네이버 IndexNow 등록: https://searchadvisor.naver.com/indexnow
- * 키 파일: public/reumlab2026indexnow9370.txt (= https://reumlab.com/{key}.txt)
+ * 키 파일: public/67cc4ff3436125d6a5eb18de9bb63dd0.txt (= https://reumlab.com/{key}.txt)
  *   → 파일명 = 키 값과 동일해야 키 검증을 통과(403 방지)한다.
  */
 import fs from 'fs';
@@ -30,8 +30,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 
 const SITE = 'https://reumlab.com';
-const KEY = 'reumlab2026indexnow9370';
-const KEY_LOCATION = `${SITE}/${KEY}.txt`;
+// IndexNow 규격(8~128자 16진수)에 맞춘 공개 소유권 키.
+const KEY = '67cc4ff3436125d6a5eb18de9bb63dd0';
 const SITEMAP_PATH = path.join(ROOT, 'out', 'sitemap.xml');
 const MANIFEST_PATH = path.join(__dirname, '.indexnow-manifest.json');
 
@@ -87,7 +87,10 @@ function fallbackCoreUrls() {
 }
 
 async function submitToHost(host, urlList) {
-  const body = JSON.stringify({ host: 'reumlab.com', key: KEY, keyLocation: KEY_LOCATION, urlList });
+  // 키가 호스트 루트의 /{key}.txt에 있으므로 option 1을 사용한다.
+  // 루트 키에 keyLocation을 함께 보내면 Bing이 별도 경로(option 2) 검증으로 처리해
+  // SiteVerificationNotCompleted를 반환할 수 있다.
+  const body = JSON.stringify({ host: 'reumlab.com', key: KEY, urlList });
   // 경로는 반드시 소문자 /indexnow — 네이버는 대소문자를 구분하며
   // /IndexNow(대문자)는 웹앱으로 라우팅돼 "invalid csrf token" 403을 반환한다.
   const url = `https://${host}/indexnow`;
@@ -102,8 +105,10 @@ async function submitToHost(host, urlList) {
       const text = await res.text().catch(() => '');
       if (text) console.log(`[IndexNow] ${host} 응답: ${text.slice(0, 300)}`);
     }
+    return res.status < 400;
   } catch (e) {
     console.warn(`[IndexNow] ${host} 실패:`, e.message);
+    return false;
   }
 }
 
@@ -137,16 +142,23 @@ if (DRY_RUN) {
 
 // IndexNow는 요청당 최대 10,000 URL — 넉넉히 배치 처리
 const BATCH = 10000;
+let submissionFailed = false;
 for (let i = 0; i < urlList.length; i += BATCH) {
   const batch = urlList.slice(i, i + BATCH);
-  await Promise.all([
+  const results = await Promise.all([
     submitToHost('searchadvisor.naver.com', batch),
     submitToHost('www.bing.com', batch),
   ]);
+  if (results.some((ok) => !ok)) submissionFailed = true;
 }
 
 // 제출 성공 후 매니페스트 갱신 (다음 배포의 변경분 판정 기준). 커밋해 두면 상태 유지.
-if (nextManifest) {
+if (nextManifest && !submissionFailed) {
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(nextManifest, null, 2) + '\n');
   console.log(`[IndexNow] 매니페스트 갱신: ${path.relative(ROOT, MANIFEST_PATH)} (커밋 권장)`);
+}
+
+if (submissionFailed) {
+  console.error('[IndexNow] 하나 이상의 검색엔진이 제출을 거부했습니다. 매니페스트는 갱신하지 않습니다.');
+  process.exitCode = 1;
 }

@@ -312,7 +312,7 @@ Sitemap: https://reumlab.com/sitemap.xml
 - AI 크롤러 차단 없음(robots allow-all) — 인용 가능 상태.
 - JS 없이 본문이 읽히는 정적 HTML이라 GPTBot·ClaudeBot·PerplexityBot 인용에 유리.
 - 다만 `llms.txt`가 참조하는 홈 서술과 실제 `index.html` 홈 문구가 C2 때문에 어긋난다.
-- IndexNow 키 파일(`public/reumlab2026indexnow9370.txt`) + `scripts/submit-indexnow.mjs`가 빌드 후 자동 실행되어 Bing/Yandex 즉시 통보. ✅
+- IndexNow 키 파일(`public/67cc4ff3436125d6a5eb18de9bb63dd0.txt`) + `scripts/submit-indexnow.mjs`가 빌드 후 자동 실행되어 Bing/Naver에 즉시 통보. ✅
 
 ---
 

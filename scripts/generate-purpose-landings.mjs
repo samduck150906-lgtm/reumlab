@@ -722,7 +722,6 @@ const SITE_ENTITY_NODES = [
     '@id': SCHEMA_ID.organization,
     name: '름랩',
     alternateName: 'REUMLAB',
-    legalName: '앱·웹개발 스튜디오 름랩',
     url: DOMAIN + '/',
     // 로고는 정사각 아이콘, 공유 카드 이미지(og:image)는 별도 — 용도가 다르다
     logo: `${DOMAIN}/icon-512.png`,
@@ -730,7 +729,6 @@ const SITE_ENTITY_NODES = [
     email: 'ceo@eternalsix.com',
     telephone: '010-8111-9370',
     address: POSTAL_ADDRESS,
-    founder: { '@type': 'Person', name: '성아름', jobTitle: '대표' },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer service',

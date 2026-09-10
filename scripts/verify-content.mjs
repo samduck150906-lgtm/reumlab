@@ -38,7 +38,7 @@ const all = [];
     const p = join(d, e);
     if (statSync(p).isDirectory()) walk(p);
     else if (e === 'index.html') {
-      const pathname = '/' + relative(OUT, p).replace(/index\.html$/, '');
+      const pathname = '/' + relative(OUT, p).replace(/\\/g, '/').replace(/index\.html$/, '');
       const html = read(p);
       all.push({
         pathname,

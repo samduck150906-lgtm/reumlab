@@ -72,7 +72,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "@id": "https://reumlab.com/#organization",
       "name": "름랩",
       "alternateName": "REUMLAB",
-      "legalName": "앱·웹개발 스튜디오 름랩",
       "url": "https://reumlab.com/",
       "logo": "https://reumlab.com/icon-512.png",
       "email": "ceo@eternalsix.com",
@@ -86,7 +85,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "postalCode": "18469",
         "addressCountry": "KR"
       },
-      "founder": {"@type": "Person", "name": "성아름", "jobTitle": "대표"},
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
@@ -978,12 +976,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="hidden" name="utm_campaign" data-utm="utm_campaign" />
             <input type="hidden" name="utm_content" data-utm="utm_content" />
             <input type="hidden" name="utm_term" data-utm="utm_term" />
-            <input type="hidden" name="fbclid" data-utm="fbclid" />
             <!-- 유입 맥락 — 어떤 페이지·어떤 경로로 들어와 문의했는지 접수 내역에 함께 남긴다.
                  값은 script.js 의 fillContext() 가 채운다. 개인정보는 담지 않는다(경로·분류·유입 도메인까지). -->
             <input type="hidden" name="유입_경로" data-ctx="path" />
             <input type="hidden" name="페이지_유형" data-ctx="pageType" />
             <input type="hidden" name="유입_출처" data-ctx="referrer" />
+            <input type="hidden" name="최초_유입_페이지" data-ctx="firstLanding" />
+            <input type="hidden" name="유입_채널" data-ctx="leadSource" />
             <div class="af-row">
               <div class="af-field">
                 <label class="af-label" for="af-name">이름 또는 업체명 <span class="af-req">*</span></label>

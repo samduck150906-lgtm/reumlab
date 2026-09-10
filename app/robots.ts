@@ -23,7 +23,7 @@ import { SITE } from '@/lib/seo';
  * 링크되지 않는다. 색인되면 본문이 깨진 형태로 중복 노출된다.
  * 페이지 HTML 은 완결된 정적 문서라 이 파일을 막아도 크롤러 렌더링에는 영향이 없다.
  * 패턴이 정확히 `index.txt` 로 끝나는 경로만 잡으므로 /llms.txt, /robots.txt,
- * IndexNow 키 파일(/reumlab2026indexnow9370.txt)은 그대로 열려 있다.
+ * IndexNow 공개 키 파일(/67cc4ff3436125d6a5eb18de9bb63dd0.txt)은 그대로 열려 있다.
  *
  * /admin·/api·/auth 같은 경로는 이 프로젝트에 존재하지 않는다(정적 export, 서버 라우트 없음).
  * 없는 경로를 미리 적어 두지 않는다.

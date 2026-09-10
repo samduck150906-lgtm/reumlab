@@ -15,10 +15,23 @@ import {
   pageTypeOf,
   serviceOf,
   pageContext,
+  leadSourceOf,
   pushEvent,
   FORBIDDEN_PARAM_KEYS,
   EVENT,
 } from '../lib/analytics';
+
+test('leadSourceOf — AI 검색·검색엔진·캠페인을 개인정보 없이 분류한다', () => {
+  assert.equal(leadSourceOf('chatgpt.com'), 'ChatGPT');
+  assert.equal(leadSourceOf('www.perplexity.ai'), 'Perplexity');
+  assert.equal(leadSourceOf('claude.ai'), 'Claude');
+  assert.equal(leadSourceOf('www.google.com'), 'Google');
+  assert.equal(leadSourceOf('search.naver.com'), 'Naver');
+  assert.equal(leadSourceOf('', 'newsletter'), 'campaign:newsletter');
+  assert.equal(leadSourceOf('', ''), 'direct');
+  assert.equal(leadSourceOf('reumlab.com'), 'internal');
+  assert.equal(leadSourceOf('example.org'), 'referral');
+});
 
 test('pageTypeOf — 실제 사이트 경로를 올바른 유형으로 분류한다', () => {
   assert.equal(pageTypeOf('/'), 'home');

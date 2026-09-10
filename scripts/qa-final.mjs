@@ -41,7 +41,7 @@ const pages = [];
     const p = join(d, e);
     if (statSync(p).isDirectory()) walk(p);
     else if (e.endsWith('.html')) {
-      const pathname = '/' + relative(OUT, p).replace(/index\.html$/, '');
+      const pathname = '/' + relative(OUT, p).replace(/\\/g, '/').replace(/index\.html$/, '');
       if (NOT_A_PAGE.test(pathname)) continue;
       const html = read(p);
       pages.push({
@@ -403,9 +403,9 @@ let sensitive = 0;
   for (const e of readdirSync(d)) {
     const p = join(d, e);
     if (statSync(p).isDirectory()) walkAll(p);
-    else if (SENSITIVE.test('/' + relative(OUT, p))) {
+    else if (SENSITIVE.test('/' + relative(OUT, p).replace(/\\/g, '/'))) {
       sensitive++;
-      add(fail, 'security', `공개 경로에 민감 파일: /${relative(OUT, p)}`);
+      add(fail, 'security', `공개 경로에 민감 파일: /${relative(OUT, p).replace(/\\/g, '/')}`);
     }
   }
 })(OUT);

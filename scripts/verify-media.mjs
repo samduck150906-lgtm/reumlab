@@ -78,9 +78,9 @@ for (const a of assets) {
   const declared = EXT_FORMAT[ext];
   const actual = realFormat(a);
   if (actual && declared && actual !== declared && !(declared === 'ico' && actual === 'png')) {
-    add(fail, 'format', `확장자(${declared})와 실제 포맷(${actual}) 불일치: /${relative(OUT, a)} — 스크래퍼가 거부할 수 있음`);
+    add(fail, 'format', `확장자(${declared})와 실제 포맷(${actual}) 불일치: /${relative(OUT, a).replace(/\\/g, '/')} — 스크래퍼가 거부할 수 있음`);
   }
-  if (size >= 500 * 1024) big.push({ p: '/' + relative(OUT, a), size, dim: dimensions(a) });
+  if (size >= 500 * 1024) big.push({ p: '/' + relative(OUT, a).replace(/\\/g, '/'), size, dim: dimensions(a) });
 }
 if (big.length) {
   console.log('\n500KB 이상 자산:');
@@ -108,7 +108,7 @@ let imgs = 0, noAlt = 0, noDim = 0, videos = 0, noPoster = 0, preloadTotal = 0;
 const dupAltPages = [];
 for (const f of htmls) {
   const h = readFileSync(f, 'utf8');
-  const url = '/' + relative(OUT, f).replace(/index\.html$/, '');
+  const url = '/' + relative(OUT, f).replace(/\\/g, '/').replace(/index\.html$/, '');
   const pageAlts = new Map();
   for (const m of h.matchAll(/<img\b[^>]*>/g)) {
     const t = m[0];

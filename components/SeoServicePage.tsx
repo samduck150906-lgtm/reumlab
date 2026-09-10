@@ -60,23 +60,6 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           <p className="hero-sub" style={{ maxWidth: 720, marginBottom: 28 }}>
             {seo.serviceDesc ?? seo.description}
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginBottom: 28 }}>
-            {seo.keywords.slice(0, 8).map((k) => (
-              <span
-                key={k}
-                style={{
-                  padding: '6px 14px',
-                  borderRadius: 999,
-                  background: 'rgba(58,140,92,.12)',
-                  color: 'var(--green)',
-                  fontSize: 13,
-                  fontWeight: 500,
-                }}
-              >
-                {k}
-              </span>
-            ))}
-          </div>
           <div className="hero-btns" style={{ flexWrap: 'wrap' }}>
             {/* CTA 문구는 무엇을 문의하는지 드러낸다. 기존 문의 동선(전화·카톡·메일)은 그대로. */}
             <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_service_call">

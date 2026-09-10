@@ -40,7 +40,7 @@ if (!Array.isArray(items) || !items.length) {
 /** 마커 사이를 갈아끼운다. 마커가 없으면 조용히 넘어가지 않고 실패시킨다. */
 function replaceBetween(html, name, body) {
   const re = new RegExp(
-    `(<!-- service-menu:${name}:start[\\s\\S]*?-->\\n)[\\s\\S]*?(\\s*<!-- service-menu:${name}:end -->)`,
+    `(<!-- service-menu:${name}:start[\\s\\S]*?-->\\r?\\n)[\\s\\S]*?(\\s*<!-- service-menu:${name}:end -->)`,
   );
   if (!re.test(html)) {
     console.error(`✖ inject-service-menu: '${name}' 마커를 찾지 못했습니다 — index.html 의 주석을 지우지 마세요.`);

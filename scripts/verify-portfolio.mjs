@@ -168,7 +168,7 @@ let broken = 0;
 for (const f of allHtml) {
   const html = read(f);
   const body = (html.match(/<body[\s\S]*<\/body>/) || [html])[0];
-  const from = '/' + relative(OUT, f).replace(/index\.html$/, '');
+  const from = '/' + relative(OUT, f).replace(/\\/g, '/').replace(/index\.html$/, '');
   for (const m of body.matchAll(/<a\b[^>]*\shref="(\/portfolio\/[^"#?]*)"/g)) {
     const to = m[1];
     if (to === from) continue;

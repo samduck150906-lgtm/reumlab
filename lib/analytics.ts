@@ -132,6 +132,29 @@ export interface EventParams {
   error_type?: FormErrorType;
   /** 유입 랜딩 경로 — page_path 수준까지만. 쿼리·개인정보 없음 */
   source_page?: string;
+  /** 개인정보를 제외한 유입 채널 분류 */
+  lead_source?: string;
+}
+
+/**
+ * 외부 리퍼러 도메인과 utm_source를 사람이 읽을 수 있는 채널로 묶는다.
+ * 전체 리퍼러 URL이나 검색어는 저장하지 않는다.
+ */
+export function leadSourceOf(referrerHost = '', utmSource = ''): string {
+  const campaign = utmSource.trim().toLowerCase();
+  const host = referrerHost.trim().toLowerCase().replace(/^www\./, '');
+  const value = campaign || host;
+
+  if (/chatgpt|openai/.test(value)) return 'ChatGPT';
+  if (/perplexity/.test(value)) return 'Perplexity';
+  if (/claude|anthropic/.test(value)) return 'Claude';
+  if (/copilot|bing/.test(value)) return 'Bing/Copilot';
+  if (/google/.test(value)) return 'Google';
+  if (/naver/.test(value)) return 'Naver';
+  if (campaign) return `campaign:${campaign.slice(0, 40)}`;
+  if (!host) return 'direct';
+  if (host === 'reumlab.com' || host.endsWith('.reumlab.com')) return 'internal';
+  return 'referral';
 }
 
 /** GA4 파라미터에 들어가면 안 되는 이름 — 정적 검사기와 같은 목록을 쓴다 */

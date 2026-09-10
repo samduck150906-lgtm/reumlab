@@ -63,6 +63,14 @@
 /l/suwon-app-dev-quote/       /app-development/suwon/    301
 /l/bundang-app-dev            /app-development/bundang/  301
 /l/bundang-app-dev/           /app-development/bundang/  301
+/l/seongnam-app-dev           /app-development/seongnam/ 301
+/l/seongnam-app-dev/          /app-development/seongnam/ 301
+/l/seongnam-app-dev-out       /app-development/seongnam/ 301
+/l/seongnam-app-dev-out/      /app-development/seongnam/ 301
+/l/seongnam-app-dev-cost      /app-development/seongnam/ 301
+/l/seongnam-app-dev-cost/     /app-development/seongnam/ 301
+/l/seongnam-app-dev-quote     /app-development/seongnam/ 301
+/l/seongnam-app-dev-quote/    /app-development/seongnam/ 301
 /l/suwon-web-dev              /web-development/suwon/    301
 /l/suwon-web-dev/             /web-development/suwon/    301
 /l/suwon-web-dev-cost         /web-development/suwon/    301
@@ -85,8 +93,44 @@
 /l/suwon-landing-page-quote/  /web-development/suwon/    301
 /l/gangnam-landing-page-quote /web-development/gangnam/  301
 /l/gangnam-landing-page-quote/ /web-development/gangnam/ 301
+/l/seongnam-web-dev           /web-development/seongnam/ 301
+/l/seongnam-web-dev/          /web-development/seongnam/ 301
+/l/seongnam-homepage-dev      /web-development/seongnam/ 301
+/l/seongnam-homepage-dev/     /web-development/seongnam/ 301
+/l/seongnam-website-dev       /web-development/seongnam/ 301
+/l/seongnam-website-dev/      /web-development/seongnam/ 301
+/l/seongnam-landing-page      /web-development/seongnam/ 301
+/l/seongnam-landing-page/     /web-development/seongnam/ 301
+/l/seongnam-web-dev-cost      /web-development/seongnam/ 301
+/l/seongnam-web-dev-cost/     /web-development/seongnam/ 301
+/l/seongnam-web-dev-quote     /web-development/seongnam/ 301
+/l/seongnam-web-dev-quote/    /web-development/seongnam/ 301
+/l/seongnam-homepage-dev-cost /web-development/seongnam/ 301
+/l/seongnam-homepage-dev-cost/ /web-development/seongnam/ 301
+/l/seongnam-homepage-dev-quote /web-development/seongnam/ 301
+/l/seongnam-homepage-dev-quote/ /web-development/seongnam/ 301
+/l/seongnam-landing-page-cost /web-development/seongnam/ 301
+/l/seongnam-landing-page-cost/ /web-development/seongnam/ 301
+/l/seongnam-landing-page-quote /web-development/seongnam/ 301
+/l/seongnam-landing-page-quote/ /web-development/seongnam/ 301
 /l/suwon-mvp-dev              /mvp/suwon/                301
 /l/suwon-mvp-dev/             /mvp/suwon/                301
+/l/seongnam-mvp-dev           /mvp/seongnam/              301
+/l/seongnam-mvp-dev/          /mvp/seongnam/              301
+
+# 지역명 없는 비용·가격·제작비·견적 변형은 단어만 다른 동일 구매 의도다.
+# lib/data.js가 해당 정적 파일을 생성하지 않으므로 아래 비강제 wildcard가 단일 301로 동작한다.
+# 쇼핑몰·서비스기획은 정확한 현행 가이드가 없어 각각 cost 대표 랜딩 파일만 유지한다.
+/l/app-dev-*         /guide/app-cost/ 301
+/l/mobile-app-*      /guide/app-cost/ 301
+/l/homepage-dev-*    /guide/web-cost/ 301
+/l/web-dev-*         /guide/web-cost/ 301
+/l/landing-page-*    /guide/web-cost/ 301
+/l/website-dev-*     /guide/web-cost/ 301
+/l/responsive-web-*  /guide/web-cost/ 301
+/l/mvp-dev-*         /guide/mvp-cost/ 301
+/l/shopping-mall-*   /l/shopping-mall-cost/ 301
+/l/service-plan-*    /l/service-plan-cost/ 301
 
 # 저품질 자동생성 블로그 400편(50키워드×8지역 near-duplicate) 제거 → 관련 페이지로 301
 # lib/blog-posts.ts 에서 삭제, 접두어 글롭으로 지역·인덱스 변형 전부 통합 (자기잠식·도어웨이 제거)

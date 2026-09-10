@@ -35,7 +35,7 @@ const pages = [];
     else if (e === 'index.html') {
       const html = read(p);
       pages.push({
-        pathname: '/' + relative(OUT, p).replace(/index\.html$/, ''),
+        pathname: '/' + relative(OUT, p).replace(/\\/g, '/').replace(/index\.html$/, ''),
         html,
         noindex: /<meta name="robots" content="[^"]*noindex/i.test(html),
       });
@@ -189,7 +189,7 @@ for (const f of ['index.html', 'erp/index.html', 'mvp/index.html', 'website/inde
   if (!existsSync(p)) continue;
   if (!/<body[^>]*data-page-type="/.test(read(p))) {
     noCtx++;
-    add(fail, 'context', `정적 문서가 page_type 을 선언하지 않음: /${f.replace(/index\.html$/, '')}`);
+    add(fail, 'context', `정적 문서가 page_type 을 선언하지 않음: /${f.replace(/\\/g, '/').replace(/index\.html$/, '')}`);
   }
 }
 

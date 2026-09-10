@@ -20,11 +20,40 @@
     var d = b.dataset || {};
     return { page_type: d.pageType || "home", service: d.service || "" };
   })();
+  var ACQ = (function () {
+    var firstLanding = location.pathname;
+    var referrerHost = "";
+    var utmSource = "";
+    try {
+      utmSource = new URLSearchParams(location.search).get("utm_source") || "";
+      var savedUtm = sessionStorage.getItem("reum_utm");
+      if (!utmSource && savedUtm) utmSource = JSON.parse(savedUtm).utm_source || "";
+      firstLanding = sessionStorage.getItem("reum_first_landing") || location.pathname;
+      referrerHost = sessionStorage.getItem("reum_first_referrer");
+      if (referrerHost === null) referrerHost = document.referrer ? new URL(document.referrer).hostname : "";
+      sessionStorage.setItem("reum_first_landing", firstLanding);
+      sessionStorage.setItem("reum_first_referrer", referrerHost);
+    } catch (e) {}
+    var value = (utmSource || referrerHost).toLowerCase().replace(/^www\./, "");
+    var leadSource = !value ? "direct"
+      : /chatgpt|openai/.test(value) ? "ChatGPT"
+      : /perplexity/.test(value) ? "Perplexity"
+      : /claude|anthropic/.test(value) ? "Claude"
+      : /copilot|bing/.test(value) ? "Bing/Copilot"
+      : /google/.test(value) ? "Google"
+      : /naver/.test(value) ? "Naver"
+      : utmSource ? "campaign:" + utmSource.toLowerCase().slice(0, 40)
+      : /(^|\.)reumlab\.com$/.test(referrerHost) ? "internal"
+      : "referral";
+    return { source_page: firstLanding, lead_source: leadSource, referrer: referrerHost };
+  })();
   function withCtx(obj) {
     var o = {};
     for (var k in obj) if (Object.prototype.hasOwnProperty.call(obj, k)) o[k] = obj[k];
     o.page_type = CTX.page_type;
     if (CTX.service) o.service = CTX.service;
+    if (!o.source_page) o.source_page = ACQ.source_page;
+    o.lead_source = ACQ.lead_source;
     return o;
   }
   pushDL(withCtx({ event: "page_context" }));
@@ -498,7 +527,7 @@
      ============================================================ */
   var applyForms = document.querySelectorAll("[data-reum-apply]");
   if (applyForms.length) {
-    var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"];
+    var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
     var utm = {};
     try {
       var params = new URLSearchParams(window.location.search);
@@ -516,13 +545,13 @@
       /* 유입 맥락 — 접수 내역에 "어느 페이지·어느 경로로 들어온 문의인지"를 함께 남긴다.
          GA4 를 열지 않고도 문의 한 건의 출처를 읽을 수 있게 하는 것이 목적이다.
          개인정보·검색어는 담지 않는다 — 경로, 페이지 분류, 유입 도메인까지만. */
-      var ctx = { path: location.pathname, pageType: CTX.page_type || "", referrer: "(직접 유입)" };
-      try {
-        if (document.referrer) {
-          var r = new URL(document.referrer);
-          ctx.referrer = r.host === location.host ? "(사이트 내부)" : r.host;
-        }
-      } catch (e) {}
+      var ctx = {
+        path: location.pathname,
+        pageType: CTX.page_type || "",
+        referrer: ACQ.referrer || "(직접 유입)",
+        firstLanding: ACQ.source_page,
+        leadSource: ACQ.lead_source
+      };
       form.querySelectorAll("[data-ctx]").forEach(function (input) {
         var k = input.getAttribute("data-ctx");
         if (ctx[k]) input.value = ctx[k];

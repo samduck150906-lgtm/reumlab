@@ -38,7 +38,7 @@
 ### 2. 네이버 서치어드바이저 (별도 생태계)
 - [서치어드바이저](https://searchadvisor.naver.com) → 사이트 등록 → 소유확인(메타태그 이미 삽입됨: `naver-site-verification`).
 - **사이트맵 제출** `https://reumlab.com/sitemap.xml` → **웹 페이지 수집** 수동 요청.
-- **[IndexNow 등록](https://searchadvisor.naver.com/indexnow)** — 키 파일 이미 존재(`/reumlab2026indexnow9370.txt`). 등록하면 배포 시 자동 색인 요청이 네이버에 전달된다.
+- **[IndexNow 등록](https://searchadvisor.naver.com/indexnow)** — 키 파일 이미 존재(`/67cc4ff3436125d6a5eb18de9bb63dd0.txt`). 등록하면 배포 시 자동 색인 요청이 네이버에 전달된다.
 - 네이버는 **웹문서만으로는 상위가 어렵다.** C-Rank/D.I.A. 특성상 **네이버 블로그 + 스마트플레이스** 활동이 지역·브랜드 노출의 핵심 축이다(아래 4번).
 
 ### 3. 브랜드 엔티티 강화 (authority의 토대)
