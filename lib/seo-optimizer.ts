@@ -133,7 +133,7 @@ export class SEOOptimizer {
       address: {
         '@type': 'PostalAddress',
         streetAddress: '동탄첨단산업1로 58, 307호(영천동)',
-        addressLocality: '화성시',
+        addressLocality: '화성시 동탄구',
         addressRegion: '경기도',
         postalCode: '18469',
         addressCountry: 'KR',

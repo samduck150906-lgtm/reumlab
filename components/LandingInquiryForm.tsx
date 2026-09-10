@@ -6,13 +6,13 @@ import { EVENT, leadSourceOf, pageContext, pageTypeOf, serviceOf, pushEvent } fr
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
  * - 필드·폼 이름을 홈과 동일하게 유지해 접수 내역·이메일 알림이 한곳에 모입니다.
- * - 제출은 fetch로 "/" 에 x-www-form-urlencoded POST → 페이지 이동 없이 완료 메시지.
+ * - 제출은 감지용 정적 스켈레톤 "/__forms.html"에 x-www-form-urlencoded POST → 페이지 이동 없이 완료 메시지.
  * - 추적: inquiry_form_start / inquiry_form_submit(+ form_submit_success, fbq Lead).
  * - /l/ 페이지는 Tailwind 기반이라 홈 af-* 대신 Tailwind로 스타일링합니다.
  */
 
 const FORM_NAME = 'main-apply';
-const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
 
 const SERVICE_TYPES = [
   '웹 MVP / 홈페이지',
@@ -129,7 +129,7 @@ export default function LandingInquiryForm({
     const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
     setStatus('submitting');
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,

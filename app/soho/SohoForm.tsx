@@ -10,7 +10,7 @@ import { EVENT, leadSourceOf, pageContext, pushEvent } from '@/lib/analytics';
  *  - Resend·서버 없이 Netlify Forms로 접수합니다.
  *  - 정적 export(out/soho/index.html)에 form 마크업이 그대로 들어가므로
  *    Netlify가 배포 시 폼(name="soho-diagnosis")을 자동 인식합니다.
- *  - 제출은 fetch로 "/"에 application/x-www-form-urlencoded POST → 페이지 이동 없이
+ *  - 제출은 감지용 정적 스켈레톤 "/__forms.html"에 application/x-www-form-urlencoded POST → 페이지 이동 없이
  *    인라인 완료 메시지를 보여줍니다. (honeypot: bot-field)
  *  - 접수 알림은 Netlify 대시보드 → Forms → 알림(이메일) 설정으로 받습니다.
  *    자세한 설정은 NETLIFY_FORMS.md 참고.
@@ -36,7 +36,7 @@ const DIAGNOSE_CHECKLIST = [
 ];
 
 /** 광고 유입 추적용 — 폼 제출에 함께 담아 어떤 캠페인에서 온 신청인지 남깁니다. */
-const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
@@ -111,7 +111,7 @@ export default function SohoForm() {
 
     setStatus('submitting');
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,

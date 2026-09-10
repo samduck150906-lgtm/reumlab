@@ -13,6 +13,7 @@
  *   6. 중복 발화 — 한 번의 성공에서 같은 이벤트가 두 번 나가지 않는가
  *   7. PII — 이벤트 파라미터 이름에 개인정보성 키가 섞이지 않았는가
  *   8. 페이지 컨텍스트 — 정적 문서가 page_type 을 선언하는가
+ *   9. Netlify Forms — 정적 감지 스키마와 모든 동일 이름 폼의 필드가 일치하고 제출이 그 스켈레톤을 향하는가
  *
  * 한계: 정적 검사다. 실제 브라우저에서 무엇이 전송되는지까지 보장하지 못한다.
  *       개인정보 미전송을 이 스크립트만으로 "보장"한다고 말할 수 없다.
@@ -193,6 +194,56 @@ for (const f of ['index.html', 'erp/index.html', 'mvp/index.html', 'website/inde
   }
 }
 
+// ─── 9. Netlify Forms 정적 감지 스키마·제출 엔드포인트
+let formSchemaIssues = 0;
+const skeletonPath = 'public/__forms.html';
+if (!existsSync(skeletonPath)) {
+  formSchemaIssues++;
+  add(fail, 'forms', `Netlify 감지용 정적 폼 없음: ${skeletonPath}`);
+} else {
+  const skeleton = read(skeletonPath);
+  for (const formName of ['main-apply', 'soho-diagnosis']) {
+    const form = skeleton.match(new RegExp(`<form[^>]+name=["']${formName}["'][\\s\\S]*?<\\/form>`, 'i'))?.[0] || '';
+    if (!form) {
+      formSchemaIssues++;
+      add(fail, 'forms', `${skeletonPath}: ${formName} 폼을 찾을 수 없음`);
+      continue;
+    }
+    for (const field of ['최초_유입_페이지', '유입_채널']) {
+      if (!new RegExp(`name=["']${field}["']`).test(form)) {
+        formSchemaIssues++;
+        add(fail, 'forms', `${skeletonPath}: ${formName} 스키마에 ${field} 필드 없음`);
+      }
+    }
+  }
+}
+for (const f of FORM_SOURCES) {
+  if (!existsSync(f)) continue;
+  if (!/fetch\(\s*["']\/__forms\.html["']/.test(stripComments(read(f)))) {
+    formSchemaIssues++;
+    add(fail, 'forms', `${f}: Netlify 감지 스켈레톤(/__forms.html)으로 제출하지 않음`);
+  }
+}
+
+// 같은 `main-apply` 이름을 쓰는 페이지가 많다. Netlify 배포 파서가 먼저 본 축약형
+// 스키마를 채택할 수 있으므로 모든 변형에 필드명이 빠짐없이 있어야 한다.
+const requiredMainFields = [
+  '유입_랜딩', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid',
+  '유입_경로', '페이지_유형', '관심_서비스축', '유입_출처', '최초_유입_페이지', '유입_채널',
+  '이름', '휴대폰번호', '이메일', '서비스유형', '핵심기능', '예상예산', '희망일정', '참고서비스', '개인정보동의',
+];
+for (const p of pages) {
+  const forms = [...p.html.matchAll(/<form[^>]+name=["']main-apply["'][\s\S]*?<\/form>/gi)];
+  for (const match of forms) {
+    for (const field of requiredMainFields) {
+      if (!new RegExp(`name=["']${field}["']`).test(match[0])) {
+        formSchemaIssues++;
+        add(fail, 'forms', `${p.pathname}: main-apply 스키마에 ${field} 필드 없음`);
+      }
+    }
+  }
+}
+
 // ─── 참고 집계
 const withForm = indexed.filter((p) => /data-netlify="true"/.test(p.html)).length;
 const tagged = indexed.filter((p) => /data-(analytics|cta)=/.test(p.html)).length;
@@ -204,6 +255,7 @@ console.log(`UTM        내부 링크 UTM ${internalUtm}`);
 console.log(`전환       성공 이전 발화 ${badOrder} · 중복 발화 ${dupFire}`);
 console.log(`PII        이벤트 전송부 개인정보 필드명 ${piiHits}`);
 console.log(`컨텍스트   page_type 미선언 정적 문서 ${noCtx}`);
+console.log(`Forms      정적 스키마·제출 엔드포인트 문제 ${formSchemaIssues}`);
 console.log('───────────────────────────────────────────');
 if (warn.length) {
   console.log(`⚠ 경고 ${warn.length}건`);

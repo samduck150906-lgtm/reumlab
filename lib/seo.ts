@@ -41,7 +41,7 @@ export const SITE = {
   phone: '010-8111-9370',
   /** tel: 링크용 (하이픈 제거) */
   phoneHref: 'tel:01081119370',
-  address: '경기도 화성시 동탄첨단산업1로 58, 307호(영천동)',
+  address: '경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동)',
   email: 'ceo@eternalsix.com',
   /**
    * 구조화 데이터(PostalAddress)용 주소 분해 — 위 `address` 문자열과 같은 사업장 하나다.
@@ -51,7 +51,7 @@ export const SITE = {
    */
   addressParts: {
     streetAddress: '동탄첨단산업1로 58, 307호',
-    addressLocality: '화성시',
+    addressLocality: '화성시 동탄구',
     addressRegion: '경기도',
     postalCode: '18469',
     addressCountry: 'KR',

@@ -602,8 +602,15 @@ function contactSection(land) {
           <form class="af-form" name="main-apply" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" data-reum-apply>
             <input type="hidden" name="form-name" value="main-apply" />
             <p class="af-hp" aria-hidden="true"><label>이 칸은 비워두세요 <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
-            <input type="hidden" name="유입_랜딩" value="${esc(land.slug)}" />
+            <input type="hidden" name="유입_랜딩" value="/${esc(land.slug)}/" data-ctx="firstLanding" />
             <input type="hidden" name="utm_source" data-utm="utm_source" /><input type="hidden" name="utm_medium" data-utm="utm_medium" /><input type="hidden" name="utm_campaign" data-utm="utm_campaign" /><input type="hidden" name="utm_content" data-utm="utm_content" /><input type="hidden" name="utm_term" data-utm="utm_term" /><input type="hidden" name="fbclid" data-utm="fbclid" />
+            <input type="hidden" name="유입_경로" data-ctx="path" />
+            <input type="hidden" name="페이지_유형" data-ctx="pageType" />
+            <input type="hidden" name="관심_서비스축" data-ctx="service" />
+            <input type="hidden" name="유입_출처" data-ctx="referrer" />
+            <input type="hidden" name="최초_유입_페이지" data-ctx="firstLanding" />
+            <input type="hidden" name="유입_채널" data-ctx="leadSource" />
+            <input type="hidden" name="참고서비스" value="" />
             <div class="af-row">
               <div class="af-field"><label class="af-label" for="af-name">이름 또는 업체명 <span class="af-req">*</span></label><input id="af-name" class="af-input" name="이름" type="text" placeholder="예: 홍길동 / 름랩" required autocomplete="name" /></div>
               <div class="af-field"><label class="af-label" for="af-phone">연락처 <span class="af-req">*</span></label><input id="af-phone" class="af-input" name="휴대폰번호" type="tel" inputmode="numeric" placeholder="010-1234-5678" required autocomplete="tel" /></div>
@@ -655,7 +662,7 @@ ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).joi
       </div>
       <div>
         <h4>사업자 정보</h4>
-        <ul class="footer__info"><li><span>대표자</span>성아름</li><li><span>사업자등록</span>793-12-03247</li><li><span>주소</span>경기도 화성시 동탄첨단산업1로 58, 307호(영천동)</li><li><span>영업시간</span>평일 10:00–18:00</li></ul>
+        <ul class="footer__info"><li><span>대표자</span>성아름</li><li><span>사업자등록</span>793-12-03247</li><li><span>주소</span>경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동)</li><li><span>영업시간</span>평일 10:00–18:00</li></ul>
       </div>
       <div>
         <h4>상담 · 문의</h4>
@@ -698,7 +705,7 @@ const SAME_AS = [
 const POSTAL_ADDRESS = {
   '@type': 'PostalAddress',
   streetAddress: '동탄첨단산업1로 58, 307호',
-  addressLocality: '화성시',
+  addressLocality: '화성시 동탄구',
   addressRegion: '경기도',
   postalCode: '18469',
   addressCountry: 'KR',

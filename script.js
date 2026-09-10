@@ -527,7 +527,7 @@
      ============================================================ */
   var applyForms = document.querySelectorAll("[data-reum-apply]");
   if (applyForms.length) {
-    var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+    var UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"];
     var utm = {};
     try {
       var params = new URLSearchParams(window.location.search);
@@ -548,6 +548,7 @@
       var ctx = {
         path: location.pathname,
         pageType: CTX.page_type || "",
+        service: CTX.service || "",
         referrer: ACQ.referrer || "(직접 유입)",
         firstLanding: ACQ.source_page,
         leadSource: ACQ.lead_source
@@ -571,7 +572,8 @@
         if (btn) { btn.disabled = true; btn.textContent = "요청 중…"; }
 
         var body = new URLSearchParams(new FormData(form)).toString();
-        fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+        // Netlify가 감지한 정적 폼 스켈레톤으로 보내야 필드 스키마 검증을 확실히 통과한다.
+        fetch("/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
           .then(function (res) {
             if (!res.ok) throw new Error("status " + res.status);
             var card = form.closest(".af-card");
