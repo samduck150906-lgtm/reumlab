@@ -143,9 +143,9 @@ export interface PageSeo {
 export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   // ─── 메인 (에이전시 정체성) ───
   '': {
-    title: '름랩 REUMLAB | Flutter 앱개발, 랜딩페이지 제작, MVP 외주개발 — 동탄·수원 개발 스튜디오',
+    title: '름랩 REUMLAB | 앱·웹·AI MVP 개발 스튜디오',
     description:
-      '화성 동탄 외주개발 스튜디오 름랩. Flutter 앱개발·MVP 개발·랜딩페이지 제작·홈페이지 제작·AI 기능 개발. 동탄·수원·화성 등 경기 남부와 전국 진행. 소스코드 전체 이관 + 직접 운영 1:1 교육 포함. 웹 98만 원부터, 앱 580만 원부터(VAT 포함 정액).',
+      '앱·웹·AI MVP를 기획부터 개발·배포까지 제작합니다. 소스코드와 운영 권한까지 이관하며 전국 비대면 상담이 가능합니다.',
     keywords: [
       '외주개발',
       '앱개발 외주',
@@ -161,9 +161,9 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
       '소스코드 이관',
       '스타트업 MVP',
     ],
-    ogTitle: '외주 맡긴 앱, 다시는 외주에 묶이지 않게. | 름랩 REUMLAB',
+    ogTitle: '름랩 REUMLAB | 앱·웹·AI MVP 개발 스튜디오',
     ogDescription:
-      '앱·웹 MVP 개발 + AI 직접 운영 교육. Flutter 앱·웹 MVP를 빠르게 만들고 소스코드·권한을 통째로 넘깁니다.',
+      '앱·웹·AI MVP를 기획부터 개발·배포까지 제작합니다. 소스코드와 운영 권한까지 이관하며 전국 비대면 상담이 가능합니다.',
     h1: '외주 맡긴 앱, 다시는 외주에 묶이지 않게',
     primary: '앱개발 외주',
     secondary: ['웹개발 외주', 'MVP 개발', '동탄 앱개발', '수원 외주개발'],
