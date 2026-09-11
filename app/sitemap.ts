@@ -240,7 +240,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (decision && !decision.inSitemap) continue;
     out.push({
       url: guideCanonical(g.slug),
-      lastModified: new Date(g.publishedAt),
+      // 실질 수정일이 있는 글은 발행일로 고정하지 않는다. Article.dateModified와
+      // sitemap lastmod가 같아야 IndexNow 변경분에도 수정된 가이드가 포함된다.
+      lastModified: new Date(g.updatedAt || g.publishedAt),
       changeFrequency: 'monthly',
       priority: 0.72,
     });
