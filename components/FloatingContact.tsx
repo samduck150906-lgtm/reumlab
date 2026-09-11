@@ -74,12 +74,13 @@ export default function FloatingContact() {
           padding: '0 20px',
           borderRadius: 999,
           border: 'none',
-          background: '#3d7cff',
+          // 흰 글자와 4.5:1 이상 대비를 확보한다(기존 #3d7cff는 3.8:1).
+          background: '#245fc7',
           color: '#fff',
           fontSize: 15,
           fontWeight: 700,
           cursor: 'pointer',
-          boxShadow: '0 8px 24px rgba(61,124,255,.4)',
+          boxShadow: '0 8px 24px rgba(36,95,199,.4)',
         }}
       >
         {open ? '✕ 닫기' : '💬 빠른 상담'}
