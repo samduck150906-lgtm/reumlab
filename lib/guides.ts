@@ -31,6 +31,13 @@ export interface GuideTable {
   rows: string[][];
 }
 
+export interface GuideSource {
+  title: string;
+  url: string;
+  publisher?: string;
+  note?: string;
+}
+
 export interface GuideDef {
   slug: string;
   title: string;
@@ -39,6 +46,8 @@ export interface GuideDef {
   keywords: string[];
   tag: string;
   intro: string;
+  /** 검색·AI 답변이 문맥 없이도 가져갈 수 있는 직접 답변. */
+  answer?: string;
   /**
    * 핵심 요약 — 본문을 읽지 않아도 결론을 가져갈 수 있는 3~5줄.
    * 본문에 없는 주장을 여기에만 적으면 안 된다(내용이 정확히 일치해야 한다).
@@ -52,6 +61,15 @@ export interface GuideDef {
   publishedAt: string;
   /** 실제로 내용을 고친 날짜만 적는다. 빌드마다 오늘로 갱신하지 않는다. */
   updatedAt?: string;
+  /** 공개된 값과 판단 절차를 어떻게 확인했는지 적는다. */
+  methodology?: string[];
+  /** 가격·기간·적용 범위의 한계를 명시해 과도한 일반화를 막는다. */
+  limitations?: string;
+  /** 내부 원문과 독립된 공식 문서를 함께 연결한다. */
+  sources?: GuideSource[];
+  /** 사람이 출처와 본문을 마지막으로 대조한 날짜. */
+  reviewedAt?: string;
+  revisionNote?: string;
 }
 
 /** 섹션 앵커 — 명시 ID 우선, 없으면 순서 기반(문구를 바꿔도 안 깨진다) */
@@ -70,12 +88,30 @@ export const GUIDES: GuideDef[] = [
     tag: 'Cost Guide',
     intro:
       '"앱개발 비용 얼마예요?"라는 질문에 정해진 답이 없는 이유는, 비용이 기능 범위에 따라 결정되기 때문입니다. 같은 "예약 앱"이라도 화면 수와 연동에 따라 비용은 몇 배까지 차이 납니다. 아래 네 가지 항목을 보면 견적이 어떻게 만들어지는지 이해할 수 있습니다.',
+    answer:
+      '름랩의 공개 앱 패키지는 VAT 포함 앱 라이트 580만 원부터 시작하며, 회원·결제·기본 관리자 범위의 앱 스탠다드는 980만 원입니다. 이 금액은 시장 평균이 아니라 름랩의 기준 패키지입니다. 사용자 역할, 상태·예외 흐름, 관리자 범위, 외부 연동이 늘어나면 상위 패키지나 별도 범위 산정이 필요합니다.',
+    summary: [
+      '공개 기준가는 앱 라이트 580만 원, 앱 스탠다드 980만 원, 앱 AI 1,380만 원, 앱 프리미엄 1,980만 원입니다(VAT 포함).',
+      '화면 개수만이 아니라 사용자 역할·상태·예외 처리의 수가 개발 범위를 좌우합니다.',
+      '결제·지도·본인인증·기존 시스템 연동에는 외부 계약과 심사 일정이 붙을 수 있습니다.',
+      '아래 금액과 기간은 기준 패키지이며, 최종 범위는 요구사항 확인 후 확정합니다.',
+    ],
     sections: [
-      { h: '1. 화면 수 — 가장 직접적인 비용 요인', body: '앱은 화면 단위로 설계·개발됩니다. 로그인, 목록, 상세, 결제, 마이페이지처럼 화면이 늘수록 디자인·개발·테스트 공수가 비례해 늘어납니다. MVP에서 화면을 줄이는 것이 비용을 줄이는 가장 확실한 방법입니다.' },
+      { h: '1. 화면 수와 상태 흐름', body: '로그인, 목록, 상세, 결제, 마이페이지처럼 화면이 늘면 설계·개발·테스트 범위도 늘어납니다. 다만 화면 수만으로 견적을 정할 수는 없습니다. 같은 화면에서도 사용자 역할, 승인·취소·반려 같은 상태와 예외 흐름이 많아지면 구현과 검수 범위가 커집니다.' },
       { h: '2. 기능 복잡도 — 결제·실시간·연동', body: '결제(PG), 실시간 채팅, 지도, 푸시 알림, 정산처럼 외부 시스템이 얽히는 기능은 단순 화면보다 공수가 큽니다. 특히 정기결제·실시간·정산은 심사·테스트가 더해져 비용이 올라갑니다.' },
       { h: '3. 관리자 페이지 — 보이지 않는 절반', body: '사용자 앱 뒤에는 상품·주문·회원·콘텐츠를 관리하는 관리자 페이지가 필요합니다. 겉으로 드러나지 않지만 개발 공수의 상당 부분을 차지합니다. MVP에서는 관리자 기능도 핵심만 추리는 것이 좋습니다.' },
       { h: '4. 외부 연동 — 결제·지도·SNS·기존 시스템', body: 'PG, 지도, 본인인증, SNS 로그인, 기존 ERP/CRM 연동 등은 각각 계약·심사·테스트가 필요합니다. 연동이 많을수록 비용과 기간이 늘어나므로, 꼭 필요한 연동부터 우선순위를 정합니다.' },
     ],
+    table: {
+      caption: '름랩 공개 앱 패키지 기준 — 시장 평균이나 확정 견적이 아닌 범위 비교표',
+      head: ['패키지', 'VAT 포함 기준가', '기준 기간', '포함 범위 예시', '별도 확인이 필요한 범위'],
+      rows: [
+        ['앱 라이트', '580만 원', '약 14일', '핵심 화면 3~5개, 기본 데이터, 문의·예약 흐름', '결제·회원·고도화 관리자'],
+        ['앱 스탠다드', '980만 원', '약 21일', '회원·로그인, DB, 결제 또는 예약, 기본 관리자', 'AI 기능·대규모 외부 연동'],
+        ['앱 AI', '1,380만 원', '약 30일', '스탠다드 범위와 AI 기능 1개, 업무 자동화 상담', 'API 사용료·고난도 AI 범위'],
+        ['앱 프리미엄', '1,980만 원', '약 45일', '다기능 앱, AI 고도화, 복수 외부 연동', '대규모 트래픽·전용 인프라'],
+      ],
+    },
     faqs: [
       { q: '앱개발 비용을 줄이는 가장 좋은 방법은?', a: '화면 수와 기능을 핵심만 남기는 MVP 방식이 가장 효과적입니다. 모든 기능을 한 번에 만들기보다, 검증에 필요한 기능부터 출시하고 반응을 본 뒤 확장하면 초기 비용과 리스크를 동시에 줄일 수 있습니다.' },
       { q: '름랩의 앱 개발 비용은 얼마인가요?', a: 'Flutter 앱 MVP는 핵심 화면 중심 앱 라이트 580만 원부터, 회원·결제·관리자까지 갖춘 앱 스탠다드는 980만 원입니다(VAT 포함 정액). 화면 수·기능·연동에 따라 범위를 조정하며, 가격을 선공개해 숨은 비용이 없도록 안내합니다.' },
@@ -87,6 +123,22 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-06-22',
+    updatedAt: '2026-09-11',
+    methodology: [
+      '가격과 기준 기간은 름랩 사이트에 공개된 VAT 포함 패키지 표와 대조했습니다.',
+      '단순 화면 수가 아니라 역할·상태·관리자·외부 연동을 포함 범위 기준으로 비교했습니다.',
+      '스토어 심사와 제3자 서비스 승인은 개발사가 보장할 수 없는 외부 일정으로 분리했습니다.',
+    ],
+    limitations:
+      '표의 금액과 기간은 름랩의 공개 기준 패키지이며 업계 평균이나 모든 프로젝트의 확정 견적이 아닙니다. 앱스토어 심사, 제3자 API·PG 이용료, 대규모 트래픽용 인프라, 범위 밖 기능은 별도 확인이 필요합니다.',
+    sources: [
+      { title: '름랩 서비스 패키지와 공개 가격', url: 'https://reumlab.com/#pricing', publisher: '름랩', note: '가격·기간의 1차 기준' },
+      { title: '름랩 개발 사례', url: 'https://reumlab.com/portfolio/', publisher: '름랩', note: '공개 가능한 구현 범위 확인' },
+      { title: 'App Review Guidelines', url: 'https://developer.apple.com/app-store/review/guidelines/', publisher: 'Apple', note: '앱 심사 조건 참고' },
+      { title: 'Developer Program Policy', url: 'https://play.google.com/about/developer-content-policy/', publisher: 'Google Play', note: '배포 정책 참고' },
+    ],
+    reviewedAt: '2026-09-11',
+    revisionNote: '공개 패키지 표를 추가하고, 비용 산정 기준·외부 심사 변수·확정 견적과의 차이를 명시했습니다.',
   },
   {
     slug: 'outsourcing-cost',
@@ -127,6 +179,14 @@ export const GUIDES: GuideDef[] = [
     tag: 'Cost Guide',
     intro:
       'MVP는 "최소 기능 제품"이지만, 무엇을 최소로 볼지에 따라 비용이 크게 달라집니다. 검증 목표를 분명히 하고 기능을 핵심만 남기면, 같은 아이디어도 훨씬 적은 예산으로 시장에 내놓을 수 있습니다.',
+    answer:
+      '름랩 공개 기준에서 웹 중심 MVP는 380만 원, 앱 MVP는 580만 원부터입니다(VAT 포함). 회원·결제·기본 관리자가 필요하면 앱 스탠다드 980만 원 범위를 먼저 비교할 수 있습니다. 이는 시장 평균이 아니라 름랩의 기준 패키지이며, 검증할 가설과 필수 사용자 흐름을 확정한 뒤 최종 범위가 정해집니다.',
+    summary: [
+      'MVP 비용은 기능 개수보다 검증할 가설과 필수 사용자 흐름으로 정합니다.',
+      '웹 중심 MVP 380만 원, 앱 라이트 580만 원부터가 름랩의 공개 기준입니다(VAT 포함).',
+      '로그인·결제·관리자·AI가 필요할 때는 해당 범위가 포함된 패키지와 비교해야 합니다.',
+      '공개 패키지는 출발점이며 최종 견적은 요구사항과 외부 연동 조건을 확인한 뒤 확정합니다.',
+    ],
     sections: [
       { h: 'MVP 비용은 "범위"가 결정한다', body: 'MVP 비용의 핵심 변수는 기능 범위입니다. "있으면 좋은" 기능을 덜어내고, 가설을 검증하는 데 꼭 필요한 흐름 하나에 집중하면 비용이 줄고 출시도 빨라집니다.' },
       { h: '검증 목표부터 정한다', body: '“사용자가 이 기능에 돈을 낼까?”처럼 검증할 질문을 먼저 정하면, 그 질문에 답하는 데 필요한 기능만 남길 수 있습니다. 목표가 흐리면 기능이 늘고 비용이 따라 늘어납니다.' },
@@ -134,6 +194,17 @@ export const GUIDES: GuideDef[] = [
       { h: 'MVP 비용 구간 예시 (패키지 기준)', body: '름랩 정액 기준으로 보면, 웹 중심 MVP는 웹 비즈니스(380만 원·약 14일), 앱 MVP는 핵심 화면 중심 앱 라이트(580만 원·약 14일), 회원·결제·관리자까지 갖춘 앱 스탠다드(980만 원·약 21일)에 매핑됩니다. AI·정산 등 고도화가 필요하면 앱 AI(1,380만 원)~앱 프리미엄(1,980만 원·약 30~45일) 구간입니다. 검증 목표에 맞는 최소 구간부터 시작하는 것이 핵심입니다.' },
       { h: '비용을 조용히 늘리는 함정', body: '초기 비용을 낮춰도 이후에 비용이 새는 지점이 있습니다. 범위를 문서로 확정하지 않아 "이것도 되는 줄" 요청이 반복되는 경우, 결제·정산처럼 심사·테스트가 붙는 기능을 MVP에 무리하게 넣는 경우, 그리고 소스코드를 못 받아 작은 수정마다 비용을 내는 경우입니다. 세 가지를 계약 단계에서 막으면 MVP 예산을 지킬 수 있습니다.' },
     ],
+    table: {
+      caption: '름랩 공개 패키지를 MVP 범위별로 비교한 기준표',
+      head: ['검증 범위', '비교 패키지', 'VAT 포함 기준가', '기준 기간'],
+      rows: [
+        ['웹 중심 검증', '웹 비즈니스', '380만 원', '약 14일'],
+        ['핵심 앱 흐름', '앱 라이트', '580만 원', '약 14일'],
+        ['회원·결제·기본 관리자', '앱 스탠다드', '980만 원', '약 21일'],
+        ['AI 기능 포함', '앱 AI', '1,380만 원', '약 30일'],
+        ['다기능·복수 연동', '앱 프리미엄', '1,980만 원', '약 45일'],
+      ],
+    },
     faqs: [
       { q: 'MVP 개발 비용은 얼마나 드나요?', a: '름랩 MVP 패키지는 VAT 포함 580만 원부터 시작합니다. 검증에 필요한 핵심 기능 범위에 따라 조정하며, 범위를 나눠 비용을 합리적으로 맞춥니다.' },
       { q: 'MVP를 너무 작게 만들면 검증이 안 되지 않나요?', a: '핵심 가설을 검증할 수 있는 최소 흐름은 반드시 포함합니다. "작게"의 기준은 기능 개수가 아니라 검증 목표이며, 그 목표에 필요한 기능은 빠뜨리지 않습니다.' },
@@ -148,6 +219,22 @@ export const GUIDES: GuideDef[] = [
       { href: '/guide/app-cost', label: '앱개발 비용 결정 구조' },
     ],
     publishedAt: '2026-06-22',
+    updatedAt: '2026-09-11',
+    methodology: [
+      '공개 가격표의 패키지를 검증 범위별로 다시 배열해 비교했습니다.',
+      'MVP를 기능 수가 아니라 한 가지 가설을 검증하는 필수 흐름으로 정의했습니다.',
+      '앱 배포 심사는 플랫폼 정책에 따른 외부 변수로 분리해 기간 보장 범위에 포함하지 않았습니다.',
+    ],
+    limitations:
+      '이 표는 름랩의 공개 기준 패키지 비교이며 시장 평균이나 확정 견적이 아닙니다. 결제·본인인증·외부 시스템의 계약과 심사, API 사용료, 범위 변경은 별도 일정과 비용이 생길 수 있습니다.',
+    sources: [
+      { title: '름랩 서비스 패키지와 공개 가격', url: 'https://reumlab.com/#pricing', publisher: '름랩', note: '가격·기간의 1차 기준' },
+      { title: 'MVP 개발 서비스 범위', url: 'https://reumlab.com/mvp/', publisher: '름랩', note: '검증 범위 정의' },
+      { title: 'App Review Guidelines', url: 'https://developer.apple.com/app-store/review/guidelines/', publisher: 'Apple', note: '출시 심사 조건 참고' },
+      { title: 'Developer Program Policy', url: 'https://play.google.com/about/developer-content-policy/', publisher: 'Google Play', note: '배포 정책 참고' },
+    ],
+    reviewedAt: '2026-09-11',
+    revisionNote: 'MVP 범위별 공개 가격표와 산정 방법, 확정 견적에 포함되지 않는 외부 변수를 추가했습니다.',
   },
   {
     slug: 'web-cost',
@@ -1406,6 +1493,8 @@ export const GUIDES: GuideDef[] = [
     tag: 'Checklist',
     intro:
       '외주 개발에서 문제가 생기는 지점은 대부분 "말로만 정한 것"입니다. 아래 15개는 계약 전에 문서로 남겨 두면 이후 논의가 크게 줄어드는 항목이고, 어느 개발사에 맡기든 그대로 쓸 수 있습니다. 항목마다 왜 필요한지와 준비가 없을 때 무엇이 늦어지는지를 함께 적었습니다.',
+    answer:
+      '외주 개발 계약 전에는 핵심 사용자와 필수 기능, 역할·승인 흐름, 관리자 범위, 외부 연동, 소스코드와 계정 소유권, 검수·유지보수·범위 변경 절차를 문서로 확인해야 합니다. 15개를 모두 준비할 필요는 없지만, 최소한 핵심 사용자·필수 기능·소유권·추가 비용 절차는 견적서와 계약서에 남기는 편이 안전합니다.',
     summary: [
       '기획서보다 중요한 것은 "핵심 사용자 한 명이 무엇을 하러 오는가"입니다.',
       '화면 수보다 사용자 역할 수와 관리자 승인 흐름이 범위를 더 크게 좌우합니다.',
@@ -1532,6 +1621,22 @@ export const GUIDES: GuideDef[] = [
       { href: '/source-handover', label: '소스코드 이관 범위 확인하기' },
     ],
     publishedAt: '2026-08-10',
+    updatedAt: '2026-09-11',
+    methodology: [
+      '견적 범위, 계정 소유권, 인수인계와 배포 심사를 서로 다른 확인 단계로 나눴습니다.',
+      '름랩의 공개 이관 원칙과 플랫폼 운영사의 공식 문서를 대조했습니다.',
+      '실패율·분쟁률·평균 비용처럼 공개 근거가 없는 수치는 사용하지 않았습니다.',
+    ],
+    limitations:
+      '이 체크리스트는 일반적인 범위 확인 도구이며 법률 자문이나 개별 계약서 검토를 대신하지 않습니다. 계정 이전 가능 여부와 앱 심사 조건은 저장소·플랫폼·계정 상태에 따라 달라질 수 있습니다.',
+    sources: [
+      { title: '름랩 소스코드·계정 이관 원칙', url: 'https://reumlab.com/source-handover/', publisher: '름랩', note: '름랩 계약 범위의 1차 기준' },
+      { title: 'Transferring a repository', url: 'https://docs.github.com/en/repositories/creating-and-managing-repositories/transferring-a-repository', publisher: 'GitHub Docs', note: '저장소 이전 조건 참고' },
+      { title: 'App Review Guidelines', url: 'https://developer.apple.com/app-store/review/guidelines/', publisher: 'Apple', note: '앱 심사 조건 참고' },
+      { title: 'Developer Program Policy', url: 'https://play.google.com/about/developer-content-policy/', publisher: 'Google Play', note: '배포 정책 참고' },
+    ],
+    reviewedAt: '2026-09-11',
+    revisionNote: '15개 항목의 적용 범위와 한계를 밝히고 저장소 이전·앱 심사 공식 문서를 연결했습니다.',
   },
   {
     slug: 'mvp-priority',
@@ -2188,14 +2293,21 @@ export function guideDecision(slug: string): IndexDecision | null {
   const guide = getGuide(slug);
   if (!guide) return null;
   const others = GUIDES.filter((g) => g.slug !== guide.slug);
+  const externalSources = (guide.sources || []).filter(
+    (source) => !source.url.startsWith(SITE.domain),
+  ).length;
   return decideFromContent({
     title: guide.title,
     description: guide.description,
     h1: guide.h1,
     bodyParts: [
       guide.intro,
+      guide.answer || '',
+      ...(guide.summary || []),
       ...guide.sections.map((s) => `${s.h} ${s.body}`),
       ...guide.faqs.map((f) => f.a),
+      ...(guide.methodology || []),
+      guide.limitations || '',
     ],
     faqQuestions: guide.faqs.map((f) => f.q),
     // 브레드크럼 2 + related 내부링크
@@ -2204,5 +2316,20 @@ export function guideDecision(slug: string): IndexDecision | null {
     peerFingerprints: others.map((g) =>
       fingerprint(`${g.intro} ${g.sections.map((s) => s.body).join(' ')}`),
     ),
+    evidence:
+      guide.sources || guide.methodology || guide.limitations
+        ? {
+            firstPartyEvidence: (guide.sources || []).some((source) =>
+              source.url.startsWith(SITE.domain),
+            )
+              ? 'verified'
+              : 'partial',
+            independentSources: externalSources,
+            hasMethodology: Boolean(guide.methodology?.length),
+            hasLimitations: Boolean(guide.limitations),
+            reviewedAt: guide.reviewedAt,
+            hasOriginalMedia: false,
+          }
+        : undefined,
   });
 }

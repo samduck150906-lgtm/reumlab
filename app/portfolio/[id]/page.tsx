@@ -15,7 +15,7 @@ import {
   portfolioDescription,
   PORTFOLIO_HUB,
 } from '@/lib/portfolio';
-import { BreadcrumbJsonLdTrail, HOME_CRUMB } from '@/components/JsonLd';
+import { PortfolioCreativeWorkJsonLd, HOME_CRUMB } from '@/components/JsonLd';
 
 /*
   개발 사례 상세.
@@ -23,9 +23,9 @@ import { BreadcrumbJsonLdTrail, HOME_CRUMB } from '@/components/JsonLd';
   섹션 구성은 홈 모달(script.js buildModal)과 같은 항목·같은 순서를 쓴다.
   화면에 보이는 내용과 크롤러가 읽는 내용이 달라지면 안 되고, 두 곳의 설명이 어긋나도 안 된다.
 
-  구조화 데이터는 BreadcrumbList 만 낸다.
-   · Article/CreativeWork — datePublished·dateModified 로 쓸 실제 날짜가 원본 데이터에 없다.
-     날짜를 지어내면서까지 스키마를 늘릴 이유가 없다.
+  구조화 데이터는 CreativeWork + BreadcrumbList 를 낸다.
+   · CreativeWork 는 날짜가 필수 속성이 아니므로 공개된 제목·설명·범위만 쓴다.
+     datePublished·dateModified 는 원본에 없으므로 만들지 않는다.
    · Review·AggregateRating — 검증 가능한 리뷰 시스템이 없으므로 절대 넣지 않는다.
    · Organization/ProfessionalService — 루트 layout 의 SiteEntityJsonLd 가 이미 내고 있다.
 */
@@ -68,8 +68,14 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
 
   return (
     <main className="pfd">
-      <BreadcrumbJsonLdTrail
-        items={[HOME_CRUMB, { name: '개발 사례', url: PORTFOLIO_HUB }, { name: p.title, url }]}
+      <PortfolioCreativeWorkJsonLd
+        name={`${p.title} 개발 사례`}
+        description={portfolioDescription(p)}
+        url={url}
+        categories={cats.map((c) => CATEGORIES[c].full)}
+        technologies={p.detail.tech}
+        deliverables={p.detail.deliverables}
+        crumbs={[HOME_CRUMB, { name: '개발 사례', url: PORTFOLIO_HUB }, { name: p.title, url }]}
       />
 
       <nav className="pfd-crumb" aria-label="breadcrumb">
@@ -175,6 +181,14 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
         고객사 요청에 따라 실제 프로젝트명·고객사·서비스 URL은 비공개 처리했습니다. 위 내용은 름랩이
         직접 설계하고 구현한 범위입니다.
       </p>
+
+      <section className="pfd-sec pfd-proof">
+        <h2>검증 범위와 공개 한계</h2>
+        <p>
+          이 페이지는 름랩의 단일 사례 데이터에서 문제, 서비스 구조, 기능, 기술, 납품 산출물을 불러와
+          표시합니다. 원본에 없는 고객명·서비스 URL·수행 날짜·성과 수치는 추정해 추가하지 않았습니다.
+        </p>
+      </section>
 
       {/* §15 사례 → 서비스 역링크 */}
       <section className="pfd-services">

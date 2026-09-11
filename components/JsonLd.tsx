@@ -91,6 +91,45 @@ export function BreadcrumbJsonLdTrail({ items, pageUrl }: { items: Crumb[]; page
   return <LdScript data={breadcrumbNode(items, pageUrl)} />;
 }
 
+/** 개발 사례 — 공개된 프로젝트 필드만 쓰는 CreativeWork + BreadcrumbList. */
+export function PortfolioCreativeWorkJsonLd({
+  name,
+  description,
+  url,
+  categories,
+  technologies,
+  deliverables,
+  crumbs,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  categories: string[];
+  technologies: string[];
+  deliverables: string[];
+  crumbs: Crumb[];
+}) {
+  return (
+    <LdGraph
+      graph={[
+        {
+          '@type': 'CreativeWork',
+          '@id': `${url}#case-study`,
+          name,
+          description,
+          url,
+          creator: { '@id': SCHEMA_ID.organization },
+          about: categories,
+          keywords: technologies.join(', '),
+          hasPart: deliverables.map((item) => ({ '@type': 'CreativeWork', name: item })),
+          inLanguage: 'ko-KR',
+        },
+        breadcrumbNode(crumbs, url),
+      ]}
+    />
+  );
+}
+
 export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
   return (
     <LdScript
@@ -255,6 +294,7 @@ export function GuideArticleJsonLd({
   keywords,
   faqs,
   crumbs,
+  citations,
 }: {
   title: string;
   description: string;
@@ -265,6 +305,7 @@ export function GuideArticleJsonLd({
   keywords: string[];
   faqs?: FaqItem[];
   crumbs: Crumb[];
+  citations?: { title: string; url: string }[];
 }) {
   const graph: Record<string, unknown>[] = [
     {
@@ -282,6 +323,9 @@ export function GuideArticleJsonLd({
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       keywords: keywords.join(', '),
       inLanguage: 'ko-KR',
+      ...(citations && citations.length > 0
+        ? { citation: citations.map((source) => source.url) }
+        : {}),
     },
     breadcrumbNode(crumbs, url),
   ];

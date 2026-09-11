@@ -63,6 +63,7 @@ export default function GuidePage({ params }: Props) {
         keywords={guide.keywords}
         faqs={guide.faqs}
         crumbs={crumbs}
+        citations={guide.sources}
       />
       <main>
         <article className="dynamic-page">
@@ -92,7 +93,19 @@ export default function GuidePage({ params }: Props) {
                   <time dateTime={guide.updatedAt}>{guide.updatedAt} 수정</time>
                 </>
               )}
+              {guide.reviewedAt && (
+                <>
+                  <span aria-hidden="true"> · </span>
+                  <time dateTime={guide.reviewedAt}>{guide.reviewedAt} 마지막 검수</time>
+                </>
+              )}
             </p>
+            {guide.answer && (
+              <aside className="guide-answer" aria-label="한눈에 보는 답">
+                <h2 id="answer" style={{ scrollMarginTop: 80 }}>한눈에 보는 답</h2>
+                <p>{guide.answer}</p>
+              </aside>
+            )}
             <p className="hub-intro">{guide.intro}</p>
 
             {guide.summary && guide.summary.length > 0 && (
@@ -171,6 +184,40 @@ export default function GuidePage({ params }: Props) {
                   </tbody>
                 </table>
               </div>
+            )}
+
+            {guide.methodology && guide.methodology.length > 0 && (
+              <section className="guide-methodology" aria-labelledby="methodology">
+                <h2 id="methodology" style={{ scrollMarginTop: 80 }}>판단 기준과 적용 범위</h2>
+                <ol>
+                  {guide.methodology.map((item) => <li key={item}>{item}</li>)}
+                </ol>
+                {guide.limitations && <p><strong>한계:</strong> {guide.limitations}</p>}
+                {guide.revisionNote && <p><strong>이번 수정:</strong> {guide.revisionNote}</p>}
+              </section>
+            )}
+
+            {guide.sources && guide.sources.length > 0 && (
+              <section className="guide-sources" aria-labelledby="sources">
+                <h2 id="sources" style={{ scrollMarginTop: 80 }}>근거와 참고 자료</h2>
+                <ol>
+                  {guide.sources.map((source) => {
+                    const external = !source.url.startsWith(SITE.domain);
+                    return (
+                      <li key={source.url}>
+                        <a
+                          href={source.url}
+                          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                        >
+                          {source.title}
+                        </a>
+                        {source.publisher && <> — {source.publisher}</>}
+                        {source.note && <> · {source.note}</>}
+                      </li>
+                    );
+                  })}
+                </ol>
+              </section>
             )}
           </div>
 

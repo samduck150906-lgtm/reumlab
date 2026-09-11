@@ -63,7 +63,7 @@ export default function FloatingContact() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        aria-label={open ? '상담 메뉴 닫기' : '상담 메뉴 열기'}
+        aria-label={open ? '✕ 닫기 — 상담 메뉴 닫기' : '💬 빠른 상담 — 상담 메뉴 열기'}
         aria-expanded={open}
         data-analytics="float_toggle"
         style={{

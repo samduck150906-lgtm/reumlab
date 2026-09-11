@@ -295,7 +295,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
 
   // ─── 영문 서비스 URL (구글 광고 랜딩 + 영문 검색) ───
   'app-development': {
-    title: 'App Development Outsourcing Korea | Flutter MVP | REUMLAB',
+    title: 'App Development Outsourcing Korea | Flutter MVP | 름랩 REUMLAB',
     description:
       'Flutter app development studio in Korea. iOS + Android in one codebase, MVP in ~21 days, full source code handover. From ₩5,800,000 VAT incl.',
     keywords: [
@@ -342,7 +342,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   'web-development': {
-    title: 'Web Development & Landing Page Korea | REUMLAB',
+    title: 'Web Development & Landing Page Korea | 름랩 REUMLAB',
     description:
       'Custom website and landing page development in Korea. SEO-ready, source code included, no monthly fees. From ₩980,000 VAT incl. Hwaseong (Dongtan) studio.',
     keywords: [
@@ -389,7 +389,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   'mvp-development': {
-    title: 'MVP Development Korea | 3-Week Launch | REUMLAB',
+    title: 'MVP Development Korea | 3-Week Launch | 름랩 REUMLAB',
     description:
       'Startup MVP development in Korea. Flutter cross-platform, 3-week turnaround, full source handover. Validate your idea before scaling. From ₩5,800,000.',
     keywords: [
@@ -422,7 +422,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
   },
 
   'flutter-development': {
-    title: 'Flutter App Development Studio Korea | REUMLAB',
+    title: 'Flutter App Development Studio Korea | 름랩 REUMLAB',
     description:
       'Flutter specialist studio in Hwaseong (Dongtan), Korea. One codebase for iOS and Android instead of two. Full source handover + operation training.',
     keywords: [

@@ -203,6 +203,11 @@ for (const p of content) {
 // ─── 7-b. 인용 구조 (14단계) — 앵커 안정성·표·출처·날짜
 let brokenAnchor = 0, noAnchor = 0, imgTable = 0;
 const guides = byPrefix('/guide/');
+const evidencePriorityGuides = new Set([
+  '/guide/app-cost/',
+  '/guide/mvp-cost/',
+  '/guide/outsourcing-checklist/',
+]);
 for (const p of guides) {
   const ids = new Set([...p.html.matchAll(/<h[1-6][^>]*\sid="([^"]+)"/g)].map((m) => m[1]));
   // 페이지 안의 #앵커 링크가 실제 heading 을 가리키는가 (목차·인용 링크가 죽으면 안 된다)
@@ -224,6 +229,18 @@ for (const p of guides) {
   if (/<img[^>]+alt="[^"]*(비교|표|차트)[^"]*"/.test(p.html) && !/<table/.test(p.html)) {
     imgTable++;
     add(fail, 'citation', `표를 이미지로만 제공(검색엔진·스크린리더가 못 읽음): ${p.pathname}`);
+  }
+  if (evidencePriorityGuides.has(p.pathname)) {
+    for (const [signal, pattern] of [
+      ['직접 답변', /guide-answer/],
+      ['판단 방법', /guide-methodology/],
+      ['공개 한계', /<strong>한계:<\/strong>/],
+      ['출처 목록', /guide-sources/],
+      ['마지막 검수일', /마지막 검수/],
+      ['Article citation', /"citation":\[/],
+    ]) {
+      if (!pattern.test(p.html)) add(fail, 'evidence', `${signal} 없음: ${p.pathname}`);
+    }
   }
 }
 

@@ -42,6 +42,35 @@ export interface IndexSignals {
    * 본문 토큰 Jaccard 유사도가 0.7 이상이면 중복으로 간주해 감점.
    */
   peerFingerprints?: Set<string>[];
+  /**
+   * 글자 수와 FAQ 수로는 검증할 수 없는 근거 품질. 선택값인 이유는 기존 URL을
+   * 콘솔 데이터 없이 일괄 noindex 하지 않기 위해서다. 새 콘텐츠와 우선 보강
+   * 콘텐츠는 이 값을 명시하고, 미입력 페이지는 별도 근거 감사 대상으로 남긴다.
+   */
+  evidence?: EvidenceSignals;
+}
+
+export type FirstPartyEvidence = 'verified' | 'partial' | 'none';
+
+export interface EvidenceSignals {
+  /** 실제 공개 가격·납품 범위·사례처럼 름랩이 직접 확인할 수 있는 근거 */
+  firstPartyEvidence: FirstPartyEvidence;
+  /** 주장 가까이에 연결한 독립적인 공식·1차 출처 수 */
+  independentSources: number;
+  /** 어떻게 판단하거나 산정했는지 화면에 공개했는가 */
+  hasMethodology: boolean;
+  /** 적용되지 않는 경우와 예외를 화면에 공개했는가 */
+  hasLimitations: boolean;
+  /** 실제 사람이 마지막으로 검수한 날짜(YYYY-MM-DD) */
+  reviewedAt?: string;
+  /** 페이지 고유 화면·도표·영상처럼 재사용 배너가 아닌 원본 시각 자료 */
+  hasOriginalMedia?: boolean;
+}
+
+export interface EvidenceReview {
+  score: number;
+  verdict: 'verified' | 'review' | 'insufficient';
+  reasons: string[];
 }
 
 export interface IndexDecision {
@@ -53,6 +82,43 @@ export interface IndexDecision {
   inSitemap: boolean;
   /** 감점/탈락 사유 (운영자 검수용) */
   reasons: string[];
+  /** 색인 판정과 분리된 근거 품질. 값이 없으면 아직 근거 감사를 하지 않은 페이지다. */
+  evidenceReview?: EvidenceReview;
+}
+
+/**
+ * 근거 품질은 검색 순위 점수가 아니다. 편집자가 "인용할 이유가 있는가"를 빠뜨리지
+ * 않게 하는 출판 검수표다. 이 결과만으로 기존 URL을 자동 noindex 하지 않는다.
+ */
+export function reviewEvidence(evidence: EvidenceSignals): EvidenceReview {
+  const reasons: string[] = [];
+  let score = 0;
+
+  if (evidence.firstPartyEvidence === 'verified') score += 35;
+  else if (evidence.firstPartyEvidence === 'partial') {
+    score += 18;
+    reasons.push('1차 근거가 일부만 검증됨');
+  } else reasons.push('검증된 1차 근거 없음');
+
+  const sourceCount = Math.max(0, Math.floor(evidence.independentSources));
+  score += Math.min(sourceCount, 2) * 10;
+  if (sourceCount === 0) reasons.push('독립 공식 출처 없음');
+
+  if (evidence.hasMethodology) score += 15;
+  else reasons.push('판단·산정 방법 미공개');
+
+  if (evidence.hasLimitations) score += 10;
+  else reasons.push('한계·예외 미공개');
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(evidence.reviewedAt || '')) score += 10;
+  else reasons.push('검수일 없음');
+
+  if (evidence.hasOriginalMedia) score += 10;
+  else reasons.push('페이지 고유 시각 자료 없음');
+
+  score = Math.max(0, Math.min(100, score));
+  const verdict: EvidenceReview['verdict'] = score >= 70 ? 'verified' : score >= 40 ? 'review' : 'insufficient';
+  return { score, verdict, reasons };
 }
 
 const STOPWORDS = new Set([
@@ -156,6 +222,7 @@ export function scoreIndexability(s: IndexSignals): IndexDecision {
     shouldIndex: verdict === 'index',
     inSitemap: verdict === 'index',
     reasons,
+    ...(s.evidence ? { evidenceReview: reviewEvidence(s.evidence) } : {}),
   };
 }
 
@@ -195,6 +262,7 @@ export function decideFromContent(input: {
   hasUniqueMedia?: boolean;
   hasLocalAccessInfo?: boolean;
   peerFingerprints?: Set<string>[];
+  evidence?: EvidenceSignals;
 }): IndexDecision {
   // FAQ 질문도 화면에 실제 렌더되는 고유 본문이므로 분량 측정에 포함한다
   // (FAQ 개수 채점과는 별개 — 여기서는 길이에만 기여).
@@ -211,6 +279,7 @@ export function decideFromContent(input: {
     hasLocalAccessInfo: input.hasLocalAccessInfo,
     hasUniqueMedia: input.hasUniqueMedia ?? false,
     peerFingerprints: input.peerFingerprints,
+    evidence: input.evidence,
   });
 }
 

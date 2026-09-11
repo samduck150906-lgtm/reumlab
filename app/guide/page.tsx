@@ -107,6 +107,15 @@ export default function GuideHubPage() {
             </div>
           </div>
 
+          <section className="section-inner" style={{ paddingTop: 8 }} aria-labelledby="editorial-policy">
+            <h2 id="editorial-policy" className="section-title" style={{ fontSize: '1.15rem' }}>작성·검수 원칙</h2>
+            <p className="hub-intro">
+              가격과 기간은 름랩이 공개한 패키지 원문을 기준으로 쓰고, 외부 정책은 운영사의 공식 문서를
+              연결합니다. 근거가 없는 시장 평균·성공률·성과 수치는 만들지 않으며, 실제로 본문이나 출처를
+              고친 날만 수정일로 표시합니다. 정정이 필요하면 <a href={`mailto:${SITE.email}`}>{SITE.email}</a>로 알려 주세요.
+            </p>
+          </section>
+
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>가이드 ({GUIDE_LIST.length})</h2>
             <div className="link-grid">

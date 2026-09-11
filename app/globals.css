@@ -23,7 +23,8 @@
   --beige-warm: #c8b899;
   --text: #1a2e20;
   --text-sub: #4a6050;
-  --text-dim: #7a9080;
+  /* #7a9080은 크림 배경에서 3.03:1이라 작은 메타·푸터 텍스트가 WCAG AA에 미달했다. */
+  --text-dim: #596e5e;
   --text-light: #eaf2ec;
   --text-light-sub: rgba(234, 242, 236, 0.7);
   --border: rgba(58, 140, 92, 0.1);
@@ -1852,7 +1853,11 @@ a {
   font-size: 0.9rem;
   color: var(--text-dim);
 }
-.breadcrumb a { color: var(--green); }
+.breadcrumb a {
+  color: var(--green-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
 .link-grid a { display: block; padding: 14px 18px; min-height: 48px; background: var(--bg-card); border-radius: var(--radius-sm); border: 1px solid var(--border); color: var(--text-sub); font-size: .95rem; }
 .link-grid a:hover { border-color: var(--green); color: var(--green); }
@@ -1863,7 +1868,7 @@ a {
 /* 랜딩/허브 맞춤형 섹션 스타일 */
 .hero-desc { font-size: 1.05rem; color: var(--text-sub); line-height: 1.75; margin: 20px 0 28px; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.section-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); margin-bottom: 12px; }
+.section-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green-deep); margin-bottom: 12px; }
 .section-title { font-size: 1.5rem; font-weight: 700; color: var(--bg-dark); margin-bottom: 20px; line-height: 1.35; }
 .pricing-guide { padding: 48px 0; background: var(--bg-warm); }
 .pricing-guide .section-inner { max-width: 800px; }
@@ -1985,6 +1990,40 @@ a {
   line-height: 1.85;
   color: var(--text-sub);
 }
+
+.guide-answer {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--green-dim);
+  border: 1px solid color-mix(in srgb, var(--green) 32%, var(--border));
+}
+.guide-answer h2,
+.guide-methodology h2,
+.guide-sources h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: var(--green-deep);
+}
+.guide-answer p,
+.guide-methodology p,
+.guide-methodology li,
+.guide-sources li {
+  color: var(--text-sub);
+  font-size: 14.5px;
+  line-height: 1.8;
+}
+.guide-answer p { margin: 0; font-weight: 550; }
+.guide-methodology,
+.guide-sources {
+  margin: 28px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.guide-methodology ol,
+.guide-sources ol { margin: 0 0 12px; padding-left: 1.25em; }
+.guide-methodology p { margin: 8px 0 0; }
+.guide-sources a { color: var(--green-deep); text-decoration: underline; text-underline-offset: 3px; }
 
 .guide-toc {
   margin: 22px 0 8px;

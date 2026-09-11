@@ -15,6 +15,8 @@ const home = PAGE_SEO_MAP[''];
 const googleVer = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 /** 네이버 서치어드바이저 사이트 소유 확인 */
 const NAVER_SITE_VERIFICATION = '651783cd19f26e41ad3c77876597082cd6ec823e';
+const FONT_STYLES =
+  'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -84,10 +86,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
            · Plus Jakarta Sans 400~800 — 본문·제목 전반에서 5개 weight 모두 사용.
            · Noto Sans KR 400~800 — 한글 본문·제목. weight 를 줄이면 합성 볼드가 생겨 유지.
         */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
+        {/* 폰트 CSS가 텍스트 LCP를 막지 않게 preload 후 비동기로 적용한다. */}
+        <link rel="preload" as="style" href={FONT_STYLES} />
+        <link id="reumlab-fonts" href={FONT_STYLES} rel="stylesheet" media="print" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var l=document.getElementById('reumlab-fonts');if(!l)return;var show=function(){l.media='all'};if(l.sheet){show()}else{l.addEventListener('load',show,{once:true})}})();",
+          }}
         />
+        <noscript><link href={FONT_STYLES} rel="stylesheet" /></noscript>
         <meta name="theme-color" content="#0f1f3a" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link
