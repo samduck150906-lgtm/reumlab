@@ -29,11 +29,13 @@
 - 프리뷰 Lighthouse 최초 측정: Performance 71, Accessibility 93, Best Practices 77, SEO 69
 - 프리뷰 SEO 점수는 Netlify draft의 `noindex` 때문에 낮아진 값이며 production 판정으로 사용하지 않음
 - 최초 Lighthouse가 잡은 색상 대비, 색상만으로 구분한 링크, 빠른 상담 버튼의 label/name 불일치는 코드에서 수정함
-- 수정 후 localhost 재측정은 Chrome DevTools protocol timeout으로 완료하지 못해 production 배포 후 다시 측정해야 함
+- 최종 프로덕션 모바일 Lighthouse: Performance 73, Accessibility 100, Best Practices 77, SEO 100
+- 최종 실험실 지표: FCP 4.1초, LCP 4.1초, TBT 220ms, CLS 0
+- Performance는 변동 가능한 단일 실험실 실행이며 LCP 목표 통과를 뜻하지 않음. 외부 분석 스크립트와 공통 CSS/JS를 포함한 후속 성능 작업이 필요함
 - 실사용자 CWV는 GSC field data가 필요하며 OWNER_INPUT_REQUIRED로 분리함
 
 ## 알려진 경고
 
 - 홈에서 클릭 깊이 6 이상인 색인 URL 109개, 최대 12
 - `인계동` 문맥 문자열 9개는 실제 지점 주장이 아닌지 수동 확인 필요
-- 모바일 성능의 주요 실험실 병목은 Google Fonts 렌더 차단, 미사용 공통 CSS/JS, 프리뷰 문서 응답 지연임
+- 모바일 성능의 남은 주요 실험실 병목은 미사용 공통 CSS/JS, 제3자 분석 스크립트, 네트워크·문서 응답 지연임
