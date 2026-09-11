@@ -22,6 +22,14 @@ const RELATED_BLOG: { match: RegExp; slug: string; title: string }[] = [
   { match: /suwon|수원|app-development|app-agency|앱개발|앱-개발|app-gaebal|mvp|source-handover|소스코드|이관/, slug: 'suwon-app-gaebal-upche', title: '수원 앱개발 업체 고르는 법' },
 ];
 
+// 공개 가능한 실제 화면은 름랩 자체 CMS 데모뿐이다. 고객 프로젝트 화면처럼 보이지
+// 않도록 웹·관리자 운영 범위가 직접 관련된 서비스에서만 보여 준다. 이 제한은 동시에
+// 앱·AI 서비스 첫 화면이 불필요한 영상 metadata와 이미지 섹션을 받는 것도 막는다.
+const ADMIN_DEMO_SERVICES = new Set([
+  'website', 'web-development', 'website-agency', 'admin-page-development', 'erp',
+  'academy-shopping-mall', 'realestate-landing', 'renewal',
+]);
+
 export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSlug?: string }) {
   const related = pageSlug
     ? RELATED_BLOG.find((r) => r.match.test(pageSlug))
@@ -41,6 +49,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
         blog: getBlogPostBySlug,
       })
     : [];
+  const showAdminDemo = pageSlug ? ADMIN_DEMO_SERVICES.has(pageSlug) : false;
   return (
     <>
       {seo.faqs && seo.faqs.length > 0 ? <FAQPageJsonLd items={seo.faqs} /> : null}
@@ -75,7 +84,8 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
         </div>
       </section>
 
-      {/* 직접 운영 세팅 + 데모 영상 (테마 독립 네이비 밴드) */}
+      {showAdminDemo ? (
+      /* 직접 운영 세팅 + 공개 가능한 자체 CMS 데모 (테마 독립 네이비 밴드) */
       <section style={{ background: '#0f1f3a', padding: '64px 0' }}>
         <div className="container" style={{ maxWidth: 980 }}>
           <div style={{ textAlign: 'center', marginBottom: 28 }}>
@@ -99,11 +109,11 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               <video
                 className="cms-demo-video"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                autoPlay
+                controls
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="none"
                 poster="/assets/images/cms-promo-poster.jpg"
                 aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
               >
@@ -111,7 +121,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
               </video>
             </div>
             <figcaption style={{ marginTop: 12, fontSize: 13, color: 'rgba(255,255,255,0.6)', textAlign: 'center' }}>
-              실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
+              름랩 자체 CMS의 공개 가능한 실제 데모 화면입니다. 고객사 사례 화면이나 성과 수치를 대신하지 않습니다.
             </figcaption>
           </figure>
           <div style={{ marginTop: 36 }}>
@@ -151,6 +161,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           </div>
         </div>
       </section>
+      ) : null}
 
       <section className="sec sec-warm">
         <div className="container" style={{ maxWidth: 800 }}>

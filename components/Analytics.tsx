@@ -10,23 +10,31 @@ export function Analytics() {
   // 컨테이너 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WHLMP8ZD';
   // GA4 측정 ID — 환경변수(NEXT_PUBLIC_GA4_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
-  // 주의: GTM 컨테이너에도 GA4를 넣으면 이중 집계되므로, GA4는 여기(gtag.js) 또는 GTM 중 한 곳에서만 로드하세요.
+  // GTM-WHLMP8ZD 공개 컨테이너에서 이 ID가 확인되므로 GTM이 켜져 있으면 직접 gtag.js를
+  // 로드하지 않는다. 두 로더를 함께 쓰면 페이지뷰가 중복되고 메인 스레드도 불필요하게 쓴다.
   const ga4Id = process.env.NEXT_PUBLIC_GA4_ID || 'G-YWXT6T2Y3S';
+  const directGa4Id = gtmId ? '' : ga4Id;
   // 메타 픽셀 ID — 환경변수(NEXT_PUBLIC_META_PIXEL_ID)로 덮어쓸 수 있고, 없으면 기본값 사용.
   // 픽셀 ID는 비밀이 아니며 페이지 소스에 그대로 노출되므로 코드에 둬도 안전합니다.
   const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || '1019901144020877';
 
+  const googleLoader = gtmId
+    ? `w.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});var g=d.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtm.js?id=${gtmId}';d.head.appendChild(g);`
+    : directGa4Id
+      ? `w.gtag=function(){w.dataLayer.push(arguments)};w.gtag('js',new Date());w.gtag('config','${directGa4Id}');var g=d.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=${directGa4Id}';d.head.appendChild(g);`
+      : '';
+  const metaQueue = metaPixelId
+    ? `(function(f){if(f.fbq)return;var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];})(window);`
+    : '';
+  const metaLoader = metaPixelId
+    ? `var m=d.createElement('script');m.async=true;m.src='https://connect.facebook.net/en_US/fbevents.js';d.head.appendChild(m);w.fbq('init','${metaPixelId}');w.fbq('track','PageView');`
+    : '';
+  const delayedLoader = `window.dataLayer=window.dataLayer||[];${metaQueue}
+(function(w,d){var loaded=false;function load(){if(loaded)return;loaded=true;${googleLoader}${metaLoader}}function schedule(){w.setTimeout(function(){if('requestIdleCallback'in w)w.requestIdleCallback(load,{timeout:2000});else load();},8000);}if(d.readyState==='complete')schedule();else w.addEventListener('load',schedule,{once:true});['pointerdown','keydown','touchstart'].forEach(function(e){w.addEventListener(e,load,{once:true,passive:true});});})(window,document);`;
+
   return (
     <>
-      {gtmId ? (
-        <Script id="gtm-base" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','${gtmId}');`}
-        </Script>
-      ) : null}
+      <Script id="analytics-loader" strategy="afterInteractive">{delayedLoader}</Script>
       {gtmId ? (
         <noscript>
           <iframe
@@ -38,52 +46,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
       ) : null}
-      {ga4Id ? (
-        <>
-          <Script
-            id="ga4-src"
-            strategy="afterInteractive"
-            src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}
-          />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${ga4Id}');`}
-          </Script>
-        </>
-      ) : null}
       {metaPixelId ? (
-        <>
-          <Script id="meta-pixel" strategy="afterInteractive">
-            {`!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '${metaPixelId}');
-fbq('track', 'PageView');`}
-          </Script>
-          <noscript>
-            {/*
-              JS 비활성 사용자용 추적 픽셀. loading="lazy" 가 반드시 필요하다 —
-              없으면 ReactDOM 이 이 <img> 를 보고 <link rel="preload" as="image"> 를
-              자동 생성해, 정작 쓰이지도 않는 1x1 픽셀이 첫 화면 리소스와 우선순위를 다툰다.
-            */}
-            <img
-              height="1"
-              width="1"
-              alt=""
-              loading="lazy"
-              decoding="async"
-              style={{ display: 'none' }}
-              src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
-            />
-          </noscript>
-        </>
+        <noscript>
+          {/* loading="lazy"가 없으면 ReactDOM이 1x1 픽셀을 첫 화면 이미지로 preload한다. */}
+          <img
+            height="1"
+            width="1"
+            alt=""
+            loading="lazy"
+            decoding="async"
+            style={{ display: 'none' }}
+            src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
+          />
+        </noscript>
       ) : null}
     </>
   );

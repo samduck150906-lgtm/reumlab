@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import './globals.css';
-import './reum-sales.css';
 import Nav from '../components/Nav';
 import { Analytics } from '../components/Analytics';
 import { AnalyticsDataLayer } from '../components/AnalyticsDataLayer';
@@ -15,8 +14,6 @@ const home = PAGE_SEO_MAP[''];
 const googleVer = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 /** 네이버 서치어드바이저 사이트 소유 확인 */
 const NAVER_SITE_VERIFICATION = '651783cd19f26e41ad3c77876597082cd6ec823e';
-const FONT_STYLES =
-  'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
@@ -72,30 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/*
-          전역 웹폰트 — 실제로 쓰는 것만 받는다.
-          LCP 요소가 히어로 이미지가 아니라 H1 텍스트라서, 이 요청이 곧 LCP 임계 경로다.
-
-          제외한 것
-           · Outfit — app/soho/soho.css 에서만, 그것도 weight 800 하나만 쓴다.
-             1,400여 페이지가 쓰지도 않는 패밀리 6 weight 를 받고 있었다 → /soho/ 로 옮김.
-           · JetBrains Mono 500 — CSS 어디에서도 쓰지 않는다(.mono 계열은 400·600만).
-          남긴 것
-           · Plus Jakarta Sans 400~800 — 본문·제목 전반에서 5개 weight 모두 사용.
-           · Noto Sans KR 400~800 — 한글 본문·제목. weight 를 줄이면 합성 볼드가 생겨 유지.
-        */}
-        {/* 폰트 CSS가 텍스트 LCP를 막지 않게 preload 후 비동기로 적용한다. */}
-        <link rel="preload" as="style" href={FONT_STYLES} />
-        <link id="reumlab-fonts" href={FONT_STYLES} rel="stylesheet" media="print" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "(function(){var l=document.getElementById('reumlab-fonts');if(!l)return;var show=function(){l.media='all'};if(l.sheet){show()}else{l.addEventListener('load',show,{once:true})}})();",
-          }}
-        />
-        <noscript><link href={FONT_STYLES} rel="stylesheet" /></noscript>
+        {/* 텍스트가 LCP 요소이므로 외부 웹폰트 요청 없이 OS 한글 시스템 글꼴을 쓴다. */}
         <meta name="theme-color" content="#0f1f3a" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link

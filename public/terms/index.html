@@ -3,22 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WHLMP8ZD');</script>
-<!-- End Google Tag Manager -->
-<!-- Google tag (gtag.js) - GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YWXT6T2Y3S"></script>
+<!-- GTM 컨테이너에 GA4가 포함되어 있으므로 별도 gtag.js 없이 idle 시 한 번만 로드한다. -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YWXT6T2Y3S');
+window.dataLayer=window.dataLayer||[];
+(function(w,d){var loaded=false;function load(){if(loaded)return;loaded=true;w.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});var g=d.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtm.js?id=GTM-WHLMP8ZD';d.head.appendChild(g);}function schedule(){w.setTimeout(function(){if('requestIdleCallback'in w)w.requestIdleCallback(load,{timeout:2000});else load();},8000);}if(d.readyState==='complete')schedule();else w.addEventListener('load',schedule,{once:true});['pointerdown','keydown','touchstart'].forEach(function(e){w.addEventListener(e,load,{once:true,passive:true});});})(window,document);
 </script>
-<!-- End Google tag (gtag.js) -->
 <title>이용약관 | 름랩 REUMLAB</title>
 <meta name="description" content="름랩(REUMLAB) 웹사이트와 개발 서비스 이용에 적용되는 약관입니다. 계약 성립, 이용자·회사의 의무, 책임 범위를 안내합니다.">
 <link rel="canonical" href="https://reumlab.com/terms/">
@@ -36,9 +25,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:title" content="이용약관 | 름랩 REUMLAB">
 <meta name="twitter:description" content="름랩(REUMLAB) 웹사이트와 개발 서비스 이용에 적용되는 약관입니다. 계약 성립, 이용자·회사의 의무, 책임 범위를 안내합니다.">
 <meta name="twitter:image" content="https://reumlab.com/og-image.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f4f1e8;--bg-dark:#162b1e;--green:#3a8c5c;--text:#1a2e20;--text-sub:#4a6050;--text-dim:#7a9080;--border:rgba(58,140,92,.12);--grad:linear-gradient(135deg,#3a8c5c,#5aad7a)}
 *{margin:0;padding:0;box-sizing:border-box}

@@ -2,14 +2,14 @@
 
 기준일: 2026-09-11
 
-다음 항목은 저장소만으로 확인하거나 만들어낼 수 없으므로 소유자 입력이 필요합니다. 값이 오기 전까지 URL 삭제·대량 noindex·성과 주장에는 사용하지 않습니다.
+GSC URL 성과와 네이버 TOP 30은 확보했습니다. 다음 항목은 현재 계정·저장소만으로 확인하거나 만들어낼 수 없으므로 소유자 입력이 필요합니다. 값이 오기 전까지 URL 삭제·대량 noindex·성과 주장에는 사용하지 않습니다.
 
-## 검색·분석 원본
+## 남은 검색·분석 원본
 
-- Google Search Console: 페이지/쿼리 16개월 CSV, Page Indexing, 선택 canonical, Core Web Vitals export
-- Bing Webmaster Tools: Search Performance, AI Performance, sitemap·IndexNow 상태 export
-- 네이버 Search Advisor: 콘텐츠 노출/클릭, 수집·색인, 사이트 진단 화면 또는 export
-- GA4: landing page + source/medium + campaign + conversion export
+- Google Search Console: IMPROVE URL별 페이지 필터 쿼리, URL Inspection의 Google 선택 canonical·색인 상태, Core Web Vitals export
+- Bing Webmaster Tools: 데이터 처리 완료 후 Search Performance URL export와 AI Performance URL export
+- GA4: reumlab 속성 접근권한 또는 landing page + source/medium + campaign + conversion export
+- Netlify Forms: landing/referrer/source/medium/UTM/서버 성공 시각 export
 - 백링크 도구 export가 있다면 연결 도메인·대상 URL·앵커 포함 파일
 
 ## 1차 근거
@@ -19,6 +19,8 @@
 - 작성·검수 책임자의 실명/경력/전문 분야를 공개할지 여부
 - 고객 리뷰를 인용할 경우 원문, 작성자 공개 범위, 사용 허가
 - 지역별 실제 방문·업무·사례가 있다면 확인 가능한 사실; 없다면 지역 고유 주장 금지
+
+현재 저장소에서 공개 범위를 확인할 수 있는 화면은 름랩 자체 CMS 데모 3장과 운영 가이드 예시뿐입니다. 이를 관련 웹·관리자 서비스에만 연결하며 고객 프로젝트 결과로 표시하지 않습니다.
 
 ## 외부 프로필
 
@@ -34,7 +36,8 @@
 
 | 입력 | 필요한 이유 | 적용 페이지 |
 |---|---|---|
-| GSC·Bing·네이버 URL/쿼리 export | 실제 수요·쿼리 중복·선택 canonical·인용 여부 판정 | 색인 URL 777개 전체 |
+| GSC 페이지 필터 쿼리·선택 canonical·CWV | 실제 쿼리 중복과 Google canonical·현장 성능 판정 | IMPROVE URL과 핵심 템플릿 |
+| Bing 처리 완료 후 URL/AI export | Bing 검색 수요·Copilot 인용 여부 판정 | 색인 URL 전체 |
 | GA4·Netlify 성공 문의 export | organic/AI 유입과 서버 성공 리드 연결 | CTA 페이지 및 문의 폼 17개 |
 | 프로젝트별 기간·결과·공개 동의 | 허위 수치 없이 사례의 결과와 한계 보강 | /portfolio/ 및 사례 15개 |
 | 공개 가능한 작성·검수자 역할·경력 | 개인 저자 엔터티를 사실 기반으로 연결 | 가이드 45개, 블로그 10개 |

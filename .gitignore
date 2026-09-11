@@ -16,3 +16,7 @@ public/feed.xml
 
 # Generated output files (marketing campaigns, reports)
 .output/
+
+# Search Console / Analytics exports contain private business telemetry.
+# The report generator reads this local folder but never publishes raw rows.
+docs/seo-aeo/private/

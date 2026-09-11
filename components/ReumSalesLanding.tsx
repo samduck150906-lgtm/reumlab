@@ -694,11 +694,11 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               >
                 <video
                   className="h-full w-full object-cover"
-                  autoPlay
+                  controls
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   poster="/assets/images/cms-promo-poster.jpg"
                   aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
                 >
@@ -706,7 +706,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 </video>
               </div>
               <figcaption className="mt-3.5 text-center text-sm text-slate-500">
-                실제 운영 관리 화면 — 메뉴별로 정리된 콘텐츠를 직접 수정·게시합니다.
+                름랩 자체 CMS의 공개 가능한 실제 데모 화면입니다. 고객사 사례 화면이나 성과 수치를 대신하지 않습니다.
               </figcaption>
             </figure>
           </div>

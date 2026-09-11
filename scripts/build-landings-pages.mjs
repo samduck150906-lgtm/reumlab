@@ -296,7 +296,7 @@ function landingHtml(landing) {
     })();
   </script>
   ${ANALYTICS.gtm ? `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${escapeHtml(ANALYTICS.gtm)}');</script><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${escapeHtml(ANALYTICS.gtm)}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>` : ''}
-  ${ANALYTICS.ga4 ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${escapeHtml(ANALYTICS.ga4)}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${escapeHtml(ANALYTICS.ga4)}');document.querySelectorAll('[data-cta]').forEach(function(el){el.addEventListener('click',function(){gtag('event','cta_click',{cta:this.getAttribute('data-cta'),page:location.pathname});});});</script>` : ''}
+  ${ANALYTICS.ga4 && !ANALYTICS.gtm ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${escapeHtml(ANALYTICS.ga4)}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${escapeHtml(ANALYTICS.ga4)}');document.querySelectorAll('[data-cta]').forEach(function(el){el.addEventListener('click',function(){gtag('event','cta_click',{cta:this.getAttribute('data-cta'),page:location.pathname});});});</script>` : ''}
 </body>
 </html>`;
 }

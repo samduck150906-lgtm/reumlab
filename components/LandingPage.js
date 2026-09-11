@@ -225,11 +225,11 @@ export default function LandingPage({ slug }) {
               <div className="cms-demo-frame mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-navy-950 shadow-card-hover" style={{ aspectRatio: '1080 / 1350', maxWidth: 408 }}>
                 <video
                   className="cms-demo-video h-full w-full object-cover"
-                  autoPlay
+                  controls
                   muted
                   loop
                   playsInline
-                  preload="metadata"
+                  preload="none"
                   poster="/assets/images/cms-promo-poster.jpg"
                   aria-label="름랩이 세팅해 드리는 콘텐츠 관리 화면 데모 영상"
                 >

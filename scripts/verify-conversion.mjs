@@ -48,7 +48,7 @@ const indexed = pages.filter((p) => !p.noindex);
 // ─── 1. Analytics 중복 설치
 // 주의: Next 의 <Script> 는 preload link 와 RSC 페이로드에도 URL 을 남긴다.
 // 실제 "실행"되는 것만 세려면 <script src=…> 태그와 인라인 초기화만 본다.
-let dupGtm = 0, dupGa = 0, dupPixel = 0;
+let dupGtm = 0, dupGa = 0, dupPixel = 0, gtmWithDirectGa = 0;
 for (const p of indexed) {
   const gtmInit = (p.html.match(/'gtm\.start'/g) || []).length;
   const gaSrc = (p.html.match(/<script[^>]+src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=/g) || []).length;
@@ -57,6 +57,10 @@ for (const p of indexed) {
   if (gtmInit > 1) { dupGtm++; add(fail, 'dup-analytics', `GTM 컨테이너 ${gtmInit}회 초기화: ${p.pathname}`); }
   if (gaSrc > 1 || gaConfig > 1) { dupGa++; add(fail, 'dup-analytics', `GA4 ${Math.max(gaSrc, gaConfig)}회 로드/설정: ${p.pathname}`); }
   if (pixelInit > 1) { dupPixel++; add(fail, 'dup-analytics', `Meta 픽셀 ${pixelInit}회 init: ${p.pathname}`); }
+  if (gtmInit && (gaSrc || gaConfig)) {
+    gtmWithDirectGa++;
+    add(fail, 'dup-analytics', `GTM과 직접 GA4가 함께 설치됨: ${p.pathname}`);
+  }
 }
 
 // ─── 2~3. CTA 존재와 목적지
@@ -249,7 +253,7 @@ const withForm = indexed.filter((p) => /data-netlify="true"/.test(p.html)).lengt
 const tagged = indexed.filter((p) => /data-(analytics|cta)=/.test(p.html)).length;
 
 console.log(`색인 페이지 ${indexed.length} · 문의폼 보유 ${withForm} · CTA 태깅 보유 ${tagged}`);
-console.log(`Analytics  중복 GTM ${dupGtm} · 중복 GA4 ${dupGa} · 중복 픽셀 ${dupPixel}`);
+console.log(`Analytics  중복 GTM ${dupGtm} · 중복 GA4 ${dupGa} · 중복 픽셀 ${dupPixel} · GTM+직접 GA4 ${gtmWithDirectGa}`);
 console.log(`CTA        수단 없는 페이지 ${noCta} · tel 형식 오류 ${badTel} · 목적지 없음 ${brokenCta}`);
 console.log(`UTM        내부 링크 UTM ${internalUtm}`);
 console.log(`전환       성공 이전 발화 ${badOrder} · 중복 발화 ${dupFire}`);

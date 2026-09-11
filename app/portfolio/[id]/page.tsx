@@ -65,6 +65,7 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
   const cats = projectCategories(p);
   const services = relatedServices(p);
   const related = relatedProjects(p);
+  const hasAdminArtifact = cats.some((cat) => cat === 'web' || cat === 'erp');
 
   return (
     <main className="pfd">
@@ -188,6 +189,14 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
           이 페이지는 름랩의 단일 사례 데이터에서 문제, 서비스 구조, 기능, 기술, 납품 산출물을 불러와
           표시합니다. 원본에 없는 고객명·서비스 URL·수행 날짜·성과 수치는 추정해 추가하지 않았습니다.
         </p>
+        {hasAdminArtifact ? (
+          <p>
+            <a href="/assets/admin-guide-example.html" target="_blank" rel="noopener noreferrer">
+              공개 가능한 관리자 운영 가이드 예시 보기 →
+            </a>{' '}
+            이 자료는 름랩 자체 공개 샘플이며 이 고객 프로젝트의 원본 화면이나 성과 자료는 아닙니다.
+          </p>
+        ) : null}
       </section>
 
       {/* §15 사례 → 서비스 역링크 */}

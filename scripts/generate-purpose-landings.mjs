@@ -404,13 +404,13 @@ function shotHTML(type) {
 }
 
 /* ---------------- 공통 조각 ---------------- */
-const TRACKING_HEAD = `<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WHLMP8ZD');</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YWXT6T2Y3S"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-YWXT6T2Y3S');</script>`;
+const TRACKING_HEAD = `<script>
+window.dataLayer=window.dataLayer||[];
+(function(f){if(f.fbq)return;var n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};f._fbq=n;n.push=n;n.loaded=true;n.version='2.0';n.queue=[];})(window);
+(function(w,d){var loaded=false;function load(){if(loaded)return;loaded=true;w.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});var g=d.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtm.js?id=GTM-WHLMP8ZD';d.head.appendChild(g);var m=d.createElement('script');m.async=true;m.src='https://connect.facebook.net/en_US/fbevents.js';d.head.appendChild(m);w.fbq('init','1019901144020877');w.fbq('track','PageView');}function schedule(){w.setTimeout(function(){if('requestIdleCallback'in w)w.requestIdleCallback(load,{timeout:2000});else load();},8000);}if(d.readyState==='complete')schedule();else w.addEventListener('load',schedule,{once:true});['pointerdown','keydown','touchstart'].forEach(function(e){w.addEventListener(e,load,{once:true,passive:true});});})(window,document);
+</script>`;
 
-const PIXEL = `<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1019901144020877');fbq('track','PageView');</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1019901144020877&ev=PageView&noscript=1" alt=""/></noscript>`;
+const PIXEL = `<noscript><img height="1" width="1" loading="lazy" decoding="async" style="display:none" src="https://www.facebook.com/tr?id=1019901144020877&ev=PageView&noscript=1" alt=""/></noscript>`;
 
 const KAKAO_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.477 3 2 6.463 2 10.735c0 2.762 1.84 5.185 4.607 6.55-.152.53-.98 3.4-1.012 3.625 0 0-.02.166.088.23.107.063.234.014.234.014.316-.044 3.67-2.4 4.25-2.812.59.087 1.2.132 1.833.132 5.523 0 10-3.463 10-7.735S17.523 3 12 3z"/></svg>';
 
@@ -971,8 +971,6 @@ ${TRACKING_HEAD}
 <meta property="og:image" content="${DOMAIN}/og-image.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(land.metaTitle)}"><meta name="twitter:description" content="${esc(land.metaDesc)}"><meta name="twitter:image" content="${DOMAIN}/og-image.jpg">
 ${jsonLd(land)}
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="/styles.css">
 <script>document.documentElement.className = "js";</script>
 ${PIXEL}

@@ -2,7 +2,7 @@
    REUMLAB · 름랩 — premium B2B dev-studio landing
    ============================================================ */
 
-/* Pretendard는 index.html <head>의 <link>에서 로드 (CSS @import 직렬화 제거로 LCP 개선) */
+/* 첫 화면 텍스트 LCP를 막는 외부 웹폰트 없이 OS 한글 시스템 글꼴을 사용한다. */
 
 :root {
   /* color */
@@ -13,10 +13,10 @@
   --navy-2:    #0f2240;
   --ink:       #0b1b33;   /* primary text */
   --ink-2:     #51607a;   /* muted text */
-  --ink-3:     #8794ab;   /* faint text */
+  --ink-3:     #61708a;   /* secondary text, WCAG AA on white and soft backgrounds */
   --line:      #e3e8f1;
   --line-2:    #d4dbe8;
-  --accent:    #2f6bff;   /* electric blue */
+  --accent:    #285edb;   /* accessible electric blue */
   --accent-d:  #1f4fd6;
   --accent-dd: #16357f;
   --accent-soft:#eaf0ff;
@@ -24,8 +24,8 @@
   --white:     #ffffff;
 
   /* type */
-  --sans: "Pretendard", "Pretendard Variable", -apple-system, BlinkMacSystemFont,
-          "Apple SD Gothic Neo", system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
+          "Noto Sans KR", system-ui, sans-serif;
 
   /* shape */
   --r-sm: 10px;
@@ -660,7 +660,7 @@ br.br-pc { display: inline; }
 .footer__info li span { color: #7b8cab; flex: none; min-width: 78px; font-weight: 600; }
 .footer__info a { color: #cdd6e6; font-weight: 600; }
 .footer__info a:hover { color: var(--lime); }
-.footer__bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #6f80a0; }
+.footer__bottom { margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: #7486a5; }
 
 /* ============================================================
    REVEAL
@@ -1012,7 +1012,7 @@ br.br-pc { display: inline; }
    ============================================================ */
 .price-foot__cta, .founder__cta { margin-top: 22px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .founder__cta { margin-top: 30px; }
-.price-foot__note, .founder__cta-note { font-size: 13.5px; color: var(--ink-3); font-weight: 600; }
+.price-foot__note, .founder__cta-note { font-size: 13.5px; color: #5d6c86; font-weight: 600; }
 
 /* ============================================================
    2026 OVERHAUL — 신뢰 지표 · 익명 포트폴리오 · 진행 · 서비스 · 모달
@@ -1163,7 +1163,7 @@ br.br-pc { display: inline; }
 .s-doc__h { width: 45%; height: 10px; border-radius: 4px; background: var(--accent); }
 .s-doc i { height: 7px; border-radius: 4px; background: var(--line-2); }
 .s-doc i.short { width: 60%; }
-.s-doc__pdf { position: absolute; right: 8px; bottom: 8px; font-size: 9px; font-weight: 800; color: #fff; background: #e0533b; border-radius: 4px; padding: 2px 6px; }
+.s-doc__pdf { position: absolute; right: 8px; bottom: 8px; font-size: 9px; font-weight: 800; color: #fff; background: #c84028; border-radius: 4px; padding: 2px 6px; }
 .s-data { width: 100%; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 10px; display: flex; flex-direction: column; gap: 6px; }
 .s-data__h { height: 10px; border-radius: 4px; background: var(--navy); }
 .s-data i { height: 8px; border-radius: 4px; background: var(--line); }
@@ -1242,6 +1242,7 @@ br.br-pc { display: inline; }
 
 /* ---- 가격: 별도/추가금 정책 ---- */
 .price-note { margin: 10px 0 0; font-size: 12px; color: var(--ink-3); line-height: 1.5; padding-top: 10px; border-top: 1px dashed var(--line); }
+.price-card.featured .price-note { color: #b7c4dc; border-top-color: rgba(255,255,255,.2); }
 .price-policy { max-width: 960px; margin: 26px auto 0; display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 20px 24px; box-shadow: var(--shadow-sm); }
 .price-policy__ico { flex: none; width: 44px; height: 44px; border-radius: 12px; background: #e8f7ec; color: #2f9e57; display: grid; place-items: center; }
 .price-policy__ico svg { width: 24px; height: 24px; }
