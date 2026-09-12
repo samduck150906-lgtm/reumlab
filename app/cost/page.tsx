@@ -16,9 +16,9 @@ const LIST = INDUSTRIES.filter((i) => hasCost(i.slug));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: { absolute: '업종별 앱 개발 비용 100개 업종 | 가격대·견적 기준 — 름랩' },
+  title: { absolute: `업종별 앱 개발 비용 ${LIST.length}개 업종 | 가격대·견적 기준 — 름랩` },
   description:
-    '병원·학원·헬스장·카페·쇼핑몰부터 법무·세무까지 100개 업종별 앱 개발 비용을 정리했습니다. 업종마다 간단형·표준형·고급형 가격대와 비용을 좌우하는 요인, 절감 방법까지. VAT 포함 정액·소스코드 이관·월 관리비 없음.',
+    `병원·학원·헬스장·카페·쇼핑몰부터 법무·세무까지 ${LIST.length}개 업종별 앱 개발 비용을 정리했습니다. 업종마다 간단형·표준형·고급형 가격대와 비용을 좌우하는 요인, 절감 방법까지. VAT 포함 정액·소스코드 이관·월 관리비 없음.`,
   keywords: ['업종별 앱 개발 비용', '업종별 앱 견적', '앱 개발 비용', '앱 제작 비용', 'MVP 개발 비용', '앱개발 견적'],
   alternates: { canonical: CANONICAL },
   openGraph: {
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: CANONICAL,
     siteName: SITE.name,
-    title: '업종별 앱 개발 비용 100개 업종 | 름랩',
+    title: `업종별 앱 개발 비용 ${LIST.length}개 업종 | 름랩`,
     description: '업종마다 가격대·비용 요인·절감 방법을 정리한 업종별 앱 개발 비용 인덱스. VAT 포함 정액.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 앱 개발 비용 — 름랩' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '업종별 앱 개발 비용 100개 업종 | 름랩',
+    title: `업종별 앱 개발 비용 ${LIST.length}개 업종 | 름랩`,
     description: '업종마다 가격대·비용 요인·절감 방법을 정리한 업종별 앱 개발 비용 인덱스.',
     images: [SITE.defaultOgImage],
   },
@@ -82,7 +82,7 @@ export default function CostHubPage() {
           <div className="section-inner">
             <p className="section-tag">업종 비용 인덱스</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>
-              업종별 앱 개발 비용 — 100개 업종 가격대·견적 기준
+              업종별 앱 개발 비용 — {LIST.length}개 업종 가격대·견적 기준
             </h1>
             <p className="hub-intro" style={{ marginTop: 12 }}>
               같은 &lsquo;앱 개발&rsquo;이라도 업종마다 비용을 좌우하는 요인이 다릅니다. 병원은 전자차트 연동, 커머스는 결제·정산, 학원은 알림 발송량이
