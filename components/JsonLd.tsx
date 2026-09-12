@@ -91,6 +91,46 @@ export function BreadcrumbJsonLdTrail({ items, pageUrl }: { items: Crumb[]; page
   return <LdScript data={breadcrumbNode(items, pageUrl)} />;
 }
 
+/**
+ * 독립 서비스 상세페이지: WebPage가 화면의 주제인 Service를 mainEntity로 연결한다.
+ * 전역 WebSite/Organization/ProfessionalService는 루트 레이아웃의 고정 @id를 참조만 한다.
+ */
+export function ServiceWebPageJsonLd({
+  url,
+  name,
+  description,
+  serviceType,
+  crumbs,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  serviceType: string;
+  crumbs: Crumb[];
+}) {
+  const service = serviceNode({ url, name, description, serviceType });
+  const serviceId = String(service['@id']);
+  return (
+    <LdGraph
+      graph={[
+        {
+          '@type': 'WebPage',
+          '@id': `${url}#webpage`,
+          url,
+          name,
+          description,
+          inLanguage: 'ko-KR',
+          isPartOf: { '@id': SCHEMA_ID.website },
+          about: { '@id': SCHEMA_ID.business },
+          mainEntity: { '@id': serviceId },
+        },
+        service,
+        breadcrumbNode(crumbs, url),
+      ]}
+    />
+  );
+}
+
 /** 개발 사례 — 공개된 프로젝트 필드만 쓰는 CreativeWork + BreadcrumbList. */
 export function PortfolioCreativeWorkJsonLd({
   name,

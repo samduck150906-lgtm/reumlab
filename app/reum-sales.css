@@ -220,6 +220,15 @@ body:has(.reum-landing) .mobile-menu a:hover {
   color: #7dd3fc !important;
 }
 
+body:has(.reum-landing) .mobile-service-menu {
+  border-color: rgba(226, 232, 240, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body:has(.reum-landing) .mobile-service-menu summary {
+  color: #f8fafc;
+}
+
 body:has(.reum-landing) .mobile-close {
   color: #f1f5f9 !important;
 }

@@ -1,14 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SITE } from '@/lib/seo';
 
 /** 우하단 플로팅 상담 버튼: 전화·이메일 */
 export default function FloatingContact() {
   const [open, setOpen] = useState(false);
+  const [suppressed, setSuppressed] = useState(false);
+
+  useEffect(() => {
+    // 작은 화면에서 플로팅 버튼이 문의 폼의 입력·동의·제출 버튼이나 푸터 링크를
+    // 가리지 않게 한다. 관찰 대상이 화면을 벗어나면 버튼은 다시 나타난다.
+    const targets = Array.from(document.querySelectorAll('form, footer'));
+    if (!targets.length || typeof IntersectionObserver === 'undefined') return;
+
+    const visible = new Set<Element>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) visible.add(entry.target);
+        else visible.delete(entry.target);
+      });
+      setSuppressed(visible.size > 0);
+    }, { threshold: 0.01 });
+
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
+      className="floating-contact"
+      aria-hidden={suppressed || undefined}
       style={{
         position: 'fixed',
         right: 16,
@@ -18,6 +40,10 @@ export default function FloatingContact() {
         flexDirection: 'column',
         alignItems: 'flex-end',
         gap: 10,
+        opacity: suppressed ? 0 : 1,
+        visibility: suppressed ? 'hidden' : 'visible',
+        pointerEvents: suppressed ? 'none' : 'auto',
+        transition: 'opacity 160ms ease',
       }}
     >
       {open ? (

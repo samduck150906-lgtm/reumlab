@@ -83,6 +83,17 @@ export function AnalyticsDataLayer() {
 
       // 2) 상담 채널 전환 이벤트 — 홈(script.js)과 동일한 이벤트 이름 사용
       const channel = channelOf(target);
+      // 폼 앵커처럼 채널 URL이 아닌 CTA도 명시적으로 추적한다. 채널 링크는 아래에서
+      // 한 번만 전송하므로 같은 클릭의 cta_click 중복은 생기지 않는다.
+      const declaredType = tagged?.getAttribute('data-cta-type');
+      if (!channel && declaredType === 'form') {
+        pushEvent(EVENT.ctaClick, {
+          cta_type: 'form',
+          cta_location: tagged?.getAttribute('data-cta-location') || name || 'page',
+          ...ctx,
+          ...acquisition,
+        });
+      }
       if (!channel) return;
       const location = tagged?.getAttribute('data-analytics') || 'page';
       // 기존 GTM 전환 트리거가 쓰는 이름은 그대로 둔다(이름을 바꾸면 운영 중인 전환이 끊긴다).
@@ -107,5 +118,7 @@ export function AnalyticsDataLayer() {
     return () => document.removeEventListener('click', onClick, true);
   }, []);
 
-  return null;
+  // 정적 export에서도 이 클라이언트 경계가 확실히 수화되도록 비시각 마커를 남긴다.
+  // 이벤트 데이터나 사용자 정보는 DOM에 출력하지 않는다.
+  return <span hidden aria-hidden="true" data-analytics-context="ready" />;
 }

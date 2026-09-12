@@ -8,6 +8,7 @@
     { "slug": "platform", "label": "플랫폼·매칭", "short": "고객과 공급자 연결" },
     { "slug": "reservation-commerce", "label": "예약·결제", "short": "예약·결제·회원제" },
     { "slug": "website", "label": "홈페이지·랜딩", "short": "문의가 들어오는 사이트" },
+    { "slug": "geo-website", "label": "GEO 홈페이지 제작", "short": "AI 검색까지 고려한 설계" },
     { "slug": "data-seo", "label": "데이터·SEO", "short": "대규모 수집·노출" },
     { "slug": "service-renewal", "label": "기존 서비스 개선", "short": "오류 수정·리뉴얼·인수" },
     { "slug": "soho", "label": "소상공인 홈페이지", "short": "자영업자·소상공인 전용" }

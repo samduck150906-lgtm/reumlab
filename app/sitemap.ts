@@ -62,6 +62,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // GEO 홈페이지 제작 — 기존 /website/(일반 홈페이지)·/data-seo/(자동화 시스템)와
+  // 검색 의도가 분리된 단일 서비스 상세페이지. 지역·업종 변형은 만들지 않는다.
+  out.push({
+    url: `${SITE.domain}/geo-website/`,
+    lastModified: gitLastModified('app/geo-website/page.tsx'),
+    changeFrequency: 'monthly',
+    priority: 0.84,
+  });
+
   out.push({
     url: `${SITE.domain}/blog/`,
     lastModified: blogMod,

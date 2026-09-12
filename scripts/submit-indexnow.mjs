@@ -1,7 +1,8 @@
 /**
  * IndexNow 제출 스크립트 (변경분만 제출)
  * ------------------------------------------------------------------
- * 빌드 후 실행: node scripts/submit-indexnow.mjs [--all] [--dry-run]
+ * 프로덕션 빌드 후 실행: node scripts/submit-indexnow.mjs --submit [--all]
+ * 검증: node scripts/submit-indexnow.mjs --dry-run
  * Naver(searchadvisor.naver.com)와 Bing(www.bing.com)에 동시 제출.
  *
  * 전략(§4-2): 색인 대상 URL은 이미 `out/sitemap.xml`에 lastmod와 함께 들어 있다.
@@ -38,6 +39,24 @@ const MANIFEST_PATH = path.join(__dirname, '.indexnow-manifest.json');
 const args = new Set(process.argv.slice(2));
 const SUBMIT_ALL = args.has('--all');
 const DRY_RUN = args.has('--dry-run');
+const SUBMIT_REQUESTED = args.has('--submit');
+
+// Netlify deploy-preview·branch-deploy는 검증용 산출물이다. 여기서 production
+// canonical URL을 IndexNow에 보내면 공개 전 변경을 검색엔진에 알리게 된다.
+// 로컬의 명시적 실행은 그대로 허용하고, Netlify가 CONTEXT를 제공한 경우에만
+// production 외 컨텍스트를 차단한다. --dry-run은 어떤 컨텍스트에서도 허용한다.
+const NETLIFY_CONTEXT = process.env.CONTEXT?.trim();
+if (!DRY_RUN && NETLIFY_CONTEXT && NETLIFY_CONTEXT !== 'production') {
+  console.log(`[IndexNow] Netlify ${NETLIFY_CONTEXT} 컨텍스트 — 외부 제출 생략.`);
+  process.exit(0);
+}
+
+// 호출자가 실전송 의도를 명시하지 않으면 기본적으로 닫힌다. Netlify production은
+// package.json의 seo:indexnow가 --submit을 붙이고, 수동 실행도 같은 명령만 사용한다.
+if (!DRY_RUN && !SUBMIT_REQUESTED) {
+  console.log('[IndexNow] 명시적 --submit 없음 — 외부 제출 생략. 검증은 --dry-run을 사용하세요.');
+  process.exit(0);
+}
 
 /** out/sitemap.xml → [{ url, lastmod }] (색인 대상 URL만 들어 있음) */
 function readSitemap() {

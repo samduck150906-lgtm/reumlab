@@ -45,6 +45,7 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   website: 'web',
   'web-development': 'web',
   'website-agency': 'web',
+  'geo-website': 'web',
   soho: 'web',
   'academy-shopping-mall': 'web',
   'realestate-landing': 'web',

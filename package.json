@@ -17,7 +17,7 @@
     "seo:optimize": "node scripts/seo-optimization.mjs",
     "seo:report": "tsx scripts/seo-index-report.mts",
     "seo:report:aeo": "node scripts/generate-seo-aeo-deliverables.mjs",
-    "seo:indexnow": "node scripts/submit-indexnow.mjs",
+    "seo:indexnow": "node scripts/submit-indexnow.mjs --submit",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:verify": "node scripts/verify-sitemap.mjs",
     "seo:verify:regions": "node scripts/verify-region-pages.mjs",

@@ -42,3 +42,10 @@
 - AI: AI referral sessions, engaged sessions, assisted leads, cited/mentioned pages(도구가 제공할 때만)
 - 전환: cta_click, inquiry_form_start, generate_lead, 제출 성공률, landing-to-lead rate
 - 품질: evidence verified/review/insufficient, stale review date, broken citation, CWV pass rate
+
+## AI 답변 수동 벤치마크
+
+- 고정 질문, 플랫폼, 로그인 상태, 국가·언어, 실행일, 답변 전문, 름랩 언급 여부, 인용 URL과 정확성을 같은 양식으로 기록합니다.
+- 한 번의 결과를 순위처럼 해석하지 않고 질문당 최소 3회 반복하며, 파일럿 변경 전후를 28일 간격으로 비교합니다.
+- 로그인된 ChatGPT Search·Perplexity·Google AI 검색 UI를 같은 조건으로 실행할 수 없으면 결과 칸을 `NOT_RUN`으로 둡니다. 추정 인용이나 가짜 기준선을 만들지 않습니다.
+- 2026-09-12 파일럿 질문 세트와 보존 기준은 `PILOT_AEO_GEO_2026-09-12.md`에 기록했습니다.

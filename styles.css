@@ -678,7 +678,10 @@ br.br-pc { display: inline; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1080px) {
-  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  /* minmax(0, 1fr) + min-width:0 keeps long purpose-landing H1 text and the
+     520px mockup from expanding the single grid track beyond the viewport. */
+  .hero__grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .hero__text, .hero__stage { min-width: 0; }
   .hero__visual { height: 460px; max-width: 460px; }
   .hero__form .af-card { max-width: 480px; margin: 0 auto; }
   .deliver { grid-template-columns: 1fr; gap: 32px; }
@@ -706,7 +709,8 @@ br.br-pc { display: inline; }
   .grid-2, .grid-3, .grid-4, .price-grid, .proc, .check-list { grid-template-columns: 1fr; }
   .trust__grid { grid-template-columns: 1fr 1fr; gap: 22px 16px; }
   .hero { padding: 44px 0 64px; }
-  .hero__cta .btn { flex: 1; }
+  .hero h1 .hl { white-space: normal; }
+  .hero__cta .btn { flex: 1 1 100%; }
   .final { padding: 52px 26px; border-radius: 24px; }
   .af-card { padding: 24px 20px; }
   .final__form { margin-top: 26px; }
@@ -1378,7 +1382,7 @@ body.pm-open { overflow: hidden; }
    목적 랜딩 (generate-purpose-landings.mjs) 전용 스타일
    ============================================================ */
 .hero--lx { padding: 96px 0 46px; }
-.lx-hero-stage { max-width: 520px; margin-left: auto; }
+.lx-hero-stage { width: 100%; max-width: 520px; margin-left: auto; }
 .lx-hero-frame { background: #fff; border: 1px solid var(--line-2); border-radius: 18px; box-shadow: var(--shadow-lg); overflow: hidden; }
 .lx-hero-frame__bar { display: flex; align-items: center; gap: 6px; padding: 12px 15px; background: #f2f5fb; border-bottom: 1px solid var(--line); }
 .lx-hero-frame__bar span { width: 9px; height: 9px; border-radius: 50%; background: #cdd6e6; }

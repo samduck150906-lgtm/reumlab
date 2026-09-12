@@ -30,3 +30,12 @@ test('large CMS video is user initiated and limited to relevant services', () =>
   assert.match(services, /ADMIN_DEMO_SERVICES/);
   assert.match(services, /고객사 사례 화면이나 성과 수치를 대신하지 않습니다/);
 });
+
+test('purpose landing hero cannot expand beyond a mobile viewport', () => {
+  const css = read('styles.css');
+  assert.match(css, /\.hero__grid\s*\{\s*grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+  assert.match(css, /\.hero__text,\s*\.hero__stage\s*\{\s*min-width:\s*0/);
+  assert.match(css, /\.hero h1 \.hl\s*\{\s*white-space:\s*normal/);
+  assert.match(css, /\.hero__cta \.btn\s*\{\s*flex:\s*1 1 100%/);
+  assert.match(css, /\.lx-hero-stage\s*\{\s*width:\s*100%/);
+});

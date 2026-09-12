@@ -2,10 +2,12 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import serviceMenu from '../content/service-menu.json';
 
 export default function Nav({ site }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [serviceOpen, setServiceOpen] = useState(false);
 
   useEffect(() => {
     // 이 Nav 는 모든 Next 페이지에 들어간다.
@@ -46,6 +48,25 @@ export default function Nav({ site }) {
               <span>REUMLAB</span>
             </Link>
             <ul className="nav-links">
+              <li className={`next-service-menu ${serviceOpen ? 'open' : ''}`}>
+                <button
+                  type="button"
+                  className="next-service-menu__button"
+                  aria-expanded={serviceOpen}
+                  aria-haspopup="true"
+                  onClick={() => setServiceOpen((value) => !value)}
+                >
+                  서비스 <span aria-hidden="true">⌄</span>
+                </button>
+                <div className="next-service-menu__panel" role="menu">
+                  {serviceMenu.items.map((item) => (
+                    <Link key={item.slug} href={`/${item.slug}/`} role="menuitem" onClick={() => setServiceOpen(false)}>
+                      <b>{item.label}</b>
+                      <span>{item.short}</span>
+                    </Link>
+                  ))}
+                </div>
+              </li>
               {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} data-analytics={l.a}>{l.label}</Link>
@@ -80,17 +101,20 @@ export default function Nav({ site }) {
         >
           ✕
         </button>
+        <details className="mobile-service-menu">
+          <summary>서비스</summary>
+          <div>
+            {serviceMenu.items.map((item) => (
+              <Link key={item.slug} href={`/${item.slug}/`} onClick={closeMobile}>{item.label}</Link>
+            ))}
+          </div>
+        </details>
         <Link href="/#solution" onClick={closeMobile} data-analytics="nav_m_solution">특징</Link>
         <Link href="/#pricing" onClick={closeMobile} data-analytics="nav_m_pricing">패키지</Link>
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/portfolio/" onClick={closeMobile} data-analytics="nav_m_portfolio">개발 사례</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
-        <Link href="/mvp/" onClick={closeMobile} data-analytics="nav_m_mvp">앱 MVP 개발</Link>
-        <Link href="/flutter/" onClick={closeMobile} data-analytics="nav_m_flutter">Flutter 앱개발</Link>
-        <Link href="/ai-development/" onClick={closeMobile} data-analytics="nav_m_ai">AI 외주개발</Link>
-        <Link href="/enterprise-ai/" onClick={closeMobile} data-analytics="nav_m_enterprise_ai">사내 AI 구축</Link>
-        <Link href="/source-handover/" onClick={closeMobile} data-analytics="nav_m_handover">소스코드 이관</Link>
         <a href="tel:01081119370" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_call">
           📞 전화 상담
         </a>

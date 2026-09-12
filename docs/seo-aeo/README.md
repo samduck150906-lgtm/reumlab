@@ -9,5 +9,6 @@
 - MEASUREMENT_PLAN.md — 30/60/90일 측정 체계
 - DATA_SOURCES.md — 사용한 콘솔 범위와 남은 한계
 - OWNER_INPUT_REQUIRED.md — GA4·실제 사례 등 소유자만 제공할 수 있는 정보
+- PILOT_AEO_GEO_2026-09-12.md — 3개 파일럿의 보존 기준·변경·출처·브라우저/배포 검증 기록
 
 원본 GSC·네이버 수치와 정확한 URL별 결과는 git에서 제외된 `docs/seo-aeo/private/`에만 둡니다. 재생성: `npm run seo:report:aeo`

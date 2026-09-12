@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { EVENT, leadSourceOf, pageContext, pageTypeOf, serviceOf, pushEvent } from '@/lib/analytics';
 
 /**
@@ -15,6 +15,7 @@ const FORM_NAME = 'main-apply';
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
 
 const SERVICE_TYPES = [
+  'GEO 홈페이지 제작',
   '웹 MVP / 홈페이지',
   '모바일 앱 (Flutter)',
   '운영관리 ERP·SaaS',
@@ -34,13 +35,19 @@ const labelCls = 'mb-1.5 block text-sm font-semibold text-slate-700';
 export default function LandingInquiryForm({
   landingSlug,
   defaultServiceType,
+  variant = 'default',
+  submitLabel = '프로젝트 검토 요청하기',
 }: {
   landingSlug: string;
   defaultServiceType?: string;
+  variant?: 'default' | 'geo-website';
+  submitLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>('idle');
   const [utm, setUtm] = useState<Record<string, string>>({});
-  const [started, setStarted] = useState(false);
+  const startedRef = useRef(false);
+  const submittingRef = useRef(false);
+  const leadSentRef = useRef(false);
   /**
    * 유입 맥락 — "어떤 SEO 페이지가 실제 문의를 만드는가"에 답하기 위한 값들.
    * 접수 내역(Netlify)에 함께 저장되므로, GA4 를 열지 않아도 문의 한 건이
@@ -111,8 +118,8 @@ export default function LandingInquiryForm({
   }
 
   function onFirstInteract() {
-    if (started) return;
-    setStarted(true);
+    if (startedRef.current) return;
+    startedRef.current = true;
     // 폼 1회당 한 번만 — 모든 input focus 마다 반복되면 안 된다.
     pushEvent(EVENT.formStart, {
       form_name: FORM_NAME,
@@ -124,7 +131,8 @@ export default function LandingInquiryForm({
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (status === 'submitting') return;
+    if (submittingRef.current) return;
+    submittingRef.current = true;
     const form = e.currentTarget;
     const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
     setStatus('submitting');
@@ -141,18 +149,21 @@ export default function LandingInquiryForm({
       const eventCtx = pageContext(window.location.pathname);
       const w = window as any;
       if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
-      // 기존 GTM 트리거가 쓰는 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
-      pushDL({ event: 'inquiry_form_submit', ...eventCtx, lead_source: ctx.leadSource });
-      pushDL({ event: 'main_apply_submit', ...eventCtx, lead_source: ctx.leadSource });
-      pushDL({ event: 'form_submit_success', ...eventCtx, lead_source: ctx.leadSource });
-      // GA4 권장 이름 추가. 어느 것을 key event 로 쓸지는 GA4/GTM 에서 하나만 고른다.
-      pushEvent(EVENT.lead, {
-        form_name: FORM_NAME,
-        cta_type: 'form',
-        source_page: ctx.firstLanding || window.location.pathname,
-        lead_source: ctx.leadSource,
-        ...eventCtx,
-      });
+      if (!leadSentRef.current) {
+        leadSentRef.current = true;
+        // 기존 GTM 트리거가 쓰는 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
+        pushDL({ event: 'inquiry_form_submit', ...eventCtx, lead_source: ctx.leadSource });
+        pushDL({ event: 'main_apply_submit', ...eventCtx, lead_source: ctx.leadSource });
+        pushDL({ event: 'form_submit_success', ...eventCtx, lead_source: ctx.leadSource });
+        // GA4 권장 이름 추가. 어느 것을 key event 로 쓸지는 GA4/GTM 에서 하나만 고른다.
+        pushEvent(EVENT.lead, {
+          form_name: FORM_NAME,
+          cta_type: 'form',
+          source_page: ctx.firstLanding || window.location.pathname,
+          lead_source: ctx.leadSource,
+          ...eventCtx,
+        });
+      }
     } catch (err) {
       setStatus('error');
       // 진단용 — 사용자 입력값이나 서버 메시지 원문은 싣지 않고 분류만 보낸다.
@@ -162,6 +173,8 @@ export default function LandingInquiryForm({
         error_type: msg.startsWith('http') ? 'server' : 'network',
         ...pageContext(window.location.pathname),
       });
+    } finally {
+      submittingRef.current = false;
     }
   }
 
@@ -190,7 +203,8 @@ export default function LandingInquiryForm({
       className="mx-auto max-w-2xl rounded-2xl bg-white p-6 text-left shadow-card-hover sm:p-8"
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
-      <input type="hidden" name="유입_랜딩" value={`l/${landingSlug}`} />
+      <input type="hidden" name="유입_랜딩" value={variant === 'geo-website' ? '/geo-website/' : `l/${landingSlug}`} />
+      <input type="hidden" name="문의서비스" value={variant === 'geo-website' ? 'GEO 홈페이지 제작' : defaultServiceType || ''} />
       <input type="hidden" name="유입_경로" value={ctx.path} />
       <input type="hidden" name="페이지_유형" value={ctx.pageType} />
       <input type="hidden" name="관심_서비스축" value={ctx.service} />
@@ -234,9 +248,32 @@ export default function LandingInquiryForm({
         </div>
       </div>
 
+      {variant === 'geo-website' ? (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className={labelCls} htmlFor="lf-current-site">현재 홈페이지 주소 <span className="font-normal text-slate-500">(선택)</span></label>
+            <input id="lf-current-site" name="현재홈페이지주소" type="url" inputMode="url" className={inputCls} placeholder="https://example.com" autoComplete="url" />
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-request-type">의뢰 유형</label>
+            <select id="lf-request-type" name="의뢰유형" className={inputCls} defaultValue="상담 후 결정">
+              <option value="신규 제작">신규 제작</option>
+              <option value="기존 사이트 개선">기존 사이트 개선</option>
+              <option value="상담 후 결정">상담 후 결정</option>
+            </select>
+          </div>
+        </div>
+      ) : null}
+
       <div className="mt-4">
-        <label className={labelCls} htmlFor="lf-features">핵심 기능 (꼭 필요한 것 위주로)</label>
-        <textarea id="lf-features" name="핵심기능" rows={3} className={inputCls} placeholder="예: 회원가입, 예약, 결제, 관리자에서 예약 확인" />
+        <label className={labelCls} htmlFor="lf-features">{variant === 'geo-website' ? '필요한 내용' : '핵심 기능 (꼭 필요한 것 위주로)'}</label>
+        <textarea
+          id="lf-features"
+          name="핵심기능"
+          rows={3}
+          className={inputCls}
+          placeholder={variant === 'geo-website' ? '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존' : '예: 회원가입, 예약, 결제, 관리자에서 예약 확인'}
+        />
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -287,7 +324,7 @@ export default function LandingInquiryForm({
         disabled={status === 'submitting'}
         className="mt-5 w-full rounded-xl bg-accent px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-deep disabled:opacity-70"
       >
-        {status === 'submitting' ? '요청 중…' : '프로젝트 검토 요청하기'}
+        {status === 'submitting' ? '요청 중…' : submitLabel}
       </button>
       <p className="mt-3 text-center text-xs text-slate-500">
         문의만으로 계약이 진행되지 않습니다 · 범위와 비용을 확인한 뒤 결정할 수 있습니다
