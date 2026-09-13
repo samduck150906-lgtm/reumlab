@@ -1,7 +1,7 @@
 # 변경 후 QA
 
-검증 시각: `2026-09-13 01:18:09 +09:00`
-상태: `TESTED_LOCAL_BUILD`
+검증 시각: `2026-09-13 11:13:15 +09:00`
+상태: `TESTED_LOCAL_AND_NETLIFY_PREVIEW`
 
 ## 자동 검증 결과
 
@@ -40,11 +40,36 @@ Codex 인앱 브라우저의 좁은 화면과 Chrome 데스크톱 탭에서 로�
 
 이 확인은 이번 로컬 변경의 운영 반영을 뜻하지 않는다.
 
+## Netlify 프리뷰 검증
+
+- 변경 커밋: `6850fe6bc022bac5118e3f580e1dca050a975671`
+- 배포 ID: `6aa605a2aebd83a604d672fe`
+- 프리뷰: `https://6aa605a2aebd83a604d672fe--reumlab.netlify.app`
+- `/`, `/geo-website/`, `/source-handover/`, `/robots.txt`, `/sitemap.xml`: HTTP 200
+- 임의 미존재 URL: HTTP 404이며 커스텀 404 본문 확인
+- 보호 redirect 4개: 각각 301 1회 후 프리뷰 호스트의 의도한 최종 경로에서 HTTP 200
+- `/__forms.html`: Netlify 후처리된 `soho-diagnosis`, `main-apply` 폼과 `form-name`, honeypot 필드 확인
+- `/erp/`, `/ai-automation/`, `/data-seo/`, `/geo-website/`: `main-apply` 제출 폼과 숨은 `form-name` 확인
+- `/.geo-measurements/runs.jsonl`: HTTP 404로 비공개 측정 원본 미배포 확인
+- 실제 문의 레코드를 만들지 않도록 POST 제출은 수행하지 않음
+- 프리뷰는 `--no-build` draft deploy로 생성해 그 과정에서는 IndexNow를 실행하지 않음
+
+## Git 연결 운영 자동배포 검증
+
+- CLI `--prod`는 사용하지 않았지만 `main` 푸시가 Netlify Git 자동배포를 트리거함
+- 운영 배포 ID `6aa60537c9d46f0008ad26e7`: `production`, branch `main`, commit `6850fe6bc022bac5118e3f580e1dca050a975671`, state `ready`, error 없음
+- 운영 `/`, `/geo-website/`, `/source-handover/`, `/robots.txt`, `/sitemap.xml`: HTTP 200
+- 운영 임의 미존재 URL: HTTP 404와 커스텀 404 본문 확인
+- 운영 보호 redirect 4개: 각각 redirect 1회 후 의도한 canonical 경로에서 HTTP 200
+- 운영 `/__forms.html`: `soho-diagnosis`, `main-apply`, honeypot 필드 확인
+- 운영 `/.geo-measurements/runs.jsonl`: HTTP 404
+- 운영 build 명령에는 IndexNow가 포함된다. 로컬 dry-run의 변경 대상은 26개지만 운영 로그의 Naver/Bing HTTP 응답은 이번 검사에서 직접 대조하지 않아 성공 건수를 확정하지 않음
+
 ## 미완료·차단 항목
 
 - 모바일 Lighthouse: `BLOCKED_TOOLING`. 저장소에 Lighthouse가 없었고 `npx lighthouse@latest` 및 `npm view lighthouse version`이 npm 레지스트리 응답 없이 멈춰 중단했다. 점수를 만들거나 이전 측정값을 재사용하지 않았다.
 - AI 답변 실측: `NOT_RUN`. 승인된 유료/대량 호출이 없고 원문·인용 증거도 없으므로 `N_planned=480`, `N_attempted=0`, `N_valid=0`, 지표는 모두 `N/A`다.
-- 프리뷰·운영 배포: `NOT_DEPLOYED`. 이번 지시에는 명시적 운영 배포 승인이 없었다.
+- 운영 배포: `AUTO_DEPLOYED / PASS`. `--prod`는 사용하지 않았지만 Git 연결 자동배포가 발생했고 배포·핵심 HTTP 검증을 통과했다.
 - GSC/Bing/Naver/GA4/Netlify Forms 운영 데이터: 이번 실행에서 새 export나 승인된 테스트 제출이 없으므로 갱신 완료로 표시하지 않는다.
 
 ## 수동 검토 경고
