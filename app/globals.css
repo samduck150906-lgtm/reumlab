@@ -1,38 +1,37 @@
-/* 원본 그린/크림 테마 + 모바일 친화 보강 */
+/* REUMLAB trust-first system: one restrained navy/blue identity across every route */
 :root {
-  --bg: #f4f1e8;
-  --bg-warm: #faf7ef;
-  --bg-cream: #fdf9f0;
+  --bg: #f7f9fc;
+  --bg-warm: #ffffff;
+  --bg-cream: #f3f6fb;
   --bg-card: #fff;
-  --bg-card-alt: #eee9dc;
-  --bg-dark: #162b1e;
-  --bg-dark2: #1e3828;
-  --bg-dark-card: #24422e;
-  --green: #3a8c5c;
-  --green-light: #5aad7a;
-  --green-deep: #1f5c38;
-  --green-dim: rgba(58, 140, 92, 0.08);
-  --green-glow: rgba(58, 140, 92, 0.14);
-  --pearl: #7ec49a;
-  --pearl-light: #a8d8b8;
-  --pearl-soft: #d0ecda;
-  --sun: #dbc06e;
-  --sun-warm: #e8d48a;
-  --sun-dim: rgba(219, 192, 110, 0.1);
-  --beige: #ddd0b5;
-  --beige-warm: #c8b899;
-  --text: #1a2e20;
-  --text-sub: #4a6050;
-  /* #7a9080은 크림 배경에서 3.03:1이라 작은 메타·푸터 텍스트가 WCAG AA에 미달했다. */
-  --text-dim: #596e5e;
-  --text-light: #eaf2ec;
-  --text-light-sub: rgba(234, 242, 236, 0.7);
-  --border: rgba(58, 140, 92, 0.1);
-  --border-hover: rgba(58, 140, 92, 0.25);
-  --radius: 20px;
+  --bg-card-alt: #edf2f9;
+  --bg-dark: #0a1830;
+  --bg-dark2: #102544;
+  --bg-dark-card: #172e50;
+  --green: #285edb;
+  --green-light: #4f7dea;
+  --green-deep: #183b8f;
+  --green-dim: rgba(40, 94, 219, 0.08);
+  --green-glow: rgba(40, 94, 219, 0.14);
+  --pearl: #7fa8ff;
+  --pearl-light: #abc4ff;
+  --pearl-soft: #dce7ff;
+  --sun: #c4f246;
+  --sun-warm: #d7f77a;
+  --sun-dim: rgba(196, 242, 70, 0.12);
+  --beige: #d6deeb;
+  --beige-warm: #aebbd0;
+  --text: #0b1b33;
+  --text-sub: #4f5f78;
+  --text-dim: #61708a;
+  --text-light: #f5f8ff;
+  --text-light-sub: rgba(235, 241, 252, 0.72);
+  --border: rgba(11, 27, 51, 0.10);
+  --border-hover: rgba(40, 94, 219, 0.28);
+  --radius: 18px;
   --radius-sm: 12px;
-  --grad: linear-gradient(135deg, #3a8c5c, #5aad7a, #7ec49a);
-  --grad-warm: linear-gradient(135deg, #3a8c5c, #dbc06e);
+  --grad: linear-gradient(135deg, #285edb, #1f4fc8);
+  --grad-warm: linear-gradient(135deg, #285edb, #173a88);
   --touch-min: 44px;
   --safe-top: env(safe-area-inset-top);
   --safe-bottom: env(safe-area-inset-bottom);
@@ -190,14 +189,14 @@ a {
   min-height: var(--touch-min);
   border-radius: 14px;
   transition: all 0.4s;
-  box-shadow: 0 12px 36px rgba(58, 140, 92, 0.2);
+  box-shadow: 0 12px 28px rgba(40, 94, 219, 0.22);
   border: none;
   cursor: pointer;
   font-family: inherit;
 }
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 48px rgba(58, 140, 92, 0.3);
+  box-shadow: 0 18px 38px rgba(40, 94, 219, 0.28);
 }
 .btn-secondary {
   display: inline-flex;
@@ -249,18 +248,19 @@ a {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 18px 0;
+  padding: 14px 0;
   transition: all 0.4s;
-  background: rgba(244, 241, 232, 0.7);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
-  padding-top: max(18px, var(--safe-top));
+  border-bottom: 1px solid rgba(11, 27, 51, 0.08);
+  padding-top: max(14px, var(--safe-top));
 }
 .nav.scrolled {
-  padding: 12px 0;
-  background: rgba(244, 241, 232, 0.95);
-  border-color: var(--border);
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.98);
+  border-color: rgba(11, 27, 51, 0.12);
+  box-shadow: 0 8px 26px rgba(11, 27, 51, 0.07);
 }
 .nav-inner {
   display: flex;
@@ -283,10 +283,7 @@ a {
   display: block;
 }
 .nav-logo span {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
 }
 .nav-links {
   display: flex;
@@ -297,7 +294,7 @@ a {
 .nav-links a {
   color: var(--text-sub);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 650;
   transition: color 0.3s;
   padding: 8px 0;
 }
@@ -346,7 +343,7 @@ a {
   border: 1px solid var(--border-hover);
   border-radius: 16px;
   background: #fff;
-  box-shadow: 0 20px 48px rgba(22, 43, 30, .16);
+  box-shadow: 0 22px 54px rgba(11, 27, 51, .16);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-6px);
@@ -382,7 +379,7 @@ a {
   color: #fff !important;
   padding: 10px 22px !important;
   min-height: var(--touch-min);
-  border-radius: 100px !important;
+  border-radius: 11px !important;
   font-weight: 700 !important;
   font-size: 12px !important;
   transition: all 0.3s;
@@ -392,7 +389,7 @@ a {
 }
 .nav-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(58, 140, 92, 0.25);
+  box-shadow: 0 8px 24px rgba(40, 94, 219, 0.25);
 }
 .hamburger {
   display: none;
@@ -418,27 +415,27 @@ a {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(244, 241, 232, 0.98);
+  background: rgba(255, 255, 255, 0.99);
   z-index: 2000;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
   gap: 12px;
   overflow-y: auto;
-  padding: max(78px, calc(56px + var(--safe-top))) 24px max(32px, var(--safe-bottom));
+  padding: max(84px, calc(62px + var(--safe-top))) 24px max(32px, var(--safe-bottom));
 }
 .mobile-menu.open {
   display: flex;
 }
 .mobile-menu a {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--text-sub);
   padding: 12px 24px;
   min-height: var(--touch-min);
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .mobile-menu a:hover {
   color: var(--green);
@@ -455,7 +452,7 @@ a {
   color: var(--text);
   font-size: 18px;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
 }
 .mobile-service-menu > div {
@@ -467,7 +464,7 @@ a {
   min-height: 42px;
   padding: 8px;
   font-size: 14px;
-  text-align: center;
+  text-align: left;
 }
 .mobile-close {
   position: absolute;
@@ -495,7 +492,9 @@ a {
   overflow: hidden;
   padding: 120px 0 80px;
   padding-top: max(120px, calc(80px + var(--safe-top)));
-  background: linear-gradient(170deg, #f4f1e8 0%, #e8f0e0 25%, #dce9d0 50%, #d0e2c4 80%, #c8ddb8 100%);
+  background:
+    radial-gradient(700px 420px at 84% 8%, rgba(40, 94, 219, .12), transparent 68%),
+    linear-gradient(170deg, #ffffff 0%, #f5f8fd 54%, #edf3ff 100%);
 }
 /* 랜딩/허브 페이지 콘텐츠 중앙 정렬 (데스크톱 쏠림 방지) */
 .hero-inner {
@@ -544,7 +543,7 @@ a {
 .hero-glow-1 {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(58, 140, 92, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(40, 94, 219, 0.12), transparent 70%);
   top: -10%;
   right: -8%;
   animation: gF 22s ease-in-out infinite;
@@ -552,7 +551,7 @@ a {
 .hero-glow-2 {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(219, 192, 110, 0.1), transparent 70%);
+  background: radial-gradient(circle, rgba(127, 168, 255, 0.12), transparent 70%);
   bottom: 0;
   left: -5%;
   animation: gF 22s ease-in-out infinite -8s;
@@ -560,7 +559,7 @@ a {
 .hero-glow-3 {
   width: 280px;
   height: 280px;
-  background: radial-gradient(circle, rgba(126, 196, 154, 0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(40, 94, 219, 0.08), transparent 70%);
   top: 35%;
   left: 40%;
   animation: gF 22s ease-in-out infinite -15s;
@@ -582,7 +581,7 @@ a {
   align-items: center;
   gap: 10px;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(58, 140, 92, 0.12);
+  border: 1px solid rgba(40, 94, 219, 0.16);
   padding: 10px 22px;
   border-radius: 100px;
   font-size: 13px;

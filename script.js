@@ -457,14 +457,21 @@
 
   var burger = document.getElementById("burger");
   var mnav = document.getElementById("mobileNav");
-  function closeNav() { burger.classList.remove("open"); mnav.classList.remove("open"); burger.setAttribute("aria-expanded", "false"); }
+  function closeNav() {
+    burger.classList.remove("open");
+    mnav.classList.remove("open");
+    burger.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+  }
   if (burger && mnav) {
     burger.addEventListener("click", function () {
       var open = burger.classList.toggle("open");
       mnav.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("menu-open", open);
     });
     mnav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeNav); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && mnav.classList.contains("open")) closeNav(); });
   }
 
   // 헤더 서비스 드롭다운 — 클릭/터치 토글(호버는 CSS), 외부 클릭·ESC 닫기
@@ -653,12 +660,27 @@
     }
   });
 
-  // 모바일 고정 CTA — 하단 상담 폼(#contact) 보이면 숨김
+  // 모바일 고정 CTA — 첫 화면 CTA를 가리지 않고, 스크롤 뒤에만 노출
   var mcta = document.getElementById("mcta");
   var contact = document.getElementById("contact");
+  if (mcta) {
+    var contactVisible = false;
+    function updateMobileCta() {
+      var pastHeroIntro = window.scrollY > Math.min(360, window.innerHeight * 0.42);
+      var shouldShow = pastHeroIntro && !contactVisible;
+      mcta.classList.toggle("is-visible", shouldShow);
+      mcta.classList.toggle("is-hidden", !shouldShow);
+      mcta.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+    }
+    window.addEventListener("scroll", updateMobileCta, { passive: true });
+    updateMobileCta();
+  }
   if (mcta && contact && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { mcta.classList.toggle("is-hidden", en.isIntersecting); });
+      entries.forEach(function (en) {
+        contactVisible = en.isIntersecting;
+        updateMobileCta();
+      });
     }, { threshold: 0.12 });
     io.observe(contact);
   }

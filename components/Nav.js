@@ -38,6 +38,22 @@ export default function Nav({ site }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    if (!mobileOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setMobileOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [mobileOpen]);
+
   const closeMobile = () => setMobileOpen(false);
 
   const navLinks = [
@@ -94,6 +110,8 @@ export default function Nav({ site }) {
               className="hamburger"
               onClick={() => setMobileOpen(true)}
               aria-label="메뉴"
+              aria-expanded={mobileOpen}
+              aria-controls="mobileMenu"
             >
               <span />
               <span />
@@ -103,7 +121,14 @@ export default function Nav({ site }) {
         </div>
       </nav>
 
-      <div className={`mobile-menu ${mobileOpen ? 'open' : ''}`} id="mobileMenu">
+      <div
+        className={`mobile-menu ${mobileOpen ? 'open' : ''}`}
+        id="mobileMenu"
+        role="dialog"
+        aria-modal="true"
+        aria-label="전체 메뉴"
+        aria-hidden={!mobileOpen}
+      >
         <button
           type="button"
           className="mobile-close"
