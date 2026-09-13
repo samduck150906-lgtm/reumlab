@@ -1,14 +1,14 @@
 # Latest GEO audit
 
-Generated from the local `out/` build at 2026-09-10T04:08:26.091Z. HTTP status and redirects are build-model results; production HTTP behavior still requires post-deploy verification.
+Generated from the local `out/` build at 2026-09-12T16:24:39.215Z. HTTP status and redirects are build-model results; production HTTP behavior still requires post-deploy verification.
 
 | Metric | Result |
 |---|---:|
-| HTML pages | 1343 |
-| Canonical indexable URLs | 777 |
+| HTML pages | 1344 |
+| Canonical indexable URLs | 778 |
 | Noindex URLs | 566 |
 | Redirect rules | 153 |
-| Sitemap URLs | 777 |
+| Sitemap URLs | 778 |
 | Duplicate title groups | 0 |
 | Duplicate H1 groups | 0 |
 | Exact duplicate body groups | 0 |

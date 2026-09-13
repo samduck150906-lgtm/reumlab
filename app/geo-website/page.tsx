@@ -355,8 +355,8 @@ export default function GeoWebsitePage() {
             <h2 id="geo-related-title">관련 서비스</h2>
             <nav aria-label="관련 서비스">
               <Link href="/website/">일반 홈페이지·랜딩페이지 제작</Link>
-              <Link href="/data-seo/">데이터·SEO 자동화 시스템 구축</Link>
-              <Link href="/service-renewal/">기존 서비스 개선·인수 개발</Link>
+              <Link href="/data-seo/" prefetch={false}>데이터·SEO 자동화 시스템 구축</Link>
+              <Link href="/service-renewal/" prefetch={false}>기존 서비스 개선·인수 개발</Link>
               <Link href="/portfolio/">개발 사례 전체 보기</Link>
             </nav>
           </div>

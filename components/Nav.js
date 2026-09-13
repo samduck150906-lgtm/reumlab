@@ -4,6 +4,17 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import serviceMenu from '../content/service-menu.json';
 
+// 이 경로들은 Next 빌드 뒤 별도 생성되는 완전한 정적 HTML이다.
+// Next의 RSC 프리패치를 허용하면 존재하지 않는 index.txt 요청이 발생한다.
+const STATIC_HTML_SERVICE_PATHS = new Set([
+  'erp',
+  'ai-automation',
+  'platform',
+  'reservation-commerce',
+  'data-seo',
+  'service-renewal',
+]);
+
 export default function Nav({ site }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -60,7 +71,7 @@ export default function Nav({ site }) {
                 </button>
                 <div className="next-service-menu__panel" role="menu">
                   {serviceMenu.items.map((item) => (
-                    <Link key={item.slug} href={`/${item.slug}/`} role="menuitem" onClick={() => setServiceOpen(false)}>
+                    <Link key={item.slug} href={`/${item.slug}/`} prefetch={!STATIC_HTML_SERVICE_PATHS.has(item.slug)} role="menuitem" onClick={() => setServiceOpen(false)}>
                       <b>{item.label}</b>
                       <span>{item.short}</span>
                     </Link>
@@ -105,7 +116,7 @@ export default function Nav({ site }) {
           <summary>서비스</summary>
           <div>
             {serviceMenu.items.map((item) => (
-              <Link key={item.slug} href={`/${item.slug}/`} onClick={closeMobile}>{item.label}</Link>
+              <Link key={item.slug} href={`/${item.slug}/`} prefetch={!STATIC_HTML_SERVICE_PATHS.has(item.slug)} onClick={closeMobile}>{item.label}</Link>
             ))}
           </div>
         </details>

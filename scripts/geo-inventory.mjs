@@ -176,8 +176,56 @@ if (existsSync(landingSource)) {
   }
 }
 
-const invHeaders = ['url','route_type','http_status','redirect_target','indexable','canonical','title','description','h1','language','template','content_source','approximate_visible_text_length','date_published','date_modified','schema_types','internal_inlinks','internal_outlinks','sitemap_included','rss_included','intent_cluster','possible_duplicate','entity_conflict','recommended_action'];
-writeCsv('url-inventory.csv', invHeaders, inventory);
+// 실행 지시서의 인벤토리 필드를 기존 열을 삭제하지 않고 앞에 추가한다.
+// HTTP 상태와 redirect는 정적 빌드 모델 검사이므로 운영 서버 실측과 구분한다.
+const verifiedAt = new Date().toISOString();
+const pageByUrl = new Map(pages.map((page) => [page.url, page]));
+const resolveTarget = (row) => {
+  if (!row.redirect_target) return row.url;
+  try { return new URL(row.redirect_target, ORIGIN).href; }
+  catch { return row.redirect_target; }
+};
+const enrichedInventory = inventory.map((row) => {
+  const page = pageByUrl.get(row.url);
+  const questions = page
+    ? [...page.html.matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/gi)]
+      .map((match) => strip(match[1]))
+      .filter((text) => /[?？]|(?:어떻게|무엇|왜|얼마|어느|언제)/.test(text))
+      .slice(0, 5)
+    : [];
+  const evidenceLinks = page
+    ? page.internal.filter((path) => /^\/(portfolio|guide|compare)\//.test(path)).slice(0, 10).map((path) => ORIGIN + path)
+    : [];
+  const isRedirect = row.route_type === 'redirect';
+  const action = row.entity_conflict === 'yes'
+    ? 'ENHANCE'
+    : row.possible_duplicate === 'yes'
+      ? 'REVIEW'
+      : 'KEEP';
+  return {
+    ...row,
+    final_url: resolveTarget(row),
+    page_type: row.route_type,
+    primary_intent: row.intent_cluster,
+    primary_entity: page?.h1 ? `${page.h1} | REUMLAB` : 'REUMLAB',
+    source_file_or_cms_id: row.content_source,
+    redirect_chain: isRedirect ? `${row.url} -> ${resolveTarget(row)}` : '',
+    indexability: isRedirect ? 'redirect' : row.indexable === 'yes' ? 'indexable' : 'noindex',
+    primary_questions: questions.join('|'),
+    evidence_links: evidenceLinks.join('|'),
+    inbound_internal_links: row.internal_inlinks,
+    outbound_internal_links: row.internal_outlinks,
+    content_overlap: row.possible_duplicate === 'yes' ? 'exact-duplicate-candidate' : row.possible_duplicate === 'resolved' ? 'resolved-by-redirect' : 'none-detected',
+    last_verified_at: verifiedAt,
+    risk_level: row.entity_conflict === 'yes' ? 'high' : row.possible_duplicate === 'yes' ? 'medium' : 'low',
+    recommended_action_detail: row.recommended_action,
+    recommended_action: action,
+    verification_status: isRedirect ? 'RESOLVED_EXISTING' : 'TESTED_LOCAL_BUILD',
+  };
+});
+const requiredHeaders = ['url','final_url','page_type','primary_intent','primary_entity','source_file_or_cms_id','http_status','redirect_chain','indexability','canonical','title','description','language','h1','schema_types','primary_questions','evidence_links','inbound_internal_links','outbound_internal_links','content_overlap','last_verified_at','risk_level','recommended_action','verification_status'];
+const legacyHeaders = ['route_type','redirect_target','indexable','template','content_source','approximate_visible_text_length','date_published','date_modified','internal_inlinks','internal_outlinks','sitemap_included','rss_included','intent_cluster','possible_duplicate','entity_conflict','recommended_action_detail'];
+writeCsv('url-inventory.csv', [...requiredHeaders, ...legacyHeaders], enrichedInventory);
 
 const scoreRows = pages.filter((p) => !p.noindex).map((page) => {
   const direct = page.h1 && page.text.indexOf(page.h1) >= 0 && page.text.slice(page.text.indexOf(page.h1) + page.h1.length, page.text.indexOf(page.h1) + page.h1.length + 500).length >= 120;

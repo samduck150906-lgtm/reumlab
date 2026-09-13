@@ -39,3 +39,12 @@ test('purpose landing hero cannot expand beyond a mobile viewport', () => {
   assert.match(css, /\.hero__cta \.btn\s*\{\s*flex:\s*1 1 100%/);
   assert.match(css, /\.lx-hero-stage\s*\{\s*width:\s*100%/);
 });
+
+test('hybrid static service links do not request missing RSC payloads', () => {
+  const nav = read('components/Nav.js');
+  const geo = read('app/geo-website/page.tsx');
+  assert.match(nav, /const STATIC_HTML_SERVICE_PATHS = new Set/);
+  assert.equal((nav.match(/prefetch=\{!STATIC_HTML_SERVICE_PATHS\.has\(item\.slug\)\}/g) || []).length, 2);
+  assert.match(geo, /href="\/data-seo\/" prefetch=\{false\}/);
+  assert.match(geo, /href="\/service-renewal\/" prefetch=\{false\}/);
+});
