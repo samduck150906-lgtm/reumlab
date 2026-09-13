@@ -25,8 +25,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['"Noto Sans KR"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
-        display: ['"Plus Jakarta Sans"', '"Noto Sans KR"', 'system-ui', 'sans-serif'],
+        sans: ['"Pretendard"', 'system-ui', 'sans-serif'],
+        display: ['"Pretendard"', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         card: '0 1px 0 rgba(15, 31, 58, 0.06), 0 12px 40px rgba(10, 22, 40, 0.08)',

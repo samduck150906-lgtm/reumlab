@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ko">
       <head>
-        {/* 텍스트가 LCP 요소이므로 외부 웹폰트 요청 없이 OS 한글 시스템 글꼴을 쓴다. */}
+        {/* Pretendard is self-hosted with font-display: swap; no remote font dependency. */}
         <meta name="theme-color" content="#0f1f3a" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link

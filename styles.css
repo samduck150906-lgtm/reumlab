@@ -2,7 +2,14 @@
    REUMLAB · 름랩 — premium B2B dev-studio landing
    ============================================================ */
 
-/* 첫 화면 텍스트 LCP를 막는 외부 웹폰트 없이 OS 한글 시스템 글꼴을 사용한다. */
+/* Official Pretendard v1.3.9, self-hosted for consistent Korean typography. */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/PretendardVariable-1.3.9.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 45 920;
+  font-display: swap;
+}
 
 :root {
   /* color */
@@ -24,8 +31,8 @@
   --white:     #ffffff;
 
   /* type */
-  --sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic",
-          "Noto Sans KR", system-ui, sans-serif;
+  --sans: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+          "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 
   /* shape */
   --r-sm: 10px;

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 
 const read = (path: string) => readFileSync(path, 'utf8');
 
@@ -65,4 +65,19 @@ test('static legal pages do not trigger missing Next RSC prefetches', () => {
     assert.doesNotMatch(footer, new RegExp(`<Link href="/${path}/">`));
     assert.match(footer, new RegExp(`<a href="/${path}/">`));
   }
+});
+
+test('public routes use one self-hosted Pretendard variable font', () => {
+  const homeCss = read('styles.css');
+  const nextCss = read('app/globals.css');
+  const legacyCss = read('reum.css');
+  const fontPath = 'public/fonts/PretendardVariable-1.3.9.woff2';
+
+  assert.equal(existsSync(fontPath), true);
+  assert.ok(statSync(fontPath).size > 2_000_000 && statSync(fontPath).size < 2_100_000);
+  assert.match(homeCss, /font-family:\s*"Pretendard"/);
+  assert.match(nextCss, /font-family:\s*'Pretendard'/);
+  assert.match(homeCss, /font-display:\s*swap/);
+  assert.match(nextCss, /font-display:\s*swap/);
+  assert.doesNotMatch(legacyCss, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
 });

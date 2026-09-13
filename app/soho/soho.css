@@ -178,7 +178,7 @@
   pointer-events: none;
 }
 .soho .s-brand {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: 0.24em;
   font-size: 13px;
@@ -431,7 +431,7 @@
 .soho .s-feat { --f: var(--green-bright); }
 .soho .s-feat:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--f) 45%, var(--c-line)); }
 .soho .s-feat-no {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 0.12em;

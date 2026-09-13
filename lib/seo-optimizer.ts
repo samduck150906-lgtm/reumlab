@@ -310,7 +310,6 @@ ${JSON.stringify(this.generateFAQSchema(post.faqs), null, 2)}
 }
 
 <!-- Performance & Speed -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
