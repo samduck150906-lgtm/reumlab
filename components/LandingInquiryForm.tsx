@@ -214,7 +214,7 @@ export default function LandingInquiryForm({
       {UTM_KEYS.map((k) => (
         <input key={k} type="hidden" name={k} value={utm[k] || ''} />
       ))}
-      <p className="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+      <p className="netlify-honeypot" aria-hidden="true">
         <label>
           이 칸은 비워두세요 <input name="bot-field" tabIndex={-1} autoComplete="off" />
         </label>

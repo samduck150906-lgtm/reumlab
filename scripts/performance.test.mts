@@ -48,3 +48,21 @@ test('hybrid static service links do not request missing RSC payloads', () => {
   assert.match(geo, /href="\/data-seo\/" prefetch=\{false\}/);
   assert.match(geo, /href="\/service-renewal\/" prefetch=\{false\}/);
 });
+
+test('Next inquiry honeypot stays in the payload but never appears to visitors', () => {
+  const form = read('components/LandingInquiryForm.tsx');
+  const css = read('app/globals.css');
+  assert.match(form, /data-netlify-honeypot="bot-field"/);
+  assert.match(form, /className="netlify-honeypot"/);
+  assert.match(form, /name="bot-field" tabIndex=\{-1\}/);
+  assert.match(css, /\.netlify-honeypot\s*\{[^}]*position:\s*absolute\s*!important/s);
+  assert.match(css, /\.netlify-honeypot\s*\{[^}]*clip-path:\s*inset\(50%\)\s*!important/s);
+});
+
+test('static legal pages do not trigger missing Next RSC prefetches', () => {
+  const footer = read('components/BusinessFooter.tsx');
+  for (const path of ['privacy', 'terms', 'refund']) {
+    assert.doesNotMatch(footer, new RegExp(`<Link href="/${path}/">`));
+    assert.match(footer, new RegExp(`<a href="/${path}/">`));
+  }
+});

@@ -59,9 +59,10 @@ export default function BusinessFooter({ topExtra }: Props) {
           ))}
         </nav>
         <nav aria-label="법적 고지" style={{ marginTop: 14, display: 'flex', flexWrap: 'wrap', gap: '6px 16px', fontSize: 13 }}>
-          <Link href="/privacy/">개인정보처리방침</Link>
-          <Link href="/terms/">이용약관</Link>
-          <Link href="/refund/">환불정책</Link>
+          {/* These are separately generated static HTML pages, so Next RSC prefetch must not run. */}
+          <a href="/privacy/">개인정보처리방침</a>
+          <a href="/terms/">이용약관</a>
+          <a href="/refund/">환불정책</a>
         </nav>
       </div>
     </footer>
