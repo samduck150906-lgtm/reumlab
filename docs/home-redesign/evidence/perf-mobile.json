@@ -1,0 +1,285 @@
+{
+  "viewport": "mobile",
+  "runsPerSide": 5,
+  "measuredAt": "2026-09-14T08:49:51.939Z",
+  "environment": "로컬 컨테이너 · Chromium(Playwright) · 외부 요청 차단 · 네트워크 스로틀 없음 · 매회 빈 캐시",
+  "notRun": {
+    "lighthouseScore": "NOT RUN — Lighthouse 미설치",
+    "fieldINP": "데이터 없음 — 실사용자 데이터 없이 현장 INP 를 산출할 수 없다. long task 합계로 대체하지 않는다.",
+    "throttledNetwork": "NOT RUN — 네트워크/CPU 스로틀 조건은 측정하지 않았다"
+  },
+  "before": {
+    "label": "before",
+    "base": "http://127.0.0.1:4321",
+    "runs": [
+      {
+        "lcp": 500,
+        "cls": 0,
+        "longTasksOver50ms": 408,
+        "longTaskCount": 2,
+        "fcp": 500,
+        "domContentLoaded": 477,
+        "loadEvent": 535.2,
+        "bytes": {
+          "css": 84125,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2257083
+        }
+      },
+      {
+        "lcp": 320,
+        "cls": 0,
+        "longTasksOver50ms": 249,
+        "longTaskCount": 2,
+        "fcp": 320,
+        "domContentLoaded": 307.6,
+        "loadEvent": 379.4,
+        "bytes": {
+          "css": 84125,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2257083
+        }
+      },
+      {
+        "lcp": 336,
+        "cls": 0,
+        "longTasksOver50ms": 249,
+        "longTaskCount": 2,
+        "fcp": 336,
+        "domContentLoaded": 312.4,
+        "loadEvent": 365.9,
+        "bytes": {
+          "css": 84125,
+          "js": 33336,
+          "img": 69792,
+          "font": 2057988,
+          "other": 0,
+          "total": 2245241
+        }
+      },
+      {
+        "lcp": 380,
+        "cls": 0,
+        "longTasksOver50ms": 293,
+        "longTaskCount": 2,
+        "fcp": 380,
+        "domContentLoaded": 367.1,
+        "loadEvent": 409.1,
+        "bytes": {
+          "css": 84125,
+          "js": 33336,
+          "img": 69792,
+          "font": 2057988,
+          "other": 0,
+          "total": 2245241
+        }
+      },
+      {
+        "lcp": 324,
+        "cls": 0,
+        "longTasksOver50ms": 269,
+        "longTaskCount": 2,
+        "fcp": 324,
+        "domContentLoaded": 319.4,
+        "loadEvent": 398.9,
+        "bytes": {
+          "css": 84125,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2257083
+        }
+      }
+    ],
+    "median": {
+      "lcp": 336,
+      "cls": 0,
+      "fcp": 336,
+      "loadEvent": 398.9,
+      "longTasksOver50ms": 269,
+      "bytesCss": 84125,
+      "bytesJs": 33336,
+      "bytesImg": 81634,
+      "bytesFont": 2057988,
+      "bytesTotal": 2257083
+    },
+    "stdev": {
+      "lcp": 67.5,
+      "cls": 0,
+      "longTasksOver50ms": 59.4
+    }
+  },
+  "after": {
+    "label": "after",
+    "base": "http://127.0.0.1:4322",
+    "runs": [
+      {
+        "lcp": 348,
+        "cls": 0,
+        "longTasksOver50ms": 268,
+        "longTaskCount": 2,
+        "fcp": 348,
+        "domContentLoaded": 327.9,
+        "loadEvent": 387.8,
+        "bytes": {
+          "css": 93338,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2266296
+        }
+      },
+      {
+        "lcp": 372,
+        "cls": 0,
+        "longTasksOver50ms": 283,
+        "longTaskCount": 2,
+        "fcp": 372,
+        "domContentLoaded": 353.1,
+        "loadEvent": 412.2,
+        "bytes": {
+          "css": 93338,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2266296
+        }
+      },
+      {
+        "lcp": 320,
+        "cls": 0,
+        "longTasksOver50ms": 235,
+        "longTaskCount": 2,
+        "fcp": 320,
+        "domContentLoaded": 319.1,
+        "loadEvent": 352.4,
+        "bytes": {
+          "css": 93338,
+          "js": 33336,
+          "img": 81634,
+          "font": 2057988,
+          "other": 0,
+          "total": 2266296
+        }
+      },
+      {
+        "lcp": 348,
+        "cls": 0,
+        "longTasksOver50ms": 297,
+        "longTaskCount": 2,
+        "fcp": 348,
+        "domContentLoaded": 371.6,
+        "loadEvent": 421.8,
+        "bytes": {
+          "css": 93338,
+          "js": 33336,
+          "img": 69792,
+          "font": 2057988,
+          "other": 0,
+          "total": 2254454
+        }
+      },
+      {
+        "lcp": 344,
+        "cls": 0,
+        "longTasksOver50ms": 288,
+        "longTaskCount": 2,
+        "fcp": 344,
+        "domContentLoaded": 343.1,
+        "loadEvent": 418.7,
+        "bytes": {
+          "css": 93338,
+          "js": 33336,
+          "img": 69792,
+          "font": 2057988,
+          "other": 0,
+          "total": 2254454
+        }
+      }
+    ],
+    "median": {
+      "lcp": 348,
+      "cls": 0,
+      "fcp": 348,
+      "loadEvent": 412.2,
+      "longTasksOver50ms": 283,
+      "bytesCss": 93338,
+      "bytesJs": 33336,
+      "bytesImg": 81634,
+      "bytesFont": 2057988,
+      "bytesTotal": 2266296
+    },
+    "stdev": {
+      "lcp": 16.5,
+      "cls": 0,
+      "longTasksOver50ms": 21.7
+    }
+  },
+  "comparison": [
+    {
+      "metric": "LCP(ms)",
+      "before": 336,
+      "after": 348,
+      "deltaPct": 3.6,
+      "warnIf": "+10% 이상 악화",
+      "warn": false
+    },
+    {
+      "metric": "CLS",
+      "before": 0,
+      "after": 0,
+      "delta": 0,
+      "warnIf": "+0.02 이상 증가",
+      "warn": false
+    },
+    {
+      "metric": "long task >50ms 합(ms)",
+      "before": 269,
+      "after": 283,
+      "deltaPct": 5.2,
+      "warnIf": "+10% 이상 악화(기준값 0이면 절대값으로 판단)",
+      "warn": false
+    },
+    {
+      "metric": "CSS 전송(byte)",
+      "before": 84125,
+      "after": 93338,
+      "deltaPct": 11,
+      "warnIf": "증가 기록",
+      "warn": true
+    },
+    {
+      "metric": "JS 전송(byte)",
+      "before": 33336,
+      "after": 33336,
+      "deltaPct": 0,
+      "warnIf": "초기 JS 증가 금지",
+      "warn": false
+    },
+    {
+      "metric": "이미지 전송(byte)",
+      "before": 81634,
+      "after": 81634,
+      "deltaPct": 0,
+      "warnIf": "증가 기록",
+      "warn": false
+    },
+    {
+      "metric": "전체 전송(byte)",
+      "before": 2257083,
+      "after": 2266296,
+      "deltaPct": 0.4,
+      "warnIf": "증가 기록",
+      "warn": true
+    }
+  ]
+}

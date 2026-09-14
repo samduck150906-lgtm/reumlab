@@ -1,0 +1,192 @@
+{
+  "summary": {
+    "samples": 15,
+    "checks": 30,
+    "pass": 30,
+    "fail": 0,
+    "verdict": "PASS",
+    "note": "표본 검사다. 전체 1,349개 페이지 전수 검사가 아니다."
+  },
+  "rows": [
+    {
+      "status": "PASS",
+      "path": "/mvp/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/mvp/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/erp/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/erp/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/website/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/website/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (purpose-landing(styles.css 공유))"
+    },
+    {
+      "status": "PASS",
+      "path": "/portfolio/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/portfolio/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/source-handover/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/source-handover/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/app-development/dongtan/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router(지역×서비스))"
+    },
+    {
+      "status": "PASS",
+      "path": "/app-development/dongtan/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router(지역×서비스))"
+    },
+    {
+      "status": "PASS",
+      "path": "/guide/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/guide/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/blog/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/blog/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/cost/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/cost/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/soho/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router(전용 CSS))"
+    },
+    {
+      "status": "PASS",
+      "path": "/soho/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router(전용 CSS))"
+    },
+    {
+      "status": "PASS",
+      "path": "/geo-website/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router(CSS module))"
+    },
+    {
+      "status": "PASS",
+      "path": "/geo-website/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router(CSS module))"
+    },
+    {
+      "status": "PASS",
+      "path": "/enterprise-ai/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/enterprise-ai/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/app/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/app/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (Next app router)"
+    },
+    {
+      "status": "PASS",
+      "path": "/privacy/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (정적 법적 고지)"
+    },
+    {
+      "status": "PASS",
+      "path": "/privacy/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (정적 법적 고지)"
+    },
+    {
+      "status": "PASS",
+      "path": "/terms/",
+      "area": "1280px",
+      "detail": "렌더 계산값 동일 (정적 법적 고지)"
+    },
+    {
+      "status": "PASS",
+      "path": "/terms/",
+      "area": "390px",
+      "detail": "렌더 계산값 동일 (정적 법적 고지)"
+    }
+  ]
+}

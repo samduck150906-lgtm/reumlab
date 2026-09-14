@@ -1,0 +1,2975 @@
+{
+  "label": "before",
+  "base": "http://127.0.0.1:4321",
+  "startedAt": "2026-09-14T08:46:22.770Z",
+  "pages": {
+    "/mvp/": {
+      "390": {
+        "title": "앱·SaaS MVP 개발 — 아이디어를 실제 서비스로 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/mvp/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "mvp"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "앱·웹 MVP 개발아이디어를 직접 써볼 수 있는 서비스로"
+        ],
+        "headingCount": 28,
+        "linkCount": 102,
+        "bodyTextLength": 5522,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 390,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "0px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 390,
+              "h": 1140.69
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 112.17
+            },
+            "fontSize": "34px",
+            "lineHeight": "37.4px",
+            "letterSpacing": "-1.36px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 342,
+              "h": 34.16
+            },
+            "fontSize": "28px",
+            "lineHeight": "34.16px",
+            "letterSpacing": "-0.84px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 14px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 390,
+              "h": 904.88
+            },
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 390,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 340,
+              "h": 94.75
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 16090.7
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "1280": {
+        "title": "앱·SaaS MVP 개발 — 아이디어를 실제 서비스로 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/mvp/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "mvp"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "17px",
+          "lineHeight": "28.9px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "앱·웹 MVP 개발아이디어를 직접 써볼 수 있는 서비스로"
+        ],
+        "headingCount": 28,
+        "linkCount": 102,
+        "bodyTextLength": 5511,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 1180,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "50px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 1280,
+              "h": 676.97
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 846.61,
+              "h": 132
+            },
+            "fontSize": "60px",
+            "lineHeight": "66px",
+            "letterSpacing": "-2.4px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 544,
+              "h": 51.23
+            },
+            "fontSize": "42px",
+            "lineHeight": "51.24px",
+            "letterSpacing": "-1.26px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 143.66,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 18px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 147.06,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 1280,
+              "h": 631.13
+            },
+            "paddingTop": "104px",
+            "paddingBottom": "104px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 1280,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 878,
+              "h": 69.38
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 10120.2
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "template": "purpose-landing(styles.css 공유)"
+    },
+    "/erp/": {
+      "390": {
+        "title": "ERP·운영관리 시스템 개발 — 흩어진 업무를 하나로 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/erp/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "erp"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "맞춤형 ERP·관리 시스템 개발엑셀과 반복 입력을 우리 회사 운영 시스템으로"
+        ],
+        "headingCount": 27,
+        "linkCount": 92,
+        "bodyTextLength": 5295,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 390,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "0px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 390,
+              "h": 1145.41
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 149.56
+            },
+            "fontSize": "34px",
+            "lineHeight": "37.4px",
+            "letterSpacing": "-1.36px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 342,
+              "h": 34.16
+            },
+            "fontSize": "28px",
+            "lineHeight": "34.16px",
+            "letterSpacing": "-0.84px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 14px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 390,
+              "h": 986.67
+            },
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 390,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 340,
+              "h": 94.75
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 15453.42
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "1280": {
+        "title": "ERP·운영관리 시스템 개발 — 흩어진 업무를 하나로 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/erp/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "erp"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "17px",
+          "lineHeight": "28.9px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "맞춤형 ERP·관리 시스템 개발엑셀과 반복 입력을 우리 회사 운영 시스템으로"
+        ],
+        "headingCount": 27,
+        "linkCount": 92,
+        "bodyTextLength": 5284,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 1180,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "50px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 1280,
+              "h": 651.72
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 1006.02,
+              "h": 132
+            },
+            "fontSize": "60px",
+            "lineHeight": "66px",
+            "letterSpacing": "-2.4px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 544,
+              "h": 51.23
+            },
+            "fontSize": "42px",
+            "lineHeight": "51.24px",
+            "letterSpacing": "-1.26px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 143.66,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 18px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 147.06,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 1280,
+              "h": 631.13
+            },
+            "paddingTop": "104px",
+            "paddingBottom": "104px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 1280,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 878,
+              "h": 69.38
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 9364.47
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "template": "purpose-landing(styles.css 공유)"
+    },
+    "/website/": {
+      "390": {
+        "title": "홈페이지·랜딩페이지 제작 — 문의가 들어오는 구조 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/website/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "web"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "홈페이지·랜딩페이지 제작예쁜 사이트를 넘어 문의가 들어오는 구조로"
+        ],
+        "headingCount": 25,
+        "linkCount": 105,
+        "bodyTextLength": 4866,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 390,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "0px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 390,
+              "h": 1133.27
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 112.17
+            },
+            "fontSize": "34px",
+            "lineHeight": "37.4px",
+            "letterSpacing": "-1.36px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 342,
+              "h": 34.16
+            },
+            "fontSize": "28px",
+            "lineHeight": "34.16px",
+            "letterSpacing": "-0.84px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 14px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 0,
+              "h": 0
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 390,
+              "h": 926.88
+            },
+            "paddingTop": "72px",
+            "paddingBottom": "72px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 390,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 340,
+              "h": 94.75
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 14287.73
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "1280": {
+        "title": "홈페이지·랜딩페이지 제작 — 문의가 들어오는 구조 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/website/",
+        "robots": null,
+        "stylesheets": [
+          "/styles.css"
+        ],
+        "bodyAttrs": {
+          "data-page-type": "service",
+          "data-service": "web"
+        },
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "17px",
+          "lineHeight": "28.9px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(255, 255, 255)"
+        },
+        "h1": [
+          "홈페이지·랜딩페이지 제작예쁜 사이트를 넘어 문의가 들어오는 구조로"
+        ],
+        "headingCount": 25,
+        "linkCount": 105,
+        "bodyTextLength": 4855,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 1180,
+              "h": 70
+            },
+            "maxWidth": "1180px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "50px"
+          },
+          ".hero": {
+            "_box": {
+              "w": 1280,
+              "h": 651.72
+            },
+            "paddingTop": "96px",
+            "paddingBottom": "46px",
+            "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 945.81,
+              "h": 132
+            },
+            "fontSize": "60px",
+            "lineHeight": "66px",
+            "letterSpacing": "-2.4px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 544,
+              "h": 51.23
+            },
+            "fontSize": "42px",
+            "lineHeight": "51.24px",
+            "letterSpacing": "-1.26px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": {
+            "_box": {
+              "w": 143.66,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(40, 94, 219)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "0px 18px"
+          },
+          ".btn--ghost": {
+            "_box": {
+              "w": 147.06,
+              "h": 44
+            },
+            "minHeight": "44px",
+            "fontSize": "15px",
+            "borderRadius": "12px",
+            "backgroundColor": "rgb(255, 255, 255)",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".section": {
+            "_box": {
+              "w": 1280,
+              "h": 631.13
+            },
+            "paddingTop": "104px",
+            "paddingBottom": "104px"
+          },
+          ".logo": {
+            "_box": {
+              "w": 164.91,
+              "h": 31.44
+            },
+            "fontSize": "18.5px",
+            "fontWeight": "800",
+            "letterSpacing": "-0.555px",
+            "color": "rgb(11, 27, 51)",
+            "gap": "10px"
+          },
+          ".logo__mark": {
+            "_box": {
+              "w": 30,
+              "h": 30
+            },
+            "width": "30px",
+            "height": "30px",
+            "filter": "none",
+            "opacity": "1",
+            "objectFit": "contain"
+          },
+          ".header": {
+            "_box": {
+              "w": 1280,
+              "h": 71
+            },
+            "height": "71px",
+            "paddingTop": "0px",
+            "paddingBottom": "0px",
+            "backgroundColor": "rgba(255, 255, 255, 0.82)",
+            "position": "sticky"
+          },
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 878,
+              "h": 69.38
+            },
+            "fontSize": "17.5px",
+            "minHeight": "0px",
+            "padding": "22px 24px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 9275.11
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#fff",
+          "--bg-soft": "#f4f6fa",
+          "--ink": "#0b1b33",
+          "--ink-2": "#51607a",
+          "--ink-3": "#61708a",
+          "--accent": "#285edb",
+          "--accent-d": "#1f4fd6",
+          "--line": "#e3e8f1",
+          "--maxw": "1180px",
+          "--gutter": "24px",
+          "--r": "16px",
+          "--r-lg": "22px",
+          "--sans": "\"Pretendard\",-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",\"Malgun Gothic\",system-ui,sans-serif"
+        },
+        "status": 200,
+        "pageErrors": [
+          "updateMobileCta is not defined"
+        ]
+      },
+      "template": "purpose-landing(styles.css 공유)"
+    },
+    "/portfolio/": {
+      "390": {
+        "title": "개발 사례 15건 — 앱·웹·ERP·AI 실제 구축 내역 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/portfolio/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/aff8f84bcdab972d.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "서비스 이름보다, 해결한 문제를 보여드립니다"
+        ],
+        "headingCount": 19,
+        "linkCount": 77,
+        "bodyTextLength": 3606,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 350,
+              "h": 67.59
+            },
+            "fontSize": "26px",
+            "lineHeight": "33.8px",
+            "letterSpacing": "-0.52px",
+            "fontWeight": "700",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 7716.94
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "개발 사례 15건 — 앱·웹·ERP·AI 실제 구축 내역 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/portfolio/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/aff8f84bcdab972d.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "서비스 이름보다, 해결한 문제를 보여드립니다"
+        ],
+        "headingCount": 19,
+        "linkCount": 77,
+        "bodyTextLength": 3642,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 940,
+              "h": 49.39
+            },
+            "fontSize": "38px",
+            "lineHeight": "49.4px",
+            "letterSpacing": "-0.76px",
+            "fontWeight": "700",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 3481.23
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/source-handover/": {
+      "390": {
+        "title": "소스코드 이관 외주 | 저장소·배포 권한 인수 조건 — 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/source-handover/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "소스코드 이관 — 외주에 묶이지 않게"
+        ],
+        "headingCount": 8,
+        "linkCount": 66,
+        "bodyTextLength": 2204,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": {
+            "_box": {
+              "w": 390,
+              "h": 732.36
+            },
+            "paddingTop": "120px",
+            "paddingBottom": "64px",
+            "background": "radial-gradient(700px 420px at 84% 8%, rgba(40, 94, 219, 0.12), rgba(0, 0, 0, 0) 68%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(170deg, rgb(255, 255, 255), rgb(245, 248, 253) 54%, rgb(237, 243, 255)) repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 354,
+              "h": 35
+            },
+            "fontSize": "28px",
+            "lineHeight": "35px",
+            "letterSpacing": "-3px",
+            "fontWeight": "800",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 354,
+              "h": 25.3
+            },
+            "fontSize": "22px",
+            "lineHeight": "25.3px",
+            "letterSpacing": "-1.5px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 300,
+              "h": 23.8
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 5006.31
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "소스코드 이관 외주 | 저장소·배포 권한 인수 조건 — 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/source-handover/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "소스코드 이관 — 외주에 묶이지 않게"
+        ],
+        "headingCount": 8,
+        "linkCount": 66,
+        "bodyTextLength": 2240,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": {
+            "_box": {
+              "w": 1280,
+              "h": 535.48
+            },
+            "paddingTop": "120px",
+            "paddingBottom": "64px",
+            "background": "radial-gradient(700px 420px at 84% 8%, rgba(40, 94, 219, 0.12), rgba(0, 0, 0, 0) 68%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(170deg, rgb(255, 255, 255), rgb(245, 248, 253) 54%, rgb(237, 243, 255)) repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 720,
+              "h": 52.5
+            },
+            "fontSize": "42px",
+            "lineHeight": "52.5px",
+            "letterSpacing": "-3px",
+            "fontWeight": "800",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": {
+            "_box": {
+              "w": 744,
+              "h": 32.19
+            },
+            "fontSize": "28px",
+            "lineHeight": "32.2px",
+            "letterSpacing": "-1.5px",
+            "fontWeight": "800",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 310,
+              "h": 23.8
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 3373.52
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/app-development/dongtan/": {
+      "390": {
+        "title": "동탄 앱개발 외주 | iOS·안드로이드 동시 제작 — 름랩",
+        "canonical": "https://reumlab.com/app-development/dongtan/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "동탄 앱개발 외주"
+        ],
+        "headingCount": 14,
+        "linkCount": 86,
+        "bodyTextLength": 2853,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 32.39
+            },
+            "fontSize": "24px",
+            "lineHeight": "32.4px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 288,
+              "h": 47.59
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 5356.47
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "동탄 앱개발 외주 | iOS·안드로이드 동시 제작 — 름랩",
+        "canonical": "https://reumlab.com/app-development/dongtan/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "동탄 앱개발 외주"
+        ],
+        "headingCount": 14,
+        "linkCount": 86,
+        "bodyTextLength": 2889,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 45.34
+            },
+            "fontSize": "33.6px",
+            "lineHeight": "45.36px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 314,
+              "h": 47.59
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 3768.81
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router(지역×서비스)"
+    },
+    "/guide/": {
+      "390": {
+        "title": "개발 가이드 모음 | 비용·업종별 앱 만들기 — 름랩",
+        "canonical": "https://reumlab.com/guide/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "개발 가이드 모음 — 비용·견적·업종별 앱 만들기"
+        ],
+        "headingCount": 7,
+        "linkCount": 156,
+        "bodyTextLength": 2791,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 64.78
+            },
+            "fontSize": "24px",
+            "lineHeight": "32.4px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 7815.03
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "개발 가이드 모음 | 비용·업종별 앱 만들기 — 름랩",
+        "canonical": "https://reumlab.com/guide/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "개발 가이드 모음 — 비용·견적·업종별 앱 만들기"
+        ],
+        "headingCount": 7,
+        "linkCount": 156,
+        "bodyTextLength": 2827,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 45.34
+            },
+            "fontSize": "33.6px",
+            "lineHeight": "45.36px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 3861.53
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/blog/": {
+      "390": {
+        "title": "블로그 | 앱개발 비용·MVP·Flutter·홈페이지 제작 실무 칼럼 | 름랩",
+        "canonical": "https://reumlab.com/blog/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "앱·웹 개발 실무 칼럼"
+        ],
+        "headingCount": 11,
+        "linkCount": 71,
+        "bodyTextLength": 2135,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": {
+            "_box": {
+              "w": 390,
+              "h": 367.8
+            },
+            "paddingTop": "120px",
+            "paddingBottom": "40px",
+            "background": "radial-gradient(700px 420px at 84% 8%, rgba(40, 94, 219, 0.12), rgba(0, 0, 0, 0) 68%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(170deg, rgb(255, 255, 255), rgb(245, 248, 253) 54%, rgb(237, 243, 255)) repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 354,
+              "h": 30.23
+            },
+            "fontSize": "28px",
+            "lineHeight": "30.24px",
+            "letterSpacing": "-3px",
+            "fontWeight": "800",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 4432.66
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "블로그 | 앱개발 비용·MVP·Flutter·홈페이지 제작 실무 칼럼 | 름랩",
+        "canonical": "https://reumlab.com/blog/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "앱·웹 개발 실무 칼럼"
+        ],
+        "headingCount": 11,
+        "linkCount": 71,
+        "bodyTextLength": 2171,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": {
+            "_box": {
+              "w": 1280,
+              "h": 351.36
+            },
+            "paddingTop": "120px",
+            "paddingBottom": "40px",
+            "background": "radial-gradient(700px 420px at 84% 8%, rgba(40, 94, 219, 0.12), rgba(0, 0, 0, 0) 68%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(170deg, rgb(255, 255, 255), rgb(245, 248, 253) 54%, rgb(237, 243, 255)) repeat scroll 0% 0% / auto padding-box border-box"
+          },
+          "h1": {
+            "_box": {
+              "w": 720,
+              "h": 43.19
+            },
+            "fontSize": "40px",
+            "lineHeight": "43.2px",
+            "letterSpacing": "-3px",
+            "fontWeight": "800",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 2212.7
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/cost/": {
+      "390": {
+        "title": "업종별 앱 개발 비용 112개 업종 | 가격대·견적 기준 — 름랩",
+        "canonical": "https://reumlab.com/cost/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "업종별 앱 개발 비용 — 112개 업종 가격대·견적 기준"
+        ],
+        "headingCount": 5,
+        "linkCount": 523,
+        "bodyTextLength": 11888,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 64.78
+            },
+            "fontSize": "24px",
+            "lineHeight": "32.4px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 19313.81
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "업종별 앱 개발 비용 112개 업종 | 가격대·견적 기준 — 름랩",
+        "canonical": "https://reumlab.com/cost/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "업종별 앱 개발 비용 — 112개 업종 가격대·견적 기준"
+        ],
+        "headingCount": 5,
+        "linkCount": 523,
+        "bodyTextLength": 11924,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 45.34
+            },
+            "fontSize": "33.6px",
+            "lineHeight": "45.36px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 13798.72
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/soho/": {
+      "390": {
+        "title": "검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/soho/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/296857d5289b7d9f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "소상공인 홈페이지 제작광고 없이 검색으로 손님이 찾아오게"
+        ],
+        "headingCount": 23,
+        "linkCount": 74,
+        "bodyTextLength": 3795,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 346,
+              "h": 109.78
+            },
+            "fontSize": "30px",
+            "lineHeight": "36.6px",
+            "letterSpacing": "-0.6px",
+            "fontWeight": "900",
+            "color": "rgb(238, 243, 238)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 12836.97
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/soho/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/296857d5289b7d9f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "소상공인 홈페이지 제작광고 없이 검색으로 손님이 찾아오게"
+        ],
+        "headingCount": 23,
+        "linkCount": 74,
+        "bodyTextLength": 3831,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 776,
+              "h": 136.63
+            },
+            "fontSize": "56px",
+            "lineHeight": "68.32px",
+            "letterSpacing": "-1.12px",
+            "fontWeight": "900",
+            "color": "rgb(238, 243, 238)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 11934.56
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router(전용 CSS)"
+    },
+    "/geo-website/": {
+      "390": {
+        "title": "GEO 홈페이지 제작 | AI 검색을 고려한 웹사이트 개발 · 름랩",
+        "canonical": "https://reumlab.com/geo-website/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/3553914908b04b4a.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "AI 검색까지 고려한GEO 홈페이지 제작"
+        ],
+        "headingCount": 33,
+        "linkCount": 75,
+        "bodyTextLength": 5452,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 358,
+              "h": 85.78
+            },
+            "fontSize": "39px",
+            "lineHeight": "42.9px",
+            "letterSpacing": "-2.145px",
+            "fontWeight": "700",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 14162.63
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "GEO 홈페이지 제작 | AI 검색을 고려한 웹사이트 개발 · 름랩",
+        "canonical": "https://reumlab.com/geo-website/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css",
+          "/_next/static/css/3553914908b04b4a.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "AI 검색까지 고려한GEO 홈페이지 제작"
+        ],
+        "headingCount": 33,
+        "linkCount": 75,
+        "bodyTextLength": 5488,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 591.36,
+              "h": 145.19
+            },
+            "fontSize": "66px",
+            "lineHeight": "72.6px",
+            "letterSpacing": "-3.63px",
+            "fontWeight": "700",
+            "color": "rgb(11, 27, 51)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 9591.41
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router(CSS module)"
+    },
+    "/enterprise-ai/": {
+      "390": {
+        "title": "사내 AI 구축 | 사내 지식검색·RAG 개발 | 름랩",
+        "canonical": "https://reumlab.com/enterprise-ai/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "우리 회사 자료로 답하는 사내 AI 구축"
+        ],
+        "headingCount": 34,
+        "linkCount": 94,
+        "bodyTextLength": 12243,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 64.78
+            },
+            "fontSize": "24px",
+            "lineHeight": "32.4px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 288,
+              "h": 23.8
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 21298.33
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "사내 AI 구축 | 사내 지식검색·RAG 개발 | 름랩",
+        "canonical": "https://reumlab.com/enterprise-ai/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "우리 회사 자료로 답하는 사내 AI 구축"
+        ],
+        "headingCount": 34,
+        "linkCount": 94,
+        "bodyTextLength": 12279,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 45.34
+            },
+            "fontSize": "33.6px",
+            "lineHeight": "45.36px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": {
+            "_box": {
+              "w": 698,
+              "h": 23.8
+            },
+            "fontSize": "14px",
+            "minHeight": "0px",
+            "padding": "0px"
+          },
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 15068.5
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/app/": {
+      "390": {
+        "title": "업종별 앱 개발 100개 업종 | 기능·비용·솔루션 한눈에 — 름랩",
+        "canonical": "https://reumlab.com/app/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "업종별 앱 개발 — 100개 업종 맞춤 MVP·솔루션"
+        ],
+        "headingCount": 5,
+        "linkCount": 526,
+        "bodyTextLength": 6612,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 64.78
+            },
+            "fontSize": "24px",
+            "lineHeight": "32.4px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 14204.28
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "업종별 앱 개발 100개 업종 | 기능·비용·솔루션 한눈에 — 름랩",
+        "canonical": "https://reumlab.com/app/",
+        "robots": "index, follow",
+        "stylesheets": [
+          "/_next/static/css/88b14ea03486e17f.css"
+        ],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "16px",
+          "lineHeight": "27.2px",
+          "color": "rgb(11, 27, 51)",
+          "background": "rgb(247, 249, 252)"
+        },
+        "h1": [
+          "업종별 앱 개발 — 100개 업종 맞춤 MVP·솔루션"
+        ],
+        "headingCount": 5,
+        "linkCount": 526,
+        "bodyTextLength": 6648,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": null,
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 45.34
+            },
+            "fontSize": "33.6px",
+            "lineHeight": "45.36px",
+            "letterSpacing": "normal",
+            "fontWeight": "700",
+            "color": "rgb(10, 24, 48)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": null,
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 12508.44
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f7f9fc",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "Next app router"
+    },
+    "/privacy/": {
+      "390": {
+        "title": "개인정보처리방침 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/privacy/",
+        "robots": null,
+        "stylesheets": [],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "26.25px",
+          "color": "rgb(26, 46, 32)",
+          "background": "rgb(244, 241, 232)"
+        },
+        "h1": [
+          "개인정보처리방침"
+        ],
+        "headingCount": 12,
+        "linkCount": 6,
+        "bodyTextLength": 2030,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 390,
+              "h": 3321.25
+            },
+            "maxWidth": "800px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "0px"
+          },
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 45.5
+            },
+            "fontSize": "26px",
+            "lineHeight": "45.5px",
+            "letterSpacing": "normal",
+            "fontWeight": "800",
+            "color": "rgb(22, 43, 30)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": {
+            "_box": {
+              "w": 87,
+              "h": 31.5
+            },
+            "fontSize": "18px",
+            "fontWeight": "800",
+            "letterSpacing": "normal",
+            "color": "rgb(22, 43, 30)",
+            "gap": "normal"
+          },
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 3381.75
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f4f1e8",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "개인정보처리방침 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/privacy/",
+        "robots": null,
+        "stylesheets": [],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "26.25px",
+          "color": "rgb(26, 46, 32)",
+          "background": "rgb(244, 241, 232)"
+        },
+        "h1": [
+          "개인정보처리방침"
+        ],
+        "headingCount": 12,
+        "linkCount": 6,
+        "bodyTextLength": 2030,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 800,
+              "h": 2537.25
+            },
+            "maxWidth": "800px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "240px"
+          },
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 59.5
+            },
+            "fontSize": "34px",
+            "lineHeight": "59.5px",
+            "letterSpacing": "normal",
+            "fontWeight": "800",
+            "color": "rgb(22, 43, 30)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": {
+            "_box": {
+              "w": 87,
+              "h": 31.5
+            },
+            "fontSize": "18px",
+            "fontWeight": "800",
+            "letterSpacing": "normal",
+            "color": "rgb(22, 43, 30)",
+            "gap": "normal"
+          },
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 2597.75
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f4f1e8",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "정적 법적 고지"
+    },
+    "/terms/": {
+      "390": {
+        "title": "이용약관 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/terms/",
+        "robots": null,
+        "stylesheets": [],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "26.25px",
+          "color": "rgb(26, 46, 32)",
+          "background": "rgb(244, 241, 232)"
+        },
+        "h1": [
+          "이용약관"
+        ],
+        "headingCount": 11,
+        "linkCount": 5,
+        "bodyTextLength": 1972,
+        "docWidth": 390,
+        "scrollWidth": 390,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 390,
+              "h": 2892.75
+            },
+            "maxWidth": "800px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "0px"
+          },
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 342,
+              "h": 45.5
+            },
+            "fontSize": "26px",
+            "lineHeight": "45.5px",
+            "letterSpacing": "normal",
+            "fontWeight": "800",
+            "color": "rgb(22, 43, 30)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": {
+            "_box": {
+              "w": 87,
+              "h": 31.5
+            },
+            "fontSize": "18px",
+            "fontWeight": "800",
+            "letterSpacing": "normal",
+            "color": "rgb(22, 43, 30)",
+            "gap": "normal"
+          },
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 390,
+              "h": 2953.25
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f4f1e8",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "1280": {
+        "title": "이용약관 | 름랩 REUMLAB",
+        "canonical": "https://reumlab.com/terms/",
+        "robots": null,
+        "stylesheets": [],
+        "bodyAttrs": {},
+        "body": {
+          "fontFamily": "Pretendard, -apple-system, BlinkMacSystemFont, \"Noto Sans KR\", \"Malgun Gothic\", system-ui, sans-serif",
+          "fontSize": "15px",
+          "lineHeight": "26.25px",
+          "color": "rgb(26, 46, 32)",
+          "background": "rgb(244, 241, 232)"
+        },
+        "h1": [
+          "이용약관"
+        ],
+        "headingCount": 11,
+        "linkCount": 5,
+        "bodyTextLength": 1972,
+        "docWidth": 1280,
+        "scrollWidth": 1280,
+        "probes": {
+          ".wrap": {
+            "_box": {
+              "w": 800,
+              "h": 2079
+            },
+            "maxWidth": "800px",
+            "paddingLeft": "24px",
+            "paddingRight": "24px",
+            "marginLeft": "240px"
+          },
+          ".hero": null,
+          "h1": {
+            "_box": {
+              "w": 752,
+              "h": 59.5
+            },
+            "fontSize": "34px",
+            "lineHeight": "59.5px",
+            "letterSpacing": "normal",
+            "fontWeight": "800",
+            "color": "rgb(22, 43, 30)"
+          },
+          ".sec-title": null,
+          ".btn--primary": null,
+          ".btn--ghost": null,
+          ".section": null,
+          ".logo": {
+            "_box": {
+              "w": 87,
+              "h": 31.5
+            },
+            "fontSize": "18px",
+            "fontWeight": "800",
+            "letterSpacing": "normal",
+            "color": "rgb(22, 43, 30)",
+            "gap": "normal"
+          },
+          ".logo__mark": null,
+          ".header": null,
+          ".card": null,
+          ".faq-q": null,
+          ":root": {
+            "_box": {
+              "w": 1280,
+              "h": 2139.5
+            },
+            "fontSize": "16px"
+          }
+        },
+        "rootVars": {
+          "--bg": "#f4f1e8",
+          "--bg-soft": "",
+          "--ink": "",
+          "--ink-2": "",
+          "--ink-3": "",
+          "--accent": "",
+          "--accent-d": "",
+          "--line": "",
+          "--maxw": "",
+          "--gutter": "",
+          "--r": "",
+          "--r-lg": "",
+          "--sans": ""
+        },
+        "status": 200,
+        "pageErrors": []
+      },
+      "template": "정적 법적 고지"
+    }
+  },
+  "finishedAt": "2026-09-14T08:46:48.214Z"
+}

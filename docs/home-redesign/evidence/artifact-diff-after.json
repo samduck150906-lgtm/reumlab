@@ -1,0 +1,164 @@
+{
+  "beforeDir": "/tmp/claude-0/-home-user-reumlab/09898d52-6d67-5192-aeca-c27d72389234/scratchpad/baseline/out-control",
+  "afterDir": "/tmp/claude-0/-home-user-reumlab/09898d52-6d67-5192-aeca-c27d72389234/scratchpad/after/out-after",
+  "beforeBuildId": "hWMS0ScH8NAg9AiUZjoq8",
+  "afterBuildId": "nwivumcfJs4Nie-hwXZnX",
+  "totalFiles": {
+    "before": 2769,
+    "after": 2769
+  },
+  "changedCount": 21,
+  "onlyBeforeCount": 0,
+  "onlyAfterCount": 0,
+  "changed": [
+    {
+      "path": "_next/static/chunks/app/[slug]/[region]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "f4e67caa2c90c2a7a09f42775bec2838cc46225939e267803c13929789127f0c",
+      "afterSha256": "4ba6a56b07923c8ca5dc2219529c963e889bc735084efe995dd81f719afa42c4",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/[slug]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "b162e8f7bda2acc78a5ad8c6e543c7986ec01f754e860627e9a45b20164606b5",
+      "afterSha256": "cffa1bca4658250eac4afd6711e7b97b20436ffcbc2fd9130a9ef9651ae26b2a",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/app/[industry]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "4ffc0beabf0a4831e932cd4dd44c01345500e490047700f67074b3b9e462671f",
+      "afterSha256": "5f689818287dbb9c0d970a2bb83bf81766f5d283df553c4bb05489b3776f4120",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/app/page-__CHUNK_HASH__.js",
+      "beforeSha256": "00086ab7aadfa4c5cc9f5ee5ef432aad61eb5f4d1aa3c97279468f804f0ee327",
+      "afterSha256": "d9b632a5ba647d25dce851da8c39c6e3531f5893d2f2bb1b482d86cc9d018a43",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/blog/[slug]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "a501c880bb7c3c53c37383a9b3419ccc9004db4267bb15796b239e37e747d8ee",
+      "afterSha256": "08ec32cf697d988d7516bfdfd97b556d95b655471c739043e430d2cbd3703bfd",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/blog/page-__CHUNK_HASH__.js",
+      "beforeSha256": "7a874511f7fbcfcc46e505b2013cc7b468aaab4df332eab893317d403f10939c",
+      "afterSha256": "f7f4980f06e716c0b8dd1dd3370958d05a74504cc02c0317415eada3910f84bd",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/compare/[slug]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "ca572af7e92763f472b1a104b59924ee5e90bd5c5c898096b601c7a9cd368ab7",
+      "afterSha256": "5bd941c8286923fb34e7b86b4c0ba4af629e17d045025e4228935b3fa57bfac5",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/cost/[industry]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "2c3a385f1601d312c0a579cc365fbe8253529f474bf9a920df571d46cf0333d4",
+      "afterSha256": "7a29d43583a89df8884569a985cdad3309ff3b8afd9846d0899c6a9a65e2f40c",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/cost/page-__CHUNK_HASH__.js",
+      "beforeSha256": "29f02558adaa54f0c31027fa26a3a4169af7ee67525700e10825e0aed31e3e68",
+      "afterSha256": "5d27507adf47bbf94ae2ae6c667640f168e09171b022baf8c54b2340cd966919",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/enterprise-ai/page-__CHUNK_HASH__.js",
+      "beforeSha256": "c89c8a78556bcacd063eb2ce9ba0f30c1319d9336f08adf397dc410105b716c9",
+      "afterSha256": "e2f27ec3b016c68dcf3fb0e1e43d13346218ed5aa9371608ab6e3e124373846c",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/guide/[topic]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "d75341c3f60d1da21b081dd38379e89c166541f234edd20e6eb7d98294a1402b",
+      "afterSha256": "89fdd3d3aa59cf1836268248b1ce9572f9693335ecfd4f3e04d972c39f246570",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/guide/page-__CHUNK_HASH__.js",
+      "beforeSha256": "a35633e9f1c44225dde4a4c0d386cc3463e635d0f9e5995342a5eb59c05f52d7",
+      "afterSha256": "ac6cc2f16f3ffb7397ecbe0958081c81e255d8dc40b9e4a75708a0d02f934877",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/h/[hubSlug]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "bc6b83d0b174a913cec25a81a49cac748354eb950deff4999918dd7d399fd01f",
+      "afterSha256": "5505a3d98192e31da44cac57a5d51dce4684c1e30a39d1ce4abea28cc5979fa0",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/not-found-__CHUNK_HASH__.js",
+      "beforeSha256": "5aab237c47ee1b248626031f9e1c68abc6e3b9da127367455d41bac900286e5e",
+      "afterSha256": "62b3cf589b6c9e179926c7d1b1ba8071a65a54d528790ef30403485b83198cc4",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/solution/[industry]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "9b13f729226fd358bfee1e0deca83ff17155f368b51fe70de1c61e0b1a6a1985",
+      "afterSha256": "b738b0406d71fbf2f5630b3c2fe4070c4ffe06780bcb5cbab0eca49cb02b8267",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/solution/page-__CHUNK_HASH__.js",
+      "beforeSha256": "7e08c39624ac27598dc6507d3440ccac094b1ad1a358002551e6b2c4fdf8b389",
+      "afterSha256": "35893d225778197663ca3ab81ce59b809cc4ba22c3073ea4b8462b29e7fbe5cd",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/system/[slug]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "4fddb29ac06388d147489a4f2cb45b966f95955fd5792b7457e520ecc2917dbd",
+      "afterSha256": "f5b7df93ba8929c3a5b0eb17c5833a6505ef2d3cd5785532bd65d448bba965a6",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/system/page-__CHUNK_HASH__.js",
+      "beforeSha256": "68c0772b5976783a622b14ee86543b4fbfb2716b08b8238eca05eef73dd465ff",
+      "afterSha256": "f0d563b6dc9ad77ee2af94f5145bc8031b495f19dbf47a54ece1439ac6b98f4e",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/website/[industry]/page-__CHUNK_HASH__.js",
+      "beforeSha256": "5bc051bb767d04e7170492715eccb60384b4a2815ffcff8b8753e1d985b1ba49",
+      "afterSha256": "7ec3c4b7b87e63e62a4768558f1726cfd4d08bc786a00b5d681eae53fbfe5541",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "_next/static/chunks/app/website/page-__CHUNK_HASH__.js",
+      "beforeSha256": "297d997fd2d7b3141e8f2b0cb708791435fd7c056f24d55a548933df93337d83",
+      "afterSha256": "f1cdae819f784e39e04b5fb0e56222d0f126de921a1816df0ef18fa045f6f78a",
+      "beforeBytes": 287,
+      "afterBytes": 287
+    },
+    {
+      "path": "styles.css",
+      "beforeSha256": "0dc87236445f8f7b7380ebc34da3cd75819232fe1439c5b9743308bd1082248a",
+      "afterSha256": "4704111ceaa745f419cd874cd69975db2190f31bddbf01a841e34d48f79c5c71",
+      "beforeBytes": 83825,
+      "afterBytes": 92700
+    }
+  ],
+  "onlyBefore": [],
+  "onlyAfter": []
+}

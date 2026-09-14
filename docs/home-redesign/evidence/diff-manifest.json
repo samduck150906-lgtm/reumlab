@@ -1,0 +1,152 @@
+{
+  "summary": {
+    "before": "before:out/index.html",
+    "after": "after:out/index.html",
+    "total": 28,
+    "pass": 28,
+    "fail": 0,
+    "verdict": "PASS"
+  },
+  "results": [
+    {
+      "status": "PASS",
+      "area": "head.title",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.lang",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.charset",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.viewport",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.canonical",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.robots",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.meta (전체)",
+      "detail": "19개 필드 동일"
+    },
+    {
+      "status": "PASS",
+      "area": "head.linkRels",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "jsonLd",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "headings (텍스트·레벨·순서)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "anchors (id 목록·순서)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "sections (순서·id·헤딩·본문해시)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "links (href·문구·rel·target·data-cta, 순서 포함)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "linkCountByArea",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "linkCountTotal",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "images (src·alt·크기·loading)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "media (video/source·poster)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "figcaptions",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "logos (마크업·참조·문구)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "forms (필드·이름·required·옵션·라벨)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "buttons (문구·role·aria·data)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "analyticsHooks (data-cta/loc/전체 data-*)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "tables (비교표 값·행·열)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "faq (질문·답변·순서)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "prices (금액·기간·포함·제외·CTA)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "noscriptText",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "textBlocks (DOM 읽기 순서 그대로의 본문)",
+      "detail": "동일"
+    },
+    {
+      "status": "PASS",
+      "area": "fullTextSha256",
+      "detail": "동일"
+    }
+  ]
+}

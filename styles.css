@@ -1582,3 +1582,284 @@ body[data-page-type="home"] .metric__label small { color: rgba(241, 245, 253, .5
   body[data-page-type="home"] .hero__trust { grid-template-columns: 1fr; }
   body[data-page-type="home"] .hero__trust li:last-child { grid-column: auto; }
 }
+
+/* ============================================================================
+   HOME REDESIGN — Apple × Toss 참고 시각 레이어 (2026-09)
+   ----------------------------------------------------------------------------
+   범위: 홈(/) 한정. 모든 선택자는 body[data-page-type="home"] 아래에만 적용된다.
+   이 파일은 홈과 목적별 랜딩 8개(/mvp/ 등, body[data-page-type="service"])가
+   함께 쓰므로, 스코프 없는 선언을 여기에 추가하면 랜딩까지 바뀐다 — 넣지 말 것.
+
+   바꾸는 것: 타이포 위계, 여백 리듬, 면 분리, 상태(hover/focus/active), 한글 줄바꿈.
+   바꾸지 않는 것: 문구, DOM 순서, 헤딩 태그, 링크, 로고(.logo/.logo__mark/.logo__ko),
+                  가격·조건·고지 텍스트, 계측 훅(data-*), 기존 기능 동작.
+   ========================================================================== */
+
+/* ---- 0) 홈 전용 토큰 — :root 를 덮지 않고 홈 루트에만 선언한다 ---- */
+body[data-page-type="home"] {
+  --h-sp-1: 4px;   --h-sp-2: 8px;   --h-sp-3: 12px;  --h-sp-4: 16px;
+  --h-sp-5: 24px;  --h-sp-6: 32px;  --h-sp-7: 48px;  --h-sp-8: 64px;
+  --h-sp-9: 80px;  --h-sp-10: 96px; --h-sp-11: 120px;
+
+  /* 역할이 분명한 radius 3단계만 쓴다 */
+  --h-r-s: 12px;   /* 버튼·칩·작은 표면 */
+  --h-r-m: 20px;   /* 카드 */
+  --h-r-l: 28px;   /* 큰 패널 */
+
+  /* 면을 가르는 수단: 그림자보다 경계선과 간격을 먼저 쓴다 */
+  --h-line: rgba(11, 27, 51, .10);
+  --h-line-soft: rgba(11, 27, 51, .07);
+  --h-elev-1: 0 1px 2px rgba(11, 27, 51, .04);
+  --h-elev-2: 0 2px 6px rgba(11, 27, 51, .05), 0 12px 28px rgba(11, 27, 51, .06);
+
+  --h-dur-tap: 140ms;   /* 버튼 반응 */
+  --h-dur-panel: 240ms; /* 보조 전환 */
+  --h-ease: cubic-bezier(.2, .7, .3, 1);
+}
+
+/* ---- 1) 한글 줄바꿈 — 단어 중간에서 끊기지 않게 한다 ----
+   keep-all 만 쓰면 아주 긴 어절이 좁은 칼럼을 넘칠 수 있으므로,
+   한 줄에 도저히 못 들어갈 때만 끊기도록 break-word 를 함께 둔다. */
+body[data-page-type="home"] h1,
+body[data-page-type="home"] h2,
+body[data-page-type="home"] h3,
+body[data-page-type="home"] h4,
+body[data-page-type="home"] p,
+body[data-page-type="home"] li,
+body[data-page-type="home"] td,
+body[data-page-type="home"] th,
+body[data-page-type="home"] figcaption,
+body[data-page-type="home"] .sec-sub,
+body[data-page-type="home"] .faq-q,
+body[data-page-type="home"] .faq-a__in,
+body[data-page-type="home"] .btn,
+body[data-page-type="home"] .price-tag-label,
+body[data-page-type="home"] .price-note,
+body[data-page-type="home"] .stype__fit,
+body[data-page-type="home"] .stype__rel,
+body[data-page-type="home"] .purpose-card__lead,
+body[data-page-type="home"] .purpose-card__desc,
+body[data-page-type="home"] .hero__trust li,
+body[data-page-type="home"] .flow__lbl {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+/* 제목은 줄 길이를 고르게, 본문은 고아 단어를 줄인다 */
+body[data-page-type="home"] .sec-title,
+body[data-page-type="home"] .final h2,
+body[data-page-type="home"] .hero h1 { text-wrap: balance; }
+body[data-page-type="home"] .sec-sub,
+body[data-page-type="home"] .hero__sub,
+body[data-page-type="home"] .hero__note { text-wrap: pretty; }
+
+/* ---- 2) 섹션 리듬 — 여백만 키우지 않고 면과 간격으로 구간을 가른다 ---- */
+body[data-page-type="home"] .section { padding: var(--h-sp-10) 0; }
+body[data-page-type="home"] .section--tight { padding: 0; }
+body[data-page-type="home"] .section--soft { background: #f6f8fc; }
+/* 흰 섹션이 연달아 올 때 경계가 사라지지 않도록 머리카락선 하나만 둔다 */
+body[data-page-type="home"] .section + .section:not(.section--soft):not(.metrics-sec) {
+  border-top: 1px solid var(--h-line-soft);
+}
+body[data-page-type="home"] .sec-head { margin-bottom: var(--h-sp-7); max-width: 780px; }
+body[data-page-type="home"] .sec-title {
+  font-size: clamp(28px, 3.44vw, 44px);
+  line-height: 1.22;
+  letter-spacing: -.035em;
+  margin-top: var(--h-sp-3);
+}
+body[data-page-type="home"] .sec-sub {
+  margin-top: var(--h-sp-4);
+  font-size: 17.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  max-width: 720px;
+}
+body[data-page-type="home"] .sec-head.center .sec-sub { margin-inline: auto; }
+body[data-page-type="home"] .eyebrow { letter-spacing: .08em; font-size: 12.5px; }
+
+/* ---- 3) HERO — 장식보다 문장과 행동이 먼저 보이게 ---- */
+body[data-page-type="home"] .hero {
+  padding: var(--h-sp-9) 0 var(--h-sp-10);
+  background: var(--white);
+}
+/* 첫 화면을 장식 그라데이션이 차지하지 않게 한다(1차안 규칙) */
+body[data-page-type="home"] .hero::before { content: none; }
+body[data-page-type="home"] .hero__eyebrow {
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent-dd);
+}
+body[data-page-type="home"] .hero h1 { margin-top: var(--h-sp-5); }
+body[data-page-type="home"] .hero__sub {
+  margin-top: var(--h-sp-5);
+  font-size: 18.5px;
+  line-height: 1.66;
+  max-width: 34em;
+}
+/* 기존 .hero__note 는 flex 라 <b> 와 그 뒤 조사가 별개 항목으로 떨어져
+   "름랩(REUMLAB)  은 앱…" 처럼 벌어졌다. 문장으로 되돌린다(문구는 그대로). */
+body[data-page-type="home"] .hero__note {
+  display: block;
+  margin-top: var(--h-sp-4);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 36em;
+}
+body[data-page-type="home"] .hero__note .sep { display: inline-block; vertical-align: middle; margin: 0 6px; }
+body[data-page-type="home"] .hero__note b { font-weight: 700; color: var(--ink); }
+body[data-page-type="home"] .hero__trust { margin-top: var(--h-sp-5); gap: var(--h-sp-2) var(--h-sp-2); }
+body[data-page-type="home"] .hero__trust li {
+  background: var(--bg-soft);
+  border-color: transparent;
+  box-shadow: none;
+  color: var(--ink-2);
+  font-weight: 600;
+  padding: 8px 14px;
+}
+body[data-page-type="home"] .hero__cta { margin-top: var(--h-sp-6); gap: var(--h-sp-3); }
+body[data-page-type="home"] .hero__stage { filter: none; }
+
+/* ---- 4) 버튼·상태 — 한 규칙으로 통일, 조작 영역 44px 이상 ---- */
+body[data-page-type="home"] .btn {
+  border-radius: var(--h-r-s);
+  transition: background-color var(--h-dur-tap) var(--h-ease),
+              border-color var(--h-dur-tap) var(--h-ease),
+              color var(--h-dur-tap) var(--h-ease),
+              box-shadow var(--h-dur-tap) var(--h-ease);
+}
+body[data-page-type="home"] .btn--primary { box-shadow: none; }
+body[data-page-type="home"] .btn--primary:hover { background: var(--accent-d); transform: none; box-shadow: none; }
+body[data-page-type="home"] .btn--primary:active { background: var(--accent-dd); }
+body[data-page-type="home"] .btn--ghost { box-shadow: none; border-color: var(--line-2); }
+body[data-page-type="home"] .btn--ghost:hover { background: var(--bg-soft); border-color: var(--line-2); color: var(--ink); transform: none; }
+body[data-page-type="home"] .btn--ghost:active { background: var(--bg-soft-2); }
+body[data-page-type="home"] .btn--light:hover { transform: none; }
+
+/* 보이는 포커스 — 홈의 모든 조작 요소에 같은 링을 쓴다 */
+body[data-page-type="home"] a:focus-visible,
+body[data-page-type="home"] button:focus-visible,
+body[data-page-type="home"] input:focus-visible,
+body[data-page-type="home"] select:focus-visible,
+body[data-page-type="home"] textarea:focus-visible,
+body[data-page-type="home"] [tabindex]:focus-visible {
+  outline: 3px solid rgba(40, 94, 219, .55);
+  outline-offset: 2px;
+  border-radius: var(--h-r-s);
+}
+/* 포커스 링은 전환 대상에서 빼 즉시 보이게 한다 */
+body[data-page-type="home"] .pf-filter__btn { transition: background-color var(--h-dur-tap) var(--h-ease), border-color var(--h-dur-tap) var(--h-ease), color var(--h-dur-tap) var(--h-ease); }
+body[data-page-type="home"] .pf-filter__btn { min-height: 44px; }
+
+/* ---- 5) 카드 — 그림자를 줄이고 경계선·간격으로 나눈다 ---- */
+body[data-page-type="home"] .card,
+body[data-page-type="home"] .stype__card,
+body[data-page-type="home"] .flow__step,
+body[data-page-type="home"] .price-card,
+body[data-page-type="home"] .purpose-card,
+body[data-page-type="home"] .purpose-mini,
+body[data-page-type="home"] .hlist li,
+body[data-page-type="home"] .edu-card {
+  border-color: var(--h-line);
+  box-shadow: var(--h-elev-1);
+}
+body[data-page-type="home"] .card,
+body[data-page-type="home"] .stype__card,
+body[data-page-type="home"] .flow__step,
+body[data-page-type="home"] .edu-card { border-radius: var(--h-r-m); }
+body[data-page-type="home"] .price-card,
+body[data-page-type="home"] .purpose-card { border-radius: var(--h-r-m); }
+body[data-page-type="home"] .af-card { border-radius: var(--h-r-l); box-shadow: var(--h-elev-2); border-color: var(--h-line); }
+
+/* ---- 6) 가격 — 금액 자릿수 정렬, 조건이 잘리지 않게 ---- */
+body[data-page-type="home"] .price-card { padding: var(--h-sp-6) var(--h-sp-5); }
+body[data-page-type="home"] .price-amount {
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  margin-top: var(--h-sp-3);
+}
+body[data-page-type="home"] .price-amount small { font-size: 14.5px; margin-left: 2px; }
+body[data-page-type="home"] .price-incl li { font-size: 14.5px; line-height: 1.58; }
+body[data-page-type="home"] .price-note { line-height: 1.55; }
+body[data-page-type="home"] .price-card:hover { transform: none; box-shadow: var(--h-elev-2); }
+body[data-page-type="home"] .price-card.featured { transform: none; box-shadow: var(--h-elev-2); }
+body[data-page-type="home"] .price-card.featured:hover { transform: none; }
+/* 비교표는 페이지를 넘치게 하지 않고 표 자체가 가로로 스크롤되게 유지한다 */
+body[data-page-type="home"] .compare__wrap { -webkit-overflow-scrolling: touch; }
+
+/* ---- 7) 목적 선택·서비스 — 읽기 순서를 크기와 간격으로 표현 ---- */
+body[data-page-type="home"] .purpose-card__lead { line-height: 1.45; }
+body[data-page-type="home"] .purpose-card__desc { font-size: 14px; line-height: 1.62; }
+body[data-page-type="home"] .purpose-mini p { line-height: 1.55; }
+body[data-page-type="home"] .stype__card { padding: var(--h-sp-5) var(--h-sp-5); }
+body[data-page-type="home"] .stype__list li { line-height: 1.6; }
+
+/* ---- 8) FAQ — 동작은 그대로, 터치 영역과 여백만 ---- */
+body[data-page-type="home"] .faq-q { padding: var(--h-sp-5) var(--h-sp-5); min-height: 64px; font-size: 17px; }
+body[data-page-type="home"] .faq-a__in { padding: 0 var(--h-sp-5) var(--h-sp-5) 56px; font-size: 15.5px; line-height: 1.75; }
+
+/* ---- 9) 마지막 CTA(#contact) ----
+   현재 홈의 .final 은 어두운 패널이 아니라 밝은 2열(왼쪽 안내 + 오른쪽 폼)이다
+   (styles.css 1268행이 앞선 그라데이션 규칙을 덮는다). 배경을 건드리지 않는다.
+   1280px 에서 왼쪽 열이 짧아 폼 옆이 크게 비던 문제만 고른다. */
+body[data-page-type="home"] .final { gap: var(--h-sp-7); }
+body[data-page-type="home"] .final .sec-title { font-size: clamp(26px, 2.9vw, 38px); line-height: 1.26; }
+body[data-page-type="home"] .final__trust { margin-top: var(--h-sp-5); gap: var(--h-sp-3); }
+body[data-page-type="home"] .final__trust li { line-height: 1.5; }
+body[data-page-type="home"] .final__alt { margin-top: var(--h-sp-5); line-height: 1.75; }
+body[data-page-type="home"] .final__alt a { word-break: keep-all; white-space: nowrap; }
+@media (min-width: 901px) {
+  /* 폼이 길어 왼쪽 안내가 화면 밖으로 먼저 사라지던 구간을 함께 따라오게 한다.
+     grid 열 안에서만 붙으므로 본문을 가리지 않는다. */
+  body[data-page-type="home"] .final__intro { position: sticky; top: 108px; align-self: start; }
+}
+
+/* ---- 10) 푸터 ---- */
+body[data-page-type="home"] .footer { padding: var(--h-sp-8) 0 var(--h-sp-6); }
+
+/* ---- 11) 모션 — 짧은 피드백만. 감소 선호 시 제거 ---- */
+@media (prefers-reduced-motion: reduce) {
+  body[data-page-type="home"] *,
+  body[data-page-type="home"] *::before,
+  body[data-page-type="home"] *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- 12) 반응형 ---- */
+@media (max-width: 1080px) {
+  body[data-page-type="home"] .section { padding: var(--h-sp-9) 0; }
+  body[data-page-type="home"] .hero { padding: var(--h-sp-8) 0 var(--h-sp-9); }
+}
+
+@media (max-width: 720px) {
+  body[data-page-type="home"] .section { padding: var(--h-sp-8) 0; }
+  body[data-page-type="home"] .sec-head { margin-bottom: var(--h-sp-6); }
+  body[data-page-type="home"] .sec-title { line-height: 1.28; letter-spacing: -.03em; }
+  body[data-page-type="home"] .sec-sub { font-size: 16.5px; line-height: 1.68; margin-top: var(--h-sp-3); }
+
+  body[data-page-type="home"] .hero { padding: var(--h-sp-7) 0 var(--h-sp-8); }
+  body[data-page-type="home"] .hero h1 { margin-top: var(--h-sp-4); }
+  body[data-page-type="home"] .hero__sub { font-size: 16.5px; line-height: 1.64; margin-top: var(--h-sp-4); }
+  body[data-page-type="home"] .hero__note { font-size: 14px; line-height: 1.68; }
+  /* 좁은 화면에서는 2열 칩이 "단일 창구" 같은 낱말을 쪼갠다 — 한 줄로 흐르게 둔다 */
+  body[data-page-type="home"] .hero__trust { display: flex; flex-wrap: wrap; gap: var(--h-sp-2); }
+  body[data-page-type="home"] .hero__trust li { justify-content: flex-start; text-align: left; padding: 8px 13px; }
+  body[data-page-type="home"] .hero__trust li:last-child { grid-column: auto; }
+
+  body[data-page-type="home"] .price-card { padding: var(--h-sp-5) var(--h-sp-4); }
+  body[data-page-type="home"] .price-amount { font-size: 29px; }
+  body[data-page-type="home"] .faq-q { padding: var(--h-sp-4) var(--h-sp-4); font-size: 16.5px; }
+  body[data-page-type="home"] .faq-a__in { padding: 0 var(--h-sp-4) var(--h-sp-4) 46px; }
+  body[data-page-type="home"] .final { gap: var(--h-sp-6); }
+  body[data-page-type="home"] .footer { padding: var(--h-sp-7) 0 var(--h-sp-5); }
+}
+
+@media (max-width: 380px) {
+  body[data-page-type="home"] .hero__trust { display: flex; }
+}

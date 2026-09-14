@@ -1,0 +1,184 @@
+{
+  "generatedAt": "2026-09-14T08:20:54.790Z",
+  "root": ".",
+  "files": [
+    {
+      "path": "public/logo.png",
+      "exists": true,
+      "bytes": 11542,
+      "sha256": "03790b4040ef2498b27e168822235a16386c82a4a2bf456a6f1f0668de08bd02",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/favicon.ico",
+      "exists": true,
+      "bytes": 6192,
+      "sha256": "d3dbf2cdfb4fb8032d29ab6e0c3560645b7d6dd3b0658444acd3d37088161016",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/favicon-16x16.png",
+      "exists": true,
+      "bytes": 750,
+      "sha256": "ca9e1b3fbe7f68670db7e89a5bec58fde131d2d0e70790f94e5a940d840c2b20",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/favicon-32x32.png",
+      "exists": true,
+      "bytes": 1933,
+      "sha256": "ddb126e53b0a4a391cceb1b1c201984950bdfb027c5d8419c128488a8ee63a50",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "exists": true,
+      "bytes": 13752,
+      "sha256": "bcfcbc8b1db278acc4aa0a121e8b7657bed1fd88ff169cab74576807c86f2a19",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/icon-192.png",
+      "exists": true,
+      "bytes": 26074,
+      "sha256": "b752c262a85fd0b8bfd46505f3d772f1f14c7137c096067efdf7fa139fc0df7e",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/icon-512.png",
+      "exists": true,
+      "bytes": 106640,
+      "sha256": "65817dae975db1182a8e2f2cdfbef2463f048b292863c42e5f1e8a6ae5665dad",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/og-image.jpg",
+      "exists": true,
+      "bytes": 22939,
+      "sha256": "0ba8cca498ccd3eb89baa84c15a814c1fa1627cf6c4872d8feffd7b088869535",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/og-default.png",
+      "exists": true,
+      "bytes": 467086,
+      "sha256": "fc2891dff8f66b219a35927ba7ead12835c2915dd6e9eb1359cc80cfcd5287bb",
+      "mtimeIgnored": true
+    },
+    {
+      "path": "public/site.webmanifest",
+      "exists": true,
+      "bytes": 345,
+      "sha256": "4dd72db11b625726d3c96dd06c9a9925297363a507770f0544186b72cb7199d4",
+      "mtimeIgnored": true
+    }
+  ],
+  "cssImplementation": {
+    "exists": true,
+    "path": "styles.css",
+    "sha256": "4920b4de8eccadc183febbda292e2b0b58688e1ba58a3d4b74fa16f6b154a63a",
+    "rules": {
+      ".logo": [
+        {
+          "selectorList": ".logo",
+          "declarations": "display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18.5px; letter-spacing: -0.03em; white-space: nowrap;"
+        }
+      ],
+      ".logo__mark": [
+        {
+          "selectorList": ".logo__mark",
+          "declarations": "width: 30px; height: 30px; flex: none; object-fit: contain; display: block;"
+        }
+      ],
+      ".logo__ko": [
+        {
+          "selectorList": ".logo__ko",
+          "declarations": "color: var(--ink-3); font-weight: 700; font-size: 15px;"
+        }
+      ],
+      ".footer .logo": [
+        {
+          "selectorList": ".footer .logo",
+          "declarations": "color: #fff;"
+        }
+      ],
+      ".footer .logo__ko": [
+        {
+          "selectorList": ".footer .logo__ko",
+          "declarations": "color: #8294b3;"
+        }
+      ]
+    },
+    "ruleCount": 5
+  },
+  "htmlImplementation": {
+    "exists": true,
+    "path": "index.html",
+    "logoMarkup": [
+      "<a class=\"logo\" href=\"#top\" aria-label=\"REUMLAB · 름랩 홈\"> <img class=\"logo__mark\" src=\"/logo.png\" alt=\"\" width=\"30\" height=\"30\" /> REUMLAB <span class=\"logo__ko\">· 름랩</span> </a>",
+      "<a class=\"logo\" href=\"#top\"><img class=\"logo__mark\" src=\"/logo.png\" alt=\"\" width=\"30\" height=\"30\" />REUMLAB <span class=\"logo__ko\">· 름랩</span></a>"
+    ],
+    "iconLinks": [
+      "<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"any\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/icon-192.png\">",
+      "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">",
+      "<link rel=\"manifest\" href=\"/site.webmanifest\">"
+    ],
+    "ogImage": [
+      "<meta property=\"og:image\" content=\"https://reumlab.com/og-image.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"REUMLAB 앱·웹·AI MVP 개발 스튜디오\">"
+    ],
+    "twitterImage": [
+      "<meta name=\"twitter:image\" content=\"https://reumlab.com/og-image.jpg\">"
+    ],
+    "schemaLogoUrls": [
+      "https://reumlab.com/icon-512.png",
+      "https://reumlab.com/icon-512.png"
+    ],
+    "schemaImageUrls": [
+      "https://reumlab.com/og-image.jpg"
+    ]
+  },
+  "builtHtmlImplementation": {
+    "exists": true,
+    "path": "out/index.html",
+    "logoMarkup": [
+      "<a class=\"logo\" href=\"#top\" aria-label=\"REUMLAB · 름랩 홈\"> <img class=\"logo__mark\" src=\"/logo.png\" alt=\"\" width=\"30\" height=\"30\" /> REUMLAB <span class=\"logo__ko\">· 름랩</span> </a>",
+      "<a class=\"logo\" href=\"#top\"><img class=\"logo__mark\" src=\"/logo.png\" alt=\"\" width=\"30\" height=\"30\" />REUMLAB <span class=\"logo__ko\">· 름랩</span></a>"
+    ],
+    "iconLinks": [
+      "<link rel=\"icon\" href=\"/favicon.ico\" sizes=\"any\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">",
+      "<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/icon-192.png\">",
+      "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png\">",
+      "<link rel=\"manifest\" href=\"/site.webmanifest\">"
+    ],
+    "ogImage": [
+      "<meta property=\"og:image\" content=\"https://reumlab.com/og-image.jpg\">",
+      "<meta property=\"og:image:width\" content=\"1200\">",
+      "<meta property=\"og:image:height\" content=\"630\">",
+      "<meta property=\"og:image:alt\" content=\"REUMLAB 앱·웹·AI MVP 개발 스튜디오\">"
+    ],
+    "twitterImage": [
+      "<meta name=\"twitter:image\" content=\"https://reumlab.com/og-image.jpg\">"
+    ],
+    "schemaLogoUrls": [
+      "https://reumlab.com/icon-512.png",
+      "https://reumlab.com/icon-512.png"
+    ],
+    "schemaImageUrls": [
+      "https://reumlab.com/og-image.jpg"
+    ]
+  },
+  "rules": [
+    "파일 바이트를 바꾸지 않는다(최적화·minify·재인코딩 포함).",
+    "텍스트형 워드마크의 서체·자간·굵기·크기·심벌과의 간격을 바꾸지 않는다.",
+    "CSS filter/invert/hue-rotate/opacity/blend-mode 로 변색하지 않는다.",
+    "허용: 비율 유지 표시 크기, 주변 여백, 배치."
+  ]
+}
