@@ -21,5 +21,8 @@ public/feed.xml
 # The report generator reads this local folder but never publishes raw rows.
 docs/seo-aeo/private/
 
+# NEO HTTP snapshots and Search Advisor exports are private operational data.
+docs/neo/private/
+
 # GEO/AI 실측 원문·캡처·실행 데이터는 정적 배포와 Git에 포함하지 않는다.
 .geo-measurements/

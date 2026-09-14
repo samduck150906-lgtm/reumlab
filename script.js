@@ -461,6 +461,9 @@
     burger.classList.remove("open");
     mnav.classList.remove("open");
     burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "메뉴 열기");
+    mnav.setAttribute("aria-hidden", "true");
+    mnav.setAttribute("inert", "");
     document.body.classList.remove("menu-open");
   }
   if (burger && mnav) {
@@ -468,10 +471,18 @@
       var open = burger.classList.toggle("open");
       mnav.classList.toggle("open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "메뉴 닫기" : "메뉴 열기");
+      mnav.setAttribute("aria-hidden", open ? "false" : "true");
+      if (open) mnav.removeAttribute("inert"); else mnav.setAttribute("inert", "");
       document.body.classList.toggle("menu-open", open);
     });
     mnav.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeNav); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && mnav.classList.contains("open")) closeNav(); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mnav.classList.contains("open")) {
+        closeNav();
+        burger.focus();
+      }
+    });
   }
 
   // 헤더 서비스 드롭다운 — 클릭/터치 토글(호버는 CSS), 외부 클릭·ESC 닫기

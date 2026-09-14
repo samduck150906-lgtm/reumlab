@@ -169,10 +169,18 @@ for (const p of indexed) {
 
 // ─── 7. RSS
 const feedPath = join(OUT, 'feed.xml');
+const MAX_FEED_BYTES = 10 * 1024 * 1024;
 let feedItems = 0;
+let feedBytes = 0;
+let feedDeclarations = 0;
 if (existsSync(feedPath)) {
   const feed = read(feedPath);
+  feedBytes = statSync(feedPath).size;
+  if (feedBytes > MAX_FEED_BYTES) {
+    add(fail, 'rss', `feed.xml ${feedBytes} bytes — 네이버 제한 10MB 초과`);
+  }
   feedItems = (feed.match(/<item>/g) || []).length;
+  if (feedItems === 0) add(fail, 'rss', 'feed.xml item 0개 — 실제 콘텐츠가 최소 1개 필요하다');
   for (const tag of ['title', 'link', 'description']) {
     if (!feed.includes(`<${tag}>`)) add(fail, 'rss', `채널 <${tag}> 없음`);
   }
@@ -180,8 +188,30 @@ if (existsSync(feedPath)) {
   const guid = (feed.match(/<guid/g) || []).length;
   if (pub !== feedItems) add(fail, 'rss', `pubDate ${pub}개 ≠ item ${feedItems}개`);
   if (guid !== feedItems) add(fail, 'rss', `guid ${guid}개 ≠ item ${feedItems}개`);
+  const absoluteUrls = [
+    ...feed.matchAll(/<link>([^<]+)<\/link>/g),
+    ...feed.matchAll(/<atom:link\b[^>]*\bhref="([^"]+)"/g),
+  ].map((m) => m[1].replaceAll('&amp;', '&'));
+  for (const rawUrl of absoluteUrls) {
+    let parsed;
+    try { parsed = new URL(rawUrl); }
+    catch { add(fail, 'rss', `절대 URL이 아님: ${rawUrl}`); continue; }
+    if (parsed.origin !== DOMAIN) add(fail, 'rss', `production host 불일치: ${rawUrl}`);
+  }
+  const itemBlocks = [...feed.matchAll(/<item>([\s\S]*?)<\/item>/g)].map((m) => m[1]);
+  for (const [index, item] of itemBlocks.entries()) {
+    for (const tag of ['title', 'link', 'description', 'pubDate', 'guid']) {
+      const value = item.match(new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, 'i'))?.[1]?.trim();
+      if (!value) add(fail, 'rss', `item ${index + 1} <${tag}> 비어 있음`);
+    }
+    const link = item.match(/<link>([^<]+)<\/link>/i)?.[1]?.trim();
+    const guidValue = item.match(/<guid\b[^>]*>([^<]+)<\/guid>/i)?.[1]?.trim();
+    if (link && guidValue && link !== guidValue) {
+      add(fail, 'rss', `item ${index + 1} link와 guid 불일치: ${link} != ${guidValue}`);
+    }
+  }
   // 실제로 서빙되는 문서를 가리키는가
-  for (const m of feed.matchAll(/<link>([^<]+)<\/link>/g)) {
+  for (const m of feed.matchAll(/<item>[\s\S]*?<link>([^<]+)<\/link>[\s\S]*?<\/item>/g)) {
     const u = m[1].replace(DOMAIN, '');
     if (u === '/blog/' || u === '/') continue;
     if (!existsSync(join(OUT, u.replace(/^\//, ''), 'index.html'))) {
@@ -194,8 +224,8 @@ if (existsSync(feedPath)) {
       add(fail, 'rss', `미래 날짜: ${m[1]}`);
     }
   }
-  const declared = pages.filter((p) => p.html.includes('application/rss+xml')).length;
-  if (!declared) add(warn, 'rss', 'feed.xml 이 있지만 어떤 HTML 에서도 <link rel="alternate"> 로 선언되지 않는다');
+  feedDeclarations = pages.filter((p) => p.html.includes('application/rss+xml')).length;
+  if (!feedDeclarations) add(warn, 'rss', 'feed.xml 이 있지만 어떤 HTML 에서도 <link rel="alternate"> 로 선언되지 않는다');
 } else {
   add(warn, 'rss', 'feed.xml 없음 — 블로그·가이드가 있다면 네이버 수집 채널로 유용하다');
 }
@@ -207,7 +237,7 @@ console.log(`Yeti       robots.txt Yeti 그룹 ${/User-Agent:\s*Yeti/i.test(robo
 console.log(`사이트명   og:site_name ${[...siteNames].join('|') || '-'} · WebSite.name ${[...schemaWebsiteNames].join('|') || '-'} · 상호 없는 title ${noBrandTitle}`);
 console.log(`SSR        본문 ${MIN_BODY}자 미만 ${thin} · H1 없음 ${noH1} · H1 복수 ${multiH1} · 내부링크 0 ${noLinks}`);
 console.log(`OG         필수 태그 누락 ${ogMissing} · lang 오류 ${badLang}`);
-console.log(`RSS        item ${feedItems}`);
+console.log(`RSS        item ${feedItems} · ${(feedBytes / 1024).toFixed(1)} KiB · HTML 선언 ${feedDeclarations}`);
 console.log('───────────────────────────────────────────');
 if (warn.length) {
   console.log(`⚠ 경고 ${warn.length}건`);

@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-09-14T07:26:11.994Z",
+  "source": "local static build",
+  "documents": 1349,
+  "sitemapUrls": 778,
+  "decisions": {
+    "404": 1,
+    "INDEX": 778,
+    "NOINDEX": 567,
+    "REVIEW": 3
+  },
+  "redirectRules": 153,
+  "robots": {
+    "yetiGroup": true,
+    "sitemapDeclaration": true
+  },
+  "rss": {
+    "bytes": 32525,
+    "items": 58,
+    "hostMismatches": 0
+  },
+  "ownership": {
+    "rootMeta": true,
+    "htmlFile": true
+  },
+  "indexNow": {
+    "keyFile": true,
+    "keyMatches": true
+  },
+  "http": {
+    "status": "TESTED",
+    "origin": "https://reumlab.com",
+    "testedAt": "2026-09-14T07:10:50.195Z",
+    "targets": 14,
+    "failures": 0
+  },
+  "external": [
+    {
+      "item": "Search Advisor 사이트 등록",
+      "status": "BLOCKED_EXTERNAL_ACCOUNT",
+      "note": "로그인된 콘솔에서 직접 확인 필요"
+    },
+    {
+      "item": "소유확인",
+      "status": "IMPLEMENTED",
+      "note": "초기 HTML meta와 발급 HTML 파일 존재; 콘솔 승인 상태는 별도 확인"
+    },
+    {
+      "item": "사이트맵 제출·처리",
+      "status": "BLOCKED_EXTERNAL_ACCOUNT",
+      "note": "코드 산출물 검증과 콘솔 처리 상태는 다름"
+    },
+    {
+      "item": "RSS 제출·처리",
+      "status": "BLOCKED_EXTERNAL_ACCOUNT",
+      "note": "코드 산출물 검증과 콘솔 처리 상태는 다름"
+    },
+    {
+      "item": "사이트명 반영",
+      "status": "UNVERIFIED",
+      "note": "og:site_name/WebSite/Organization은 일치하나 검색결과 반영은 미확인"
+    },
+    {
+      "item": "수집 요청",
+      "status": "NOT_RUN",
+      "note": "자동 반복 요청하지 않음"
+    },
+    {
+      "item": "IndexNow 외부 수신",
+      "status": "UNVERIFIED",
+      "note": "정적 구성/dry-run과 검색엔진 수신·색인은 별개"
+    },
+    {
+      "item": "네이버 플레이스 NAP",
+      "status": "BLOCKED_EXTERNAL_ACCOUNT",
+      "note": "외부 프로필 최종 공개값 직접 확인 필요"
+    },
+    {
+      "item": "네이버 블로그 프로필",
+      "status": "UNVERIFIED",
+      "note": "공식 링크는 코드에 있으나 프로필 필드는 직접 확인 필요"
+    },
+    {
+      "item": "Search Advisor 90일 export",
+      "status": "UNVERIFIED",
+      "note": "private 후보 파일 감지; 공개 보고서에 원수치 미포함"
+    }
+  ]
+}
