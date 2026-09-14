@@ -1,6 +1,6 @@
 # 름랩 NEO 감사
 
-기준 시각: 2026-09-14T07:26:11.994Z
+기준 시각: 2026-09-14T07:39:24.326Z
 
 ## 코드·빌드 기준선
 
@@ -12,7 +12,7 @@
 - RSS: 58개 item, 31.8 KiB, production host 불일치 0개
 - 네이버 소유확인 코드: meta IMPLEMENTED, HTML 파일 IMPLEMENTED
 - IndexNow 키 산출물: TESTED
-- 운영 HTTP/Yeti 비교: TESTED (14개 대상, 0개 실패, 2026-09-14T07:10:50.195Z)
+- 운영 HTTP/Yeti 비교: TESTED (14개 대상, 0개 실패, 2026-09-14T07:35:02.005Z)
 - URL별 근거: [url-inventory.csv](./url-inventory.csv)
 
 ## 네이버 외부 작업

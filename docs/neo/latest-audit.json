@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T07:26:11.994Z",
+  "generatedAt": "2026-09-14T07:39:24.326Z",
   "source": "local static build",
   "documents": 1349,
   "sitemapUrls": 778,
@@ -30,7 +30,7 @@
   "http": {
     "status": "TESTED",
     "origin": "https://reumlab.com",
-    "testedAt": "2026-09-14T07:10:50.195Z",
+    "testedAt": "2026-09-14T07:35:02.005Z",
     "targets": 14,
     "failures": 0
   },
