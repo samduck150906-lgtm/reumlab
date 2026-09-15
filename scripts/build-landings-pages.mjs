@@ -64,7 +64,7 @@ function landingHtml(landing) {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'LocalBusiness',
     name: site.name,
     description: landing.description,
     url: url,

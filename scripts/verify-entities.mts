@@ -1,6 +1,7 @@
 /**
  * 공개 산출물의 사업자 엔터티 정합성 검사.
- * SITE를 기준으로 Organization/ProfessionalService의 이름·연락처·주소·sameAs를 대조한다.
+ * SITE를 기준으로 Organization/LocalBusiness(#business)의 이름·연락처·주소·sameAs를 대조한다.
+ * 판정은 @id 기준이라 사업체 노드의 @type 이 바뀌어도 그대로 동작한다.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -80,12 +81,12 @@ for (const file of htmlFiles) {
 
   if (business) {
     businesses++;
-    if (business.name !== SITE.name) fail.push(`${pathname}: ProfessionalService.name 불일치`);
-    if (business.email !== SITE.email) fail.push(`${pathname}: ProfessionalService.email 불일치`);
-    if (business.telephone !== SITE.phone) fail.push(`${pathname}: ProfessionalService.telephone 불일치`);
-    compareAddress(pathname, 'ProfessionalService', business.address as Record<string, unknown> | undefined);
+    if (business.name !== SITE.name) fail.push(`${pathname}: LocalBusiness.name 불일치`);
+    if (business.email !== SITE.email) fail.push(`${pathname}: LocalBusiness.email 불일치`);
+    if (business.telephone !== SITE.phone) fail.push(`${pathname}: LocalBusiness.telephone 불일치`);
+    compareAddress(pathname, 'LocalBusiness', business.address as Record<string, unknown> | undefined);
   } else {
-    fail.push(`${pathname}: ProfessionalService 노드 없음`);
+    fail.push(`${pathname}: LocalBusiness(#business) 노드 없음`);
   }
 }
 
@@ -105,7 +106,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`엔터티 그래프 페이지 ${graphPages} · Organization ${organizations} · ProfessionalService ${businesses}`);
+console.log(`엔터티 그래프 페이지 ${graphPages} · Organization ${organizations} · LocalBusiness ${businesses}`);
 console.log(`기준 NAP: ${SITE.name} · ${SITE.address} · ${SITE.phone} · ${SITE.email}`);
 if (warn.length) {
   console.log(`⚠ 경고 ${warn.length}건`);

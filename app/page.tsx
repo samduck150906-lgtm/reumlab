@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {/*
-        WebSite·Organization·ProfessionalService 는 루트 레이아웃(SiteEntityJsonLd)이 낸다.
+        WebSite·Organization·LocalBusiness 는 루트 레이아웃(SiteEntityJsonLd)이 낸다.
         홈 브레드크럼은 항목이 "홈" 하나뿐이라 의미가 없어 내지 않는다(실제 서빙되는
         index.html 과도 동일한 구성).
       */}

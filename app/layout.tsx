@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         {/*
-          사이트 전역 엔티티(WebSite + Organization + ProfessionalService)를 여기 한 곳에서만 낸다.
+          사이트 전역 엔티티(WebSite + Organization + LocalBusiness)를 여기 한 곳에서만 낸다.
           하위 페이지의 Service/Article 은 이 노드들을 @id 로 참조만 하므로, 개별 페이지에서
           Organization·사업체 노드를 다시 선언하면 안 된다(중복 엔티티).
           루트로 서빙되는 홈은 정적 index.html 이라 이 레이아웃을 타지 않는다 —

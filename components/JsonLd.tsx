@@ -50,7 +50,20 @@ function LdGraph({ graph }: { graph: Record<string, unknown>[] }) {
 }
 
 /**
- * 사이트 전역 엔티티 — WebSite + Organization + ProfessionalService.
+ * 페이지 전용 JSON-LD 노드 1개를 안전하게 출력한다.
+ *
+ * 왜 공개하나 — 인덱스 페이지들(app/guide·app/cost·app/system 등)이
+ * `dangerouslySetInnerHTML={{ __html: JSON.stringify(x) }}` 로 직접 직렬화하고 있었다.
+ * 값에 `</script>` 나 `<!--` 가 한 번만 섞여도 script 블록이 조기 종료돼 구조화 데이터가
+ * 통째로 깨지고 뒤 문자열이 마크업으로 해석된다. 위 ldJson 이스케이프를 타도록
+ * 최소한의 공개 창구를 둔다(기존 export 는 그대로 — 깨지는 API 없음).
+ */
+export function JsonLdScript({ data }: { data: Record<string, unknown> }) {
+  return <LdScript data={data} />;
+}
+
+/**
+ * 사이트 전역 엔티티 — WebSite + Organization + LocalBusiness(#business).
  *
  * 루트 레이아웃(app/layout.tsx)에서만 호출한다. 개별 페이지에서 또 부르면
  * 같은 @id 노드가 한 문서에 두 번 나온다. 서비스·랜딩·지역 페이지는 이 노드를 다시
@@ -95,7 +108,7 @@ export function BreadcrumbJsonLdTrail({ items, pageUrl }: { items: Crumb[]; page
 
 /**
  * 독립 서비스 상세페이지: WebPage가 화면의 주제인 Service를 mainEntity로 연결한다.
- * 전역 WebSite/Organization/ProfessionalService는 루트 레이아웃의 고정 @id를 참조만 한다.
+ * 전역 WebSite/Organization/LocalBusiness는 루트 레이아웃의 고정 @id를 참조만 한다.
  */
 export function ServiceWebPageJsonLd({
   url,
@@ -211,7 +224,7 @@ export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
 /**
  * 랜딩·허브 페이지(/l/*, /h/*, /soho) — Service + BreadcrumbList.
  *
- * 이전에는 페이지마다 ProfessionalService 를 주소·전화까지 붙여 선언했다. 그러면 지역
+ * 이전에는 페이지마다 사업체 노드를 주소·전화까지 붙여 선언했다. 그러면 지역
  * 랜딩 수백 개가 각각 별도 사업장으로 읽힌다(실제 사업장은 동탄 한 곳뿐).
  * → 사업체 노드는 루트의 #business 하나만 두고, 여기서는 provider 로 참조만 한다.
  */

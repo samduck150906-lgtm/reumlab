@@ -96,13 +96,26 @@ export function organizationNode() {
 }
 
 /**
- * 사업체 노드 — 앱·웹 개발 외주라는 전문 서비스업이므로 ProfessionalService.
- * (ProfessionalService 는 LocalBusiness 의 하위 타입이라 둘을 함께 선언할 필요가 없다.)
+ * 사업체 노드 — LocalBusiness.
+ *
+ * 왜 ProfessionalService 가 아닌가 (2026-09-15 전환)
+ *  schema.org 어휘의 ProfessionalService 정의문에 다음이 명시돼 있다:
+ *  "The general ProfessionalService type for local businesses was deprecated due to
+ *   confusion with Service." 대체 대상으로 열거된 것은 Dentist·Attorney·Electrician 같은
+ *  구체 업종 타입인데, 소프트웨어 개발 스튜디오에 해당하는 업종 타입은 schema.org 에 없다.
+ *  → 근거 없는 업종 타입을 만들지 않고, 직계 상위이자 현행 타입인 LocalBusiness 를 쓴다.
+ *  ProfessionalService 는 원래 LocalBusiness 의 하위 타입이라 이 전환은 일반화이며,
+ *  기존에 쓰던 속성(주소·전화·영업시간·priceRange·areaServed)은 전부 그대로 유효하다.
+ *
+ *  @id·이름·주소·연락처·영업시간·parentOrganization 은 바꾸지 않는다 — 같은 사업장이다.
+ *  근거 확인 경로: schema.org 직접 접속은 이 실행 환경에서 차단돼 있어, schema.org 어휘에서
+ *  생성된 schema-dts@2.0.0 의 ProfessionalService 정의문으로 대조했다.
+ *
  * 사업장은 동탄 한 곳뿐이므로 이 노드는 사이트 전체에서 이 @id 하나만 존재한다.
  */
 export function businessNode(description: string = SITE.description) {
   return {
-    '@type': 'ProfessionalService',
+    '@type': 'LocalBusiness',
     '@id': SCHEMA_ID.business,
     name: SITE.name,
     alternateName: SITE.nameEn,

@@ -43,7 +43,7 @@ window.dataLayer=window.dataLayer||[];
 <meta name="twitter:description" content="앱·웹·AI MVP를 기획부터 개발·배포까지 제작합니다. 소스코드와 운영 권한까지 이관하며 전국 비대면 상담이 가능합니다.">
 <meta name="twitter:image" content="https://reumlab.com/og-image.jpg">
 <!-- Schema.org JSON-LD
-     ⚠️ 사이트 전역 엔티티(WebSite/#website · Organization/#organization · ProfessionalService/#business)의
+     ⚠️ 사이트 전역 엔티티(WebSite/#website · Organization/#organization · LocalBusiness/#business)의
      단일 출처는 lib/schema.ts 다. 이 파일은 Next 레이아웃을 타지 않는 정적 홈이라 같은 값을 손으로
      맞춰 둔다. lib/schema.ts 의 @id·값을 바꾸면 여기와 scripts/generate-purpose-landings.mjs 도 함께 고칠 것.
      사업장은 동탄 한 곳뿐 — 지역 페이지가 많다는 이유로 사업체 노드를 복제하지 않는다.
@@ -91,7 +91,7 @@ window.dataLayer=window.dataLayer||[];
       "sameAs": ["https://naver.me/FORRCoFc", "https://blog.naver.com/reumlab", "https://www.instagram.com/reumlab/", "https://pf.kakao.com/_xkxjQxgn", "https://maps.app.goo.gl/rkKTdHCvhSyYrEkq8"]
     },
     {
-      "@type": "ProfessionalService",
+      "@type": "LocalBusiness",
       "@id": "https://reumlab.com/#business",
       "name": "름랩",
       "alternateName": "REUMLAB",
@@ -175,6 +175,17 @@ src="https://www.facebook.com/tr?id=1019901144020877&ev=PageView&noscript=1" alt
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<noscript>
+  <!--
+    JS 가 없을 때 FAQ 답변을 읽을 수 있게 한다.
+    .faq-a 는 styles.css 에서 `max-height: 0; overflow: hidden` 으로 접혀 있고,
+    펼치는 동작은 script.js 의 클릭 핸들러가 inline max-height 를 넣는 방식뿐이다.
+    즉 JS 를 끄면 질문 12개는 보이는데 답변은 어떤 방법으로도 열 수 없었다.
+    (답변 텍스트 자체는 HTML 에 있으므로 숨김 SEO 텍스트가 아니라 조작 수단의 문제다.)
+    JS 가 동작하는 일반 방문자에게는 이 스타일이 적용되지 않아 화면이 그대로다.
+  -->
+  <style>.faq-a{max-height:none}</style>
+</noscript>
 </head>
 <body data-page-type="home">
 <!-- Google Tag Manager (noscript) -->

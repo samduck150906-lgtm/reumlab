@@ -149,7 +149,7 @@ for (const p of pages) {
       if (!t) continue;
       schemaCount.set(t, (schemaCount.get(t) || 0) + 1);
       // 사이트 전역 엔티티는 페이지당 한 번만
-      if (['Organization', 'ProfessionalService', 'WebSite'].includes(t)) {
+      if (['Organization', 'LocalBusiness', 'WebSite'].includes(t)) {
         seen.set(t, (seen.get(t) || 0) + 1);
       }
     }
@@ -169,7 +169,7 @@ for (const p of pages) {
 }
 // 페이지 전체에서 전역 엔티티가 두 번 이상 렌더되는 경우(서로 다른 script 블록)
 for (const p of pages) {
-  for (const t of ['Organization', 'ProfessionalService', 'WebSite']) {
+  for (const t of ['Organization', 'LocalBusiness', 'WebSite']) {
     // 정적 홈(index.html)과 목적별 랜딩은 JSON 을 콜론 뒤 공백까지 넣어 포맷한다.
     // 공백을 허용하지 않으면 그 문서들의 중복을 놓친다.
     const n = (p.html.match(new RegExp(`"@type":\\s*"${t}"`, 'g')) || []).length;

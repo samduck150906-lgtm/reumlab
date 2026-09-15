@@ -27,7 +27,7 @@ import { PortfolioCreativeWorkJsonLd, HOME_CRUMB } from '@/components/JsonLd';
    · CreativeWork 는 날짜가 필수 속성이 아니므로 공개된 제목·설명·범위만 쓴다.
      datePublished·dateModified 는 원본에 없으므로 만들지 않는다.
    · Review·AggregateRating — 검증 가능한 리뷰 시스템이 없으므로 절대 넣지 않는다.
-   · Organization/ProfessionalService — 루트 layout 의 SiteEntityJsonLd 가 이미 내고 있다.
+   · Organization/LocalBusiness — 루트 layout 의 SiteEntityJsonLd 가 이미 내고 있다.
 */
 
 export function generateStaticParams() {

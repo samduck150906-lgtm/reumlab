@@ -750,7 +750,8 @@ const SITE_ENTITY_NODES = [
     sameAs: SAME_AS,
   },
   {
-    '@type': 'ProfessionalService',
+    // 타입 근거는 lib/schema.ts businessNode() 주석 참고(ProfessionalService deprecated → LocalBusiness).
+    '@type': 'LocalBusiness',
     '@id': SCHEMA_ID.business,
     name: '름랩',
     alternateName: 'REUMLAB',

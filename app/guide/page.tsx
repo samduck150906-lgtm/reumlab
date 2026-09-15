@@ -4,7 +4,10 @@ import { SITE } from '@/lib/seo';
 import { GUIDES, guideCanonical, guideDecision } from '@/lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { getClusters, hubShouldIndex } from '@/lib/data';
-import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';
+import { GUIDE_FAQS, guideFaqMainEntity } from '@/lib/guide-faq';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { BreadcrumbJsonLdTrail, JsonLdScript } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 
 const CANONICAL = `${SITE.domain}/guide/`;
@@ -73,12 +76,39 @@ export default function GuideHubPage() {
         })),
       ],
     },
+    // 이 페이지의 FAQ 를 별도 노드로 두고 여기서 참조만 한다.
+    // ItemList(가이드 목록)를 Question 배열로 덮어쓰지 않는다 — 목록이 이 페이지의 주 콘텐츠다.
+    hasPart: { '@id': `${CANONICAL}#faq` },
+  };
+
+  /**
+   * 본문 FAQ 와 같은 배열(lib/guide-faq.ts)에서 만든다.
+   * 화면에 없는 질문이 스키마에만 생기지 않도록 원본을 하나로 유지한다.
+   */
+  const faqPage = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${CANONICAL}#faq`,
+    inLanguage: 'ko-KR',
+    isPartOf: { '@id': `${CANONICAL}#collection` },
+    mainEntity: guideFaqMainEntity(),
+  };
+
+  /** relatedLinks 의 slug 를 실제 가이드·비교 글로 해석한다. 없는 slug 는 렌더하지 않는다. */
+  const resolveFaqLink = (link: { kind: 'guide' | 'compare'; slug: string }) => {
+    if (link.kind === 'guide') {
+      const g = getGuide(link.slug);
+      return g ? { href: `/guide/${link.slug}/`, label: g.h1 } : null;
+    }
+    const c = getCompare(link.slug);
+    return c ? { href: `/compare/${link.slug}/`, label: c.h1 } : null;
   };
 
   return (
     <>
       <BreadcrumbJsonLdTrail items={crumbs} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <JsonLdScript data={itemList} />
+      <JsonLdScript data={faqPage} />
       <main>
         <article className="dynamic-page">
           <nav className="breadcrumb" aria-label="breadcrumb">
@@ -158,6 +188,42 @@ export default function GuideHubPage() {
               <Link href="/blog/">블로그</Link>
             </div>
           </div>
+
+          {/*
+            본문 FAQ — 위 faqPage 노드와 같은 배열(GUIDE_FAQS)에서 렌더한다.
+            기존 .faq-grid/.faq-item/.faq-q/.faq-a 스타일을 그대로 쓴다(새 색·폰트·카드 없음).
+            항상 펼쳐진 정적 마크업이라 JS 없이도 질문과 답변을 모두 읽을 수 있다.
+            ".faq-q::before" 의 "Q." 는 CSS 장식이라 본문 텍스트에 섞이지 않는다.
+          */}
+          <section className="section-inner" style={{ paddingTop: 8 }} aria-labelledby="guide-faq">
+            <h2 id="guide-faq" className="section-title" style={{ fontSize: '1.3rem' }}>
+              가이드를 읽기 전 자주 묻는 질문
+            </h2>
+            <div className="faq-grid" style={{ marginTop: 20 }}>
+              {GUIDE_FAQS.map((f) => {
+                const links = (f.relatedLinks ?? []).map(resolveFaqLink).filter(Boolean) as {
+                  href: string;
+                  label: string;
+                }[];
+                return (
+                  <div className="faq-item" key={f.id} id={f.id}>
+                    <p className="faq-q">{f.q}</p>
+                    <p className="faq-a">{f.a}</p>
+                    {links.length > 0 && (
+                      <p className="faq-a" style={{ marginTop: 10 }}>
+                        {links.map((l, i) => (
+                          <span key={l.href}>
+                            {i > 0 ? ' · ' : ''}
+                            <Link href={l.href}>{l.label}</Link>
+                          </span>
+                        ))}
+                      </p>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
 
           <div className="cta" style={{ marginTop: 24 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>궁금한 점, 바로 여쭤보세요</h2>
