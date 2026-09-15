@@ -141,7 +141,7 @@ function ContactButtons({
       <div className="flex w-full flex-col gap-2">
         <a
           href={TEL_HREF}
-          className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3.5 font-display text-sm font-semibold text-white transition hover:bg-accent-deep"
+          className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-accent-deep px-5 py-3.5 font-display text-sm font-semibold text-white transition hover:bg-accent-darker"
           data-analytics="cta_pkg_call"
         >
           <IconPhone className="h-4 w-4" />
@@ -164,7 +164,7 @@ function ContactButtons({
     <div className="flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:items-center">
       <a
         href={TEL_HREF}
-        className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-accent px-8 py-3.5 font-display text-sm font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-deep sm:text-[15px]"
+        className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-accent-deep px-8 py-3.5 font-display text-sm font-semibold text-white shadow-lg shadow-accent/25 transition hover:bg-accent-darker sm:text-[15px]"
         data-analytics="cta_call"
       >
         <IconPhone className="h-[18px] w-[18px]" />
@@ -353,7 +353,7 @@ function PricingCard({ pkg }: { pkg: Pkg }) {
       }`}
     >
       {pkg.featured && pkg.badge ? (
-        <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent px-3 py-1 font-display text-[11px] font-bold text-white shadow-lg">
+        <div className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent-deep px-3 py-1 font-display text-[11px] font-bold text-white shadow-lg">
           {pkg.badge}
         </div>
       ) : null}
@@ -378,7 +378,7 @@ function PricingCard({ pkg }: { pkg: Pkg }) {
         data-analytics="cta_pkg_call"
         className={`mt-5 inline-flex min-h-[44px] w-full items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 font-display text-[13px] font-semibold transition ${
           pkg.featured
-            ? 'bg-accent text-white hover:bg-accent-deep'
+            ? 'bg-accent-deep text-white hover:bg-accent-darker'
             : 'bg-white/10 text-white ring-1 ring-white/15 hover:bg-white/15'
         }`}
       >
@@ -534,7 +534,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
                 <a
                   href={TEL_HREF}
                   data-analytics="cta_hero_call"
-                  className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-xl bg-accent px-8 py-4 font-display text-base font-bold text-white shadow-lg shadow-accent/30 transition hover:bg-accent-deep sm:w-auto"
+                  className="inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-xl bg-accent-deep px-8 py-4 font-display text-base font-bold text-white shadow-lg shadow-accent/30 transition hover:bg-accent-darker sm:w-auto"
                 >
                   <IconPhone className="h-5 w-5" />
                   무료 30분 상담받기
@@ -680,7 +680,7 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
               <div className="mt-9">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3.5 font-display text-sm font-semibold text-white shadow-blue transition hover:bg-accent-deep"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent-deep px-7 py-3.5 font-display text-sm font-semibold text-white shadow-blue transition hover:bg-accent-darker"
                   data-analytics="cta_home_handover"
                 >
                   운영 세팅 포함 상담

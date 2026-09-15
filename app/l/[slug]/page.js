@@ -3,6 +3,10 @@ import LandingPage from '../../../components/LandingPage';
 import { LandingServiceJsonLd } from '../../../components/JsonLd';
 import { SITE } from '../../../lib/seo';
 import { buildLandingMeta } from '../../../lib/search-intent';
+// Tailwind 유틸(@tailwind components/utilities)은 app/reum-sales.css 에만 있다.
+// 이 라우트가 쓰는 components/LandingPage.js 는 Tailwind 클래스로 작성돼 있는데 그동안 이 import 가
+// 없어서 해당 페이지들이 스타일 없이 렌더됐다(헤더·푸터만 globals.css 로 살아 있었다).
+import '../../reum-sales.css';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
 

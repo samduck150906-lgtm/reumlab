@@ -53,7 +53,7 @@
 | A02 | 개인정보 | PASS | dataLayer 에 이름·연락처·주소 없음. 폼 입력값을 localStorage/sessionStorage/URL 에 쓰지 않음. 비밀번호·API 키 필드 없음(게이트가 검사) |
 | V01 | 반응형 | PASS | 320/360/390/430/768/1024/1280/1440px 가로 넘침 0px. 200% 확대(640×512)도 0px |
 | V02 | 키보드 | PASS | 범위 탭 방향키 이동, FAQ summary 포커스·열기, 폼을 키보드만으로 작성·제출 성공 |
-| V03 | 접근성 | PASS (예외 1건 기록) | Lighthouse Accessibility **97**. label·scope·caption·focus-visible 규칙 확인. 남은 대비 실패 1건은 **공용 상담 폼 제출 버튼**(사이트 공통, 아래 참조) |
+| V03 | 접근성 | PASS | Lighthouse Accessibility **100** (2차 작업에서 공용 버튼 대비를 고친 뒤). label·scope·caption·focus-visible 규칙 확인 |
 | P01 | 성능 | **부분 미달 — 원인 기록** | 모바일 5회 중앙값 **Performance 76** (목표 90). 아래 3절 |
 | R01 | 홈/메뉴 | PASS | 홈 본문 10,368자 → 10,368자(동일). 메뉴 항목 1개 추가만 |
 | R02 | 기존 폼 | PASS | default/geo-website/ai-voice 필드·유입_랜딩 유지, 새 필드 누출 없음 |
@@ -62,6 +62,9 @@
 | D02 | 운영 인계 | PASS | `DEPLOY_AND_ROLLBACK.md` · `OWNER_ACTIONS.md` 에 배포·복구·미확인 항목 명시 |
 
 **요약: PASS 32 · 부분 미달(원인 기록) 1 (P01) · NOT_RUN 1 (F05) · FAIL 0**
+
+> 2026-09-15 2차 작업에서 V03 이 97 → **100** 이 되었고, 폰트 전송량을 2,009KB → 222KB 로
+> 줄였다. P01 관련 수치와 정정 내용은 `OWNER_ACTIONS.md` 의 E1 절에 있다.
 
 ## 3. 성능 — 목표 미달 항목과 원인
 
@@ -80,13 +83,16 @@
 - 측정은 로컬 정적 서버 기준이며 **실사용자 데이터(CrUX)가 아니다.** 신설 페이지라 실사용자 LCP/INP/CLS 는 **측정 데이터 없음**.
 - 5회 중 1~2회는 FCP 12.4s / Perf 55 로 튀었다. 같은 현상이 기존 `/ai-voice-development/` 에서도 재현돼 **이 컨테이너의 Lighthouse 시뮬레이션 변동**으로 판단했고, 한 번의 수치 차이를 회귀로 해석하지 않기 위해 5회 중앙값을 기록했다.
 
-## 4. 접근성 — 남은 실패 1건
+## 4. 접근성 — 2차 작업에서 해소
 
-Lighthouse axe 의 `color-contrast` 실패 1건: `form.mx-auto > button.mt-5` — 공용 상담 폼의 제출 버튼(`bg-accent` #3d7cff 위 흰 글자, 약 3.8:1).
+1차 측정에서 남아 있던 `color-contrast` 실패 1건(공용 상담 폼 제출 버튼: `bg-accent` #3d7cff 위 흰 글자 = 3.80:1)을 2차 작업에서 고쳤다.
 
-- **사이트 공통 컴포넌트**(`components/LandingInquiryForm.tsx`)이며 모든 랜딩·`/geo-website/`·`/ai-voice-development/` 에 동일하게 존재하는 **기존 문제**다.
-- 참고로 같은 측정에서 `/geo-website/` 는 대비 실패 16건이다(이 페이지는 1건).
-- 이 페이지 때문에 전역 버튼 색을 바꾸면 사이트 전체 디자인이 함께 바뀌므로 **이번 범위에서 고치지 않았다.** 수정안은 `OWNER_ACTIONS.md` 에 기록.
+- 흰 글자가 올라가는 `bg-accent` 를 전부 `bg-accent-deep`(#2563eb, **5.17:1**)로 바꾸고, hover 는 새로 추가한 `accent.darker`(#1d4ed8, **6.70:1**)로 보냈다. hover 가 밝은 쪽으로 가면 그 상태에서 다시 AA 미달이 되기 때문이다.
+- 대상: `LandingInquiryForm`(모든 랜딩 폼 제출 버튼), `LandingPage.js`·`HubPage.js`(전화 CTA·번호 뱃지·순번 원형), `ReumSalesLanding.tsx`.
+- 결과: `/ai-search-optimization/` Lighthouse Accessibility **97 → 100**.
+- `/geo-website/` 는 여전히 97 이다 — 그 페이지 고유 컴포넌트에 별도 대비 항목이 남아 있고, 이번 범위가 아니라 건드리지 않았다.
+
+공용 폼 안내문 1건이 12px 인 것은 그대로 두었다(사이트 공통 문구). 이 페이지는 같은 취지의 필수 고지를 상담 섹션에 13.5px 로 별도 표시한다.
 
 공용 폼 안내문 1건이 12px 다(`문의만으로 계약이 진행되지 않습니다 …`). 같은 이유로 손대지 않았고, 이 페이지는 같은 취지의 필수 고지를 상담 섹션에 13.5px 로 별도 표시한다.
 
@@ -103,4 +109,4 @@ Lighthouse axe 의 `color-contrast` 실패 1건: `form.mx-auto > button.mt-5` �
 - 원인: `script.js:679` 의 `function updateMobileCta()` 가 `if (mcta) { … }` 블록 안에 선언돼 있고, 빌드 시 미니파이어가 `"use strict"` 를 붙이면서 블록 스코프 함수 선언이 바깥(`script.js:693`의 IntersectionObserver 콜백)에서 보이지 않는다.
 - `script.js` 와 `scripts/copy-home-assets.mjs` 는 이번 브랜치에서 **한 줄도 바뀌지 않았다**(마지막 변경 커밋 `60ad015`). 기준선 빌드에서도 동일하게 재현된다.
 - 영향: 모바일 고정 CTA 의 "문의 영역이 보이면 숨김" 동작만 작동하지 않는다. 스크롤 표시/숨김 자체는 정상.
-- 최소 수정안은 `OWNER_ACTIONS.md` 에 적었다. 홈은 트래픽이 가장 많은 페이지이고 이번 작업 범위 밖이라 임의로 고치지 않았다.
+- **2026-09-15 2차 작업에서 수정했다.** 선언을 `if` 블록 밖으로 빼고 `var updateMobileCta = function () {…}` 함수식으로 바꿨다(엄격 모드에서도 같은 스코프에 남는다). 브라우저 회귀 검사에서 홈 콘솔 오류 0건.

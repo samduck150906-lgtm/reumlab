@@ -544,7 +544,9 @@ export default function LandingInquiryForm({
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className="mt-5 w-full rounded-xl bg-accent px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-deep disabled:opacity-70"
+        // 흰 글자 대비: accent #3d7cff 는 3.80:1 로 WCAG AA(4.5:1) 미달이라
+        // 같은 팔레트의 accent-deep #2563eb(5.17:1)을 기본으로 쓴다. hover 는 밝은 쪽.
+        className="mt-5 w-full rounded-xl bg-accent-deep px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-darker disabled:opacity-70"
       >
         {status === 'submitting' ? '요청 중…' : submitLabel}
       </button>

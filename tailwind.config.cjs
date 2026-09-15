@@ -19,9 +19,12 @@ module.exports = {
           600: '#2f5280',
         },
         accent: {
+          // DEFAULT 는 아이콘·테두리·연한 배경용. 흰 글자를 올리면 3.80:1 이라
+          // WCAG AA(4.5:1)에 못 미치므로, 흰 글자 버튼은 deep 이상을 쓴다.
           DEFAULT: '#3d7cff',
           soft: '#e8f0ff',
-          deep: '#2563eb',
+          deep: '#2563eb',   // 흰 글자 5.17:1 — 버튼 기본
+          darker: '#1d4ed8', // 흰 글자 6.70:1 — 버튼 hover
         },
       },
       fontFamily: {

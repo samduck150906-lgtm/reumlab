@@ -57,7 +57,7 @@ export default function LandingPage({ slug }) {
           </p>
 
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-deep">
+            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-accent-deep px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-darker">
               📞 {site.tel} 전화 상담
             </a>
             <a href={mail} className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-7 py-4 text-base font-bold text-white ring-1 ring-white/20 transition-all hover:bg-white/15">
@@ -79,7 +79,7 @@ export default function LandingPage({ slug }) {
       {/* ── 인트로 ── */}
       <section className="px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-3xl">
-          <span className="text-sm font-bold uppercase tracking-wide text-accent">{c.serviceLabel}</span>
+          <span className="text-sm font-bold uppercase tracking-wide text-accent-deep">{c.serviceLabel}</span>
           <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
             {kw}, 이렇게 도와드립니다
           </h2>
@@ -115,7 +115,7 @@ export default function LandingPage({ slug }) {
           <ul className="mt-8 grid gap-3 sm:grid-cols-2">
             {c.angle.points.map((p) => (
               <li key={p} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-white p-4 text-sm text-slate-700 shadow-sm">
-                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-accent text-[11px] font-bold text-white">✓</span>
+                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-accent-deep text-[11px] font-bold text-white">✓</span>
                 {p}
               </li>
             ))}
@@ -143,7 +143,7 @@ export default function LandingPage({ slug }) {
                 }`}
               >
                 {t.featured ? (
-                  <span className="mb-3 inline-block rounded-full bg-accent px-3 py-1 text-xs font-bold text-white">추천</span>
+                  <span className="mb-3 inline-block rounded-full bg-accent-deep px-3 py-1 text-xs font-bold text-white">추천</span>
                 ) : null}
                 <h3 className={`text-sm font-bold ${t.featured ? 'text-accent-deep' : 'text-sky-300'}`}>{t.tier}</h3>
                 <p className={`mt-2 font-display text-3xl font-bold ${t.featured ? 'text-navy-900' : 'text-white'}`}>{t.price}</p>
@@ -169,7 +169,7 @@ export default function LandingPage({ slug }) {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {c.process.map((s) => (
               <div key={s.step} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-card">
-                <div className="font-display text-2xl font-bold text-accent">{s.step}</div>
+                <div className="font-display text-2xl font-bold text-accent-deep">{s.step}</div>
                 <h3 className="mt-3 text-base font-bold text-navy-900">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">{s.desc}</p>
               </div>
@@ -200,7 +200,7 @@ export default function LandingPage({ slug }) {
         <div className="mx-auto max-w-5xl">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <span className="text-sm font-bold uppercase tracking-wide text-accent">DIRECT HANDOVER</span>
+              <span className="text-sm font-bold uppercase tracking-wide text-accent-deep">DIRECT HANDOVER</span>
               <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
                 사이트만 넘겨드리지 않습니다. 직접 유지보수하실 수 있게, 전부 세팅해 드립니다.
               </h2>
@@ -242,7 +242,7 @@ export default function LandingPage({ slug }) {
             </figure>
           </div>
           <div className="mt-12">
-            <p className="text-center font-display text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+            <p className="text-center font-display text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
               관리자 화면 미리보기
             </p>
             <div className="mx-auto mt-5 grid max-w-3xl gap-5 sm:grid-cols-3">

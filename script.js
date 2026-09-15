@@ -672,17 +672,24 @@
   });
 
   // 모바일 고정 CTA — 첫 화면 CTA를 가리지 않고, 스크롤 뒤에만 노출
+  //
+  // 선언을 if 블록 밖으로 뺀 이유: 예전에는 `function updateMobileCta(){}` 가
+  // `if (mcta) { … }` 안에 있었다. 이 파일은 비엄격 모드로 쓰였지만 빌드 시
+  // 미니파이어가 "use strict" 를 붙이고, 엄격 모드에서 블록 안 함수 선언은 블록
+  // 스코프라 아래 IntersectionObserver 콜백에서 ReferenceError 가 났다.
+  // (배포된 홈 콘솔에서 "updateMobileCta is not defined" 로 관측됨)
   var mcta = document.getElementById("mcta");
   var contact = document.getElementById("contact");
+  var contactVisible = false;
+  var updateMobileCta = function () {
+    if (!mcta) return;
+    var pastHeroIntro = window.scrollY > Math.min(360, window.innerHeight * 0.42);
+    var shouldShow = pastHeroIntro && !contactVisible;
+    mcta.classList.toggle("is-visible", shouldShow);
+    mcta.classList.toggle("is-hidden", !shouldShow);
+    mcta.setAttribute("aria-hidden", shouldShow ? "false" : "true");
+  };
   if (mcta) {
-    var contactVisible = false;
-    function updateMobileCta() {
-      var pastHeroIntro = window.scrollY > Math.min(360, window.innerHeight * 0.42);
-      var shouldShow = pastHeroIntro && !contactVisible;
-      mcta.classList.toggle("is-visible", shouldShow);
-      mcta.classList.toggle("is-hidden", !shouldShow);
-      mcta.setAttribute("aria-hidden", shouldShow ? "false" : "true");
-    }
     window.addEventListener("scroll", updateMobileCta, { passive: true });
     updateMobileCta();
   }

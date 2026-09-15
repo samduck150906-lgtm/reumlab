@@ -1,3 +1,21 @@
+/*
+ * @tailwind base 가 왜 필요한가 — 리셋 때문이 아니다.
+ *
+ * tailwind.config.cjs 에서 corePlugins.preflight 를 false 로 꺼 두었기 때문에
+ * base 레이어는 CSS 리셋을 내보내지 않는다. 대신 Tailwind v3 가 `*,::before,::after`
+ * 에 깔아 두는 `--tw-shadow` `--tw-gradient-from-position` `--tw-ring-shadow`
+ * `--tw-translate-x` 같은 **기본 커스텀 속성**을 내보낸다.
+ *
+ * 이 블록이 없으면 그 변수들이 정의되지 않아, 이를 참조하는 유틸리티가 계산 단계에서
+ * 통째로 무효가 된다:
+ *   .bg-gradient-to-b → background-image: none   (from- via- to- 계열이 통째로 안 먹는다)
+ *   .shadow-lg        → box-shadow 없음
+ *   ring / transform / blur 계열도 같은 이유로 무력화
+ * 실제로 /l/*, /h/* 히어로가 어두운 그라데이션 배경을 잃어 흰 배경 위 흰 글씨가 됐다.
+ *
+ * 리셋은 여전히 꺼져 있으므로 기존 페이지의 여백·글꼴 초기화가 바뀌지 않는다.
+ */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 

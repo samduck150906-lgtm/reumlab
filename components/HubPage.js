@@ -60,7 +60,7 @@ export default function HubPage({ hubSlug }) {
             {bodyText || `${hub.ko} 관련 키워드별 상담 페이지를 모았습니다. 원하는 항목에서 바로 견적·상담을 받아 보세요.`}
           </p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-accent px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-deep">
+            <a href={tel} className="inline-flex items-center gap-2 rounded-xl bg-accent-deep px-7 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-darker">
               📞 {site.tel} 전화 상담
             </a>
             <a href={mail} className="inline-flex items-center gap-2 rounded-xl bg-white/10 px-7 py-4 text-base font-bold text-white ring-1 ring-white/20 transition-all hover:bg-white/15">
@@ -73,7 +73,7 @@ export default function HubPage({ hubSlug }) {
       {/* ── 키워드 그리드 ── */}
       <section className="px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
-          <span className="text-sm font-bold uppercase tracking-wide text-accent">EXPLORE</span>
+          <span className="text-sm font-bold uppercase tracking-wide text-accent-deep">EXPLORE</span>
           <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
             {hub.ko} 관련 견적·상담 페이지
           </h2>

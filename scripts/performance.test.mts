@@ -67,17 +67,33 @@ test('static legal pages do not trigger missing Next RSC prefetches', () => {
   }
 });
 
-test('public routes use one self-hosted Pretendard variable font', () => {
-  const homeCss = read('styles.css');
-  const nextCss = read('app/globals.css');
-  const legacyCss = read('reum.css');
-  const fontPath = 'public/fonts/PretendardVariable-1.3.9.woff2';
+test('public routes use the self-hosted Pretendard pair in the right order', () => {
+  const meta = JSON.parse(read('public/fonts/subset.json'));
+  const original = `public/fonts/${meta.source}`;
+  const subset = `public/fonts/${meta.subset}`;
 
-  assert.equal(existsSync(fontPath), true);
-  assert.ok(statSync(fontPath).size > 2_000_000 && statSync(fontPath).size < 2_100_000);
-  assert.match(homeCss, /font-family:\s*"Pretendard"/);
-  assert.match(nextCss, /font-family:\s*'Pretendard'/);
-  assert.match(homeCss, /font-display:\s*swap/);
-  assert.match(nextCss, /font-display:\s*swap/);
-  assert.doesNotMatch(legacyCss, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
+  // 원본은 그대로 남아 있어야 한다 — 서브셋의 입력이자 희귀 글자용 폴백이다.
+  assert.equal(existsSync(original), true);
+  assert.ok(statSync(original).size > 2_000_000 && statSync(original).size < 2_100_000);
+  assert.equal(existsSync(subset), true);
+  assert.ok(statSync(subset).size < 400_000, '서브셋이 400KB 를 넘으면 분리 의미가 사라진다');
+
+  for (const file of ['styles.css', 'app/globals.css', 'reum.css']) {
+    const css = read(file);
+    assert.doesNotMatch(css, /fonts\.googleapis\.com|fonts\.gstatic\.com/, `${file}: 외부 폰트 호스트`);
+    assert.match(css, /font-family:\s*['"]Pretendard['"]/, `${file}: Pretendard 선언 없음`);
+    assert.match(css, /font-display:\s*swap/, `${file}: font-display swap 없음`);
+
+    // 두 face 가 다 있어야 하고, **서브셋이 나중**이어야 한다.
+    // 순서가 뒤집히면 범위가 겹치는 흔한 글자까지 원본(2MB)이 이겨 전 페이지가 2MB 를 받는다.
+    const origAt = css.indexOf(meta.source);
+    const subAt = css.indexOf(meta.subset);
+    assert.ok(origAt >= 0, `${file}: 원본 face 없음`);
+    assert.ok(subAt >= 0, `${file}: 서브셋 face 없음`);
+    assert.ok(subAt > origAt, `${file}: 서브셋 face 가 원본보다 먼저 선언됐다 — 전 페이지가 2MB 를 받게 된다`);
+
+    // 두 범위가 subset.json 과 일치해야 한다(둘 중 하나만 고치면 글자가 폴백으로 샌다).
+    assert.ok(css.includes(meta.unicode_range), `${file}: 서브셋 unicode-range 가 subset.json 과 다름`);
+    assert.ok(css.includes(meta.rest_unicode_range), `${file}: 원본 unicode-range 가 subset.json 과 다름`);
+  }
 });

@@ -75,7 +75,40 @@ npm run seo:verify:ai-search  # 이 페이지만 다시 검사
 # scripts/og/ai-search-architecture.html 상단 주석의 명령 참고 (playwright 필요, 수동 1회)
 ```
 
-## 5. 구조화 데이터
+## 5. 폰트 — 왜 두 조각인가
+
+`app/globals.css` 를 비롯한 11곳이 `@font-face` 를 선언한다(Next CSS 3곳 + 정적 HTML 8곳).
+전부 같은 구조다.
+
+```
+1) 원본 PretendardVariable-1.3.9.woff2 (2.0MB) · unicode-range = 폰트 cmap 전체(14,336자)
+2) 서브셋 Pretendard-1.3.9-subset.woff2 (222KB) · unicode-range = 실제 사용 글자(1,338자)
+```
+
+**순서가 의미를 만든다.** 같은 family·같은 굵기에서 범위가 겹치면 CSS 글꼴 매칭은
+*나중에 선언된 것*을 고른다. 그래서 흔한 글자는 항상 222KB 쪽으로 가고, 서브셋에 없는
+희귀 음절이 나오는 페이지만 원본을 추가로 받는다. 두 범위의 합집합이 원본 cmap 과
+같으므로 **어떤 글자도 폴백 글꼴로 떨어지지 않는다.**
+
+원본 쪽 `unicode-range` 를 비우면 안 된다. 범위 없는 face 는 모든 문자의 후보라,
+페이지에 폰트가 갖고 있지도 않은 이모지(📞 ✕ 💬)가 하나만 있어도 브라우저가 2.0MB 를
+받아 확인한 뒤 폴백한다. 처음에 그렇게 만들었다가 전 페이지에서 2.0MB 가 그대로
+내려오는 것을 실측으로 잡았다.
+
+재생성(수동, 콘텐츠가 크게 늘었을 때):
+```bash
+python3 -m pip install fonttools brotli
+npm run build                               # out/ 이 있어야 사용 글자를 셀 수 있다
+python3 scripts/build-font-subsets.py       # public/fonts/subset.json 갱신 + woff2 생성
+node scripts/apply-font-subset-css.mjs      # 11곳 선언에 반영
+npm run build                               # seo:verify:font 가 마지막에 검사한다
+```
+
+`scripts/verify-font-subset.mjs` 는 out/ 전체(본문 + 보이는 속성값 + CSS `content`)를
+훑어 서브셋 밖 글자를 찾는다. textarea placeholder 의 '옴' 한 글자 때문에 한 페이지가
+2.0MB 를 다시 받던 것을 이 검사가 잡았다.
+
+## 6. 구조화 데이터
 
 한 문서에 `@graph` 두 블록이 나간다.
 
