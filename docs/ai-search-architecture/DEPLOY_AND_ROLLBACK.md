@@ -1,10 +1,32 @@
 # 배포와 복구
 
-## 0. 현재 상태
+## 0. 현재 상태 — 운영 배포 완료 (2026-09-15)
 
-- 구현·검수: **로컬 완료** (`out/` 산출물 기준, 전체 검증 통과).
-- 원격 push / PR / merge / 프로덕션 배포: **하지 않았다.** 사용자 지시 없이는 진행하지 않는다.
-- 작업 브랜치: `claude/ai-search-architecture` (기준선 `16d04a4`).
+사장님 지시(`메인으로 머지 후 커밋 푸시`)에 따라 `main` 으로 fast-forward 머지 후 푸시했다.
+
+| 커밋 | 내용 | Netlify 배포 | 상태 |
+|---|---|---|---|
+| `16d04a4` | 가이드 FAQ · LocalBusiness 전환 · 홈 FAQ no-JS 대비 | `f0d0c04` 배포에 포함 | ready |
+| `f0d0c04` | `/ai-search-optimization/` 신규 페이지 | `6aa8d1e5cb4f0600092de0d2` · 05:06 published | **ready** |
+| `52cc2b6` | 랜딩 240P 스타일 복구 · 폰트 서브셋 · 대비 AA · 홈 JS 오류 | `6aa8de1e31e16a00084d0967` · 05:58 published | **ready** |
+
+두 배포 모두 production 컨텍스트라 `npm run build && npm run seo:indexnow` 가 실행됐다 —
+**네이버·Bing IndexNow 제출이 함께 나갔다.** 빌드 체인 끝의 게이트(`seo:verify:home-guide`,
+`seo:verify:ai-search`, `seo:verify:font`)가 Netlify 에서도 통과했다(실패하면 배포가 실패한다).
+Netlify 비밀정보 스캔 0건.
+
+**아직 확인하지 못한 것**: 이 실행 환경은 `reumlab.com` 으로 나가는 HTTP 가 프록시에서
+차단돼 있어 실서버 응답을 직접 열어 보지 못했다. 아래 3절의 실서버 확인은 사장님이
+브라우저로 해야 한다. 다만 Netlify API 로 확인한 사실은 다음과 같다:
+
+- 배포 상태 `ready`, `ai-search-optimization/index.html` 이 업로드 목록에 포함.
+- Netlify Forms 의 `main-apply` 폼에 새 필드 5종이 **실제로 등록됐다** —
+  `홈페이지주소상태` · `홈페이지환경` · `수정권한` · `관심패키지` · `지속관리관심`
+  (기존 필드·honeypot 유지, 누적 접수 31건).
+
+## 0-1. 이전 상태 (참고)
+
+- 작업 브랜치: `claude/ai-search-architecture` (기준선 `16d04a4`) — 이미 main 에 머지됨.
 
 ## 1. 배포 경로 (이 저장소의 실제 동작)
 
