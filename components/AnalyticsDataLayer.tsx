@@ -87,9 +87,13 @@ export function AnalyticsDataLayer() {
       // 한 번만 전송하므로 같은 클릭의 cta_click 중복은 생기지 않는다.
       const declaredType = tagged?.getAttribute('data-cta-type');
       if (!channel && declaredType === 'form') {
+        // 가격 카드 CTA 는 어떤 등급을 눌렀는지도 남긴다. 값은 비식별 enum 이며
+        // 속성이 없는 기존 CTA 는 이 파라미터 없이 예전과 똑같이 나간다.
+        const tier = tagged?.getAttribute('data-cta-package') || undefined;
         pushEvent(EVENT.ctaClick, {
           cta_type: 'form',
           cta_location: tagged?.getAttribute('data-cta-location') || name || 'page',
+          ...(tier ? { package_tier: tier } : {}),
           ...ctx,
           ...acquisition,
         });

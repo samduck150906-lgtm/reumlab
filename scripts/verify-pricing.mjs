@@ -32,6 +32,14 @@ const PACKAGES = [...src.matchAll(/\{\s*name:\s*'([^']+)',\s*line:\s*'(web|app)'
   price: Number(m[3].replace(/_/g, '')),
 }));
 const RETIRED = [...src.matchAll(/\{\s*text:\s*'([^']+)',\s*note:\s*'([^']+)'\s*\}/g)].map((m) => ({ text: m[1], note: m[2] }));
+/**
+ * 경로 한정 예외 (lib/pricing.ts RETIRED_PRICE_EXCEPTIONS).
+ * 같은 숫자가 다른 상품 라인의 현행 가격인 경우, 그 경로에서만 폐기가격 판정을 건너뛴다.
+ * 지정 경로 밖에서는 그대로 실패한다 — 검사를 없애는 게 아니라 좁히는 장치다.
+ */
+const RETIRED_EXCEPTIONS = [
+  ...src.matchAll(/\{\s*text:\s*'([^']+)',\s*pathPrefix:\s*'([^']+)',/g),
+].map((m) => ({ text: m[1], pathPrefix: m[2] }));
 if (!PACKAGES.length || !RETIRED.length) {
   console.error('lib/pricing.ts 파싱 실패 — 표 형식이 바뀌었는지 확인하세요.');
   process.exit(1);
@@ -57,8 +65,12 @@ const warn = [];
 // ── 1) 폐기 가격 ──
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8');
+  const url = urlOf(f);
   for (const r of RETIRED) {
-    if (html.includes(r.text)) errors.push(`[폐기가격] ${urlOf(f)} — "${r.text}" (${r.note})`);
+    if (!html.includes(r.text)) continue;
+    const allowed = RETIRED_EXCEPTIONS.some((e) => e.text === r.text && url.startsWith(e.pathPrefix));
+    if (allowed) continue;
+    errors.push(`[폐기가격] ${url} — "${r.text}" (${r.note})`);
   }
 }
 
@@ -116,7 +128,8 @@ for (const f of CONTENT_ASSETS) {
 
 // ── 결과 ──
 const uniq = [...new Set(errors)];
-console.log(`가격 검사: HTML ${files.length}개 · 패키지 ${PACKAGES.length}종 · 폐기가격 ${RETIRED.length}종`);
+console.log(`가격 검사: HTML ${files.length}개 · 패키지 ${PACKAGES.length}종 · 폐기가격 ${RETIRED.length}종 · 경로 한정 예외 ${RETIRED_EXCEPTIONS.length}종`);
+for (const e of RETIRED_EXCEPTIONS) console.log(`  예외: "${e.text}" 는 ${e.pathPrefix} 안에서만 허용`);
 console.log(`기준 진입가 — 웹 ${man(webFrom)}만 원 / 앱 ${man(appFrom)}만 원`);
 for (const w of [...new Set(warn)]) console.log('  경고:', w);
 if (uniq.length) {

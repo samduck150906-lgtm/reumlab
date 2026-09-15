@@ -132,6 +132,10 @@ const projectTypes = [
   {
     title: '기존 홈페이지 GEO 관점 개선',
     body: '현재 URL과 콘텐츠를 먼저 점검한 뒤 유지할 자산과 개선할 정보 구조·검색 접근성·문의 동선을 구분합니다.',
+    // 기존 사이트만 다루는 별도 상품이 생겨(패키지·시작가 공개) 그쪽으로 연결한다.
+    // 이 카드의 설명·견적 문구는 그대로 두고 링크 한 줄만 더한다.
+    href: '/ai-search-optimization/',
+    hrefLabel: '기존 홈페이지 개선 전용 패키지 보기 →',
   },
   {
     title: '콘텐츠·관리 기능·측정 확장',
@@ -311,7 +315,16 @@ export default function GeoWebsitePage() {
             <p className={styles.eyebrow}>PROJECT TYPE &amp; COST</p>
             <h2 id="geo-price-title">제작 유형과 비용 안내</h2>
             <div className={styles.typeGrid}>
-              {projectTypes.map((item) => <article key={item.title}><h3>{item.title}</h3><p>{item.body}</p><strong>범위 확인 후 개별 견적</strong></article>)}
+              {projectTypes.map((item) => (
+                <article key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                  {'href' in item && item.href ? (
+                    <p><Link href={item.href} prefetch={false}>{item.hrefLabel}</Link></p>
+                  ) : null}
+                  <strong>범위 확인 후 개별 견적</strong>
+                </article>
+              ))}
             </div>
             <div className={styles.costFactors}>
               <h3>비용을 결정하는 항목</h3>
@@ -355,6 +368,7 @@ export default function GeoWebsitePage() {
             <h2 id="geo-related-title">관련 서비스</h2>
             <nav aria-label="관련 서비스">
               <Link href="/website/">일반 홈페이지·랜딩페이지 제작</Link>
+              <Link href="/ai-search-optimization/" prefetch={false}>기존 홈페이지 AI 검색 구조 개선</Link>
               <Link href="/data-seo/" prefetch={false}>데이터·SEO 자동화 시스템 구축</Link>
               <Link href="/service-renewal/" prefetch={false}>기존 서비스 개선·인수 개발</Link>
               <Link href="/portfolio/">개발 사례 전체 보기</Link>

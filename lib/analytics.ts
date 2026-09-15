@@ -58,6 +58,8 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   'ai-development': 'ai',
   'ai-voice-development': 'ai',
   'data-seo': 'data',
+  // 기존 홈페이지의 검색 구조를 고치는 서비스 — 신규 제작(/geo-website/)과 같은 '웹' 축이다.
+  'ai-search-optimization': 'web',
   platform: 'platform',
   'reservation-commerce': 'platform',
 };
@@ -136,6 +138,12 @@ export interface EventParams {
   source_page?: string;
   /** 개인정보를 제외한 유입 채널 분류 */
   lead_source?: string;
+  /**
+   * 관심 상품 등급 — 비식별 ASCII enum 만 (UNDECIDED / START / GROWTH / ENTERPRISE).
+   * 값 목록은 lib/ai-search-form.ts 의 PACKAGE_TIER 가 단일 출처다.
+   * 화면 라벨(한글)을 그대로 보내면 문구를 고칠 때마다 GA4 값이 갈라진다.
+   */
+  package_tier?: string;
 }
 
 /**

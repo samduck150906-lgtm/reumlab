@@ -117,12 +117,15 @@ export function ServiceWebPageJsonLd({
   serviceType,
   crumbs,
   faqs,
+  offers,
 }: {
   url: string;
   name: string;
   description: string;
   serviceType: string;
   crumbs: Crumb[];
+  /** 화면 가격표와 같은 값일 때만. 자세한 규칙은 lib/schema.ts 의 ServiceNodeInput.offers 주석. */
+  offers?: Record<string, unknown>[];
   /**
    * 화면에 실제로 렌더되는 FAQ 와 "완전히 같은 배열"일 때만 넘긴다.
    * 스키마에만 있고 화면에 없는 FAQ 는 정책 위반이며 scripts/verify-faq.mjs 가 잡는다.
@@ -130,7 +133,7 @@ export function ServiceWebPageJsonLd({
    */
   faqs?: FaqItem[];
 }) {
-  const service = serviceNode({ url, name, description, serviceType });
+  const service = serviceNode({ url, name, description, serviceType, offers });
   const serviceId = String(service['@id']);
   const graph: Record<string, unknown>[] = [
     {

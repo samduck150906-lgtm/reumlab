@@ -13,6 +13,7 @@ import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
 import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/systems';
 import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-ai';
 import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
+import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -79,6 +80,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     out.push({
       url: AI_VOICE_CANONICAL,
       lastModified: gitLastModified('lib/ai-voice.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    });
+  }
+
+  // 기존 홈페이지 검색 구조 개선 — /geo-website/(신규 제작)·/data-seo/(자동화 시스템)와
+  // 검색 의도가 분리된 독립 서비스 상세페이지. 색인 게이트를 통과할 때만 싣는다.
+  const aiSearch = aisaDecision();
+  if (aiSearch.inSitemap) {
+    out.push({
+      url: AISA_CANONICAL,
+      lastModified: gitLastModified('lib/ai-search-architecture.ts'),
       changeFrequency: 'monthly',
       priority: 0.85,
     });

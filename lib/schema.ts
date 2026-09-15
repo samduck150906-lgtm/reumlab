@@ -162,6 +162,15 @@ export interface ServiceNodeInput {
    * 지역 페이지는 그 지역을 Place 로 넘긴다 — 사업장이 아니라 "대응 가능 지역"이다.
    */
   areaServed?: Record<string, unknown>;
+  /**
+   * 화면 가격표와 **완전히 같은 값**일 때만 넘긴다.
+   *
+   * 대부분의 서비스 페이지는 고정가가 없어 Offer 를 만들지 않는다(넘기지 않으면 필드 자체가
+   * 생기지 않는다). '얼마부터'를 표현해야 하는 페이지만 PriceSpecification.minPrice 로
+   * 넘긴다 — price 로 쓰면 그 금액이 확정가라는 뜻이 되어 화면과 어긋난다.
+   * 화면에 없는 혜택·할인·재고 상태를 여기서 만들어 내지 않는다.
+   */
+  offers?: Record<string, unknown>[];
 }
 
 /** 서비스 페이지용 Service 노드. provider 는 항상 단일 사업체(#business)를 가리킨다. */
@@ -176,6 +185,7 @@ export function serviceNode(input: ServiceNodeInput) {
     description: input.description,
     provider: { '@id': SCHEMA_ID.business },
     areaServed: input.areaServed ?? AREA_KOREA,
+    ...(input.offers && input.offers.length > 0 ? { offers: input.offers } : {}),
   };
 }
 

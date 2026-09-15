@@ -139,6 +139,10 @@ const PURPOSE_LANDINGS: [string, string, string][] = [
   // AI 음성 상담도 Next 라우트(app/ai-voice-development)라 PAGE_SEO_MAP 에 없다 — 같은 방식으로 싣는다.
   // 음성·전화라는 축이 기존 AI 페이지 3종과 어떻게 다른지까지 한 문장에 담는다(생성형 검색이 이 줄을 그대로 인용한다).
   ['ai-voice-development', 'AI 음성 상담·전화 자동화 개발', '전화와 웹에서 고객의 말을 실시간으로 이해하고 대화하며 상담·예약·문의 접수·견적 접수를 처리하는 AI 음성 상담 시스템을 개발합니다. 실시간 음성 인식·합성, 대화 설계, 예약 시스템·CRM·ERP·사내 API 연동, 담당자 연결 규칙을 다룹니다. 텍스트 챗봇(/ai-development/)이나 사내 문서 검색(/enterprise-ai/)과는 다른 서비스이며, 음성 인식 정확도와 통화 품질은 보장하지 않습니다.'],
+  // 기존 홈페이지 검색 구조 개선도 Next 라우트(app/ai-search-optimization)다.
+  // /geo-website/(신규 제작)와 역할이 어떻게 다른지를 한 문장에 넣는다 — 두 페이지가
+  // 같은 상품으로 읽히면 생성형 검색이 잘못된 쪽을 인용한다.
+  ['ai-search-optimization', '기존 홈페이지 AI 검색 최적화 (AI Search Architecture)', '이미 운영 중인 홈페이지의 검색 접근성·서비스 설명·고객 질문·근거·문의 동선을 진단하고, 합의한 페이지와 공통 템플릿을 실제 코드와 콘텐츠에 반영합니다. VAT 포함 250만·390만·690만 원부터의 세 패키지이며 범위 확인 후 견적을 정합니다. 홈페이지를 새로 만드는 /geo-website/ 와 달리 기존 사이트 개선만 다루고, 검색 순위·색인·AI 추천과 인용은 보장하지 않습니다.'],
 ];
 for (const [slug, title, desc] of PURPOSE_LANDINGS) {
   L.push(`- [${title}](${SITE.domain}/${slug}/): ${desc}`);

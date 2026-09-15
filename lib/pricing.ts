@@ -126,3 +126,24 @@ export const RETIRED_PRICES: { text: string; note: string }[] = [
  * 49만원은 소상공인 프로모션가라 /soho/ 안에서는 정상이고, 그 밖에서는 구가격이다.
  */
 export const SOHO_ONLY_PRICES = ['490,000', '49만'];
+
+/**
+ * 폐기 가격 예외 — 같은 숫자가 "다른 상품 라인의 현행 가격" 인 경우, 그 경로에서만 허용한다.
+ *
+ * 왜 필요한가
+ *  RETIRED_PRICES 의 의도는 "웹·앱 패키지의 옛 금액이 화면에 되살아나지 않게" 하는 것이다.
+ *  그런데 검사는 문자열 포함으로만 판정하므로, 전혀 다른 상품이 우연히 같은 숫자를 쓰면
+ *  현행 가격인데도 폐기가격으로 잡힌다. 실제로 '690만' 이 그런 경우다 —
+ *  웹·앱 요금표에서는 폐기값이지만(현행 상단 1,980만), /ai-search-optimization/ 의
+ *  ENTERPRISE 시작가(6,900,000원 VAT 포함)로는 현행 가격이다.
+ *
+ * 검사를 느슨하게 만드는 장치가 아니다. 지정한 경로 "밖" 에서는 그대로 실패한다.
+ * 예외를 추가할 때는 어떤 상품의 현행 가격인지 note 에 반드시 남긴다.
+ */
+export const RETIRED_PRICE_EXCEPTIONS: { text: string; pathPrefix: string; note: string }[] = [
+  {
+    text: '690만',
+    pathPrefix: '/ai-search-optimization/',
+    note: 'AI Search Architecture ENTERPRISE 현행 시작가 (6,900,000원 VAT 포함) — lib/ai-search-architecture.ts',
+  },
+];

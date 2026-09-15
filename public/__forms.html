@@ -38,6 +38,8 @@
     <!--
       메인 페이지(index.html) 상단·하단 신청 폼(name="main-apply") 감지용 정적 폼.
       index.html은 정적 파일이라 그대로도 감지되지만, 확실히 하기 위해 함께 등록합니다.
+      /ai-search-optimization/ 변형은 여기에 홈페이지주소상태·홈페이지환경·수정권한·
+      관심패키지·지속관리관심을 더한다(비밀번호·API 키를 받는 필드는 두지 않는다).
       수집 항목: 이름 · 업체명 · 휴대폰번호 (+ 광고 유입 추적 utm_*·fbclid,
       + 유입 맥락 유입_경로·페이지_유형·관심_서비스축·유입_출처·최초_유입_페이지·유입_채널
       — 어떤 SEO 페이지와 채널이 문의를 만드는지 추적용).
@@ -53,6 +55,11 @@
       <input type="text" name="의뢰유형" />
       <input type="text" name="현재응대방식" />
       <input type="text" name="연동대상시스템" />
+      <input type="text" name="홈페이지주소상태" />
+      <input type="text" name="홈페이지환경" />
+      <input type="text" name="수정권한" />
+      <input type="text" name="관심패키지" />
+      <input type="text" name="지속관리관심" />
       <textarea name="핵심기능"></textarea>
       <input type="text" name="예상예산" />
       <input type="text" name="희망일정" />
