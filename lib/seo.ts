@@ -604,6 +604,14 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
         href: '/enterprise-ai/',
         label: '사내 AI 구축 알아보기',
       },
+      // 이 페이지는 "텍스트로 주고받는 챗봇" 축이다. 전화를 AI가 받게 하려는 방문자는
+      // 음성·실시간·회선이라는 다른 조건을 안고 오므로 여기서 길을 나눠 준다(자기잠식 방지).
+      {
+        heading: '전화를 AI가 받게 하려면',
+        note: '화면에 글자를 입력하는 챗봇이 아니라, 걸려 오는 전화를 AI가 직접 받아 대화하고 예약·접수까지 처리하게 하려면 실시간 음성 처리와 전화 연동이 더해집니다. 구현 방식과 비용 구조가 달라 따로 다룹니다.',
+        href: '/ai-voice-development/',
+        label: 'AI 음성 상담·전화 자동화 개발 보기',
+      },
     ],
     canonical: 'https://reumlab.com/ai-development/',
   },

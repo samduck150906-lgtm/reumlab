@@ -140,6 +140,14 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { guide: 'rag-development' },
     { guide: 'agency-choice' },
   ],
+  // AI 음성 상담 — 비용(챗봇 대비 기준) → 자동화 개념 → 예약 업무 → 진행 방식 순.
+  // 전화·음성 전용 가이드는 아직 없으므로 실재하는 slug 만 연결한다(없는 글을 만들지 않는다).
+  '/ai-voice-development/': [
+    { guide: 'chatbot-cost' },
+    { guide: 'ai-automation-guide' },
+    { guide: 'booking-app-guide' },
+    { guide: 'dev-process' },
+  ],
   // 사내 AI — 개념(RAG) → 비용 → 도입 준비 순으로 배선한다.
   // 정보 검색으로 들어온 방문자가 상업 페이지로, 상업 페이지에서 판단 근거로 오갈 수 있게 한다.
   '/enterprise-ai/': [

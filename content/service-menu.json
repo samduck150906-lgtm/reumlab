@@ -5,6 +5,7 @@
     { "slug": "erp", "label": "ERP·관리 시스템", "short": "업무를 한곳에서 관리" },
     { "slug": "ai-automation", "label": "AI 업무 자동화", "short": "반복 업무를 AI로" },
     { "slug": "enterprise-ai", "label": "사내 AI·기업용 AI", "short": "회사 자료로 답하는 AI" },
+    { "slug": "ai-voice-development", "label": "AI 음성상담·전화", "short": "전화를 AI가 받고 처리" },
     { "slug": "platform", "label": "플랫폼·매칭", "short": "고객과 공급자 연결" },
     { "slug": "reservation-commerce", "label": "예약·결제", "short": "예약·결제·회원제" },
     { "slug": "website", "label": "홈페이지·랜딩", "short": "문의가 들어오는 사이트" },

@@ -12,6 +12,7 @@ import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
 import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/systems';
 import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-ai';
+import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -70,6 +71,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.84,
   });
+
+  // AI 음성 상담·전화 자동화 — 기존 AI 페이지 3종(/ai-development/·/ai-automation/·/enterprise-ai/)과
+  // 검색 의도가 분리된 독립 서비스 상세페이지. self-canonical 이라 색인 게이트 통과 시 사이트맵에 싣는다.
+  const aiVoice = aiVoiceDecision();
+  if (aiVoice.inSitemap) {
+    out.push({
+      url: AI_VOICE_CANONICAL,
+      lastModified: gitLastModified('lib/ai-voice.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    });
+  }
 
   out.push({
     url: `${SITE.domain}/blog/`,

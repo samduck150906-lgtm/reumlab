@@ -86,6 +86,8 @@ export function ServiceJsonLd({
   );
 }
 
+type FaqItem = { q: string; a: string };
+
 /** BreadcrumbList 단독 (임의 깊이) */
 export function BreadcrumbJsonLdTrail({ items, pageUrl }: { items: Crumb[]; pageUrl?: string }) {
   return <LdScript data={breadcrumbNode(items, pageUrl)} />;
@@ -101,34 +103,49 @@ export function ServiceWebPageJsonLd({
   description,
   serviceType,
   crumbs,
+  faqs,
 }: {
   url: string;
   name: string;
   description: string;
   serviceType: string;
   crumbs: Crumb[];
+  /**
+   * 화면에 실제로 렌더되는 FAQ 와 "완전히 같은 배열"일 때만 넘긴다.
+   * 스키마에만 있고 화면에 없는 FAQ 는 정책 위반이며 scripts/verify-faq.mjs 가 잡는다.
+   * 넘기지 않으면 FAQPage 노드를 만들지 않는다(기존 호출부는 그대로 동작).
+   */
+  faqs?: FaqItem[];
 }) {
   const service = serviceNode({ url, name, description, serviceType });
   const serviceId = String(service['@id']);
-  return (
-    <LdGraph
-      graph={[
-        {
-          '@type': 'WebPage',
-          '@id': `${url}#webpage`,
-          url,
-          name,
-          description,
-          inLanguage: 'ko-KR',
-          isPartOf: { '@id': SCHEMA_ID.website },
-          about: { '@id': SCHEMA_ID.business },
-          mainEntity: { '@id': serviceId },
-        },
-        service,
-        breadcrumbNode(crumbs, url),
-      ]}
-    />
-  );
+  const graph: Record<string, unknown>[] = [
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name,
+      description,
+      inLanguage: 'ko-KR',
+      isPartOf: { '@id': SCHEMA_ID.website },
+      about: { '@id': SCHEMA_ID.business },
+      mainEntity: { '@id': serviceId },
+    },
+    service,
+    breadcrumbNode(crumbs, url),
+  ];
+  if (faqs && faqs.length > 0) {
+    graph.push({
+      '@type': 'FAQPage',
+      '@id': `${url}#faq`,
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
+  return <LdGraph graph={graph} />;
 }
 
 /** 개발 사례 — 공개된 프로젝트 필드만 쓰는 CreativeWork + BreadcrumbList. */
@@ -224,8 +241,6 @@ export function LandingServiceJsonLd({
     />
   );
 }
-
-type FaqItem = { q: string; a: string };
 
 export function FAQPageJsonLd({ items }: { items: FaqItem[] }) {
   return (

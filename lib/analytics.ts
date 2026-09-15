@@ -56,6 +56,7 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   'admin-page-development': 'erp',
   'ai-automation': 'ai',
   'ai-development': 'ai',
+  'ai-voice-development': 'ai',
   'data-seo': 'data',
   platform: 'platform',
   'reservation-commerce': 'platform',

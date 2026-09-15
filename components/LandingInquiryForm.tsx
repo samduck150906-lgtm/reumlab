@@ -28,6 +28,29 @@ const TIMELINES = ['최대한 빠르게', '1개월 내', '1 ~ 3개월', '3개월
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
+type Variant = 'default' | 'geo-website' | 'ai-voice';
+
+/**
+ * 변형별 문구·숨은 값. 변형이 셋을 넘어가면서 삼항 연산자를 이어 붙이는 방식이
+ * 읽기 어려워져 표로 분리했다. 키가 없으면 기존 기본값을 그대로 쓴다.
+ */
+const LANDING_PATH: Partial<Record<Variant, string>> = {
+  'geo-website': '/geo-website/',
+  'ai-voice': '/ai-voice-development/',
+};
+const INQUIRY_SERVICE: Partial<Record<Variant, string>> = {
+  'geo-website': 'GEO 홈페이지 제작',
+  'ai-voice': 'AI 음성 상담·전화 자동화 개발',
+};
+const FEATURES_LABEL: Partial<Record<Variant, string>> = {
+  'geo-website': '필요한 내용',
+  'ai-voice': 'AI가 받았으면 하는 전화 (가장 많이 오는 것부터)',
+};
+const FEATURES_PLACEHOLDER: Partial<Record<Variant, string>> = {
+  'geo-website': '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존',
+  'ai-voice': '예: 영업시간 문의, 예약 접수·변경, 견적 문의, 담당자 연결',
+};
+
 const inputCls =
   'w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[15px] text-slate-800 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20';
 const labelCls = 'mb-1.5 block text-sm font-semibold text-slate-700';
@@ -40,7 +63,7 @@ export default function LandingInquiryForm({
 }: {
   landingSlug: string;
   defaultServiceType?: string;
-  variant?: 'default' | 'geo-website';
+  variant?: 'default' | 'geo-website' | 'ai-voice';
   submitLabel?: string;
 }) {
   const [status, setStatus] = useState<Status>('idle');
@@ -203,8 +226,8 @@ export default function LandingInquiryForm({
       className="mx-auto max-w-2xl rounded-2xl bg-white p-6 text-left shadow-card-hover sm:p-8"
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
-      <input type="hidden" name="유입_랜딩" value={variant === 'geo-website' ? '/geo-website/' : `l/${landingSlug}`} />
-      <input type="hidden" name="문의서비스" value={variant === 'geo-website' ? 'GEO 홈페이지 제작' : defaultServiceType || ''} />
+      <input type="hidden" name="유입_랜딩" value={LANDING_PATH[variant] ?? `l/${landingSlug}`} />
+      <input type="hidden" name="문의서비스" value={INQUIRY_SERVICE[variant] ?? (defaultServiceType || '')} />
       <input type="hidden" name="유입_경로" value={ctx.path} />
       <input type="hidden" name="페이지_유형" value={ctx.pageType} />
       <input type="hidden" name="관심_서비스축" value={ctx.service} />
@@ -265,14 +288,33 @@ export default function LandingInquiryForm({
         </div>
       ) : null}
 
+      {variant === 'ai-voice' ? (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className={labelCls} htmlFor="lf-call-handling">지금 전화 응대 방식</label>
+            <select id="lf-call-handling" name="현재응대방식" className={inputCls} defaultValue="직원이 직접 받음">
+              <option value="직원이 직접 받음">직원이 직접 받음</option>
+              <option value="ARS·자동응답 사용">ARS·자동응답 사용</option>
+              <option value="놓치는 전화가 많음">놓치는 전화가 많음</option>
+              <option value="콜센터 위탁">콜센터 위탁</option>
+              <option value="아직 전화 응대 없음">아직 전화 응대 없음</option>
+            </select>
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-integrations">연동이 필요한 시스템 <span className="font-normal text-slate-500">(선택)</span></label>
+            <input id="lf-integrations" name="연동대상시스템" type="text" className={inputCls} placeholder="예: 네이버 예약, 자체 CRM, ERP" />
+          </div>
+        </div>
+      ) : null}
+
       <div className="mt-4">
-        <label className={labelCls} htmlFor="lf-features">{variant === 'geo-website' ? '필요한 내용' : '핵심 기능 (꼭 필요한 것 위주로)'}</label>
+        <label className={labelCls} htmlFor="lf-features">{FEATURES_LABEL[variant] ?? '핵심 기능 (꼭 필요한 것 위주로)'}</label>
         <textarea
           id="lf-features"
           name="핵심기능"
           rows={3}
           className={inputCls}
-          placeholder={variant === 'geo-website' ? '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존' : '예: 회원가입, 예약, 결제, 관리자에서 예약 확인'}
+          placeholder={FEATURES_PLACEHOLDER[variant] ?? '예: 회원가입, 예약, 결제, 관리자에서 예약 확인'}
         />
       </div>
 

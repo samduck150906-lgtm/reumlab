@@ -351,6 +351,28 @@
       "kind": "가이드"
     }
   ],
+  "/ai-voice-development/": [
+    {
+      "href": "/guide/chatbot-cost/",
+      "label": "AI 챗봇 개발 비용, 단계별로 접근하기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/booking-app-guide/",
+      "label": "예약 앱 만들기, 노쇼와 응대를 함께 줄여라",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
   "/enterprise-ai/": [
     {
       "href": "/guide/rag-development/",
