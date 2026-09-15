@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import LandingInquiryForm from '@/components/LandingInquiryForm';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ServiceWebPageJsonLd } from '@/components/JsonLd';

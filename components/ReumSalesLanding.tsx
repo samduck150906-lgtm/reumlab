@@ -4,7 +4,7 @@
  * 이 컴포넌트는 동일 내용의 React 트윈입니다 — 가격·카피를 바꾸면 `index.html`도 함께 갱신하세요.
  * 자세한 내용: README "홈페이지·배포 구조".
  */
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import type { ReactNode } from 'react';
 import { SITE } from '@/lib/seo';
 

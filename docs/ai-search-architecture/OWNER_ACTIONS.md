@@ -43,6 +43,8 @@
 | E2 | **공용 폼 버튼 대비** — 흰 글자 위 `accent`(3.80:1) → `accent-deep`(5.17:1), hover 는 `accent-darker`(6.70:1) | ✅ 완료 · `/ai-search-optimization/` A11y 97 → **100** |
 | E3 | **홈 JS 오류** — `script.js` 의 `updateMobileCta` 블록 스코프 문제 | ✅ 완료 · 홈 콘솔 오류 0건 |
 | E4 | **`prebuild` 2회 실행** — `build` 스크립트의 중복 호출 제거 | ✅ 완료 |
+| E5 | **RSC prefetch 낭비** — 페이지 로드마다 최대 61건 2,263KB 를 미리 받고 있었다 | ✅ 완료 · prefetch **0건**, 전송량 최대 **−70%** (아래 상세) |
+| E6 | **(발견) `/`·`/mvp/`·`/website/` 가 링크 이동 시 다른 페이지를 그리던 선행 결함** | ✅ 완료 (아래 상세) |
 | F1 | `/privacy/` 수집 항목에 상담 폼의 프로젝트 정보·미수집 항목 명시 | ✅ 완료 (보유기간·해외이전은 그대로 비워 둠) |
 | F3 | 계약 후 접근 권한 온보딩 절차 문서화 | ✅ 완료 → `CLIENT_ONBOARDING.md` |
 
@@ -89,6 +91,80 @@
 이전 상태로 돌아간다. `@tailwind base` 는 그대로 두는 편이 좋다 — 그것 없이는 홈·서비스
 페이지의 그림자·그라데이션도 계속 죽어 있다.
 
+### E5 "미사용 JS 104KB" 를 파 보니 — 진짜 낭비는 다른 곳에 있었다
+
+**결론부터**: Lighthouse 가 지목한 미사용 JS 115KB 는 `fd9d1056`(react-dom, 169KB 중 64KB)와
+`117`(Next App Router 런타임, 122KB 중 51KB)다. **둘 다 프레임워크 내부 코드**라 우리 쪽에서
+잘라 낼 수 없다. 없애려면 이 페이지들에서 React 하이드레이션 자체를 빼야 하고,
+그건 App Router 를 버린다는 뜻이다(상담 폼·내비 토글·분석이 전부 클라이언트 컴포넌트).
+
+그래서 "무엇을 실제로 내려받고 있나"를 요청 단위로 다시 쟀고, 훨씬 큰 것이 나왔다.
+
+**Next `<Link>` 의 뷰포트 prefetch 가 페이지마다 RSC 페이로드를 쏟아붓고 있었다.**
+링크가 화면에 들어오면 그 경로의 `index.txt` 를 미리 받는데, 이 사이트는 링크가 많은
+콘텐츠 사이트라 그 비용이 본문을 넘어섰다. 방문자는 보통 링크 하나만 누른다.
+
+| 페이지 | prefetch 요청 | prefetch 바이트 | 총 전송 중 비중 |
+|---|---|---|---|
+| `/cost/` | 61건 | 2,263KB | **69%** |
+| `/guide/` | 40건 | 1,792KB | **68%** |
+| `/portfolio/` | 22건 | 886KB | 52% |
+| `/ai-search-optimization/` | 12건 | 696KB | 40% |
+
+**고친 방법** — `components/SiteLink.tsx` 래퍼를 만들고 31개 파일의 `next/link` import 를
+전부 이쪽으로 돌렸다. 래퍼가 두 가지를 한곳에서 강제한다.
+
+1. `prefetch` 기본값을 끈다. 누를 때 받으면 충분하다.
+2. **후처리가 덮어쓰는 경로는 `<a>` 로 내보낸다** (아래 E6).
+
+`components/Nav.js` 가 서비스 메뉴 항목에 `prefetch` 를 직접 켜 두고 있어서(메뉴가 닫혀
+있는데도 4곳 327KB 를 매번 받았다) 그 제어도 걷어내고 래퍼에 맡겼다.
+
+**결과 — 페이지 로드당 전송량**
+
+| 페이지 | 변경 전 | 변경 후 | 절감 |
+|---|---|---|---|
+| `/cost/` | 3,262KB | **976KB** | −70% |
+| `/guide/` | 2,639KB | **818KB** | −69% |
+| `/portfolio/` | 1,714KB | **797KB** | −53% |
+| `/ai-search-optimization/` | 1,721KB | **1,015KB** | −41% |
+| `/l/academy-app-dev/` | 1,772KB | **1,105KB** | −38% |
+
+RSC prefetch 요청은 **5개 경로 모두 0건**이 됐다. Lighthouse `total-byte-weight` 100.
+
+**Lighthouse Performance 점수는 그대로다(68).** prefetch 는 페이지가 인터랙티브해진 뒤에
+낮은 우선순위로 일어나서 Lantern 의 FCP/LCP 모델에 잡히지 않는다. 폰트 때와 같은 이야기다 —
+**점수가 아니라 실제 바이트가 줄었다.** 모바일 데이터와 느린 회선에서 의미가 크다.
+
+남은 미사용 CSS 113KB(Tailwind 청크 73KB 중 69KB)도 같은 성격이다 — 사이트 전체가
+공유·캐시하는 파일이라 한 페이지 기준으로는 늘 대부분이 '미사용'으로 잡힌다.
+
+### E6 (발견) `/`, `/mvp/`, `/website/` 는 링크로 들어가면 다른 페이지가 나왔다 — 수정함
+
+E5 작업 중 확인한 **선행 결함**이다. 이 사이트는 정적 export 위에 후처리가 얹혀 있어서
+`copy-home-assets.mjs` 가 `out/index.html` 을, `generate-purpose-landings.mjs` 가
+`out/<slug>/index.html` 을 Next 렌더 결과 위에 덮어쓴다. 그런데 `<Link>` 로 이동하면
+브라우저가 HTML 을 다시 받지 않고 Next 가 자기 컴포넌트를 그린다.
+
+브라우저 A/B 실측(직접 로드 vs 클라이언트 내비게이션):
+
+| 경로 | 직접 로드 (배포본) | `<Link>` 내비게이션 |
+|---|---|---|
+| `/` | "아이디어를 실제로 운영 가능한 서비스로 만듭니다." 10,991자 | "예산 안에서, 빠르게 MVP…" **5,159자 (다른 페이지)** |
+| `/mvp/` | "앱·웹 MVP 개발…" 5,561자 | "MVP 개발 외주" **2,836자** |
+| `/website/` | "홈페이지·랜딩페이지 제작…" 4,905자 | "업종별 홈페이지 제작 — 294개 업종" **5,282자** |
+
+즉 **헤더 로고를 누른 방문자는 배포된 홈이 아닌 다른 홈을 보고 있었다.**
+`SiteLink` 가 `lib/static-routes.ts` 의 목록을 보고 이 경로들을 `<a>` 로 내보내
+실제 페이지 이동을 하게 했다. 세 경로 모두 직접 로드와 동일해진 것을 재실측으로 확인했다.
+
+(이 과정에서 `<a>` 는 `next.config` 의 `trailingSlash: true` 를 자동으로 붙여 주지 않아
+`/mvp` 같은 링크가 404 로 나가던 것도 잡았다 — `seo:qa` 가 잡아 줬다.)
+
+회귀 방지: `npm test` 에 두 가지를 넣었다 — (a) `SiteLink` 외에는 `next/link` 를 직접
+import 할 수 없다, (b) `lib/static-routes.ts` 의 슬러그 목록이 `generate-purpose-landings.mjs`
+의 `LANDINGS` 와 항상 같아야 한다.
+
 ### E1 폰트 서브셋 — 측정 결과와 정정
 
 `@font-face` 를 둘로 나눴다. 원본(2.0MB, 범위 = 폰트 cmap 전체)을 먼저 선언하고,
@@ -122,8 +198,10 @@ A/B 를 재면 FCP·LCP 는 ±0.08초로 사실상 동일하다 — `font-displa
 
 | # | 내용 | 근거 |
 |---|---|---|
-| E5 | **미사용 JS 104KB** — Next 공통 청크 `fd9d1056`(60KB)·`117`(44KB)에 첫 화면에서 안 쓰는 코드가 있다. 코드 분할을 손보면 Performance 가 오를 여지가 가장 큰 항목 | Lighthouse `unused-javascript`, 모든 라우트 공통 |
-| E6 | **폰트 서브셋 재생성 주기** — 콘텐츠가 크게 늘면 `python3 scripts/build-font-subsets.py && node scripts/apply-font-subset-css.mjs` 를 다시 돌린다. 안 돌려도 화면은 정상이고, 새 글자가 있는 페이지만 원본을 추가로 받는다. `npm run seo:verify:font` 가 그 상태를 빌드에서 알려 준다 | 빌드 체인에 포함된 게이트 |
+| R1 | **폰트 서브셋 재생성 주기** — 콘텐츠가 크게 늘면 `python3 scripts/build-font-subsets.py && node scripts/apply-font-subset-css.mjs` 를 다시 돌린다. 안 돌려도 화면은 정상이고, 새 글자가 있는 페이지만 원본을 추가로 받는다. `npm run seo:verify:font` 가 그 상태를 빌드에서 알려 준다 | 빌드 체인에 포함된 게이트 |
+| R2 | **프레임워크 JS 115KB** — react-dom 64KB + App Router 런타임 51KB 가 첫 화면에서 안 쓰인다. 우리 코드가 아니라 잘라 낼 수 없고, 없애려면 이 페이지들에서 React 하이드레이션을 빼야 한다(App Router 이탈). 상담 폼·내비 토글·분석이 전부 클라이언트 컴포넌트라 현실적인 선택지가 아니다 | Lighthouse `unused-javascript` |
+| R3 | **미사용 CSS 113KB** — Tailwind 청크 73KB 중 69KB 가 한 페이지 기준 미사용. 사이트 전체가 공유·캐시하는 파일이라 원래 그렇게 잡힌다. 페이지별로 쪼개면 캐시 적중률이 떨어져 오히려 손해일 수 있어 두었다 | Lighthouse `unused-css-rules` |
+| R4 | **`/geo-website/` 대비 실패 15건** — 그 페이지 고유 CSS 모듈(`exampleCard` 안의 `<b>` 등)이라 이번 범위 밖으로 뒀다. A11y 97 | Lighthouse axe |
 
 ## F. 확인이 필요한 정책 항목
 

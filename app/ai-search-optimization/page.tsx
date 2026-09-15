@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import BusinessFooter from '@/components/BusinessFooter';
 import LandingInquiryForm from '@/components/LandingInquiryForm';
 import { ServiceWebPageJsonLd, HOME_CRUMB } from '@/components/JsonLd';

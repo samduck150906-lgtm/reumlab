@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync, statSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { isStaticOverride } from '../lib/static-routes';
 
 const read = (path: string) => readFileSync(path, 'utf8');
 
@@ -41,12 +43,22 @@ test('purpose landing hero cannot expand beyond a mobile viewport', () => {
 });
 
 test('hybrid static service links do not request missing RSC payloads', () => {
+  // 예전에는 Nav.js 가 자체 Set(STATIC_HTML_SERVICE_PATHS)으로 경로마다 prefetch 를
+  // 켜고 껐다. 그 방식은 (a) 목록이 생성기와 갈릴 수 있고 (b) Next 라우트 쪽 메뉴 항목은
+  // prefetch 가 켜져 있어 모든 페이지가 서비스 메뉴 4곳의 RSC 페이로드 327KB 를
+  // 미리 받게 만들었다. 지금은 components/SiteLink 가 한곳에서 처리한다.
   const nav = read('components/Nav.js');
-  const geo = read('app/geo-website/page.tsx');
-  assert.match(nav, /const STATIC_HTML_SERVICE_PATHS = new Set/);
-  assert.equal((nav.match(/prefetch=\{!STATIC_HTML_SERVICE_PATHS\.has\(item\.slug\)\}/g) || []).length, 2);
-  assert.match(geo, /href="\/data-seo\/" prefetch=\{false\}/);
-  assert.match(geo, /href="\/service-renewal\/" prefetch=\{false\}/);
+  assert.doesNotMatch(nav, /prefetch=\{/, 'Nav 가 prefetch 를 직접 제어하면 SiteLink 정책이 우회된다');
+  assert.match(nav, /from '@\/components\/SiteLink'/);
+
+  // 정적 생성 랜딩으로 가는 링크는 SiteLink 가 <a> 로 내보낸다(= 존재하지 않는 RSC 요청 없음).
+  for (const path of ['/data-seo/', '/service-renewal/', '/mvp/', '/website/', '/']) {
+    assert.equal(isStaticOverride(path), true, `${path} 가 정적 덮어쓰기 목록에 없다`);
+  }
+  // 반대로 순수 Next 라우트는 걸리면 안 된다(불필요하게 전체 리로드가 된다)
+  for (const path of ['/guide/', '/portfolio/', '/ai-search-optimization/', '/geo-website/']) {
+    assert.equal(isStaticOverride(path), false, `${path} 가 잘못 정적 경로로 분류됐다`);
+  }
 });
 
 test('Next inquiry honeypot stays in the payload but never appears to visitors', () => {
@@ -96,4 +108,36 @@ test('public routes use the self-hosted Pretendard pair in the right order', () 
     assert.ok(css.includes(meta.unicode_range), `${file}: 서브셋 unicode-range 가 subset.json 과 다름`);
     assert.ok(css.includes(meta.rest_unicode_range), `${file}: 원본 unicode-range 가 subset.json 과 다름`);
   }
+});
+
+test('every route links through SiteLink, never next/link directly', () => {
+  // SiteLink 가 prefetch 기본값(끔)과 "정적 HTML 로 덮어써지는 경로는 실제 이동" 규칙을
+  // 한곳에서 강제한다. 어느 파일 하나가 next/link 를 직접 import 하면 그 파일만
+  // 조용히 예전 동작(뷰포트 prefetch + 잘못된 클라이언트 내비)으로 돌아간다.
+  const files = execFileSync('grep', ['-rl', "from 'next/link'", '--include=*.tsx', '--include=*.js', 'app/', 'components/'], { encoding: 'utf8' })
+    .split('\n').filter(Boolean).filter((f) => f !== 'components/SiteLink.tsx');
+  assert.deepEqual(files, [], `next/link 직접 import: ${files.join(', ')} → @/components/SiteLink 를 쓰세요`);
+
+  const siteLink = read('components/SiteLink.tsx');
+  assert.match(siteLink, /prefetch \?\? false/, 'SiteLink 의 prefetch 기본값이 false 가 아니다');
+  assert.match(siteLink, /isStaticOverride/, 'SiteLink 가 정적 덮어쓰기 경로를 걸러내지 않는다');
+});
+
+test('static-override path list matches the generator that overwrites them', () => {
+  // lib/static-routes.ts 와 실제 후처리 스크립트가 갈리면, 새로 추가된 정적 랜딩이
+  // 클라이언트 내비게이션으로 진입할 때 Next 컴포넌트를 그린다(배포본과 다른 화면).
+  const routes = read('lib/static-routes.ts');
+  const listed = [...routes.matchAll(/^\s*'([a-z0-9-]+)',$/gm)].map((m) => m[1]).sort();
+
+  const generator = read('scripts/generate-purpose-landings.mjs');
+  const landingsBlock = generator.slice(generator.indexOf('const LANDINGS = ['));
+  const generated = [...landingsBlock.matchAll(/^\s*slug: '([a-z0-9-]+)',\s*navLabel:/gm)].map((m) => m[1]).sort();
+
+  assert.ok(generated.length >= 8, `생성기에서 슬러그를 못 읽었다 (${generated.length}개)`);
+  assert.deepEqual(listed, generated,
+    'lib/static-routes.ts 의 PURPOSE_LANDING_SLUGS 가 generate-purpose-landings.mjs 의 LANDINGS 와 다르다');
+
+  // 홈도 copy-home-assets 가 덮어쓴다 — 목록에 반드시 있어야 한다
+  assert.match(routes, /'\/'/, "STATIC_OVERRIDE_PATHS 에 '/' 가 없다");
+  assert.match(read('scripts/copy-home-assets.mjs'), /index\.html/);
 });

@@ -6,7 +6,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 
 export default function HomePage({ site }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
 import { INDUSTRIES } from '@/lib/industries';
 import { hasCost, costTitleName } from '@/lib/cost';

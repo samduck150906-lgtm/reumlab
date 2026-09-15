@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import { COMPARES, getCompare, compareCanonical, compareDecision } from '@/lib/compare';

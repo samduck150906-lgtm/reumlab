@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
 import { SYSTEMS } from '@/lib/systems';
 import { BreadcrumbJsonLdTrail } from '@/components/JsonLd';

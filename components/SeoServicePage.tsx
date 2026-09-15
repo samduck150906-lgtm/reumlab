@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
 import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';

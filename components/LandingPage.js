@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from '@/components/SiteLink';
 import { getSite, getLandingBySlug, getHubBySlug } from '../lib/data';
 import { buildLandingContent } from '../lib/landing-content';
 import BusinessFooter from './BusinessFooter';
