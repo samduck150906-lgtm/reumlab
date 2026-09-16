@@ -332,7 +332,50 @@ if (!noscripts.length) add(fail, 'nojs', 'noscript 블록이 없다');
 const noscriptHtml = noscripts.map((n) => n.innerHTML).join(' ');
 if (!/data-voice-demo-interactive/.test(noscriptHtml)) add(fail, 'nojs', 'JS 없을 때 데모 위젯을 감추는 처리가 없다');
 if (!/data-voice-calc-interactive/.test(noscriptHtml)) add(fail, 'nojs', 'JS 없을 때 계산기를 감추는 처리가 없다');
-if (!/tel:01081119370/.test(noscriptHtml)) add(fail, 'nojs', 'JS 없을 때의 검증된 연락 경로가 없다');
+/*
+  JS 가 꺼져 있을 때는 브라우저 기본 제출로 넘어간다.
+  "연락 대안 문구가 있는가"가 아니라 "기본 제출이 성립하는 마크업인가"를 본다 —
+  문구는 변명이고, 마크업이 맞아야 실제로 접수된다.
+  기준은 홈(index.html)에서 이미 운영 중인 main-apply 폼과 같은 조건이다.
+*/
+{
+  const f = doc.querySelector('form[name="main-apply"]');
+  if (!f) {
+    add(fail, 'nojs', 'main-apply 폼이 없다');
+  } else {
+    const method = (f.getAttribute('method') || '').toLowerCase();
+    if (method !== 'post') add(fail, 'nojs', `form method 가 post 가 아니다: "${method}" — 기본 제출이 GET 으로 나간다`);
+    // action 이 없으면 현재 주소로 POST 된다(= Netlify Forms 가 가로채는 경로).
+    // 굳이 지정한다면 사이트 안의 실재하는 경로여야 한다.
+    const action = f.getAttribute('action');
+    if (action) {
+      if (/^https?:\/\//i.test(action) && !action.startsWith(DOMAIN)) {
+        add(fail, 'nojs', `form action 이 외부 도메인을 가리킨다: ${action}`);
+      } else if (action.startsWith('/')) {
+        const rel = action.split(/[?#]/)[0].replace(/^\/|\/$/g, '');
+        if (rel && !existsSync(join(OUT, rel, 'index.html')) && !existsSync(join(OUT, rel))) {
+          add(fail, 'nojs', `form action 대상이 산출물에 없다: ${action}`);
+        }
+      }
+    }
+    if (f.getAttribute('data-netlify') !== 'true') add(fail, 'nojs', 'data-netlify="true" 가 없다 — 기본 제출이 접수되지 않는다');
+    if (f.getAttribute('data-netlify-honeypot') !== 'bot-field') add(fail, 'nojs', '허니팟 선언이 없다');
+    const formName = f.querySelector('input[name="form-name"]');
+    if (formName?.getAttribute('value') !== 'main-apply') {
+      add(fail, 'nojs', 'hidden form-name 값이 main-apply 가 아니다 — Netlify 가 어느 폼인지 알 수 없다');
+    }
+    if (formName?.getAttribute('type') !== 'hidden') add(fail, 'nojs', 'form-name 이 hidden 이 아니다');
+    // 필수 입력은 브라우저가 막아야 한다(JS 검증이 없으므로)
+    for (const name of ['이름', '휴대폰번호', '개인정보동의']) {
+      const el = f.querySelector(`[name="${name}"]`);
+      if (!el) add(fail, 'nojs', `필수 입력 ${name} 이 없다`);
+      else if (!el.hasAttribute('required')) add(fail, 'nojs', `${name} 에 required 가 없다 — JS 없이 빈 값이 제출된다`);
+    }
+    // 제출 버튼이 실제 submit 이어야 한다
+    const submit = f.querySelector('button[type="submit"], input[type="submit"]');
+    if (!submit) add(fail, 'nojs', '제출 버튼이 type=submit 이 아니다 — JS 없이 제출되지 않는다');
+  }
+}
 
 // ── 14. 폼 필드 ↔ 정적 감지 스켈레톤 ────────────────────────
 const form = forms[0];

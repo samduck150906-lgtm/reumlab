@@ -53,7 +53,7 @@
 | A11Y-01 | P0 | 주요 작업 | **PASS** | 화살표로 업종 이동 · Enter 로 진행 · 포커스 가능 요소 80개 · 라벨 없는 입력 0 · 오류 `role="alert"` 연결 |
 | UI-01 | P0 | 모바일 | **PASS** | 320·360·390·430px 문서 가로 넘침 **0px**, CTA 노출, console 오류 0 |
 | UI-02 | P1 | 태블릿·PC | **PASS** | 768·1024·1440·1920px 동일 조건 통과 |
-| UI-03 | P0 | 비-JS | **PASS** | 위젯 자동 감춤 · 전체 대본 6 · FAQ 16 · 계산 공식 · 전화/이메일 대안 모두 접근 가능 |
+| UI-03 | P0 | 비-JS | **PASS** | 위젯 자동 감춤 · 전체 대본 6 · FAQ 16 · 계산 공식 접근 가능. **JS 없이도 폼이 정상 POST**(30필드·`form-name=main-apply`), 필수값 누락은 브라우저가 차단 |
 | PERF-01 | P1 | 성능 | **부분 PASS** | CLS 0.0009(기준선과 동일) · 번들 +6.8KB(예산 35KB) · **Performance 68 로 목표 90 미달** — 아래 §2 |
 | ANALYTICS-01 | P0 | 이벤트 | **PASS** | 성공 1건당 `generate_lead`/`inquiry_form_submit`/`main_apply_submit`/`form_submit_success` 각 1회. PII 0. enum 은 ASCII |
 | BUILD-01 | P0 | 빌드 | **PASS** | `npm run build` exit 0. 빌드 내 게이트 4종 통과 |
@@ -108,6 +108,7 @@
 | 필수 표시 `*` 대비 3.8:1 | 공유 폼의 `span.text-accent` | 기준선 `/geo-website/` 에서 **동일하게 관찰됨**. Lighthouse axe 는 실패로 잡지 않음 |
 | 개인정보 동의 체크박스 16×16 | 감싸는 `<label>` 이 넓은 화면에서 24px 미만 | 공유 폼. 기준선 동일. 라벨 전체가 클릭 가능해 실제 조작에는 지장 없음 |
 | 허니팟 `<p>` 대비 | `clip-path: inset(50%)` 로 시각적으로 감춰짐 | 자체 스캐너의 거짓 양성. Lighthouse 는 잡지 않음 |
+| 기본 제출 후 완료 화면 | Netlify 기본 완료 페이지 | 홈 `main-apply` 폼과 **동일한 기존 동작**. 별도 완료 페이지를 새로 만들지 않았다 |
 | 클릭 깊이 6 이상 색인 페이지 109개 | `seo:qa` 경고 | 기준선에도 동일하게 존재 |
 
 이 4건은 **공유 컴포넌트·사이트 전역 사안**이라 이번 페이지 작업 범위에서 바꾸지 않았다.

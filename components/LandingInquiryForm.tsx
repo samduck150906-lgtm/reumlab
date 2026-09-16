@@ -407,18 +407,6 @@ export default function LandingInquiryForm({
       aria-busy={status === 'submitting'}
       className="mx-auto max-w-2xl rounded-2xl bg-white p-6 text-left shadow-card-hover sm:p-8"
     >
-      {/*
-        JS 가 꺼져 있으면 이 폼은 브라우저 기본 POST 로 넘어간다. 그 경로가 실제
-        접수까지 이어지는지는 운영 환경에서 확인해야 한다(이 저장소에서 검증 불가).
-        확인 전까지 "반응 없는 폼"을 남기지 않도록 검증된 직접 연락 경로를 함께 둔다.
-      */}
-      <noscript>
-        <p className="mb-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
-          자바스크립트가 꺼져 있어 전송 결과를 화면에서 확인해 드릴 수 없습니다. 아래로 바로 연락 주셔도 됩니다 —
-          전화 <a className="font-semibold underline" href="tel:01081119370">010-8111-9370</a> · 이메일{' '}
-          <a className="font-semibold underline" href="mailto:ceo@eternalsix.com">ceo@eternalsix.com</a>
-        </p>
-      </noscript>
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <input type="hidden" name="유입_랜딩" value={LANDING_PATH[variant] ?? `l/${landingSlug}`} />
       <input type="hidden" name="문의서비스" value={INQUIRY_SERVICE[variant] ?? (defaultServiceType || '')} />
