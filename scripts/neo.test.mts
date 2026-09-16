@@ -65,3 +65,8 @@ test('닫힌 모바일 메뉴는 접근성 트리에서 제외되고 상태 이�
   assert.match(script, /removeAttribute\("inert"\)/);
   assert.match(script, /burger\.focus\(\)/);
 });
+
+test('관리자 가이드 예시 문서는 비어 있지 않은 메타 설명을 제공한다', () => {
+  const html = readFileSync(path.join(ROOT, 'public', 'assets', 'admin-guide-example.html'), 'utf8');
+  assert.match(html, /<meta name="description" content="[^"]+">/);
+});

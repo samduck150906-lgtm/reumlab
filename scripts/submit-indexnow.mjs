@@ -40,6 +40,11 @@ const args = new Set(process.argv.slice(2));
 const SUBMIT_ALL = args.has('--all');
 const DRY_RUN = args.has('--dry-run');
 const SUBMIT_REQUESTED = args.has('--submit');
+const ALLOW_LARGE_BATCH = args.has('--allow-large-batch') || SUBMIT_ALL;
+const parsedMaxAutomaticUrls = Number.parseInt(process.env.INDEXNOW_MAX_AUTO_URLS ?? '100', 10);
+const MAX_AUTOMATIC_URLS = Number.isFinite(parsedMaxAutomaticUrls) && parsedMaxAutomaticUrls > 0
+  ? parsedMaxAutomaticUrls
+  : 100;
 
 // Netlify deploy-preview·branch-deploy는 검증용 산출물이다. 여기서 production
 // canonical URL을 IndexNow에 보내면 공개 전 변경을 검색엔진에 알리게 된다.
@@ -149,6 +154,17 @@ if (!sitemap) {
 
 if (urlList.length === 0) {
   console.log('[IndexNow] 변경된 URL 없음 — 제출 생략(호스트 호출 안 함).');
+  process.exit(0);
+}
+
+// 한 소스 파일의 lastmod가 많은 URL에 공유되거나 매니페스트가 유실되면 정상적인
+// 콘텐츠 변경보다 훨씬 큰 배치가 생길 수 있다. 자동 배포에서는 이를 그대로 보내지
+// 않고, 사람이 변경 범위를 확인한 뒤 --allow-large-batch 또는 --all로 승인한다.
+if (urlList.length > MAX_AUTOMATIC_URLS && !ALLOW_LARGE_BATCH) {
+  console.log(
+    `[IndexNow] 대량 제출 차단 — 변경분 ${urlList.length}개, 자동 한도 ${MAX_AUTOMATIC_URLS}개. ` +
+    '범위를 확인한 뒤 --allow-large-batch를 명시하세요.',
+  );
   process.exit(0);
 }
 

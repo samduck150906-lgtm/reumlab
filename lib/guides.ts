@@ -1760,8 +1760,8 @@ export const GUIDES: GuideDef[] = [
     // "우리 회사에 RAG 를 어떻게 구축하나"(구축 판단)다. 정의는 첫 섹션에서 답하고,
     // 본문 대부분은 구성요소·품질·권한·프로세스에 쓴다.
     slug: 'rag-development',
-    title: 'RAG 구축이란? 사내 문서를 AI에 연결하는 방법',
-    h1: 'RAG 구축, 사내 문서를 AI에 연결하는 방법',
+    title: 'RAG 구축 방법: 사내 문서를 AI에 연결하는 8단계',
+    h1: 'RAG 구축 방법, 사내 문서를 AI에 연결하는 8단계',
     description:
       'RAG 구축은 사내 문서를 검색 가능한 형태로 정리하고, 질문에 맞는 자료를 찾아 AI가 근거로 삼게 만드는 작업입니다. 구성요소, 문서 분할, 검색 품질, 권한 설계, 구축 8단계를 정리했습니다.',
     keywords: ['RAG 구축', 'RAG 개발', '사내 RAG', '기업용 RAG', 'RAG 챗봇', 'RAG 시스템'],
@@ -1938,6 +1938,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/ai-automation/', label: 'AI 업무 자동화 — 실행이 필요한 경우' },
     ],
     publishedAt: '2026-08-20',
+    updatedAt: '2026-09-16',
   },
   {
     slug: 'enterprise-ai-cost',

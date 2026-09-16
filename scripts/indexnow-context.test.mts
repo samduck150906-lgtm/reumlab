@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
-import { readFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
@@ -44,4 +45,46 @@ test('Netlify runs IndexNow only from the production build command', () => {
   const globalBuild = toml.match(/\[build\]([\s\S]*?)(?=\n\[|$)/)?.[1] ?? '';
   const globalCommand = globalBuild.match(/command\s*=\s*"([^"]+)"/)?.[1] ?? '';
   assert.equal(globalCommand, 'npm run build');
+});
+
+test('IndexNow blocks an unexpected automatic large batch unless it is explicitly approved', () => {
+  const fixtureRoot = mkdtempSync(path.join(os.tmpdir(), 'reumlab-indexnow-'));
+  try {
+    mkdirSync(path.join(fixtureRoot, 'scripts'));
+    mkdirSync(path.join(fixtureRoot, 'out'));
+    copyFileSync(path.join(ROOT, 'scripts', 'submit-indexnow.mjs'), path.join(fixtureRoot, 'scripts', 'submit-indexnow.mjs'));
+    copyFileSync(path.join(ROOT, 'scripts', 'read-sitemap.mjs'), path.join(fixtureRoot, 'scripts', 'read-sitemap.mjs'));
+    writeFileSync(
+      path.join(fixtureRoot, 'out', 'sitemap.xml'),
+      `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://reumlab.com/one/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://reumlab.com/two/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://reumlab.com/three/</loc><lastmod>2026-09-16</lastmod></url>
+</urlset>`,
+    );
+
+    const env = { ...process.env, INDEXNOW_MAX_AUTO_URLS: '2' };
+    delete env.CONTEXT;
+    const blocked = spawnSync(process.execPath, ['scripts/submit-indexnow.mjs', '--dry-run'], {
+      cwd: fixtureRoot,
+      env,
+      encoding: 'utf8',
+    });
+    const blockedOutput = `${blocked.stdout}\n${blocked.stderr}`;
+    assert.equal(blocked.status, 0, blockedOutput);
+    assert.match(blockedOutput, /대량 제출 차단.*3개.*한도 2개/);
+
+    const approved = spawnSync(
+      process.execPath,
+      ['scripts/submit-indexnow.mjs', '--dry-run', '--allow-large-batch'],
+      { cwd: fixtureRoot, env, encoding: 'utf8' },
+    );
+    const approvedOutput = `${approved.stdout}\n${approved.stderr}`;
+    assert.equal(approved.status, 0, approvedOutput);
+    assert.doesNotMatch(approvedOutput, /대량 제출 차단/);
+    assert.match(approvedOutput, /변경분 3개 제출 대상/);
+  } finally {
+    rmSync(fixtureRoot, { recursive: true, force: true });
+  }
 });
