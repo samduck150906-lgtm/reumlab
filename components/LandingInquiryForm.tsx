@@ -15,6 +15,23 @@ import {
   normalizeSiteUrl,
   type PackageChoice,
 } from '@/lib/ai-search-form';
+// 같은 이유(클라이언트 번들 보호)로 voice 전용 상수도 import 0 모듈에서 가져온다.
+import {
+  INTEGRATION_MAX,
+  PACKAGE_BY_SLUG,
+  VOICE_CALL_VOLUME_CHOICES,
+  VOICE_DATA_ATTR,
+  VOICE_FIELD_NAMES,
+  VOICE_HANDLING_CHOICES,
+  VOICE_INDUSTRY_CHOICES,
+  VOICE_PACKAGE_CHOICES,
+  VOICE_PACKAGE_TIER,
+  VOICE_TASK_HINT,
+  VOICE_TASK_MAX,
+  type VoiceCallVolumeChoice,
+  type VoiceIndustryChoice,
+  type VoicePackageChoice,
+} from '@/lib/ai-voice-form';
 
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
@@ -39,7 +56,11 @@ const SERVICE_TYPES = [
 const BUDGETS = ['100만 원 이하', '100만 ~ 300만 원', '300만 ~ 500만 원', '500만 ~ 1,000만 원', '1,000만 원 이상', '아직 미정'];
 const TIMELINES = ['최대한 빠르게', '1개월 내', '1 ~ 3개월', '3개월 이상', '미정'];
 
-type Status = 'idle' | 'submitting' | 'success' | 'error';
+/**
+ * timeout 은 error 와 구분한다 — 응답을 못 받았을 뿐 접수 여부는 알 수 없다.
+ * 두 경우의 안내 문구가 달라야 중복 접수를 막을 수 있다(§10.4).
+ */
+type Status = 'idle' | 'submitting' | 'success' | 'error' | 'timeout';
 
 type Variant = 'default' | 'geo-website' | 'ai-voice' | 'ai-search-architecture';
 
@@ -54,17 +75,17 @@ const LANDING_PATH: Partial<Record<Variant, string>> = {
 };
 const INQUIRY_SERVICE: Partial<Record<Variant, string>> = {
   'geo-website': 'GEO 홈페이지 제작',
-  'ai-voice': 'AI 음성 상담·전화 자동화 개발',
+  'ai-voice': 'AI 전화상담 직원 구축',
   'ai-search-architecture': 'AI Search Architecture (기존 홈페이지 검색 구조 개선)',
 };
 const FEATURES_LABEL: Partial<Record<Variant, string>> = {
   'geo-website': '필요한 내용',
-  'ai-voice': 'AI가 받았으면 하는 전화 (가장 많이 오는 것부터)',
+  'ai-voice': 'AI가 맡았으면 하는 전화 업무',
   'ai-search-architecture': '개선하고 싶은 점',
 };
 const FEATURES_PLACEHOLDER: Partial<Record<Variant, string>> = {
   'geo-website': '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존',
-  'ai-voice': '예: 영업시간 문의, 예약 접수·변경, 견적 문의, 담당자 연결',
+  'ai-voice': '예: 영업시간·위치 문의, 예약 접수·변경, 견적 문의, 담당자 연결 요청',
   'ai-search-architecture': '예: 서비스 설명이 흩어져 있음, 검색으로 안 나옴, 문의가 적음',
 };
 
@@ -87,6 +108,7 @@ export default function LandingInquiryForm({
   submitLabel?: string;
 }) {
   const isAiSearch = variant === 'ai-search-architecture';
+  const isAiVoice = variant === 'ai-voice';
   const [status, setStatus] = useState<Status>('idle');
   const [utm, setUtm] = useState<Record<string, string>>({});
   const startedRef = useRef(false);
@@ -101,6 +123,14 @@ export default function LandingInquiryForm({
    * 이 값들은 dataLayer·localStorage 어디에도 저장하지 않는다(주소는 개인 식별 가능).
    */
   const [pkg, setPkg] = useState<PackageChoice>('미정');
+  /**
+   * /ai-voice-development/ 전용 상태.
+   * 세 값 모두 기본 '미정'이다 — 아무것도 누르지 않은 방문자가 특정 업종·상품을
+   * 신청한 상태가 되지 않는다. 페이지의 CTA 를 "명시적으로" 눌렀을 때만 바뀐다.
+   */
+  const [voiceIndustry, setVoiceIndustry] = useState<VoiceIndustryChoice>('미정');
+  const [voiceVolume, setVoiceVolume] = useState<VoiceCallVolumeChoice>('미정');
+  const [voicePkg, setVoicePkg] = useState<VoicePackageChoice>('미정');
   const [siteUrlUnknown, setSiteUrlUnknown] = useState(false);
   const [siteUrlError, setSiteUrlError] = useState('');
   const siteUrlRef = useRef<HTMLInputElement>(null);
@@ -184,6 +214,45 @@ export default function LandingInquiryForm({
   }, [isAiSearch]);
 
   /**
+   * /ai-voice-development/ 의 CTA → 폼 값 동기화.
+   *
+   * 무엇을 동기화하나 (전부 작은 enum 하나씩이다)
+   *  · data-voice-package="business"  → 관심 구축 범위
+   *  · data-voice-industry="학원"      → 업종
+   *  · data-voice-volume="10~30건"     → 하루 전화량
+   *
+   * 지키는 것
+   *  · 데모 탭을 바꾸는 것만으로는 아무것도 반영하지 않는다. 명시적으로 이 CTA 를
+   *    눌렀을 때만 바뀐다(§10.2).
+   *  · 링크는 평범한 앵커라 JS 가 없으면 그냥 #voice-inquiry 로 이동한다.
+   *  · 계산기의 상세 입력값은 넘어오지 않는다 — 전화량 "범주" 문자열 하나뿐이다.
+   *  · 리스너는 ai-voice 변형에서만 붙이고 cleanup 한다.
+   */
+  useEffect(() => {
+    if (!isAiVoice) return;
+    const onClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      const pkgEl = target.closest(`[${VOICE_DATA_ATTR.package}]`);
+      const pkgSlug = pkgEl?.getAttribute(VOICE_DATA_ATTR.package);
+      if (pkgSlug && PACKAGE_BY_SLUG[pkgSlug]) setVoicePkg(PACKAGE_BY_SLUG[pkgSlug]);
+
+      const indEl = target.closest(`[${VOICE_DATA_ATTR.industry}]`);
+      const indValue = indEl?.getAttribute(VOICE_DATA_ATTR.industry);
+      const indMatch = VOICE_INDUSTRY_CHOICES.find((c) => c === indValue);
+      if (indMatch) setVoiceIndustry(indMatch);
+
+      const volEl = target.closest(`[${VOICE_DATA_ATTR.callVolume}]`);
+      const volValue = volEl?.getAttribute(VOICE_DATA_ATTR.callVolume);
+      const volMatch = VOICE_CALL_VOLUME_CHOICES.find((c) => c === volValue);
+      if (volMatch) setVoiceVolume(volMatch);
+    };
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, [isAiVoice]);
+
+  /**
    * 홈페이지 주소 검사 — 오타 교정과 위험한 스킴 차단까지만 한다.
    * 이 주소를 서버가 대신 읽어 주는 기능은 만들지 않는다(임의 URL fetch = SSRF 공격면).
    */
@@ -244,12 +313,18 @@ export default function LandingInquiryForm({
 
     const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
     setStatus('submitting');
+    // 20초 넘게 응답이 없으면 끊는다. 다만 "접수가 안 됐다"고 단정하지 않는다 —
+    // 서버가 이미 저장했는데 응답만 늦었을 수 있어서, 아래 오류 문구를 따로 쓴다.
+    const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 20000) : null;
     try {
       const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body,
+        signal: controller?.signal,
       });
+      if (timer) clearTimeout(timer);
       if (!res.ok) throw new Error(`http ${res.status}`);
       // ── 여기부터가 실제 문의 성공. 제출 버튼 클릭이 아니라 서버 성공 응답 이후다.
       setStatus('success');
@@ -271,16 +346,19 @@ export default function LandingInquiryForm({
           lead_source: ctx.leadSource,
           // 비식별 enum 만 싣는다 — 한글 라벨·주소·상담 원문은 넘어가지 않는다.
           ...(isAiSearch ? { package_tier: PACKAGE_TIER[pkg] } : {}),
+          ...(isAiVoice ? { package_tier: VOICE_PACKAGE_TIER[voicePkg] } : {}),
           ...eventCtx,
         });
       }
     } catch (err) {
-      setStatus('error');
+      if (timer) clearTimeout(timer);
+      const aborted = err instanceof DOMException && err.name === 'AbortError';
+      setStatus(aborted ? 'timeout' : 'error');
       // 진단용 — 사용자 입력값이나 서버 메시지 원문은 싣지 않고 분류만 보낸다.
       const msg = err instanceof Error ? err.message : '';
       pushEvent(EVENT.formError, {
         form_name: FORM_NAME,
-        error_type: msg.startsWith('http') ? 'server' : 'network',
+        error_type: aborted ? 'network' : msg.startsWith('http') ? 'server' : 'network',
         ...pageContext(window.location.pathname),
       });
     } finally {
@@ -292,11 +370,27 @@ export default function LandingInquiryForm({
     return (
       <div className="mx-auto max-w-xl rounded-2xl bg-white p-8 text-center shadow-card-hover" role="status" aria-live="polite">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent-soft text-2xl font-bold text-accent">✓</div>
-        <h3 className="mt-4 font-display text-xl font-bold text-navy-900">검토 요청이 접수됐어요!</h3>
+        <h3 className="mt-4 font-display text-xl font-bold text-navy-900">
+          {isAiVoice ? '도입 검토 요청이 접수되었습니다' : '검토 요청이 접수됐어요!'}
+        </h3>
+        {/*
+          ai-voice 는 회신 시간·자동 견적을 약속하지 않는 문구를 쓴다.
+          다른 변형의 문구는 기존 운영 문구 그대로 둔다(문구를 일괄 변경하지 않는다).
+        */}
         <p className="mt-3 text-sm leading-relaxed text-slate-600">
-          영업일 기준 1~2일 내에 남겨 주신 연락처로 가능한 범위와 예상 비용을 안내드릴게요.
-          <br />
-          급하시면 010-8111-9370으로 전화 주세요.
+          {isAiVoice ? (
+            <>
+              담당자가 내용을 확인한 뒤 남겨주신 연락처로 안내드리겠습니다.
+              <br />
+              급하시면 010-8111-9370으로 전화 주세요.
+            </>
+          ) : (
+            <>
+              영업일 기준 1~2일 내에 남겨 주신 연락처로 가능한 범위와 예상 비용을 안내드릴게요.
+              <br />
+              급하시면 010-8111-9370으로 전화 주세요.
+            </>
+          )}
         </p>
       </div>
     );
@@ -310,8 +404,21 @@ export default function LandingInquiryForm({
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       onFocusCapture={onFirstInteract}
+      aria-busy={status === 'submitting'}
       className="mx-auto max-w-2xl rounded-2xl bg-white p-6 text-left shadow-card-hover sm:p-8"
     >
+      {/*
+        JS 가 꺼져 있으면 이 폼은 브라우저 기본 POST 로 넘어간다. 그 경로가 실제
+        접수까지 이어지는지는 운영 환경에서 확인해야 한다(이 저장소에서 검증 불가).
+        확인 전까지 "반응 없는 폼"을 남기지 않도록 검증된 직접 연락 경로를 함께 둔다.
+      */}
+      <noscript>
+        <p className="mb-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
+          자바스크립트가 꺼져 있어 전송 결과를 화면에서 확인해 드릴 수 없습니다. 아래로 바로 연락 주셔도 됩니다 —
+          전화 <a className="font-semibold underline" href="tel:01081119370">010-8111-9370</a> · 이메일{' '}
+          <a className="font-semibold underline" href="mailto:ceo@eternalsix.com">ceo@eternalsix.com</a>
+        </p>
+      </noscript>
       <input type="hidden" name="form-name" value={FORM_NAME} />
       <input type="hidden" name="유입_랜딩" value={LANDING_PATH[variant] ?? `l/${landingSlug}`} />
       <input type="hidden" name="문의서비스" value={INQUIRY_SERVICE[variant] ?? (defaultServiceType || '')} />
@@ -375,21 +482,75 @@ export default function LandingInquiryForm({
         </div>
       ) : null}
 
-      {variant === 'ai-voice' ? (
+      {isAiVoice ? (
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           <div>
-            <label className={labelCls} htmlFor="lf-call-handling">지금 전화 응대 방식</label>
-            <select id="lf-call-handling" name="현재응대방식" className={inputCls} defaultValue="직원이 직접 받음">
-              <option value="직원이 직접 받음">직원이 직접 받음</option>
-              <option value="ARS·자동응답 사용">ARS·자동응답 사용</option>
-              <option value="놓치는 전화가 많음">놓치는 전화가 많음</option>
-              <option value="콜센터 위탁">콜센터 위탁</option>
-              <option value="아직 전화 응대 없음">아직 전화 응대 없음</option>
+            <label className={labelCls} htmlFor="lf-voice-industry">업종</label>
+            {/* 페이지의 "이 업종으로 도입 상담" CTA 로도 바뀌지만 직접 고르는 것이 항상 가능하다 */}
+            <select
+              id="lf-voice-industry"
+              name={VOICE_FIELD_NAMES.industry}
+              className={inputCls}
+              value={voiceIndustry}
+              onChange={(e) => setVoiceIndustry(e.currentTarget.value as VoiceIndustryChoice)}
+            >
+              {VOICE_INDUSTRY_CHOICES.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
             </select>
           </div>
           <div>
+            <label className={labelCls} htmlFor="lf-voice-volume">하루 전화량</label>
+            <select
+              id="lf-voice-volume"
+              name={VOICE_FIELD_NAMES.callVolume}
+              className={inputCls}
+              value={voiceVolume}
+              onChange={(e) => setVoiceVolume(e.currentTarget.value as VoiceCallVolumeChoice)}
+            >
+              {VOICE_CALL_VOLUME_CHOICES.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-call-handling">지금 전화 응대 방식</label>
+            {/* 기본값을 '선택 안 함'으로 둔다 — 답하지 않은 사람의 응대 방식을 지어내지 않는다 */}
+            <select id="lf-call-handling" name="현재응대방식" className={inputCls} defaultValue="선택 안 함">
+              {VOICE_HANDLING_CHOICES.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-voice-package">관심 구축 범위</label>
+            {/* 기본 '미정' — 특정 상품이 미리 신청된 상태로 시작하지 않는다 */}
+            <select
+              id="lf-voice-package"
+              name={VOICE_FIELD_NAMES.package}
+              className={inputCls}
+              value={voicePkg}
+              onChange={(e) => setVoicePkg(e.currentTarget.value as VoicePackageChoice)}
+            >
+              {VOICE_PACKAGE_CHOICES.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          </div>
+          <div className="sm:col-span-2">
             <label className={labelCls} htmlFor="lf-integrations">연동이 필요한 시스템 <span className="font-normal text-slate-500">(선택)</span></label>
-            <input id="lf-integrations" name="연동대상시스템" type="text" className={inputCls} placeholder="예: 네이버 예약, 자체 CRM, ERP" />
+            <input
+              id="lf-integrations"
+              name="연동대상시스템"
+              type="text"
+              className={inputCls}
+              maxLength={INTEGRATION_MAX}
+              placeholder="예: 자체 CRM, ERP, 예약 시스템 / 아직 없음 / 모름"
+              aria-describedby="lf-integrations-hint"
+            />
+            <p id="lf-integrations-hint" className="mt-1.5 text-[13px] leading-relaxed text-slate-500">
+              아직 없거나 이름을 모르셔도 괜찮습니다. “아직 없음” 또는 “모름”이라고 적어 주세요.
+            </p>
           </div>
         </div>
       ) : null}
@@ -493,9 +654,15 @@ export default function LandingInquiryForm({
           name="핵심기능"
           rows={3}
           className={inputCls}
-          maxLength={isAiSearch ? IMPROVE_MAX : undefined}
+          maxLength={isAiSearch ? IMPROVE_MAX : isAiVoice ? VOICE_TASK_MAX : undefined}
           placeholder={FEATURES_PLACEHOLDER[variant] ?? '예: 회원가입, 예약, 결제, 관리자에서 예약 확인'}
+          aria-describedby={isAiVoice ? 'lf-features-hint' : undefined}
         />
+        {isAiVoice ? (
+          <p id="lf-features-hint" className="mt-1.5 text-[13px] leading-relaxed text-slate-500">
+            {VOICE_TASK_HINT}
+          </p>
+        ) : null}
       </div>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -537,7 +704,18 @@ export default function LandingInquiryForm({
 
       {status === 'error' && (
         <p className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600" role="alert">
-          전송에 실패했어요. 잠시 후 다시 시도하거나 010-8111-9370으로 연락 주세요.
+          전송에 실패했어요. 입력하신 내용은 그대로 두었으니 잠시 후 다시 시도하거나 010-8111-9370으로 연락 주세요.
+        </p>
+      )}
+
+      {/*
+        타임아웃은 "접수가 안 됐다"고 단정하지 않는다 — 저장은 됐는데 응답만 늦었을 수 있다.
+        그래서 재시도 전에 중복 접수 가능성을 먼저 알린다.
+      */}
+      {status === 'timeout' && (
+        <p className="mt-4 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900" role="alert">
+          <b className="font-semibold">응답이 오지 않아 접수 여부를 확인하지 못했습니다.</b> 이미 접수되었을 수 있으니
+          다시 보내시면 같은 문의가 두 건으로 남을 수 있습니다. 확인이 필요하시면 010-8111-9370으로 연락 주세요.
         </p>
       )}
 

@@ -40,6 +40,10 @@
       index.html은 정적 파일이라 그대로도 감지되지만, 확실히 하기 위해 함께 등록합니다.
       /ai-search-optimization/ 변형은 여기에 홈페이지주소상태·홈페이지환경·수정권한·
       관심패키지·지속관리관심을 더한다(비밀번호·API 키를 받는 필드는 두지 않는다).
+      /ai-voice-development/ 변형은 음성_업종·음성_하루전화량·음성_관심상품을 더한다
+      (필드 이름의 단일 출처는 lib/ai-voice-form.ts 의 VOICE_FIELD_NAMES — 함께 고칠 것).
+      Netlify 는 여기에 등록되지 않은 이름을 접수에서 버릴 수 있으므로, 폼에 필드를
+      추가하면 이 파일에도 반드시 같은 이름을 추가한다.
       수집 항목: 이름 · 업체명 · 휴대폰번호 (+ 광고 유입 추적 utm_*·fbclid,
       + 유입 맥락 유입_경로·페이지_유형·관심_서비스축·유입_출처·최초_유입_페이지·유입_채널
       — 어떤 SEO 페이지와 채널이 문의를 만드는지 추적용).
@@ -60,6 +64,9 @@
       <input type="text" name="수정권한" />
       <input type="text" name="관심패키지" />
       <input type="text" name="지속관리관심" />
+      <input type="text" name="음성_업종" />
+      <input type="text" name="음성_하루전화량" />
+      <input type="text" name="음성_관심상품" />
       <textarea name="핵심기능"></textarea>
       <input type="text" name="예상예산" />
       <input type="text" name="희망일정" />

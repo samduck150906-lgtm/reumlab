@@ -119,6 +119,17 @@ export const EVENT = {
   lead: 'generate_lead',
   /** 문의 제출 실패 진단용. 개인 입력값·서버 메시지 원문을 싣지 않는다. */
   formError: 'form_error',
+
+  /*
+   * /ai-voice-development/ 데모·계산기 전용.
+   * 전부 "관심 표명"이지 전환이 아니다 — key event 로 설정하지 말 것.
+   * 파라미터는 비식별 ASCII enum 만 싣는다(업종 라벨의 한글·계산기 입력값은 보내지 않는다).
+   */
+  voiceDemoSelect: 'voice_demo_select',
+  voiceDemoStart: 'voice_demo_start',
+  voiceDemoComplete: 'voice_demo_complete',
+  voicePackageSelect: 'voice_package_select',
+  voiceWorkloadInteract: 'voice_workload_interact',
 } as const;
 
 export type FormErrorType = 'validation' | 'network' | 'server';
@@ -144,6 +155,16 @@ export interface EventParams {
    * 화면 라벨(한글)을 그대로 보내면 문구를 고칠 때마다 GA4 값이 갈라진다.
    */
   package_tier?: string;
+  /**
+   * 업종 — 비식별 ASCII enum 만 (B2B / ACADEMY / CLINIC / BEAUTY / REAL_ESTATE / SUPPORT).
+   * 값 목록은 lib/ai-voice-form.ts 의 VOICE_INDUSTRY_ENUM 이 단일 출처다.
+   */
+  industry?: string;
+  /**
+   * 상호작용 종류 — 계산기처럼 "무엇을 했는지"만 남기고 입력값은 싣지 않는다.
+   * 예: 'input-change' | 'cta'. 자유 텍스트를 남발하지 않는다.
+   */
+  interaction?: string;
 }
 
 /**
