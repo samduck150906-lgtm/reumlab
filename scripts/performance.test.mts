@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, statSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import path from 'node:path';
 import { isStaticOverride } from '../lib/static-routes';
 
 const read = (path: string) => readFileSync(path, 'utf8');
@@ -114,8 +114,15 @@ test('every route links through SiteLink, never next/link directly', () => {
   // SiteLink 가 prefetch 기본값(끔)과 "정적 HTML 로 덮어써지는 경로는 실제 이동" 규칙을
   // 한곳에서 강제한다. 어느 파일 하나가 next/link 를 직접 import 하면 그 파일만
   // 조용히 예전 동작(뷰포트 prefetch + 잘못된 클라이언트 내비)으로 돌아간다.
-  const files = execFileSync('grep', ['-rl', "from 'next/link'", '--include=*.tsx', '--include=*.js', 'app/', 'components/'], { encoding: 'utf8' })
-    .split('\n').filter(Boolean).filter((f) => f !== 'components/SiteLink.tsx');
+  const sourceFiles = (dir: string): string[] => readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) return sourceFiles(file);
+    return /\.(?:tsx|js)$/.test(entry.name) ? [file.replaceAll('\\', '/')] : [];
+  });
+  const files = ['app', 'components']
+    .flatMap(sourceFiles)
+    .filter((file) => file !== 'components/SiteLink.tsx')
+    .filter((file) => read(file).includes("from 'next/link'"));
   assert.deepEqual(files, [], `next/link 직접 import: ${files.join(', ')} → @/components/SiteLink 를 쓰세요`);
 
   const siteLink = read('components/SiteLink.tsx');
