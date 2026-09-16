@@ -41,10 +41,10 @@ const SUBMIT_ALL = args.has('--all');
 const DRY_RUN = args.has('--dry-run');
 const SUBMIT_REQUESTED = args.has('--submit');
 const ALLOW_LARGE_BATCH = args.has('--allow-large-batch') || SUBMIT_ALL;
-const parsedMaxAutomaticUrls = Number.parseInt(process.env.INDEXNOW_MAX_AUTO_URLS ?? '100', 10);
+const parsedMaxAutomaticUrls = Number.parseInt(process.env.INDEXNOW_MAX_AUTO_URLS ?? '50', 10);
 const MAX_AUTOMATIC_URLS = Number.isFinite(parsedMaxAutomaticUrls) && parsedMaxAutomaticUrls > 0
   ? parsedMaxAutomaticUrls
-  : 100;
+  : 50;
 
 // Netlify deploy-preview·branch-deploy는 검증용 산출물이다. 여기서 production
 // canonical URL을 IndexNow에 보내면 공개 전 변경을 검색엔진에 알리게 된다.
