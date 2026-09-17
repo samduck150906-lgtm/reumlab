@@ -35,6 +35,8 @@ export function Analytics() {
   return (
     <>
       <Script id="analytics-loader" strategy="afterInteractive">{delayedLoader}</Script>
+      {/* 네이버 검색광고 전환추적 — dataLayer 전환 이벤트를 wcs.trans 로 번역 (public/naver-wcs.js) */}
+      <Script id="naver-wcs" src="/naver-wcs.js" strategy="afterInteractive" />
       {gtmId ? (
         <noscript>
           <iframe

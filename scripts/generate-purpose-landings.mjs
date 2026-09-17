@@ -978,6 +978,7 @@ ${jsonLd(land)}
 <script>document.documentElement.className = "js";</script>
 ${PIXEL}
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<script src="/naver-wcs.js" async></script>
 </head>
 <body data-page-type="service"${SERVICE_AXIS[land.slug] ? ` data-service="${SERVICE_AXIS[land.slug]}"` : ''}>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHLMP8ZD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
