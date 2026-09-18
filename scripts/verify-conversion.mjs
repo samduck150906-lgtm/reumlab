@@ -6,14 +6,15 @@
  *
  * 검사 항목
  *   1. Analytics 중복 설치 — 한 페이지에서 GTM·GA4·픽셀이 두 번 실행되는가
- *   2. CTA 존재 — 상업 의도가 강한 페이지에 다음 행동 수단이 있는가
- *   3. CTA 목적지 — tel/mailto 형식, 내부 링크 404, 리다이렉트 대상 여부
- *   4. 내부 UTM — 내부 링크에 utm_* 를 붙여 acquisition 을 덮어쓰고 있지 않은가
- *   5. 전환 정확도(소스 정적 분석) — 제출 클릭이 아니라 서버 성공 이후에만 전환이 나가는가
- *   6. 중복 발화 — 한 번의 성공에서 같은 이벤트가 두 번 나가지 않는가
- *   7. PII — 이벤트 파라미터 이름에 개인정보성 키가 섞이지 않았는가
- *   8. 페이지 컨텍스트 — 정적 문서가 page_type 을 선언하는가
- *   9. Netlify Forms — 정적 감지 스키마와 모든 동일 이름 폼의 필드가 일치하고 제출이 그 스켈레톤을 향하는가
+ *   2. 네이버 공통 스크립트 — 전환추적 공통 스크립트를 모든 색인 페이지가 부르는가
+ *   3. CTA 존재 — 상업 의도가 강한 페이지에 다음 행동 수단이 있는가
+ *   4. CTA 목적지 — tel/mailto 형식, 내부 링크 404, 리다이렉트 대상 여부
+ *   5. 내부 UTM — 내부 링크에 utm_* 를 붙여 acquisition 을 덮어쓰고 있지 않은가
+ *   6. 전환 정확도(소스 정적 분석) — 제출 클릭이 아니라 서버 성공 이후에만 전환이 나가는가
+ *   7. 중복 발화 — 한 번의 성공에서 같은 이벤트가 두 번 나가지 않는가
+ *   8. PII — 이벤트 파라미터 이름에 개인정보성 키가 섞이지 않았는가
+ *   9. 페이지 컨텍스트 — 정적 문서가 page_type 을 선언하는가
+ *  10. Netlify Forms — 정적 감지 스키마와 모든 동일 이름 폼의 필드가 일치하고 제출이 그 스켈레톤을 향하는가
  *
  * 한계: 정적 검사다. 실제 브라우저에서 무엇이 전송되는지까지 보장하지 못한다.
  *       개인정보 미전송을 이 스크립트만으로 "보장"한다고 말할 수 없다.
@@ -63,7 +64,20 @@ for (const p of indexed) {
   }
 }
 
-// ─── 2~3. CTA 존재와 목적지
+// ─── 2. 네이버 공통 스크립트
+// 네이버 전환추적은 "공통 스크립트를 모든 페이지에" 넣는 것이 전제다. 한 페이지라도 빠지면
+// 그 페이지로 들어온 광고 클릭(inflow)이 기록되지 않아 전환이 광고에 붙지 않는다.
+// 정적 문서는 <script src>, Next 라우트는 next/script 가 남기는 참조라 태그 모양이 다르다 —
+// 실행 여부까지는 정적 검사로 알 수 없으므로 "파일을 참조하는가"까지만 본다.
+let noNaverWcs = 0;
+for (const p of indexed) {
+  if (!p.html.includes('/naver-wcs.js')) {
+    noNaverWcs++;
+    add(fail, 'naver-wcs', `네이버 공통 스크립트 미설치: ${p.pathname}`);
+  }
+}
+
+// ─── 3~4. CTA 존재와 목적지
 const NO_CTA_NEEDED = /^\/(privacy|terms|refund)\/$/;
 let noCta = 0, badTel = 0, brokenCta = 0;
 const telPattern = /^tel:\+?[0-9]+$/;
@@ -92,7 +106,7 @@ for (const p of indexed) {
   }
 }
 
-// ─── 4. 내부 UTM
+// ─── 5. 내부 UTM
 let internalUtm = 0;
 for (const p of pages) {
   const body = (p.html.match(/<body[\s\S]*<\/body>/) || [''])[0];
@@ -102,7 +116,7 @@ for (const p of pages) {
   }
 }
 
-// ─── 5~7. 소스 정적 분석 (전환 정확도·PII)
+// ─── 6~8. 소스 정적 분석 (전환 정확도·PII)
 const FORM_SOURCES = [
   'components/LandingInquiryForm.tsx',
   'app/soho/SohoForm.tsx',
@@ -187,7 +201,7 @@ for (const f of FORM_SOURCES) {
   }
 }
 
-// ─── 8. 정적 문서의 page_type 선언
+// ─── 9. 정적 문서의 page_type 선언
 let noCtx = 0;
 for (const f of ['index.html', 'erp/index.html', 'mvp/index.html', 'website/index.html']) {
   const p = join(OUT, f);
@@ -198,7 +212,7 @@ for (const f of ['index.html', 'erp/index.html', 'mvp/index.html', 'website/inde
   }
 }
 
-// ─── 9. Netlify Forms 정적 감지 스키마·제출 엔드포인트
+// ─── 10. Netlify Forms 정적 감지 스키마·제출 엔드포인트
 let formSchemaIssues = 0;
 const skeletonPath = 'public/__forms.html';
 if (!existsSync(skeletonPath)) {
@@ -254,6 +268,7 @@ const tagged = indexed.filter((p) => /data-(analytics|cta)=/.test(p.html)).lengt
 
 console.log(`색인 페이지 ${indexed.length} · 문의폼 보유 ${withForm} · CTA 태깅 보유 ${tagged}`);
 console.log(`Analytics  중복 GTM ${dupGtm} · 중복 GA4 ${dupGa} · 중복 픽셀 ${dupPixel} · GTM+직접 GA4 ${gtmWithDirectGa}`);
+console.log(`네이버     공통 스크립트 미설치 ${noNaverWcs}`);
 console.log(`CTA        수단 없는 페이지 ${noCta} · tel 형식 오류 ${badTel} · 목적지 없음 ${brokenCta}`);
 console.log(`UTM        내부 링크 UTM ${internalUtm}`);
 console.log(`전환       성공 이전 발화 ${badOrder} · 중복 발화 ${dupFire}`);
@@ -270,4 +285,4 @@ if (fail.length) {
   fail.slice(0, 25).forEach((f) => console.log('  ' + f));
   process.exit(1);
 }
-console.log('✓ 전환 검증 통과 — 중복 설치·CTA·목적지·내부 UTM·전환 시점·PII 이상 없음');
+console.log('✓ 전환 검증 통과 — 중복 설치·네이버 공통 스크립트·CTA·목적지·내부 UTM·전환 시점·PII 이상 없음');
