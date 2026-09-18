@@ -159,6 +159,12 @@ npm run gen:gbp        # content/gbp/ 에 GBP 콘텐츠 생성
 - **네이버**: 서치어드바이저 → 현황 → 콘텐츠 현황  
 - 목표: 2~4주 내 300개+ URL 색인  
 
+### 검색광고 전환추적 (설치 완료)
+
+네이버 광고 전환 추적 공통 스크립트는 모든 페이지에 설치돼 있습니다
+(`public/naver-wcs.js`, 공통 인증키 `s_36bb821fab0f`). 전환 매핑·검수요청 절차·
+소유자가 광고시스템에서 해야 할 설정은 [docs/NAVER_CONVERSION_TRACKING.md](docs/NAVER_CONVERSION_TRACKING.md) 참고.
+
 ## 키워드 추가/수정
 
 - **새 키워드**: `scripts/generate-landings.mjs`에서 `SERVICES`, `REGIONS`, `INDUSTRIES`, `INTENTS` 배열 수정 후 `npm run prebuild && npm run build`  

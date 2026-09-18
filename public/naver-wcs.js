@@ -17,18 +17,19 @@
  *  네이버 전환 유형으로 번역한다. 새 폼이 규약대로 generate_lead 를 쏘면 자동으로 잡힌다.
  *
  * 전환 매핑 (한 번의 행동에 한 유형만)
- *  generate_lead → lead (문의 제출 성공 — 서버 성공 응답 이후에만 발화)
+ *  generate_lead       → lead      문의 제출 성공 — 서버 성공 응답 이후에만 발화
+ *  phone_click         → custom001 전화 링크 클릭
+ *  kakao_or_chat_click → custom002 카카오 상담 클릭
  *  form_submit_success·main_apply_submit 은 같은 성공에서 함께 나가므로 매핑하지 않는다.
  *
  *  ⚠️ type 값은 아무 문자열이나 되지 않는다. 네이버가 정한 전환이벤트 코드명
- *     (lead·sign_up·purchase·add_to_cart … 24종 + custom001~custom010)만 집계되고,
- *     목록에 없는 이름은 조용히 버려진다. 확인된 이름만 넣는다.
+ *     (lead·sign_up·purchase·add_to_cart … 24종 + 사용자정의 custom001~custom010)만
+ *     집계되고, 목록에 없는 이름은 조용히 버려진다. 확인된 이름만 넣는다.
  *
- *  전화 클릭(phone_click)·카카오 상담 클릭(kakao_or_chat_click)은 아직 매핑하지 않았다.
- *  광고시스템 > 도구 > 전환추적 관리에서 사용자정의 전환(custom001·custom002)에
- *  이름을 붙인 뒤 아래 MAP 에 { phone_click: 'custom001', kakao_or_chat_click: 'custom002' }
- *  를 추가하면 바로 잡힌다. (AnalyticsDataLayer.tsx 기준 이 둘은 secondary conversion 이라
- *  문의 완료 lead 와 같은 유형으로 합치지 않는다.)
+ *  전화·카카오 클릭을 사용자정의 전환에 둔 이유: AnalyticsDataLayer.tsx 기준 이 둘은
+ *  secondary conversion 이라 문의 완료(lead)와 같은 유형으로 합치면 리드 수가 부풀려진다.
+ *  광고시스템 > 도구 > 전환추적 관리에서 사용자정의 전환 1·2 에 각각 "전화 클릭",
+ *  "카카오 상담 클릭" 이름을 붙여야 보고서에서 알아볼 수 있다.
  *
  * ⚠️ 개인정보는 보내지 않는다. 유형 문자열만 전송한다.
  * ⚠️ 측정이 사용자 기능보다 우선할 수 없다 — 어떤 경우에도 예외를 던지지 않는다.
@@ -36,7 +37,7 @@
 (function (w, d) {
   var WA = 's_36bb821fab0f'; // 광고시스템 > 도구 > 전환추적 관리 의 공통 인증키 (공개값)
   var DOMAIN = 'reumlab.com'; // 신청사이트 URL — www·미리보기 호스트도 등록 도메인으로 정규화한다
-  var MAP = { generate_lead: 'lead' };
+  var MAP = { generate_lead: 'lead', phone_click: 'custom001', kakao_or_chat_click: 'custom002' };
   var DEDUPE_MS = 3000;
 
   if (!WA || WA.indexOf('__') === 0 || w.__reumNaverWcs) return;
