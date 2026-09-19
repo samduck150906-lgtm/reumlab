@@ -640,6 +640,11 @@ export const RELATED_LINKS = [
     note: '텍스트 챗봇과 업무용 AI 기능을 최소 범위로 시작하는 서비스입니다.',
   },
   {
+    href: '/ai-worker/',
+    label: 'AI Worker 구축 (업무를 수행하는 AI)',
+    note: '전화 응대는 AI Worker 의 한 역할입니다. 접수한 건의 입력·회신까지 AI가 끝내게 하려면 여기서 전체 구조를 확인하세요.',
+  },
+  {
     href: '/enterprise-ai/',
     label: '사내 AI·기업용 AI 구축',
     note: '사내 문서를 검색해 임직원 질문에 답하는 AI입니다. 고객 응대가 아니라 내부 지식 검색 축입니다.',

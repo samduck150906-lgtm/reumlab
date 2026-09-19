@@ -423,6 +423,7 @@ export const FAQS: { q: string; a: string }[] = [
 // ── 18. 내부링크 (§37 — 실제 존재하는 페이지만) ────────────────
 export const RELATED_LINKS: { href: string; label: string }[] = [
   { href: '/ai-automation/', label: '반복 업무를 실행하는 AI 업무 자동화' },
+  { href: '/ai-worker/', label: '업무를 끝까지 처리하는 AI Worker 구축' },
   { href: '/ai-development/', label: '고객 응대용 AI 챗봇 개발' },
   { href: '/ai-voice-development/', label: '전화를 AI가 받는 AI 음성 상담 개발' },
   { href: '/guide/enterprise-ai-cost/', label: '사내 AI 구축 비용을 정하는 요소' },

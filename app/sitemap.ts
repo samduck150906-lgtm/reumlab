@@ -14,6 +14,7 @@ import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/syst
 import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-ai';
 import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
+import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, workerDecision } from '@/lib/ai-worker';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -94,6 +95,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: gitLastModified('lib/ai-search-architecture.ts'),
       changeFrequency: 'monthly',
       priority: 0.85,
+    });
+  }
+
+  // AI Worker 구축 — "업무를 끝까지 수행하는 AI" 축. 기존 AI 페이지 4종(/ai-development/·
+  // /ai-automation/·/enterprise-ai/·/ai-voice-development/)이 "무엇으로 답하느냐"로 나뉜 것과
+  // 달리 "무엇을 처리하느냐"가 주제라 self-canonical 이다. 색인 게이트 통과 시에만 싣는다.
+  const aiWorker = aiWorkerDecision();
+  if (aiWorker.inSitemap) {
+    out.push({
+      url: AI_WORKER_CANONICAL,
+      lastModified: gitLastModified('lib/ai-worker.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    });
+  }
+  // 역할별 스포크. 전화 응대 역할은 이미 /ai-voice-development/ 가 있어 새로 만들지 않는다.
+  const workerMod = gitLastModified('lib/ai-worker.ts');
+  for (const w of WORKERS) {
+    const d = workerDecision(w.slug);
+    if (!d?.inSitemap) continue;
+    out.push({
+      url: workerCanonical(w.slug),
+      lastModified: workerMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     });
   }
 

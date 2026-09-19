@@ -342,7 +342,7 @@
     },
     {
       "href": "/guide/rag-development/",
-      "label": "RAG 구축, 사내 문서를 AI에 연결하는 방법",
+      "label": "RAG 구축 방법, 사내 문서를 AI에 연결하는 8단계",
       "kind": "가이드"
     },
     {
@@ -373,10 +373,83 @@
       "kind": "가이드"
     }
   ],
+  "/ai-worker/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/chatbot-cost/",
+      "label": "AI 챗봇 개발 비용, 단계별로 접근하기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
+  "/ai-worker/office/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "/ai-worker/sales/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/chatbot-cost/",
+      "label": "AI 챗봇 개발 비용, 단계별로 접근하기",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/quote/",
+      "label": "앱개발 외주 견적을 빨리 받는 법",
+      "kind": "가이드"
+    }
+  ],
+  "/ai-worker/document/": [
+    {
+      "href": "/guide/rag-development/",
+      "label": "RAG 구축 방법, 사내 문서를 AI에 연결하는 8단계",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
   "/enterprise-ai/": [
     {
       "href": "/guide/rag-development/",
-      "label": "RAG 구축, 사내 문서를 AI에 연결하는 방법",
+      "label": "RAG 구축 방법, 사내 문서를 AI에 연결하는 8단계",
       "kind": "가이드"
     },
     {
