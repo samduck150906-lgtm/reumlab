@@ -90,16 +90,41 @@ export default function EnternalAiPage() {
 
             <div className={styles.heroVisual} aria-hidden="true">
               <div className={styles.visualGrid} />
-              <div className={`${styles.orbit} ${styles.orbitOne}`} />
-              <div className={`${styles.orbit} ${styles.orbitTwo}`} />
-              <div className={styles.aiCube}>
-                <div className={styles.aiCore}><span>e</span></div>
-              </div>
-              <div className={styles.visualLabels}>
-                <span>Private</span>
-                <span>Secure</span>
-                <span>Scalable</span>
-                <span>Your AI</span>
+              <div className={styles.dataArchitecture}>
+                <div className={styles.systemBar}>
+                  <span>ENTERNAL / CONTROLLED DATA PATH</span>
+                  <span className={styles.systemStatus}>PoC architecture</span>
+                </div>
+                <div className={styles.dataCanvas}>
+                  <div className={`${styles.dataNode} ${styles.dataSource}`}>
+                    <small>01 · INPUT</small>
+                    <strong>사내 문서·업무 데이터</strong>
+                    <span>Documents · ERP · CRM</span>
+                  </div>
+                  <div className={`${styles.dataNode} ${styles.dataPolicy}`}>
+                    <small>02 · CONTROL</small>
+                    <strong>권한·정책 계층</strong>
+                    <span>Identity · Policy · Audit</span>
+                  </div>
+                  <div className={`${styles.dataNode} ${styles.dataInference}`}>
+                    <small>03 · PROCESS</small>
+                    <strong>Private inference</strong>
+                    <span>Approved model path</span>
+                  </div>
+                  <div className={`${styles.dataNode} ${styles.dataOutput}`}>
+                    <small>04 · OUTPUT</small>
+                    <strong>검증된 답변·업무 연결</strong>
+                    <span>Evidence · Review · Action</span>
+                  </div>
+                  <span className={`${styles.dataLink} ${styles.linkTop}`} />
+                  <span className={`${styles.dataLink} ${styles.linkRight}`} />
+                  <span className={`${styles.dataLink} ${styles.linkBottom}`} />
+                </div>
+                <div className={styles.telemetry}>
+                  <span>LOCAL-FIRST</span>
+                  <span>TRACEABLE</span>
+                  <span>HUMAN CONTROL</span>
+                </div>
               </div>
             </div>
           </header>

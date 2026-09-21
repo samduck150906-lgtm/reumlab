@@ -201,121 +201,217 @@
 
 .visualGrid {
   position: absolute;
-  inset: 7% 8% 2% 3%;
-  z-index: -3;
-  opacity: 0.55;
-  background-image:
-    linear-gradient(rgba(70, 146, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(70, 146, 255, 0.12) 1px, transparent 1px);
-  background-size: 36px 36px;
-  mask-image: radial-gradient(circle, #000 20%, transparent 70%);
-  transform: perspective(600px) rotateX(61deg) rotateZ(-12deg) scale(1.14);
-}
-
-.orbit {
-  position: absolute;
+  inset: 2% -7% -4% -10%;
   z-index: -2;
-  border: 1px solid rgba(65, 147, 255, 0.3);
-  border-radius: 28px;
-  box-shadow: inset 0 0 34px rgba(24, 115, 255, 0.08);
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(73, 129, 207, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(73, 129, 207, 0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(90deg, transparent, #000 22%, #000 82%, transparent);
+  transform: perspective(760px) rotateX(58deg) translateY(44px) scale(1.1);
 }
 
-.orbitOne {
-  width: 348px;
-  height: 298px;
-  transform: rotate(45deg) skew(-8deg, -8deg);
-}
-
-.orbitTwo {
-  width: 300px;
-  height: 350px;
-  transform: rotate(-45deg) skew(8deg, 8deg);
-}
-
-.aiCube {
+.dataArchitecture {
   position: relative;
-  width: 246px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(100, 175, 255, 0.7);
+  width: min(100%, 490px);
+  overflow: hidden;
+  border: 1px solid rgba(115, 165, 225, 0.34);
+  border-radius: 18px;
   background:
-    linear-gradient(135deg, rgba(28, 114, 255, 0.2), rgba(7, 32, 67, 0.16)),
-    repeating-linear-gradient(0deg, transparent 0 30px, rgba(99, 169, 255, 0.09) 30px 31px),
-    repeating-linear-gradient(90deg, transparent 0 30px, rgba(99, 169, 255, 0.09) 30px 31px);
-  box-shadow:
-    inset 0 0 46px rgba(40, 135, 255, 0.2),
-    0 0 34px rgba(33, 126, 255, 0.26),
-    0 0 100px rgba(10, 98, 240, 0.32);
-  transform: rotate(4deg);
+    linear-gradient(180deg, rgba(13, 31, 61, 0.96), rgba(6, 19, 42, 0.98)),
+    #07152d;
+  box-shadow: 0 28px 72px rgba(0, 8, 25, 0.42), inset 0 1px rgba(255, 255, 255, 0.035);
 }
 
-.aiCube::before,
-.aiCube::after {
+.dataArchitecture::before {
   position: absolute;
-  inset: 22px;
+  inset: 39px 0 31px;
+  pointer-events: none;
   content: '';
-  border: 1px solid rgba(108, 181, 255, 0.45);
+  background:
+    linear-gradient(rgba(105, 158, 221, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(105, 158, 221, 0.055) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-.aiCube::before {
-  transform: rotate(45deg);
-}
-
-.aiCube::after {
-  transform: rotate(-45deg);
-}
-
-.aiCore {
+.systemBar,
+.telemetry {
   position: relative;
   z-index: 2;
-  width: 126px;
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(151, 207, 255, 0.85);
-  border-radius: 22px;
-  color: #fff;
-  background: linear-gradient(145deg, #2c8fff, #0b52d1);
-  box-shadow: 0 0 26px #1683ff, 0 0 66px rgba(29, 125, 255, 0.85);
-  transform: rotate(-4deg);
-}
-
-.aiCore span {
-  font-size: 5.5rem;
-  font-weight: 900;
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.15em;
-  text-shadow: 0 4px 22px rgba(0, 24, 84, 0.44);
-  transform: translateX(-0.08em);
-}
-
-.visualLabels {
-  position: absolute;
-  right: -3px;
-  top: 72px;
-  display: grid;
-  gap: 38px;
-  color: #79b8ff;
-  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 39px;
+  padding: 0 15px;
+  color: #6f8cad;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.61rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
 }
 
-.visualLabels span {
-  position: relative;
-  padding-left: 48px;
+.systemBar {
+  border-bottom: 1px solid rgba(120, 167, 222, 0.16);
 }
 
-.visualLabels span::before {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 37px;
-  height: 1px;
+.systemBar::before {
+  width: 7px;
+  height: 7px;
+  margin-right: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
   content: '';
-  background: linear-gradient(90deg, rgba(74, 154, 255, 0.2), #4c9dff);
+  background: #55c9ba;
+  box-shadow: 0 0 0 4px rgba(85, 201, 186, 0.08);
+}
+
+.systemBar > :first-child {
+  margin-right: auto;
+}
+
+.systemStatus {
+  color: #7e9fca;
+}
+
+.dataCanvas {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 52px 66px;
+  min-height: 316px;
+  padding: 38px 34px;
+}
+
+.dataNode {
+  position: relative;
+  z-index: 2;
+  min-height: 94px;
+  padding: 14px 15px;
+  border: 1px solid rgba(116, 163, 217, 0.22);
+  border-radius: 10px;
+  background: rgba(8, 25, 52, 0.92);
+  box-shadow: inset 3px 0 var(--node-accent, #448af0), 0 12px 30px rgba(0, 7, 21, 0.18);
+}
+
+.dataNode small,
+.dataNode span,
+.dataNode strong {
+  display: block;
+}
+
+.dataNode small {
+  margin-bottom: 10px;
+  color: var(--node-accent, #69a7ff);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.dataNode strong {
+  color: #eef6ff;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.dataNode span {
+  margin-top: 8px;
+  color: #7893b4;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.025em;
+}
+
+.dataPolicy {
+  --node-accent: #58c1b3;
+}
+
+.dataInference {
+  --node-accent: #7f9ee8;
+}
+
+.dataOutput {
+  --node-accent: #63b7d5;
+}
+
+.dataLink {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  height: 1px;
+  overflow: visible;
+  background: rgba(84, 151, 230, 0.4);
+}
+
+.dataLink::after {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: '';
+  background: #7bc7ff;
+  box-shadow: 0 0 9px rgba(86, 177, 255, 0.7);
+  animation: dataPulse 4.8s linear infinite;
+}
+
+.linkTop,
+.linkBottom {
+  left: calc(50% - 33px);
+  width: 66px;
+}
+
+.linkTop {
+  top: 85px;
+}
+
+.linkBottom {
+  bottom: 85px;
+}
+
+.linkBottom::after {
+  animation-delay: -2.4s;
+}
+
+.linkRight {
+  top: calc(50% - 26px);
+  right: 25%;
+  width: 52px;
+  transform: rotate(90deg);
+}
+
+.linkRight::after {
+  animation-delay: -1.2s;
+}
+
+.telemetry {
+  min-height: 31px;
+  justify-content: flex-start;
+  gap: 20px;
+  border-top: 1px solid rgba(120, 167, 222, 0.14);
+  color: #547292;
+  font-size: 0.56rem;
+}
+
+.telemetry span::before {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 6px;
+  content: '';
+  background: #3d8ac6;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+@keyframes dataPulse {
+  from { transform: translateX(0); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  to { transform: translateX(61px); opacity: 0; }
 }
 
 .definition {
@@ -856,45 +952,68 @@
 
 @media (max-width: 540px) {
   .heroVisual {
-    min-height: 300px;
+    min-height: 336px;
   }
 
-  .orbitOne {
-    width: 265px;
-    height: 225px;
+  .dataArchitecture {
+    border-radius: 14px;
   }
 
-  .orbitTwo {
-    width: 225px;
-    height: 265px;
+  .systemBar {
+    padding-inline: 11px;
+    font-size: 0.52rem;
   }
 
-  .aiCube {
-    width: 184px;
+  .systemStatus {
+    display: none;
   }
 
-  .aiCore {
-    width: 94px;
-    border-radius: 17px;
+  .dataCanvas {
+    gap: 34px 16px;
+    min-height: 272px;
+    padding: 25px 15px;
   }
 
-  .aiCore span {
-    font-size: 4.15rem;
+  .dataNode {
+    min-height: 96px;
+    padding: 12px 11px;
   }
 
-  .visualLabels {
-    top: 48px;
-    right: 0;
-    gap: 27px;
-    font-size: 0.67rem;
+  .dataNode small {
+    font-size: 0.52rem;
   }
 
-  .visualLabels span {
-    padding-left: 31px;
+  .dataNode strong {
+    font-size: 0.78rem;
   }
 
-  .visualLabels span::before {
-    width: 24px;
+  .dataNode span {
+    font-size: 0.52rem;
+  }
+
+  .linkTop,
+  .linkBottom {
+    left: calc(50% - 8px);
+    width: 16px;
+  }
+
+  .linkTop {
+    top: 73px;
+  }
+
+  .linkBottom {
+    bottom: 73px;
+  }
+
+  .linkRight {
+    right: 25%;
+    width: 34px;
+  }
+
+  .telemetry {
+    gap: 10px;
+    padding-inline: 10px;
+    font-size: 0.48rem;
   }
 
   .problemGrid {
