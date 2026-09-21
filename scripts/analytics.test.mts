@@ -38,6 +38,8 @@ test('pageTypeOf — 실제 사이트 경로를 올바른 유형으로 분류한
   assert.equal(pageTypeOf('/flutter/'), 'service');
   assert.equal(pageTypeOf('/erp/'), 'service');
   assert.equal(pageTypeOf('/mvp/'), 'service');
+  assert.equal(pageTypeOf('/ai-worker/'), 'service');
+  assert.equal(pageTypeOf('/ai-worker/multimodal/'), 'service');
   assert.equal(pageTypeOf('/app-development/dongtan/'), 'location');
   assert.equal(pageTypeOf('/mvp/suwon/'), 'location');
   assert.equal(pageTypeOf('/app/academy/'), 'industry');
@@ -60,6 +62,7 @@ test('pageTypeOf — 실제 사이트 경로를 올바른 유형으로 분류한
 test('pageTypeOf — 쿼리·해시가 붙어도 같은 값을 낸다', () => {
   assert.equal(pageTypeOf('/flutter/?utm_source=naver'), 'service');
   assert.equal(pageTypeOf('/guide/app-cost/#faq'), 'guide');
+  assert.equal(pageTypeOf('/ai-worker/multimodal/?utm_source=naver#examples'), 'service');
 });
 
 test('serviceOf — 실제 제공 서비스만 반환하고, 모르면 빈 문자열', () => {
@@ -72,6 +75,8 @@ test('serviceOf — 실제 제공 서비스만 반환하고, 모르면 빈 문�
   assert.equal(serviceOf('/admin-page-development/'), 'erp');
   assert.equal(serviceOf('/ai-automation/'), 'ai');
   assert.equal(serviceOf('/ai-development/'), 'ai');
+  assert.equal(serviceOf('/ai-worker/'), 'ai');
+  assert.equal(serviceOf('/ai-worker/multimodal/?utm_source=google#demo'), 'ai');
   assert.equal(serviceOf('/data-seo/'), 'data');
   assert.equal(serviceOf('/platform/'), 'platform');
   // 서비스 축을 단정할 수 없는 경로는 값을 지어내지 않는다
@@ -133,6 +138,7 @@ test('pushEvent — dataLayer 가 없어도 예외를 던지지 않는다(측정
 test('pageContext — page_type 과 service 를 함께 낸다', () => {
   assert.deepEqual(pageContext('/erp/'), { page_type: 'service', service: 'erp' });
   assert.deepEqual(pageContext('/guide/erp-cost/'), { page_type: 'guide', service: '' });
+  assert.deepEqual(pageContext('/ai-worker/multimodal/'), { page_type: 'service', service: 'ai' });
 });
 
 test('EVENT — 기존 GTM 트리거 이름을 바꾸지 않았다', () => {

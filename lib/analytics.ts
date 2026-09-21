@@ -57,6 +57,7 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   'ai-automation': 'ai',
   'ai-development': 'ai',
   'ai-voice-development': 'ai',
+  'ai-worker': 'ai',
   'data-seo': 'data',
   // 기존 홈페이지의 검색 구조를 고치는 서비스 — 신규 제작(/geo-website/)과 같은 '웹' 축이다.
   'ai-search-optimization': 'web',
@@ -88,6 +89,8 @@ export function pageTypeOf(pathname: string): PageType {
   // /app/<업종>/ · /website/<업종>/ 은 업종 축으로 본다.
   // (/cost/<업종>/ 는 위 CONTENT_SECTIONS 에서 이미 'cost' 로 잡힌다 — 업종보다 비용 의도가 크다.)
   if ((first === 'app' || first === 'website') && seg.length > 1) return 'industry';
+  // /ai-worker/<역할>/ 은 지역 랜딩이 아니라 하나의 AI 서비스 계열이다.
+  if (first === 'ai-worker') return 'service';
   // /<서비스>/<지역>/ 형태
   if (seg.length === 2 && SERVICE_BY_FIRST_SEGMENT[first]) return 'location';
   if (SERVICE_BY_FIRST_SEGMENT[first]) return 'service';
