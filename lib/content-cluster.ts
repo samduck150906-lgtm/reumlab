@@ -178,6 +178,14 @@ export const SERVICE_GUIDES: Record<string, ClusterRef[]> = {
     { guide: 'dev-process' },
   ],
 
+  // Enternal AI — 기업 내부 데이터 경로와 로컬 추론 가능성을 PoC로 판단하는 순서.
+  '/enternal-ai/': [
+    { guide: 'enterprise-ai-adoption' },
+    { guide: 'rag-development' },
+    { guide: 'enterprise-ai-cost' },
+    { guide: 'dev-process' },
+  ],
+
   // 사내 AI — 개념(RAG) → 비용 → 도입 준비 순으로 배선한다.
   // 정보 검색으로 들어온 방문자가 상업 페이지로, 상업 페이지에서 판단 근거로 오갈 수 있게 한다.
   '/enterprise-ai/': [

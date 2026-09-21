@@ -12,6 +12,7 @@ import { COMPARES, compareCanonical, compareDecision } from '@/lib/compare';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB } from '@/lib/portfolio';
 import { SYSTEMS, systemCanonical, systemDecision, SYSTEM_HUB } from '@/lib/systems';
 import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-ai';
+import { ENTERNAL_CANONICAL, enternalAiDecision } from '@/lib/enternal-ai';
 import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
 import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, workerDecision } from '@/lib/ai-worker';
@@ -295,6 +296,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: gitLastModified('lib/enterprise-ai.ts'),
       changeFrequency: 'monthly',
       priority: 0.85,
+    });
+  }
+
+  // Enternal AI — 고객이 통제하는 데이터 경로와 로컬 추론 가능성을 기업별 PoC로
+  // 검증하는 Private AI 제품 방향. 기존 RAG 구축 서비스와 다른 단일 canonical이다.
+  const enternal = enternalAiDecision();
+  if (enternal.inSitemap) {
+    out.push({
+      url: ENTERNAL_CANONICAL,
+      lastModified: gitLastModified('lib/enternal-ai.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.84,
     });
   }
 

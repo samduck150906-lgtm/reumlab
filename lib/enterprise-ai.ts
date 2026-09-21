@@ -422,6 +422,7 @@ export const FAQS: { q: string; a: string }[] = [
 
 // ── 18. 내부링크 (§37 — 실제 존재하는 페이지만) ────────────────
 export const RELATED_LINKS: { href: string; label: string }[] = [
+  { href: '/enternal-ai/', label: '로컬·Private AI 방향과 기업별 PoC를 검토하는 Enternal AI' },
   { href: '/ai-automation/', label: '반복 업무를 실행하는 AI 업무 자동화' },
   { href: '/ai-worker/', label: '업무를 끝까지 처리하는 AI Worker 구축' },
   { href: '/ai-development/', label: '고객 응대용 AI 챗봇 개발' },

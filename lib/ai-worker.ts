@@ -425,6 +425,11 @@ export const CTA_LEAD =
   '어떤 업무를 맡기고 싶은지, 그 업무가 어떤 화면을 오가는지만 알려 주세요. 지금 자동화할 수 있는 업무인지, 먼저 정리해야 할 규칙이 무엇인지부터 말씀드립니다.';
 export const RELATED_LINKS: { href: string; label: string; note: string }[] = [
   {
+    href: '/enternal-ai/',
+    label: 'Enternal AI',
+    note: '기업 내부 데이터 경로와 로컬 추론 가능성을 PoC로 검증하는 Private AI 제품 방향',
+  },
+  {
     href: '/ai-voice-development/',
     label: 'AI 음성 상담·전화 자동화 개발',
     note: '전화를 받아 상담·예약·접수까지 처리하는 역할입니다. AI Worker 의 전화 응대 축을 따로 다룹니다.',

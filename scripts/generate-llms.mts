@@ -20,7 +20,7 @@ import { GUIDES, guideCanonical, guideDecision } from '../lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB, projectCategories, CATEGORIES } from '../lib/portfolio';
-import { MULTIMODAL_LLMS_PAGE } from '../lib/llms-service-pages';
+import { ENTERNAL_LLMS_PAGE, MULTIMODAL_LLMS_PAGE } from '../lib/llms-service-pages';
 
 const OUT = 'out';
 
@@ -79,6 +79,7 @@ L.push('- 웹사이트·홈페이지·랜딩페이지 제작 (Next.js)');
 L.push('- MVP 개발 (시장 검증용 최소 기능 제품)');
 L.push('- AI 챗봇·AI 업무 자동화 기능 개발');
 L.push('- 사내 AI·기업용 AI 구축 (사내 문서 기반 지식검색·RAG 질의응답)');
+L.push('- 기업용 Private AI 설계·PoC (고객 통제 데이터 경로·로컬 추론 가능성 검증)');
 L.push('- AI 음성 상담·전화 자동화 개발 (실시간 음성 AI·AI 전화상담·AI 예약 접수·상담 데이터 연동)');
 L.push('- 관리자 페이지·ERP·사내 시스템 구축');
 L.push('- 예약·중개·O2O 플랫폼 개발');
@@ -137,6 +138,7 @@ const PURPOSE_LANDINGS: [string, string, string][] = [
   // 사내 AI 는 Next 라우트(app/enterprise-ai)라 PAGE_SEO_MAP 에 없다. 목적별 랜딩과 같은 방식으로 싣는다.
   // canonical URL 하나만 연결한다 — 키워드를 나열하지 않는다.
   ['enterprise-ai', '사내 AI·기업용 AI 구축', '사내 문서와 업무 데이터를 검색해 임직원 질문에 답하는 AI를 구축합니다. 사내 지식검색, 문서 기반 질의응답(RAG), 답변 근거 문서 표시, 기존 시스템 연동을 다룹니다. AI 업무 자동화(실행)와는 다른 서비스입니다.'],
+  ENTERNAL_LLMS_PAGE,
   // AI 음성 상담도 Next 라우트(app/ai-voice-development)라 PAGE_SEO_MAP 에 없다 — 같은 방식으로 싣는다.
   // 음성·전화라는 축이 기존 AI 페이지 3종과 어떻게 다른지까지 한 문장에 담는다(생성형 검색이 이 줄을 그대로 인용한다).
   ['ai-voice-development', 'AI 음성 상담·전화 자동화 개발', '전화와 웹에서 고객의 말을 실시간으로 이해하고 대화하며 상담·예약·문의 접수·견적 접수를 처리하는 AI 음성 상담 시스템을 개발합니다. 실시간 음성 인식·합성, 대화 설계, 예약 시스템·CRM·ERP·사내 API 연동, 담당자 연결 규칙을 다룹니다. 텍스트 챗봇(/ai-development/)이나 사내 문서 검색(/enterprise-ai/)과는 다른 서비스이며, 음성 인식 정확도와 통화 품질은 보장하지 않습니다.'],
