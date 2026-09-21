@@ -62,7 +62,7 @@ const TIMELINES = ['최대한 빠르게', '1개월 내', '1 ~ 3개월', '3개월
  */
 type Status = 'idle' | 'submitting' | 'success' | 'error' | 'timeout';
 
-type Variant = 'default' | 'geo-website' | 'ai-voice' | 'ai-search-architecture' | 'multimodal-ai-worker';
+type Variant = 'default' | 'geo-website' | 'ai-voice' | 'ai-search-architecture' | 'multimodal-ai-worker' | 'enternal-ai';
 
 /**
  * 변형별 문구·숨은 값. 변형이 셋을 넘어가면서 삼항 연산자를 이어 붙이는 방식이
@@ -73,24 +73,28 @@ const LANDING_PATH: Partial<Record<Variant, string>> = {
   'ai-voice': '/ai-voice-development/',
   'ai-search-architecture': '/ai-search-optimization/',
   'multimodal-ai-worker': '/ai-worker/multimodal/',
+  'enternal-ai': '/enternal-ai/',
 };
 const INQUIRY_SERVICE: Partial<Record<Variant, string>> = {
   'geo-website': 'GEO 홈페이지 제작',
   'ai-voice': 'AI 전화상담 직원 구축',
   'ai-search-architecture': 'AI Search Architecture (기존 홈페이지 검색 구조 개선)',
   'multimodal-ai-worker': '멀티모달 AI Worker 구축',
+  'enternal-ai': 'Enternal AI 기업 도입·PoC',
 };
 const FEATURES_LABEL: Partial<Record<Variant, string>> = {
   'geo-website': '필요한 내용',
   'ai-voice': 'AI가 맡았으면 하는 전화 업무',
   'ai-search-architecture': '개선하고 싶은 점',
   'multimodal-ai-worker': 'AI가 맡았으면 하는 멀티모달 업무',
+  'enternal-ai': 'PoC에서 확인하고 싶은 업무와 데이터 범위',
 };
 const FEATURES_PLACEHOLDER: Partial<Record<Variant, string>> = {
   'geo-website': '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존',
   'ai-voice': '예: 영업시간·위치 문의, 예약 접수·변경, 견적 문의, 담당자 연결 요청',
   'ai-search-architecture': '예: 서비스 설명이 흩어져 있음, 검색으로 안 나옴, 문의가 적음',
   'multimodal-ai-worker': '예: 현장 사진 검수, 통화 분석, 견적 초안, ERP·CRM 업무 등록',
+  'enternal-ai': '예: 사내 문서 검색, 로컬 추론 가능성, 외부 전송 범위, 검증할 업무',
 };
 
 /** 홈페이지 주소를 아직 못 정한 경우에 저장할 값 — 자유 입력이 아니라 고정 문구다 */

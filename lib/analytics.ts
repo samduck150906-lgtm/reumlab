@@ -58,6 +58,7 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   'ai-development': 'ai',
   'ai-voice-development': 'ai',
   'ai-worker': 'ai',
+  'enternal-ai': 'ai',
   'data-seo': 'data',
   // 기존 홈페이지의 검색 구조를 고치는 서비스 — 신규 제작(/geo-website/)과 같은 '웹' 축이다.
   'ai-search-optimization': 'web',
