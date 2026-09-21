@@ -88,7 +88,7 @@ export const MULTIMODAL_INDUSTRIES: MultimodalIndustry[] = [
   { id: 'cleaning', label: '청소·시설관리', input: '작업 전후 사진과 현장 영상', judgement: '구역별 완료 여부와 재확인 후보', process: '담당자 배정과 검수표 기록', result: '작업 보고서·재방문 업무', note: '빛·각도·촬영 누락은 사람이 다시 확인합니다.' },
   { id: 'lodging', label: '숙박·공간운영', input: '객실 사진, 고객 음성, 점검 문서', judgement: '객실 상태와 긴급 요청 분류', process: 'PMS·CRM에 점검 및 요청 등록', result: '하우스키핑·시설 업무', note: '고객 사생활이 포함된 자료는 수집하지 않습니다.' },
   { id: 'construction', label: '건설·시공', input: '공정 사진, 도면, 작업자 음성 메모', judgement: '공정별 체크리스트 누락과 변경 후보', process: '현장 관리 시스템에 검토 요청', result: '공정 보고·보완 업무', note: '구조·안전의 최종 판단은 현장 책임자가 합니다.' },
-  { id: 'logistics', label: '물류·창고', input: '상품·파렛트 영상, 라벨, 운송장', judgement: '수량·라벨·포장 상태 일치 여부', process: 'WMS·ERP 입출고 초안 작성', result: '검수 기록·보류 티켓', note: '인식 신뢰도가 낮으면 자동 입력하지 않습니다.' },
+  { id: 'logistics', label: '물류·창고', input: '상품·팔레트 영상, 라벨, 운송장', judgement: '수량·라벨·포장 상태 일치 여부', process: 'WMS·ERP 입출고 초안 작성', result: '검수 기록·보류 티켓', note: '인식 신뢰도가 낮으면 자동 입력하지 않습니다.' },
   { id: 'academy', label: '학원·교육', input: '상담 통화, 학생 문서, 수업 메모', judgement: '문의 의도와 후속 상담 항목', process: 'CRM 기록과 담당자 확인', result: '상담 요약·후속 업무', note: '미성년자와 학습 정보는 최소 권한으로 처리합니다.' },
   { id: 'hospital', label: '병원·의료기관', input: '예약 통화와 비의료 행정 문서', judgement: '예약·변경·행정 문의 분류', process: '승인된 시스템에 예약 초안 기록', result: '콜백·예약 확인 업무', note: '진단·처방·응급 판단은 자동화 범위에서 제외합니다.' },
   { id: 'real-estate', label: '부동산', input: '매물 사진, 음성 메모, 서류', judgement: '특징 추출과 정보 누락 확인', process: '매물·CRM 등록 초안 작성', result: '검수 가능한 매물 카드', note: '권리관계와 공적 정보는 원문 서류로 확인합니다.' },

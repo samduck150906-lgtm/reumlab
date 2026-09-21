@@ -15,6 +15,10 @@ import {
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
+import { guidesForService, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 
 type Props = { params: { role: string } };
 
@@ -70,6 +74,11 @@ export default function AiWorkerRolePage({ params }: Props) {
     { name: w.name, url: canonical },
   ];
   const siblings = WORKERS.filter((o) => o.slug !== w.slug);
+  const decisionGuides = resolveCluster(guidesForService(`/ai-worker/${w.slug}/`), {
+    guide: getGuide,
+    compare: getCompare,
+    blog: getBlogPostBySlug,
+  });
 
   return (
     <>
@@ -248,6 +257,16 @@ export default function AiWorkerRolePage({ params }: Props) {
                   <p className="faq-q">{f.q}</p>
                   <p className="faq-a">{f.a}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── 다른 역할 ── */}
+          <div className="section-inner" style={SECTION}>
+            <h2 className="section-title" style={H2_SMALL}>결정 전에 읽어 두면 좋은 글</h2>
+            <div className="link-grid">
+              {decisionGuides.map((item) => (
+                <Link key={item.href} href={item.href}>{item.label}</Link>
               ))}
             </div>
           </div>

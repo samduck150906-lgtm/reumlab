@@ -45,6 +45,7 @@ test('멀티모달 페이지는 self-canonical과 독립 서비스 답변을 서
   assert.match(html, /HUMAN_ONLY/);
   assert.match(html, /name="유입_랜딩" value="\/ai-worker\/multimodal\/"/);
   assert.match(html, /"@type":"Service"/);
+  assert.match(html, /href="\/guide\/ai-automation-guide\/?"/);
 
   for (const product of MULTIMODAL_PRODUCTS) assert.ok(html.includes(product.title), product.title);
   for (const faq of MULTIMODAL_FAQS) assert.ok(html.includes(faq.q), faq.q);

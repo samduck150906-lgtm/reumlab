@@ -446,6 +446,28 @@
       "kind": "가이드"
     }
   ],
+  "/ai-worker/multimodal/": [
+    {
+      "href": "/guide/ai-automation-guide/",
+      "label": "AI 업무 자동화, 어떤 업무부터 적용할 수 있을까",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/enterprise-ai-adoption/",
+      "label": "기업 AI 도입 전 무엇부터 정해야 할까?",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/rag-development/",
+      "label": "RAG 구축 방법, 사내 문서를 AI에 연결하는 8단계",
+      "kind": "가이드"
+    },
+    {
+      "href": "/guide/dev-process/",
+      "label": "외주 개발은 어떤 순서로 진행될까",
+      "kind": "가이드"
+    }
+  ],
   "/enterprise-ai/": [
     {
       "href": "/guide/rag-development/",

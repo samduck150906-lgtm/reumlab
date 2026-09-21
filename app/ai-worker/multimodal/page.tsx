@@ -5,6 +5,10 @@ import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import LandingInquiryForm from '@/components/LandingInquiryForm';
 import { robotsFor } from '@/lib/index-quality';
 import { SITE } from '@/lib/seo';
+import { guidesForService, resolveCluster } from '@/lib/content-cluster';
+import { getGuide } from '@/lib/guides';
+import { getCompare } from '@/lib/compare';
+import { getBlogPostBySlug } from '@/lib/blog-posts';
 import {
   MULTIMODAL_BUSINESS_MODEL,
   MULTIMODAL_CANONICAL,
@@ -62,6 +66,12 @@ const crumbs = [
 ];
 
 export default function MultimodalAiWorkerPage() {
+  const decisionGuides = resolveCluster(guidesForService('/ai-worker/multimodal/'), {
+    guide: getGuide,
+    compare: getCompare,
+    blog: getBlogPostBySlug,
+  });
+
   return (
     <>
       <IndustryServiceJsonLd
@@ -245,10 +255,17 @@ export default function MultimodalAiWorkerPage() {
             </div>
           </section>
 
+          <section className={styles.related} aria-labelledby="guides-title">
+            <div><p className={styles.sectionKicker}>Decision guides</p><h2 id="guides-title">구축 전에 확인할 판단 자료</h2></div>
+            <nav aria-label="멀티모달 AI Worker 판단 가이드">
+              {decisionGuides.map((item) => <Link href={item.href} key={item.href}>{item.label}<span aria-hidden="true">→</span></Link>)}
+            </nav>
+          </section>
+
           <section className={styles.related} aria-labelledby="related-title">
             <div><p className={styles.sectionKicker}>Related services</p><h2 id="related-title">함께 확인하면 좋은 서비스</h2></div>
             <nav aria-label="관련 서비스">
-              {MULTIMODAL_RELATED_LINKS.map((item) => <Link href={item.href} key={item.href}>{item.label}<span aria-hidden="true">↗</span></Link>)}
+              {MULTIMODAL_RELATED_LINKS.map((item) => <Link href={item.href} key={item.href}>{item.label}<span aria-hidden="true">→</span></Link>)}
             </nav>
           </section>
 

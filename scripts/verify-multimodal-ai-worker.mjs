@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parse } from 'node-html-parser';
 
 const CANONICAL = 'https://reumlab.com/ai-worker/multimodal/';
 const ROUTE_PATH = join('ai-worker', 'multimodal', 'index.html');
@@ -21,6 +22,7 @@ export function verifyMultimodalArtifacts(outDir = 'out') {
 
   if (!existsSync(routeFile)) return [`멀티모달 빌드 파일 없음: ${routeFile}`];
   const html = readFileSync(routeFile, 'utf8');
+  const document = parse(html);
 
   if (!html.includes(`<link rel="canonical" href="${CANONICAL}"`)) errors.push('self-canonical 누락 또는 불일치');
   if (!html.includes('<h1') || !html.includes('보고 듣고 판단하고, 업무까지 처리하는 AI')) errors.push('승인된 H1 누락');
@@ -29,8 +31,9 @@ export function verifyMultimodalArtifacts(outDir = 'out') {
   if (/name="robots"[^>]+noindex/i.test(html)) errors.push('운영 페이지에 noindex가 있습니다');
   if (!html.includes('"@type":"Service"')) errors.push('Service JSON-LD 누락');
   if (!html.includes('"@type":"FAQPage"')) errors.push('FAQPage JSON-LD 누락');
-  if (count(html, /data-multimodal-product(?:="")?/g) !== 10) errors.push('상품 패턴 10개가 아닙니다');
-  if (count(html, /data-multimodal-faq(?:="")?/g) !== 10) errors.push('FAQ 10개가 아닙니다');
+  // Next의 RSC payload가 HTML 문자열을 한 번 더 포함하므로 원문 정규식이 아니라 실제 DOM 노드를 센다.
+  if (document.querySelectorAll('[data-multimodal-product]').length !== 10) errors.push('상품 패턴 10개가 아닙니다');
+  if (document.querySelectorAll('[data-multimodal-faq]').length !== 10) errors.push('FAQ 10개가 아닙니다');
   if (!html.includes('name="유입_랜딩" value="/ai-worker/multimodal/"')) errors.push('문의 폼 유입 랜딩 값 누락');
 
   if (!existsSync(parentFile)) errors.push('AI Worker 부모 빌드 파일 없음');
