@@ -3,6 +3,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSy
 import { join, relative } from 'node:path';
 import { attribute, htmlSignals, parseCsv, PRODUCTION_ORIGIN, toCsv } from './neo-lib.mjs';
 import { readSitemapLocs } from './read-sitemap.mjs';
+import { naverPriority } from './naver-priority.mjs';
 
 const OUT = 'out';
 if (!existsSync(OUT)) throw new Error('out/이 없습니다. 먼저 npm run build를 실행하세요.');
@@ -115,7 +116,11 @@ const inventory = documents.map((document) => ({
   click_depth: depths.has(document.pathname) ? depths.get(document.pathname) : '',
   page_type: document.type,
   primary_intent: document.score?.primary_intent ?? document.type,
-  naver_priority: document.pathname === '/' || ['service_or_hub', 'home'].includes(document.type) ? 'P1' : ['guide', 'portfolio', 'blog'].includes(document.type) ? 'P2' : 'P3',
+  naver_priority: naverPriority({
+    pathname: document.pathname,
+    type: document.type,
+    indexable: document.decision === 'INDEX',
+  }),
   decision: document.decision,
   reason: document.reason,
   verification_status: 'TESTED_LOCAL_BUILD',

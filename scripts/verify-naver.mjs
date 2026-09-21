@@ -21,6 +21,7 @@
  */
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { NAVER_HOME_LINK_PATHS } from './naver-priority.mjs';
 
 const OUT = process.argv[2] || 'out';
 const DOMAIN = 'https://reumlab.com';
@@ -52,6 +53,15 @@ const pages = [];
   }
 })(OUT);
 const indexed = pages.filter((p) => !p.noindex);
+
+// Search Advisor 실측 상위·상승 URL은 홈에서 직접 발견돼야 한다.
+// 깊은 분류 페이지가 렌더 방식 변화로 3~7단계 아래로 밀리는 회귀를 막는다.
+const rootPage = pages.find((p) => p.pathname === '/');
+let homePriorityLinks = 0;
+for (const pathname of NAVER_HOME_LINK_PATHS) {
+  if (rootPage?.html.includes(`href="${pathname}"`)) homePriorityLinks++;
+  else add(fail, 'links', `홈에서 실측 우선 URL로 직접 연결되지 않음: ${pathname}`);
+}
 
 // ─── 1. 사이트 소유확인
 const VERIF = /<meta name="naver-site-verification" content="([^"]*)"/gi;
@@ -236,6 +246,7 @@ console.log(`소유확인   루트 meta ${rootVerified ? 'O' : 'X'} · 인증값
 console.log(`Yeti       robots.txt Yeti 그룹 ${/User-Agent:\s*Yeti/i.test(robots) ? 'O' : 'X'} · 차단된 필수 경로 ${fail.filter((f) => f.startsWith('[robots]')).length}`);
 console.log(`사이트명   og:site_name ${[...siteNames].join('|') || '-'} · WebSite.name ${[...schemaWebsiteNames].join('|') || '-'} · 상호 없는 title ${noBrandTitle}`);
 console.log(`SSR        본문 ${MIN_BODY}자 미만 ${thin} · H1 없음 ${noH1} · H1 복수 ${multiH1} · 내부링크 0 ${noLinks}`);
+console.log(`우선 링크  홈 직접 연결 ${homePriorityLinks}/${NAVER_HOME_LINK_PATHS.length}`);
 console.log(`OG         필수 태그 누락 ${ogMissing} · lang 오류 ${badLang}`);
 console.log(`RSS        item ${feedItems} · ${(feedBytes / 1024).toFixed(1)} KiB · HTML 선언 ${feedDeclarations}`);
 console.log('───────────────────────────────────────────');

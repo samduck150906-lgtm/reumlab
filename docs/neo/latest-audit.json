@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-14T07:39:24.326Z",
+  "generatedAt": "2026-09-21T03:37:33.514Z",
   "source": "local static build",
-  "documents": 1349,
-  "sitemapUrls": 778,
+  "documents": 1357,
+  "sitemapUrls": 786,
   "decisions": {
     "404": 1,
-    "INDEX": 778,
+    "INDEX": 786,
     "NOINDEX": 567,
     "REVIEW": 3
   },
@@ -15,7 +15,7 @@
     "sitemapDeclaration": true
   },
   "rss": {
-    "bytes": 32525,
+    "bytes": 32527,
     "items": 58,
     "hostMismatches": 0
   },
@@ -28,10 +28,8 @@
     "keyMatches": true
   },
   "http": {
-    "status": "TESTED",
-    "origin": "https://reumlab.com",
-    "testedAt": "2026-09-14T07:35:02.005Z",
-    "targets": 14,
+    "status": "NOT_RUN",
+    "targets": 0,
     "failures": 0
   },
   "external": [
@@ -82,8 +80,8 @@
     },
     {
       "item": "Search Advisor 90일 export",
-      "status": "UNVERIFIED",
-      "note": "private 후보 파일 감지; 공개 보고서에 원수치 미포함"
+      "status": "BLOCKED_EXTERNAL_ACCOUNT",
+      "note": "export 파일 미제공"
     }
   ]
 }
