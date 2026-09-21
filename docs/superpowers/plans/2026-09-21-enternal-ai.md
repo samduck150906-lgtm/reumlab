@@ -777,6 +777,8 @@ git commit -m "test(enternal-ai): gate production artifacts"
 - Consumes: complete feature branch and generated `out/`.
 - Produces: clean test/build evidence and an inspected Netlify preview artifact.
 
+**User-approved QA refinement:** During preview inspection, replace the initial white logo-card hero with the supplied-reference direction: route-specific enlarged co-brand header, dark responsive hero, natural Korean word wrapping, and a decorative CSS AI core. Keep the truthful product-stage disclosures, canonical, schema, form contract, and no-extra-raster performance boundary unchanged. Add regression tests before the visual source changes.
+
 - [ ] **Step 1: Run the complete automated suite**
 
 Run:

@@ -62,41 +62,48 @@ export default function EnternalAiPage() {
       />
 
       <main className={styles.page}>
-        <nav className={styles.breadcrumb} aria-label="breadcrumb">
-          <Link href="/">홈</Link>
-          <span aria-hidden="true">/</span>
-          <span>Enternal AI</span>
-        </nav>
+        <section className={styles.heroShell} aria-labelledby="enternal-hero-title">
+          <nav className={styles.breadcrumb} aria-label="breadcrumb">
+            <Link href="/">홈</Link>
+            <span aria-hidden="true">/</span>
+            <span>Enternal AI</span>
+          </nav>
 
-        <header className={styles.hero}>
-          <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>ENTERNAL AI BY REUMLAB</p>
-            <h1>{E.ENTERNAL_H1}</h1>
-            <p className={styles.lead}>{E.ENTERNAL_LEAD}</p>
-            <p className={styles.stageNotice}>
-              현재는 기업 환경 진단과 PoC를 제공하며, 로컬 추론·자체 사전학습 기반은 목표 구조로 검증합니다.
-            </p>
-            <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#inquiry" data-analytics="cta_enternal_hero_inquiry">
-                기업 환경·PoC 상담하기
-              </a>
-              <a className={styles.secondaryButton} href="#architecture" data-analytics="cta_enternal_architecture">
-                목표 구조 확인하기
-              </a>
+          <header className={styles.hero}>
+            <div className={styles.heroCopy}>
+              <p className={styles.eyebrow}>ENTERNAL AI BY REUMLAB</p>
+              <h1 id="enternal-hero-title">{E.ENTERNAL_H1}</h1>
+              <p className={styles.lead}>{E.ENTERNAL_LEAD}</p>
+              <p className={styles.stageNotice}>
+                <strong>현재 제공</strong> 기업 환경 진단·PoC <span aria-hidden="true">·</span>{' '}
+                <strong>목표 구조</strong> 로컬 추론·자체 사전학습 기반
+              </p>
+              <div className={styles.heroActions}>
+                <a className={styles.primaryButton} href="#inquiry" data-analytics="cta_enternal_hero_inquiry">
+                  기업 도입 상담하기 <span aria-hidden="true">→</span>
+                </a>
+                <a className={styles.secondaryButton} href="#architecture" data-analytics="cta_enternal_architecture">
+                  목표 구조 확인하기
+                </a>
+              </div>
             </div>
-          </div>
-          <div className={styles.brandPanel}>
-            <img
-              src="/enternal-ai/enternal-ai-logo.png"
-              width={2172}
-              height={724}
-              loading="eager"
-              decoding="async"
-              alt="Enternal AI, Enterprise AI"
-            />
-            <p>Private AI · Local AI · Enterprise PoC</p>
-          </div>
-        </header>
+
+            <div className={styles.heroVisual} aria-hidden="true">
+              <div className={styles.visualGrid} />
+              <div className={`${styles.orbit} ${styles.orbitOne}`} />
+              <div className={`${styles.orbit} ${styles.orbitTwo}`} />
+              <div className={styles.aiCube}>
+                <div className={styles.aiCore}><span>e</span></div>
+              </div>
+              <div className={styles.visualLabels}>
+                <span>Private</span>
+                <span>Secure</span>
+                <span>Scalable</span>
+                <span>Your AI</span>
+              </div>
+            </div>
+          </header>
+        </section>
 
         <section className={styles.definition} aria-labelledby="definition-title">
           <p className={styles.sectionKicker}>한 문장 정의</p>

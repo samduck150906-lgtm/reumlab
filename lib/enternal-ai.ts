@@ -3,8 +3,8 @@ import { decideFromContent, type IndexDecision } from './index-quality';
 export const ENTERNAL_CANONICAL = 'https://reumlab.com/enternal-ai/';
 export const ENTERNAL_TITLE = 'Enternal AI | 기업용 Private AI·사내 AI PoC | 름랩';
 export const ENTERNAL_DESCRIPTION = '기업 데이터를 고객 환경 안에서 활용하는 Private AI를 목표로 개발합니다. 로컬 추론·사내 문서 연결·자체 사전학습 기반의 적용 범위를 기업별 PoC로 검증합니다.';
-export const ENTERNAL_H1 = '기업의 데이터는 기업 안에. Enternal AI';
-export const ENTERNAL_LEAD = '외부로 보내지 않는, 기업만의 AI를 목표로 개발합니다.';
+export const ENTERNAL_H1 = '기업의 모든 지식이 기업 안에서 더 똑똑해집니다.';
+export const ENTERNAL_LEAD = '기업 데이터와 업무 지식을 고객 환경에 맞춰 연결하는 Private AI, Enternal AI.';
 export const ENTERNAL_ENTITY_STATEMENT = 'Enternal AI는 기업 내부 환경에서 업무 데이터와 AI를 연결하기 위해 ReumLab이 개발하는 Private AI 제품입니다. 자체 사전학습 기반과 로컬 추론 구조를 목표로 하며, 현재는 기업별 PoC를 통해 적용 범위와 성능을 검증합니다.';
 export const ENTERNAL_KEYWORDS = ['Enternal AI', '기업용 AI', 'Private AI', '사내 AI', '로컬 AI', '설치형 AI', 'AI PoC'];
 

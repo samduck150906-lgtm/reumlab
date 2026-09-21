@@ -6,7 +6,7 @@ import { parse } from 'node-html-parser';
 const CANONICAL = 'https://reumlab.com/enternal-ai/';
 const TITLE = 'Enternal AI | 기업용 Private AI·사내 AI PoC | 름랩';
 const DESCRIPTION = '기업 데이터를 고객 환경 안에서 활용하는 Private AI를 목표로 개발합니다. 로컬 추론·사내 문서 연결·자체 사전학습 기반의 적용 범위를 기업별 PoC로 검증합니다.';
-const H1 = '기업의 데이터는 기업 안에. Enternal AI';
+const H1 = '기업의 모든 지식이 기업 안에서 더 똑똑해집니다.';
 const PNG_SIGNATURE = Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]);
 
 function count(text, pattern) {
@@ -21,19 +21,21 @@ function readIfPresent(file) {
   return existsSync(file) ? readFileSync(file, 'utf8') : '';
 }
 
-function verifyLogo(file, errors) {
+function verifyPng(file, label, expectedWidth, expectedHeight, errors) {
   if (!existsSync(file)) {
-    errors.push(`logo 파일 없음: ${file}`);
+    errors.push(`${label} 파일 없음: ${file}`);
     return;
   }
   const png = readFileSync(file);
   if (png.length < 24 || !png.subarray(0, 8).equals(PNG_SIGNATURE) || png.toString('ascii', 12, 16) !== 'IHDR') {
-    errors.push('logo PNG signature 또는 IHDR이 올바르지 않습니다');
+    errors.push(`${label} PNG signature 또는 IHDR이 올바르지 않습니다`);
     return;
   }
   const width = png.readUInt32BE(16);
   const height = png.readUInt32BE(20);
-  if (width !== 2172 || height !== 724) errors.push(`logo 크기 불일치: ${width}x${height} (예상 2172x724)`);
+  if (width !== expectedWidth || height !== expectedHeight) {
+    errors.push(`${label} 크기 불일치: ${width}x${height} (예상 ${expectedWidth}x${expectedHeight})`);
+  }
 }
 
 export function verifyEnternalArtifacts(outDir = 'out') {
@@ -41,6 +43,7 @@ export function verifyEnternalArtifacts(outDir = 'out') {
   const routeDir = join(outDir, 'enternal-ai');
   const routeFile = join(routeDir, 'index.html');
   const logoFile = join(routeDir, 'enternal-ai-logo.png');
+  const wordmarkFile = join(routeDir, 'enternal-ai-wordmark.png');
   const enterpriseFile = join(outDir, 'enterprise-ai', 'index.html');
   const workerFile = join(outDir, 'ai-worker', 'index.html');
   const llmsFile = join(outDir, 'llms.txt');
@@ -97,7 +100,8 @@ export function verifyEnternalArtifacts(outDir = 'out') {
   if (!existsSync(llmsFile)) errors.push('llms.txt 없음');
   else if (count(readFileSync(llmsFile, 'utf8'), new RegExp(escaped(CANONICAL), 'g')) !== 1) errors.push('llms.txt canonical 항목이 정확히 1개가 아닙니다');
 
-  verifyLogo(logoFile, errors);
+  verifyPng(logoFile, 'logo', 2172, 724, errors);
+  verifyPng(wordmarkFile, 'wordmark', 432, 144, errors);
   return errors;
 }
 

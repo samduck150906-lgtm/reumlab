@@ -2,6 +2,7 @@
 
 import Link from '@/components/SiteLink';
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import serviceMenu from '../content/service-menu.json';
 
 // 정적 HTML 로 덮어써지는 경로 판단과 prefetch 정책은 components/SiteLink 가 맡는다.
@@ -10,6 +11,8 @@ import serviceMenu from '../content/service-menu.json';
 // RSC 페이로드 327KB 를 미리 받고 있었다.
 
 export default function Nav({ site }) {
+  const pathname = usePathname();
+  const isEnternal = pathname === '/enternal-ai' || pathname?.startsWith('/enternal-ai/');
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -61,13 +64,28 @@ export default function Nav({ site }) {
 
   return (
     <>
-      <nav className={`nav ${scrolled ? 'scrolled' : ''}`} id="nav">
+      <nav className={`nav ${isEnternal ? 'enternal-nav' : ''} ${scrolled ? 'scrolled' : ''}`} id="nav">
         <div className="container">
           <div className="nav-inner">
-            <Link href="/" className="nav-logo en" aria-label="REUMLAB 홈">
-              <img src="/logo.png" alt="" width="28" height="28" className="nav-logo-mark" />
-              <span>REUMLAB</span>
-            </Link>
+            <div className="nav-brand-group">
+              <Link href="/" className="nav-logo en" aria-label="REUMLAB 홈">
+                <img src="/logo.png" alt="" width="28" height="28" className="nav-logo-mark" />
+                <span>REUMLAB</span>
+              </Link>
+              {isEnternal && (
+                <>
+                  <span className="nav-brand-divider" aria-hidden="true" />
+                  <Link href="/enternal-ai/" className="nav-enternal-wordmark" aria-label="Enternal AI 홈">
+                    <img
+                      src="/enternal-ai/enternal-ai-wordmark.png"
+                      alt="Enternal AI"
+                      width="432"
+                      height="144"
+                    />
+                  </Link>
+                </>
+              )}
+            </div>
             <ul className="nav-links">
               <li className={`next-service-menu ${serviceOpen ? 'open' : ''}`}>
                 <button

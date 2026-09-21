@@ -69,10 +69,11 @@ All important answers are present in server-rendered text. Visual headings and s
 
 ## Visual and interaction design
 
-- Reuse the production header, footer, type system, focus treatment, and shared form so the page remains recognizably ReumLab.
-- Use the supplied Enternal AI logo in its original aspect ratio, with explicit intrinsic dimensions. Its white background is placed on a deliberate white brand panel rather than blended into an artificial transparent mark.
-- Page palette: white and deep navy foundations, restrained teal accents, and accessible neutral text. Avoid neon, glassmorphism, generic robot imagery, decorative dashboards, and fake product screenshots.
-- The primary visual is a semantic data-flow diagram built with HTML and CSS or repository-native SVG, not a raster mockup that could be mistaken for a working interface.
+- Reuse the production footer, type system, focus treatment, and shared form so the page remains recognizably ReumLab. On this route only, enlarge the shared header and present the supplied Enternal AI wordmark beside the ReumLab identity with a visible separator.
+- Use the supplied Enternal AI logo in its original aspect ratio and keep it in the header rather than repeating it in a large hero card. The mobile co-brand lockup must fit beside the menu button without horizontal overflow.
+- The opening hero uses a deep navy foundation, accessible white and blue text, one blue primary CTA, and a restrained luminous technical motif based on the user-approved visual reference. It must remain clearly illustrative rather than resemble a working dashboard or measured product result.
+- The hero's right-side AI core is a decorative HTML/CSS visual and is hidden from assistive technology. The architecture section remains the semantic data-flow explanation.
+- Korean hero copy uses `word-break: keep-all` and responsive sizing so line breaks occur between phrases rather than inside words.
 - Present `현재 제공`, `PoC 검증`, and `개발 방향` as consistent status badges with text labels; color is never the only distinction.
 - Keep the route server-first. Add no client component unless an interaction materially improves comprehension and still has a complete no-JavaScript fallback.
 - Avoid autoplay, scroll-jacking, large background video, remote font dependency, and animation required to read content.
@@ -86,7 +87,7 @@ All important answers are present in server-rendered text. Visual headings and s
 - Heading order, landmark structure, link names, contrast, alternative text, and form error relationships are programmatically meaningful.
 - Decorative graphics are hidden from assistive technology; the full meaning of diagrams is also supplied as adjacent text.
 - Motion is subtle and disabled by `prefers-reduced-motion`.
-- Images reserve layout space and lazy-load only when they are below the fold. The hero logo must not become the largest unoptimized payload.
+- Images reserve layout space and lazy-load only when they are below the fold. The header wordmark has intrinsic dimensions; the hero itself adds no new raster payload.
 
 ## Components and data boundaries
 
@@ -162,4 +163,3 @@ All important answers are present in server-rendered text. Visual headings and s
 - Publishing confidential architecture, customer data, benchmarks, or invented product screenshots.
 - Rewriting the existing `/enterprise-ai/` or `/ai-worker/` service into the Enternal product.
 - Claiming that a search engine has indexed or ranked the page solely because a submission endpoint accepted it.
-

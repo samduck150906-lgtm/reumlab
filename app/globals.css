@@ -326,6 +326,55 @@ a {
 .nav-logo span {
   color: var(--text);
 }
+.nav-brand-group {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+.nav-brand-divider {
+  width: 1px;
+  height: 30px;
+  margin: 0 14px;
+  background: rgba(11, 27, 51, 0.16);
+}
+.nav-enternal-wordmark {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.nav-enternal-wordmark img {
+  display: block;
+  width: 144px;
+  height: auto;
+}
+.nav.enternal-nav {
+  padding-top: max(18px, var(--safe-top));
+  padding-bottom: 18px;
+}
+.nav.enternal-nav.scrolled {
+  padding-top: max(12px, var(--safe-top));
+  padding-bottom: 12px;
+}
+.nav.enternal-nav .nav-logo {
+  font-size: 27px;
+}
+.nav.enternal-nav .nav-logo-mark {
+  width: 32px;
+  height: 32px;
+}
+.nav.enternal-nav .nav-links {
+  gap: 30px;
+}
+.nav.enternal-nav .nav-links a {
+  font-size: 15px;
+}
+.nav.enternal-nav .next-service-menu__button {
+  font-size: 15px;
+}
+.nav.enternal-nav .nav-cta {
+  padding: 11px 23px !important;
+  font-size: 14px !important;
+}
 .nav-links {
   display: flex;
   gap: 28px;
@@ -1847,6 +1896,26 @@ a {
   .hamburger {
     display: flex !important;
   }
+  .nav.enternal-nav {
+    padding-top: max(13px, var(--safe-top));
+    padding-bottom: 13px;
+  }
+  .nav.enternal-nav .nav-logo {
+    gap: 6px;
+    font-size: 19px;
+    letter-spacing: -0.7px;
+  }
+  .nav.enternal-nav .nav-logo-mark {
+    width: 27px;
+    height: 27px;
+  }
+  .nav.enternal-nav .nav-brand-divider {
+    height: 25px;
+    margin: 0 9px;
+  }
+  .nav.enternal-nav .nav-enternal-wordmark img {
+    width: 100px;
+  }
   .stats-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
@@ -1984,6 +2053,26 @@ a {
 .trust-heading { font-size: 15px; font-weight: 700; color: var(--bg-dark); margin-bottom: 6px; }
 .trust-txt { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
 @media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; } .tier-cards { grid-template-columns: 1fr; } .trust-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 360px) {
+  .nav.enternal-nav .container {
+    padding-inline: 12px;
+  }
+  .nav.enternal-nav .nav-logo {
+    gap: 5px;
+    font-size: 18px;
+  }
+  .nav.enternal-nav .nav-logo-mark {
+    width: 25px;
+    height: 25px;
+  }
+  .nav.enternal-nav .nav-brand-divider {
+    margin-inline: 6px;
+  }
+  .nav.enternal-nav .nav-enternal-wordmark img {
+    width: 88px;
+  }
+}
 
 /* 다이나믹 라우터 (허브/랜딩) */
 .breadcrumb {
