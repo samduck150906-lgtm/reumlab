@@ -20,6 +20,7 @@ import { GUIDES, guideCanonical, guideDecision } from '../lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB, projectCategories, CATEGORIES } from '../lib/portfolio';
+import { MULTIMODAL_LLMS_PAGE } from '../lib/llms-service-pages';
 
 const OUT = 'out';
 
@@ -145,6 +146,7 @@ const PURPOSE_LANDINGS: [string, string, string][] = [
   ['ai-worker/office', 'AI 사무직원 구축', 'ERP·사내 관리자 화면·엑셀 대장·메일을 오가며 처리하던 조회와 입력 업무를 수행합니다. 기준을 만족하는 건은 등록·회신까지 처리하고, 재고 부족·단가 불일치·신규 거래처 건은 담당자에게 넘깁니다.'],
   ['ai-worker/sales', 'AI 영업·견적 직원 구축', '문의에서 요구사항과 예산을 정리하고 빠진 정보를 되물어 채운 뒤 단가표 기준으로 견적 초안을 만들고 CRM에 기록합니다. 최종 금액 확정과 고객 발송은 사람이 승인한 뒤에만 이뤄집니다.'],
   ['ai-worker/document', 'AI 문서처리 직원 구축', 'PDF·계약서·거래 서류에서 항목을 추출해 기준 문서나 시스템 값과 대조하고, 차이 나는 항목만 근거 위치와 함께 정리해 검토를 요청합니다. 조항 해석과 법률 판단은 하지 않으며 추출 정확도를 보장하지 않습니다.'],
+  MULTIMODAL_LLMS_PAGE,
   // 기존 홈페이지 검색 구조 개선도 Next 라우트(app/ai-search-optimization)다.
   // /geo-website/(신규 제작)와 역할이 어떻게 다른지를 한 문장에 넣는다 — 두 페이지가
   // 같은 상품으로 읽히면 생성형 검색이 잘못된 쪽을 인용한다.

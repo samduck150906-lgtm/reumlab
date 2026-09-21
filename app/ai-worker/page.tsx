@@ -186,9 +186,9 @@ export default function AiWorkerPage() {
             <p className="hub-intro" style={{ marginTop: 12 }}>{CHATBOT_COMPARE_NOTE}</p>
           </div>
 
-          {/* ── 4. 네 가지 Worker ── */}
+          {/* ── 4. 다섯 가지 Worker ── */}
           <div className="section-inner" style={SECTION} id="workers">
-            <h2 className="section-title" style={H2}>네 가지 AI Worker</h2>
+            <h2 className="section-title" style={H2}>다섯 가지 AI Worker</h2>
             <div className="faq-grid" style={{ marginTop: 12 }}>
               {WORKER_CARDS.map((w) => (
                 <div className="faq-item" key={w.href}>

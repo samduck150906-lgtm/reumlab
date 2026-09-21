@@ -98,7 +98,7 @@ export const CHATBOT_COMPARE: { item: string; chatbot: string; worker: string }[
 export const CHATBOT_COMPARE_NOTE =
   '둘은 대체 관계가 아닙니다. 문의 응대가 목적이면 챗봇이 맞고, 응대 뒤에 남는 입력·회신까지 없애는 것이 목적이면 AI Worker가 맞습니다. 실제로는 챗봇으로 접수한 건을 AI Worker가 처리하도록 이어 붙이는 구성이 가장 많습니다.';
 
-// ── 4. 네 가지 Worker ──
+// ── 4. 다섯 가지 Worker ──
 export interface WorkerCard {
   href: string;
   name: string;
@@ -138,9 +138,16 @@ export const WORKER_CARDS: WorkerCard[] = [
     tasks: ['PDF·스캔 문서 항목 추출', '이전 버전·기준 문서와 비교', '차이 표시와 검토 요청', '확인된 값만 시스템 입력'],
     systems: '문서 보관소, 계약 양식, ERP·회계 시스템',
   },
+  {
+    href: '/ai-worker/multimodal/',
+    name: '멀티모달 AI Worker',
+    tagline: '영상·사진·음성·문서를 이해해 현장 검수와 시스템 업무로 연결합니다',
+    tasks: ['현장 사진·영상 검수', '통화·음성 업무 분석', '견적·보고 초안', 'ERP·CRM 후속 업무'],
+    systems: '카메라, 통화 녹취, 문서, ERP·CRM·업무 시스템',
+  },
 ];
 export const WORKER_CARDS_NOTE =
-  '네 역할을 한 번에 만들지 않습니다. 가장 반복이 많고 규칙이 분명한 업무 하나를 골라 먼저 세우고, 그 구조 위에 다음 역할을 붙입니다.';
+  '다섯 역할을 한 번에 만들지 않습니다. 가장 반복이 많고 규칙이 분명한 업무 하나를 골라 먼저 세우고, 그 구조 위에 다음 역할을 붙입니다.';
 
 // ── 5. Before / After ──
 export interface FlowCompare {

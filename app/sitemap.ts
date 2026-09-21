@@ -15,6 +15,7 @@ import { ENTERPRISE_AI_CANONICAL, enterpriseAiDecision } from '@/lib/enterprise-
 import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
 import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, workerDecision } from '@/lib/ai-worker';
+import { MULTIMODAL_CANONICAL, multimodalDecision } from '@/lib/multimodal-ai-worker';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -108,6 +109,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: gitLastModified('lib/ai-worker.ts'),
       changeFrequency: 'monthly',
       priority: 0.85,
+    });
+  }
+  // 영상·사진·음성·문서를 함께 이해해 현장·시스템 업무로 연결하는 독립 하위 서비스.
+  const multimodal = multimodalDecision();
+  if (multimodal.inSitemap) {
+    out.push({
+      url: MULTIMODAL_CANONICAL,
+      lastModified: gitLastModified('lib/multimodal-ai-worker.ts'),
+      changeFrequency: 'monthly',
+      priority: 0.82,
     });
   }
   // 역할별 스포크. 전화 응대 역할은 이미 /ai-voice-development/ 가 있어 새로 만들지 않는다.

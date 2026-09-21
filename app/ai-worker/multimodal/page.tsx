@@ -140,7 +140,7 @@ export default function MultimodalAiWorkerPage() {
             </div>
             <div className={styles.productGrid}>
               {MULTIMODAL_PRODUCTS.map((product, index) => (
-                <article className={styles.productCard} key={product.id}>
+                <article className={styles.productCard} key={product.id} data-multimodal-product>
                   <div className={styles.cardTopline}><span>{String(index + 1).padStart(2, '0')}</span><h3>{product.title}</h3></div>
                   <dl>
                     <div><dt>입력</dt><dd>{product.input}</dd></div>
@@ -238,7 +238,7 @@ export default function MultimodalAiWorkerPage() {
             </div>
             <div className={styles.faqList}>
               {MULTIMODAL_FAQS.map((faq) => (
-                <details key={faq.q}>
+                <details key={faq.q} data-multimodal-faq>
                   <summary>{faq.q}</summary><p>{faq.a}</p>
                 </details>
               ))}
