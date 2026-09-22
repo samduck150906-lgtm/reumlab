@@ -1,0 +1,86 @@
+keyword,page_id,resolved_url,intent,priority,placement,evidence_status,monthly_volume,notes
+검색 잘되는 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,title/H1,HYPOTHESIS,,
+네이버 검색되는 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,body,HYPOTHESIS,,
+검색에 잘 나오는 홈페이지,MAIN,https://reumlab.com/seo-website/,service,P2,의도만 반영,HYPOTHESIS,,
+네이버에 뜨는 홈페이지 만들기,MAIN,https://reumlab.com/seo-website/,informational,P2,FAQ,HYPOTHESIS,,
+구글에 검색되는 홈페이지 만들기,MAIN,https://reumlab.com/seo-website/,informational,P2,FAQ,HYPOTHESIS,,
+홈페이지 만들고 검색되게 하는 방법,GUIDE_REGISTRATION,https://reumlab.com/seo-website/guides/search-registration/,informational,P2,body,HYPOTHESIS,,
+홈페이지 제작 검색 노출,MAIN,https://reumlab.com/seo-website/,service,P1,section,HYPOTHESIS,,
+검색 잘되게 홈페이지 만들어주는 곳,MAIN,https://reumlab.com/seo-website/,service,P1,의도만 반영,HYPOTHESIS,,
+홈페이지 제작 검색 등록까지,MAIN,https://reumlab.com/seo-website/,service,P1,section,HYPOTHESIS,,
+고객 문의 들어오는 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,section,HYPOTHESIS,,
+네이버 웹사이트 상위노출,MAIN,https://reumlab.com/seo-website/,service,P2,FAQ/보장금지,HYPOTHESIS,,
+홈페이지 상위노출 제작,MAIN,https://reumlab.com/seo-website/,service,P2,FAQ/보장금지,HYPOTHESIS,,
+네이버 홈페이지 상위노출 업체,MAIN,https://reumlab.com/seo-website/,service,P2,의도만 반영,HYPOTHESIS,,
+네이버 웹문서 상위노출,MAIN,https://reumlab.com/seo-website/,service,P2,FAQ/보장금지,HYPOTHESIS,,
+웹문서 상위노출 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P2,의도만 반영,HYPOTHESIS,,
+구글 홈페이지 상위노출,MAIN,https://reumlab.com/seo-website/,service,P2,FAQ/보장금지,HYPOTHESIS,,
+홈페이지 검색 노출 업체,MAIN,https://reumlab.com/seo-website/,service,P1,body,HYPOTHESIS,,
+네이버 사이트 검색 최적화,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P2,existing page,HYPOTHESIS,,
+홈페이지 상위노출 비용,COST,https://reumlab.com/seo-website/cost/,cost,P2,FAQ/보장금지,HYPOTHESIS,,
+상위노출 홈페이지 제작 업체,MAIN,https://reumlab.com/seo-website/,service,P2,의도만 반영,HYPOTHESIS,,
+지역별 검색되는 홈페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,title/section,HYPOTHESIS,,
+지역 키워드 홈페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,section,HYPOTHESIS,,
+여러 지역 검색 노출 홈페이지,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,H1/body,HYPOTHESIS,,
+전국 지역명 홈페이지 노출,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P2,body,HYPOTHESIS,,
+지역명으로 홈페이지 검색되게 하는 방법,REGIONAL,https://reumlab.com/seo-website/regional/,informational,P2,FAQ,HYPOTHESIS,,
+지역별 홈페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P2,body,HYPOTHESIS,,
+지역별 웹페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P2,body,HYPOTHESIS,,
+키워드별 홈페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,body,HYPOTHESIS,,
+전국 검색 노출 홈페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P2,의도만 반영,HYPOTHESIS,,
+지역별 서비스 페이지 제작,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,section,HYPOTHESIS,,
+여러 키워드 검색되는 홈페이지,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P1,body,HYPOTHESIS,,
+청소업체 지역별 홈페이지 제작,CLEANING,https://reumlab.com/website/cheongsoeobche/,industry-service,P1,enhancement section,HYPOTHESIS,,기존 canonical 보강
+청소업체 홈페이지 제작,CLEANING,https://reumlab.com/website/cheongsoeobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+입주청소 홈페이지 제작,CLEANING,https://reumlab.com/website/cheongsoeobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+청소업체 홈페이지 검색 노출,CLEANING,https://reumlab.com/website/cheongsoeobche/,industry-service,P1,enhancement section,HYPOTHESIS,,기존 canonical 보강
+이사업체 홈페이지 제작,MOVING,https://reumlab.com/website/isaeobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+이삿짐센터 홈페이지 제작,MOVING,https://reumlab.com/website/isaeobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+철거업체 홈페이지 제작,DEMOLITION,https://reumlab.com/website/cheolgeoeobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+철거업체 홈페이지 상위노출,DEMOLITION,https://reumlab.com/website/cheolgeoeobche/,industry-service,P2,enhancement body/보장금지,HYPOTHESIS,,기존 canonical 보강
+누수탐지 홈페이지 제작,LEAK,https://reumlab.com/website/nusutamjieobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+설비업체 홈페이지 제작,LEAK,https://reumlab.com/website/nusutamjieobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+방수업체 홈페이지 제작,WATERPROOF,https://reumlab.com/website/bangsueobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+방수업체 검색 노출,WATERPROOF,https://reumlab.com/website/bangsueobche/,industry-service,P2,enhancement body/보장금지,HYPOTHESIS,,기존 canonical 보강
+인테리어 홈페이지 제작,INTERIOR,https://reumlab.com/website/interieoeobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+인테리어 업체 홈페이지 상위노출,INTERIOR,https://reumlab.com/website/interieoeobche/,industry-service,P2,enhancement body/보장금지,HYPOTHESIS,,기존 canonical 보강
+에어컨 청소 홈페이지 제작,AIRCON,https://reumlab.com/website/eeokeoneobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+에어컨 설치 홈페이지 제작,AIRCON,https://reumlab.com/website/eeokeoneobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+폐기물 처리업체 홈페이지 제작,WASTE,https://reumlab.com/website/pyegimulcheorieobche/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+폐기물 수거 홈페이지 제작,WASTE,https://reumlab.com/website/pyegimulcheorieobche/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+인력사무소 홈페이지 제작,STAFFING,https://reumlab.com/seo-website/staffing/,industry-service,P1,title/H1,HYPOTHESIS,,신규
+인력업체 홈페이지 제작,STAFFING,https://reumlab.com/seo-website/staffing/,industry-service,P1,H1/body,HYPOTHESIS,,신규
+제조업 홈페이지 제작,MANUFACTURING,https://reumlab.com/website/jejoeob/,industry-service,P1,existing title/H1,HYPOTHESIS,,기존 canonical 보강
+산업용 제품 홈페이지 제작,MANUFACTURING,https://reumlab.com/website/jejoeob/,industry-service,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+검색 최적화 홈페이지 제작 비용,COST,https://reumlab.com/seo-website/cost/,cost,P1,title/H1,HYPOTHESIS,,
+SEO 홈페이지 제작 가격,COST,https://reumlab.com/seo-website/cost/,cost,P1,body,HYPOTHESIS,,
+SEO 홈페이지 제작 견적,COST,https://reumlab.com/seo-website/cost/,cost,P1,section,HYPOTHESIS,,
+네이버 검색 노출 홈페이지 제작 비용,COST,https://reumlab.com/seo-website/cost/,cost,P1,body/보장금지,HYPOTHESIS,,
+홈페이지 제작 SEO 포함,COST,https://reumlab.com/seo-website/cost/,cost,P1,section,HYPOTHESIS,,
+홈페이지 제작 검색 등록 포함,MAIN,https://reumlab.com/seo-website/,service,P1,scope section,HYPOTHESIS,,
+검색 잘되는 홈페이지 제작 업체 추천,GUIDE_CHECKLIST,https://reumlab.com/seo-website/guides/seo-checklist/,comparison,P2,title/body,HYPOTHESIS,,
+상위노출 홈페이지 제작 견적,COST,https://reumlab.com/seo-website/cost/,cost,P2,FAQ/보장금지,HYPOTHESIS,,
+지역별 홈페이지 제작 비용,COST,https://reumlab.com/seo-website/cost/,cost,P1,body,HYPOTHESIS,,
+청소업체 홈페이지 제작 비용,CLEANING,https://reumlab.com/website/cheongsoeobche/,industry-cost,P1,enhancement body,HYPOTHESIS,,기존 canonical 보강
+SEO 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,title/body,HYPOTHESIS,,
+SEO 웹사이트 제작,MAIN,https://reumlab.com/seo-website/,service,P1,body,HYPOTHESIS,,
+검색엔진 최적화 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,section,HYPOTHESIS,,
+검색 최적화 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P1,body,HYPOTHESIS,,
+SEO 전문 홈페이지 제작 업체,MAIN,https://reumlab.com/seo-website/,service,P2,의도만 반영,HYPOTHESIS,,
+네이버 SEO 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P2,body,HYPOTHESIS,,
+구글 SEO 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P2,body,HYPOTHESIS,,
+SEO 맞춤 홈페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P2,body,HYPOTHESIS,,
+SEO 랜딩페이지 제작,MAIN,https://reumlab.com/seo-website/,service,P2,body,HYPOTHESIS,,
+지역 SEO 홈페이지 구축,REGIONAL,https://reumlab.com/seo-website/regional/,regional-service,P2,body,HYPOTHESIS,,
+홈페이지 네이버 검색 안됨,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing body,HYPOTHESIS,,
+홈페이지 만들었는데 검색이 안돼요,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing FAQ,HYPOTHESIS,,
+회사 이름 검색해도 홈페이지 안나옴,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing body,HYPOTHESIS,,
+구글에 홈페이지가 안나와요,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing FAQ,HYPOTHESIS,,
+홈페이지 검색되게 해주는 업체,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing body,HYPOTHESIS,,
+홈페이지 검색 노출 개선,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing title/body,HYPOTHESIS,,
+기존 홈페이지 SEO 수정,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing body,HYPOTHESIS,,
+홈페이지 검색 최적화 업체,EXISTING_FIX,https://reumlab.com/ai-search-optimization/,existing-site-fix,P1,existing body,HYPOTHESIS,,
+프로그래매틱 SEO,DATA_EXISTING,https://reumlab.com/data-seo/,technical-system,P2,existing body,HYPOTHESIS,,
+대규모 SEO 페이지 자동화,DATA_EXISTING,https://reumlab.com/data-seo/,technical-system,P2,existing body,HYPOTHESIS,,
+GEO 홈페이지 제작,GEO_EXISTING,https://reumlab.com/geo-website/,geo-service,P2,existing title/H1,HYPOTHESIS,,
+AI 검색 홈페이지 제작,GEO_EXISTING,https://reumlab.com/geo-website/,geo-service,P2,existing body,HYPOTHESIS,,

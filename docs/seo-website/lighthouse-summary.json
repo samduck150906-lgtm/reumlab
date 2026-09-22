@@ -1,0 +1,29 @@
+{
+  "measured_at": "2026-09-22",
+  "url": "http://localhost:4174/seo-website/",
+  "tool": "Lighthouse CLI",
+  "mobile": {
+    "performance": 87,
+    "accessibility": 100,
+    "best_practices": 77,
+    "seo": 100,
+    "lcp": "3.5 s",
+    "cls": 0.023,
+    "tbt": "0 ms"
+  },
+  "desktop": {
+    "performance": 98,
+    "accessibility": 100,
+    "best_practices": 77,
+    "seo": 100,
+    "lcp": "1.1 s",
+    "cls": 0.002,
+    "tbt": "0 ms"
+  },
+  "best_practices_notes": [
+    "third-party-cookies: NWB from https://wcs.naver.com/b",
+    "third-party-cookies: NAC from https://nam.veta.naver.com/nac/2",
+    "inspector issue category: Cookie"
+  ],
+  "limitations": "Local static server synthetic lab measurement; not field Core Web Vitals and not a ranking guarantee."
+}

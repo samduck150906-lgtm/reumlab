@@ -10,8 +10,10 @@
 | 가이드 2개 | `app/seo-website/guides/**` | PASS |
 | 기존 업종 9개 고유 정보 보강 | `app/website/[industry]/page.tsx`, 공통 컴포넌트 | PASS |
 | 문의폼·Netlify 감지 스키마 | `LandingInquiryForm.tsx`, `public/__forms.html` | PASS |
-| 메뉴·홈·관련 서비스·사이트맵·LLM 인덱스 | 관련 기존 파일 | NOT_RUN |
-| 자동·브라우저·운영 검증 | `scripts/check-seo-website.*`, QA 문서 | NOT_RUN |
+| 메뉴·홈·관련 서비스·사이트맵·LLM 인덱스 | 관련 기존 파일 | PASS |
+| 자동 정적 산출물 검증 | `scripts/check-seo-website.*`, QA 문서 | PASS |
+| 브라우저 검증 | 5개 viewport, FAQ·폼, 기존 핵심 경로, Lighthouse | PASS |
+| 운영 검증 | 운영 URL, Netlify Forms | NOT_RUN |
 | 배포와 검색 등록 | Netlify, GSC, Search Advisor | NOT_RUN |
 
 ## 실행 결정
