@@ -23,6 +23,7 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/windows-app-development/">윈도우 앱 개발</Link>
           <Link href="/web-development/">웹사이트 제작</Link>
           <Link href="/website/">업종별 홈페이지 제작</Link>
+          <Link href="/seo-website/">검색 잘되는 홈페이지</Link>
           <Link href="/geo-website/">GEO 홈페이지 제작</Link>
           <Link href="/blog/">블로그</Link>
         </nav>

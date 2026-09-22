@@ -17,6 +17,7 @@ import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
 import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, workerDecision } from '@/lib/ai-worker';
 import { MULTIMODAL_CANONICAL, multimodalDecision } from '@/lib/multimodal-ai-worker';
+import { SEO_WEBSITE_GUIDES, SEO_WEBSITE_PAGES } from '@/lib/seo-website';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -75,6 +76,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.84,
   });
+
+  // 검색 유입형 홈페이지 제작 — 역할이 서로 다른 4개 서비스 페이지와 2개 실무 가이드만 노출한다.
+  // 업종 페이지는 이미 운영 중인 /website/<industry>/ canonical을 강화해 중복 URL을 만들지 않는다.
+  const seoWebsiteMod = gitLastModified('lib/seo-website.ts');
+  for (const page of [...SEO_WEBSITE_PAGES, ...SEO_WEBSITE_GUIDES]) {
+    out.push({
+      url: page.canonical,
+      lastModified: seoWebsiteMod,
+      changeFrequency: page.slug === '' ? 'monthly' : 'yearly',
+      priority: page.slug === '' ? 0.86 : page.pageId.startsWith('GUIDE_') ? 0.68 : 0.76,
+    });
+  }
 
   // AI 음성 상담·전화 자동화 — 기존 AI 페이지 3종(/ai-development/·/ai-automation/·/enterprise-ai/)과
   // 검색 의도가 분리된 독립 서비스 상세페이지. self-canonical 이라 색인 게이트 통과 시 사이트맵에 싣는다.

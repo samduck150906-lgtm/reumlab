@@ -136,6 +136,7 @@ export default function WebsiteHubPage() {
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 인덱스·서비스</h2>
             <div className="link-grid">
               <Link href="/web-development/">웹사이트 제작 — 패키지·프로세스</Link>
+              <Link href="/seo-website/">업종·지역 검색 유입을 고려한 홈페이지 제작</Link>
               <Link href="/geo-website/">AI 검색까지 고려한 GEO 홈페이지 제작</Link>
               <Link href="/website-agency/">홈페이지 제작 업체 선택 기준</Link>
               <Link href="/app/">업종별 앱 개발</Link>

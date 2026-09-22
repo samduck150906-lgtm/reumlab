@@ -496,6 +496,7 @@ export const FINAL_CTA = {
 
 // ── 7-16. 관련 서비스 / 참고한 공개 기준 ──────────────────────
 export const RELATED_LINKS = [
+  { href: '/seo-website/', label: '검색 잘되는 홈페이지 제작', note: '업종·지역 검색 유입과 문의 전환을 고려해 홈페이지를 새로 제작할 때의 범위입니다.' },
   { href: '/geo-website/', label: 'GEO 홈페이지 제작', note: '홈페이지를 새로 만들어야 한다면 신규 제작 범위를 확인하세요.' },
   { href: '/data-seo/', label: '데이터·SEO 자동화 구축', note: '수집·검색·자동화 시스템이 필요한 경우의 별도 서비스입니다.' },
   { href: '/service-renewal/', label: '기존 서비스 개선·인수 개발', note: '검색 구조가 아니라 앱·웹 기능 자체를 고쳐야 할 때의 범위입니다.' },
