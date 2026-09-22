@@ -54,9 +54,8 @@ export default function SeoWebsiteDetailPage({ params }: Props) {
       <section className={styles.hero}><div className={styles.wrap}><p className={styles.eyebrow}>{page.eyebrow}</p><h1>{page.h1}</h1><p className={styles.lead}>{page.lead}</p><div className={styles.actions}><a href="#inquiry" className={styles.primary} data-analytics={`seo_website_${page.slug}_form`} data-cta-type="form" data-cta-location="hero">제작 범위 상담하기</a><Link href="/seo-website/" className={styles.secondary}>대표 서비스 보기</Link></div><p className={styles.notice}>실제 서비스와 고유 정보가 있는 범위에서 설계하며 검색 순위·색인·문의 수를 보장하지 않습니다.</p></div></section>
       {page.pageId === 'REGIONAL' ? <RegionalContent /> : page.pageId === 'COST' ? <CostContent /> : <StaffingContent />}
       <section className={styles.section}><div className={styles.wrap}><header className={styles.sectionHeader}><h2>자주 묻는 질문</h2></header><div className={styles.faq}>{page.faqs.map((faq) => <details key={faq.q}><summary>{faq.q}</summary><p>{faq.a}</p></details>)}</div></div></section>
-      <section className={styles.inquiry} id="inquiry" tabIndex={-1}><div className={styles.wrap}><header className={styles.sectionHeader}><h2>업종과 필요한 범위를 알려주세요.</h2><p>현재 홈페이지 유무와 실제 서비스 지역을 확인해 포함·제외 항목을 안내합니다.</p></header><LandingInquiryForm landingSlug={`seo-website/${page.slug}`} defaultServiceType="웹 MVP / 홈페이지" submitLabel="제작 범위 검토 요청하기" /></div></section>
+      <section className={styles.inquiry} id="inquiry" tabIndex={-1}><div className={styles.wrap}><header className={styles.sectionHeader}><h2>업종과 필요한 범위를 알려주세요.</h2><p>현재 홈페이지 유무와 실제 서비스 지역을 확인해 포함·제외 항목을 안내합니다.</p></header><LandingInquiryForm landingSlug={`seo-website/${page.slug}`} defaultServiceType="검색 잘되는 홈페이지 제작" variant="seo-website" defaultIndustry={page.pageId === 'STAFFING' ? '인력' : undefined} submitLabel="제작 범위 검토 요청하기" /></div></section>
     </main>
     <BusinessFooter topExtra={<Link href="/seo-website/">← 검색 잘되는 홈페이지 제작</Link>} />
   </>;
 }
-

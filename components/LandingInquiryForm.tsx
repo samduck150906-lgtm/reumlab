@@ -32,6 +32,21 @@ import {
   type VoiceIndustryChoice,
   type VoicePackageChoice,
 } from '@/lib/ai-voice-form';
+import {
+  SEO_WEBSITE_FIELD_NAMES,
+  SEO_WEBSITE_INDUSTRY_CHOICES,
+  SEO_WEBSITE_INDUSTRY_ENUM,
+  SEO_WEBSITE_REQUESTED_SERVICE,
+  SEO_WEBSITE_SCOPE_CHOICES,
+  SEO_WEBSITE_SCOPE_ENUM,
+  SEO_WEBSITE_SERVICE_KEY,
+  SEO_WEBSITE_STATUS_CHOICES,
+  inquiryTypeForStatus,
+  seoWebsiteIndustryFromSlug,
+  type SeoWebsiteIndustryChoice,
+  type SeoWebsiteScopeChoice,
+  type SeoWebsiteStatusChoice,
+} from '@/lib/seo-website-form';
 
 /**
  * /l/[slug] 하단 CTA용 상담 폼 — 홈(index.html)과 동일한 Netlify `main-apply` 폼.
@@ -45,6 +60,7 @@ const FORM_NAME = 'main-apply';
 const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'];
 
 const SERVICE_TYPES = [
+  '검색 잘되는 홈페이지 제작',
   'GEO 홈페이지 제작',
   '웹 MVP / 홈페이지',
   '모바일 앱 (Flutter)',
@@ -62,7 +78,7 @@ const TIMELINES = ['최대한 빠르게', '1개월 내', '1 ~ 3개월', '3개월
  */
 type Status = 'idle' | 'submitting' | 'success' | 'error' | 'timeout';
 
-type Variant = 'default' | 'geo-website' | 'ai-voice' | 'ai-search-architecture' | 'multimodal-ai-worker' | 'enternal-ai';
+type Variant = 'default' | 'geo-website' | 'ai-voice' | 'ai-search-architecture' | 'multimodal-ai-worker' | 'enternal-ai' | 'seo-website';
 
 /**
  * 변형별 문구·숨은 값. 변형이 셋을 넘어가면서 삼항 연산자를 이어 붙이는 방식이
@@ -74,6 +90,7 @@ const LANDING_PATH: Partial<Record<Variant, string>> = {
   'ai-search-architecture': '/ai-search-optimization/',
   'multimodal-ai-worker': '/ai-worker/multimodal/',
   'enternal-ai': '/enternal-ai/',
+  'seo-website': '/seo-website/',
 };
 const INQUIRY_SERVICE: Partial<Record<Variant, string>> = {
   'geo-website': 'GEO 홈페이지 제작',
@@ -81,6 +98,7 @@ const INQUIRY_SERVICE: Partial<Record<Variant, string>> = {
   'ai-search-architecture': 'AI Search Architecture (기존 홈페이지 검색 구조 개선)',
   'multimodal-ai-worker': '멀티모달 AI Worker 구축',
   'enternal-ai': 'Enternal AI 기업 도입·PoC',
+  'seo-website': SEO_WEBSITE_REQUESTED_SERVICE,
 };
 const FEATURES_LABEL: Partial<Record<Variant, string>> = {
   'geo-website': '필요한 내용',
@@ -88,6 +106,7 @@ const FEATURES_LABEL: Partial<Record<Variant, string>> = {
   'ai-search-architecture': '개선하고 싶은 점',
   'multimodal-ai-worker': 'AI가 맡았으면 하는 멀티모달 업무',
   'enternal-ai': 'PoC에서 확인하고 싶은 업무와 데이터 범위',
+  'seo-website': '홈페이지에서 필요한 내용',
 };
 const FEATURES_PLACEHOLDER: Partial<Record<Variant, string>> = {
   'geo-website': '예: 회사 소개, 서비스 설명, 사례·FAQ, 문의 폼, 기존 URL 보존',
@@ -95,6 +114,7 @@ const FEATURES_PLACEHOLDER: Partial<Record<Variant, string>> = {
   'ai-search-architecture': '예: 서비스 설명이 흩어져 있음, 검색으로 안 나옴, 문의가 적음',
   'multimodal-ai-worker': '예: 현장 사진 검수, 통화 분석, 견적 초안, ERP·CRM 업무 등록',
   'enternal-ai': '예: 사내 문서 검색, 로컬 추론 가능성, 외부 전송 범위, 검증할 업무',
+  'seo-website': '예: 서비스 설명, 지역별 실제 정보, 비용·FAQ, 문의 연결, 관리자',
 };
 
 /** 홈페이지 주소를 아직 못 정한 경우에 저장할 값 — 자유 입력이 아니라 고정 문구다 */
@@ -108,15 +128,18 @@ export default function LandingInquiryForm({
   landingSlug,
   defaultServiceType,
   variant = 'default',
+  defaultIndustry,
   submitLabel = '프로젝트 검토 요청하기',
 }: {
   landingSlug: string;
   defaultServiceType?: string;
   variant?: Variant;
+  defaultIndustry?: SeoWebsiteIndustryChoice;
   submitLabel?: string;
 }) {
   const isAiSearch = variant === 'ai-search-architecture';
   const isAiVoice = variant === 'ai-voice';
+  const isSeoWebsite = variant === 'seo-website';
   const [status, setStatus] = useState<Status>('idle');
   const [utm, setUtm] = useState<Record<string, string>>({});
   const startedRef = useRef(false);
@@ -139,6 +162,10 @@ export default function LandingInquiryForm({
   const [voiceIndustry, setVoiceIndustry] = useState<VoiceIndustryChoice>('미정');
   const [voiceVolume, setVoiceVolume] = useState<VoiceCallVolumeChoice>('미정');
   const [voicePkg, setVoicePkg] = useState<VoicePackageChoice>('미정');
+  const [seoIndustry, setSeoIndustry] = useState<SeoWebsiteIndustryChoice>(defaultIndustry ?? '미정');
+  const [seoStatus, setSeoStatus] = useState<SeoWebsiteStatusChoice>('잘 모르겠음');
+  const [seoScope, setSeoScope] = useState<SeoWebsiteScopeChoice>('아직 미정');
+  const [seoCtaLocation, setSeoCtaLocation] = useState('page');
   const [siteUrlUnknown, setSiteUrlUnknown] = useState(false);
   const [siteUrlError, setSiteUrlError] = useState('');
   const siteUrlRef = useRef<HTMLInputElement>(null);
@@ -172,6 +199,10 @@ export default function LandingInquiryForm({
           setUtm(resolvedUtm);
         }
       }
+      if (isSeoWebsite) {
+        const fromIndustry = seoWebsiteIndustryFromSlug(params.get('industry'));
+        if (fromIndustry) setSeoIndustry(fromIndustry);
+      }
     } catch {
       /* sessionStorage 차단 환경 무시 */
     }
@@ -199,7 +230,17 @@ export default function LandingInquiryForm({
     } catch {
       /* URL 파싱 실패 시 맥락 없이 진행 — 폼 제출이 우선이다 */
     }
-  }, []);
+  }, [isSeoWebsite]);
+
+  useEffect(() => {
+    if (!isSeoWebsite) return;
+    const onClick = (event: MouseEvent) => {
+      const location = (event.target as HTMLElement | null)?.closest('[data-cta-location]')?.getAttribute('data-cta-location');
+      if (location && /^(hero|cost|industry|footer|page)$/.test(location)) setSeoCtaLocation(location);
+    };
+    document.addEventListener('click', onClick, true);
+    return () => document.removeEventListener('click', onClick, true);
+  }, [isSeoWebsite]);
 
   /**
    * 가격 카드 CTA(`<a href="#inquiry" data-aisa-package="GROWTH">`) → 폼의 관심 패키지 동기화.
@@ -279,6 +320,21 @@ export default function LandingInquiryForm({
     return true;
   }
 
+  function validateOptionalSiteUrl(input: HTMLInputElement): boolean {
+    if (!input.value.trim()) {
+      setSiteUrlError('');
+      return true;
+    }
+    const result = normalizeSiteUrl(input.value);
+    if (!result.ok) {
+      setSiteUrlError(result.reason || '주소를 확인해 주세요.');
+      return false;
+    }
+    if (result.value) input.value = result.value;
+    setSiteUrlError('');
+    return true;
+  }
+
   function pushDL(obj: Record<string, unknown>) {
     try {
       const w = window as any;
@@ -297,6 +353,7 @@ export default function LandingInquiryForm({
       form_name: FORM_NAME,
       source_page: ctx.firstLanding || window.location.pathname,
       lead_source: ctx.leadSource,
+      ...(isSeoWebsite ? { service_key: SEO_WEBSITE_SERVICE_KEY, industry: SEO_WEBSITE_INDUSTRY_ENUM[seoIndustry], interest_scope: SEO_WEBSITE_SCOPE_ENUM[seoScope] } : {}),
       ...pageContext(window.location.pathname),
     });
   }
@@ -316,6 +373,12 @@ export default function LandingInquiryForm({
         error_type: 'validation',
         ...pageContext(window.location.pathname),
       });
+      return;
+    }
+    if (isSeoWebsite && siteUrlRef.current && !validateOptionalSiteUrl(siteUrlRef.current)) {
+      submittingRef.current = false;
+      siteUrlRef.current.focus();
+      pushEvent(EVENT.formError, { form_name: FORM_NAME, error_type: 'validation', service_key: SEO_WEBSITE_SERVICE_KEY, ...pageContext(window.location.pathname) });
       return;
     }
 
@@ -355,6 +418,7 @@ export default function LandingInquiryForm({
           // 비식별 enum 만 싣는다 — 한글 라벨·주소·상담 원문은 넘어가지 않는다.
           ...(isAiSearch ? { package_tier: PACKAGE_TIER[pkg] } : {}),
           ...(isAiVoice ? { package_tier: VOICE_PACKAGE_TIER[voicePkg] } : {}),
+          ...(isSeoWebsite ? { service_key: SEO_WEBSITE_SERVICE_KEY, industry: SEO_WEBSITE_INDUSTRY_ENUM[seoIndustry], interest_scope: SEO_WEBSITE_SCOPE_ENUM[seoScope] } : {}),
           ...eventCtx,
         });
       }
@@ -416,7 +480,7 @@ export default function LandingInquiryForm({
       className="mx-auto max-w-2xl rounded-2xl bg-white p-6 text-left shadow-card-hover sm:p-8"
     >
       <input type="hidden" name="form-name" value={FORM_NAME} />
-      <input type="hidden" name="유입_랜딩" value={LANDING_PATH[variant] ?? `l/${landingSlug}`} />
+      <input type="hidden" name="유입_랜딩" value={isSeoWebsite ? `/${landingSlug}/` : (LANDING_PATH[variant] ?? `l/${landingSlug}`)} />
       <input type="hidden" name="문의서비스" value={INQUIRY_SERVICE[variant] ?? (defaultServiceType || '')} />
       <input type="hidden" name="유입_경로" value={ctx.path} />
       <input type="hidden" name="페이지_유형" value={ctx.pageType} />
@@ -424,6 +488,16 @@ export default function LandingInquiryForm({
       <input type="hidden" name="유입_출처" value={ctx.referrer} />
       <input type="hidden" name="최초_유입_페이지" value={ctx.firstLanding} />
       <input type="hidden" name="유입_채널" value={ctx.leadSource} />
+      {isSeoWebsite ? (
+        <>
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.requestedService} value={SEO_WEBSITE_REQUESTED_SERVICE} />
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.serviceKey} value={SEO_WEBSITE_SERVICE_KEY} />
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.inquiryType} value={inquiryTypeForStatus(seoStatus)} />
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.sourceLanding} value={ctx.firstLanding || `/${landingSlug}/`} />
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.currentPage} value={ctx.path || `/${landingSlug}/`} />
+          <input type="hidden" name={SEO_WEBSITE_FIELD_NAMES.ctaLocation} value={seoCtaLocation} />
+        </>
+      ) : null}
       {UTM_KEYS.map((k) => (
         <input key={k} type="hidden" name={k} value={utm[k] || ''} />
       ))}
@@ -473,6 +547,38 @@ export default function LandingInquiryForm({
               <option value="신규 제작">신규 제작</option>
               <option value="기존 사이트 개선">기존 사이트 개선</option>
               <option value="상담 후 결정">상담 후 결정</option>
+            </select>
+          </div>
+        </div>
+      ) : null}
+
+      {isSeoWebsite ? (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          <div>
+            <label className={labelCls} htmlFor="lf-seo-industry">업종</label>
+            <select id="lf-seo-industry" name={SEO_WEBSITE_FIELD_NAMES.industry} className={inputCls} value={seoIndustry} onChange={(event) => setSeoIndustry(event.currentTarget.value as SeoWebsiteIndustryChoice)}>
+              {SEO_WEBSITE_INDUSTRY_CHOICES.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-seo-status">홈페이지 상태</label>
+            <select id="lf-seo-status" name={SEO_WEBSITE_FIELD_NAMES.siteStatus} className={inputCls} value={seoStatus} onChange={(event) => setSeoStatus(event.currentTarget.value as SeoWebsiteStatusChoice)}>
+              {SEO_WEBSITE_STATUS_CHOICES.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
+            </select>
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-seo-url">현재 홈페이지 주소 <span className="font-normal text-slate-500">(선택)</span></label>
+            <input id="lf-seo-url" ref={siteUrlRef} name={SEO_WEBSITE_FIELD_NAMES.currentSiteUrl} type="url" inputMode="url" className={inputCls} placeholder="https://example.com" autoComplete="url" maxLength={SITE_URL_MAX} onBlur={(event) => validateOptionalSiteUrl(event.currentTarget)} aria-invalid={siteUrlError ? true : undefined} aria-describedby={siteUrlError ? 'lf-seo-url-error' : undefined} />
+            {siteUrlError ? <p id="lf-seo-url-error" className="mt-1.5 text-[13px] font-semibold text-red-600" role="alert">{siteUrlError}</p> : null}
+          </div>
+          <div>
+            <label className={labelCls} htmlFor="lf-seo-region">실제 서비스 지역 <span className="font-normal text-slate-500">(선택)</span></label>
+            <input id="lf-seo-region" name={SEO_WEBSITE_FIELD_NAMES.serviceRegion} type="text" className={inputCls} maxLength={120} placeholder="예: 화성·동탄, 수도권 / 전국" />
+          </div>
+          <div className="sm:col-span-2">
+            <label className={labelCls} htmlFor="lf-seo-scope">원하는 내용</label>
+            <select id="lf-seo-scope" name={SEO_WEBSITE_FIELD_NAMES.interestScope} className={inputCls} value={seoScope} onChange={(event) => setSeoScope(event.currentTarget.value as SeoWebsiteScopeChoice)}>
+              {SEO_WEBSITE_SCOPE_CHOICES.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
             </select>
           </div>
         </div>

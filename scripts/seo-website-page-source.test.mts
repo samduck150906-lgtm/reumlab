@@ -79,6 +79,6 @@ test('기존 업종 보강 컴포넌트는 고유 의사결정 정보와 검색�
     assert.ok(html.includes(industry.summary), industry.pageId);
     assert.ok(html.includes(industry.decisionInfo[0]), industry.pageId);
     assert.ok(html.includes(industry.materials[0]), industry.pageId);
-    assert.match(html, /href="\/seo-website\/?"/);
+    assert.match(html, /href="\/seo-website\/\?industry=/);
   }
 });

@@ -46,6 +46,7 @@ const SERVICE_BY_FIRST_SEGMENT: Record<string, ServiceKey> = {
   'web-development': 'web',
   'website-agency': 'web',
   'geo-website': 'web',
+  'seo-website': 'web',
   soho: 'web',
   'academy-shopping-mall': 'web',
   'realestate-landing': 'web',
@@ -90,6 +91,7 @@ export function pageTypeOf(pathname: string): PageType {
   // /app/<업종>/ · /website/<업종>/ 은 업종 축으로 본다.
   // (/cost/<업종>/ 는 위 CONTENT_SECTIONS 에서 이미 'cost' 로 잡힌다 — 업종보다 비용 의도가 크다.)
   if ((first === 'app' || first === 'website') && seg.length > 1) return 'industry';
+  if (first === 'seo-website') return seg[1] === 'guides' ? 'guide' : 'service';
   // /ai-worker/<역할>/ 은 지역 랜딩이 아니라 하나의 AI 서비스 계열이다.
   if (first === 'ai-worker') return 'service';
   // /<서비스>/<지역>/ 형태
@@ -164,6 +166,10 @@ export interface EventParams {
    * 값 목록은 lib/ai-voice-form.ts 의 VOICE_INDUSTRY_ENUM 이 단일 출처다.
    */
   industry?: string;
+  /** 새 검색형 홈페이지 서비스의 내부 분류. 개인 입력이 아닌 고정 enum. */
+  service_key?: 'seo_website';
+  /** 상담 범위 분류. 사용자 원문이 아닌 닫힌 enum. */
+  interest_scope?: string;
   /**
    * 상호작용 종류 — 계산기처럼 "무엇을 했는지"만 남기고 입력값은 싣지 않는다.
    * 예: 'input-change' | 'cta'. 자유 텍스트를 남발하지 않는다.

@@ -147,7 +147,7 @@ export default function SeoWebsitePage() {
         <section className={styles.inquiry} id="inquiry" tabIndex={-1}>
           <div className={styles.wrap}>
             <header className={styles.sectionHeader}><h2>어떤 홈페이지가 필요한지, 업종과 지역부터 알려주세요.</h2><p>현재 홈페이지 유무와 필요한 기능을 남겨주시면, 제작 범위와 비용을 검토해 안내합니다.</p></header>
-            <LandingInquiryForm landingSlug="seo-website" defaultServiceType="웹 MVP / 홈페이지" submitLabel="제작 범위 검토 요청하기" />
+            <LandingInquiryForm landingSlug="seo-website" defaultServiceType="검색 잘되는 홈페이지 제작" variant="seo-website" submitLabel="제작 범위 검토 요청하기" />
             <div className={styles.links} style={{ marginTop: 20 }}><a href={SITE.phoneHref}>전화 {SITE.phone}</a><a href={`mailto:${SITE.email}`}>이메일 문의</a></div>
           </div>
         </section>
@@ -156,4 +156,3 @@ export default function SeoWebsitePage() {
     </>
   );
 }
-

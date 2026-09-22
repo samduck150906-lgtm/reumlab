@@ -29,9 +29,8 @@ export default function SeoWebsiteIndustryEnhancement({ profile }: { profile: Se
       </p>
       <p className="hub-intro" style={{ marginTop: 12 }}>
         검색·문의 구조까지 함께 새로 설계해야 한다면{' '}
-        <Link href="/seo-website/">검색 잘되는 홈페이지 제작 서비스</Link>에서 제작 범위와 검색 등록 기준을 확인하세요.
+        <a href={`/seo-website/?industry=${encodeURIComponent(profile.slug)}#inquiry`} data-analytics={`seo_website_industry_${profile.slug}`} data-cta-type="form" data-cta-location="industry">우리 {profile.label} 홈페이지 제작 상담하기</a>에서 제작 범위와 검색 등록 기준을 확인하세요.
       </p>
     </section>
   );
 }
-
