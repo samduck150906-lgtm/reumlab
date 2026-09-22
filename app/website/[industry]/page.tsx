@@ -17,6 +17,8 @@ import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ctaPrimary, operatorNote } from '@/lib/voice';
 import { pickSiblings } from '@/lib/sibling-picker';
+import { getSeoWebsiteIndustryByExistingSlug } from '@/lib/seo-website';
+import SeoWebsiteIndustryEnhancement from '@/components/SeoWebsiteIndustryEnhancement';
 
 type Props = { params: { industry: string } };
 
@@ -77,6 +79,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
     { name: `${d.ko} 홈페이지 제작`, url: canonical },
   ];
   const others = pickSiblings(WEBSITE_INDUSTRIES, d.slug, 8);
+  const seoWebsiteProfile = getSeoWebsiteIndustryByExistingSlug(d.slug);
 
   return (
     <>
@@ -128,6 +131,8 @@ export default function WebsiteIndustryPage({ params }: Props) {
             <p className="hub-intro" style={{ marginTop: 16 }}><strong>제작 비용·기간</strong> — {c.priceLine}</p>
           </div>
 
+          {seoWebsiteProfile ? <SeoWebsiteIndustryEnhancement profile={seoWebsiteProfile} /> : null}
+
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{d.ko}, 검색에 잡히게 만들기</h2>
             <p className="hub-intro">{c.searchLine}</p>
@@ -155,6 +160,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
             <div className="link-grid">
               <Link href="/web-development/">웹사이트 제작 — 패키지·프로세스</Link>
               <Link href="/website-agency/">홈페이지 제작 업체 — 선택 기준·비용</Link>
+              <Link href="/seo-website/">검색 잘되는 홈페이지 제작 — 검색·문의 구조</Link>
               <Link href="/app-development/">앱개발 — 앱까지 필요할 때</Link>
               {/* 검색 의도가 맞닿은 전용 서비스로 컨텍스트 내부링크 */}
               {d.category === 'education' && (

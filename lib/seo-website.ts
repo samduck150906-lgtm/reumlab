@@ -299,8 +299,8 @@ export const SEO_WEBSITE_INDUSTRIES: SeoWebsiteIndustry[] = [
   },
 ];
 
-const pageBySlug = new Map(SEO_WEBSITE_PAGES.map((page) => [page.slug, page]));
-const guideBySlug = new Map(SEO_WEBSITE_GUIDES.map((guide) => [guide.slug, guide]));
+const pageBySlug = new Map<string, SeoWebsitePage>(SEO_WEBSITE_PAGES.map((page) => [page.slug, page]));
+const guideBySlug = new Map<string, SeoWebsiteGuide>(SEO_WEBSITE_GUIDES.map((guide) => [guide.slug, guide]));
 const industryById = new Map(SEO_WEBSITE_INDUSTRIES.map((industry) => [industry.pageId, industry]));
 const industryByWebsiteSlug = new Map(
   SEO_WEBSITE_INDUSTRIES.filter((industry) => industry.existingWebsiteSlug).map((industry) => [industry.existingWebsiteSlug!, industry]),
@@ -326,4 +326,3 @@ export const SEO_WEBSITE_NEW_CANONICALS = [
   ...SEO_WEBSITE_PAGES.map((page) => page.canonical),
   ...SEO_WEBSITE_GUIDES.map((guide) => guide.canonical),
 ];
-
