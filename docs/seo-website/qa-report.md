@@ -23,14 +23,16 @@
 | FAQ·폼 상호작용 | PASS | FAQ 펼침, 이름·업종·상태·지역·관심 범위 입력 상태 확인; 운영 전송은 별도 |
 | 신규·기존 페이지 회귀 | PASS | 홈·website·GEO·AI 개선·data 및 신규 6 URL 브라우저에서 title/H1/canonical 확인 |
 | 브라우저 콘솔 | PASS | error/warning 0건 |
-| 운영 HTTP·canonical·기존 주요 페이지 | NOT_RUN | 배포 후 갱신 |
-| Netlify Forms 실제 수신 | NOT_RUN | 사용자 확인이 필요한 외부 제출 전 갱신 |
+| 운영 HTTP·canonical·기존 주요 페이지 | PASS | 홈·website·GEO·AI 개선·data·신규 6 URL 200, 임의 미존재 URL 404, 대표 canonical/H1 확인 |
+| Netlify Forms 실제 수신 | PASS | `main-apply`에서 2026-09-22 15:32 테스트 접수와 신규 필드·최초 랜딩·UTM 저장 확인 |
 | Lighthouse 모바일 | PASS | Performance 87, Accessibility 100, SEO 100, LCP 3.5s, CLS 0.023, TBT 0ms |
 | Lighthouse 데스크톱 | PASS | Performance 98, Accessibility 100, SEO 100, LCP 1.1s, CLS 0.002, TBT 0ms |
 
 Lighthouse Best Practices는 모바일·데스크톱 모두 77이었다. 실패 항목은 기존 네이버 분석 요청(`wcs.naver.com`, `nam.veta.naver.com`)의 서드파티 쿠키/Chrome Issues 2종이며 이번 서비스 코드의 콘솔 오류가 아니다. 재현에 필요한 핵심 결과는 `docs/seo-website/lighthouse-summary.json`에 기록했다. 이 수치는 로컬 정적 서버에서 측정한 합성 실험이며 필드 Core Web Vitals가 아니다.
 
 로컬 HTTP 확인은 신규 6 URL 모두 200, 임의 미존재 URL은 404였다.
+
+운영 폼은 `POST /__forms.html`의 200 응답 뒤 Netlify 대시보드에서 실제 접수 레코드를 열어 검증했다. `service_key=seo_website`, 업종 `청소`, 홈페이지 상태 `홈페이지 없음`, 지역 `서울 테스트 지역`, 범위 `문의 연결`, `source_landing=/seo-website/`, `utm_source=qa`, `utm_medium=codex`, `utm_campaign=seo_website_release`가 보존됐다. 이 서버 수신 검증은 브라우저의 `generate_lead` 발화 여부를 대신하지 않는다.
 
 ## 자동 검증 범위
 

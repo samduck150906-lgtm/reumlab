@@ -13,8 +13,8 @@
 | 메뉴·홈·관련 서비스·사이트맵·LLM 인덱스 | 관련 기존 파일 | PASS |
 | 자동 정적 산출물 검증 | `scripts/check-seo-website.*`, QA 문서 | PASS |
 | 브라우저 검증 | 5개 viewport, FAQ·폼, 기존 핵심 경로, Lighthouse | PASS |
-| 운영 검증 | 운영 URL, Netlify Forms | NOT_RUN |
-| 배포와 검색 등록 | Netlify, GSC, Search Advisor | NOT_RUN |
+| 운영 검증 | 운영 URL, Netlify Forms | PASS |
+| 배포와 검색 등록 | Netlify, GSC, Search Advisor | PASS — 엔진 처리 결과는 PENDING_EXTERNAL |
 
 ## 실행 결정
 
