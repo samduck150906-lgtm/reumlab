@@ -29,7 +29,13 @@ type Props = { params: { slug: string; region: string } };
  * 앞부분 `{지역} {서비스}` 는 기존 타깃 키워드라 그대로 두고(색인된 페이지 보호),
  * 뒤에 그 서비스 고유의 강점을 붙여 350개가 한 패턴으로 찍히지 않게 한다.
  */
-function regionServiceTitle(regionFull: string, service: { ko: string; titleTail: string }): string {
+function regionServiceTitle(regionFull: string, service: { slug: string; ko: string; titleTail: string }): string {
+  if (service.slug === 'web-development' && regionFull === '수원') {
+    return '수원 홈페이지 제작 | 검색 노출·문의 전환·반응형 웹 — 름랩';
+  }
+  if (service.slug === 'web-development' && regionFull === '화성') {
+    return '화성·동탄 홈페이지 제작 | 검색 노출·문의 전환 설계 — 름랩';
+  }
   return `${regionFull} ${service.ko} | ${service.titleTail}`;
 }
 /**
@@ -39,8 +45,14 @@ function regionServiceTitle(regionFull: string, service: { ko: string; titleTail
  */
 function regionServiceDescription(
   region: { full: string; access: string },
-  service: { ko: string; descLead: string; priceLine: string },
+  service: { slug: string; ko: string; descLead: string; priceLine: string },
 ): string {
+  if (service.slug === 'web-development' && region.full === '수원') {
+    return '수원 사업자의 업종과 고객 검색어에 맞춘 반응형 홈페이지를 제작합니다. 검색 노출·문의 전환·소스 이관까지 포함합니다.';
+  }
+  if (service.slug === 'web-development' && region.full === '화성') {
+    return '화성·동탄 사업자를 위한 반응형 홈페이지를 검색 노출과 문의 전환 중심으로 제작합니다. VAT 포함 98만원부터 진행합니다.';
+  }
   return `${service.descLead} ${region.full} ${service.ko} — ${region.access} ${service.priceLine}.`;
 }
 

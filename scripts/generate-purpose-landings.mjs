@@ -161,8 +161,8 @@ const FAQ_FALLBACK = [
 const LANDINGS = [
   {
     slug: 'mvp', navLabel: '앱·SaaS MVP',
-    metaTitle: '앱·SaaS MVP 개발 — 아이디어를 실제 서비스로 | 름랩 REUMLAB',
-    metaDesc: '기획서가 없어도 핵심 기능을 정리해 앱·웹·관리자까지 배포 가능한 MVP로 제작합니다. 소스코드·운영 권한 이관 포함. 름랩.',
+    metaTitle: 'MVP 개발 업체 | 앱·웹·SaaS 기획·개발·배포 — 름랩',
+    metaDesc: '기획서가 없어도 핵심 기능을 정리해 앱·웹·관리자까지 배포 가능한 MVP로 제작합니다. 소스코드와 운영 권한을 함께 이관합니다.',
     eyebrow: '앱·SaaS MVP',
     h1: '앱·웹 MVP 개발<br><span class="hl">아이디어를 직접 써볼 수 있는 서비스로</span>',
     sub: '기획서가 없어도 괜찮습니다. 핵심 기능을 정리해 앱·웹·관리자까지 실제로 배포 가능한 MVP로 제작합니다.',
@@ -214,8 +214,8 @@ const LANDINGS = [
   },
   {
     slug: 'ai-automation', navLabel: 'AI 업무 자동화',
-    metaTitle: 'AI 업무 자동화 개발 — 반복 업무를 AI 흐름으로 | 름랩 REUMLAB',
-    metaDesc: '문서 작성·검색·분류·콘텐츠·영업 업무를 회사가 실제로 쓰는 데이터와 업무 방식에 맞게 자동화합니다. 기존 서비스 AI 추가부터 AI SaaS 출시까지. 름랩.',
+    metaTitle: 'AI 업무 자동화 개발 | 문서·상담·영업 자동화 구축 — 름랩',
+    metaDesc: '문서 분류·상담·영업·보고서·콘텐츠 업무를 AI로 자동화합니다. 적용 가능한 업무, PoC 범위, 비용과 운영 방법을 안내합니다.',
     eyebrow: 'AI 업무 자동화',
     h1: 'AI 업무 자동화 개발<br><span class="hl">사람이 반복하던 일을 AI가 처리하는 흐름으로</span>',
     sub: '문서 작성, 검색, 분류, 콘텐츠 제작, 영업 업무를 회사가 실제로 쓰는 데이터와 업무 방식에 맞게 자동화합니다.',

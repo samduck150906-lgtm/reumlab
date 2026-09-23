@@ -45,7 +45,7 @@ const BASELINE = {
     path: '/',
     file: 'index.html',
     canonical: `${DOMAIN}/`,
-    title: '름랩 REUMLAB | 앱·웹·AI MVP 개발 스튜디오',
+    title: '앱·웹·AI 외주개발 | MVP 기획·배포·소스 이관 — 름랩',
     /** 홈 FAQ 는 줄어들면 안 된다(추가는 허용). 확인 시점 12문항. */
     faqMin: 12,
   },

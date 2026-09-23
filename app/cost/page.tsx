@@ -16,9 +16,9 @@ const LIST = INDUSTRIES.filter((i) => hasCost(i.slug));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: { absolute: `업종별 앱 개발 비용 ${LIST.length}개 업종 | 가격대·견적 기준 — 름랩` },
+  title: { absolute: `앱 개발 비용 | ${LIST.length}개 업종별 견적·가격 기준 — 름랩` },
   description:
-    `병원·학원·헬스장·카페·쇼핑몰부터 법무·세무까지 ${LIST.length}개 업종별 앱 개발 비용을 정리했습니다. 업종마다 간단형·표준형·고급형 가격대와 비용을 좌우하는 요인, 절감 방법까지. VAT 포함 정액·소스코드 이관·월 관리비 없음.`,
+    `병원·학원·쇼핑몰 등 ${LIST.length}개 업종의 앱 개발 비용과 간단형·표준형·고급형 견적, 비용 결정 요인을 한눈에 비교하세요.`,
   keywords: ['업종별 앱 개발 비용', '업종별 앱 견적', '앱 개발 비용', '앱 제작 비용', 'MVP 개발 비용', '앱개발 견적'],
   alternates: { canonical: CANONICAL },
   openGraph: {

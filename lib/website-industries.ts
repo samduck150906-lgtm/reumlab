@@ -480,6 +480,12 @@ export function websiteCanonical(slug: string): string {
  * 금액은 lib/pricing.ts 를 통해서만 들어온다(문장 안에 하드코딩하지 않는다).
  */
 export function websiteTitle(d: WebsiteIndustryDef): string {
+  const ctrTitle: Partial<Record<string, string>> = {
+    chigwa: '치과 홈페이지 제작 | 의료진·진료·예약·검색 노출 — 름랩',
+    byeongwon: '병원 홈페이지 제작 | 의료진·진료과목·예약·검색 노출 — 름랩',
+    yutyubeujejagsa: '영상·유튜브 제작사 홈페이지 | 포트폴리오·견적 문의 설계 — 름랩',
+  };
+  if (ctrTitle[d.slug]) return ctrTitle[d.slug]!;
   return buildWebsiteTitle(d.ko, WEBSITE_ARCHETYPES[d.category]?.pages, d.slug);
 }
 /**
@@ -497,6 +503,12 @@ function cleanSentence(text: string, ko: string): string | undefined {
 }
 
 export function websiteDescription(d: WebsiteIndustryDef): string {
+  const ctrDescription: Partial<Record<string, string>> = {
+    chigwa: '치과 소개·의료진·진료과목·진료시간·오시는 길·예약 상담을 갖춘 검색 노출형 치과 홈페이지를 정액으로 제작합니다.',
+    byeongwon: '병원 소개·의료진·진료과목·진료시간·위치·예약 상담을 환자 검색 흐름에 맞춰 구성하는 병원 홈페이지 제작 안내입니다.',
+    yutyubeujejagsa: '영상·유튜브 제작사의 포트폴리오, 제작 과정, 패키지, 고객 사례와 견적 문의를 하나의 전환 흐름으로 연결합니다.',
+  };
+  if (ctrDescription[d.slug]) return ctrDescription[d.slug]!;
   const c = buildWebsiteContent(d);
   return buildWebsiteDescription({
     ko: d.ko,
