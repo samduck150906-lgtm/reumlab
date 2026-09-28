@@ -1434,6 +1434,10 @@ body.pm-open { overflow: hidden; }
 .lx-feat-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .lx-feat-grid li { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 12px 30px; font-size: 14px; font-weight: 600; color: var(--ink); position: relative; }
 .lx-feat-grid li::before { content: ""; position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.industry-directory { margin-top: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.industry-directory summary { cursor: pointer; padding: 16px 18px; color: var(--ink); font-weight: 800; list-style-position: inside; }
+.industry-directory[open] summary { border-bottom: 1px solid var(--line); }
+.industry-directory__grid { padding: 16px; max-height: 620px; overflow: auto; }
 @media (max-width: 860px) { .lx-2col { grid-template-columns: 1fr; gap: 32px; } }
 
 .lx-bespokes { display: grid; gap: 28px; max-width: 920px; margin: 0 auto; }

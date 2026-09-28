@@ -135,6 +135,10 @@ const COST_TITLES: ((n: string, entry: string) => string)[] = [
 ];
 
 export function buildCostTitle(name: string, entryRange: string, seed: string): string {
+  const ctrTitleOverrides: Partial<Record<string, string>> = {
+    billiards: '당구장·볼링장 앱 개발비용 | 580만 원부터·기간·견적 — 름랩',
+  };
+  if (ctrTitleOverrides[seed]) return ctrTitleOverrides[seed]!;
   const entry = shortRange(entryRange);
   return clampTitle(pickVariant(COST_TITLES, seed, 'cost-title')(name, entry));
 }
@@ -185,6 +189,10 @@ const APP_TITLES: ((ko: string, feat: string) => string)[] = [
 ];
 
 export function buildAppTitle(ko: string, coreFeatures: string, seed: string): string {
+  const ctrTitleOverrides: Partial<Record<string, string>> = {
+    'cooking-class': '요리·원데이 클래스 앱 제작 | 예약·결제·580만 원부터 — 름랩',
+  };
+  if (ctrTitleOverrides[seed]) return ctrTitleOverrides[seed]!;
   const feat = headList(coreFeatures.split(/[·,]/), 2, 10) || '핵심 기능';
   return clampTitle(pickVariant(APP_TITLES, seed, 'app-title')(ko, feat));
 }

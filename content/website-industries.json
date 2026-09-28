@@ -1,0 +1,1472 @@
+[
+  {
+    "slug": "byeongwon",
+    "ko": "병원",
+    "category": "medical"
+  },
+  {
+    "slug": "chigwa",
+    "ko": "치과",
+    "category": "medical"
+  },
+  {
+    "slug": "hanuiwon",
+    "ko": "한의원",
+    "category": "medical"
+  },
+  {
+    "slug": "pibugwa",
+    "ko": "피부과",
+    "category": "medical"
+  },
+  {
+    "slug": "angwa",
+    "ko": "안과",
+    "category": "medical"
+  },
+  {
+    "slug": "ibiinhugwa",
+    "ko": "이비인후과",
+    "category": "medical"
+  },
+  {
+    "slug": "jeonghyeongoegwa",
+    "ko": "정형외과",
+    "category": "medical"
+  },
+  {
+    "slug": "naegwa",
+    "ko": "내과",
+    "category": "medical"
+  },
+  {
+    "slug": "soagwa",
+    "ko": "소아과",
+    "category": "medical"
+  },
+  {
+    "slug": "sanbuingwa",
+    "ko": "산부인과",
+    "category": "medical"
+  },
+  {
+    "slug": "binyogigwa",
+    "ko": "비뇨기과",
+    "category": "medical"
+  },
+  {
+    "slug": "jeongsingeonganguihaggwa",
+    "ko": "정신건강의학과",
+    "category": "medical"
+  },
+  {
+    "slug": "jaehwaluihaggwa",
+    "ko": "재활의학과",
+    "category": "medical"
+  },
+  {
+    "slug": "singyeongoegwa",
+    "ko": "신경외과",
+    "category": "medical"
+  },
+  {
+    "slug": "seonghyeongoegwa",
+    "ko": "성형외과",
+    "category": "medical"
+  },
+  {
+    "slug": "tongjeunguihaggwa",
+    "ko": "통증의학과",
+    "category": "medical"
+  },
+  {
+    "slug": "dongmulbyeongwon",
+    "ko": "동물병원",
+    "category": "medical"
+  },
+  {
+    "slug": "yaggug",
+    "ko": "약국",
+    "category": "medical"
+  },
+  {
+    "slug": "geonganggeomjinsenteo",
+    "ko": "건강검진센터",
+    "category": "medical"
+  },
+  {
+    "slug": "yoyangbyeongwon",
+    "ko": "요양병원",
+    "category": "medical"
+  },
+  {
+    "slug": "hagwon",
+    "ko": "학원",
+    "category": "education"
+  },
+  {
+    "slug": "eorinijib",
+    "ko": "어린이집",
+    "category": "education"
+  },
+  {
+    "slug": "yuchiwon",
+    "ko": "유치원",
+    "category": "education"
+  },
+  {
+    "slug": "yeongeohagwon",
+    "ko": "영어학원",
+    "category": "education"
+  },
+  {
+    "slug": "suhaghagwon",
+    "ko": "수학학원",
+    "category": "education"
+  },
+  {
+    "slug": "ibsihagwon",
+    "ko": "입시학원",
+    "category": "education"
+  },
+  {
+    "slug": "misulhagwon",
+    "ko": "미술학원",
+    "category": "education"
+  },
+  {
+    "slug": "eumaghagwon",
+    "ko": "음악학원",
+    "category": "education"
+  },
+  {
+    "slug": "pianohagwon",
+    "ko": "피아노학원",
+    "category": "education"
+  },
+  {
+    "slug": "taegwondojang",
+    "ko": "태권도장",
+    "category": "education"
+  },
+  {
+    "slug": "kodinghagwon",
+    "ko": "코딩학원",
+    "category": "education"
+  },
+  {
+    "slug": "yorihagwon",
+    "ko": "요리학원",
+    "category": "education"
+  },
+  {
+    "slug": "unjeonhagwon",
+    "ko": "운전학원",
+    "category": "education"
+  },
+  {
+    "slug": "dogseosil",
+    "ko": "독서실",
+    "category": "education"
+  },
+  {
+    "slug": "seuteodikape",
+    "ko": "스터디카페",
+    "category": "education"
+  },
+  {
+    "slug": "jigeobjeonmunhaggyo",
+    "ko": "직업전문학교",
+    "category": "education"
+  },
+  {
+    "slug": "yuhagwon",
+    "ko": "유학원",
+    "category": "education"
+  },
+  {
+    "slug": "gwaoe",
+    "ko": "과외",
+    "category": "education"
+  },
+  {
+    "slug": "bangmunhagseub",
+    "ko": "방문학습",
+    "category": "education"
+  },
+  {
+    "slug": "yoyangwon",
+    "ko": "요양원",
+    "category": "care"
+  },
+  {
+    "slug": "juganbohosenteo",
+    "ko": "주간보호센터",
+    "category": "care"
+  },
+  {
+    "slug": "bangmunyoyangsenteo",
+    "ko": "방문요양센터",
+    "category": "care"
+  },
+  {
+    "slug": "jaegabogjisenteo",
+    "ko": "재가복지센터",
+    "category": "care"
+  },
+  {
+    "slug": "noinbogjigwan",
+    "ko": "노인복지관",
+    "category": "care"
+  },
+  {
+    "slug": "jangaeinbogjigwan",
+    "ko": "장애인복지관",
+    "category": "care"
+  },
+  {
+    "slug": "sahoebogjigwan",
+    "ko": "사회복지관",
+    "category": "care"
+  },
+  {
+    "slug": "silbeotaun",
+    "ko": "실버타운",
+    "category": "care"
+  },
+  {
+    "slug": "sanhujoriwon",
+    "ko": "산후조리원",
+    "category": "care"
+  },
+  {
+    "slug": "sanhudoumi",
+    "ko": "산후도우미",
+    "category": "care"
+  },
+  {
+    "slug": "beibisiteo",
+    "ko": "베이비시터",
+    "category": "care"
+  },
+  {
+    "slug": "ganbyeongin",
+    "ko": "간병인",
+    "category": "care"
+  },
+  {
+    "slug": "simrisangdamsenteo",
+    "ko": "심리상담센터",
+    "category": "care"
+  },
+  {
+    "slug": "eoneochiryosenteo",
+    "ko": "언어치료센터",
+    "category": "care"
+  },
+  {
+    "slug": "baldalsenteo",
+    "ko": "발달센터",
+    "category": "care"
+  },
+  {
+    "slug": "adongsangdamsenteo",
+    "ko": "아동상담센터",
+    "category": "care"
+  },
+  {
+    "slug": "cheongsonyeonsangdamsenteo",
+    "ko": "청소년상담센터",
+    "category": "care"
+  },
+  {
+    "slug": "gajeongsangdamso",
+    "ko": "가정상담소",
+    "category": "care"
+  },
+  {
+    "slug": "jangryesigjang",
+    "ko": "장례식장",
+    "category": "funeral"
+  },
+  {
+    "slug": "sangjohoesa",
+    "ko": "상조회사",
+    "category": "funeral"
+  },
+  {
+    "slug": "helseujang",
+    "ko": "헬스장",
+    "category": "fitness"
+  },
+  {
+    "slug": "pt-shop",
+    "ko": "PT샵",
+    "category": "fitness"
+  },
+  {
+    "slug": "pilrateseu",
+    "ko": "필라테스",
+    "category": "fitness"
+  },
+  {
+    "slug": "yogawon",
+    "ko": "요가원",
+    "category": "fitness"
+  },
+  {
+    "slug": "keuroseupis",
+    "ko": "크로스핏",
+    "category": "fitness"
+  },
+  {
+    "slug": "golpeuyeonseubjang",
+    "ko": "골프연습장",
+    "category": "fitness"
+  },
+  {
+    "slug": "seukeuringolpeu",
+    "ko": "스크린골프",
+    "category": "fitness"
+  },
+  {
+    "slug": "suyeongjang",
+    "ko": "수영장",
+    "category": "fitness"
+  },
+  {
+    "slug": "teniseujang",
+    "ko": "테니스장",
+    "category": "fitness"
+  },
+  {
+    "slug": "baedeuminteonjang",
+    "ko": "배드민턴장",
+    "category": "fitness"
+  },
+  {
+    "slug": "bolringjang",
+    "ko": "볼링장",
+    "category": "fitness"
+  },
+  {
+    "slug": "danggujang",
+    "ko": "당구장",
+    "category": "fitness"
+  },
+  {
+    "slug": "keulraimingjim",
+    "ko": "클라이밍짐",
+    "category": "fitness"
+  },
+  {
+    "slug": "bogsingjang",
+    "ko": "복싱장",
+    "category": "fitness"
+  },
+  {
+    "slug": "jujissudojang",
+    "ko": "주짓수도장",
+    "category": "education"
+  },
+  {
+    "slug": "seungmajang",
+    "ko": "승마장",
+    "category": "fitness"
+  },
+  {
+    "slug": "kaempingjang",
+    "ko": "캠핑장",
+    "category": "fitness"
+  },
+  {
+    "slug": "nakksiteo",
+    "ko": "낚시터",
+    "category": "fitness"
+  },
+  {
+    "slug": "rejeoseupocheu",
+    "ko": "레저스포츠",
+    "category": "fitness"
+  },
+  {
+    "slug": "miyongsil",
+    "ko": "미용실",
+    "category": "beauty"
+  },
+  {
+    "slug": "neilsyab",
+    "ko": "네일샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "pibugwanrisyab",
+    "ko": "피부관리샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "eseutetig",
+    "ko": "에스테틱",
+    "category": "beauty"
+  },
+  {
+    "slug": "wagsingsyab",
+    "ko": "왁싱샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "sognunsseobsyab",
+    "ko": "속눈썹샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "meikeueobsyab",
+    "ko": "메이크업샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "dupigwanrisenteo",
+    "ko": "두피관리센터",
+    "category": "beauty"
+  },
+  {
+    "slug": "masajisyab",
+    "ko": "마사지샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "seupa",
+    "ko": "스파",
+    "category": "beauty"
+  },
+  {
+    "slug": "banyeonggusyab",
+    "ko": "반영구샵",
+    "category": "beauty"
+  },
+  {
+    "slug": "peoseuneolkeolreo",
+    "ko": "퍼스널컬러",
+    "category": "beauty"
+  },
+  {
+    "slug": "majchumjeongjang",
+    "ko": "맞춤정장",
+    "category": "fashion"
+  },
+  {
+    "slug": "hanbogjib",
+    "ko": "한복집",
+    "category": "fashion"
+  },
+  {
+    "slug": "wedingdeureseusyab",
+    "ko": "웨딩드레스샵",
+    "category": "fashion"
+  },
+  {
+    "slug": "uiryumaejang",
+    "ko": "의류매장",
+    "category": "fashion"
+  },
+  {
+    "slug": "sinbalmaejang",
+    "ko": "신발매장",
+    "category": "fashion"
+  },
+  {
+    "slug": "gabangmaejang",
+    "ko": "가방매장",
+    "category": "fashion"
+  },
+  {
+    "slug": "jueolrisyab",
+    "ko": "주얼리샵",
+    "category": "fashion"
+  },
+  {
+    "slug": "angyeongjeom",
+    "ko": "안경점",
+    "category": "fashion"
+  },
+  {
+    "slug": "kape",
+    "ko": "카페",
+    "category": "food"
+  },
+  {
+    "slug": "sigdang",
+    "ko": "식당",
+    "category": "food"
+  },
+  {
+    "slug": "hansigdang",
+    "ko": "한식당",
+    "category": "food"
+  },
+  {
+    "slug": "jungsigdang",
+    "ko": "중식당",
+    "category": "food"
+  },
+  {
+    "slug": "ilsigdang",
+    "ko": "일식당",
+    "category": "food"
+  },
+  {
+    "slug": "yangsigdang",
+    "ko": "양식당",
+    "category": "food"
+  },
+  {
+    "slug": "gogisjib",
+    "ko": "고깃집",
+    "category": "food"
+  },
+  {
+    "slug": "hoesjib",
+    "ko": "횟집",
+    "category": "food"
+  },
+  {
+    "slug": "bunsigjib",
+    "ko": "분식집",
+    "category": "food"
+  },
+  {
+    "slug": "chikinjib",
+    "ko": "치킨집",
+    "category": "food"
+  },
+  {
+    "slug": "pijajib",
+    "ko": "피자집",
+    "category": "food"
+  },
+  {
+    "slug": "beikeori",
+    "ko": "베이커리",
+    "category": "food"
+  },
+  {
+    "slug": "tteogjib",
+    "ko": "떡집",
+    "category": "food"
+  },
+  {
+    "slug": "dosirageobche",
+    "ko": "도시락업체",
+    "category": "food"
+  },
+  {
+    "slug": "banchangage",
+    "ko": "반찬가게",
+    "category": "food"
+  },
+  {
+    "slug": "keiteoring",
+    "ko": "케이터링",
+    "category": "food"
+  },
+  {
+    "slug": "pudeuteureog",
+    "ko": "푸드트럭",
+    "category": "food"
+  },
+  {
+    "slug": "geongangsigpum",
+    "ko": "건강식품",
+    "category": "food"
+  },
+  {
+    "slug": "sigpumjejoeob",
+    "ko": "식품제조업",
+    "category": "food"
+  },
+  {
+    "slug": "nongsanmulpanmae",
+    "ko": "농산물판매",
+    "category": "food"
+  },
+  {
+    "slug": "pensyeon",
+    "ko": "펜션",
+    "category": "lodging"
+  },
+  {
+    "slug": "hotel",
+    "ko": "호텔",
+    "category": "lodging"
+  },
+  {
+    "slug": "motel",
+    "ko": "모텔",
+    "category": "lodging"
+  },
+  {
+    "slug": "rijoteu",
+    "ko": "리조트",
+    "category": "lodging"
+  },
+  {
+    "slug": "geseuteuhauseu",
+    "ko": "게스트하우스",
+    "category": "lodging"
+  },
+  {
+    "slug": "pulbilra",
+    "ko": "풀빌라",
+    "category": "lodging"
+  },
+  {
+    "slug": "hanogseutei",
+    "ko": "한옥스테이",
+    "category": "lodging"
+  },
+  {
+    "slug": "kaempingpensyeon",
+    "ko": "캠핑펜션",
+    "category": "lodging"
+  },
+  {
+    "slug": "geulraempingjang",
+    "ko": "글램핑장",
+    "category": "lodging"
+  },
+  {
+    "slug": "minbag",
+    "ko": "민박",
+    "category": "lodging"
+  },
+  {
+    "slug": "yeohaengsa",
+    "ko": "여행사",
+    "category": "lodging"
+  },
+  {
+    "slug": "gwangwangbeoseu",
+    "ko": "관광버스",
+    "category": "lodging"
+  },
+  {
+    "slug": "renteoka",
+    "ko": "렌터카",
+    "category": "lodging"
+  },
+  {
+    "slug": "gonghangpigeob",
+    "ko": "공항픽업",
+    "category": "lodging"
+  },
+  {
+    "slug": "yuramseon",
+    "ko": "유람선",
+    "category": "lodging"
+  },
+  {
+    "slug": "gwangwangnongwon",
+    "ko": "관광농원",
+    "category": "lodging"
+  },
+  {
+    "slug": "cheheommaeul",
+    "ko": "체험마을",
+    "category": "lodging"
+  },
+  {
+    "slug": "woteopakeu",
+    "ko": "워터파크",
+    "category": "lodging"
+  },
+  {
+    "slug": "temapakeu",
+    "ko": "테마파크",
+    "category": "lodging"
+  },
+  {
+    "slug": "hyuyangrim",
+    "ko": "휴양림",
+    "category": "lodging"
+  },
+  {
+    "slug": "syopingmol",
+    "ko": "쇼핑몰",
+    "category": "retail"
+  },
+  {
+    "slug": "onrainsyopingmol",
+    "ko": "온라인쇼핑몰",
+    "category": "retail"
+  },
+  {
+    "slug": "jonghabyutongeob",
+    "ko": "종합유통업",
+    "category": "retail"
+  },
+  {
+    "slug": "domaeeob",
+    "ko": "도매업",
+    "category": "retail"
+  },
+  {
+    "slug": "somaeeob",
+    "ko": "소매업",
+    "category": "retail"
+  },
+  {
+    "slug": "pyeonuijeom",
+    "ko": "편의점",
+    "category": "retail"
+  },
+  {
+    "slug": "mateu",
+    "ko": "마트",
+    "category": "retail"
+  },
+  {
+    "slug": "jeontongsijang",
+    "ko": "전통시장",
+    "category": "retail"
+  },
+  {
+    "slug": "gagujeom",
+    "ko": "가구점",
+    "category": "retail"
+  },
+  {
+    "slug": "interieosopumsyab",
+    "ko": "인테리어소품샵",
+    "category": "retail"
+  },
+  {
+    "slug": "kkochjib",
+    "ko": "꽃집",
+    "category": "retail"
+  },
+  {
+    "slug": "seojeom",
+    "ko": "서점",
+    "category": "retail"
+  },
+  {
+    "slug": "wangujeom",
+    "ko": "완구점",
+    "category": "retail"
+  },
+  {
+    "slug": "aggijeom",
+    "ko": "악기점",
+    "category": "retail"
+  },
+  {
+    "slug": "jeonjajepummaejang",
+    "ko": "전자제품매장",
+    "category": "retail"
+  },
+  {
+    "slug": "hyudaeponmaejang",
+    "ko": "휴대폰매장",
+    "category": "retail"
+  },
+  {
+    "slug": "junggomaejang",
+    "ko": "중고매장",
+    "category": "retail"
+  },
+  {
+    "slug": "suibpanmaeeob",
+    "ko": "수입판매업",
+    "category": "retail"
+  },
+  {
+    "slug": "panchogmuleobche",
+    "ko": "판촉물업체",
+    "category": "retail"
+  },
+  {
+    "slug": "gieob",
+    "ko": "기업",
+    "category": "general"
+  },
+  {
+    "slug": "jejoeob",
+    "ko": "제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "gongjang",
+    "ko": "공장",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "gigyejejoeob",
+    "ko": "기계제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "jeonjabupumjejoeob",
+    "ko": "전자부품제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "jadongchabupumjejoeob",
+    "ko": "자동차부품제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "geumsoggagongeob",
+    "ko": "금속가공업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "peulraseutigjejoeob",
+    "ko": "플라스틱제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "pojangjaejejoeob",
+    "ko": "포장재제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "hwajangpumjejoeob",
+    "ko": "화장품제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "sigpumgagongeob",
+    "ko": "식품가공업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "uiryogigijejoeob",
+    "ko": "의료기기제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "saneobjangbieobche",
+    "ko": "산업장비업체",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "geumhyeongeobche",
+    "ko": "금형업체",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "yongjeobeobche",
+    "ko": "용접업체",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "seomyujejoeob",
+    "ko": "섬유제조업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "inswaeeobche",
+    "ko": "인쇄업체",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "mulryuhoesa",
+    "ko": "물류회사",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "muyeoghoesa",
+    "ko": "무역회사",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "seutateueob",
+    "ko": "스타트업",
+    "category": "manufacturing"
+  },
+  {
+    "slug": "geonseolhoesa",
+    "ko": "건설회사",
+    "category": "construction"
+  },
+  {
+    "slug": "jonghabgeonseoleob",
+    "ko": "종합건설업",
+    "category": "construction"
+  },
+  {
+    "slug": "jeonmungeonseoleob",
+    "ko": "전문건설업",
+    "category": "construction"
+  },
+  {
+    "slug": "interieoeobche",
+    "ko": "인테리어업체",
+    "category": "construction"
+  },
+  {
+    "slug": "rimodelringeobche",
+    "ko": "리모델링업체",
+    "category": "construction"
+  },
+  {
+    "slug": "geonchugsasamuso",
+    "ko": "건축사사무소",
+    "category": "construction"
+  },
+  {
+    "slug": "tomoghoesa",
+    "ko": "토목회사",
+    "category": "construction"
+  },
+  {
+    "slug": "jeongigongsaeobche",
+    "ko": "전기공사업체",
+    "category": "construction"
+  },
+  {
+    "slug": "seolbieobche",
+    "ko": "설비업체",
+    "category": "construction"
+  },
+  {
+    "slug": "bangsueobche",
+    "ko": "방수업체",
+    "category": "construction"
+  },
+  {
+    "slug": "dobaeeobche",
+    "ko": "도배업체",
+    "category": "construction"
+  },
+  {
+    "slug": "taileobche",
+    "ko": "타일업체",
+    "category": "construction"
+  },
+  {
+    "slug": "changhoeobche",
+    "ko": "창호업체",
+    "category": "construction"
+  },
+  {
+    "slug": "jogyeongeobche",
+    "ko": "조경업체",
+    "category": "construction"
+  },
+  {
+    "slug": "cheolgeoeobche",
+    "ko": "철거업체",
+    "category": "construction"
+  },
+  {
+    "slug": "budongsan",
+    "ko": "부동산",
+    "category": "realestate"
+  },
+  {
+    "slug": "gonginjunggaesa",
+    "ko": "공인중개사",
+    "category": "realestate"
+  },
+  {
+    "slug": "bunyangdaehaengsa",
+    "ko": "분양대행사",
+    "category": "realestate"
+  },
+  {
+    "slug": "isaeobche",
+    "ko": "이사업체",
+    "category": "realestate"
+  },
+  {
+    "slug": "ibjucheongsoeobche",
+    "ko": "입주청소업체",
+    "category": "realestate"
+  },
+  {
+    "slug": "beobmubeobin",
+    "ko": "법무법인",
+    "category": "professional"
+  },
+  {
+    "slug": "semusa",
+    "ko": "세무사",
+    "category": "professional"
+  },
+  {
+    "slug": "hoegyesa",
+    "ko": "회계사",
+    "category": "professional"
+  },
+  {
+    "slug": "beobryulsamuso",
+    "ko": "법률사무소",
+    "category": "professional"
+  },
+  {
+    "slug": "byeonhosa",
+    "ko": "변호사",
+    "category": "professional"
+  },
+  {
+    "slug": "beobmusa",
+    "ko": "법무사",
+    "category": "professional"
+  },
+  {
+    "slug": "nomusa",
+    "ko": "노무사",
+    "category": "professional"
+  },
+  {
+    "slug": "byeonrisa",
+    "ko": "변리사",
+    "category": "professional"
+  },
+  {
+    "slug": "haengjeongsa",
+    "ko": "행정사",
+    "category": "professional"
+  },
+  {
+    "slug": "gwansesa",
+    "ko": "관세사",
+    "category": "professional"
+  },
+  {
+    "slug": "gamjeongpyeonggasa",
+    "ko": "감정평가사",
+    "category": "professional"
+  },
+  {
+    "slug": "gyeongyeongkeonseolting",
+    "ko": "경영컨설팅",
+    "category": "professional"
+  },
+  {
+    "slug": "changeobkeonseolting",
+    "ko": "창업컨설팅",
+    "category": "professional"
+  },
+  {
+    "slug": "budongsankeonseolting",
+    "ko": "부동산컨설팅",
+    "category": "realestate"
+  },
+  {
+    "slug": "yutongkeonseolting",
+    "ko": "유통컨설팅",
+    "category": "retail"
+  },
+  {
+    "slug": "boheomdaerijeom",
+    "ko": "보험대리점",
+    "category": "professional"
+  },
+  {
+    "slug": "sonhaesajeongsa",
+    "ko": "손해사정사",
+    "category": "professional"
+  },
+  {
+    "slug": "sinyongjeongbohoesa",
+    "ko": "신용정보회사",
+    "category": "professional"
+  },
+  {
+    "slug": "chaegwonchusimeobche",
+    "ko": "채권추심업체",
+    "category": "professional"
+  },
+  {
+    "slug": "beonyeogsamuso",
+    "ko": "번역사무소",
+    "category": "professional"
+  },
+  {
+    "slug": "jadongcha-jeongbiso",
+    "ko": "자동차 정비소",
+    "category": "automotive"
+  },
+  {
+    "slug": "jadongchagongeobsa",
+    "ko": "자동차공업사",
+    "category": "automotive"
+  },
+  {
+    "slug": "kasenteo",
+    "ko": "카센터",
+    "category": "automotive"
+  },
+  {
+    "slug": "taieomaejang",
+    "ko": "타이어매장",
+    "category": "automotive"
+  },
+  {
+    "slug": "sechajang",
+    "ko": "세차장",
+    "category": "automotive"
+  },
+  {
+    "slug": "sonsechajang",
+    "ko": "손세차장",
+    "category": "automotive"
+  },
+  {
+    "slug": "jadongchagwangtaegeobche",
+    "ko": "자동차광택업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "jadongchatyuningsyab",
+    "ko": "자동차튜닝샵",
+    "category": "automotive"
+  },
+  {
+    "slug": "beulraegbagseumaejang",
+    "ko": "블랙박스매장",
+    "category": "automotive"
+  },
+  {
+    "slug": "jadongchayurieobche",
+    "ko": "자동차유리업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "junggochamaemaeeobche",
+    "ko": "중고차매매업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "sinchadilreo",
+    "ko": "신차딜러",
+    "category": "automotive"
+  },
+  {
+    "slug": "otobaimaejang",
+    "ko": "오토바이매장",
+    "category": "automotive"
+  },
+  {
+    "slug": "jajeongeomaejang",
+    "ko": "자전거매장",
+    "category": "automotive"
+  },
+  {
+    "slug": "hwamulunsongeobche",
+    "ko": "화물운송업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "taegbaeeobche",
+    "ko": "택배업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "kwigseobiseu",
+    "ko": "퀵서비스",
+    "category": "automotive"
+  },
+  {
+    "slug": "yongdaleobche",
+    "ko": "용달업체",
+    "category": "automotive"
+  },
+  {
+    "slug": "beoseuhoesa",
+    "ko": "버스회사",
+    "category": "automotive"
+  },
+  {
+    "slug": "juchajang",
+    "ko": "주차장",
+    "category": "automotive"
+  },
+  {
+    "slug": "wedinghol",
+    "ko": "웨딩홀",
+    "category": "event"
+  },
+  {
+    "slug": "wedingpeulraeneo",
+    "ko": "웨딩플래너",
+    "category": "event"
+  },
+  {
+    "slug": "wedingseutyudio",
+    "ko": "웨딩스튜디오",
+    "category": "event"
+  },
+  {
+    "slug": "seutyudio",
+    "ko": "스튜디오",
+    "category": "event"
+  },
+  {
+    "slug": "sajingwan",
+    "ko": "사진관",
+    "category": "event"
+  },
+  {
+    "slug": "doljanchieobche",
+    "ko": "돌잔치업체",
+    "category": "event"
+  },
+  {
+    "slug": "chuljangbwipe",
+    "ko": "출장뷔페",
+    "category": "event"
+  },
+  {
+    "slug": "patirum",
+    "ko": "파티룸",
+    "category": "event"
+  },
+  {
+    "slug": "ibenteueobche",
+    "ko": "이벤트업체",
+    "category": "event"
+  },
+  {
+    "slug": "haengsadaehaengsa",
+    "ko": "행사대행사",
+    "category": "event"
+  },
+  {
+    "slug": "jeonsigihoegsa",
+    "ko": "전시기획사",
+    "category": "event"
+  },
+  {
+    "slug": "gongyeongihoegsa",
+    "ko": "공연기획사",
+    "category": "event"
+  },
+  {
+    "slug": "eumhyangeobche",
+    "ko": "음향업체",
+    "category": "event"
+  },
+  {
+    "slug": "jomyeongeobche",
+    "ko": "조명업체",
+    "category": "event"
+  },
+  {
+    "slug": "yeongsangjejageobche",
+    "ko": "영상제작업체",
+    "category": "event"
+  },
+  {
+    "slug": "deuronchwalyeongeobche",
+    "ko": "드론촬영업체",
+    "category": "event"
+  },
+  {
+    "slug": "potobuseueobche",
+    "ko": "포토부스업체",
+    "category": "event"
+  },
+  {
+    "slug": "peulrawosyab",
+    "ko": "플라워샵",
+    "category": "event"
+  },
+  {
+    "slug": "dabryepumeobche",
+    "ko": "답례품업체",
+    "category": "event"
+  },
+  {
+    "slug": "cheongcheobjangeobche",
+    "ko": "청첩장업체",
+    "category": "event"
+  },
+  {
+    "slug": "cheongsoeobche",
+    "ko": "청소업체",
+    "category": "living"
+  },
+  {
+    "slug": "bangyeogeobche",
+    "ko": "방역업체",
+    "category": "living"
+  },
+  {
+    "slug": "sodogeobche",
+    "ko": "소독업체",
+    "category": "living"
+  },
+  {
+    "slug": "setagso",
+    "ko": "세탁소",
+    "category": "living"
+  },
+  {
+    "slug": "koinsetagso",
+    "ko": "코인세탁소",
+    "category": "living"
+  },
+  {
+    "slug": "yeolsoeeobche",
+    "ko": "열쇠업체",
+    "category": "living"
+  },
+  {
+    "slug": "doeorageobche",
+    "ko": "도어락업체",
+    "category": "living"
+  },
+  {
+    "slug": "boilreoeobche",
+    "ko": "보일러업체",
+    "category": "living"
+  },
+  {
+    "slug": "eeokeoneobche",
+    "ko": "에어컨업체",
+    "category": "living"
+  },
+  {
+    "slug": "nusutamjieobche",
+    "ko": "누수탐지업체",
+    "category": "living"
+  },
+  {
+    "slug": "hasugueobche",
+    "ko": "하수구업체",
+    "category": "living"
+  },
+  {
+    "slug": "jeongsugieobche",
+    "ko": "정수기업체",
+    "category": "living"
+  },
+  {
+    "slug": "bideeobche",
+    "ko": "비데업체",
+    "category": "living"
+  },
+  {
+    "slug": "rentaleobche",
+    "ko": "렌탈업체",
+    "category": "living"
+  },
+  {
+    "slug": "pyegimulcheorieobche",
+    "ko": "폐기물처리업체",
+    "category": "living"
+  },
+  {
+    "slug": "boaneobche",
+    "ko": "보안업체",
+    "category": "living"
+  },
+  {
+    "slug": "gyeongbieobche",
+    "ko": "경비업체",
+    "category": "living"
+  },
+  {
+    "slug": "it-company",
+    "ko": "IT기업",
+    "category": "it"
+  },
+  {
+    "slug": "sopeuteuweeogaebalsa",
+    "ko": "소프트웨어개발사",
+    "category": "it"
+  },
+  {
+    "slug": "aebgaebaleobche",
+    "ko": "앱개발업체",
+    "category": "it"
+  },
+  {
+    "slug": "webeijeonsi",
+    "ko": "웹에이전시",
+    "category": "event"
+  },
+  {
+    "slug": "gwanggodaehaengsa",
+    "ko": "광고대행사",
+    "category": "event"
+  },
+  {
+    "slug": "maketingdaehaengsa",
+    "ko": "마케팅대행사",
+    "category": "event"
+  },
+  {
+    "slug": "dijainhoesa",
+    "ko": "디자인회사",
+    "category": "it"
+  },
+  {
+    "slug": "beuraendinghoesa",
+    "ko": "브랜딩회사",
+    "category": "it"
+  },
+  {
+    "slug": "chulpansa",
+    "ko": "출판사",
+    "category": "it"
+  },
+  {
+    "slug": "inswaeso",
+    "ko": "인쇄소",
+    "category": "it"
+  },
+  {
+    "slug": "eonronsa",
+    "ko": "언론사",
+    "category": "it"
+  },
+  {
+    "slug": "yutyubeujejagsa",
+    "ko": "유튜브제작사",
+    "category": "it"
+  },
+  {
+    "slug": "mcn-agency",
+    "ko": "MCN회사",
+    "category": "it"
+  },
+  {
+    "slug": "geimhoesa",
+    "ko": "게임회사",
+    "category": "it"
+  },
+  {
+    "slug": "solrusyeoneobche",
+    "ko": "솔루션업체",
+    "category": "it"
+  },
+  {
+    "slug": "hoseutingeobche",
+    "ko": "호스팅업체",
+    "category": "it"
+  },
+  {
+    "slug": "deiteoboggueobche",
+    "ko": "데이터복구업체",
+    "category": "it"
+  },
+  {
+    "slug": "keompyuteosurieobche",
+    "ko": "컴퓨터수리업체",
+    "category": "it"
+  },
+  {
+    "slug": "teugheosamuso",
+    "ko": "특허사무소",
+    "category": "it"
+  },
+  {
+    "slug": "yeonguso",
+    "ko": "연구소",
+    "category": "it"
+  }
+]

@@ -161,8 +161,8 @@ const FAQ_FALLBACK = [
 const LANDINGS = [
   {
     slug: 'mvp', navLabel: '앱·SaaS MVP',
-    metaTitle: 'MVP 개발 업체 | 앱·웹·SaaS 기획·개발·배포 — 름랩',
-    metaDesc: '기획서가 없어도 핵심 기능을 정리해 앱·웹·관리자까지 배포 가능한 MVP로 제작합니다. 소스코드와 운영 권한을 함께 이관합니다.',
+    metaTitle: 'MVP 개발업체 | 비용·기간·소스코드 이관 기준 — 름랩',
+    metaDesc: '기획서가 없어도 핵심 기능을 정리해 앱·웹·관리자까지 배포 가능한 MVP로 제작합니다. 비용과 기간을 먼저 정하고 소스코드·운영 권한을 함께 이관합니다.',
     eyebrow: '앱·SaaS MVP',
     h1: '앱·웹 MVP 개발<br><span class="hl">아이디어를 직접 써볼 수 있는 서비스로</span>',
     sub: '기획서가 없어도 괜찮습니다. 핵심 기능을 정리해 앱·웹·관리자까지 실제로 배포 가능한 MVP로 제작합니다.',
@@ -841,32 +841,23 @@ const BASE_REGIONS = [
  * lib/pseo.ts 의 SERVICES[].industryLinks 와 같은 역할 — 이 파일은 Next 번들 밖이라
  * import 할 수 없어 같은 URL 을 손으로 맞춘다. (실재 여부는 빌드 후 검증 스크립트가 확인)
  */
-/*
-  ⚠️ /website/ 는 Next 라우트(app/website/page.tsx)가 업종 294개를 전부 나열하는
-     인덱스를 만들지만, 이 생성기가 같은 경로를 덮어써서 그 인덱스는 배포되지 않는다.
-     그 결과 /website/<업종>/ 194개가 서로만 링크하는 사슬이 되어 홈 기준 깊이 6~16 에 있었다.
-     아래 items 로 카테고리별 대표 업종을 노출해 사슬 시작점을 앞으로 당긴다.
-     (근본 해결 — 별도 업종 인덱스 URL 을 둘지 — 는 IA 결정이라 보고서 REPORT ONLY 로 남긴다.)
-*/
+const WEBSITE_INDUSTRIES = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'content', 'website-industries.json'), 'utf8'),
+);
+const FEATURED_WEBSITE_SLUGS = [
+  'kape', 'sigdang', 'pensyeon', 'syopingmol', 'jejoeob', 'geonseolhoesa', 'budongsan',
+  'beobmubeobin', 'semusa', 'jadongcha-jeongbiso', 'wedinghol', 'cheongsoeobche', 'it-company', 'gieob',
+];
+const featuredWebsiteSet = new Set(FEATURED_WEBSITE_SLUGS);
+const websiteLinks = WEBSITE_INDUSTRIES.map((industry) => ({
+  href: `/website/${industry.slug}/`,
+  label: `${industry.ko} 홈페이지 제작`,
+}));
+
 const INDUSTRY_LINKS = {
   website: {
-    index: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
-    items: [
-      { href: '/website/kape/', label: '카페 홈페이지 제작' },
-      { href: '/website/sigdang/', label: '식당 홈페이지 제작' },
-      { href: '/website/pensyeon/', label: '펜션 홈페이지 제작' },
-      { href: '/website/syopingmol/', label: '쇼핑몰 홈페이지 제작' },
-      { href: '/website/jejoeob/', label: '제조업 홈페이지 제작' },
-      { href: '/website/geonseolhoesa/', label: '건설회사 홈페이지 제작' },
-      { href: '/website/budongsan/', label: '부동산 홈페이지 제작' },
-      { href: '/website/beobmubeobin/', label: '법무법인 홈페이지 제작' },
-      { href: '/website/semusa/', label: '세무사 홈페이지 제작' },
-      { href: '/website/jadongcha-jeongbiso/', label: '자동차 정비소 홈페이지 제작' },
-      { href: '/website/wedinghol/', label: '웨딩홀 홈페이지 제작' },
-      { href: '/website/cheongsoeobche/', label: '청소업체 홈페이지 제작' },
-      { href: '/website/it-company/', label: 'IT기업 홈페이지 제작' },
-      { href: '/website/gieob/', label: '기업 홈페이지 제작' },
-    ],
+    items: websiteLinks.filter((item) => featuredWebsiteSet.has(item.href.split('/')[2])),
+    moreItems: websiteLinks.filter((item) => !featuredWebsiteSet.has(item.href.split('/')[2])),
   },
   mvp: {
     index: { href: '/cost/', label: '업종별 개발 비용 전체 보기' },
@@ -920,7 +911,10 @@ function regionLinks(land) {
     <ul class="lx-feat-grid">
 ${ind.items.map((i) => `        <li><a href="${i.href}">${esc(i.label)}</a></li>`).join('\n')}
     </ul>
-    <p style="margin-top:14px"><a href="${ind.index.href}">${esc(ind.index.label)} →</a></p>
+    ${ind.moreItems?.length ? `<details class="industry-directory"><summary>전체 업종 보기 (${ind.items.length + ind.moreItems.length}개)</summary><ul class="lx-feat-grid industry-directory__grid">
+${ind.moreItems.map((i) => `        <li><a href="${i.href}">${esc(i.label)}</a></li>`).join('\n')}
+    </ul></details>` : ''}
+    ${ind.index ? `<p style="margin-top:14px"><a href="${ind.index.href}">${esc(ind.index.label)} →</a></p>` : ''}
   </div></section>`
     : '';
   const regionSection = regions

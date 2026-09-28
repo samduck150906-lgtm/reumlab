@@ -4,7 +4,9 @@ import test from 'node:test';
 
 import { getBlogPostBySlug, blogShouldIndex } from '../lib/blog-posts';
 import { getGuide } from '../lib/guides';
+import { buildAppTitle, buildCostTitle } from '../lib/search-intent';
 import { PAGE_SEO_MAP } from '../lib/seo';
+import { WEBSITE_INDUSTRIES, websiteDecision } from '../lib/website-industries';
 
 const CRITICAL_BLOG_SLUG = 'app-gaebal-biyong-julineun-bab';
 
@@ -61,4 +63,33 @@ test('기존 비용·가격·견적 랜딩의 단일 301 도착점이 비용 계
   assert.ok(guide);
   assert.match(guide.title, /앱개발 비용 계산법/);
   assert.match(guide.description, /화면·기능·관리자·결제·외부 연동/);
+});
+
+test('네이버 노출 대비 클릭이 낮은 전환 페이지는 비용·기간·이관 기준을 제목에서 답한다', () => {
+  assert.match(PAGE_SEO_MAP['app-agency'].title, /앱개발 ?업체 비교/);
+  assert.match(PAGE_SEO_MAP['app-agency'].title, /580만 원부터/);
+  assert.match(PAGE_SEO_MAP['app-agency'].description, /14일/);
+
+  assert.equal(
+    buildCostTitle('당구장·볼링장 앱 개발 비용', 'VAT 포함 580만 원대~', 'billiards'),
+    '당구장·볼링장 앱 개발비용 | 580만 원부터·기간·견적 — 름랩',
+  );
+  assert.equal(
+    buildAppTitle('요리·원데이 클래스', '클래스 예약·결제·강사 일정', 'cooking-class'),
+    '요리·원데이 클래스 앱 제작 | 예약·결제·580만 원부터 — 름랩',
+  );
+});
+
+test('/website/ 허브는 색인 대상 업종 페이지를 한 번에 발견할 수 있게 모두 직접 연결한다', () => {
+  const html = readFileSync(new URL('../out/website/index.html', import.meta.url), 'utf8');
+  const indexable = WEBSITE_INDUSTRIES.filter((industry) => websiteDecision(industry.slug)?.shouldIndex);
+
+  assert.ok(indexable.length >= 100, '색인 대상 업종 목록이 비정상적으로 작지 않아야 한다');
+  for (const industry of indexable) {
+    assert.match(
+      html,
+      new RegExp(`href=["']\\/website\\/${industry.slug}\\/["']`),
+      `${industry.slug}가 /website/ 허브에서 직접 연결돼야 한다`,
+    );
+  }
 });
