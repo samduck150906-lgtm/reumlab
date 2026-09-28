@@ -21,7 +21,10 @@ const PAGE = join('ai-search-optimization', 'index.html');
 const ready = existsSync(join(OUT, PAGE));
 
 function runGate(dir: string) {
-  const r = spawnSync(process.execPath, [GATE, dir], { encoding: 'utf8' });
+  const r = spawnSync(process.execPath, [GATE, dir], {
+    encoding: 'utf8',
+    env: { ...process.env, SEO_NETLIFY_CONFIG: join(dir, 'netlify.toml') },
+  });
   return { code: r.status ?? -1, output: `${r.stdout}\n${r.stderr}` };
 }
 
@@ -36,6 +39,7 @@ function makeFixture(): string {
   for (const f of ['__forms.html', 'index.html', 'llms.txt', 'llms-full.txt', 'og-ai-search-architecture.jpg']) {
     if (existsSync(join(OUT, f))) cpSync(join(OUT, f), join(dir, f));
   }
+  cpSync('netlify.toml', join(dir, 'netlify.toml'));
   for (const f of readdirSync(OUT).filter((x) => /^sitemap.*\.xml$/.test(x))) cpSync(join(OUT, f), join(dir, f));
 
   const html = readFileSync(join(OUT, PAGE), 'utf8');
@@ -56,15 +60,16 @@ function makeFixture(): string {
 }
 
 /** fixture 를 만들고 파일을 변형한 뒤 게이트를 돌린다. */
-function withDefect(edit: (files: { page: string; forms: string; home: string; llms: string }) => Partial<{ page: string; forms: string; home: string; llms: string }>) {
+function withDefect(edit: (files: { page: string; forms: string; home: string; llms: string; config: string }) => Partial<{ page: string; forms: string; home: string; llms: string; config: string }>) {
   const dir = makeFixture();
   try {
     const read = (f: string) => (existsSync(join(dir, f)) ? readFileSync(join(dir, f), 'utf8') : '');
-    const next = edit({ page: read(PAGE), forms: read('__forms.html'), home: read('index.html'), llms: read('llms.txt') });
+    const next = edit({ page: read(PAGE), forms: read('__forms.html'), home: read('index.html'), llms: read('llms.txt'), config: read('netlify.toml') });
     if (next.page !== undefined) writeFileSync(join(dir, PAGE), next.page);
     if (next.forms !== undefined) writeFileSync(join(dir, '__forms.html'), next.forms);
     if (next.home !== undefined) writeFileSync(join(dir, 'index.html'), next.home);
     if (next.llms !== undefined) writeFileSync(join(dir, 'llms.txt'), next.llms);
+    if (next.config !== undefined) writeFileSync(join(dir, 'netlify.toml'), next.config);
     return runGate(dir);
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -97,6 +102,14 @@ describe('verify-ai-search-page 게이트', { skip: ready ? false : 'out/ 없음
     const r = withDefect(({ page }) => ({ page: page.replace('</head>', '<link rel="canonical" href="https://reumlab.com/ai-search-optimization/"/></head>') }));
     assert.notEqual(r.code, 0);
     assert.match(r.output, /canonical 2개/);
+  });
+
+  test('Netlify HTTP canonical 헤더가 빠지면 실패', () => {
+    const r = withDefect(({ config }) => ({
+      config: config.replace(/\r?\n\[\[headers\]\]\r?\n  for = "\/ai-search-optimization\/"\r?\n  \[headers\.values\]\r?\n    Link = "[^\"]+"\r?\n?/, '\n'),
+    }));
+    assert.notEqual(r.code, 0);
+    assert.match(r.output, /HTTP canonical/);
   });
 
   test('noindex 가 섞이면 실패', () => {

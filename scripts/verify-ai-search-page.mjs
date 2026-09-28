@@ -22,6 +22,7 @@
  *  13 CSS 전용 상호작용 유지     14 상담 폼 필드·정적 감지 폼 동기화
  *  15 사이트맵·메뉴·llms 등록    16 /geo-website/ 양방향 링크
  *  17 H1 1개·헤딩 계층          18 표 caption/th scope
+ *  19 Netlify HTTP canonical 헤더가 HTML canonical 과 일치
  *
  * 범위를 좁힌 부분
  *  사이트 전체 canonical·자기잠식·전역 가격 일관성은 seo:audit:index · seo:verify ·
@@ -36,11 +37,13 @@ const args = process.argv.slice(2);
 const OUT = args.find((a) => !a.startsWith('--')) || 'out';
 const jsonIdx = args.indexOf('--json');
 const JSON_PATH = jsonIdx >= 0 ? args[jsonIdx + 1] : null;
+const NETLIFY_CONFIG = process.env.SEO_NETLIFY_CONFIG || 'netlify.toml';
 
 const DOMAIN = 'https://reumlab.com';
 const PATHNAME = '/ai-search-optimization/';
 const FILE = 'ai-search-optimization/index.html';
 const CANONICAL = `${DOMAIN}${PATHNAME}`;
+const HTTP_CANONICAL = `<${CANONICAL}>; rel=canonical`;
 
 const fail = [];
 const warn = [];
@@ -493,6 +496,22 @@ const nodes = [];
   if (dup.length) add(fail, 'a11y', `중복 id: ${[...new Set(dup)].join(', ')}`);
 }
 
+// ── 19 Netlify HTTP canonical ─────────────────────────────────────
+{
+  if (!existsSync(NETLIFY_CONFIG)) {
+    add(fail, 'HTTP canonical', `Netlify 설정 파일 없음: ${NETLIFY_CONFIG}`);
+  } else {
+    const config = readFileSync(NETLIFY_CONFIG, 'utf8');
+    const blocks = config.split(/(?=\[\[headers\]\])/g);
+    const route = blocks.find((block) => new RegExp(`^\\[\\[headers\\]\\][\\s\\S]*?^\\s*for\\s*=\\s*["']${PATHNAME.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["']`, 'm').test(block));
+    const link = route?.match(/^\s*Link\s*=\s*["']([^"']+)["']/m)?.[1] ?? '';
+    report.httpCanonical = link;
+    if (link !== HTTP_CANONICAL) {
+      add(fail, 'HTTP canonical', `${PATHNAME} Link 헤더가 HTML canonical 과 다름: ${link || 'missing'}`);
+    }
+  }
+}
+
 // ── 결과 ─────────────────────────────────────────────────────────
 const line = '─'.repeat(52);
 console.log(`\nAI Search Architecture 페이지 회귀 검사 (${OUT}${PATHNAME})`);
@@ -508,6 +527,7 @@ console.log(`  상호작용     범위 radio ${report.scopeRadios}/카드 ${repo
 console.log(`  상담 폼      필드 ${report.formFields}개 (정적 감지 폼과 동기화 확인)`);
 console.log(`  링크·구조    내부 링크 ${report.internalLinks} · h1 ${report.h1} · 헤딩 ${report.headings} · 표 ${report.tables} · id ${report.htmlIds}`);
 console.log(`  등록         사이트맵 ${report.inSitemap ? '예' : '아니오'} · llms.txt · 홈 메뉴`);
+console.log(`  HTTP canonical ${report.httpCanonical || 'missing'}`);
 console.log(line);
 
 if (JSON_PATH) {

@@ -9,6 +9,11 @@
   command = "npm run build && npm run seo:indexnow"
 
 [[headers]]
+  for = "/ai-search-optimization/"
+  [headers.values]
+    Link = "<https://reumlab.com/ai-search-optimization/>; rel=canonical"
+
+[[headers]]
   for = "/fonts/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
