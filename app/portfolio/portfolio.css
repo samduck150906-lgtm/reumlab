@@ -433,6 +433,9 @@
 }
 .pfh-cta__links a,
 .pfd-cta__links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 11px 20px;
   border-radius: 999px;
   background: var(--green);
@@ -444,6 +447,12 @@
 .pfh-cta__links a:hover,
 .pfd-cta__links a:hover {
   background: var(--green-light);
+}
+.pfh a:focus-visible,
+.pfd a:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 @media (max-width: 640px) {

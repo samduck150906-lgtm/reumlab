@@ -119,4 +119,3 @@
 - [ ] Submit only changed sitemap URLs through IndexNow.
 - [ ] If the authenticated Search Advisor session is available, confirm sitemap status and request collection for at most three P0 URLs.
 - [ ] Report indexing as `UNVERIFIED` until the engine confirms it.
-

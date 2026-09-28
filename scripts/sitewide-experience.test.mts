@@ -82,7 +82,6 @@ test('reports missing landmarks, NAP, H1, protected URLs, portfolio footer, and 
     rmSync(root, { recursive: true, force: true });
   }
 });
-
 test('accepts an encoded sitemap path and a contextual inbound link', () => {
   const root = mkdtempSync(join(tmpdir(), 'reumlab-experience-'));
   try {
@@ -102,4 +101,3 @@ test('accepts an encoded sitemap path and a contextual inbound link', () => {
     rmSync(root, { recursive: true, force: true });
   }
 });
-

@@ -58,4 +58,3 @@ Run the existing test, typecheck, build, NEO, SEO, conversion, canonical, conten
 5. Build and run every regression gate.
 6. Visually inspect representative page families.
 7. Commit, push, deploy, verify production, submit changed URLs, and report account-bound steps separately.
-
