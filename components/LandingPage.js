@@ -25,7 +25,8 @@ export default function LandingPage({ slug }) {
   ];
 
   return (
-    <div className="bg-white font-sans text-slate-800">
+    <>
+      <main className="bg-white font-sans text-slate-800">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 px-5 pb-20 pt-28 sm:px-6 sm:pb-24 sm:pt-32">
         <div
@@ -330,7 +331,8 @@ export default function LandingPage({ slug }) {
         </div>
       </section>
 
+      </main>
       <BusinessFooter />
-    </div>
+    </>
   );
 }

@@ -11,6 +11,7 @@ import {
   PORTFOLIO_HUB,
 } from '@/lib/portfolio';
 import { BreadcrumbJsonLdTrail, HOME_CRUMB } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 /*
   개발 사례 허브.
@@ -46,7 +47,8 @@ export const metadata: Metadata = {
 
 export default function PortfolioHub() {
   return (
-    <main className="pfh">
+    <>
+      <main className="pfh">
       <BreadcrumbJsonLdTrail items={[HOME_CRUMB, { name: '개발 사례', url: PORTFOLIO_HUB }]} />
 
       <nav className="pfh-crumb" aria-label="breadcrumb">
@@ -141,6 +143,8 @@ export default function PortfolioHub() {
           <li><Link href="/data-seo/">데이터·SEO 시스템 구축</Link></li>
         </ul>
       </nav>
-    </main>
+      </main>
+      <BusinessFooter />
+    </>
   );
 }

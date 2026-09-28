@@ -118,7 +118,7 @@ export default function SeoWebsitePage() {
           <div className={styles.wrap}>
             <header className={styles.sectionHeader}><h2>제작 비용은 필요한 범위에 따라 정합니다.</h2></header>
             <div className={styles.priceBox}><strong>범위 확인 후 개별 견적</strong><p>페이지 수, 콘텐츠 준비 상태, 관리 기능과 외부 연동을 확인해 포함·제외 항목을 구분해 안내합니다.</p></div>
-            <div className={styles.links} style={{ marginTop: 20 }}><Link href="/seo-website/cost/">비용 결정 요소와 견적 체크리스트</Link><Link href="/seo-website/guides/seo-checklist/">견적 전에 확인할 10가지</Link></div>
+            <div className={styles.links} style={{ marginTop: 20 }}><Link href="/seo-website/cost/">비용 결정 요소와 견적 체크리스트</Link><Link href="/seo-website/guides/seo-checklist/">견적 전에 확인할 10가지</Link><Link href="/seo-website/guides/search-registration/">구글·네이버 검색 등록 절차</Link></div>
           </div>
         </section>
 

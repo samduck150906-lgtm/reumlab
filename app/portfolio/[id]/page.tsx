@@ -16,6 +16,7 @@ import {
   PORTFOLIO_HUB,
 } from '@/lib/portfolio';
 import { PortfolioCreativeWorkJsonLd, HOME_CRUMB } from '@/components/JsonLd';
+import BusinessFooter from '@/components/BusinessFooter';
 
 /*
   개발 사례 상세.
@@ -68,7 +69,8 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
   const hasAdminArtifact = cats.some((cat) => cat === 'web' || cat === 'erp');
 
   return (
-    <main className="pfd">
+    <>
+      <main className="pfd">
       <PortfolioCreativeWorkJsonLd
         name={`${p.title} 개발 사례`}
         description={portfolioDescription(p)}
@@ -250,6 +252,8 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
           </a>
         </p>
       </section>
-    </main>
+      </main>
+      <BusinessFooter />
+    </>
   );
 }

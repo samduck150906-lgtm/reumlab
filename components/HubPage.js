@@ -37,7 +37,8 @@ export default function HubPage({ hubSlug }) {
   const landings = [...new Set([...(hub.landings || []), ...absorbed])].slice(0, 60);
 
   return (
-    <div className="bg-white font-sans text-slate-800">
+    <>
+      <main className="bg-white font-sans text-slate-800">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 px-5 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32">
         <div
@@ -151,7 +152,8 @@ export default function HubPage({ hubSlug }) {
         </div>
       </section>
 
+      </main>
       <BusinessFooter />
-    </div>
+    </>
   );
 }
