@@ -844,6 +844,9 @@ const BASE_REGIONS = [
 const WEBSITE_INDUSTRIES = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'content', 'website-industries.json'), 'utf8'),
 );
+const AUTOMATION_DOMAINS = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'content', 'automation-domains.json'), 'utf8'),
+);
 const FEATURED_WEBSITE_SLUGS = [
   'kape', 'sigdang', 'pensyeon', 'syopingmol', 'jejoeob', 'geonseolhoesa', 'budongsan',
   'beobmubeobin', 'semusa', 'jadongcha-jeongbiso', 'wedinghol', 'cheongsoeobche', 'it-company', 'gieob',
@@ -891,6 +894,74 @@ ${links.map((l) => `        <li><a href="${l.href}">${esc(l.label)}</a></li>`).j
     </ul>
     <p style="margin-top:14px"><a href="/guide/">개발 가이드 전체 보기 →</a></p>
   </div></section>`;
+}
+
+/**
+ * 70개 업무자동화 연구 분야 디렉터리.
+ * 공개 품질 게이트를 통과한 항목만 링크하고, 나머지는 URL 없이 상담 가능 분야로 표시한다.
+ * 전체 목록은 서버 HTML에 있어 JS가 꺼져도 읽을 수 있고, 검색·필터만 점진적으로 보강한다.
+ */
+function automationDirectory(land) {
+  if (land.slug !== 'ai-automation') return '';
+  const categories = [...new Set(AUTOMATION_DOMAINS.map((item) => item.category))];
+  const filterButtons = ['전체', ...categories]
+    .map((category, index) => `<button type="button" class="auto-filter${index === 0 ? ' is-active' : ''}" data-automation-filter="${esc(category)}" aria-pressed="${index === 0 ? 'true' : 'false'}">${esc(category)}</button>`)
+    .join('');
+  const items = AUTOMATION_DOMAINS.map((item) => {
+    const heading = item.published
+      ? `<h3><a href="${esc(item.href)}">${esc(item.name)} <span aria-hidden="true">→</span></a></h3>`
+      : `<h3>${esc(item.name)}</h3><span class="auto-item__status">업무 확인 후 설계</span>`;
+    const searchText = [item.name, item.category, item.shortDescription, ...item.tools].join(' ').toLowerCase();
+    return `<article class="auto-item" data-automation-category="${esc(item.category)}" data-automation-search="${esc(searchText)}">
+      <div class="auto-item__head"><span class="auto-item__category">${esc(item.category)}</span>${heading}</div>
+      <p>${esc(item.shortDescription)}</p>
+      <p class="auto-item__tools">${item.tools.map(esc).join(' · ')}</p>
+    </article>`;
+  }).join('');
+
+  return `<section class="section section--soft" id="automation-directory"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">70 AUTOMATION DOMAINS</span><h2 class="sec-title">어떤 업무를 자동화하고 싶으세요?</h2><p class="sec-sub">프로그램명이나 반복 업무를 검색해 보세요. 별도 상세 설명이 준비된 분야만 링크하며, 나머지는 같은 페이지에서 업무를 적어 상담할 수 있습니다.</p></div>
+    <div class="auto-controls">
+      <label for="automation-search">프로그램·업무 검색</label>
+      <input id="automation-search" type="search" inputmode="search" autocomplete="off" placeholder="예: Cubase, AutoCAD, Excel, 견적서, 스마트스토어">
+      <div class="auto-filters" aria-label="산업 필터">${filterButtons}</div>
+    </div>
+    <div class="auto-directory" aria-live="polite">${items}</div>
+    <p class="auto-empty" hidden>일치하는 분야가 없습니다. 사용 중인 프로그램과 반복 업무를 문의란에 적어 주세요.</p>
+    <noscript><p class="auto-noscript">검색 기능 없이도 아래 70개 분야 전체를 확인할 수 있습니다.</p></noscript>
+  </div>
+  <script>
+  (() => {
+    const root = document.getElementById('automation-directory');
+    if (!root) return;
+    const input = root.querySelector('#automation-search');
+    const items = [...root.querySelectorAll('[data-automation-search]')];
+    const buttons = [...root.querySelectorAll('[data-automation-filter]')];
+    const empty = root.querySelector('.auto-empty');
+    let category = '전체';
+    const apply = () => {
+      const query = String(input && input.value || '').trim().toLowerCase();
+      let visible = 0;
+      for (const item of items) {
+        const categoryMatch = category === '전체' || item.dataset.automationCategory === category;
+        const searchMatch = !query || String(item.dataset.automationSearch || '').includes(query);
+        item.hidden = !(categoryMatch && searchMatch);
+        if (!item.hidden) visible += 1;
+      }
+      if (empty) empty.hidden = visible !== 0;
+    };
+    input && input.addEventListener('input', apply);
+    for (const button of buttons) button.addEventListener('click', () => {
+      category = button.dataset.automationFilter || '전체';
+      for (const peer of buttons) {
+        const active = peer === button;
+        peer.classList.toggle('is-active', active);
+        peer.setAttribute('aria-pressed', String(active));
+      }
+      apply();
+    });
+  })();
+  </script></section>`;
 }
 
 function regionLinks(land) {
@@ -1019,6 +1090,7 @@ ${feats}
 </section>
 
 ${bespoke ? `<section class="section"><div class="wrap"><div class="lx-bespokes">${bespoke}</div></div></section>` : ''}
+${automationDirectory(land)}
 
 ${cases}
 ${guideLinks(land)}

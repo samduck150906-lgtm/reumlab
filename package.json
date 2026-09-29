@@ -4,7 +4,7 @@
   "description": "REUMLAB SEO 키워드 랜딩 자동생성 시스템",
   "type": "module",
   "scripts": {
-    "prebuild": "node scripts/generate-landings.mjs && node scripts/extract-portfolio.mjs && npx tsx scripts/extract-content-cluster.mjs && npx tsx scripts/extract-website-industries.mjs && npm run gen:automation-keywords",
+    "prebuild": "node scripts/generate-landings.mjs && node scripts/extract-portfolio.mjs && npx tsx scripts/extract-content-cluster.mjs && npx tsx scripts/extract-website-industries.mjs && npx tsx scripts/extract-automation-domains.mts && npm run gen:automation-keywords",
     "dev": "next dev",
     "gen:feed": "tsx scripts/generate-feed.mts",
     "gen:automation-keywords": "tsx scripts/generate-automation-keywords.mts",
