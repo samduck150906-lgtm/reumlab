@@ -47,3 +47,22 @@ test('AEO 자연어 질문은 분야별 30개 이상이며 질문형으로 끝�
     assert.ok(domainRows.every((row) => row.question.endsWith('?')));
   }
 });
+
+test('한국 사용자가 입력하는 제품명·업무 별칭을 연구 DB에 보존한다', () => {
+  const keywords = new Set(generateAutomationKeywords().map((row) => row.normalizedKeyword));
+  for (const expected of [
+    '큐베이스 자동화',
+    '멜로다인 자동화',
+    '보컬 튠 자동화',
+    '믹싱 자동화',
+    '프리미어 프로 자동화',
+    '오토캐드 자동화',
+    '레빗 자동화',
+    '엑셀 자동화',
+    '구글 시트 자동화',
+    '스마트스토어 자동화',
+    '카페24 자동화',
+  ]) {
+    assert.ok(keywords.has(expected), expected);
+  }
+});

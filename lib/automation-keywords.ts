@@ -47,6 +47,20 @@ const QUESTION_PATTERNS = [
   (tool: string, task: string) => `${task} 결과를 사람이 검수하도록 만들 수 있나요?`,
 ];
 
+/** 영문 제품명만으로 놓치기 쉬운 국내 검색 표현. 페이지 수가 아니라 연구 후보만 늘린다. */
+const KOREAN_SEARCH_ALIASES: Record<string, string[]> = {
+  'music-daw': ['큐베이스', '멜로다인', '보컬 튠', '믹싱', '마스터링'],
+  'video-editing': ['프리미어', '프리미어 프로', '다빈치 리졸브', '영상 편집'],
+  autocad: ['오토캐드', '캐드', 'DWG 도면'],
+  'revit-bim': ['레빗', 'BIM'],
+  excel: ['엑셀', 'VBA'],
+  'google-sheets': ['구글 시트', '구글 스프레드시트', '앱스 스크립트'],
+  'naver-smartstore': ['스마트스토어', '네이버 스마트스토어'],
+  cafe24: ['카페24'],
+  shopify: ['쇼피파이'],
+  'ai-voice': ['전화 상담', 'AI 전화 상담'],
+};
+
 const BUYER_BY_CATEGORY: Record<string, string> = {
   콘텐츠: '콘텐츠 제작팀·스튜디오·마케팅 담당자',
   설계: '설계사무소·건설사·제조 설계팀',
@@ -112,6 +126,40 @@ export function generateAutomationKeywords(): AutomationKeywordRow[] {
             rationale: '프로그램·실제 업무·개발 또는 구매 의도를 함께 포함한 검색 후보. 별도 URL이 아니라 동일 의도 cluster로 통합한다.',
           });
         }
+      }
+    }
+
+    for (const alias of KOREAN_SEARCH_ALIASES[domain.slug] ?? []) {
+      for (const variant of [
+        { suffix: '자동화', intent: 'informational' as const, funnel: 'TOFU' as const },
+        { suffix: '자동화 프로그램 개발', intent: 'commercial' as const, funnel: 'MOFU' as const },
+        { suffix: '연동 개발', intent: 'commercial' as const, funnel: 'MOFU' as const },
+        { suffix: '프로그램 외주', intent: 'transactional' as const, funnel: 'BOFU' as const },
+        { suffix: '개발 견적', intent: 'transactional' as const, funnel: 'BOFU' as const },
+      ]) {
+        const keyword = `${alias} ${variant.suffix}`;
+        const normalizedKeyword = normalizeAutomationKeyword(keyword);
+        if (globalKeys.has(normalizedKeyword)) continue;
+        globalKeys.add(normalizedKeyword);
+        rows.push({
+          domain: domain.slug,
+          category: domain.category,
+          keyword,
+          normalizedKeyword,
+          language: 'ko',
+          tool: alias,
+          task: domain.tasks[0],
+          buyer: BUYER_BY_CATEGORY[domain.category] ?? '반복 업무를 운영하는 기업 담당자',
+          intent: variant.intent,
+          funnel: variant.funnel,
+          serviceType: domain.name,
+          clusterId: `automation:${domain.slug}`,
+          targetPage,
+          priority: domain.priority,
+          confidence: domain.priority === 'S' ? 'high' : 'medium',
+          indexableCandidate: domain.publishMode !== 'research-only',
+          rationale: '국내 사용자가 영문 제품명 대신 입력하는 한글 별칭. 같은 서비스 cluster로 통합한다.',
+        });
       }
     }
   }
