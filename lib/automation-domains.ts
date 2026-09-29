@@ -66,7 +66,7 @@ const EXISTING_TARGETS: Record<string, string> = {
  * 공개 페이지의 고유 workflow와 기술 타당성 설명을 만드는 편집 데이터로 사용한다.
  */
 const SEEDS: DomainSeed[] = [
-  ['music-daw', '음악·DAW 자동화', '콘텐츠', 'Cubase|Melodyne|Logic Pro|Pro Tools|Ableton Live|FL Studio|Studio One|Reaper|VST3|MIDI', 'MIDI 패턴 생성|트랙·파일명 정리|Stem 일괄 출력|보컬 피치·타이밍 전처리|BPM·Key 분석|믹싱 프리셋 적용', 'DAW 내부 기능은 제품별 플러그인 규격과 파일 교환 범위가 달라 UI 조작만으로 동일하게 구현할 수 없다.'],
+  ['music-daw', '음악·DAW 자동화', '콘텐츠', 'Cubase|Melodyne|Logic Pro|Pro Tools|Ableton Live|FL Studio|Studio One|Reaper|VST3|MIDI', 'MIDI 패턴 생성|트랙·파일명 정리|Stem 일괄 출력|보컬 피치·타이밍 전처리|BPM·Key 분석|Mixing 프리셋 적용', 'DAW 내부 기능은 제품별 플러그인 규격과 파일 교환 범위가 달라 UI 조작만으로 동일하게 구현할 수 없다.'],
   ['video-editing', '영상 편집 자동화', '콘텐츠', 'Adobe Premiere Pro|DaVinci Resolve|Final Cut Pro|CapCut|FFmpeg|Frame.io', '무음·실수 구간 후보 탐지|자막 초안 생성|B-roll 후보 배치|세로·가로 버전 변환|렌더 큐 생성|검수본 공유', '컷의 의미와 최종 편집 감각은 사람이 검수해야 하며 프로젝트 파일 호환 범위를 먼저 확인해야 한다.'],
   ['after-effects', 'After Effects 자동화', '콘텐츠', 'After Effects|Expressions|ExtendScript|CEP|Premiere Pro|Media Encoder', '컴포지션 복제|텍스트·색상 치환|데이터 기반 모션 생성|버전별 렌더|템플릿 검수|납품 폴더 정리', '서드파티 플러그인과 폰트가 필요한 프로젝트는 실행 환경과 라이선스를 동일하게 맞춰야 한다.'],
   ['photo-retouching', '사진 보정 자동화', '콘텐츠', 'Photoshop|Lightroom|Camera Raw|Adobe Bridge|Capture One|ImageMagick', '누끼 후보 생성|노출·색온도 보정|제품별 크롭|리사이즈·포맷 변환|워터마크 적용|검수본 분류', '피부·제품 색처럼 품질 기준이 주관적인 보정은 샘플 승인과 사람 검수가 필요하다.'],
@@ -124,7 +124,7 @@ const SEEDS: DomainSeed[] = [
   ['marketing', '마케팅 자동화', '마케팅', 'HubSpot|Salesforce|Klaviyo|Mailchimp|Google Analytics 4|GTM', '리드 세그먼트 분류|후속 메시지 예약|행동 이벤트 연결|휴면 고객 분리|캠페인 성과 집계|영업 이관', '수신 동의와 빈도 제한, 채널별 개인정보 정책을 적용하고 과도한 자동 발송을 막아야 한다.'],
   ['seo-geo-aeo', 'SEO·GEO·AEO 자동화', '마케팅', 'Google Search Console|Bing Webmaster Tools|네이버 서치어드바이저|GA4|IndexNow|Lighthouse', '색인 상태 수집|canonical·sitemap 검사|검색어·CTR 분류|콘텐츠 품질 점검|AI 인용 모니터링|개선 큐 생성', '제출 성공은 색인이나 순위를 뜻하지 않으며 대량 저품질 콘텐츠를 자동 발행해서는 안 된다.'],
   ['sns', 'SNS 자동화', '마케팅', 'Instagram|Facebook|LinkedIn|YouTube|Buffer|Canva', '콘텐츠 캘린더 생성|채널별 문구 변환|예약 게시|댓글 분류|성과 지표 취합|재활용 후보 추천', '플랫폼 API·자동화 정책을 지키고 게시 전 브랜드 담당자가 내용과 권리를 확인해야 한다.'],
-  ['youtube', 'YouTube 자동화', '마케팅', 'YouTube|YouTube Data API|Premiere Pro|FFmpeg|Whisper|Photoshop', '자막 생성|챕터 후보 작성|쇼츠 구간 탐지|썸네일 초안|업로드 메타데이터 준비|댓글 주제 분석', '저작권·초상권과 최종 편집 품질은 제작자가 검수하고 자동 업로드 권한을 제한해야 한다.'],
+  ['youtube', 'YouTube 자동화', '마케팅', 'YouTube|YouTube Data API|Premiere Pro|FFmpeg|Whisper|Photoshop', '자막 생성|구간 목차 후보 작성|쇼츠 구간 탐지|썸네일 초안|업로드 메타데이터 준비|댓글 주제 분석', '저작권·초상권과 최종 편집 품질은 제작자가 검수하고 자동 업로드 권한을 제한해야 한다.'],
   ['localization', '번역·현지화 자동화', '콘텐츠', 'DeepL|Google Cloud Translation|CAT Tool|XLIFF|GitHub|Contentful', '번역 대상 추출|용어집 적용|초안 번역|숫자·변수 검사|리뷰 배정|배포 파일 생성', '브랜드 문체와 법률·의료 표현은 전문 번역가 검수가 필요하며 변수·태그를 보존해야 한다.'],
   ['logistics', '물류·배차 자동화', '물류', 'TMS|ERP|Google Maps Platform|Kakao Mobility API|Microsoft Excel|SMS', '배송 요청 취합|차량·기사 조건 확인|배차 후보 생성|운송장·상태 공유|지연 알림|일별 실적 집계', '교통·차량·기사 상태가 실시간으로 바뀌므로 자동 배차 뒤 운영자 승인과 재배정 수단이 필요하다.'],
   ['wms', 'WMS·창고 자동화', '물류', 'WMS|ERP|바코드|RFID|PDA|택배 API', '입고 검수|로케이션 배정|피킹 목록 생성|재고 이동 기록|출고 송장 연결|실사 차이 보고', '현장 스캔 누락과 단위 변환 오류를 막기 위해 바코드·품목 마스터 정비가 먼저다.'],
@@ -176,7 +176,7 @@ function buildDomain(seed: DomainSeed): AutomationDomain {
   const publishMode: AutomationPublishMode = priority !== 'S' ? 'research-only' : EXISTING_TARGETS[slug] ? 'existing' : 'generated';
   const shortDescription = `${tools.slice(0, 2).join('·')}에서 반복하는 ${tasks.slice(0, 2).join('·')} 업무를 줄이는 맞춤 개발`;
   const description = `${name} 개발은 ${tools.slice(0, 4).join(', ')}에서 사람이 반복하는 ${tasks.slice(0, 3).join(', ')} 과정을 분석하고, 가능한 단계만 API·플러그인·파일 연동·AI로 연결하는 서비스입니다.`;
-  const directAnswer = `${name}은 모든 화면을 억지로 자동 조작하는 일이 아닙니다. ${tools.slice(0, 3).join(', ')}에서 데이터로 제어할 수 있는 ${tasks.slice(0, 3).join(', ')}부터 연결하고, 권한이 필요하거나 결과가 불확실한 단계는 담당자가 확인하도록 만듭니다.`;
+  const directAnswer = `${name}은 모든 화면을 무리하게 자동 조작하는 일이 아닙니다. ${tools.slice(0, 3).join(', ')}에서 데이터로 제어할 수 있는 ${tasks.slice(0, 3).join(', ')}부터 연결하고, 권한이 필요하거나 결과가 불확실한 단계는 담당자가 확인하도록 만듭니다.`;
   const constraints = [domainConstraint, '외부 서비스 권한·라이선스·개인정보 범위를 확인하고, 실패 시 중단·재처리·사람 이관 경로를 함께 설계한다.'];
   const metadata = {
     title: `${name} 프로그램 개발 | 반복 업무 맞춤 자동화 | 름랩`,
@@ -228,6 +228,20 @@ export function automationBodyParts(domain: AutomationDomain): string[] {
     ...domain.constraints,
     '개발은 현재 작업을 관찰하고 샘플 입력과 기대 결과를 합의한 뒤, 가장 작은 PoC로 기술 가능성과 오류 유형을 확인하는 순서로 진행합니다. 이후 권한과 승인 단계를 연결하고 실제 데이터로 QA한 다음 소스코드·운영 방법·예외 처리 기준을 이관합니다.',
     '비용과 기간은 프로그램 수, 데이터 정리 상태, 한 달 처리 건수, 예외 규칙, 사람 승인 단계, 사내 설치 여부에 따라 달라집니다. 상담 전에 고정 가격이나 절감률을 약속하지 않고 실제 범위를 확인한 뒤 견적을 제시합니다.',
+  ];
+}
+
+/**
+ * 중복 검사는 공통 개발 절차·비용 고지 같은 템플릿 문장을 제외한 편집 핵심만 비교한다.
+ * index-quality의 uniqueBodyText 계약(치환문 제외 고유 단락)에 맞춘 입력이다.
+ */
+export function automationDistinctiveBodyParts(domain: AutomationDomain): string[] {
+  return [
+    domain.directAnswer,
+    domain.description,
+    ...domain.tools,
+    ...domain.tasks,
+    ...domain.constraints,
   ];
 }
 

@@ -876,7 +876,7 @@
     "priority": "B",
     "published": false,
     "href": null,
-    "shortDescription": "YouTube·YouTube Data API에서 반복하는 자막 생성·챕터 후보 작성 업무를 줄이는 맞춤 개발",
+    "shortDescription": "YouTube·YouTube Data API에서 반복하는 자막 생성·구간 목차 후보 작성 업무를 줄이는 맞춤 개발",
     "tools": [
       "YouTube",
       "YouTube Data API",
