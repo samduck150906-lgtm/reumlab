@@ -214,15 +214,15 @@ const LANDINGS = [
   },
   {
     slug: 'ai-automation', navLabel: 'AI 업무 자동화',
-    metaTitle: 'AI 업무 자동화 개발 | 문서·상담·영업 자동화 구축 — 름랩',
-    metaDesc: '문서 분류·상담·영업·보고서·콘텐츠 업무를 AI로 자동화합니다. 적용 가능한 업무, PoC 범위, 비용과 운영 방법을 안내합니다.',
+    metaTitle: 'AI 업무자동화 개발 | 기존 프로그램·산업별 반복업무 | 름랩',
+    metaDesc: 'Excel·AutoCAD·Revit·스마트스토어 등 지금 쓰는 프로그램과 사내 시스템의 반복 업무를 AI·API·RPA·플러그인·웹·앱으로 자동화합니다.',
     eyebrow: 'AI 업무 자동화',
-    h1: 'AI 업무 자동화 개발<br><span class="hl">사람이 반복하던 일을 AI가 처리하는 흐름으로</span>',
-    sub: '문서 작성, 검색, 분류, 콘텐츠 제작, 영업 업무를 회사가 실제로 쓰는 데이터와 업무 방식에 맞게 자동화합니다.',
-    subline: '반복 업무 진단 · 자동화 설계 · AI 연동 · 검수 흐름',
+    h1: 'AI 업무자동화 프로그램 개발<br><span class="hl">기존 프로그램의 반복 업무를 소프트웨어로 줄입니다</span>',
+    sub: 'Excel·AutoCAD·Revit·스마트스토어부터 문서·영업·회계·물류까지, 사람이 프로그램을 열고 반복하던 과정을 실제 업무 흐름에 맞게 연결합니다.',
+    subline: '업무 진단 · 공식 API·플러그인 검토 · PoC · 사람 검수',
     serviceType: 'AI 기능·업무 자동화',
-    audience: ['매일 같은 문서·콘텐츠를 반복 작성하는 회사', '영업 자료·제안서를 자동화하려는 기업', '내부 문서 검색이 어려운 조직', '기존 서비스에 AI 기능을 넣으려는 사업자', 'AI SaaS를 상품화하려는 창업자'],
-    features: ['문의 내용 분류', '문서 초안·보고서 생성', '상품 설명·SNS 콘텐츠 생성', '리드 조사·정리', '내부 자료 검색', 'FAQ 응답', '데이터 요약', '견적서·제안서 작성'],
+    audience: ['Excel·메일·ERP 사이에서 데이터를 반복 복사하는 회사', 'CAD·BIM 도면과 모델 작업을 줄이려는 설계 조직', '상품·주문·재고를 여러 쇼핑몰에서 관리하는 사업자', '견적·회계·물류 문서를 반복 작성하는 팀', '현재 쓰는 프로그램을 유지하면서 맞춤 자동화가 필요한 기업'],
+    features: ['Excel·Google Sheets 자동화', 'AutoCAD·Revit/BIM 자동화', 'OCR·PDF·문서 처리', '이메일·CRM·견적·제안 자동화', '스마트스토어·Cafe24·Shopify 연동', '회계·세무·ERP 업무 보조', '물류·WMS·통관 흐름 연결', '비전검사·현장점검 AI'],
     bespoke: [
       { title: '구축 유형', type: 'cards3', items: [['기존 서비스에 AI 추가', '현재 앱·웹에 요약·추천·검색·생성 기능을 추가'], ['사내용 AI 도구', '직원만 사용하는 문서·영업·관리 자동화 시스템'], ['AI SaaS 출시', '외부 고객에게 판매할 수 있는 AI 기반 구독 서비스']] },
       { title: '자동화 전후 예시', type: 'flow2', before: '직원이 고객 정보를 확인하고 매번 제안서 작성', after: ['고객 정보 입력', '자료 검색', '제안서 초안 생성', '직원 검수', 'PDF 출력'] },
@@ -844,6 +844,9 @@ const BASE_REGIONS = [
 const WEBSITE_INDUSTRIES = JSON.parse(
   fs.readFileSync(path.join(__dirname, '..', 'content', 'website-industries.json'), 'utf8'),
 );
+const AUTOMATION_DOMAINS = JSON.parse(
+  fs.readFileSync(path.join(__dirname, '..', 'content', 'automation-domains.json'), 'utf8'),
+);
 const FEATURED_WEBSITE_SLUGS = [
   'kape', 'sigdang', 'pensyeon', 'syopingmol', 'jejoeob', 'geonseolhoesa', 'budongsan',
   'beobmubeobin', 'semusa', 'jadongcha-jeongbiso', 'wedinghol', 'cheongsoeobche', 'it-company', 'gieob',
@@ -891,6 +894,74 @@ ${links.map((l) => `        <li><a href="${l.href}">${esc(l.label)}</a></li>`).j
     </ul>
     <p style="margin-top:14px"><a href="/guide/">개발 가이드 전체 보기 →</a></p>
   </div></section>`;
+}
+
+/**
+ * 70개 업무자동화 연구 분야 디렉터리.
+ * 공개 품질 게이트를 통과한 항목만 링크하고, 나머지는 URL 없이 상담 가능 분야로 표시한다.
+ * 전체 목록은 서버 HTML에 있어 JS가 꺼져도 읽을 수 있고, 검색·필터만 점진적으로 보강한다.
+ */
+function automationDirectory(land) {
+  if (land.slug !== 'ai-automation') return '';
+  const categories = [...new Set(AUTOMATION_DOMAINS.map((item) => item.category))];
+  const filterButtons = ['전체', ...categories]
+    .map((category, index) => `<button type="button" class="auto-filter${index === 0 ? ' is-active' : ''}" data-automation-filter="${esc(category)}" aria-pressed="${index === 0 ? 'true' : 'false'}">${esc(category)}</button>`)
+    .join('');
+  const items = AUTOMATION_DOMAINS.map((item) => {
+    const heading = item.published
+      ? `<h3><a href="${esc(item.href)}">${esc(item.name)} <span aria-hidden="true">→</span></a></h3>`
+      : `<h3>${esc(item.name)}</h3><span class="auto-item__status">업무 확인 후 설계</span>`;
+    const searchText = [item.name, item.category, item.shortDescription, ...item.tools].join(' ').toLowerCase();
+    return `<article class="auto-item" data-automation-category="${esc(item.category)}" data-automation-search="${esc(searchText)}">
+      <div class="auto-item__head"><span class="auto-item__category">${esc(item.category)}</span>${heading}</div>
+      <p>${esc(item.shortDescription)}</p>
+      <p class="auto-item__tools">${item.tools.map(esc).join(' · ')}</p>
+    </article>`;
+  }).join('');
+
+  return `<section class="section section--soft" id="automation-directory"><div class="wrap">
+    <div class="sec-head"><span class="eyebrow">70 AUTOMATION DOMAINS</span><h2 class="sec-title">어떤 업무를 자동화하고 싶으세요?</h2><p class="sec-sub">프로그램명이나 반복 업무를 검색해 보세요. 별도 상세 설명이 준비된 분야만 링크하며, 나머지는 같은 페이지에서 업무를 적어 상담할 수 있습니다.</p></div>
+    <div class="auto-controls">
+      <label for="automation-search">프로그램·업무 검색</label>
+      <input id="automation-search" type="search" inputmode="search" autocomplete="off" placeholder="예: Cubase, AutoCAD, Excel, 견적서, 스마트스토어">
+      <div class="auto-filters" aria-label="산업 필터">${filterButtons}</div>
+    </div>
+    <div class="auto-directory" aria-live="polite">${items}</div>
+    <p class="auto-empty" hidden>일치하는 분야가 없습니다. 사용 중인 프로그램과 반복 업무를 문의란에 적어 주세요.</p>
+    <noscript><p class="auto-noscript">검색 기능 없이도 아래 70개 분야 전체를 확인할 수 있습니다.</p></noscript>
+  </div>
+  <script>
+  (() => {
+    const root = document.getElementById('automation-directory');
+    if (!root) return;
+    const input = root.querySelector('#automation-search');
+    const items = [...root.querySelectorAll('[data-automation-search]')];
+    const buttons = [...root.querySelectorAll('[data-automation-filter]')];
+    const empty = root.querySelector('.auto-empty');
+    let category = '전체';
+    const apply = () => {
+      const query = String(input && input.value || '').trim().toLowerCase();
+      let visible = 0;
+      for (const item of items) {
+        const categoryMatch = category === '전체' || item.dataset.automationCategory === category;
+        const searchMatch = !query || String(item.dataset.automationSearch || '').includes(query);
+        item.hidden = !(categoryMatch && searchMatch);
+        if (!item.hidden) visible += 1;
+      }
+      if (empty) empty.hidden = visible !== 0;
+    };
+    input && input.addEventListener('input', apply);
+    for (const button of buttons) button.addEventListener('click', () => {
+      category = button.dataset.automationFilter || '전체';
+      for (const peer of buttons) {
+        const active = peer === button;
+        peer.classList.toggle('is-active', active);
+        peer.setAttribute('aria-pressed', String(active));
+      }
+      apply();
+    });
+  })();
+  </script></section>`;
 }
 
 function regionLinks(land) {
@@ -1019,6 +1090,7 @@ ${feats}
 </section>
 
 ${bespoke ? `<section class="section"><div class="wrap"><div class="lx-bespokes">${bespoke}</div></div></section>` : ''}
+${automationDirectory(land)}
 
 ${cases}
 ${guideLinks(land)}

@@ -17,6 +17,7 @@ import { AI_VOICE_CANONICAL, aiVoiceDecision } from '@/lib/ai-voice';
 import { AISA_CANONICAL, aisaDecision } from '@/lib/ai-search-architecture';
 import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, workerDecision } from '@/lib/ai-worker';
 import { MULTIMODAL_CANONICAL, multimodalDecision } from '@/lib/multimodal-ai-worker';
+import { GENERATED_AUTOMATION_DOMAINS, automationCanonical, automationDecision } from '@/lib/automation-domains';
 import { SEO_WEBSITE_GUIDES, SEO_WEBSITE_PAGES } from '@/lib/seo-website';
 import { gitLastModified } from '../lib/lastmod';
 
@@ -65,6 +66,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: purposeMod,
       changeFrequency: 'monthly',
       priority: 0.82,
+    });
+  }
+
+  // 산업별 AI·업무자동화 — 연구 키워드 8천여 개와 URL 수를 분리한다.
+  // 고유 업무·제약·FAQ를 갖추고 품질 게이트를 통과한 상세 페이지만 포함한다.
+  const automationMod = gitLastModified('lib/automation-domains.ts');
+  for (const domain of GENERATED_AUTOMATION_DOMAINS) {
+    const decision = automationDecision(domain.slug);
+    if (!decision?.inSitemap) continue;
+    out.push({
+      url: automationCanonical(domain),
+      lastModified: automationMod,
+      changeFrequency: 'monthly',
+      priority: domain.priority === 'S' ? 0.78 : 0.68,
     });
   }
 

@@ -1,0 +1,1052 @@
+[
+  {
+    "slug": "music-daw",
+    "name": "음악·DAW 자동화",
+    "category": "콘텐츠",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/music-daw/",
+    "shortDescription": "Cubase·Melodyne에서 반복하는 MIDI 패턴 생성·트랙·파일명 정리 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Cubase",
+      "Melodyne",
+      "Logic Pro",
+      "Pro Tools"
+    ]
+  },
+  {
+    "slug": "video-editing",
+    "name": "영상 편집 자동화",
+    "category": "콘텐츠",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/video-editing/",
+    "shortDescription": "Adobe Premiere Pro·DaVinci Resolve에서 반복하는 무음·실수 구간 후보 탐지·자막 초안 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Adobe Premiere Pro",
+      "DaVinci Resolve",
+      "Final Cut Pro",
+      "CapCut"
+    ]
+  },
+  {
+    "slug": "after-effects",
+    "name": "After Effects 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "After Effects·Expressions에서 반복하는 컴포지션 복제·텍스트·색상 치환 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "After Effects",
+      "Expressions",
+      "ExtendScript",
+      "CEP"
+    ]
+  },
+  {
+    "slug": "photo-retouching",
+    "name": "사진 보정 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Photoshop·Lightroom에서 반복하는 누끼 후보 생성·노출·색온도 보정 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Photoshop",
+      "Lightroom",
+      "Camera Raw",
+      "Adobe Bridge"
+    ]
+  },
+  {
+    "slug": "design-production",
+    "name": "디자인 제작 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Illustrator·Photoshop에서 반복하는 배너 규격별 생성·가격·문구 치환 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Illustrator",
+      "Photoshop",
+      "Canva",
+      "Adobe InDesign"
+    ]
+  },
+  {
+    "slug": "figma",
+    "name": "Figma 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Figma Plugin API·Figma REST API에서 반복하는 디자인 토큰 동기화·반복 화면 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Figma Plugin API",
+      "Figma REST API",
+      "FigJam",
+      "Storybook"
+    ]
+  },
+  {
+    "slug": "blender",
+    "name": "Blender 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Blender·Blender Python API에서 반복하는 에셋 일괄 배치·재질 치환 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Blender",
+      "Blender Python API",
+      "Geometry Nodes",
+      "Cycles"
+    ]
+  },
+  {
+    "slug": "3ds-max",
+    "name": "3ds Max 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "3ds Max·MAXScript에서 반복하는 장면 정리·재질 경로 수정 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "3ds Max",
+      "MAXScript",
+      "Python",
+      "Arnold"
+    ]
+  },
+  {
+    "slug": "maya",
+    "name": "Maya 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Maya·Maya Python에서 반복하는 리깅 검사·애니메이션 베이크 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Maya",
+      "Maya Python",
+      "MEL",
+      "Arnold"
+    ]
+  },
+  {
+    "slug": "game-production",
+    "name": "게임 제작 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Unity·Unreal Engine에서 반복하는 에셋 임포트 검사·빌드 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Unity",
+      "Unreal Engine",
+      "C#",
+      "Blueprint"
+    ]
+  },
+  {
+    "slug": "autocad",
+    "name": "AutoCAD 자동화",
+    "category": "설계",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/autocad/",
+    "shortDescription": "AutoCAD·AutoLISP에서 반복하는 도면 속성 일괄 수정·블록·레이어 표준화 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "AutoCAD",
+      "AutoLISP",
+      "ObjectARX",
+      ".NET API"
+    ]
+  },
+  {
+    "slug": "revit-bim",
+    "name": "Revit/BIM 자동화",
+    "category": "설계",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/revit-bim/",
+    "shortDescription": "Autodesk Revit·Revit API에서 반복하는 패밀리 배치·파라미터 일괄 입력 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Autodesk Revit",
+      "Revit API",
+      "Dynamo",
+      "BIM 360"
+    ]
+  },
+  {
+    "slug": "sketchup",
+    "name": "SketchUp 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "SketchUp·Ruby API에서 반복하는 컴포넌트 배치·속성 입력 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "SketchUp",
+      "Ruby API",
+      "LayOut",
+      "3D Warehouse"
+    ]
+  },
+  {
+    "slug": "rhino-grasshopper",
+    "name": "Rhino/Grasshopper 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Rhino·Grasshopper에서 반복하는 파라메트릭 형상 생성·옵션 조합 탐색 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Rhino",
+      "Grasshopper",
+      "RhinoCommon",
+      "Python"
+    ]
+  },
+  {
+    "slug": "solidworks",
+    "name": "SolidWorks 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "SolidWorks·SolidWorks API에서 반복하는 부품 속성 입력·도면 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "SolidWorks",
+      "SolidWorks API",
+      "PDM",
+      "VBA"
+    ]
+  },
+  {
+    "slug": "inventor",
+    "name": "Inventor 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Autodesk Inventor·iLogic에서 반복하는 부품 파라미터 변경·도면 뷰 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Autodesk Inventor",
+      "iLogic",
+      "Inventor API",
+      "Vault"
+    ]
+  },
+  {
+    "slug": "fusion-360",
+    "name": "Fusion 360 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Autodesk Fusion·Fusion API에서 반복하는 파라미터 모델 생성·부품 변형 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Autodesk Fusion",
+      "Fusion API",
+      "Python",
+      "JavaScript"
+    ]
+  },
+  {
+    "slug": "gis",
+    "name": "GIS 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "QGIS·ArcGIS Pro에서 반복하는 좌표계 변환·공간 데이터 정리 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "QGIS",
+      "ArcGIS Pro",
+      "ArcPy",
+      "PostGIS"
+    ]
+  },
+  {
+    "slug": "construction-estimate",
+    "name": "건축 견적 자동화",
+    "category": "설계",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/construction-estimate/",
+    "shortDescription": "AutoCAD·Revit에서 반복하는 도면·모델 물량 추출·공종 코드 매핑 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "AutoCAD",
+      "Revit",
+      "Dynamo",
+      "Microsoft Excel"
+    ]
+  },
+  {
+    "slug": "interior-estimate",
+    "name": "인테리어 견적 자동화",
+    "category": "설계",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "AutoCAD·SketchUp에서 반복하는 공간별 수량 계산·자재 단가 연결 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "AutoCAD",
+      "SketchUp",
+      "Microsoft Excel",
+      "Google Sheets"
+    ]
+  },
+  {
+    "slug": "excel",
+    "name": "Excel 자동화",
+    "category": "사무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/excel/",
+    "shortDescription": "Microsoft Excel·VBA에서 반복하는 반복 입력 통합·여러 파일 취합 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Microsoft Excel",
+      "VBA",
+      "Office Scripts",
+      "Power Query"
+    ]
+  },
+  {
+    "slug": "google-sheets",
+    "name": "Google Sheets 자동화",
+    "category": "사무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/google-sheets/",
+    "shortDescription": "Google Sheets·Apps Script에서 반복하는 시트 데이터 취합·행별 상태 처리 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Google Sheets",
+      "Apps Script",
+      "Google Drive",
+      "Gmail"
+    ]
+  },
+  {
+    "slug": "hwp",
+    "name": "HWP/한글 자동화",
+    "category": "사무",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "한컴오피스 한글·HWPX에서 반복하는 양식 필드 채우기·문서 묶음 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "한컴오피스 한글",
+      "HWPX",
+      "HWP",
+      "Hancom Docs"
+    ]
+  },
+  {
+    "slug": "pdf",
+    "name": "PDF 자동화",
+    "category": "사무",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Adobe Acrobat·PDF에서 반복하는 분할·병합·페이지 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Adobe Acrobat",
+      "PDF",
+      "OCRmyPDF",
+      "PyMuPDF"
+    ]
+  },
+  {
+    "slug": "ocr-documents",
+    "name": "OCR·문서 자동화",
+    "category": "사무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/ocr-documents/",
+    "shortDescription": "Google Document AI·Azure AI Document Intelligence에서 반복하는 영수증 필드 추출·명세서 표 구조화 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Google Document AI",
+      "Azure AI Document Intelligence",
+      "Amazon Textract",
+      "Tesseract OCR"
+    ]
+  },
+  {
+    "slug": "enterprise-rag",
+    "name": "사내문서 AI·RAG",
+    "category": "사무",
+    "priority": "S",
+    "published": true,
+    "href": "/enterprise-ai/",
+    "shortDescription": "SharePoint·Google Drive에서 반복하는 문서 권한별 검색·근거 문장 인용 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "SharePoint",
+      "Google Drive",
+      "Notion",
+      "Confluence"
+    ]
+  },
+  {
+    "slug": "notion",
+    "name": "Notion 자동화",
+    "category": "사무",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Notion API·Notion Database에서 반복하는 데이터베이스 항목 생성·상태 변경 알림 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Notion API",
+      "Notion Database",
+      "Slack",
+      "Google Calendar"
+    ]
+  },
+  {
+    "slug": "powerpoint",
+    "name": "PowerPoint·보고서 자동화",
+    "category": "사무",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Microsoft PowerPoint·Microsoft Graph에서 반복하는 데이터 기반 슬라이드 생성·차트 갱신 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Microsoft PowerPoint",
+      "Microsoft Graph",
+      "PptxGenJS",
+      "Excel"
+    ]
+  },
+  {
+    "slug": "email",
+    "name": "Gmail·Outlook 이메일 자동화",
+    "category": "사무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/email/",
+    "shortDescription": "Gmail API·Microsoft Graph에서 반복하는 문의 메일 분류·담당자 배정 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Gmail API",
+      "Microsoft Graph",
+      "Outlook",
+      "Google Workspace"
+    ]
+  },
+  {
+    "slug": "meeting",
+    "name": "회의·녹취 자동화",
+    "category": "사무",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "Zoom·Microsoft Teams에서 반복하는 회의 녹취·화자 구분 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Zoom",
+      "Microsoft Teams",
+      "Google Meet",
+      "Whisper"
+    ]
+  },
+  {
+    "slug": "crm",
+    "name": "CRM 자동화",
+    "category": "영업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/crm/",
+    "shortDescription": "Salesforce·HubSpot에서 반복하는 리드 자동 등록·문의 유형 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Salesforce",
+      "HubSpot",
+      "Microsoft Dynamics 365",
+      "Pipedrive"
+    ]
+  },
+  {
+    "slug": "quote",
+    "name": "견적서 자동화",
+    "category": "영업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/quote/",
+    "shortDescription": "Microsoft Excel·Google Sheets에서 반복하는 문의 정보 정리·상품·단가 조회 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Microsoft Excel",
+      "Google Sheets",
+      "HubSpot",
+      "Salesforce"
+    ]
+  },
+  {
+    "slug": "proposal",
+    "name": "제안서 자동화",
+    "category": "영업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/proposal/",
+    "shortDescription": "PowerPoint·Google Slides에서 반복하는 고객 정보 요약·유사 사례 검색 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "PowerPoint",
+      "Google Slides",
+      "Microsoft Word",
+      "Google Docs"
+    ]
+  },
+  {
+    "slug": "ai-customer-support",
+    "name": "AI 고객상담",
+    "category": "영업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/ai-customer-support/",
+    "shortDescription": "웹챗·카카오톡 채널에서 반복하는 반복 질문 응답·문의 의도 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "웹챗",
+      "카카오톡 채널",
+      "Zendesk",
+      "Intercom"
+    ]
+  },
+  {
+    "slug": "ai-voice",
+    "name": "AI 전화상담",
+    "category": "영업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-voice-development/",
+    "shortDescription": "STT·TTS에서 반복하는 전화 접수·영업시간 안내 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "STT",
+      "TTS",
+      "SIP",
+      "Twilio"
+    ]
+  },
+  {
+    "slug": "call-qa",
+    "name": "상담 QA 자동화",
+    "category": "영업",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "콜센터 녹취·STT에서 반복하는 통화 텍스트 변환·필수 안내 탐지 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "콜센터 녹취",
+      "STT",
+      "CRM",
+      "Power BI"
+    ]
+  },
+  {
+    "slug": "recruiting",
+    "name": "채용 자동화",
+    "category": "인사",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Greenhouse·Lever에서 반복하는 지원서 수집·요건 기준 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Greenhouse",
+      "Lever",
+      "Workday",
+      "사람인"
+    ]
+  },
+  {
+    "slug": "hr",
+    "name": "HR 자동화",
+    "category": "인사",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Workday·SAP SuccessFactors에서 반복하는 입사 서류 안내·계정 생성 요청 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Workday",
+      "SAP SuccessFactors",
+      "Microsoft 365",
+      "Google Workspace"
+    ]
+  },
+  {
+    "slug": "attendance-payroll",
+    "name": "근태·급여 자동화",
+    "category": "인사",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "ERP·더존에서 반복하는 출퇴근 데이터 취합·누락·이상 근태 표시 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "ERP",
+      "더존",
+      "Excel",
+      "Google Sheets"
+    ]
+  },
+  {
+    "slug": "accounting",
+    "name": "회계 자동화",
+    "category": "재무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/accounting/",
+    "shortDescription": "더존·SAP에서 반복하는 증빙 수집·계정과목 후보 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "더존",
+      "SAP",
+      "Oracle ERP",
+      "Microsoft Excel"
+    ]
+  },
+  {
+    "slug": "tax",
+    "name": "세무 업무 자동화",
+    "category": "재무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/tax/",
+    "shortDescription": "홈택스·더존에서 반복하는 세금계산서 취합·증빙 유형 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "홈택스",
+      "더존",
+      "Microsoft Excel",
+      "PDF"
+    ]
+  },
+  {
+    "slug": "erp",
+    "name": "ERP 자동화",
+    "category": "재무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/erp/",
+    "shortDescription": "SAP·Oracle ERP에서 반복하는 거래 데이터 입력·승인 요청 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "SAP",
+      "Oracle ERP",
+      "더존",
+      "Microsoft Dynamics 365"
+    ]
+  },
+  {
+    "slug": "procurement",
+    "name": "구매·발주 자동화",
+    "category": "재무",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "ERP·Microsoft Excel에서 반복하는 구매 요청 취합·공급사 견적 비교 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "ERP",
+      "Microsoft Excel",
+      "Outlook",
+      "Gmail"
+    ]
+  },
+  {
+    "slug": "bidding",
+    "name": "입찰 자동화",
+    "category": "전문업무",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "나라장터·Microsoft Word에서 반복하는 공고 조건 분류·마감 일정 등록 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "나라장터",
+      "Microsoft Word",
+      "한컴오피스 한글",
+      "PDF"
+    ]
+  },
+  {
+    "slug": "contracts",
+    "name": "계약서 자동화",
+    "category": "전문업무",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/contracts/",
+    "shortDescription": "Microsoft Word·PDF에서 반복하는 표준 계약서 생성·변경 조항 비교 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Microsoft Word",
+      "PDF",
+      "DocuSign",
+      "Adobe Acrobat"
+    ]
+  },
+  {
+    "slug": "legal-documents",
+    "name": "법무 문서 AI",
+    "category": "전문업무",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Microsoft Word·PDF에서 반복하는 계약·규정 검색·조항 요약 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Microsoft Word",
+      "PDF",
+      "SharePoint",
+      "Elasticsearch"
+    ]
+  },
+  {
+    "slug": "patent",
+    "name": "특허 업무 자동화",
+    "category": "전문업무",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "KIPRIS·Google Patents에서 반복하는 문헌 수집·분류 코드 정리 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "KIPRIS",
+      "Google Patents",
+      "Espacenet",
+      "PDF"
+    ]
+  },
+  {
+    "slug": "research-literature",
+    "name": "연구문헌 자동화",
+    "category": "전문업무",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "PubMed·Crossref에서 반복하는 논문 메타데이터 수집·주제별 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "PubMed",
+      "Crossref",
+      "Google Scholar",
+      "Zotero"
+    ]
+  },
+  {
+    "slug": "naver-smartstore",
+    "name": "네이버 스마트스토어 자동화",
+    "category": "커머스",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/naver-smartstore/",
+    "shortDescription": "네이버 스마트스토어·커머스API에서 반복하는 상품 정보 변환·주문 수집 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "네이버 스마트스토어",
+      "커머스API",
+      "네이버페이",
+      "ERP"
+    ]
+  },
+  {
+    "slug": "cafe24",
+    "name": "Cafe24 자동화",
+    "category": "커머스",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/cafe24/",
+    "shortDescription": "Cafe24·Cafe24 API에서 반복하는 상품 일괄 등록·옵션·재고 동기화 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Cafe24",
+      "Cafe24 API",
+      "ERP",
+      "WMS"
+    ]
+  },
+  {
+    "slug": "shopify",
+    "name": "Shopify 자동화",
+    "category": "커머스",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/shopify/",
+    "shortDescription": "Shopify·Shopify Admin API에서 반복하는 상품·컬렉션 생성·주문 상태 연동 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Shopify",
+      "Shopify Admin API",
+      "Shopify Flow",
+      "ERP"
+    ]
+  },
+  {
+    "slug": "marketplace-integration",
+    "name": "오픈마켓 통합 자동화",
+    "category": "커머스",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "쿠팡·11번가에서 반복하는 상품 데이터 표준화·채널별 등록 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "쿠팡",
+      "11번가",
+      "G마켓",
+      "옥션"
+    ]
+  },
+  {
+    "slug": "product-registration",
+    "name": "상품등록 자동화",
+    "category": "커머스",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/product-registration/",
+    "shortDescription": "네이버 스마트스토어·Cafe24에서 반복하는 이미지·원가 데이터 수집·상품명 초안 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "네이버 스마트스토어",
+      "Cafe24",
+      "Shopify",
+      "쿠팡"
+    ]
+  },
+  {
+    "slug": "review-voc",
+    "name": "리뷰·VOC 분석",
+    "category": "커머스",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "네이버 플레이스·스마트스토어에서 반복하는 리뷰 수집·주제 분류 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "네이버 플레이스",
+      "스마트스토어",
+      "Shopify",
+      "Zendesk"
+    ]
+  },
+  {
+    "slug": "ad-creative",
+    "name": "광고 제작 자동화",
+    "category": "마케팅",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/ad-creative/",
+    "shortDescription": "Google Ads·Meta Ads에서 반복하는 상품 데이터 취합·카피 변형 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Google Ads",
+      "Meta Ads",
+      "네이버 광고",
+      "Figma"
+    ]
+  },
+  {
+    "slug": "marketing",
+    "name": "마케팅 자동화",
+    "category": "마케팅",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/marketing/",
+    "shortDescription": "HubSpot·Salesforce에서 반복하는 리드 세그먼트 분류·후속 메시지 예약 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "HubSpot",
+      "Salesforce",
+      "Klaviyo",
+      "Mailchimp"
+    ]
+  },
+  {
+    "slug": "seo-geo-aeo",
+    "name": "SEO·GEO·AEO 자동화",
+    "category": "마케팅",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-search-optimization/",
+    "shortDescription": "Google Search Console·Bing Webmaster Tools에서 반복하는 색인 상태 수집·canonical·sitemap 검사 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Google Search Console",
+      "Bing Webmaster Tools",
+      "네이버 서치어드바이저",
+      "GA4"
+    ]
+  },
+  {
+    "slug": "sns",
+    "name": "SNS 자동화",
+    "category": "마케팅",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "Instagram·Facebook에서 반복하는 콘텐츠 캘린더 생성·채널별 문구 변환 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Instagram",
+      "Facebook",
+      "LinkedIn",
+      "YouTube"
+    ]
+  },
+  {
+    "slug": "youtube",
+    "name": "YouTube 자동화",
+    "category": "마케팅",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "YouTube·YouTube Data API에서 반복하는 자막 생성·구간 목차 후보 작성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "YouTube",
+      "YouTube Data API",
+      "Premiere Pro",
+      "FFmpeg"
+    ]
+  },
+  {
+    "slug": "localization",
+    "name": "번역·현지화 자동화",
+    "category": "콘텐츠",
+    "priority": "A",
+    "published": false,
+    "href": null,
+    "shortDescription": "DeepL·Google Cloud Translation에서 반복하는 번역 대상 추출·용어집 적용 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "DeepL",
+      "Google Cloud Translation",
+      "CAT Tool",
+      "XLIFF"
+    ]
+  },
+  {
+    "slug": "logistics",
+    "name": "물류·배차 자동화",
+    "category": "물류",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/logistics/",
+    "shortDescription": "TMS·ERP에서 반복하는 배송 요청 취합·차량·기사 조건 확인 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "TMS",
+      "ERP",
+      "Google Maps Platform",
+      "Kakao Mobility API"
+    ]
+  },
+  {
+    "slug": "wms",
+    "name": "WMS·창고 자동화",
+    "category": "물류",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/wms/",
+    "shortDescription": "WMS·ERP에서 반복하는 입고 검수·로케이션 배정 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "WMS",
+      "ERP",
+      "바코드",
+      "RFID"
+    ]
+  },
+  {
+    "slug": "trade-customs",
+    "name": "무역·통관 자동화",
+    "category": "물류",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/trade-customs/",
+    "shortDescription": "Commercial Invoice·Packing List에서 반복하는 주문 데이터 취합·Invoice 생성 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "Commercial Invoice",
+      "Packing List",
+      "ERP",
+      "관세청 UNI-PASS"
+    ]
+  },
+  {
+    "slug": "manufacturing-vision",
+    "name": "제조 비전검사 AI",
+    "category": "제조",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/manufacturing-vision/",
+    "shortDescription": "산업용 카메라·OpenCV에서 반복하는 이미지 수집·불량 유형 라벨링 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "산업용 카메라",
+      "OpenCV",
+      "PyTorch",
+      "ONNX Runtime"
+    ]
+  },
+  {
+    "slug": "manufacturing-data",
+    "name": "제조 데이터·MES 자동화",
+    "category": "제조",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "MES·ERP에서 반복하는 생산 실적 수집·설비 상태 연결 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "MES",
+      "ERP",
+      "PLC",
+      "OPC UA"
+    ]
+  },
+  {
+    "slug": "field-inspection",
+    "name": "현장점검 AI",
+    "category": "제조",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/field-inspection/",
+    "shortDescription": "모바일 카메라·OpenCV에서 반복하는 점검 사진 촬영·위치·설비 연결 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "모바일 카메라",
+      "OpenCV",
+      "OCR",
+      "GPS"
+    ]
+  },
+  {
+    "slug": "real-estate",
+    "name": "부동산 업무 자동화",
+    "category": "산업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/real-estate/",
+    "shortDescription": "부동산 CRM·네이버 부동산에서 반복하는 매물 정보 정리·중복 매물 탐지 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "부동산 CRM",
+      "네이버 부동산",
+      "Google Maps",
+      "카카오톡 채널"
+    ]
+  },
+  {
+    "slug": "hospitality-travel",
+    "name": "숙박·여행 운영 자동화",
+    "category": "산업",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "PMS·Booking.com에서 반복하는 예약 통합·객실 상태 동기화 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "PMS",
+      "Booking.com",
+      "Expedia",
+      "Airbnb"
+    ]
+  },
+  {
+    "slug": "academy",
+    "name": "학원 운영 자동화",
+    "category": "산업",
+    "priority": "S",
+    "published": true,
+    "href": "/ai-automation/academy/",
+    "shortDescription": "학원 ERP·네이버 예약에서 반복하는 상담 문의 등록·반 배정 후보 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "학원 ERP",
+      "네이버 예약",
+      "카카오 알림톡",
+      "Google Sheets"
+    ]
+  },
+  {
+    "slug": "hospital-admin",
+    "name": "병원 행정 자동화",
+    "category": "산업",
+    "priority": "B",
+    "published": false,
+    "href": null,
+    "shortDescription": "병원 예약 시스템·EMR 연동 게이트웨이에서 반복하는 예약 문의 접수·진료 전 안내 업무를 줄이는 맞춤 개발",
+    "tools": [
+      "병원 예약 시스템",
+      "EMR 연동 게이트웨이",
+      "카카오 알림톡",
+      "콜 시스템"
+    ]
+  }
+]

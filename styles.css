@@ -1441,6 +1441,27 @@ body.pm-open { overflow: hidden; }
 @media (max-width: 860px) { .lx-2col { grid-template-columns: 1fr; gap: 32px; } }
 
 .lx-bespokes { display: grid; gap: 28px; max-width: 920px; margin: 0 auto; }
+
+/* AI 업무자동화 70개 분야: 목록은 서버 HTML, 검색·필터만 점진적 향상 */
+.auto-controls { margin: 28px 0 22px; }
+.auto-controls label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 750; color: var(--ink); }
+.auto-controls input { width: min(100%, 680px); min-height: 50px; padding: 12px 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); font: inherit; }
+.auto-controls input:focus-visible { outline: 3px solid rgba(40,94,219,.22); border-color: var(--accent); }
+.auto-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.auto-filter { min-height: 42px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: #fff; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.auto-filter.is-active { border-color: var(--accent); background: var(--accent); color: #fff; }
+.auto-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.auto-item { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.auto-item[hidden] { display: none; }
+.auto-item__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.auto-item__category { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+.auto-item h3 { flex: 1 1 220px; margin: 0; font-size: 17px; line-height: 1.35; word-break: keep-all; }
+.auto-item h3 a:hover { color: var(--accent); }
+.auto-item__status { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.auto-item > p { margin-top: 9px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.auto-item .auto-item__tools { color: var(--ink); font-size: 12px; overflow-wrap: anywhere; }
+.auto-empty, .auto-noscript { margin-top: 18px; color: var(--muted); }
+@media (max-width: 720px) { .auto-directory { grid-template-columns: 1fr; } .auto-item { padding: 16px; } }
 .lx-bespoke__t { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 14px; }
 .lx-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
 .lx-list li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.6; color: var(--ink); }
