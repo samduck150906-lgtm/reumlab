@@ -24,4 +24,7 @@ test('기존 정적 /ai-automation/ 생성기는 검색·카테고리 필터와 
   assert.match(source, /data-automation-category/);
   assert.match(source, /AUTOMATION_DOMAINS/);
   assert.match(source, /어떤 업무를 자동화하고 싶으세요/);
+  assert.match(source, /AI 업무자동화 개발 \| 기존 프로그램·산업별 반복업무/);
+  assert.match(source, /기존 프로그램의 반복 업무를 소프트웨어로/);
+  assert.match(source, /Excel·AutoCAD·Revit·스마트스토어/);
 });
