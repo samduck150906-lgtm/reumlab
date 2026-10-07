@@ -385,14 +385,15 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
       <footer className="footer" style={{ marginTop: 48 }}>
         <div className="container">
           <p className="footer-info">
-            {SITE.company} <span>|</span> 대표자: {SITE.representative} <span>|</span> 사업자등록번호: {SITE.bizNo}
+            상호: {SITE.legalName} <span>|</span> 대표자: {SITE.representative} <span>|</span> 사업자등록번호: {SITE.bizNo}
             <br />
-            연락처:{' '}
+            주소: {SITE.address}
+            <br />
+            전화:{' '}
             <a href={SITE.phoneHref} style={{ color: 'var(--text-dim)' }}>{SITE.phone}</a> <span>|</span>{' '}
             이메일:{' '}
             <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>{SITE.email}</a>
-            <br />
-            주소: {SITE.address}
+            <br />© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
           </p>
         </div>
       </footer>

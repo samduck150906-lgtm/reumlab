@@ -21,7 +21,7 @@
     {
       "claim_id": "entity-nap-001",
       "claim_type": "business_identity",
-      "claim_text": "대표자는 성아름, 전화는 010-8111-9370, 이메일은 ceo@eternalsix.com, 공개 사업자등록번호는 793-12-03247로 표기된다.",
+      "claim_text": "대표자는 성아름, 전화는 010-8111-9370, 이메일은 ceo@eternalsix.com, 공개 사업자등록번호는 303-28-65658로 표기된다.",
       "applies_to_service": ["all"],
       "source_url_or_file": ["https://reumlab.com/", "lib/seo.ts", "components/BusinessFooter.tsx"],
       "source_date": "2026-09-13",

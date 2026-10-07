@@ -357,12 +357,13 @@ export default function HomePage({ site }) {
       <footer className="footer">
         <div className="container">
           <p className="footer-info">
-            {site?.company || '앱·웹개발 스튜디오 름랩'} <span>|</span> 대표자: 성아름 <span>|</span> 사업자등록번호: 793-12-03247
+            상호: 이터널식스 <span>|</span> 대표자: 성아름 <span>|</span> 사업자등록번호: 303-28-65658
             <br />
-            연락처: 010-8111-9370
+            주소: 경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동)
             <br />
-            주소: 경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동) <span>|</span> 이메일:{' '}
+            전화: 010-8111-9370 <span>|</span> 이메일:{' '}
             <a href="mailto:ceo@eternalsix.com" style={{ color: 'var(--text-dim)' }}>ceo@eternalsix.com</a>
+            <br />© 2026 이터널식스. All rights reserved.
           </p>
         </div>
       </footer>

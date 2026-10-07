@@ -279,7 +279,7 @@ function landingHtml(landing) {
     </div>
   </section>
   <footer>
-    <p>© 2026 ${site.company} (REUMLAB). All Rights Reserved.</p>
+    <p>© 2026 이터널식스. All rights reserved.</p>
     <div class="footer-links">
       <a href="mailto:${site.email}">이메일</a>
       <a href="tel:${site.tel}">전화</a>

@@ -489,9 +489,7 @@ function HeroVisual() {
   );
 }
 
-export default function ReumSalesLanding({ site }: { site: Site }) {
-  const company = site?.company || SITE.company;
-
+export default function ReumSalesLanding(_props: { site: Site }) {
   return (
     <main className="reum-landing bg-white text-slate-800 antialiased">
       {/* Hero */}
@@ -970,23 +968,20 @@ export default function ReumSalesLanding({ site }: { site: Site }) {
           <p className="font-display font-semibold text-navy-900">REUMLAB · 름랩</p>
           <div className="mt-4 space-y-1.5 text-[13px] leading-relaxed sm:text-sm">
             <p>
-              <span className="font-semibold text-navy-900">{company}</span>
-            </p>
-            <p>대표자: {SITE.representative}</p>
-            <p>사업자등록번호: {SITE.bizNo}</p>
-            <p>
-              연락처:{' '}
-              <a className="text-accent-deep underline-offset-2 hover:underline" href={TEL_HREF}>
-                {SITE.phone}
-              </a>
+              상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}
             </p>
             <p>주소: {SITE.address}</p>
             <p>
-              이메일:{' '}
+              전화:{' '}
+              <a className="text-accent-deep underline-offset-2 hover:underline" href={TEL_HREF}>
+                {SITE.phone}
+              </a>{' '}
+              | 이메일:{' '}
               <a className="text-accent-deep underline-offset-2 hover:underline" href={MAIL_HREF}>
                 {SITE.email}
               </a>
             </p>
+            <p>© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -140,7 +140,7 @@ function hubHtml(hubSlug, hub) {
     <a href="${BASE}/">메인으로</a>
   </section>
   <footer>
-    <p>© 2026 ${site.company} (REUMLAB). All Rights Reserved.</p>
+    <p>© 2026 이터널식스. All rights reserved.</p>
   </footer>
 </body>
 </html>`;

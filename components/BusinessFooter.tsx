@@ -39,20 +39,19 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/system/">기능·시스템별 개발</Link>
         </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
-          {SITE.company}
+          상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}
           <br />
-          대표자: {SITE.representative} · 사업자등록번호: {SITE.bizNo}
+          주소: {SITE.address}
           <br />
-          연락처:{' '}
+          전화:{' '}
           <a href={SITE.phoneHref} style={{ color: 'var(--text-dim)' }}>
             {SITE.phone}
           </a>{' '}
-          · 이메일:{' '}
+          | 이메일:{' '}
           <a href={`mailto:${SITE.email}`} style={{ color: 'var(--text-dim)' }}>
             {SITE.email}
           </a>
-          <br />
-          주소: {SITE.address}
+          <br />© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
         </p>
         <nav aria-label="공식 채널" style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: '6px 14px', fontSize: 13 }}>
           {SITE.socialProfiles.map((profile) => (

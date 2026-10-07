@@ -22,16 +22,16 @@ function Footer() {
         </div>
         <div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', color: '#6b7280' }}>
-            <span>{SITE.company} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}</span>
+            <span>상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}</span>
+            <span>주소: {SITE.address}</span>
             <span>
-              연락처: <a href={SITE.phoneHref} style={{ color: '#4f46e5', textDecoration: 'none' }}>{SITE.phone}</a>
+              전화: <a href={SITE.phoneHref} style={{ color: '#4f46e5', textDecoration: 'none' }}>{SITE.phone}</a>
               {' | '}이메일: <a href={`mailto:${SITE.email}`} style={{ color: '#4f46e5', textDecoration: 'none' }}>{SITE.email}</a>
             </span>
-            <span>주소: {SITE.address}</span>
           </div>
         </div>
         <div style={{ marginTop: '16px' }}>
-          <p style={{ margin: 0, color: '#9ca3af' }}>© {new Date().getFullYear()} REUMLAB. All rights reserved.</p>
+          <p style={{ margin: 0, color: '#9ca3af' }}>© {new Date().getFullYear()} {SITE.legalName}. All rights reserved.</p>
         </div>
       </div>
     </footer>

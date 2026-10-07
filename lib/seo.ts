@@ -11,10 +11,10 @@ const SOCIAL_PROFILES = [
 export const SITE = {
   brandName: '름랩',
   alternateName: 'REUMLAB',
-  /** 법적 상호는 공개 자료만으로 확정하지 못해 비워 둔다. 마케팅 설명인 company와 구분한다. */
-  legalName: '',
+  /** 사업자등록상 법적 상호. 마케팅 설명인 company와 구분한다(푸터 '상호' 표기·JSON-LD legalName). */
+  legalName: '이터널식스',
   founderOrRepresentative: '성아름',
-  businessRegistrationNumber: '793-12-03247',
+  businessRegistrationNumber: '303-28-65658',
   canonicalOrigin: 'https://reumlab.com',
   /**
    * 사이트 대표 상호. 검색엔진이 "이 사이트의 이름"으로 읽는 모든 출력이 이 값을 쓴다
@@ -86,7 +86,7 @@ export const SITE = {
   description:
     '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 동탄·화성·수원을 거점으로 전국 비대면으로 진행합니다.',
   representative: '성아름',
-  bizNo: '793-12-03247',
+  bizNo: '303-28-65658',
   contactPoint: {
     contactType: 'customer service',
     telephone: '010-8111-9370',

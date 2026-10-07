@@ -665,7 +665,7 @@ ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).joi
       </div>
       <div>
         <h4>사업자 정보</h4>
-        <ul class="footer__info"><li><span>대표자</span>성아름</li><li><span>사업자등록</span>793-12-03247</li><li><span>주소</span>경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동)</li><li><span>영업시간</span>평일 10:00–18:00</li></ul>
+        <ul class="footer__info"><li><span>상호</span>이터널식스</li><li><span>대표자</span>성아름</li><li><span>사업자등록번호</span>303-28-65658</li><li><span>주소</span>경기도 화성시 동탄구 동탄첨단산업1로 58, 307호(영천동)</li><li><span>영업시간</span>평일 10:00–18:00</li></ul>
       </div>
       <div>
         <h4>상담 · 문의</h4>
@@ -673,7 +673,7 @@ ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).joi
         <a class="btn btn--primary" href="#contact" data-cta="apply" data-cta-loc="footer" style="margin-top:18px;min-height:46px;">프로젝트 상담하기</a>
       </div>
     </div>
-    <div class="footer__bottom"><span>© 2026 REUMLAB · 름랩. All rights reserved.</span><nav aria-label="법적 고지" style="display:flex;flex-wrap:wrap;gap:4px 14px;"><a href="/privacy/">개인정보처리방침</a><a href="/terms/">이용약관</a><a href="/refund/">환불정책</a></nav></div>
+    <div class="footer__bottom"><span>© 2026 이터널식스. All rights reserved.</span><nav aria-label="법적 고지" style="display:flex;flex-wrap:wrap;gap:4px 14px;"><a href="/privacy/">개인정보처리방침</a><a href="/terms/">이용약관</a><a href="/refund/">환불정책</a></nav></div>
   </div>
 </footer>
 <div class="mcta" id="mcta" role="navigation" aria-label="빠른 상담 바로가기">
@@ -747,7 +747,7 @@ const SITE_ENTITY_NODES = [
       areaServed: 'KR',
       availableLanguage: ['Korean'],
     },
-    identifier: { '@type': 'PropertyValue', name: '사업자등록번호', value: '793-12-03247' },
+    identifier: { '@type': 'PropertyValue', name: '사업자등록번호', value: '303-28-65658' },
     sameAs: SAME_AS,
   },
   {
