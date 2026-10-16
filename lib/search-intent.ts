@@ -332,6 +332,16 @@ const LANDING_INTENT_COPY: Record<
 };
 
 /** 서비스 축(app/web/plan) → 진입가 문구 */
+/**
+ * 목적격 조사 을/를 — 마지막 글자 받침으로 고른다.
+ * 예전에는 '을'로 고정돼 "카페 앱 개발 외주을 기획부터…" 같은 설명이 검색결과에 노출됐다.
+ */
+export function withObjectParticle(word: string): string {
+  const c = word.charCodeAt(word.length - 1);
+  const batchim = c >= 0xac00 && c <= 0xd7a3 && (c - 0xac00) % 28 !== 0;
+  return `${word}${batchim ? '을' : '를'}`;
+}
+
 function entryFor(svcType: string): string {
   return svcType === 'web' ? `${manwonTight(webFrom)}` : `${manwonTight(appFrom)}`;
 }
@@ -377,8 +387,8 @@ export function buildLandingMeta(input: {
     title: clampTitle(pickVariant(titles, input.slug, 'l-title')),
     description: composeDescription([
       subject
-        ? `${subject} ${input.serviceKo}을 기획부터 개발·배포까지 직접 진행합니다.`
-        : `${input.serviceKo}을 기획부터 개발·배포까지 직접 진행합니다.`,
+        ? `${subject} ${withObjectParticle(input.serviceKo)} 기획부터 개발·배포까지 직접 진행합니다.`
+        : `${withObjectParticle(input.serviceKo)} 기획부터 개발·배포까지 직접 진행합니다.`,
       `VAT 포함 정액 ${from}부터, 완성 후 소스코드와 운영 권한을 통째로 넘겨 드립니다.`,
       '월 관리비 없이 직접 수정·운영하도록 1:1 교육까지 포함합니다.',
     ]),

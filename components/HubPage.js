@@ -8,9 +8,45 @@ import {
   landingRedirectTarget,
 } from '../lib/data';
 import { getHubContent } from '../lib/hub-content';
+import { buildLandingMeta } from '../lib/search-intent';
 import BusinessFooter from './BusinessFooter';
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://reumlab.com';
+
+/**
+ * 허브의 랜딩 카드 목록.
+ *
+ * 예전에는 키워드 변형마다 카드를 하나씩 그렸다. 변형 랜딩 다수가 대표 랜딩으로 301 통합된 뒤에도
+ * 카드는 남아, "쇼핑몰제작 개발비 / 견적문의 / 비용상담 / 외주비"처럼 이름만 다른 카드 여러 장이
+ * 같은 URL을 가리켰고, 설명은 "쇼핑몰제작 견적문의 문의하세요."같은 원본 데이터 문구 그대로였다.
+ * → 실제 목적지(href) 기준으로 한 장만 남기고, 설명은 목적지 랜딩이 실제로 쓰는 메타 설명을 쓴다.
+ */
+export function hubCards(landingSlugs) {
+  const seen = new Set();
+  const cards = [];
+  for (const slug of landingSlugs) {
+    // 앱 pSEO로 통합된 랜딩은 301 홉 없이 대상 페이지로 직접 링크
+    const href = landingRedirectTarget(slug) || `/l/${slug}/`;
+    if (seen.has(href)) continue;
+    seen.add(href);
+    const targetSlug = href.startsWith('/l/') ? href.split('/')[2] : null;
+    const target = targetSlug ? getLandingBySlug(targetSlug) : null;
+    const keyword = target ? getKeywordBySlug(target.slug) : getKeywordBySlug(slug);
+    const description = target
+      ? buildLandingMeta({
+          keyword: target.keyword,
+          serviceKo: target.serviceKo || target.keyword,
+          intentKey: target.intentKey,
+          svcType: target.svcType,
+          regionKo: target.regionKo,
+          industryKo: target.industryKo,
+          slug: target.slug,
+        }).description
+      : '견적·상담 안내';
+    cards.push({ slug, href, keyword, description });
+  }
+  return cards;
+}
 
 export default function HubPage({ hubSlug }) {
   const site = getSite();
@@ -79,11 +115,7 @@ export default function HubPage({ hubSlug }) {
             {hub.ko} 관련 견적·상담 페이지
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {landings.map((slug) => {
-              const l = getLandingBySlug(slug);
-              const keyword = getKeywordBySlug(slug);
-              // 앱 pSEO로 통합된 랜딩은 301 홉 없이 대상 페이지로 직접 링크
-              const href = landingRedirectTarget(slug) || `/l/${slug}/`;
+            {hubCards(landings).map(({ slug, href, keyword, description }) => {
               return (
                 <Link
                   key={slug}
@@ -92,7 +124,7 @@ export default function HubPage({ hubSlug }) {
                 >
                   <div>
                     <p className="text-[15px] font-bold text-navy-900">{keyword}</p>
-                    <p className="mt-1 text-xs text-slate-500">{l ? l.description : '견적·상담 안내'}</p>
+                    <p className="mt-1 text-xs text-slate-500">{description}</p>
                   </div>
                   <span className="flex-none text-accent transition-transform group-hover:translate-x-1">→</span>
                 </Link>

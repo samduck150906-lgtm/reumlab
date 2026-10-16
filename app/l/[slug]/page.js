@@ -86,7 +86,7 @@ export default function LandingRoute({ params }) {
     <>
       <LandingServiceJsonLd
         name={landing.keyword || landing.title}
-        description={landing.description}
+        description={metaFor(landing).description}
         url={url}
         crumbs={crumbs}
       />
