@@ -14,6 +14,7 @@
  */
 import { SITE } from './seo';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
+import { PACKAGES, manwonText } from './pricing';
 import { buildWebsiteTitle, buildWebsiteDescription, websiteProfile, type IntentProfile } from './search-intent';
 
 export type WebsiteCategory =
@@ -411,47 +412,73 @@ function koG(w: string): string {
   return w + (hasBatchim(w) ? '이' : '가');
 }
 
+/** 문장 끝 마침표 보정 — 아키타입 why 문장은 마침표 없이 저장돼 있다. */
+function sentence(s: string): string {
+  const t = s.trim();
+  return /[.!?]$/.test(t) ? t : `${t}.`;
+}
+
+/**
+ * 페이지 항목 앞에 업종명을 붙일 때, 업종명 끝말과 항목 첫말이 같으면 한 번만 쓴다.
+ * ("MCN회사" + "회사 소개·팀" → "MCN회사 소개·팀", "영상제작업체" + "업체·스튜디오 소개" → "영상제작업체 스튜디오 소개")
+ */
+function prefixPage(ko: string, page: string): string {
+  if (NO_KO_PREFIX.some((x) => page.includes(x))) return page;
+  const m = page.match(/^([가-힣A-Za-z]+)[·\s](.+)$/);
+  if (m && ko.endsWith(m[1])) return `${ko} ${m[2]}`;
+  return `${ko} ${page}`;
+}
+
+const WEB_STARTER = PACKAGES.find((p) => p.name === '웹 스타터')!;
+const WEB_BUSINESS = PACKAGES.find((p) => p.name === '웹 비즈니스')!;
+
+/**
+ * 업종 홈페이지 본문.
+ *
+ * 2026-10 정비: 예전 생성기는 키워드 커버리지를 위해 '{업종}제작'·'{업종}업체'·'{업종}마케팅'·
+ * '{업종}창업' 같은 붙임 표기를 본문·FAQ 질문에 일부러 섞었다("안과제작는", "안과업체 교체 없이").
+ * 294개 페이지에 같은 방식으로 반복돼 사람이 읽기 어렵고, 검색엔진에는 자동 생성·키워드 반복
+ * 문서로 읽힐 수 있었다. 업종명은 띄어 쓴 자연스러운 표현으로만 쓰고, 조사는 받침에 맞춰 고르며,
+ * 가격은 lib/pricing.ts 에서만 가져온다. 검색 순위·노출을 약속하는 문장은 쓰지 않는다.
+ * (회귀 테스트: scripts/website-industry-copy.test.mts)
+ */
 export function buildWebsiteContent(d: WebsiteIndustryDef): WebsiteContent {
   const ko = d.ko;
   const a = CAT[d.category];
   const seq = SEQ[d.slug] ?? 0;
   const goal = normActor(a.goal);
-  const why = a.why;
+  const why = sentence(a.why);
   const conv = a.convert;
-  const kc = `${ko}홈페이지`;
-  const kp = `${ko}제작`;
-  const kb = `${ko}업체`;
-  const ks = `${ko}마케팅`;
-  const kn = `${ko}창업`;
+  const kc = `${ko} 홈페이지`;
+  const starter = manwonText(WEB_STARTER.price);
+  const business = manwonText(WEB_BUSINESS.price);
 
   const IV = [
-    `${kc} 제작은 ${goal} 만드는 것이 목적입니다. ${ko} 특성상 ${why}. 름랩은 ${ko} 운영에 바로 쓰이는 페이지부터 만들고 소스코드를 통째로 이관해, 만든 뒤 대표님이 직접 ${ko} 소식과 가격을 고치도록 합니다. '${kp}'를 고민하는 사장님께 월 관리비 없는 정액 제작을 권합니다.`,
-    `${ko} 방문자는 검색으로 먼저 ${koL(ko)} 찾습니다. ${why}. 그래서 ${kc}는 ${goal} 구조가 핵심입니다. 름랩은 ${ko}에 꼭 필요한 페이지만 담아 가볍고 빠르게 만들고, 소스코드·도메인을 대표님 명의로 이관합니다. ${kb}를 고를 때 월 사용료·수정비가 쌓이지 않는지 꼭 확인하세요.`,
-    `${koN(ko)} 홈페이지가 곧 첫인상입니다. ${why} 그만큼 첫 화면 구성이 중요합니다. 름랩은 ${goal} ${kc}를 정액으로 제작하고, 문구·이미지를 직접 고치도록 1:1 교육까지 제공합니다. ${kn} 단계라면 꼭 필요한 페이지부터 작게 시작해 ${kp} 비용을 합리적으로 맞춥니다.`,
-    `'${kp}'를 검색하는 ${ko} 사장님이 가장 먼저 확인할 것은 검색 노출과 총비용입니다. ${why}. 름랩은 ${goal} ${kc}를 만들되, 광고에 의존하지 않도록 ${ko} 키워드 구조를 제작에 넣고 소스코드를 이관합니다.`,
-    `${kc}는 단순히 예쁜 사이트가 아니라 ${ko} 고객을 문의로 잇는 도구여야 합니다. ${why}. 름랩은 ${goal} 구조로 ${ko} 홈페이지를 만들고 ${kb} 교체 없이 대표님이 직접 운영하도록 넘겨 드립니다.`,
-    `${ko} 신규 고객의 첫 접점은 대부분 모바일 검색입니다. ${why}. 름랩은 ${kc}를 ${goal} 흐름으로 설계하고, ${kp} 이후 ${ko} 소식·가격을 직접 수정하도록 관리 화면과 교육을 제공합니다.`,
+    `${koG(kc)} 할 일은 ${goal} 돕는 것입니다. ${why} 름랩은 ${ko} 운영에 바로 쓰이는 페이지부터 만들고, 완성 후 소스코드를 이관해 소식과 가격을 대표님이 직접 고칠 수 있게 합니다.`,
+    `${ko} 방문자는 대부분 검색으로 먼저 정보를 찾습니다. ${why} 그래서 ${koN(kc)} ${goal} 설계하는 것이 핵심입니다. 꼭 필요한 페이지만 담아 가볍게 만들고, 소스코드와 도메인은 대표님 명의로 넘겨 드립니다. 제작사를 고를 때는 월 사용료나 수정비가 따로 쌓이지 않는지 확인하세요.`,
+    `${koN(ko)} 홈페이지가 첫인상을 좌우합니다. ${why} 그만큼 첫 화면 구성이 중요합니다. 름랩은 ${goal} 구성한 ${koL(kc)} 정액으로 제작하고, 문구와 이미지를 직접 고칠 수 있도록 1:1 교육을 제공합니다. 개업 초기라면 원페이지로 작게 시작해 비용을 맞출 수 있습니다.`,
+    `${koL(kc)} 준비할 때 먼저 확인할 것은 총비용과 완성 후 운영 방식입니다. ${why} 름랩은 ${goal} 페이지를 구성하고, 제목·본문·구조화 데이터를 검색엔진이 읽기 쉽게 정리한 뒤 소스코드를 이관합니다.`,
+    `${koN(kc)} 보기 좋은 사이트에 그치지 않고 방문자를 문의로 이어 주는 도구여야 합니다. ${why} 름랩은 ${goal} 동선을 잡고, 완성 후에는 제작사 없이도 대표님이 직접 운영할 수 있도록 넘겨 드립니다.`,
+    `${ko}에 처음 연락하는 고객은 대개 휴대폰으로 먼저 검색합니다. ${why} 름랩은 ${koL(kc)} ${goal} 모바일 흐름으로 설계하고, 완성 후 소식과 가격을 직접 수정할 관리 화면과 사용 교육을 제공합니다.`,
   ];
   const SV = [
-    `${ko} 손님이 ${conv}까지 한 화면에서 끝내도록 동선을 짜면 전화 문의가 줄고 문의 전환이 늘어납니다. ${kc}가 반복 안내를 대신하므로 대표님은 실제 ${ko} 업무에 집중할 수 있습니다. ${ko}예약·문의가 쌓이면 ${ks}에도 그대로 활용됩니다.`,
-    `검색으로 들어온 ${ko} 방문자가 이탈하지 않고 ${conv}로 이어지도록, ${kc}는 모바일에서 빠르게 뜨고 연락처·지도·예약이 손끝에 닿게 배치합니다. 이 동선이 ${ko}의 문의 수를 좌우하고 ${kp}의 성패를 가릅니다.`,
-    `${koN(ko)} 신규 고객의 첫 접점이 대부분 모바일 검색입니다. ${kc}를 ${conv} 중심으로 만들면 광고비를 줄이면서 꾸준한 문의를 받고, 재방문 고객에게 ${ko} 정보를 항상 최신으로 전합니다. ${kb} 없이 직접 ${ko}상담 글을 올릴 수 있습니다.`,
-    `${ko}상담과 ${ko}예약이 전화로만 몰리면 놓치는 문의가 생깁니다. ${kc}가 24시간 ${conv}를 받아 주면 영업시간 외 문의도 잡을 수 있습니다. 름랩은 ${ko} 동선을 ${conv} 한 흐름으로 묶어 이탈을 줄입니다.`,
-    `${kp} 후 실제로 ${ko} 문의가 늘려면 검색 노출과 동선이 함께 맞아야 합니다. ${why} 그래서 ${kc}는 ${conv}를 첫 화면에 두고 ${ko} 후기·사례로 신뢰를 쌓아 방문자를 고객으로 바꿉니다.`,
-    `${ko} 사장님이 가장 아쉬워하는 건 '검색에 안 나온다'입니다. ${kc}를 ${ko} 키워드 구조로 만들고 ${conv} 동선을 붙이면, 광고 없이도 ${koL(ko)} 찾는 고객이 자연스럽게 유입됩니다. ${ks}의 기반이 됩니다.`,
+    `방문자가 필요한 정보를 확인하고 ${conv}까지 한 화면에서 이어 갈 수 있게 동선을 짜면, 같은 질문을 전화로 반복해 안내하는 일이 줄어듭니다. 대표님은 그 시간을 실제 ${ko} 업무에 쓸 수 있습니다.`,
+    `검색으로 들어온 방문자가 이탈하지 않고 ${conv}까지 이어지도록, 모바일에서 빠르게 열리고 연락처·지도·문의 버튼이 손 닿는 곳에 있게 배치합니다. 이 동선이 ${kc}의 문의 수를 좌우합니다.`,
+    `${koL(kc)} ${conv} 중심으로 만들면 광고에만 기대지 않는 문의 창구가 하나 더 생깁니다. 재방문 고객에게는 바뀐 정보를 바로 전할 수 있고, 공지와 소식도 직접 올릴 수 있습니다.`,
+    `문의가 전화로만 몰리면 영업시간 밖에 들어온 문의를 놓치기 쉽습니다. 홈페이지에서 ${koL(conv)} 바로 시작할 수 있게 하면 다음 영업일에 이어서 연락할 수 있습니다. 름랩은 ${kc}의 문의 동선을 한 흐름으로 묶습니다.`,
+    `${ko} 문의를 늘리려면 검색으로 찾을 수 있는 구조와 문의 동선이 함께 맞아야 합니다. ${why} 그래서 ${koL(conv)} 첫 화면에 두고, 공개할 수 있는 실제 후기와 사례가 있다면 함께 보여 줍니다.`,
+    `"검색해도 안 나온다"는 고민은 대개 페이지 구조에서 시작합니다. ${kc}의 제목과 본문을 고객이 실제로 쓰는 검색어에 맞춰 정리하고 ${conv} 동선을 붙이면, 검색으로 들어온 방문자가 문의까지 이어지기 쉬워집니다.`,
   ];
 
   const intro = IV[seq % IV.length];
   const scenario = SV[(Math.floor(seq / IV.length) + seq) % SV.length];
-  const features = a.pages.map((p) =>
-    NO_KO_PREFIX.some((x) => p.includes(x)) ? p : `${ko} ${p}`,
-  );
-  const searchLine = `${ko} 고객이 많이 쓰는 검색어(${a.search.join(', ')})에 맞춰 ${kc}의 제목·본문·구조화 데이터를 정렬해, 광고 없이도 ${koG(ko)} 검색에 잡히도록 만듭니다.`;
-  const priceLine = `${kp}는 원페이지 기준 VAT 포함 98만 원부터, 예약·다페이지 구성의 ${kc}는 380만 원·약 14일입니다. 월 관리비는 없고 호스팅·도메인은 대표님 명의로 보유합니다.`;
+  const features = a.pages.map((p) => prefixPage(ko, p));
+  const searchLine = `${ko} 고객이 자주 쓰는 검색어(${a.search.join(', ')})에 맞춰 ${kc}의 제목·본문·구조화 데이터를 정리합니다. 검색 순위는 검색엔진이 정하므로 보장하지 않지만, 검색엔진이 페이지 내용을 정확히 읽을 수 있는 구조를 기본으로 갖춥니다.`;
+  const priceLine = `원페이지 ${koN(kc)} VAT 포함 ${starter}부터(${WEB_STARTER.duration}), 예약·다페이지 구성은 ${business}부터(${WEB_BUSINESS.duration})입니다. 월 관리비는 없고 호스팅·도메인은 대표님 명의로 보유합니다.`;
   const faqs = [
-    { q: `${kp} 비용은 얼마인가요?`, a: `${ko} 원페이지는 VAT 포함 98만 원부터, 예약·다페이지 구성의 ${kc}는 380만 원부터입니다. 월 관리비 없이 정액으로 진행하고 상담에서 ${ko} 범위와 견적을 먼저 공개합니다.` },
-    { q: `${ko}도 검색에 잘 나오게 만들어 주나요?`, a: `네. ${ko} 고객이 쓰는 검색어에 맞춰 메타·구조화 데이터·사이트맵·모바일 반응형을 제작에 포함합니다. ${why} 그래서 ${ko} 상호·지역·서비스 키워드로 ${kc}가 검색에 잡히도록 구조를 잡습니다.` },
-    { q: `만든 뒤 ${ko} 정보를 직접 수정할 수 있나요?`, a: `네. 소스코드를 이관하고 ${ko} 가격·소식·이미지를 대표님이 직접 고치도록 관리 화면과 1:1 교육을 제공합니다. ${kb}에 매번 수정 요청할 필요가 없습니다.` },
+    { q: `${kc} 제작 비용은 얼마인가요?`, a: `원페이지는 VAT 포함 ${starter}부터, 예약·다페이지 구성은 ${business}부터입니다. 월 관리비 없이 정액으로 진행하며, 상담에서 ${ko}에 필요한 페이지 범위를 정한 뒤 견적을 먼저 안내합니다.` },
+    { q: `${kc}도 검색에 노출되도록 만들어 주나요?`, a: `검색 순위는 검색엔진이 정하므로 보장할 수 없습니다. 대신 ${ko} 고객이 쓰는 검색어에 맞춘 제목·설명, 구조화 데이터, 사이트맵, 모바일 반응형을 제작 범위에 기본으로 포함합니다. ${why}` },
+    { q: `만든 뒤 ${ko} 정보를 직접 수정할 수 있나요?`, a: `네. 소스코드를 이관하고, 가격·소식·이미지를 대표님이 직접 고칠 수 있도록 관리 화면과 1:1 교육을 제공합니다. 수정할 때마다 제작사에 요청하지 않아도 됩니다.` },
   ];
 
   return { intro, features, searchLine, scenario, priceLine, faqs };
@@ -499,7 +526,9 @@ export function websiteTitle(d: WebsiteIndustryDef): string {
 function cleanSentence(text: string, ko: string): string | undefined {
   const glued = ['제작', '업체', '마케팅', '창업', '홈페이지', '상담', '예약'].map((sfx) => `${ko}${sfx}`);
   const sentences = text.split(/(?<=[.])\s+/).map((x) => x.trim()).filter(Boolean);
-  return sentences.find((x) => x.length <= 70 && !glued.some((g) => x.includes(g)));
+  // 앞 문장을 받는 문장("대표님은 그 시간을…", "그래서 …", "이 동선이 …")은 검색결과에 홀로 실리면 뜻이 끊긴다.
+  const dependent = /^(그래서|그만큼|그러면|대신|또한?|따라서|이\s|그\s)|그 시간|이 동선/;
+  return sentences.find((x) => x.length <= 70 && !glued.some((g) => x.includes(g)) && !dependent.test(x));
 }
 
 export function websiteDescription(d: WebsiteIndustryDef): string {

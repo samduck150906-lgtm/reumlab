@@ -40,7 +40,11 @@ const globalCommand = netlify.match(/\[build\]([\s\S]*?)(?=\n\[|$)/)?.[1]
 const productionCommand = netlify.match(/\[context\.production\]([\s\S]*?)(?=\n\[|$)/)?.[1]
   ?.match(/command\s*=\s*"([^"]+)"/)?.[1] ?? '';
 check(globalCommand === 'npm run build', 'preview를 포함한 전역 build 명령에서 외부 제출이 분리되지 않았다');
-check(productionCommand.includes('npm run seo:indexnow'), 'production build에만 IndexNow 제출이 연결되어 있지 않다');
+check(!/seo:indexnow|submit-indexnow/.test(productionCommand), 'production build command 가 공개 전에 IndexNow 를 제출한다(공개 후 플러그인으로 옮겨야 한다)');
+const pluginPath = join(ROOT, 'netlify', 'plugins', 'indexnow-after-deploy', 'index.js');
+const pluginSource = existsSync(pluginPath) ? readFileSync(pluginPath, 'utf8') : '';
+check(/package\s*=\s*"\.\/netlify\/plugins\/indexnow-after-deploy"/.test(netlify), '공개 후 IndexNow 플러그인이 netlify.toml 에 등록되어 있지 않다');
+check(pluginSource.includes("CONTEXT !== 'production'") && pluginSource.includes('waitForLiveBuild'), '플러그인의 production·공개 확인 가드를 확인할 수 없다');
 
 console.log(`IndexNow key ${key ? 'O' : 'X'} · public ${existsSync(publicKeyPath) ? 'O' : 'X'} · out ${existsSync(outKeyPath) ? 'O' : 'X'}`);
 console.log(`안전장치 dry-run/submit/production/manifest 정적 검사 ${failures.length ? 'X' : 'O'}`);

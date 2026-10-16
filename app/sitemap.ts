@@ -373,12 +373,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // 허브·랜딩 본문은 데이터(json)뿐 아니라 렌더 템플릿에서도 바뀐다(카드 목록·설명·JSON-LD).
+  // 데이터 파일 날짜만 쓰면 템플릿 수정 배포에서 lastmod가 전진하지 않아 재수집 신호가 빠진다.
+  const hubMod = latest(clustersMod, gitLastModified('components/HubPage.js'));
+  const landingMod = latest(landingsMod, gitLastModified('app/l/[slug]/page.js'), gitLastModified('components/LandingPage.js'));
   for (const hubSlug of Object.keys(getClusters())) {
     if (hubSlug === 'mobile-app') continue; // /h/app-dev/ 와 중복 → canonical 통합, 사이트맵 제외
     if (!hubShouldIndex(hubSlug)) continue; // 도어웨이·앱 pSEO 대체 허브 제외 — robots noindex와 동기화
     out.push({
       url: `${SITE.domain}/h/${hubSlug}/`,
-      lastModified: clustersMod,
+      lastModified: hubMod,
       changeFrequency: 'weekly',
       priority: 0.75,
     });
@@ -388,7 +392,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!landingIndexable(l)) continue; // near-duplicate 랜딩은 사이트맵 제외 (robots noindex와 동기화)
     out.push({
       url: `${SITE.domain}/l/${l.slug}/`,
-      lastModified: landingsMod,
+      lastModified: landingMod,
       changeFrequency: 'monthly',
       priority: 0.65,
     });

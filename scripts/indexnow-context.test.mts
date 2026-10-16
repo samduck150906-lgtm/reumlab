@@ -38,10 +38,16 @@ test('IndexNow requires an explicit submit flag outside Netlify too', () => {
   assert.doesNotMatch(output, /HTTP \d{3}|https:\/\/searchadvisor\.naver\.com|https:\/\/www\.bing\.com/);
 });
 
-test('Netlify runs IndexNow only from the production build command', () => {
+test('Netlify runs IndexNow only after a published production deploy, never from a build command', () => {
   const toml = readFileSync(path.join(ROOT, 'netlify.toml'), 'utf8');
   assert.match(toml, /\[build\][\s\S]*?command\s*=\s*"npm run build"/);
-  assert.match(toml, /\[context\.production\][\s\S]*?npm run seo:indexnow/);
+  // build command 는 공개 전에 끝난다 — 어떤 컨텍스트의 command 에도 제출이 붙으면 안 된다.
+  assert.doesNotMatch(toml, /command\s*=\s*"[^"]*(seo:indexnow|submit-indexnow)/);
+  assert.match(toml, /\[\[plugins\]\][\s\S]*?package\s*=\s*"\.\/netlify\/plugins\/indexnow-after-deploy"/);
+  const plugin = readFileSync(path.join(ROOT, 'netlify', 'plugins', 'indexnow-after-deploy', 'index.js'), 'utf8');
+  assert.match(plugin, /export const onSuccess/);
+  assert.match(plugin, /CONTEXT !== 'production'/);
+  assert.match(plugin, /waitForLiveBuild/);
   const globalBuild = toml.match(/\[build\]([\s\S]*?)(?=\n\[|$)/)?.[1] ?? '';
   const globalCommand = globalBuild.match(/command\s*=\s*"([^"]+)"/)?.[1] ?? '';
   assert.equal(globalCommand, 'npm run build');
