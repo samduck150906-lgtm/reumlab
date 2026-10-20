@@ -1,0 +1,93 @@
+{
+  "reviewedAt": "2026-10-20",
+  "comparisonMethod": "각 축의 실제 원고를 summary, audience, userRoles, workflows, coreFeatures, dataEntities, edgeCases 기준으로 대조했다. 기관 호칭만으로 충분성을 판정하지 않았으며 입원·퇴원 전후의 고유 공백은 앱과 관리 원고로 별도 작성한다.",
+  "merges": [
+    {
+      "clusterId": "ind-022-booking",
+      "targetClusterId": "ind-016-booking",
+      "target": "/development-agency/booking/재활의학과/",
+      "status": "MERGE_SAME_INTENT",
+      "reason": "재활병원의 승인된 재활 치료·평가 일정을 여러 직종·공간·장비·이동 지원에 배정하는 구매 의도는 기존 원고와 동일하다. target은 한 치료사의 외래 반복 회기에 한정하지 않고 공동 참여와 순차 치료, 기관이 승인한 이동·휴식 조건, 부분 확보·확정, 실제 지연·부분 수행과 후속 재배정을 다룬다. 입원 병동에서 치료실로 이동하는 경우에도 같은 자원·선후관계·실제 인계 사건을 사용한다. 입원 수용 판단과 병상 배정은 이 치료 일정 구매 의도와 별도이며 해당 기능을 제공한다고 target에 추가 주장하지 않는다.",
+      "evidence": [
+        "expanded-rehabilitation-booking.json:workflows — 승인된 재활 계획·공동/순차 항목·이동/휴식·부분 확보·실제 지연·남은 일정 재배정",
+        "expanded-rehabilitation-booking.json:coreFeatures — 담당/공간/장비/이동 자원 동시 확인과 승인된 휴식 조건",
+        "expanded-rehabilitation-booking.json:dataEntities — 계획/개별 요청/공동·선후관계/이동지원/실제 시점/알림 버전",
+        "expanded-rehabilitation-booking.json:edgeCases — 공동 담당 취소·앞 치료 지연·치료실 중단·휴식 유지"
+      ],
+      "notClaimed": [
+        "입원 임상 수용 판정",
+        "신규 병상 배정",
+        "입원료 또는 치료수가 자동 산정"
+      ],
+      "preservation": "기존 본문·제목·canonical 변경 없이 clusterIds와 keywordVariants만 연결한다."
+    },
+    {
+      "clusterId": "ind-022-ai",
+      "targetClusterId": "ind-016-ai",
+      "target": "/development-agency/ai/재활의학과/",
+      "status": "MERGE_SAME_INTENT",
+      "reason": "재활병원의 다직종 평가·경과·목표를 회의 전에 근거와 함께 대조하는 AI 보조는 기존 target의 실제 입력·출력·검토자·금지 판단과 동일하다. target은 환자별 문서 묶음과 기간을 고정하고 치료 직종별 관찰·도구·도움·환경·시점 차이를 합치지 않으며 회의 초안 승인과 실제 계획 결정·정정을 분리한다. 병원이라는 조직 명칭이 이 문서·역할·원장 구조를 바꾸지 않는다. 입원 환자 퇴원 가능 예측이나 재활 치료 자동 권고는 원문에서 명시적으로 제외하며 병합 후에도 지원한다고 주장하지 않는다.",
+      "evidence": [
+        "expanded-rehabilitation-ai.json:workflows — 기간·문서 버전 고정→관찰/목표/조건 추출→근거 대조→검토·승인→회의 결정 분리",
+        "expanded-rehabilitation-ai.json:coreFeatures — 환자 진술/보호자 관찰/전문 평가와 계획/수행 구분, 회복점수·퇴원시점 생성 금지",
+        "expanded-rehabilitation-ai.json:dataEntities — 원본 구간·도구/단위/환경·후보 관계·검토·회의결정·재검토 버전",
+        "expanded-rehabilitation-ai.json:edgeCases — 다른 도움 수준/평가도구/이전 목표/부정·문서 정정"
+      ],
+      "notClaimed": [
+        "회복 예측",
+        "퇴원 가능성 자동 판단",
+        "치료 권고 자동 생성",
+        "입원 수가 자동 결정"
+      ],
+      "preservation": "기존 본문·제목·canonical 변경 없이 clusterIds와 keywordVariants만 연결한다."
+    },
+    {
+      "clusterId": "ind-022-portal",
+      "targetClusterId": "ind-016-portal",
+      "target": "/development-agency/portal/재활의학과/",
+      "status": "MERGE_SAME_INTENT",
+      "reason": "재활병원에서 생활 복귀를 준비하며 환자·보호자에게 주거 환경과 이동 구간·보조도구 자료를 받고 전문 담당이 보완·검토하는 포털은 기존 target과 같은 외부 이용자·문서·승인·예외를 갖는다. target은 단순 외래 예약 조회가 아니라 생활 복귀 계획, 공간별 사진·측정 위치·단위·시점, 원격 확인 한계, 추가 자료·승인 안내·설치/실제 확인과 외부 제공 권한까지 다룬다. 입원에서 퇴원으로 이어지는 맥락에도 동일한 상태를 사용한다. 외부 서비스 수락과 실제 개시의 기관 내부 인계 원장은 별도 신규 재활병원 관리 원고로 작성하여 이 포털이 그 기능까지 충족한다고 과장하지 않는다.",
+      "evidence": [
+        "expanded-rehabilitation-portal.json:workflows — 생활복귀 목적→공간/동선 자료→전문검토/현장확인 구분→보완→승인 안내→실제 준비",
+        "expanded-rehabilitation-portal.json:coreFeatures — 위치/단위/시점, 사진 치수 추정 금지, 준비 응답과 전문 확인 분리",
+        "expanded-rehabilitation-portal.json:dataEntities — 생활복귀 계획/공간/도구/보완 버전/검토한계/설치·외부공개",
+        "expanded-rehabilitation-portal.json:edgeCases — 옛사진/새사진·단위 차이·업체 설치와 검토 구분·거주지 변경·외부권한 종료"
+      ],
+      "notClaimed": [
+        "주거 환경 안전 자동 판정",
+        "보조기기 적합성 자동 결정",
+        "지역사회 기관의 서비스 수락 또는 실제 개시 보증"
+      ],
+      "preservation": "기존 본문·제목·canonical 변경 없이 clusterIds와 keywordVariants만 연결한다."
+    }
+  ],
+  "distinctPagesToAuthor": [
+    {
+      "clusterId": "ind-022-website",
+      "scope": "실제 재활 진료·입원 상담·시설/이동 접근·팀 구성·전원/퇴원 지원의 공개 안내와 사진·증빙·문의·갱신"
+    },
+    {
+      "clusterId": "ind-022-app",
+      "gap": "기존 ADL 활동 자기보고 앱에 없는 퇴원 전 교육 과제·교육받는 돌봄 담당·승인된 안내 버전·설명/시범/담당 확인·재교육·담당 변경"
+    },
+    {
+      "clusterId": "ind-022-management",
+      "gap": "기존 기능 목표/평가 원장에 없는 퇴원 계획·주거/돌봄/장비 준비·지역사회 기관 의뢰/수신/수락/개시·인계 책임·미완료 후속 추적"
+    }
+  ],
+  "implementationStatus": "THREE_DISTINCT_PAGES_REGISTERED_AND_SOURCE_VALIDATED",
+  "distinctPagesImplemented": [
+    {
+      "clusterId": "ind-022-website",
+      "status": "REGISTERED_AUTHORED"
+    },
+    {
+      "clusterId": "ind-022-app",
+      "status": "REGISTERED_AUTHORED"
+    },
+    {
+      "clusterId": "ind-022-management",
+      "status": "REGISTERED_AUTHORED"
+    }
+  ]
+}

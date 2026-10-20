@@ -43,6 +43,16 @@ import { semiconductorPortalPage } from '@/content/development-agency/expanded/r
 import { semiconductorManagementPage } from '@/content/development-agency/expanded/root-semiconductor/management';
 import { semiconductorFieldPage } from '@/content/development-agency/expanded/root-semiconductor/field';
 import { semiconductorAiPage } from '@/content/development-agency/expanded/root-semiconductor/ai';
+import { displayWebsitePage } from '@/content/development-agency/expanded/root-display/website';
+import { displayPortalPage } from '@/content/development-agency/expanded/root-display/portal';
+import { displayManagementPage } from '@/content/development-agency/expanded/root-display/management';
+import { displayFieldPage } from '@/content/development-agency/expanded/root-display/field';
+import { displayAiPage } from '@/content/development-agency/expanded/root-display/ai';
+import { biotechWebsitePage } from '@/content/development-agency/expanded/root-biotech/website';
+import { biotechPortalPage } from '@/content/development-agency/expanded/root-biotech/portal';
+import { biotechManagementPage } from '@/content/development-agency/expanded/root-biotech/management';
+import { biotechFieldPage } from '@/content/development-agency/expanded/root-biotech/field';
+import { biotechAiPage } from '@/content/development-agency/expanded/root-biotech/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -76,6 +86,16 @@ export const agencyPages: readonly AgencyPage[] = [
   semiconductorManagementPage,
   semiconductorFieldPage,
   semiconductorAiPage,
+  displayWebsitePage,
+  displayPortalPage,
+  displayManagementPage,
+  displayFieldPage,
+  displayAiPage,
+  biotechWebsitePage,
+  biotechPortalPage,
+  biotechManagementPage,
+  biotechFieldPage,
+  biotechAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
