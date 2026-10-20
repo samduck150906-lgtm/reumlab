@@ -19,6 +19,7 @@
  * 각 파일 주석에 이 파일을 출처로 적어 두었다. @id 문자열을 바꾸면 그 두 곳도 함께 고칠 것.
  */
 import { SITE } from './seo';
+import BRAND_ENTITIES from '../config/brand-entities.json';
 
 /** 사이트 전역 엔티티의 고정 @id — 페이지가 달라도 이 값은 절대 변하지 않는다. */
 export const SCHEMA_ID = {
@@ -69,6 +70,8 @@ export function organizationNode() {
   return {
     '@type': 'Organization',
     '@id': SCHEMA_ID.organization,
+    parentOrganization: { '@id': 'https://reumlab.com/#legal-organization' },
+    brand: { '@id': 'https://reumlab.com/#brand' },
     name: SITE.name,
     alternateName: SITE.nameEn,
     // SITE.company는 서비스 설명이지 법적 상호가 아니다. 확인 전에는 legalName을 내지 않는다.
@@ -146,7 +149,7 @@ export function businessNode(description: string = SITE.description) {
  * 섞이면 같은 @id 노드가 페이지마다 다른 소개 문장을 갖게 된다.
  */
 export function siteGraph(description: string = SITE.description) {
-  return [websiteNode(), organizationNode(), businessNode(description)];
+  return [websiteNode(), organizationNode(), businessNode(description), ...BRAND_ENTITIES];
 }
 
 export interface ServiceNodeInput {

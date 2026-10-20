@@ -146,8 +146,12 @@ if (webpage && service && webpage.mainEntity?.['@id'] !== service['@id']) {
   add(fail, 'schema', 'WebPage.mainEntity 가 Service 를 가리키지 않는다');
 }
 // 전역 엔티티는 참조만 하고 이 페이지에서 다시 정의하지 않는다
-for (const t of ['WebSite', 'Organization', 'LocalBusiness']) {
+for (const t of ['WebSite', 'LocalBusiness']) {
   if (byType(t).length > 1) add(fail, 'schema', `전역 ${t} 가 ${byType(t).length}번 선언됐다`);
+}
+const orgIds = byType('Organization').map(n => n['@id']);
+if (new Set(orgIds).size !== orgIds.length || orgIds.some(id => ![`${DOMAIN}/#organization`, `${DOMAIN}/#legal-organization`].includes(id))) {
+  add(fail, 'schema', '브랜드 조직과 법적 운영 주체 이외의 Organization 또는 동일 @id 중복');
 }
 if (service && service.provider?.['@id'] !== `${DOMAIN}/#business`) {
   add(fail, 'schema', `Service.provider 가 사업체 @id 를 참조하지 않는다: ${JSON.stringify(service?.provider)}`);

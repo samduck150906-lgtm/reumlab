@@ -10,6 +10,7 @@ function Footer() {
           (정적 홈·목적별 랜딩 푸터에는 이미 있었지만 그쪽은 9페이지뿐이다.)
         */}
         <nav aria-label="콘텐츠" style={{ marginBottom: '12px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          <a href="/marketing-linked-development/">마케팅 연계 개발</a>
           <a href="/guide/" style={{ color: '#374151', textDecoration: 'none' }}>개발 가이드</a>
           <a href="/portfolio/" style={{ color: '#374151', textDecoration: 'none' }}>개발 사례</a>
           <a href="/blog/" style={{ color: '#374151', textDecoration: 'none' }}>블로그</a>
@@ -21,6 +22,7 @@ function Footer() {
           <a href="/refund/" style={{ color: '#374151', textDecoration: 'none' }}>취소 및 환불 안내</a>
         </div>
         <div>
+          <p>름랩과 <a href="https://hyunlab.kr/" data-analytics="footer-hyunlab">현랩 HYUN LAB</a>은 이터널식스가 운영하는 전문 브랜드입니다.</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', color: '#6b7280' }}>
             <span>상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}</span>
             <span>주소: {SITE.address}</span>

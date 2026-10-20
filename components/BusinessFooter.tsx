@@ -13,6 +13,7 @@ export default function BusinessFooter({ topExtra }: Props) {
       <div className="container">
         {topExtra ? <p className="footer-info" style={{ marginBottom: 12 }}>{topExtra}</p> : null}
         <nav className="footer-info" aria-label="주요 서비스" style={{ marginBottom: 14, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
+          <Link href="/marketing-linked-development/">마케팅 연계 개발</Link>
           <Link href="/mvp/">앱 MVP 개발</Link>
           <Link href="/flutter/">Flutter 앱개발</Link>
           <Link href="/ai-development/">AI 외주개발</Link>
@@ -39,6 +40,8 @@ export default function BusinessFooter({ topExtra }: Props) {
           <Link href="/system/">기능·시스템별 개발</Link>
         </nav>
         <p className="footer-info" style={{ lineHeight: 1.85 }}>
+          름랩과 <a href="https://hyunlab.kr/" data-analytics="footer-hyunlab">현랩 HYUN LAB</a>은 이터널식스가 운영하는 전문 브랜드입니다.
+          <br />
           상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}
           <br />
           주소: {SITE.address}

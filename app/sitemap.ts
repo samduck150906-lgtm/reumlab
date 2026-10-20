@@ -23,6 +23,7 @@ import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
+  out.push({ url: `${SITE.domain}/marketing-linked-development/`, lastModified: gitLastModified('app/marketing-linked-development/page.tsx'), changeFrequency: 'monthly', priority: 0.82 });
 
   // lastmod는 빌드시각(new Date())이 아니라 각 콘텐츠 소스의 git 커밋 날짜를 쓴다.
   // → 같은 커밋을 재배포해도 lastmod가 그대로라 크롤 예산 churn이 없다(§4-1).

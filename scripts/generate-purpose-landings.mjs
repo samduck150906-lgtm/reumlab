@@ -15,6 +15,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const OUT = process.argv[2] ? path.resolve(process.argv[2]) : path.join(ROOT, 'out');
 const DOMAIN = 'https://reumlab.com';
+const BRAND_ENTITIES = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/brand-entities.json'), 'utf8'));
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -730,6 +731,8 @@ const SITE_ENTITY_NODES = [
   {
     '@type': 'Organization',
     '@id': SCHEMA_ID.organization,
+    parentOrganization: { '@id': 'https://reumlab.com/#legal-organization' },
+    brand: { '@id': 'https://reumlab.com/#brand' },
     name: '름랩',
     alternateName: 'REUMLAB',
     url: DOMAIN + '/',
@@ -799,6 +802,7 @@ function jsonLd(land) {
     '@context': 'https://schema.org',
     '@graph': [
       ...SITE_ENTITY_NODES,
+      ...BRAND_ENTITIES,
       {
         '@type': 'Service',
         '@id': `${url}#service`,

@@ -133,8 +133,16 @@ let noBrandTitle = 0;
 for (const p of indexed) {
   const og = p.html.match(/<meta property="og:site_name" content="([^"]*)"/i);
   if (og) siteNames.add(og[1]);
-  for (const m of p.html.matchAll(/"@type":"WebSite","@id":"[^"]*","url":"[^"]*","name":"([^"]*)"/g)) schemaWebsiteNames.add(m[1]);
-  for (const m of p.html.matchAll(/"@type":"Organization","@id":"[^"]*","name":"([^"]*)"/g)) schemaOrgNames.add(m[1]);
+  for (const m of p.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try {
+      const data = JSON.parse(m[1]);
+      for (const n of [].concat(data['@graph'] || [data])) {
+        if (n['@type'] === 'WebSite' && n['@id'] === 'https://reumlab.com/#website') schemaWebsiteNames.add(n.name);
+        // 법적 운영 주체 이터널식스의 name은 사이트 브랜드명과 다른 것이 정상이다.
+        if (n['@type'] === 'Organization' && n['@id'] === 'https://reumlab.com/#organization') schemaOrgNames.add(n.name);
+      }
+    } catch { /* JSON 파싱 오류는 schema QA가 보고한다 */ }
+  }
   const t = (p.html.match(/<title>([^<]*)<\/title>/) || [, ''])[1];
   if (t && !t.includes(BRAND)) {
     noBrandTitle++;
