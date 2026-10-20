@@ -89,6 +89,25 @@ test('strict primitives count visible main and detect repeated text independentl
   assert.ok(sentenceUnits('독립된 운영 조건을 확인하는 첫 문장입니다. 두 번째 검수 절차도 따로 설명합니다.').length===2);
   assert.equal(validDate('2026-02-30'),false);
 });
+test('date-only content dates follow the Korean publication day at the UTC boundary',t=>{
+  let now = Date.parse('2026-10-20T14:59:59Z');
+  t.mock.method(Date,'now',()=>now);
+  assert.equal(validDate('2026-10-21'),false,'tomorrow in Korea remains future');
+  now = Date.parse('2026-10-20T15:00:00Z');
+  assert.equal(validDate('2026-10-21'),true,'Korean midnight starts the publication day');
+  now = Date.parse('2026-10-20T22:00:00Z');
+  assert.equal(validDate('2026-10-21'),true);
+  assert.equal(validDate('2026-10-22'),false);
+  assert.equal(validDate('2026-02-30'),false);
+  assert.equal(validDate('2024-02-29'),true);
+});
+test('timestamp dates retain actual instant and invalid-calendar checks',t=>{
+  t.mock.method(Date,'now',()=>Date.parse('2026-10-20T22:00:00Z'));
+  assert.equal(validDate('2026-10-21T06:59:00+09:00'),true);
+  assert.equal(validDate('2026-10-21T07:01:00+09:00'),false);
+  assert.equal(validDate('2026-10-21T00:00:00Z'),false);
+  assert.equal(validDate('2026-02-30T12:00:00+09:00'),false);
+});
 test('complete exported namespace passes while old root sitemap stays separate',()=>{
   const f=fixture(); try {
     const report=verify(f.options,f.catalog);

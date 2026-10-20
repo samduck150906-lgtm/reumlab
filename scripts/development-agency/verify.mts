@@ -107,8 +107,11 @@ function localFile(root: string, url: string): string | null {
 }
 export function validDate(value: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(value)) return false;
-  const stamp = Date.parse(value);
-  if (!Number.isFinite(stamp) || stamp > Date.now() + 1000) return false;
+  // Date-only content is published on the site's Korean calendar day.
+  // Explicit timestamps still represent their actual instant, including UTC.
+  const dateOnly = value.length === 10;
+  const stamp = Date.parse(dateOnly ? value + 'T00:00:00+09:00' : value);
+  if (!Number.isFinite(stamp) || stamp > Date.now() + (dateOnly ? 0 : 1000)) return false;
   const day = value.slice(0, 10);
   const dayStamp = new Date(day + 'T00:00:00Z');
   return dayStamp.toISOString().slice(0, 10) === day;

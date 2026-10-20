@@ -58,6 +58,18 @@ import { drugDevelopmentPortalPage } from '@/content/development-agency/expanded
 import { drugDevelopmentManagementPage } from '@/content/development-agency/expanded/root-drug-development/management';
 import { drugDevelopmentFieldPage } from '@/content/development-agency/expanded/root-drug-development/field';
 import { drugDevelopmentAiPage } from '@/content/development-agency/expanded/root-drug-development/ai';
+import { clinicalDataWebsitePage } from '@/content/development-agency/expanded/root-clinical-data/website';
+import { clinicalDataPortalPage } from '@/content/development-agency/expanded/root-clinical-data/portal';
+import { clinicalDataManagementPage } from '@/content/development-agency/expanded/root-clinical-data/management';
+import { clinicalDataFieldPage } from '@/content/development-agency/expanded/root-clinical-data/field';
+import { clinicalDataAiPage } from '@/content/development-agency/expanded/root-clinical-data/ai';
+import { researchEquipmentWebsitePage } from '@/content/development-agency/expanded/root-research-equipment/website';
+import { researchEquipmentPortalPage } from '@/content/development-agency/expanded/root-research-equipment/portal';
+import { researchEquipmentManagementPage } from '@/content/development-agency/expanded/root-research-equipment/management';
+import { researchEquipmentFieldPage } from '@/content/development-agency/expanded/root-research-equipment/field';
+import { researchEquipmentAiPage } from '@/content/development-agency/expanded/root-research-equipment/ai';
+import { laboratoryOperationsWebsitePage } from '@/content/development-agency/expanded/root-laboratory-operations/website';
+import { laboratoryOperationsAiPage } from '@/content/development-agency/expanded/root-laboratory-operations/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -106,6 +118,18 @@ export const agencyPages: readonly AgencyPage[] = [
   drugDevelopmentManagementPage,
   drugDevelopmentFieldPage,
   drugDevelopmentAiPage,
+  clinicalDataWebsitePage,
+  clinicalDataPortalPage,
+  clinicalDataManagementPage,
+  clinicalDataFieldPage,
+  clinicalDataAiPage,
+  researchEquipmentWebsitePage,
+  researchEquipmentPortalPage,
+  researchEquipmentManagementPage,
+  researchEquipmentFieldPage,
+  researchEquipmentAiPage,
+  laboratoryOperationsWebsitePage,
+  laboratoryOperationsAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
