@@ -1,0 +1,72 @@
+{
+  "status": "WITHDRAWN_MERGE_CORRECTION_PASS",
+  "changes": [
+    {
+      "slug": "ai/물리치료센터",
+      "before": {
+        "clusterIds": [
+          "ind-028-ai",
+          "ind-029-ai"
+        ],
+        "keywordVariants": [
+          "물리치료센터 AI 자동화",
+          "도수치료센터 AI 자동화"
+        ]
+      },
+      "after": {
+        "clusterIds": [
+          "ind-028-ai"
+        ],
+        "keywordVariants": [
+          "물리치료센터 AI 자동화"
+        ]
+      }
+    },
+    {
+      "slug": "portal/물리치료센터",
+      "before": {
+        "clusterIds": [
+          "ind-028-portal",
+          "ind-029-portal"
+        ],
+        "keywordVariants": [
+          "물리치료센터 고객 포털 개발",
+          "도수치료센터 고객 포털 개발"
+        ]
+      },
+      "after": {
+        "clusterIds": [
+          "ind-028-portal"
+        ],
+        "keywordVariants": [
+          "물리치료센터 고객 포털 개발"
+        ]
+      }
+    },
+    {
+      "slug": "website/물리치료센터",
+      "before": {
+        "clusterIds": [
+          "ind-028-website",
+          "ind-029-website"
+        ],
+        "keywordVariants": [
+          "물리치료센터 홈페이지 제작",
+          "도수치료센터 홈페이지 제작"
+        ]
+      },
+      "after": {
+        "clusterIds": [
+          "ind-028-website"
+        ],
+        "keywordVariants": [
+          "물리치료센터 홈페이지 제작"
+        ]
+      }
+    }
+  ],
+  "allOtherFieldsPreserved": true,
+  "rawSourceCheck": "Physical3 raw sources retain ind028 cluster_id and no ind029 synonyms; withdrawn manual merges excluded by assembler.",
+  "sourceBeforeSha256": "244302da8a9f0814e6ca91da73786873fb42bd122757dc61e6a832d757167b44",
+  "sourceAfterSha256": "ea2dab1b456d1bb6c783456494987b959d7b055bf59fee1a90adbb39d9b146ce"
+}

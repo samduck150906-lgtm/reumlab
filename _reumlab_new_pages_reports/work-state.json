@@ -28,7 +28,7 @@
     "normalizationPolicy": "공백·앱 표기·회사/업체·영문 대소문자 정규화는 검색용 보조 열. 제작/개발/구축, 지역·업종 순서 및 도구 이름은 의미를 보존하고 최종 canonical 판정으로 통합한다. 자동 치환만으로 다른 업무 의도를 합치지 않는다.",
     "statusMeaning": "보류는 검색 수요가 낮다는 판정이나 제공 불가가 아니라 독립 구매 페이지를 뒷받침할 고유 자료가 부족하다는 판정이다."
   },
-  "updatedAt": "2026-10-20T22:37:06.095Z",
+  "updatedAt": "2026-10-20T23:02:52.820Z",
   "scopeExpansion": {
     "requestedAt": "2026-10-20T09:37:27.904941+00:00",
     "userRequest": "2천개이상 보류네? 니가 차별적이고충실한페이지 만들면되잖아 전부 만들어",
@@ -195,9 +195,6 @@
     "ind-028-ai",
     "ind-028-portal",
     "ind-028-website",
-    "ind-029-ai",
-    "ind-029-portal",
-    "ind-029-website",
     "ind-099-app",
     "ind-099-booking",
     "ind-099-management",
@@ -512,11 +509,14 @@
     "registeredHubPages": 1,
     "expandedQueueRows": 2484,
     "queueCounts": {
-      "AUTHORED_AWAITING_RELEASE_QA": 437,
-      "AUTHORING_REQUIRED": 2043,
+      "AUTHORED_AWAITING_RELEASE_QA": 434,
+      "AUTHORING_REQUIRED": 2046,
       "MERGED_SYNONYM": 4
     },
     "nextUnwritten": [
+      "ind-029-website",
+      "ind-029-ai",
+      "ind-029-portal",
       "ind-030-website",
       "ind-030-app",
       "ind-030-booking",
@@ -533,10 +533,7 @@
       "ind-032-app",
       "ind-032-booking",
       "ind-032-management",
-      "ind-032-ai",
-      "ind-032-portal",
-      "ind-033-website",
-      "ind-033-booking"
+      "ind-032-ai"
     ],
     "allRequestedContentComplete": false
   }

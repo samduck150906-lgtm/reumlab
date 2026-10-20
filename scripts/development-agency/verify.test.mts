@@ -36,7 +36,8 @@ function makePage(slug: string, seed: number): AgencyPage {
     summary:fixtureText(seed+90,100)+'.', updatedAt:'2026-01-01',
     sections:Array.from({length:12},(_,i)=>({id:`section-${i}`,heading:`단계별 검수 항목 ${i}`,fields:i<3?[fields[i],fields[i+12]]:[fields[i]]})),
     faq:Array.from({length:6},(_,i)=>({question:`검증 자료 ${seed}의 질문 ${i}은 무엇입니까?`,answer:fixtureText(seed+100+i,80)+'.'})),
-    relatedRoutes:[{href:slug?'/development-agency/':'/development-agency/detail/',label:'다른 검수',reason:'별도의 과정 비교'}],
+    relatedRoutes:[{href:slug?'/development-agency/':'/development-agency/detail/',label:'다른 검수',reason:'별도의 과정 비교'},
+      ...Array.from({length:4},(_,i)=>({href:`/support-${i+1}/`,label:`별도 지원 ${i+1}`,reason:'추가 지원 범위 비교'}))],
     ctaContext:fixtureText(seed+200,90)+'.',
     evidenceSources:[{title:'공식 검증 자료',url:'https://example.com/',use:'테스트용 자료'}],
   } as AgencyPage;
@@ -68,6 +69,10 @@ function fixture() {
   fs.mkdirSync(path.join(root,'development-agency/detail'),{recursive:true});
   const hub = makePage('',11), detail = makePage('detail',701);
   fs.writeFileSync(path.join(root,'index.html'),'<html><head><title>기존 홈페이지</title><meta name="description" content="기존 설명"><link rel="canonical" href="https://reumlab.com/"></head><body><main><h1>원본 제목</h1><p>기존 사이트의 초기 본문입니다.</p></main></body></html>');
+  for(let i=1;i<=4;i++) {
+    fs.mkdirSync(path.join(root,`support-${i}`),{recursive:true});
+    fs.writeFileSync(path.join(root,`support-${i}/index.html`),'<html><body><main>별도 지원 문서</main></body></html>');
+  }
   fs.writeFileSync(path.join(root,'development-agency/index.html'),render(hub));
   fs.writeFileSync(path.join(root,'development-agency/detail/index.html'),render(detail));
   fs.writeFileSync(path.join(root,'sitemap.xml'),sitemap([ORIGIN+'/']));
@@ -117,11 +122,26 @@ test('complete exported namespace passes while old root sitemap stays separate',
     assert.ok(report.quality.every(page=>page.koreanSyllables>=3500));
   } finally { cleanup(f.root); }
 });
+
+test('related navigation requires five to ten distinct document routes',()=>{
+  for(const scenario of ['too-few','too-many','duplicate-document'] as const) {
+    const f=fixture(); try {
+      const detail=f.catalog.agencyPages[0];
+      if(scenario==='too-few') detail.relatedRoutes=detail.relatedRoutes.slice(0,2);
+      if(scenario==='too-many') detail.relatedRoutes=[...detail.relatedRoutes,...Array.from({length:6},(_,i)=>({href:`/extra-${i}/`,label:'추가 문서',reason:'추가 범위'}))];
+      if(scenario==='duplicate-document') detail.relatedRoutes[4]={...detail.relatedRoutes[3],href:detail.relatedRoutes[3].href+'?view=compact#part'};
+      fs.writeFileSync(path.join(f.root,'development-agency/detail/index.html'),render(detail));
+      const report=verify(f.options,f.catalog);
+      assert.ok(report.issues.some(issue=>issue.check===(scenario==='duplicate-document'?'duplicate-related-route':'related-route-count')),scenario);
+      assert.equal(report.status,'FAIL');
+    } finally { cleanup(f.root); }
+  }
+});
 test('Korean nested slug resolves decoded export folders with encoded canonical and raw Korean internal href',()=>{
   const f=fixture(); try {
     const detail=f.catalog.agencyPages[0];
     detail.slug='교육기관/앱-개발';
-    f.catalog.agencyHub.relatedRoutes=[{href:'/development-agency/교육기관/앱-개발/',label:'교육 앱',reason:'독립 요구'}];
+    f.catalog.agencyHub.relatedRoutes[0]={href:'/development-agency/교육기관/앱-개발/',label:'교육 앱',reason:'독립 요구'};
     const folder=path.join(f.root,'development-agency','교육기관','앱-개발');
     fs.mkdirSync(folder,{recursive:true});
     fs.unlinkSync(path.join(f.root,'development-agency/detail/index.html'));

@@ -229,8 +229,18 @@ function validateCatalog(page: AgencyPage, url: string, add: (check: string, det
   const ids = (page.sections ?? []).map(section => section.id);
   if (new Set(ids).size !== ids.length) add('section-id', 'Duplicate section id');
   for (const id of ids) if (!/^[a-z][a-z0-9-]*$/.test(id)) add('section-id', `Unsafe section id ${id}`);
+  const relatedCount = page.relatedRoutes?.length ?? 0;
+  if (relatedCount < 5 || relatedCount > 10) add('related-route-count', `Expected 5–10 related documents, got ${relatedCount}`);
+  const relatedDocuments = new Set<string>();
   for (const link of page.relatedRoutes ?? []) {
-    try { if (normalizedUrl(link.href) === url) add('self-related-link', link.href); }
+    try {
+      const target = new URL(link.href, ORIGIN);
+      target.search = ''; target.hash = '';
+      const document = target.href;
+      if (document === url) add('self-related-link', link.href);
+      if (relatedDocuments.has(document)) add('duplicate-related-route', link.href);
+      relatedDocuments.add(document);
+    }
     catch { add('invalid-related-link', link.href); }
   }
 }

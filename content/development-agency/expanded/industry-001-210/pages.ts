@@ -206,6 +206,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/동물병원/",
         "label": "동물병원 의뢰 자료 포털",
         "reason": "기관 간 의뢰와 승인된 결과 전달은 별도의 권한·상태로 연결합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
+      },
+      {
+        "href": "/website/",
+        "label": "공개 홈페이지 제작 범위",
+        "reason": "공개 안내에서 받을 문의와 권한 확인 이후에만 제공할 개별 자료의 경계를 검토합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -427,6 +442,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/동물병원/",
         "label": "동물병원 검사 문서 AI",
         "reason": "수신 문서의 개체·종·단위·원문을 내부에서 대조하는 보조 범위를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
+      },
+      {
+        "href": "/website/",
+        "label": "공개 홈페이지 제작 범위",
+        "reason": "공개 안내에서 받을 문의와 권한 확인 이후에만 제공할 개별 자료의 경계를 검토합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -648,6 +678,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 추출·평가·승인 설계",
         "reason": "근거 표시와 정답 검증·운영 책임을 확인합니다."
+      },
+      {
+        "href": "/development-agency/app/건강검진센터/",
+        "label": "건강검진센터 앱 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/portal/건강검진센터/",
+        "label": "건강검진센터 고객 포털 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -874,6 +914,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/app/hospital/",
         "label": "병원 앱의 기본 기능",
         "reason": "일반 예약·문진에서 항목별 결과 승인과 상담으로 구체화합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강검진센터/",
+        "label": "건강검진센터 AI 자동화",
+        "reason": "건강검진센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/건강검진센터/",
+        "label": "건강검진센터 예약 시스템 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -1100,6 +1150,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/booking/영상의학과/",
         "label": "검사 장비·인력 자원 예약",
         "reason": "선택 검사별 세부 자원과 임상 계획 확인을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강검진센터/",
+        "label": "건강검진센터 AI 자동화",
+        "reason": "건강검진센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/건강검진센터/",
+        "label": "건강검진센터 고객 포털 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -1326,6 +1386,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/management/영상의학과/",
         "label": "검사 수행·결과 원장의 구분",
         "reason": "실제 검사와 판독 상태를 계약·정산과 다른 원장으로 다룹니다."
+      },
+      {
+        "href": "/development-agency/ai/건강검진센터/",
+        "label": "건강검진센터 AI 자동화",
+        "reason": "건강검진센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/건강검진센터/",
+        "label": "건강검진센터 앱 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -1552,6 +1622,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/건강검진센터/",
         "label": "협약 조건 추출 보조",
         "reason": "제출된 문서의 후보와 실제 승인된 계약 조건을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/건강검진센터/",
+        "label": "건강검진센터 예약 시스템 개발",
+        "reason": "건강검진센터의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -1773,6 +1853,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/임상시험센터/",
         "label": "임상시험센터 공개 홈페이지",
         "reason": "비공개 연구 문서 추출과 승인된 공개 모집 정보의 범위를 비교합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
+      },
+      {
+        "href": "/website/",
+        "label": "공개 홈페이지 제작 범위",
+        "reason": "공개 안내에서 받을 문의와 권한 확인 이후에만 제공할 개별 자료의 경계를 검토합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -1989,6 +2084,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/website/",
         "label": "업종별 홈페이지 제작",
         "reason": "공개 정보와 목적별 문의를 중심으로 한 홈페이지 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/임상시험센터/",
+        "label": "임상시험센터 AI 자동화",
+        "reason": "임상시험센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -2215,6 +2325,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/enterprise-ai/",
         "label": "내부 AI 운영 검토",
         "reason": "외부 모델·자료 권한·평가와 인수 조건을 함께 확인합니다."
+      },
+      {
+        "href": "/development-agency/portal/치과/",
+        "label": "치과 고객 포털 개발",
+        "reason": "치과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -2441,6 +2561,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 예약·접수 운영",
         "reason": "환자 포털이 연결할 일정·접수 원장의 기본 범위를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -2667,6 +2797,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 자료 공개·요청 포털",
         "reason": "내부 사진 관리와 환자에게 자료를 제공하는 승인 절차를 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/피부과/",
+        "label": "피부과 고객 포털 개발",
+        "reason": "피부과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -2893,6 +3033,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 방문·접수 운영",
         "reason": "환자 포털이 참조할 방문 식별과 원본 상태의 범위를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -3119,6 +3269,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/enterprise-ai/",
         "label": "내부 자료 AI 운영",
         "reason": "민감자료 접근·외부 모델·평가와 인수 조건을 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/이비인후과/",
+        "label": "이비인후과 예약 시스템 개발",
+        "reason": "이비인후과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/이비인후과/",
+        "label": "이비인후과 관리 프로그램",
+        "reason": "이비인후과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -3345,6 +3505,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수 원장",
         "reason": "앱에 표시할 실제 접수·진료·검사 상태의 원본을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/이비인후과/",
+        "label": "이비인후과 AI 자동화",
+        "reason": "이비인후과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/이비인후과/",
+        "label": "이비인후과 예약 시스템 개발",
+        "reason": "이비인후과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -3573,6 +3743,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수·운영",
         "reason": "기존 진료·접수 원장과 검사 예약을 연결할 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/이비인후과/",
+        "label": "이비인후과 AI 자동화",
+        "reason": "이비인후과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/이비인후과/",
+        "label": "이비인후과 관리 프로그램",
+        "reason": "이비인후과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -3799,6 +3979,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수·운영",
         "reason": "기구 사용에 연결할 실제 업무 건과 개인 접근 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/이비인후과/",
+        "label": "이비인후과 AI 자동화",
+        "reason": "이비인후과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/이비인후과/",
+        "label": "이비인후과 앱 개발",
+        "reason": "이비인후과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -4025,6 +4215,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "병원 문서 요청 포털",
         "reason": "발급 권한의 공통 흐름과 검사 그래프·출처 표시의 고유 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/booking/이비인후과/",
+        "label": "이비인후과 예약 시스템 개발",
+        "reason": "이비인후과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/이비인후과/",
+        "label": "이비인후과 관리 프로그램",
+        "reason": "이비인후과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -4251,6 +4451,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/management/종합병원/",
         "label": "병상·공간 인계 관리",
         "reason": "문서 답변과 실제 운영 상태를 변경하는 업무 원장을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/종합병원/",
+        "label": "종합병원 앱 개발",
+        "reason": "종합병원의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/종합병원/",
+        "label": "종합병원 예약 시스템 개발",
+        "reason": "종합병원의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -4477,6 +4687,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 자료 요청 포털",
         "reason": "방문 당일 안내와 문서 요청·공개 승인은 서로 다른 업무 흐름입니다."
+      },
+      {
+        "href": "/development-agency/ai/종합병원/",
+        "label": "종합병원 AI 자동화",
+        "reason": "종합병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/종합병원/",
+        "label": "종합병원 예약 시스템 개발",
+        "reason": "종합병원의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -4703,6 +4923,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/종합병원/",
         "label": "진료과 공개 안내 홈페이지",
         "reason": "예약 가능 시간을 처리하지 않는 공개 소개·방문 안내 범위입니다."
+      },
+      {
+        "href": "/development-agency/ai/종합병원/",
+        "label": "종합병원 AI 자동화",
+        "reason": "종합병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/종합병원/",
+        "label": "종합병원 관리 프로그램",
+        "reason": "종합병원의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -4929,6 +5159,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/종합병원/",
         "label": "환자용 방문 안내 앱",
         "reason": "직원 운영 상태에서 환자에게 공개할 내용과 개인 접근 범위를 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/종합병원/",
+        "label": "종합병원 AI 자동화",
+        "reason": "종합병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/website/종합병원/",
+        "label": "종합병원 홈페이지 제작",
+        "reason": "종합병원의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -5155,6 +5395,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 운영 솔루션",
         "reason": "예약·문진·접수를 업무 원장과 연결할 때 비교할 기존 범위입니다."
+      },
+      {
+        "href": "/development-agency/ai/종합병원/",
+        "label": "종합병원 AI 자동화",
+        "reason": "종합병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/종합병원/",
+        "label": "종합병원 앱 개발",
+        "reason": "종합병원의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -5376,6 +5626,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/건강관리센터/",
         "label": "건강관리센터 개인 실천 앱",
         "reason": "개인 생활 기록을 운영 의견 분석에 자동 포함하지 않는 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/건강관리센터/",
+        "label": "건강관리센터 회차 예약",
+        "reason": "실제 회차 정원과 대기·보강 배정의 운영 조건을 함께 검토합니다."
+      },
+      {
+        "href": "/development-agency/portal/건강관리센터/",
+        "label": "건강관리센터 기관 보고 포털",
+        "reason": "의뢰기관에 공개할 수 있는 승인 집계와 개인 기록의 권한 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/website/건강관리센터/",
+        "label": "건강관리센터 프로그램 안내",
+        "reason": "공개 프로그램 설명과 실제 참여 확인·개인별 지원의 범위를 구분합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -5592,6 +5857,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/fitness/",
         "label": "피트니스 회원 운영 솔루션",
         "reason": "회원권·출석·횟수 차감과 생활 실천 목표·담당 확인의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강관리센터/",
+        "label": "건강관리센터 AI 자동화",
+        "reason": "건강관리센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/건강관리센터/",
+        "label": "건강관리센터 예약 시스템 개발",
+        "reason": "건강관리센터의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/건강관리센터/",
+        "label": "건강관리센터 관리 프로그램",
+        "reason": "건강관리센터의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -5808,6 +6088,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/건강관리센터/",
         "label": "건강관리센터 프로그램 소개",
         "reason": "공개 모집 안내와 실제 회차·자원 배정의 범위를 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/건강관리센터/",
+        "label": "건강관리센터 수행 원장",
+        "reason": "실제 참여·교육·연락 기록과 보고 근거의 연결 조건을 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/portal/건강관리센터/",
+        "label": "건강관리센터 기관 보고 포털",
+        "reason": "의뢰기관에 공개할 수 있는 승인 집계와 개인 기록의 권한 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강관리센터/",
+        "label": "건강관리센터 운영 의견 AI",
+        "reason": "원문 근거에 따른 의견 분류와 담당자의 서비스 수행·공개 결정을 구분합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -6024,6 +6319,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/booking/건강관리센터/",
         "label": "건강관리센터 회차 예약",
         "reason": "참여 등록·회차 좌석과 실제 서비스 수행의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/건강관리센터/",
+        "label": "건강관리센터 기관 보고 포털",
+        "reason": "의뢰기관에 공개할 수 있는 승인 집계와 개인 기록의 권한 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/website/건강관리센터/",
+        "label": "건강관리센터 프로그램 안내",
+        "reason": "공개 프로그램 설명과 실제 참여 확인·개인별 지원의 범위를 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강관리센터/",
+        "label": "건강관리센터 운영 의견 AI",
+        "reason": "원문 근거에 따른 의견 분류와 담당자의 서비스 수행·공개 결정을 구분합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -6240,6 +6550,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/건강관리센터/",
         "label": "건강관리센터 개인 실천 앱",
         "reason": "개인의 목표·생활 기록이 기관 포털에 자동 공개되지 않는 경계를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강관리센터/",
+        "label": "건강관리센터 운영 의견 AI",
+        "reason": "원문 근거에 따른 의견 분류와 담당자의 서비스 수행·공개 결정을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/건강관리센터/",
+        "label": "건강관리센터 회차 예약",
+        "reason": "실제 회차 정원과 대기·보강 배정의 운영 조건을 함께 검토합니다."
+      },
+      {
+        "href": "/development-agency/website/건강관리센터/",
+        "label": "건강관리센터 프로그램 안내",
+        "reason": "공개 프로그램 설명과 실제 참여 확인·개인별 지원의 범위를 구분합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -6456,6 +6781,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/건강검진센터/",
         "label": "검진센터 수검 안내 앱",
         "reason": "생활습관 프로그램 소개와 실제 검진 단계·승인 결과 안내의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/건강관리센터/",
+        "label": "건강관리센터 AI 자동화",
+        "reason": "건강관리센터의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/건강관리센터/",
+        "label": "건강관리센터 앱 개발",
+        "reason": "건강관리센터의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/건강관리센터/",
+        "label": "건강관리센터 예약 시스템 개발",
+        "reason": "건강관리센터의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -6684,6 +7024,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/enterprise-ai/",
         "label": "기업 내부 자료 기반 AI",
         "reason": "병원 직원의 문서 검색은 권한별 내부 자료 접근을 따로 설계합니다."
+      },
+      {
+        "href": "/development-agency/portal/병원/",
+        "label": "병원 환자 포털 개발",
+        "reason": "병원의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -6914,6 +7264,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/병원/",
         "label": "병원 문진 정리 AI",
         "reason": "환자 자료의 조회·전달과 문진 정리 초안의 검토는 다른 업무입니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -7140,6 +7500,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/내과/",
         "label": "환자 가정 측정 기록 앱",
         "reason": "기관이 발급한 검사표와 환자 자가 측정의 출처 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/내과/",
+        "label": "내과 예약 시스템 개발",
+        "reason": "내과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/내과/",
+        "label": "내과 고객 포털 개발",
+        "reason": "내과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -7366,6 +7736,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "자가 측정 자료를 어디까지 전달하고 검토할지 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/내과/",
+        "label": "내과 AI 자동화",
+        "reason": "내과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/내과/",
+        "label": "내과 예약 시스템 개발",
+        "reason": "내과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -7592,6 +7972,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "주문과 예약·시행의 최종 원장을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/내과/",
+        "label": "내과 AI 자동화",
+        "reason": "내과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/내과/",
+        "label": "내과 앱 개발",
+        "reason": "내과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -7818,6 +8208,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 솔루션",
         "reason": "결과와 후속 업무의 최종 기록 위치를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/내과/",
+        "label": "내과 AI 자동화",
+        "reason": "내과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/내과/",
+        "label": "내과 예약 시스템 개발",
+        "reason": "내과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -8049,6 +8449,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "의료 문서 요청 포털",
         "reason": "결과 조회·정정과 사본 요청·발급 업무를 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/내과/",
+        "label": "내과 앱 개발",
+        "reason": "내과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/내과/",
+        "label": "내과 예약 시스템 개발",
+        "reason": "내과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -8275,6 +8685,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 자료 요청 포털",
         "reason": "개인 자료 열람·요청과 자동 답변의 접근 조건을 함께 검토합니다."
+      },
+      {
+        "href": "/development-agency/portal/한의원/",
+        "label": "한의원 고객 포털 개발",
+        "reason": "한의원의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -8501,6 +8921,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 예약·접수 운영",
         "reason": "환자 식별과 기존 접수 원장의 연결 범위를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -8727,6 +9157,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 기능의 근거·평가·승인 설계",
         "reason": "정답 자료와 사람의 검토·운영 책임을 검토합니다."
+      },
+      {
+        "href": "/development-agency/app/요양병원/",
+        "label": "요양병원 앱 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/portal/요양병원/",
+        "label": "요양병원 고객 포털 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -8953,6 +9393,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/website/yoyangbyeongwon/",
         "label": "공개 입원·이용 안내",
         "reason": "일반 안내와 인증된 환자별 연락 내용을 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/요양병원/",
+        "label": "요양병원 AI 자동화",
+        "reason": "요양병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/요양병원/",
+        "label": "요양병원 고객 포털 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -9179,6 +9629,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 접수·권한 시스템",
         "reason": "상담과 임상 검토·원무의 최종 책임을 정합니다."
+      },
+      {
+        "href": "/development-agency/ai/요양병원/",
+        "label": "요양병원 AI 자동화",
+        "reason": "요양병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/요양병원/",
+        "label": "요양병원 앱 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -9405,6 +9865,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 기록·권한 연결",
         "reason": "임상 승인과 기술적 수신·이동 상태의 책임을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/요양병원/",
+        "label": "요양병원 AI 자동화",
+        "reason": "요양병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/요양병원/",
+        "label": "요양병원 앱 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -9631,6 +10101,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/website/yoyangbyeongwon/",
         "label": "요양병원 공개 이용 안내",
         "reason": "일반 비용 문의와 인증된 개인별 청구 내역을 나눕니다."
+      },
+      {
+        "href": "/development-agency/ai/요양병원/",
+        "label": "요양병원 AI 자동화",
+        "reason": "요양병원의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/요양병원/",
+        "label": "요양병원 예약 시스템 개발",
+        "reason": "요양병원의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -9852,6 +10332,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/management/의료기기회사/",
         "label": "의료기기 설치·품질 원장",
         "reason": "문서 영향 후보와 실제 기기·조치의 승인 관계를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/의료기기회사/",
+        "label": "의료기기회사 예약 시스템 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/의료기기회사/",
+        "label": "의료기기회사 고객 포털 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/development-agency/website/의료기기회사/",
+        "label": "의료기기회사 홈페이지 제작",
+        "reason": "의료기기회사의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -10068,6 +10563,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/source-handover/",
         "label": "소스코드와 운영 이관",
         "reason": "현장 앱과 서비스 원장의 실제 운영 권한 인수 범위를 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/의료기기회사/",
+        "label": "의료기기회사 AI 자동화",
+        "reason": "의료기기회사의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/의료기기회사/",
+        "label": "의료기기회사 예약 시스템 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/의료기기회사/",
+        "label": "의료기기회사 관리 프로그램",
+        "reason": "의료기기회사의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -10289,6 +10799,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/의료기기회사/",
         "label": "의료기기 제품 홈페이지",
         "reason": "공개 모델·설치 조건 소개와 자원 배정의 경계를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/의료기기회사/",
+        "label": "의료기기회사 AI 자동화",
+        "reason": "의료기기회사의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/의료기기회사/",
+        "label": "의료기기회사 관리 프로그램",
+        "reason": "의료기기회사의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
+      },
+      {
+        "href": "/development-agency/portal/의료기기회사/",
+        "label": "의료기기회사 고객 포털 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -10505,6 +11030,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/booking/의료기기회사/",
         "label": "의료기기 시연·대여 예약",
         "reason": "기기 상태와 실제 배정 가능 일정의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/의료기기회사/",
+        "label": "의료기기회사 AI 자동화",
+        "reason": "의료기기회사의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/의료기기회사/",
+        "label": "의료기기회사 고객 포털 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/development-agency/website/의료기기회사/",
+        "label": "의료기기회사 홈페이지 제작",
+        "reason": "의료기기회사의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -10726,6 +11266,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/의료기기회사/",
         "label": "의료기기 문서 개정 AI",
         "reason": "승인 문서의 개정과 실제 고객 배포·확인의 범위를 비교합니다."
+      },
+      {
+        "href": "/development-agency/app/의료기기회사/",
+        "label": "의료기기회사 앱 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/의료기기회사/",
+        "label": "의료기기회사 예약 시스템 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/website/의료기기회사/",
+        "label": "의료기기회사 홈페이지 제작",
+        "reason": "의료기기회사의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -10942,6 +11497,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/source-handover/",
         "label": "소스코드 이관",
         "reason": "제품 정보와 문서 편집 시스템의 운영 권한 인수를 함께 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/의료기기회사/",
+        "label": "의료기기회사 AI 자동화",
+        "reason": "의료기기회사의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/의료기기회사/",
+        "label": "의료기기회사 앱 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/의료기기회사/",
+        "label": "의료기기회사 예약 시스템 개발",
+        "reason": "의료기기회사의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -11163,6 +11733,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 평가와 적용 범위",
         "reason": "근거 없는 결론·오확정을 평가하고 수동 확인 범위를 정합니다."
+      },
+      {
+        "href": "/development-agency/booking/신경외과/",
+        "label": "신경외과 예약 시스템 개발",
+        "reason": "신경외과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/신경외과/",
+        "label": "신경외과 고객 포털 개발",
+        "reason": "신경외과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -11389,6 +11969,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "기기 정보와 확인 근거의 최종 원내 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/신경외과/",
+        "label": "신경외과 AI 자동화",
+        "reason": "신경외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/신경외과/",
+        "label": "신경외과 예약 시스템 개발",
+        "reason": "신경외과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -11615,6 +12205,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "최종 수술·진료 기록과 역할별 승인 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/신경외과/",
+        "label": "신경외과 AI 자동화",
+        "reason": "신경외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/신경외과/",
+        "label": "신경외과 관리 프로그램",
+        "reason": "신경외과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -11841,6 +12441,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "원내 기록·권한 시스템",
         "reason": "최종 수행 기록과 담당 승인·보관의 연결을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/신경외과/",
+        "label": "신경외과 AI 자동화",
+        "reason": "신경외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/신경외과/",
+        "label": "신경외과 고객 포털 개발",
+        "reason": "신경외과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -12067,6 +12677,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "임상 승인과 자료 제공의 최종 책임·권한을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/신경외과/",
+        "label": "신경외과 AI 자동화",
+        "reason": "신경외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/신경외과/",
+        "label": "신경외과 앱 개발",
+        "reason": "신경외과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -12293,6 +12913,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-automation/ai-customer-support/",
         "label": "일반 고객 상담 자동화",
         "reason": "공개 FAQ 상담과 개인 의료 안내 초안의 권한·검수 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/booking/산부인과/",
+        "label": "산부인과 예약 시스템 개발",
+        "reason": "산부인과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/산부인과/",
+        "label": "산부인과 고객 포털 개발",
+        "reason": "산부인과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -12519,6 +13149,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 원본 업무 시스템",
         "reason": "개인 과정과 현재 연락·공개 상태를 제공하는 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/산부인과/",
+        "label": "산부인과 AI 자동화",
+        "reason": "산부인과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/산부인과/",
+        "label": "산부인과 예약 시스템 개발",
+        "reason": "산부인과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -12745,6 +13385,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/booking/종합병원/",
         "label": "복수 자원 예약 시스템",
         "reason": "임상 조건과 별개로 필요한 담당·공간·장비의 확보를 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/산부인과/",
+        "label": "산부인과 AI 자동화",
+        "reason": "산부인과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/산부인과/",
+        "label": "산부인과 관리 프로그램",
+        "reason": "산부인과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -12971,6 +13621,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "의료 문서 요청과 전달",
         "reason": "설명·확인 원장과 환자의 자료 요청·공개 업무를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/산부인과/",
+        "label": "산부인과 AI 자동화",
+        "reason": "산부인과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/산부인과/",
+        "label": "산부인과 고객 포털 개발",
+        "reason": "산부인과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -13197,6 +13857,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/정형외과/",
         "label": "외부 영상 제출 포털",
         "reason": "외부 자료를 받는 흐름과 원내 선별 자료를 환자에게 제공하는 흐름을 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/산부인과/",
+        "label": "산부인과 AI 자동화",
+        "reason": "산부인과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/산부인과/",
+        "label": "산부인과 예약 시스템 개발",
+        "reason": "산부인과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -13423,6 +14093,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/enterprise-ai/",
         "label": "민감자료 AI 운영 조건",
         "reason": "자료 접근·외부 모델·평가와 운영 인수를 함께 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/안과/",
+        "label": "안과 예약 시스템 개발",
+        "reason": "안과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/안과/",
+        "label": "안과 관리 프로그램",
+        "reason": "안과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -13649,6 +14329,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 문서 공개·요청",
         "reason": "방문 안내 앱과 기록 제공 요청·승인은 다른 업무입니다."
+      },
+      {
+        "href": "/development-agency/ai/안과/",
+        "label": "안과 AI 자동화",
+        "reason": "안과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/안과/",
+        "label": "안과 예약 시스템 개발",
+        "reason": "안과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -13877,6 +14567,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수 운영",
         "reason": "초진·재진·문진·접수와 연결할 기존 업무의 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/안과/",
+        "label": "안과 AI 자동화",
+        "reason": "안과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/안과/",
+        "label": "안과 관리 프로그램",
+        "reason": "안과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -14105,6 +14805,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수·운영 범위",
         "reason": "방문 식별과 기존 운영 기록에 연결할 범위를 비교합니다."
+      },
+      {
+        "href": "/development-agency/app/안과/",
+        "label": "안과 앱 개발",
+        "reason": "안과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/portal/안과/",
+        "label": "안과 고객 포털 개발",
+        "reason": "안과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -14331,6 +15041,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "병원 자료 요청 포털",
         "reason": "문서 발급의 공통 권한 흐름과 안과 자료의 좌우·시점 표시 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/안과/",
+        "label": "안과 예약 시스템 개발",
+        "reason": "안과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/안과/",
+        "label": "안과 관리 프로그램",
+        "reason": "안과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -14557,6 +15277,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 원본 시스템",
         "reason": "승인된 정리 결과를 어디까지 전달할지 확인합니다."
+      },
+      {
+        "href": "/development-agency/app/정형외과/",
+        "label": "정형외과 앱 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/정형외과/",
+        "label": "정형외과 예약 시스템 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -14788,6 +15518,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 자료 요청 포털",
         "reason": "자가 수행 앱과 문서 요청·승인·전달 포털을 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/정형외과/",
+        "label": "정형외과 AI 자동화 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/정형외과/",
+        "label": "정형외과 예약 시스템 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -15014,6 +15754,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 운영 원장",
         "reason": "예약 확정과 실제 시행을 확인할 원본 시스템을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/정형외과/",
+        "label": "정형외과 AI 자동화 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/정형외과/",
+        "label": "정형외과 관리 시스템 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -15240,6 +15990,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 솔루션",
         "reason": "최종 원본과 보조 기록 도구의 연결 조건을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/정형외과/",
+        "label": "정형외과 AI 자동화 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/정형외과/",
+        "label": "정형외과 고객 포털 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -15466,6 +16226,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/정형외과/",
         "label": "개인 재활 안내 앱",
         "reason": "영상 자료 전달과 승인된 재활 안내·자가 기록의 목적을 나눕니다."
+      },
+      {
+        "href": "/development-agency/booking/정형외과/",
+        "label": "정형외과 예약 시스템 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/정형외과/",
+        "label": "정형외과 관리 시스템 개발",
+        "reason": "정형외과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -15692,6 +16462,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 보조 기능의 검증 범위",
         "reason": "근거 표시와 승인·평가 자료의 필요성을 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/통증의학과/",
+        "label": "통증의학과 예약 시스템 개발",
+        "reason": "통증의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/통증의학과/",
+        "label": "통증의학과 플랫폼 개발",
+        "reason": "통증의학과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -15918,6 +16698,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 수행·검토 원장",
         "reason": "일지를 연결할 실제 시술과 후속 검토 담당을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/통증의학과/",
+        "label": "통증의학과 AI 자동화",
+        "reason": "통증의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/통증의학과/",
+        "label": "통증의학과 예약 시스템 개발",
+        "reason": "통증의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -16144,6 +16934,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "시술·관찰·귀가 확인의 최종 기록과 담당을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/통증의학과/",
+        "label": "통증의학과 AI 자동화",
+        "reason": "통증의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/통증의학과/",
+        "label": "통증의학과 관리 프로그램",
+        "reason": "통증의학과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -16370,6 +17170,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "원내 업무·권한 시스템",
         "reason": "기존 수행·자재·정산 원장의 최종 책임을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/통증의학과/",
+        "label": "통증의학과 AI 자동화",
+        "reason": "통증의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/통증의학과/",
+        "label": "통증의학과 플랫폼 개발",
+        "reason": "통증의학과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -16596,6 +17406,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 업무·권한 관리",
         "reason": "원내 승인 위치와 외부 기관의 접근 경계를 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/통증의학과/",
+        "label": "통증의학과 AI 자동화",
+        "reason": "통증의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/통증의학과/",
+        "label": "통증의학과 앱 개발",
+        "reason": "통증의학과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -16822,6 +17642,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/management/소아과/",
         "label": "실제 제품·제조번호 사용 관리",
         "reason": "과거 외부 기록의 해석과 원내 실제 사용 사건을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/소아과/",
+        "label": "소아과 예약 시스템 개발",
+        "reason": "소아과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/소아과/",
+        "label": "소아과 고객 포털 개발",
+        "reason": "소아과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -17048,6 +17878,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수 원장",
         "reason": "아이의 원내 식별과 실제 예약·시행 상태를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/소아과/",
+        "label": "소아과 AI 자동화",
+        "reason": "소아과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/소아과/",
+        "label": "소아과 예약 시스템 개발",
+        "reason": "소아과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -17274,6 +18114,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 접수 시스템",
         "reason": "전화·현장·온라인의 최종 확정 원장을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/소아과/",
+        "label": "소아과 AI 자동화",
+        "reason": "소아과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/소아과/",
+        "label": "소아과 관리 프로그램",
+        "reason": "소아과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -17500,6 +18350,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/소아과/",
         "label": "보호자 안내와 접종 기록 조회",
         "reason": "직원용 제품 이력과 보호자에게 공개할 실제 기록의 범위를 나눕니다."
+      },
+      {
+        "href": "/development-agency/ai/소아과/",
+        "label": "소아과 AI 자동화",
+        "reason": "소아과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/소아과/",
+        "label": "소아과 고객 포털 개발",
+        "reason": "소아과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -17726,6 +18586,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "의료 문서 요청·전달 포털",
         "reason": "일반 사본 요청과 여러 출처 접종 기록의 대조·정정 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/소아과/",
+        "label": "소아과 예약 시스템 개발",
+        "reason": "소아과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/소아과/",
+        "label": "소아과 관리 프로그램",
+        "reason": "소아과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -17947,6 +18817,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/약국/",
         "label": "약국 공급처 반품 포털",
         "reason": "대상 확인 이후 실제 반품·수령·정산을 연결하는 별도 업무를 비교합니다."
+      },
+      {
+        "href": "/development-agency/booking/약국/",
+        "label": "약국 예약 시스템 개발",
+        "reason": "약국의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -18168,6 +19053,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/약국/",
         "label": "약국 회수 공지 대조 AI",
         "reason": "상담 일정과 별개인 품목·제조번호 공지 확인 업무를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/portal/약국/",
+        "label": "약국 고객 포털 개발",
+        "reason": "약국의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -18384,6 +19284,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/약국/",
         "label": "약국 회수 공지 대조 AI",
         "reason": "공식 공지 조건과 보유 재고의 대응 후보를 약사가 확인하는 별도 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/약국/",
+        "label": "약국 예약 시스템 개발",
+        "reason": "약국의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -18398,13 +19313,11 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
   {
     "slug": "ai/물리치료센터",
     "clusterIds": [
-      "ind-028-ai",
-      "ind-029-ai"
+      "ind-028-ai"
     ],
     "primaryKeyword": "물리치료센터 AI 자동화",
     "keywordVariants": [
-      "물리치료센터 AI 자동화",
-      "도수치료센터 AI 자동화"
+      "물리치료센터 AI 자동화"
     ],
     "searchIntent": "물리치료센터 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
     "industry": "물리치료센터",
@@ -18602,6 +19515,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/물리치료센터/",
         "label": "물리치료센터 홈페이지",
         "reason": "일반 공개 안내와 개인별 배정 자료의 경계를 확인합니다."
+      },
+      {
+        "href": "/development-agency/portal/물리치료센터/",
+        "label": "물리치료센터 배정 자료 포털",
+        "reason": "승인한 교육 자료를 개인에게 배정하고 질문·버전 변경을 확인하는 흐름을 비교합니다."
+      },
+      {
+        "href": "/development-agency/app/재활의학과/",
+        "label": "재활의학과 개인 수행 앱",
+        "reason": "교육 자료를 읽은 사실과 개인이 남긴 수행 기록의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/재활의학과/",
+        "label": "재활의학과 운영 관리",
+        "reason": "교육 자료와 별개로 관리하는 평가·계획·담당 배정·진행 기록의 경계를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -18621,13 +19549,11 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
   {
     "slug": "portal/물리치료센터",
     "clusterIds": [
-      "ind-028-portal",
-      "ind-029-portal"
+      "ind-028-portal"
     ],
     "primaryKeyword": "물리치료센터 고객 포털 개발",
     "keywordVariants": [
-      "물리치료센터 고객 포털 개발",
-      "도수치료센터 고객 포털 개발"
+      "물리치료센터 고객 포털 개발"
     ],
     "searchIntent": "물리치료센터 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
     "industry": "물리치료센터",
@@ -18825,6 +19751,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/ai/물리치료센터/",
         "label": "물리치료센터 교육 설명 AI 검토",
         "reason": "AI 초안을 바로 배정하지 않고 원문 대조·담당 승인을 거친 자료만 연결합니다."
+      },
+      {
+        "href": "/development-agency/website/물리치료센터/",
+        "label": "물리치료센터 공개 안내",
+        "reason": "일반 방문 준비 안내와 개인에게만 배정된 자료의 접근 범위를 나눕니다."
+      },
+      {
+        "href": "/development-agency/app/재활의학과/",
+        "label": "재활의학과 개인 수행 앱",
+        "reason": "교육 자료를 읽은 사실과 개인이 남긴 수행 기록의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/재활의학과/",
+        "label": "재활의학과 운영 관리",
+        "reason": "교육 자료와 별개로 관리하는 평가·계획·담당 배정·진행 기록의 경계를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -18839,13 +19780,11 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
   {
     "slug": "website/물리치료센터",
     "clusterIds": [
-      "ind-028-website",
-      "ind-029-website"
+      "ind-028-website"
     ],
     "primaryKeyword": "물리치료센터 홈페이지 제작",
     "keywordVariants": [
-      "물리치료센터 홈페이지 제작",
-      "도수치료센터 홈페이지 제작"
+      "물리치료센터 홈페이지 제작"
     ],
     "searchIntent": "물리치료센터 홈페이지 제작의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
     "industry": "물리치료센터",
@@ -19043,6 +19982,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/website/byeongwon/",
         "label": "병원 홈페이지 안내",
         "reason": "기관 전체 소개와 물리치료실의 실제 방문·서비스 안내 관계를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/물리치료센터/",
+        "label": "물리치료센터 교육 설명 AI",
+        "reason": "공개 안내와 승인 자료를 재구성하는 내부 설명 검토의 목적을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/재활의학과/",
+        "label": "재활의학과 개인 수행 앱",
+        "reason": "교육 자료를 읽은 사실과 개인이 남긴 수행 기록의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/재활의학과/",
+        "label": "재활의학과 운영 관리",
+        "reason": "교육 자료와 별개로 관리하는 평가·계획·담당 배정·진행 기록의 경계를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -19264,6 +20218,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/enterprise-ai/",
         "label": "내부 AI 도입 조건",
         "reason": "민감자료 처리·권한·평가·운영 인수를 함께 확인합니다."
+      },
+      {
+        "href": "/development-agency/portal/성형외과/",
+        "label": "성형외과 고객 포털 개발",
+        "reason": "성형외과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -19490,6 +20454,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/병원/",
         "label": "환자 문서 요청 포털",
         "reason": "기존 문서 발급·공개 요청과 일정별 준비 확인의 범위를 구분합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -19716,6 +20690,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 적용과 평가 범위",
         "reason": "모델 보조의 목적과 오류·수동 확인 기준을 검토합니다."
+      },
+      {
+        "href": "/development-agency/app/정신건강의학과/",
+        "label": "정신건강의학과 앱 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/정신건강의학과/",
+        "label": "정신건강의학과 예약 시스템 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -19942,6 +20926,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "제출 자료를 검토할 담당과 원내 전달 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/정신건강의학과/",
+        "label": "정신건강의학과 AI 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/정신건강의학과/",
+        "label": "정신건강의학과 예약 시스템 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -20168,6 +21162,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/system/waiting/",
         "label": "대기·호출 시스템",
         "reason": "현장 호출과 사전 대기 제안·수락의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/정신건강의학과/",
+        "label": "정신건강의학과 AI 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/정신건강의학과/",
+        "label": "정신건강의학과 관리 시스템 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -20394,6 +21398,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "승인 계획과 실제 수행을 확인할 원내 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/정신건강의학과/",
+        "label": "정신건강의학과 AI 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/정신건강의학과/",
+        "label": "정신건강의학과 앱 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -20620,6 +21634,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "작성물과 담당 피드백을 보관·전달할 최종 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/정신건강의학과/",
+        "label": "정신건강의학과 AI 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/정신건강의학과/",
+        "label": "정신건강의학과 예약 시스템 개발",
+        "reason": "정신건강의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -20846,6 +21870,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/website/영상의학과/",
         "label": "검사·결과 확인 경로 안내",
         "reason": "공개 설명과 의료진용 교정 도구의 사용자를 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/영상의학과/",
+        "label": "영상의학과 앱 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/booking/영상의학과/",
+        "label": "영상의학과 예약 시스템 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -21072,6 +22106,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "원내 접수·권한 시스템",
         "reason": "앱의 제출과 실제 임상 검토의 최종 원장을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/영상의학과/",
+        "label": "영상의학과 AI 자동화",
+        "reason": "영상의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/영상의학과/",
+        "label": "영상의학과 예약 시스템 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -21298,6 +22342,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 접수·예약 원장",
         "reason": "기존 진료 예약과 검사별 자원·승인 계획의 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/영상의학과/",
+        "label": "영상의학과 AI 자동화",
+        "reason": "영상의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/영상의학과/",
+        "label": "영상의학과 관리 프로그램",
+        "reason": "영상의학과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -21524,6 +22578,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "병원 업무 원장 설계",
         "reason": "기존 환자·접수·기록 시스템의 최종 책임을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/영상의학과/",
+        "label": "영상의학과 AI 자동화",
+        "reason": "영상의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/portal/영상의학과/",
+        "label": "영상의학과 고객 포털 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -21750,6 +22814,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/정형외과/",
         "label": "외부 영상 제출 포털",
         "reason": "기관이 발급하는 자료의 외부 제공과 환자가 가져온 자료의 접수를 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/영상의학과/",
+        "label": "영상의학과 AI 자동화",
+        "reason": "영상의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/영상의학과/",
+        "label": "영상의학과 예약 시스템 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -21976,6 +23050,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "환자·접수 업무 시스템",
         "reason": "공개 소개와 개인별 예약·기록 관리의 경계를 구분합니다."
+      },
+      {
+        "href": "/development-agency/ai/영상의학과/",
+        "label": "영상의학과 AI 자동화",
+        "reason": "영상의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/영상의학과/",
+        "label": "영상의학과 앱 개발",
+        "reason": "영상의학과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -22204,6 +23288,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 적용과 오류 평가",
         "reason": "출력 목적과 사람 검토·검수 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/booking/재활의학과/",
+        "label": "재활의학과 예약 시스템 개발",
+        "reason": "재활의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/portal/재활의학과/",
+        "label": "재활의학과 고객 포털 개발",
+        "reason": "재활의학과의 연관 업무를 비교하며 외부 이용자에게 전달할 자료와 내부 검토 기록의 공개·철회 권한을 나눕니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -22430,6 +23524,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "원내 기록과 담당 권한",
         "reason": "자가·대리 기록을 전달할 최종 시스템과 권한을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/재활의학과/",
+        "label": "재활의학과 AI 자동화",
+        "reason": "재활의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/재활의학과/",
+        "label": "재활의학과 예약 시스템 개발",
+        "reason": "재활의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -22658,6 +23762,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/재활의학과/",
         "label": "일상 활동과 도움 조건 앱",
         "reason": "기관의 일정과 생활 현장에서 환자가 기록하는 정보를 연결합니다."
+      },
+      {
+        "href": "/development-agency/ai/재활의학과/",
+        "label": "재활의학과 AI 자동화",
+        "reason": "재활의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/재활의학과/",
+        "label": "재활의학과 관리 프로그램",
+        "reason": "재활의학과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -22879,6 +23993,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/portal/재활의학과/",
         "label": "재활 생활 환경 자료 포털",
         "reason": "퇴원 교육과 연결되는 생활 환경 자료의 제출·검토 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/management/재활병원/",
+        "label": "재활병원 관리시스템 개발",
+        "reason": "재활병원의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
+      },
+      {
+        "href": "/development-agency/website/재활병원/",
+        "label": "재활병원 홈페이지 제작",
+        "reason": "재활병원의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -23095,6 +24224,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/app/재활병원/",
         "label": "재활병원 퇴원 교육 앱",
         "reason": "조정 목록에서 필요한 환자·돌봄 담당자의 교육 확인 범위를 살펴봅니다."
+      },
+      {
+        "href": "/development-agency/website/재활병원/",
+        "label": "재활병원 홈페이지 제작",
+        "reason": "재활병원의 연관 업무를 비교하며 공개 서비스 설명과 개별 요청·개인 기록을 다루는 화면의 경계를 확인합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -23316,6 +24460,21 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/development-agency/management/재활병원/",
         "label": "재활병원 퇴원 조정 관리",
         "reason": "홈페이지의 지원 소개와 실제 준비·외부 인계 업무의 범위를 구분합니다."
+      },
+      {
+        "href": "/ai-development/",
+        "label": "AI 개발의 근거·검수 설계",
+        "reason": "자동으로 추출하거나 정리한 정보의 원문 근거·오류 검토·승인 조건을 개발 범위에 연결합니다."
+      },
+      {
+        "href": "/app-development/",
+        "label": "앱 개발과 개인 이용 화면",
+        "reason": "개인 이용자의 접근·입력·알림을 제공할 때 필요한 앱 범위와 업무 시스템의 연결 조건을 비교합니다."
+      },
+      {
+        "href": "/website/",
+        "label": "공개 홈페이지 제작 범위",
+        "reason": "공개 안내에서 받을 문의와 권한 확인 이후에만 제공할 개별 자료의 경계를 검토합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -23542,6 +24701,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/physical-therapy/",
         "label": "센터 회기·이용권 솔루션",
         "reason": "기존 회기 운영과 다직종 평가 조건 관리의 범위를 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/재활의학과/",
+        "label": "재활의학과 AI 자동화",
+        "reason": "재활의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/재활의학과/",
+        "label": "재활의학과 예약 시스템 개발",
+        "reason": "재활의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -23770,6 +24939,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "전문 확인과 자료 보관·권한의 최종 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/재활의학과/",
+        "label": "재활의학과 AI 자동화",
+        "reason": "재활의학과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/재활의학과/",
+        "label": "재활의학과 예약 시스템 개발",
+        "reason": "재활의학과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -23996,6 +25175,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/ai-development/",
         "label": "AI 개발 범위와 검증",
         "reason": "업무 목적에 맞는 적용 범위와 평가 절차를 검토합니다."
+      },
+      {
+        "href": "/development-agency/booking/비뇨기과/",
+        "label": "비뇨기과 예약 시스템 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
+      },
+      {
+        "href": "/development-agency/management/비뇨기과/",
+        "label": "비뇨기과 관리 시스템 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -24222,6 +25411,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "자가 기록을 전달하고 검토할 최종 시스템을 확인합니다."
+      },
+      {
+        "href": "/development-agency/ai/비뇨기과/",
+        "label": "비뇨기과 AI 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/비뇨기과/",
+        "label": "비뇨기과 예약 시스템 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -24448,6 +25647,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/system/waiting/",
         "label": "대기·호출 업무 시스템",
         "reason": "일반 호출과 검사 준비·수행·후속 인계가 연결되는 범위를 비교합니다."
+      },
+      {
+        "href": "/development-agency/ai/비뇨기과/",
+        "label": "비뇨기과 AI 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/management/비뇨기과/",
+        "label": "비뇨기과 관리 시스템 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 이용자에게 보이는 상태의 근거가 되는 담당 배정·실제 수행·정정 이력을 확인합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -24674,6 +25883,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 시스템",
         "reason": "원내 수행 기록과 책임 있는 최종 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/비뇨기과/",
+        "label": "비뇨기과 AI 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/app/비뇨기과/",
+        "label": "비뇨기과 앱 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 개인용 화면의 입력·알림·진행 확인을 내부 업무 기록과 연결할 범위를 살펴봅니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
@@ -24900,6 +26119,16 @@ export const expandedIndustry001210Pages: AgencyPage[] = [
         "href": "/solution/hospital/",
         "label": "의료기관 업무 원장",
         "reason": "제출된 응답을 확인하고 책임 있게 보관할 원장을 검토합니다."
+      },
+      {
+        "href": "/development-agency/ai/비뇨기과/",
+        "label": "비뇨기과 AI 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 원문 근거를 보조로 정리하는 기능과 담당자의 검토·승인 책임을 구분합니다."
+      },
+      {
+        "href": "/development-agency/booking/비뇨기과/",
+        "label": "비뇨기과 예약 시스템 개발",
+        "reason": "비뇨기과의 연관 업무를 비교하며 문의·요청을 실제 자원과 담당자가 확인한 일정으로 확정하는 조건을 비교합니다."
       }
     ],
     "ctaContext": "현재 사용 중인 양식과 담당자의 확인 순서, 자주 되돌아가는 예외를 개인정보 없는 표본으로 알려 주세요. 실제 연결 권한과 검수 조건을 확인하여 제공 범위를 구체화합니다.",
