@@ -242,9 +242,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
           {regionService && (
             <div style={{ marginTop: 36 }}>
               <h2 className="sec-title" style={{ fontSize: 'clamp(18px, 2.4vw, 22px)', marginBottom: 16 }}>
-                거점 지역 {regionService.short}
+                지역별 {regionService.short} 상담 안내
               </h2>
-              {/* 지역은 차별화 축이 아니다 — 실제 거점(동탄·화성·수원)만 노출하고, 그 외는 아래 문구로 안내 */}
+              {/* 공개 지역 서비스 링크를 안내한다. 링크가 별도 사무소나 거점을 뜻하지 않는다. */}
               <div className="link-grid">
                 {REGIONS.filter((r) => INDEXED_REGION_SLUGS.has(r.slug)).map((r) => (
                   <Link key={r.slug} href={`/${regionService.slug}/${r.slug}/`}>
@@ -253,7 +253,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
                 ))}
               </div>
               <p style={{ marginTop: 14, fontSize: 14, color: 'var(--text-dim)', lineHeight: 1.7 }}>
-                동탄·수원 거점이지만 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
+                화성 동탄에 소재하며 수원을 포함해 화상 상담·중간 확인·소스코드 이관 기반의 비대면 협업으로
                 <strong> 전국 어디서나 동일한 조건</strong>으로 진행합니다.
               </p>
             </div>

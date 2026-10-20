@@ -17,9 +17,11 @@
 
 ## 변경 감지
 
-`content-manifest-before.json`은 작업 전 공개 HTML 기준이다. `release-content-changes.json`은 이번 릴리스의 완전한 비교표로, 실제 내용 변경 812개와 유지 11개를 포함한다. 빌드 ID·정적 자산 해시·빌드 시각은 본문 변경으로 세지 않는다.
+`content-manifest-before.json`은 작업 전 공개 HTML 기준이다. `release-content-changes.json`은 후속 정책·소재지 교정까지 포함한 완전한 비교표로, 실제 내용 변경 820개와 유지 3개를 포함한다. `followup-content-changes.json`은 첫 운영 배포에서 후속 배포까지의 차이를 별도로 보존한다. 빌드 ID·정적 자산 해시·빌드 시각은 본문 변경으로 세지 않는다.
 
-`config/content-manifest.json`에는 검증된 릴리스 후보의 해시와 변경일을 보존했다. 다시 실행한 `content-manifest.mjs`는 변경 0개를 반환했고 날짜를 유지했다. 따라서 이후 `content-changes.json`이 0개여도 이번 릴리스 변경분은 `release-content-changes.json`의 812개다. 자식 사이트맵과 사이트맵 인덱스의 변경일도 동기화한다.
+`config/content-manifest.json`에는 검증된 릴리스 후보의 해시와 변경일을 보존했다. 다시 실행한 `content-manifest.mjs`는 변경 0개를 반환했고 날짜를 유지했다. 따라서 이후 `content-changes.json`이 0개여도 전체 작업 변경분은 `release-content-changes.json`의 820개다. 자식 사이트맵과 사이트맵 인덱스의 변경일도 동기화한다.
+
+후속 교정은 `maintenance-policy-corrections.json`에서 URL별 최초 운영 메타·본문·스키마와 최종 HTML을 대조한다. 비용 정책 관련 493개와 공통 소재지 설명 관련 820개는 중복되는 범위다. 공통 조직 설명의 교정을 820개 페이지의 개별 본문 전체 개작으로 해석하지 않는다. 실제 업종별 본문 검수는 원래의 823개 검수 기록에 별도로 남아 있다.
 
 ## 로컬 검증
 
@@ -44,7 +46,7 @@
 
 기존 IndexNow 키·전송 스크립트를 재사용한다. 운영 공개와 키 파일 확인 후 변경분만 명시적으로 제출한다. 일반 서비스 페이지를 Google Indexing API에 보내지 않는다. 기존 GPTBot 학습 정책을 변경하지 않는다.
 
-## 운영 배포 및 실제 제출 확인 (2026-10-20)
+## 첫 운영 배포 및 실제 제출 확인 (2026-10-20)
 
 PR #10 병합 커밋 `f7cef7c1fc02bbe692adac7da2d0949abd21ed8d`가 Netlify production `6ad712b1de1be826243b81fa`로 07:07:40 UTC에 공개됐습니다. 1,779개 운영 경로 재수집 오류 0, 사이트맵 823개 HTTP·canonical·robots·메타·구조화 데이터와 내부 링크 35,140개 참조 검증을 통과했습니다.
 

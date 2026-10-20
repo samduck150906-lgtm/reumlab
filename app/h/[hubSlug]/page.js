@@ -40,7 +40,7 @@ export async function generateMetadata({ params }) {
       : [
           `${hub.ko}을(를) 어떤 범위로, 얼마에 만들 수 있는지 정리했습니다.`,
           '기능별 견적 기준과 진행 순서, 관련 상담 페이지를 한곳에 모았습니다.',
-          'VAT 포함 정액 · 소스코드 이관 · 월 관리비 없음.',
+          'VAT 포함 정액 · 소스코드 이관 · 선택 유지보수·외부 실비 별도.',
         ],
   );
   const url = `${BASE}/h/${params.hubSlug}/`;

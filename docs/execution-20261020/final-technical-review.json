@@ -1,54 +1,61 @@
-{
-  "checks": [
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-sitemap.log",
-      "command": "node scripts/verify-sitemap.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-indexability.log",
-      "command": "node scripts/audit-indexability.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-schema.log",
-      "command": "node scripts/qa-final.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-conversion.log",
-      "command": "node scripts/verify-conversion.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-portfolio.log",
-      "command": "node scripts/verify-portfolio.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-service-menu.log",
-      "command": "node scripts/verify-service-menu.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-indexnow-config.log",
-      "command": "node scripts/verify-indexnow-config.mjs",
-      "exitCode": 0
-    },
-    {
-      "result": "PASS",
-      "log": "docs/execution-20261020/final-feed.log",
-      "command": "pwsh -File scripts/verify-feed.ps1",
-      "exitCode": 0
-    }
-  ],
-  "observedAt": "2026-10-20T07:05:32.4297775Z",
-  "scope": "Final local export, not production"
+﻿{
+    "scope":  "Final local export, not production",
+    "observedAt":  "2026-10-20T07:52:53.2299553Z",
+    "feed":  {
+                 "source":  "Current out/feed.xml and current feed-verification.json",
+                 "exportBytes":  1089293,
+                 "items":  59,
+                 "exportSha256":  "466399cebe8137a9a0d13150a54de7d8eaeeb20c32d6763565a76ba9ce1e35cf"
+             },
+    "checks":  [
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/verify-sitemap.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-sitemap.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/audit-indexability.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-indexability.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/qa-final.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-schema.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/verify-conversion.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-conversion.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/verify-portfolio.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-portfolio.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/verify-service-menu.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-service-menu.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "node scripts/verify-indexnow-config.mjs",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-indexnow-config.log"
+                   },
+                   {
+                       "exitCode":  0,
+                       "command":  "pwsh -File scripts/verify-feed.ps1",
+                       "result":  "PASS",
+                       "log":  "docs/execution-20261020/final-feed.log"
+                   }
+               ],
+    "releaseLabel":  "second-release"
 }
