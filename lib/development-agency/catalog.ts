@@ -23,6 +23,12 @@ import { hydrogenPortalPage } from '@/content/development-agency/expanded/root-h
 import { hydrogenManagementPage } from '@/content/development-agency/expanded/root-hydrogen/management';
 import { hydrogenFieldPage } from '@/content/development-agency/expanded/root-hydrogen/field';
 import { hydrogenAiPage } from '@/content/development-agency/expanded/root-hydrogen/ai';
+import { electricalWebsitePage } from '@/content/development-agency/expanded/root-electrical/website';
+import { electricalPortalPage } from '@/content/development-agency/expanded/root-electrical/portal';
+import { electricalManagementPage } from '@/content/development-agency/expanded/root-electrical/management';
+import { electricalFieldPage } from '@/content/development-agency/expanded/root-electrical/field';
+import { electricalAiPage } from '@/content/development-agency/expanded/root-electrical/ai';
+import { storageWebsitePage } from '@/content/development-agency/expanded/root-storage/website';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -36,6 +42,12 @@ export const agencyPages: readonly AgencyPage[] = [
   b2bResponseAiPage, marketplaceAiPage, marketplaceBackofficePage,
   windWebsitePage, windPortalPage, windManagementPage, windFieldPage, windAiPage,
   hydrogenWebsitePage, hydrogenPortalPage, hydrogenManagementPage, hydrogenFieldPage, hydrogenAiPage,
+  electricalWebsitePage,
+  electricalPortalPage,
+  electricalManagementPage,
+  electricalFieldPage,
+  electricalAiPage,
+  storageWebsitePage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };

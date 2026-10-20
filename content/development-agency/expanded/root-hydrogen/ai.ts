@@ -5,10 +5,10 @@ import { hydrogenAiOperations } from './ai-operations';
 
 export const hydrogenAiPage: AgencyPage = {
   slug:'ai/수소에너지업체', clusterIds:['ind-605-ai'],
-  primaryKeyword:'수소에너지업체 AI 업무 자동화',
+  primaryKeyword:'수소에너지업체 AI 자동화',
   keywordVariants:['수소 기술 문서 AI 비교','수소 장비 사양서 자동 정리','수소에너지 AI 업무 개발'],
   searchIntent:'수소 기술 사양서와 제안 자료에서 조건과 근거를 보존해 항목을 추출·대조하고 담당자의 답변 검토를 돕기',
-  industry:'수소에너지업체', serviceAxis:'AI 업무 자동화',
+  industry:'수소에너지업체', serviceAxis:'AI·GPT 자동화',
   title:'수소에너지업체 AI 업무 자동화 | 사양서 비교·근거 검토 | 름랩',
   description:'수소 기술 문서의 항목 추출, 조건별 사양 비교와 답변 초안 업무를 설계합니다. 모델·단위·문서 버전 보존, 출처 대조와 승인, 프로젝트 권한을 기준으로 AI 개발 범위를 확인하세요.',
   h1:'수소에너지업체 AI 업무 자동화, 사양서의 조건과 근거를 함께 비교합니다',
