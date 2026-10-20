@@ -172,7 +172,7 @@ export function buildCostDescription(input: {
     `${input.name} 기준을 공개합니다.`,
     ladder,
     driver,
-    'VAT 포함 정액 · 소스코드 이관 · 월 관리비 없음.',
+    'VAT 포함 정액 · 소스코드 이관 · 선택 유지보수·외부 실비 별도.',
   ]);
 }
 
@@ -241,7 +241,7 @@ export function buildSolutionDescription(input: {
     input.lead ? tidy(input.lead).split(/(?<=[.])\s/)[0] : `${input.name} 구축 기준을 정리했습니다.`,
     mods ? `모듈: ${mods}.` : '',
     links ? `연동: ${links}.` : '',
-    '단계별 도입 · 소스코드 이관 · 월 관리비 없음.',
+    '단계별 도입 · 소스코드 이관 · 선택 유지보수·외부 실비 별도.',
   ]);
 }
 
@@ -275,7 +275,7 @@ export function buildWebsiteDescription(input: {
   return composeDescription([
     `${input.ko} 홈페이지에 실제로 필요한 페이지${pages ? ` — ${pages}` : ''}.`,
     line,
-    `${manwonTight(webFrom)}부터 정액 · 소스코드 이관 · 월 관리비 없음.`,
+    `${manwonTight(webFrom)}부터 정액 · 소스코드 이관 · 선택 유지보수·외부 실비 별도.`,
   ]);
 }
 
@@ -326,7 +326,7 @@ const LANDING_INTENT_COPY: Record<
   },
   'out-source-cost': {
     title: (kw, s) => `${kw} | 외주비에 무엇이 포함되나 | 름랩`,
-    desc: (s, f) => `${s} 외주비에 기획·디자인·개발·배포·소스코드 이관 중 무엇이 들어가는지 항목별로 공개합니다. 정액 ${f}부터, 월 관리비 없음.`,
+    desc: (s, f) => `${s} 외주비에 기획·디자인·개발·배포·소스코드 이관 중 무엇이 들어가는지 항목별로 공개합니다. 정액 ${f}부터, 선택 유지보수·외부 실비 별도.`,
     intent: 'cost',
   },
 };
@@ -381,7 +381,7 @@ export function buildLandingMeta(input: {
   const titles = [
     `${input.keyword} | 기획부터 배포까지 직접 개발·이관 | 름랩`,
     `${input.keyword} | 범위·금액 먼저 확정하고 시작 | 름랩`,
-    `${input.keyword} | ${from}부터 정액, 월 관리비 없음 | 름랩`,
+    `${input.keyword} | ${from}부터 정액, 선택 유지보수·외부 실비 별도 | 름랩`,
   ];
   return {
     title: clampTitle(pickVariant(titles, input.slug, 'l-title')),
@@ -390,7 +390,7 @@ export function buildLandingMeta(input: {
         ? `${subject} ${withObjectParticle(input.serviceKo)} 기획부터 개발·배포까지 직접 진행합니다.`
         : `${withObjectParticle(input.serviceKo)} 기획부터 개발·배포까지 직접 진행합니다.`,
       `VAT 포함 정액 ${from}부터, 완성 후 소스코드와 운영 권한을 통째로 넘겨 드립니다.`,
-      '월 관리비 없이 직접 수정·운영하도록 1:1 교육까지 포함합니다.',
+      '직접 수정·운영하는 교육 범위를 안내합니다. 선택 유지보수·외부 실비는 별도입니다.',
     ]),
     intent: 'vendor',
   };

@@ -90,7 +90,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
       <IndustryServiceJsonLd
         name={`${d.ko} 홈페이지 제작`}
         serviceType="웹사이트 개발"
-        description={`${d.ko} 홈페이지 제작 — 페이지 구성·검색 노출·비용. 월 관리비 없이 소스코드 이관·직접 수정.`}
+        description={`${d.ko} 홈페이지 제작 — 페이지 구성·검색 노출·비용. 소스코드 이관·직접 수정 안내. 선택 유지보수·외부 실비 별도.`}
         url={canonical}
         faqs={c.faqs}
         crumbs={crumbs}
@@ -212,7 +212,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
 
           <div className="cta" style={{ marginTop: 24 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{d.ko} 홈페이지, 꼭 필요한 페이지부터 시작하세요</h2>
-            <p className="hub-intro">전체를 한 번에 만들지 않아도 됩니다. 원페이지로 작게 시작해 검증 후 확장할 수 있습니다. 월 관리비 없이 정액으로 진행합니다.</p>
+            <p className="hub-intro">전체를 한 번에 만들지 않아도 됩니다. 원페이지로 작게 시작해 검증 후 확장할 수 있습니다. 확정된 제작 범위는 정액으로 진행하며 선택 유지보수·외부 실비는 별도입니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_website_call_bottom">
                 {ctaPrimary('web-' + d.slug)}

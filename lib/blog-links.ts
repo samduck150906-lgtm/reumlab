@@ -58,7 +58,7 @@ const TARGETS = {
   web: {
     href: '/web-development/',
     label: '웹사이트·랜딩페이지 제작',
-    blurb: '반응형 웹 98만 원부터 · 월 관리비 없이 소스코드 이관',
+    blurb: '반응형 웹 98만 원부터 · 소스코드 이관 · 선택 유지보수·외부 실비 별도',
   },
 } as const satisfies Record<string, ServiceLink>;
 
