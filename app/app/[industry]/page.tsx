@@ -7,7 +7,8 @@ import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { hasCost } from '@/lib/cost';
-import { hasSolution } from '@/lib/solution';
+import { hasSolution, getSolution } from '@/lib/solution';
+import IndustryOperationalContent from '@/components/IndustryOperationalContent';
 import { systemsForIndustry } from '@/lib/systems';
 import { ctaPrimary, ctaSecondary, operatorNote } from '@/lib/voice';
 import { getDeepDive } from '@/lib/deep-dive';
@@ -65,6 +66,7 @@ export default function IndustryPage({ params }: Props) {
   // 기능/시스템 축으로 넘어가는 문맥 앵커 — /system 페이지가 고아로 뜨지 않게 한다.
   const relatedSystems = systemsForIndustry(ind.slug);
   const deep = getDeepDive(ind.slug);
+  const solution = getSolution(ind.slug);
 
   return (
     <>
@@ -130,10 +132,13 @@ export default function IndustryPage({ params }: Props) {
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
-            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{ind.ko}에서 어떻게 쓰이나</h2>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{ind.ko} 운영 시나리오 예시</h2>
+            <p className="hub-intro" style={{ marginBottom: 12 }}>다음은 도입을 검토할 때의 설계 예시입니다. 문의 감소·재방문 등 운영 효과는 도입 전후의 실제 자료로 확인해야 하며, 특정 고객의 실적이나 보장된 성과를 뜻하지 않습니다.</p>
             <p className="hub-intro">{ind.scenario}</p>
             {ind.benefits && <p className="hub-intro" style={{ marginTop: 14 }}>{ind.benefits}</p>}
           </div>
+
+          <IndustryOperationalContent slug={ind.slug} kind="app" firstPhase={solution?.roadmap[0]?.detail} laterPhases={solution?.roadmap.slice(1).map((p) => p.detail)} />
 
           {deep && (
             <div className="section-inner" style={{ paddingTop: 16 }}>
@@ -153,7 +158,7 @@ export default function IndustryPage({ params }: Props) {
                   borderLeft: '4px solid var(--green)',
                 }}
               >
-                <p style={{ margin: 0, fontWeight: 600, fontSize: '0.9rem', color: 'var(--green)' }}>진행하면서 바뀐 점</p>
+                <p style={{ margin: 0, fontWeight: 600, fontSize: '0.9rem', color: 'var(--green)' }}>도입 전 판단 기준</p>
                 <p className="hub-intro" style={{ margin: '6px 0 0', lineHeight: 1.85 }}>{deep.changed}</p>
               </aside>
             </div>

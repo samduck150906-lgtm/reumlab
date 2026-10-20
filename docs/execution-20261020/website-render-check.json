@@ -1,0 +1,5597 @@
+[
+  {
+    "url": "https://reumlab.com/website/byeongwon/",
+    "h1": "병원 홈페이지 제작",
+    "h2": [
+      "병원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "병원 정보를 검색에서 이해할 수 있도록",
+      "병원 홈페이지, 어떻게 문의로 이어지나",
+      "병원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "병원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/chigwa/",
+    "h1": "치과 홈페이지 제작",
+    "h2": [
+      "치과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "치과 정보를 검색에서 이해할 수 있도록",
+      "치과 홈페이지, 어떻게 문의로 이어지나",
+      "치과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "치과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hanuiwon/",
+    "h1": "한의원 홈페이지 제작",
+    "h2": [
+      "한의원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "한의원 정보를 검색에서 이해할 수 있도록",
+      "한의원 홈페이지, 어떻게 문의로 이어지나",
+      "한의원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "한의원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pibugwa/",
+    "h1": "피부과 홈페이지 제작",
+    "h2": [
+      "피부과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "피부과 정보를 검색에서 이해할 수 있도록",
+      "피부과 홈페이지, 어떻게 문의로 이어지나",
+      "피부과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "피부과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/angwa/",
+    "h1": "안과 홈페이지 제작",
+    "h2": [
+      "안과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "안과 정보를 검색에서 이해할 수 있도록",
+      "안과 홈페이지, 어떻게 문의로 이어지나",
+      "안과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "안과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ibiinhugwa/",
+    "h1": "이비인후과 홈페이지 제작",
+    "h2": [
+      "이비인후과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "이비인후과 정보를 검색에서 이해할 수 있도록",
+      "이비인후과 홈페이지, 어떻게 문의로 이어지나",
+      "이비인후과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "이비인후과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeonghyeongoegwa/",
+    "h1": "정형외과 홈페이지 제작",
+    "h2": [
+      "정형외과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "정형외과 정보를 검색에서 이해할 수 있도록",
+      "정형외과 홈페이지, 어떻게 문의로 이어지나",
+      "정형외과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "정형외과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/naegwa/",
+    "h1": "내과 홈페이지 제작",
+    "h2": [
+      "내과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "내과 정보를 검색에서 이해할 수 있도록",
+      "내과 홈페이지, 어떻게 문의로 이어지나",
+      "내과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "내과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/soagwa/",
+    "h1": "소아과 홈페이지 제작",
+    "h2": [
+      "소아과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "소아과 정보를 검색에서 이해할 수 있도록",
+      "소아과 홈페이지, 어떻게 문의로 이어지나",
+      "소아과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "소아과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sanbuingwa/",
+    "h1": "산부인과 홈페이지 제작",
+    "h2": [
+      "산부인과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "산부인과 정보를 검색에서 이해할 수 있도록",
+      "산부인과 홈페이지, 어떻게 문의로 이어지나",
+      "산부인과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "산부인과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/binyogigwa/",
+    "h1": "비뇨기과 홈페이지 제작",
+    "h2": [
+      "비뇨기과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "비뇨기과 정보를 검색에서 이해할 수 있도록",
+      "비뇨기과 홈페이지, 어떻게 문의로 이어지나",
+      "비뇨기과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "비뇨기과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeongsingeonganguihaggwa/",
+    "h1": "정신건강의학과 홈페이지 제작",
+    "h2": [
+      "정신건강의학과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "정신건강의학과 정보를 검색에서 이해할 수 있도록",
+      "정신건강의학과 홈페이지, 어떻게 문의로 이어지나",
+      "정신건강의학과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "정신건강의학과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jaehwaluihaggwa/",
+    "h1": "재활의학과 홈페이지 제작",
+    "h2": [
+      "재활의학과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "재활의학과 정보를 검색에서 이해할 수 있도록",
+      "재활의학과 홈페이지, 어떻게 문의로 이어지나",
+      "재활의학과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "재활의학과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/singyeongoegwa/",
+    "h1": "신경외과 홈페이지 제작",
+    "h2": [
+      "신경외과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "신경외과 정보를 검색에서 이해할 수 있도록",
+      "신경외과 홈페이지, 어떻게 문의로 이어지나",
+      "신경외과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "신경외과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seonghyeongoegwa/",
+    "h1": "성형외과 홈페이지 제작",
+    "h2": [
+      "성형외과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "성형외과 정보를 검색에서 이해할 수 있도록",
+      "성형외과 홈페이지, 어떻게 문의로 이어지나",
+      "성형외과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "성형외과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/tongjeunguihaggwa/",
+    "h1": "통증의학과 홈페이지 제작",
+    "h2": [
+      "통증의학과 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "통증의학과 정보를 검색에서 이해할 수 있도록",
+      "통증의학과 홈페이지, 어떻게 문의로 이어지나",
+      "통증의학과 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "통증의학과 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dongmulbyeongwon/",
+    "h1": "동물병원 홈페이지 제작",
+    "h2": [
+      "동물병원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "동물병원 정보를 검색에서 이해할 수 있도록",
+      "동물병원 홈페이지, 어떻게 문의로 이어지나",
+      "동물병원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "동물병원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yaggug/",
+    "h1": "약국 홈페이지 제작",
+    "h2": [
+      "약국 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "약국 정보를 검색에서 이해할 수 있도록",
+      "약국 홈페이지, 어떻게 문의로 이어지나",
+      "약국 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "약국 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geonganggeomjinsenteo/",
+    "h1": "건강검진센터 홈페이지 제작",
+    "h2": [
+      "건강검진센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "건강검진센터 정보를 검색에서 이해할 수 있도록",
+      "건강검진센터 홈페이지, 어떻게 문의로 이어지나",
+      "건강검진센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "건강검진센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yoyangbyeongwon/",
+    "h1": "요양병원 홈페이지 제작",
+    "h2": [
+      "요양병원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "요양병원 정보를 검색에서 이해할 수 있도록",
+      "요양병원 홈페이지, 어떻게 문의로 이어지나",
+      "요양병원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "요양병원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hagwon/",
+    "h1": "학원 홈페이지 제작",
+    "h2": [
+      "학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "학원 정보를 검색에서 이해할 수 있도록",
+      "학원 홈페이지, 어떻게 문의로 이어지나",
+      "학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eorinijib/",
+    "h1": "어린이집 홈페이지 제작",
+    "h2": [
+      "어린이집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "어린이집 정보를 검색에서 이해할 수 있도록",
+      "어린이집 홈페이지, 어떻게 문의로 이어지나",
+      "어린이집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "어린이집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yuchiwon/",
+    "h1": "유치원 홈페이지 제작",
+    "h2": [
+      "유치원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "유치원 정보를 검색에서 이해할 수 있도록",
+      "유치원 홈페이지, 어떻게 문의로 이어지나",
+      "유치원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "유치원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yeongeohagwon/",
+    "h1": "영어학원 홈페이지 제작",
+    "h2": [
+      "영어학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "영어학원 정보를 검색에서 이해할 수 있도록",
+      "영어학원 홈페이지, 어떻게 문의로 이어지나",
+      "영어학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "영어학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/suhaghagwon/",
+    "h1": "수학학원 홈페이지 제작",
+    "h2": [
+      "수학학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "수학학원 정보를 검색에서 이해할 수 있도록",
+      "수학학원 홈페이지, 어떻게 문의로 이어지나",
+      "수학학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "수학학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ibsihagwon/",
+    "h1": "입시학원 홈페이지 제작",
+    "h2": [
+      "입시학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "입시학원 정보를 검색에서 이해할 수 있도록",
+      "입시학원 홈페이지, 어떻게 문의로 이어지나",
+      "입시학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "입시학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/misulhagwon/",
+    "h1": "미술학원 홈페이지 제작",
+    "h2": [
+      "미술학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "미술학원 정보를 검색에서 이해할 수 있도록",
+      "미술학원 홈페이지, 어떻게 문의로 이어지나",
+      "미술학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "미술학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eumaghagwon/",
+    "h1": "음악학원 홈페이지 제작",
+    "h2": [
+      "음악학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "음악학원 정보를 검색에서 이해할 수 있도록",
+      "음악학원 홈페이지, 어떻게 문의로 이어지나",
+      "음악학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "음악학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pianohagwon/",
+    "h1": "피아노학원 홈페이지 제작",
+    "h2": [
+      "피아노학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "피아노학원 정보를 검색에서 이해할 수 있도록",
+      "피아노학원 홈페이지, 어떻게 문의로 이어지나",
+      "피아노학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "피아노학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/taegwondojang/",
+    "h1": "태권도장 홈페이지 제작",
+    "h2": [
+      "태권도장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "태권도장 정보를 검색에서 이해할 수 있도록",
+      "태권도장 홈페이지, 어떻게 문의로 이어지나",
+      "태권도장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "태권도장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kodinghagwon/",
+    "h1": "코딩학원 홈페이지 제작",
+    "h2": [
+      "코딩학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "코딩학원 정보를 검색에서 이해할 수 있도록",
+      "코딩학원 홈페이지, 어떻게 문의로 이어지나",
+      "코딩학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "코딩학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yorihagwon/",
+    "h1": "요리학원 홈페이지 제작",
+    "h2": [
+      "요리학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "요리학원 정보를 검색에서 이해할 수 있도록",
+      "요리학원 홈페이지, 어떻게 문의로 이어지나",
+      "요리학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "요리학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/unjeonhagwon/",
+    "h1": "운전학원 홈페이지 제작",
+    "h2": [
+      "운전학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "운전학원 정보를 검색에서 이해할 수 있도록",
+      "운전학원 홈페이지, 어떻게 문의로 이어지나",
+      "운전학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "운전학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dogseosil/",
+    "h1": "독서실 홈페이지 제작",
+    "h2": [
+      "독서실 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "독서실 정보를 검색에서 이해할 수 있도록",
+      "독서실 홈페이지, 어떻게 문의로 이어지나",
+      "독서실 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "독서실 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seuteodikape/",
+    "h1": "스터디카페 홈페이지 제작",
+    "h2": [
+      "스터디카페 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "스터디카페 정보를 검색에서 이해할 수 있도록",
+      "스터디카페 홈페이지, 어떻게 문의로 이어지나",
+      "스터디카페 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "스터디카페 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jigeobjeonmunhaggyo/",
+    "h1": "직업전문학교 홈페이지 제작",
+    "h2": [
+      "직업전문학교 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "직업전문학교 정보를 검색에서 이해할 수 있도록",
+      "직업전문학교 홈페이지, 어떻게 문의로 이어지나",
+      "직업전문학교 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "직업전문학교 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yuhagwon/",
+    "h1": "유학원 홈페이지 제작",
+    "h2": [
+      "유학원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "유학원 정보를 검색에서 이해할 수 있도록",
+      "유학원 홈페이지, 어떻게 문의로 이어지나",
+      "유학원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "유학원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gwaoe/",
+    "h1": "과외 홈페이지 제작",
+    "h2": [
+      "과외 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "과외 정보를 검색에서 이해할 수 있도록",
+      "과외 홈페이지, 어떻게 문의로 이어지나",
+      "과외 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "과외 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bangmunhagseub/",
+    "h1": "방문학습 홈페이지 제작",
+    "h2": [
+      "방문학습 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "방문학습 정보를 검색에서 이해할 수 있도록",
+      "방문학습 홈페이지, 어떻게 문의로 이어지나",
+      "방문학습 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "방문학습 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yoyangwon/",
+    "h1": "요양원 홈페이지 제작",
+    "h2": [
+      "요양원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "요양원 정보를 검색에서 이해할 수 있도록",
+      "요양원 홈페이지, 어떻게 문의로 이어지나",
+      "요양원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "요양원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/juganbohosenteo/",
+    "h1": "주간보호센터 홈페이지 제작",
+    "h2": [
+      "주간보호센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "주간보호센터 정보를 검색에서 이해할 수 있도록",
+      "주간보호센터 홈페이지, 어떻게 문의로 이어지나",
+      "주간보호센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "주간보호센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bangmunyoyangsenteo/",
+    "h1": "방문요양센터 홈페이지 제작",
+    "h2": [
+      "방문요양센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "방문요양센터 정보를 검색에서 이해할 수 있도록",
+      "방문요양센터 홈페이지, 어떻게 문의로 이어지나",
+      "방문요양센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "방문요양센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jaegabogjisenteo/",
+    "h1": "재가복지센터 홈페이지 제작",
+    "h2": [
+      "재가복지센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "재가복지센터 정보를 검색에서 이해할 수 있도록",
+      "재가복지센터 홈페이지, 어떻게 문의로 이어지나",
+      "재가복지센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "재가복지센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/noinbogjigwan/",
+    "h1": "노인복지관 홈페이지 제작",
+    "h2": [
+      "노인복지관 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "노인복지관 정보를 검색에서 이해할 수 있도록",
+      "노인복지관 홈페이지, 어떻게 문의로 이어지나",
+      "노인복지관 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "노인복지관 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jangaeinbogjigwan/",
+    "h1": "장애인복지관 홈페이지 제작",
+    "h2": [
+      "장애인복지관 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "장애인복지관 정보를 검색에서 이해할 수 있도록",
+      "장애인복지관 홈페이지, 어떻게 문의로 이어지나",
+      "장애인복지관 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "장애인복지관 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sahoebogjigwan/",
+    "h1": "사회복지관 홈페이지 제작",
+    "h2": [
+      "사회복지관 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "사회복지관 정보를 검색에서 이해할 수 있도록",
+      "사회복지관 홈페이지, 어떻게 문의로 이어지나",
+      "사회복지관 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "사회복지관 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/silbeotaun/",
+    "h1": "실버타운 홈페이지 제작",
+    "h2": [
+      "실버타운 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "실버타운 정보를 검색에서 이해할 수 있도록",
+      "실버타운 홈페이지, 어떻게 문의로 이어지나",
+      "실버타운 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "실버타운 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sanhujoriwon/",
+    "h1": "산후조리원 홈페이지 제작",
+    "h2": [
+      "산후조리원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "산후조리원 정보를 검색에서 이해할 수 있도록",
+      "산후조리원 홈페이지, 어떻게 문의로 이어지나",
+      "산후조리원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "산후조리원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sanhudoumi/",
+    "h1": "산후도우미 홈페이지 제작",
+    "h2": [
+      "산후도우미 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "산후도우미 정보를 검색에서 이해할 수 있도록",
+      "산후도우미 홈페이지, 어떻게 문의로 이어지나",
+      "산후도우미 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "산후도우미 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beibisiteo/",
+    "h1": "베이비시터 홈페이지 제작",
+    "h2": [
+      "베이비시터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "베이비시터 정보를 검색에서 이해할 수 있도록",
+      "베이비시터 홈페이지, 어떻게 문의로 이어지나",
+      "베이비시터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "베이비시터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ganbyeongin/",
+    "h1": "간병인 홈페이지 제작",
+    "h2": [
+      "간병인 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "간병인 정보를 검색에서 이해할 수 있도록",
+      "간병인 홈페이지, 어떻게 문의로 이어지나",
+      "간병인 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "간병인 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/simrisangdamsenteo/",
+    "h1": "심리상담센터 홈페이지 제작",
+    "h2": [
+      "심리상담센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "심리상담센터 정보를 검색에서 이해할 수 있도록",
+      "심리상담센터 홈페이지, 어떻게 문의로 이어지나",
+      "심리상담센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "심리상담센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eoneochiryosenteo/",
+    "h1": "언어치료센터 홈페이지 제작",
+    "h2": [
+      "언어치료센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "언어치료센터 정보를 검색에서 이해할 수 있도록",
+      "언어치료센터 홈페이지, 어떻게 문의로 이어지나",
+      "언어치료센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "언어치료센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/baldalsenteo/",
+    "h1": "발달센터 홈페이지 제작",
+    "h2": [
+      "발달센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "발달센터 정보를 검색에서 이해할 수 있도록",
+      "발달센터 홈페이지, 어떻게 문의로 이어지나",
+      "발달센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "발달센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/adongsangdamsenteo/",
+    "h1": "아동상담센터 홈페이지 제작",
+    "h2": [
+      "아동상담센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "아동상담센터 정보를 검색에서 이해할 수 있도록",
+      "아동상담센터 홈페이지, 어떻게 문의로 이어지나",
+      "아동상담센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "아동상담센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/cheongsonyeonsangdamsenteo/",
+    "h1": "청소년상담센터 홈페이지 제작",
+    "h2": [
+      "청소년상담센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "청소년상담센터 정보를 검색에서 이해할 수 있도록",
+      "청소년상담센터 홈페이지, 어떻게 문의로 이어지나",
+      "청소년상담센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "청소년상담센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gajeongsangdamso/",
+    "h1": "가정상담소 홈페이지 제작",
+    "h2": [
+      "가정상담소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "가정상담소 정보를 검색에서 이해할 수 있도록",
+      "가정상담소 홈페이지, 어떻게 문의로 이어지나",
+      "가정상담소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "가정상담소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jangryesigjang/",
+    "h1": "장례식장 홈페이지 제작",
+    "h2": [
+      "장례식장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "장례식장 정보를 검색에서 이해할 수 있도록",
+      "장례식장 홈페이지, 어떻게 문의로 이어지나",
+      "장례식장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "장례식장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sangjohoesa/",
+    "h1": "상조회사 홈페이지 제작",
+    "h2": [
+      "상조회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "상조회사 정보를 검색에서 이해할 수 있도록",
+      "상조회사 홈페이지, 어떻게 문의로 이어지나",
+      "상조회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "상조회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/helseujang/",
+    "h1": "헬스장 홈페이지 제작",
+    "h2": [
+      "헬스장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "헬스장 정보를 검색에서 이해할 수 있도록",
+      "헬스장 홈페이지, 어떻게 문의로 이어지나",
+      "헬스장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "헬스장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pt-shop/",
+    "h1": "PT샵 홈페이지 제작",
+    "h2": [
+      "PT샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "PT샵 정보를 검색에서 이해할 수 있도록",
+      "PT샵 홈페이지, 어떻게 문의로 이어지나",
+      "PT샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "PT샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pilrateseu/",
+    "h1": "필라테스 홈페이지 제작",
+    "h2": [
+      "필라테스 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "필라테스 정보를 검색에서 이해할 수 있도록",
+      "필라테스 홈페이지, 어떻게 문의로 이어지나",
+      "필라테스 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "필라테스 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yogawon/",
+    "h1": "요가원 홈페이지 제작",
+    "h2": [
+      "요가원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "요가원 정보를 검색에서 이해할 수 있도록",
+      "요가원 홈페이지, 어떻게 문의로 이어지나",
+      "요가원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "요가원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/keuroseupis/",
+    "h1": "크로스핏 홈페이지 제작",
+    "h2": [
+      "크로스핏 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "크로스핏 정보를 검색에서 이해할 수 있도록",
+      "크로스핏 홈페이지, 어떻게 문의로 이어지나",
+      "크로스핏 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "크로스핏 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/golpeuyeonseubjang/",
+    "h1": "골프연습장 홈페이지 제작",
+    "h2": [
+      "골프연습장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "골프연습장 정보를 검색에서 이해할 수 있도록",
+      "골프연습장 홈페이지, 어떻게 문의로 이어지나",
+      "골프연습장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "골프연습장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seukeuringolpeu/",
+    "h1": "스크린골프 홈페이지 제작",
+    "h2": [
+      "스크린골프 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "스크린골프 정보를 검색에서 이해할 수 있도록",
+      "스크린골프 홈페이지, 어떻게 문의로 이어지나",
+      "스크린골프 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "스크린골프 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/suyeongjang/",
+    "h1": "수영장 홈페이지 제작",
+    "h2": [
+      "수영장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "수영장 정보를 검색에서 이해할 수 있도록",
+      "수영장 홈페이지, 어떻게 문의로 이어지나",
+      "수영장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "수영장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/teniseujang/",
+    "h1": "테니스장 홈페이지 제작",
+    "h2": [
+      "테니스장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "테니스장 정보를 검색에서 이해할 수 있도록",
+      "테니스장 홈페이지, 어떻게 문의로 이어지나",
+      "테니스장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "테니스장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/baedeuminteonjang/",
+    "h1": "배드민턴장 홈페이지 제작",
+    "h2": [
+      "배드민턴장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "배드민턴장 정보를 검색에서 이해할 수 있도록",
+      "배드민턴장 홈페이지, 어떻게 문의로 이어지나",
+      "배드민턴장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "배드민턴장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bolringjang/",
+    "h1": "볼링장 홈페이지 제작",
+    "h2": [
+      "볼링장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "볼링장 정보를 검색에서 이해할 수 있도록",
+      "볼링장 홈페이지, 어떻게 문의로 이어지나",
+      "볼링장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "볼링장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/danggujang/",
+    "h1": "당구장 홈페이지 제작",
+    "h2": [
+      "당구장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "당구장 정보를 검색에서 이해할 수 있도록",
+      "당구장 홈페이지, 어떻게 문의로 이어지나",
+      "당구장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "당구장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/keulraimingjim/",
+    "h1": "클라이밍짐 홈페이지 제작",
+    "h2": [
+      "클라이밍짐 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "클라이밍짐 정보를 검색에서 이해할 수 있도록",
+      "클라이밍짐 홈페이지, 어떻게 문의로 이어지나",
+      "클라이밍짐 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "클라이밍짐 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bogsingjang/",
+    "h1": "복싱장 홈페이지 제작",
+    "h2": [
+      "복싱장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "복싱장 정보를 검색에서 이해할 수 있도록",
+      "복싱장 홈페이지, 어떻게 문의로 이어지나",
+      "복싱장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "복싱장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jujissudojang/",
+    "h1": "주짓수도장 홈페이지 제작",
+    "h2": [
+      "주짓수도장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "주짓수도장 정보를 검색에서 이해할 수 있도록",
+      "주짓수도장 홈페이지, 어떻게 문의로 이어지나",
+      "주짓수도장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "주짓수도장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seungmajang/",
+    "h1": "승마장 홈페이지 제작",
+    "h2": [
+      "승마장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "승마장 정보를 검색에서 이해할 수 있도록",
+      "승마장 홈페이지, 어떻게 문의로 이어지나",
+      "승마장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "승마장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kaempingjang/",
+    "h1": "캠핑장 홈페이지 제작",
+    "h2": [
+      "캠핑장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "캠핑장 정보를 검색에서 이해할 수 있도록",
+      "캠핑장 홈페이지, 어떻게 문의로 이어지나",
+      "캠핑장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "캠핑장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/nakksiteo/",
+    "h1": "낚시터 홈페이지 제작",
+    "h2": [
+      "낚시터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "낚시터 정보를 검색에서 이해할 수 있도록",
+      "낚시터 홈페이지, 어떻게 문의로 이어지나",
+      "낚시터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "낚시터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/rejeoseupocheu/",
+    "h1": "레저스포츠 홈페이지 제작",
+    "h2": [
+      "레저스포츠 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "레저스포츠 정보를 검색에서 이해할 수 있도록",
+      "레저스포츠 홈페이지, 어떻게 문의로 이어지나",
+      "레저스포츠 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "레저스포츠 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/miyongsil/",
+    "h1": "미용실 홈페이지 제작",
+    "h2": [
+      "미용실 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "미용실 정보를 검색에서 이해할 수 있도록",
+      "미용실 홈페이지, 어떻게 문의로 이어지나",
+      "미용실 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "미용실 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/neilsyab/",
+    "h1": "네일샵 홈페이지 제작",
+    "h2": [
+      "네일샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "네일샵 정보를 검색에서 이해할 수 있도록",
+      "네일샵 홈페이지, 어떻게 문의로 이어지나",
+      "네일샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "네일샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pibugwanrisyab/",
+    "h1": "피부관리샵 홈페이지 제작",
+    "h2": [
+      "피부관리샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "피부관리샵 정보를 검색에서 이해할 수 있도록",
+      "피부관리샵 홈페이지, 어떻게 문의로 이어지나",
+      "피부관리샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "피부관리샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eseutetig/",
+    "h1": "에스테틱 홈페이지 제작",
+    "h2": [
+      "에스테틱 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "에스테틱 정보를 검색에서 이해할 수 있도록",
+      "에스테틱 홈페이지, 어떻게 문의로 이어지나",
+      "에스테틱 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "에스테틱 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wagsingsyab/",
+    "h1": "왁싱샵 홈페이지 제작",
+    "h2": [
+      "왁싱샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "왁싱샵 정보를 검색에서 이해할 수 있도록",
+      "왁싱샵 홈페이지, 어떻게 문의로 이어지나",
+      "왁싱샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "왁싱샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sognunsseobsyab/",
+    "h1": "속눈썹샵 홈페이지 제작",
+    "h2": [
+      "속눈썹샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "속눈썹샵 정보를 검색에서 이해할 수 있도록",
+      "속눈썹샵 홈페이지, 어떻게 문의로 이어지나",
+      "속눈썹샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "속눈썹샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/meikeueobsyab/",
+    "h1": "메이크업샵 홈페이지 제작",
+    "h2": [
+      "메이크업샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "메이크업샵 정보를 검색에서 이해할 수 있도록",
+      "메이크업샵 홈페이지, 어떻게 문의로 이어지나",
+      "메이크업샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "메이크업샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dupigwanrisenteo/",
+    "h1": "두피관리센터 홈페이지 제작",
+    "h2": [
+      "두피관리센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "두피관리센터 정보를 검색에서 이해할 수 있도록",
+      "두피관리센터 홈페이지, 어떻게 문의로 이어지나",
+      "두피관리센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "두피관리센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/masajisyab/",
+    "h1": "마사지샵 홈페이지 제작",
+    "h2": [
+      "마사지샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "마사지샵 정보를 검색에서 이해할 수 있도록",
+      "마사지샵 홈페이지, 어떻게 문의로 이어지나",
+      "마사지샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "마사지샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seupa/",
+    "h1": "스파 홈페이지 제작",
+    "h2": [
+      "스파 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "스파 정보를 검색에서 이해할 수 있도록",
+      "스파 홈페이지, 어떻게 문의로 이어지나",
+      "스파 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "스파 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/banyeonggusyab/",
+    "h1": "반영구샵 홈페이지 제작",
+    "h2": [
+      "반영구샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "반영구샵 정보를 검색에서 이해할 수 있도록",
+      "반영구샵 홈페이지, 어떻게 문의로 이어지나",
+      "반영구샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "반영구샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/peoseuneolkeolreo/",
+    "h1": "퍼스널컬러 홈페이지 제작",
+    "h2": [
+      "퍼스널컬러 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "퍼스널컬러 정보를 검색에서 이해할 수 있도록",
+      "퍼스널컬러 홈페이지, 어떻게 문의로 이어지나",
+      "퍼스널컬러 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "퍼스널컬러 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/majchumjeongjang/",
+    "h1": "맞춤정장 홈페이지 제작",
+    "h2": [
+      "맞춤정장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "맞춤정장 정보를 검색에서 이해할 수 있도록",
+      "맞춤정장 홈페이지, 어떻게 문의로 이어지나",
+      "맞춤정장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "맞춤정장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hanbogjib/",
+    "h1": "한복집 홈페이지 제작",
+    "h2": [
+      "한복집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "한복집 정보를 검색에서 이해할 수 있도록",
+      "한복집 홈페이지, 어떻게 문의로 이어지나",
+      "한복집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "한복집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wedingdeureseusyab/",
+    "h1": "웨딩드레스샵 홈페이지 제작",
+    "h2": [
+      "웨딩드레스샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "웨딩드레스샵 정보를 검색에서 이해할 수 있도록",
+      "웨딩드레스샵 홈페이지, 어떻게 문의로 이어지나",
+      "웨딩드레스샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "웨딩드레스샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/uiryumaejang/",
+    "h1": "의류매장 홈페이지 제작",
+    "h2": [
+      "의류매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "의류매장 정보를 검색에서 이해할 수 있도록",
+      "의류매장 홈페이지, 어떻게 문의로 이어지나",
+      "의류매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "의류매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sinbalmaejang/",
+    "h1": "신발매장 홈페이지 제작",
+    "h2": [
+      "신발매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "신발매장 정보를 검색에서 이해할 수 있도록",
+      "신발매장 홈페이지, 어떻게 문의로 이어지나",
+      "신발매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "신발매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gabangmaejang/",
+    "h1": "가방매장 홈페이지 제작",
+    "h2": [
+      "가방매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "가방매장 정보를 검색에서 이해할 수 있도록",
+      "가방매장 홈페이지, 어떻게 문의로 이어지나",
+      "가방매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "가방매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jueolrisyab/",
+    "h1": "주얼리샵 홈페이지 제작",
+    "h2": [
+      "주얼리샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "주얼리샵 정보를 검색에서 이해할 수 있도록",
+      "주얼리샵 홈페이지, 어떻게 문의로 이어지나",
+      "주얼리샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "주얼리샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/angyeongjeom/",
+    "h1": "안경점 홈페이지 제작",
+    "h2": [
+      "안경점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "안경점 정보를 검색에서 이해할 수 있도록",
+      "안경점 홈페이지, 어떻게 문의로 이어지나",
+      "안경점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "안경점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kape/",
+    "h1": "카페 홈페이지 제작",
+    "h2": [
+      "카페 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "카페 정보를 검색에서 이해할 수 있도록",
+      "카페 홈페이지, 어떻게 문의로 이어지나",
+      "카페 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "카페 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sigdang/",
+    "h1": "식당 홈페이지 제작",
+    "h2": [
+      "식당 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "식당 정보를 검색에서 이해할 수 있도록",
+      "식당 홈페이지, 어떻게 문의로 이어지나",
+      "식당 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "식당 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hansigdang/",
+    "h1": "한식당 홈페이지 제작",
+    "h2": [
+      "한식당 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "한식당 정보를 검색에서 이해할 수 있도록",
+      "한식당 홈페이지, 어떻게 문의로 이어지나",
+      "한식당 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "한식당 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jungsigdang/",
+    "h1": "중식당 홈페이지 제작",
+    "h2": [
+      "중식당 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "중식당 정보를 검색에서 이해할 수 있도록",
+      "중식당 홈페이지, 어떻게 문의로 이어지나",
+      "중식당 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "중식당 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ilsigdang/",
+    "h1": "일식당 홈페이지 제작",
+    "h2": [
+      "일식당 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "일식당 정보를 검색에서 이해할 수 있도록",
+      "일식당 홈페이지, 어떻게 문의로 이어지나",
+      "일식당 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "일식당 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yangsigdang/",
+    "h1": "양식당 홈페이지 제작",
+    "h2": [
+      "양식당 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "양식당 정보를 검색에서 이해할 수 있도록",
+      "양식당 홈페이지, 어떻게 문의로 이어지나",
+      "양식당 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "양식당 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gogisjib/",
+    "h1": "고깃집 홈페이지 제작",
+    "h2": [
+      "고깃집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "고깃집 정보를 검색에서 이해할 수 있도록",
+      "고깃집 홈페이지, 어떻게 문의로 이어지나",
+      "고깃집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "고깃집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hoesjib/",
+    "h1": "횟집 홈페이지 제작",
+    "h2": [
+      "횟집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "횟집 정보를 검색에서 이해할 수 있도록",
+      "횟집 홈페이지, 어떻게 문의로 이어지나",
+      "횟집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "횟집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bunsigjib/",
+    "h1": "분식집 홈페이지 제작",
+    "h2": [
+      "분식집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "분식집 정보를 검색에서 이해할 수 있도록",
+      "분식집 홈페이지, 어떻게 문의로 이어지나",
+      "분식집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "분식집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/chikinjib/",
+    "h1": "치킨집 홈페이지 제작",
+    "h2": [
+      "치킨집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "치킨집 정보를 검색에서 이해할 수 있도록",
+      "치킨집 홈페이지, 어떻게 문의로 이어지나",
+      "치킨집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "치킨집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pijajib/",
+    "h1": "피자집 홈페이지 제작",
+    "h2": [
+      "피자집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "피자집 정보를 검색에서 이해할 수 있도록",
+      "피자집 홈페이지, 어떻게 문의로 이어지나",
+      "피자집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "피자집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beikeori/",
+    "h1": "베이커리 홈페이지 제작",
+    "h2": [
+      "베이커리 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "베이커리 정보를 검색에서 이해할 수 있도록",
+      "베이커리 홈페이지, 어떻게 문의로 이어지나",
+      "베이커리 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "베이커리 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/tteogjib/",
+    "h1": "떡집 홈페이지 제작",
+    "h2": [
+      "떡집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "떡집 정보를 검색에서 이해할 수 있도록",
+      "떡집 홈페이지, 어떻게 문의로 이어지나",
+      "떡집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "떡집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dosirageobche/",
+    "h1": "도시락업체 홈페이지 제작",
+    "h2": [
+      "도시락업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "도시락업체 정보를 검색에서 이해할 수 있도록",
+      "도시락업체 홈페이지, 어떻게 문의로 이어지나",
+      "도시락업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "도시락업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/banchangage/",
+    "h1": "반찬가게 홈페이지 제작",
+    "h2": [
+      "반찬가게 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "반찬가게 정보를 검색에서 이해할 수 있도록",
+      "반찬가게 홈페이지, 어떻게 문의로 이어지나",
+      "반찬가게 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "반찬가게 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/keiteoring/",
+    "h1": "케이터링 홈페이지 제작",
+    "h2": [
+      "케이터링 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "케이터링 정보를 검색에서 이해할 수 있도록",
+      "케이터링 홈페이지, 어떻게 문의로 이어지나",
+      "케이터링 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "케이터링 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pudeuteureog/",
+    "h1": "푸드트럭 홈페이지 제작",
+    "h2": [
+      "푸드트럭 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "푸드트럭 정보를 검색에서 이해할 수 있도록",
+      "푸드트럭 홈페이지, 어떻게 문의로 이어지나",
+      "푸드트럭 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "푸드트럭 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geongangsigpum/",
+    "h1": "건강식품 홈페이지 제작",
+    "h2": [
+      "건강식품 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "건강식품 정보를 검색에서 이해할 수 있도록",
+      "건강식품 홈페이지, 어떻게 문의로 이어지나",
+      "건강식품 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "건강식품 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sigpumjejoeob/",
+    "h1": "식품제조업 홈페이지 제작",
+    "h2": [
+      "식품제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "식품제조업 정보를 검색에서 이해할 수 있도록",
+      "식품제조업 홈페이지, 어떻게 문의로 이어지나",
+      "식품제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "식품제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/nongsanmulpanmae/",
+    "h1": "농산물판매 홈페이지 제작",
+    "h2": [
+      "농산물판매 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "농산물판매 정보를 검색에서 이해할 수 있도록",
+      "농산물판매 홈페이지, 어떻게 문의로 이어지나",
+      "농산물판매 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "농산물판매 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pensyeon/",
+    "h1": "펜션 홈페이지 제작",
+    "h2": [
+      "펜션 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "펜션 정보를 검색에서 이해할 수 있도록",
+      "펜션 홈페이지, 어떻게 문의로 이어지나",
+      "펜션 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "펜션 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hotel/",
+    "h1": "호텔 홈페이지 제작",
+    "h2": [
+      "호텔 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "호텔 정보를 검색에서 이해할 수 있도록",
+      "호텔 홈페이지, 어떻게 문의로 이어지나",
+      "호텔 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "호텔 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/motel/",
+    "h1": "모텔 홈페이지 제작",
+    "h2": [
+      "모텔 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "모텔 정보를 검색에서 이해할 수 있도록",
+      "모텔 홈페이지, 어떻게 문의로 이어지나",
+      "모텔 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "모텔 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/rijoteu/",
+    "h1": "리조트 홈페이지 제작",
+    "h2": [
+      "리조트 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "리조트 정보를 검색에서 이해할 수 있도록",
+      "리조트 홈페이지, 어떻게 문의로 이어지나",
+      "리조트 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "리조트 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geseuteuhauseu/",
+    "h1": "게스트하우스 홈페이지 제작",
+    "h2": [
+      "게스트하우스 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "게스트하우스 정보를 검색에서 이해할 수 있도록",
+      "게스트하우스 홈페이지, 어떻게 문의로 이어지나",
+      "게스트하우스 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "게스트하우스 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pulbilra/",
+    "h1": "풀빌라 홈페이지 제작",
+    "h2": [
+      "풀빌라 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "풀빌라 정보를 검색에서 이해할 수 있도록",
+      "풀빌라 홈페이지, 어떻게 문의로 이어지나",
+      "풀빌라 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "풀빌라 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hanogseutei/",
+    "h1": "한옥스테이 홈페이지 제작",
+    "h2": [
+      "한옥스테이 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "한옥스테이 정보를 검색에서 이해할 수 있도록",
+      "한옥스테이 홈페이지, 어떻게 문의로 이어지나",
+      "한옥스테이 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "한옥스테이 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kaempingpensyeon/",
+    "h1": "캠핑펜션 홈페이지 제작",
+    "h2": [
+      "캠핑펜션 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "캠핑펜션 정보를 검색에서 이해할 수 있도록",
+      "캠핑펜션 홈페이지, 어떻게 문의로 이어지나",
+      "캠핑펜션 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "캠핑펜션 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geulraempingjang/",
+    "h1": "글램핑장 홈페이지 제작",
+    "h2": [
+      "글램핑장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "글램핑장 정보를 검색에서 이해할 수 있도록",
+      "글램핑장 홈페이지, 어떻게 문의로 이어지나",
+      "글램핑장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "글램핑장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/minbag/",
+    "h1": "민박 홈페이지 제작",
+    "h2": [
+      "민박 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "민박 정보를 검색에서 이해할 수 있도록",
+      "민박 홈페이지, 어떻게 문의로 이어지나",
+      "민박 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "민박 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yeohaengsa/",
+    "h1": "여행사 홈페이지 제작",
+    "h2": [
+      "여행사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "여행사 정보를 검색에서 이해할 수 있도록",
+      "여행사 홈페이지, 어떻게 문의로 이어지나",
+      "여행사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "여행사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gwangwangbeoseu/",
+    "h1": "관광버스 홈페이지 제작",
+    "h2": [
+      "관광버스 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "관광버스 정보를 검색에서 이해할 수 있도록",
+      "관광버스 홈페이지, 어떻게 문의로 이어지나",
+      "관광버스 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "관광버스 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/renteoka/",
+    "h1": "렌터카 홈페이지 제작",
+    "h2": [
+      "렌터카 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "렌터카 정보를 검색에서 이해할 수 있도록",
+      "렌터카 홈페이지, 어떻게 문의로 이어지나",
+      "렌터카 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "렌터카 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gonghangpigeob/",
+    "h1": "공항픽업 홈페이지 제작",
+    "h2": [
+      "공항픽업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "공항픽업 정보를 검색에서 이해할 수 있도록",
+      "공항픽업 홈페이지, 어떻게 문의로 이어지나",
+      "공항픽업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "공항픽업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yuramseon/",
+    "h1": "유람선 홈페이지 제작",
+    "h2": [
+      "유람선 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "유람선 정보를 검색에서 이해할 수 있도록",
+      "유람선 홈페이지, 어떻게 문의로 이어지나",
+      "유람선 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "유람선 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gwangwangnongwon/",
+    "h1": "관광농원 홈페이지 제작",
+    "h2": [
+      "관광농원 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "관광농원 정보를 검색에서 이해할 수 있도록",
+      "관광농원 홈페이지, 어떻게 문의로 이어지나",
+      "관광농원 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "관광농원 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/cheheommaeul/",
+    "h1": "체험마을 홈페이지 제작",
+    "h2": [
+      "체험마을 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "체험마을 정보를 검색에서 이해할 수 있도록",
+      "체험마을 홈페이지, 어떻게 문의로 이어지나",
+      "체험마을 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "체험마을 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/woteopakeu/",
+    "h1": "워터파크 홈페이지 제작",
+    "h2": [
+      "워터파크 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "워터파크 정보를 검색에서 이해할 수 있도록",
+      "워터파크 홈페이지, 어떻게 문의로 이어지나",
+      "워터파크 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "워터파크 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/temapakeu/",
+    "h1": "테마파크 홈페이지 제작",
+    "h2": [
+      "테마파크 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "테마파크 정보를 검색에서 이해할 수 있도록",
+      "테마파크 홈페이지, 어떻게 문의로 이어지나",
+      "테마파크 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "테마파크 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hyuyangrim/",
+    "h1": "휴양림 홈페이지 제작",
+    "h2": [
+      "휴양림 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "휴양림 정보를 검색에서 이해할 수 있도록",
+      "휴양림 홈페이지, 어떻게 문의로 이어지나",
+      "휴양림 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "휴양림 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/syopingmol/",
+    "h1": "쇼핑몰 홈페이지 제작",
+    "h2": [
+      "쇼핑몰 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "쇼핑몰 정보를 검색에서 이해할 수 있도록",
+      "쇼핑몰 홈페이지, 어떻게 문의로 이어지나",
+      "쇼핑몰 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "쇼핑몰 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/onrainsyopingmol/",
+    "h1": "온라인쇼핑몰 홈페이지 제작",
+    "h2": [
+      "온라인쇼핑몰 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "온라인쇼핑몰 정보를 검색에서 이해할 수 있도록",
+      "온라인쇼핑몰 홈페이지, 어떻게 문의로 이어지나",
+      "온라인쇼핑몰 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "온라인쇼핑몰 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jonghabyutongeob/",
+    "h1": "종합유통업 홈페이지 제작",
+    "h2": [
+      "종합유통업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "종합유통업 정보를 검색에서 이해할 수 있도록",
+      "종합유통업 홈페이지, 어떻게 문의로 이어지나",
+      "종합유통업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "종합유통업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/domaeeob/",
+    "h1": "도매업 홈페이지 제작",
+    "h2": [
+      "도매업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "도매업 정보를 검색에서 이해할 수 있도록",
+      "도매업 홈페이지, 어떻게 문의로 이어지나",
+      "도매업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "도매업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/somaeeob/",
+    "h1": "소매업 홈페이지 제작",
+    "h2": [
+      "소매업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "소매업 정보를 검색에서 이해할 수 있도록",
+      "소매업 홈페이지, 어떻게 문의로 이어지나",
+      "소매업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "소매업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pyeonuijeom/",
+    "h1": "편의점 홈페이지 제작",
+    "h2": [
+      "편의점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "편의점 정보를 검색에서 이해할 수 있도록",
+      "편의점 홈페이지, 어떻게 문의로 이어지나",
+      "편의점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "편의점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/mateu/",
+    "h1": "마트 홈페이지 제작",
+    "h2": [
+      "마트 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "마트 정보를 검색에서 이해할 수 있도록",
+      "마트 홈페이지, 어떻게 문의로 이어지나",
+      "마트 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "마트 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeontongsijang/",
+    "h1": "전통시장 홈페이지 제작",
+    "h2": [
+      "전통시장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전통시장 정보를 검색에서 이해할 수 있도록",
+      "전통시장 홈페이지, 어떻게 문의로 이어지나",
+      "전통시장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전통시장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gagujeom/",
+    "h1": "가구점 홈페이지 제작",
+    "h2": [
+      "가구점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "가구점 정보를 검색에서 이해할 수 있도록",
+      "가구점 홈페이지, 어떻게 문의로 이어지나",
+      "가구점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "가구점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/interieosopumsyab/",
+    "h1": "인테리어소품샵 홈페이지 제작",
+    "h2": [
+      "인테리어소품샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "인테리어소품샵 정보를 검색에서 이해할 수 있도록",
+      "인테리어소품샵 홈페이지, 어떻게 문의로 이어지나",
+      "인테리어소품샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "인테리어소품샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kkochjib/",
+    "h1": "꽃집 홈페이지 제작",
+    "h2": [
+      "꽃집 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "꽃집 정보를 검색에서 이해할 수 있도록",
+      "꽃집 홈페이지, 어떻게 문의로 이어지나",
+      "꽃집 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "꽃집 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seojeom/",
+    "h1": "서점 홈페이지 제작",
+    "h2": [
+      "서점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "서점 정보를 검색에서 이해할 수 있도록",
+      "서점 홈페이지, 어떻게 문의로 이어지나",
+      "서점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "서점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wangujeom/",
+    "h1": "완구점 홈페이지 제작",
+    "h2": [
+      "완구점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "완구점 정보를 검색에서 이해할 수 있도록",
+      "완구점 홈페이지, 어떻게 문의로 이어지나",
+      "완구점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "완구점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/aggijeom/",
+    "h1": "악기점 홈페이지 제작",
+    "h2": [
+      "악기점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "악기점 정보를 검색에서 이해할 수 있도록",
+      "악기점 홈페이지, 어떻게 문의로 이어지나",
+      "악기점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "악기점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeonjajepummaejang/",
+    "h1": "전자제품매장 홈페이지 제작",
+    "h2": [
+      "전자제품매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전자제품매장 정보를 검색에서 이해할 수 있도록",
+      "전자제품매장 홈페이지, 어떻게 문의로 이어지나",
+      "전자제품매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전자제품매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hyudaeponmaejang/",
+    "h1": "휴대폰매장 홈페이지 제작",
+    "h2": [
+      "휴대폰매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "휴대폰매장 정보를 검색에서 이해할 수 있도록",
+      "휴대폰매장 홈페이지, 어떻게 문의로 이어지나",
+      "휴대폰매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "휴대폰매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/junggomaejang/",
+    "h1": "중고매장 홈페이지 제작",
+    "h2": [
+      "중고매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "중고매장 정보를 검색에서 이해할 수 있도록",
+      "중고매장 홈페이지, 어떻게 문의로 이어지나",
+      "중고매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "중고매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/suibpanmaeeob/",
+    "h1": "수입판매업 홈페이지 제작",
+    "h2": [
+      "수입판매업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "수입판매업 정보를 검색에서 이해할 수 있도록",
+      "수입판매업 홈페이지, 어떻게 문의로 이어지나",
+      "수입판매업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "수입판매업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/panchogmuleobche/",
+    "h1": "판촉물업체 홈페이지 제작",
+    "h2": [
+      "판촉물업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "판촉물업체 정보를 검색에서 이해할 수 있도록",
+      "판촉물업체 홈페이지, 어떻게 문의로 이어지나",
+      "판촉물업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "판촉물업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gieob/",
+    "h1": "기업 홈페이지 제작",
+    "h2": [
+      "기업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "기업 정보를 검색에서 이해할 수 있도록",
+      "기업 홈페이지, 어떻게 문의로 이어지나",
+      "기업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "기업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jejoeob/",
+    "h1": "제조업 홈페이지 제작",
+    "h2": [
+      "제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "제조·산업용 제품 고객이 비교하는 정보를 먼저 설계합니다",
+      "제조업 정보를 검색에서 이해할 수 있도록",
+      "제조업 홈페이지, 어떻게 문의로 이어지나",
+      "제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gongjang/",
+    "h1": "공장 홈페이지 제작",
+    "h2": [
+      "공장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "공장 정보를 검색에서 이해할 수 있도록",
+      "공장 홈페이지, 어떻게 문의로 이어지나",
+      "공장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "공장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gigyejejoeob/",
+    "h1": "기계제조업 홈페이지 제작",
+    "h2": [
+      "기계제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "기계제조업 정보를 검색에서 이해할 수 있도록",
+      "기계제조업 홈페이지, 어떻게 문의로 이어지나",
+      "기계제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "기계제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeonjabupumjejoeob/",
+    "h1": "전자부품제조업 홈페이지 제작",
+    "h2": [
+      "전자부품제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전자부품제조업 정보를 검색에서 이해할 수 있도록",
+      "전자부품제조업 홈페이지, 어떻게 문의로 이어지나",
+      "전자부품제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전자부품제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongchabupumjejoeob/",
+    "h1": "자동차부품제조업 홈페이지 제작",
+    "h2": [
+      "자동차부품제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차부품제조업 정보를 검색에서 이해할 수 있도록",
+      "자동차부품제조업 홈페이지, 어떻게 문의로 이어지나",
+      "자동차부품제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차부품제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geumsoggagongeob/",
+    "h1": "금속가공업 홈페이지 제작",
+    "h2": [
+      "금속가공업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "금속가공업 정보를 검색에서 이해할 수 있도록",
+      "금속가공업 홈페이지, 어떻게 문의로 이어지나",
+      "금속가공업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "금속가공업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/peulraseutigjejoeob/",
+    "h1": "플라스틱제조업 홈페이지 제작",
+    "h2": [
+      "플라스틱제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "플라스틱제조업 정보를 검색에서 이해할 수 있도록",
+      "플라스틱제조업 홈페이지, 어떻게 문의로 이어지나",
+      "플라스틱제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "플라스틱제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pojangjaejejoeob/",
+    "h1": "포장재제조업 홈페이지 제작",
+    "h2": [
+      "포장재제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "포장재제조업 정보를 검색에서 이해할 수 있도록",
+      "포장재제조업 홈페이지, 어떻게 문의로 이어지나",
+      "포장재제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "포장재제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hwajangpumjejoeob/",
+    "h1": "화장품제조업 홈페이지 제작",
+    "h2": [
+      "화장품제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "화장품제조업 정보를 검색에서 이해할 수 있도록",
+      "화장품제조업 홈페이지, 어떻게 문의로 이어지나",
+      "화장품제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "화장품제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sigpumgagongeob/",
+    "h1": "식품가공업 홈페이지 제작",
+    "h2": [
+      "식품가공업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "식품가공업 정보를 검색에서 이해할 수 있도록",
+      "식품가공업 홈페이지, 어떻게 문의로 이어지나",
+      "식품가공업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "식품가공업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/uiryogigijejoeob/",
+    "h1": "의료기기제조업 홈페이지 제작",
+    "h2": [
+      "의료기기제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "의료기기제조업 정보를 검색에서 이해할 수 있도록",
+      "의료기기제조업 홈페이지, 어떻게 문의로 이어지나",
+      "의료기기제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "의료기기제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/saneobjangbieobche/",
+    "h1": "산업장비업체 홈페이지 제작",
+    "h2": [
+      "산업장비업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "산업장비업체 정보를 검색에서 이해할 수 있도록",
+      "산업장비업체 홈페이지, 어떻게 문의로 이어지나",
+      "산업장비업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "산업장비업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geumhyeongeobche/",
+    "h1": "금형업체 홈페이지 제작",
+    "h2": [
+      "금형업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "금형업체 정보를 검색에서 이해할 수 있도록",
+      "금형업체 홈페이지, 어떻게 문의로 이어지나",
+      "금형업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "금형업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yongjeobeobche/",
+    "h1": "용접업체 홈페이지 제작",
+    "h2": [
+      "용접업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "용접업체 정보를 검색에서 이해할 수 있도록",
+      "용접업체 홈페이지, 어떻게 문의로 이어지나",
+      "용접업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "용접업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seomyujejoeob/",
+    "h1": "섬유제조업 홈페이지 제작",
+    "h2": [
+      "섬유제조업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "섬유제조업 정보를 검색에서 이해할 수 있도록",
+      "섬유제조업 홈페이지, 어떻게 문의로 이어지나",
+      "섬유제조업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "섬유제조업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/inswaeeobche/",
+    "h1": "인쇄업체 홈페이지 제작",
+    "h2": [
+      "인쇄업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "인쇄업체 정보를 검색에서 이해할 수 있도록",
+      "인쇄업체 홈페이지, 어떻게 문의로 이어지나",
+      "인쇄업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "인쇄업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/mulryuhoesa/",
+    "h1": "물류회사 홈페이지 제작",
+    "h2": [
+      "물류회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "물류회사 정보를 검색에서 이해할 수 있도록",
+      "물류회사 홈페이지, 어떻게 문의로 이어지나",
+      "물류회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "물류회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/muyeoghoesa/",
+    "h1": "무역회사 홈페이지 제작",
+    "h2": [
+      "무역회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "무역회사 정보를 검색에서 이해할 수 있도록",
+      "무역회사 홈페이지, 어떻게 문의로 이어지나",
+      "무역회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "무역회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seutateueob/",
+    "h1": "스타트업 홈페이지 제작",
+    "h2": [
+      "스타트업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "스타트업 정보를 검색에서 이해할 수 있도록",
+      "스타트업 홈페이지, 어떻게 문의로 이어지나",
+      "스타트업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "스타트업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geonseolhoesa/",
+    "h1": "건설회사 홈페이지 제작",
+    "h2": [
+      "건설회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "건설회사 정보를 검색에서 이해할 수 있도록",
+      "건설회사 홈페이지, 어떻게 문의로 이어지나",
+      "건설회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "건설회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jonghabgeonseoleob/",
+    "h1": "종합건설업 홈페이지 제작",
+    "h2": [
+      "종합건설업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "종합건설업 정보를 검색에서 이해할 수 있도록",
+      "종합건설업 홈페이지, 어떻게 문의로 이어지나",
+      "종합건설업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "종합건설업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeonmungeonseoleob/",
+    "h1": "전문건설업 홈페이지 제작",
+    "h2": [
+      "전문건설업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전문건설업 정보를 검색에서 이해할 수 있도록",
+      "전문건설업 홈페이지, 어떻게 문의로 이어지나",
+      "전문건설업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전문건설업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/interieoeobche/",
+    "h1": "인테리어업체 홈페이지 제작",
+    "h2": [
+      "인테리어업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "인테리어 고객이 비교하는 정보를 먼저 설계합니다",
+      "인테리어업체 정보를 검색에서 이해할 수 있도록",
+      "인테리어업체 홈페이지, 어떻게 문의로 이어지나",
+      "인테리어업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "인테리어업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/rimodelringeobche/",
+    "h1": "리모델링업체 홈페이지 제작",
+    "h2": [
+      "리모델링업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "리모델링업체 정보를 검색에서 이해할 수 있도록",
+      "리모델링업체 홈페이지, 어떻게 문의로 이어지나",
+      "리모델링업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "리모델링업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geonchugsasamuso/",
+    "h1": "건축사사무소 홈페이지 제작",
+    "h2": [
+      "건축사사무소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "건축사사무소 정보를 검색에서 이해할 수 있도록",
+      "건축사사무소 홈페이지, 어떻게 문의로 이어지나",
+      "건축사사무소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "건축사사무소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/tomoghoesa/",
+    "h1": "토목회사 홈페이지 제작",
+    "h2": [
+      "토목회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "토목회사 정보를 검색에서 이해할 수 있도록",
+      "토목회사 홈페이지, 어떻게 문의로 이어지나",
+      "토목회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "토목회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeongigongsaeobche/",
+    "h1": "전기공사업체 홈페이지 제작",
+    "h2": [
+      "전기공사업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전기공사업체 정보를 검색에서 이해할 수 있도록",
+      "전기공사업체 홈페이지, 어떻게 문의로 이어지나",
+      "전기공사업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전기공사업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seolbieobche/",
+    "h1": "설비업체 홈페이지 제작",
+    "h2": [
+      "설비업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "설비업체 정보를 검색에서 이해할 수 있도록",
+      "설비업체 홈페이지, 어떻게 문의로 이어지나",
+      "설비업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "설비업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bangsueobche/",
+    "h1": "방수업체 홈페이지 제작",
+    "h2": [
+      "방수업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "방수 고객이 비교하는 정보를 먼저 설계합니다",
+      "방수업체 정보를 검색에서 이해할 수 있도록",
+      "방수업체 홈페이지, 어떻게 문의로 이어지나",
+      "방수업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "방수업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dobaeeobche/",
+    "h1": "도배업체 홈페이지 제작",
+    "h2": [
+      "도배업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "도배업체 정보를 검색에서 이해할 수 있도록",
+      "도배업체 홈페이지, 어떻게 문의로 이어지나",
+      "도배업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "도배업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/taileobche/",
+    "h1": "타일업체 홈페이지 제작",
+    "h2": [
+      "타일업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "타일업체 정보를 검색에서 이해할 수 있도록",
+      "타일업체 홈페이지, 어떻게 문의로 이어지나",
+      "타일업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "타일업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/changhoeobche/",
+    "h1": "창호업체 홈페이지 제작",
+    "h2": [
+      "창호업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "창호업체 정보를 검색에서 이해할 수 있도록",
+      "창호업체 홈페이지, 어떻게 문의로 이어지나",
+      "창호업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "창호업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jogyeongeobche/",
+    "h1": "조경업체 홈페이지 제작",
+    "h2": [
+      "조경업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "조경업체 정보를 검색에서 이해할 수 있도록",
+      "조경업체 홈페이지, 어떻게 문의로 이어지나",
+      "조경업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "조경업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/cheolgeoeobche/",
+    "h1": "철거업체 홈페이지 제작",
+    "h2": [
+      "철거업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "철거 고객이 비교하는 정보를 먼저 설계합니다",
+      "철거업체 정보를 검색에서 이해할 수 있도록",
+      "철거업체 홈페이지, 어떻게 문의로 이어지나",
+      "철거업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "철거업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/budongsan/",
+    "h1": "부동산 홈페이지 제작",
+    "h2": [
+      "부동산 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "부동산 정보를 검색에서 이해할 수 있도록",
+      "부동산 홈페이지, 어떻게 문의로 이어지나",
+      "부동산 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "부동산 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gonginjunggaesa/",
+    "h1": "공인중개사 홈페이지 제작",
+    "h2": [
+      "공인중개사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "공인중개사 정보를 검색에서 이해할 수 있도록",
+      "공인중개사 홈페이지, 어떻게 문의로 이어지나",
+      "공인중개사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "공인중개사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bunyangdaehaengsa/",
+    "h1": "분양대행사 홈페이지 제작",
+    "h2": [
+      "분양대행사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "분양대행사 정보를 검색에서 이해할 수 있도록",
+      "분양대행사 홈페이지, 어떻게 문의로 이어지나",
+      "분양대행사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "분양대행사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/isaeobche/",
+    "h1": "이사업체 홈페이지 제작",
+    "h2": [
+      "이사업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "이사·이삿짐센터 고객이 비교하는 정보를 먼저 설계합니다",
+      "이사업체 정보를 검색에서 이해할 수 있도록",
+      "이사업체 홈페이지, 어떻게 문의로 이어지나",
+      "이사업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "이사업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ibjucheongsoeobche/",
+    "h1": "입주청소업체 홈페이지 제작",
+    "h2": [
+      "입주청소업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "입주청소업체 정보를 검색에서 이해할 수 있도록",
+      "입주청소업체 홈페이지, 어떻게 문의로 이어지나",
+      "입주청소업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "입주청소업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beobmubeobin/",
+    "h1": "법무법인 홈페이지 제작",
+    "h2": [
+      "법무법인 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "법무법인 정보를 검색에서 이해할 수 있도록",
+      "법무법인 홈페이지, 어떻게 문의로 이어지나",
+      "법무법인 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "법무법인 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/semusa/",
+    "h1": "세무사 홈페이지 제작",
+    "h2": [
+      "세무사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "세무사 정보를 검색에서 이해할 수 있도록",
+      "세무사 홈페이지, 어떻게 문의로 이어지나",
+      "세무사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "세무사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hoegyesa/",
+    "h1": "회계사 홈페이지 제작",
+    "h2": [
+      "회계사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "회계사 정보를 검색에서 이해할 수 있도록",
+      "회계사 홈페이지, 어떻게 문의로 이어지나",
+      "회계사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "회계사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beobryulsamuso/",
+    "h1": "법률사무소 홈페이지 제작",
+    "h2": [
+      "법률사무소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "법률사무소 정보를 검색에서 이해할 수 있도록",
+      "법률사무소 홈페이지, 어떻게 문의로 이어지나",
+      "법률사무소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "법률사무소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/byeonhosa/",
+    "h1": "변호사 홈페이지 제작",
+    "h2": [
+      "변호사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "변호사 정보를 검색에서 이해할 수 있도록",
+      "변호사 홈페이지, 어떻게 문의로 이어지나",
+      "변호사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "변호사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beobmusa/",
+    "h1": "법무사 홈페이지 제작",
+    "h2": [
+      "법무사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "법무사 정보를 검색에서 이해할 수 있도록",
+      "법무사 홈페이지, 어떻게 문의로 이어지나",
+      "법무사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "법무사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/nomusa/",
+    "h1": "노무사 홈페이지 제작",
+    "h2": [
+      "노무사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "노무사 정보를 검색에서 이해할 수 있도록",
+      "노무사 홈페이지, 어떻게 문의로 이어지나",
+      "노무사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "노무사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/byeonrisa/",
+    "h1": "변리사 홈페이지 제작",
+    "h2": [
+      "변리사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "변리사 정보를 검색에서 이해할 수 있도록",
+      "변리사 홈페이지, 어떻게 문의로 이어지나",
+      "변리사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "변리사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/haengjeongsa/",
+    "h1": "행정사 홈페이지 제작",
+    "h2": [
+      "행정사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "행정사 정보를 검색에서 이해할 수 있도록",
+      "행정사 홈페이지, 어떻게 문의로 이어지나",
+      "행정사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "행정사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gwansesa/",
+    "h1": "관세사 홈페이지 제작",
+    "h2": [
+      "관세사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "관세사 정보를 검색에서 이해할 수 있도록",
+      "관세사 홈페이지, 어떻게 문의로 이어지나",
+      "관세사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "관세사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gamjeongpyeonggasa/",
+    "h1": "감정평가사 홈페이지 제작",
+    "h2": [
+      "감정평가사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "감정평가사 정보를 검색에서 이해할 수 있도록",
+      "감정평가사 홈페이지, 어떻게 문의로 이어지나",
+      "감정평가사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "감정평가사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gyeongyeongkeonseolting/",
+    "h1": "경영컨설팅 홈페이지 제작",
+    "h2": [
+      "경영컨설팅 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "경영컨설팅 정보를 검색에서 이해할 수 있도록",
+      "경영컨설팅 홈페이지, 어떻게 문의로 이어지나",
+      "경영컨설팅 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "경영컨설팅 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/changeobkeonseolting/",
+    "h1": "창업컨설팅 홈페이지 제작",
+    "h2": [
+      "창업컨설팅 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "창업컨설팅 정보를 검색에서 이해할 수 있도록",
+      "창업컨설팅 홈페이지, 어떻게 문의로 이어지나",
+      "창업컨설팅 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "창업컨설팅 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/budongsankeonseolting/",
+    "h1": "부동산컨설팅 홈페이지 제작",
+    "h2": [
+      "부동산컨설팅 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "부동산컨설팅 정보를 검색에서 이해할 수 있도록",
+      "부동산컨설팅 홈페이지, 어떻게 문의로 이어지나",
+      "부동산컨설팅 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "부동산컨설팅 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yutongkeonseolting/",
+    "h1": "유통컨설팅 홈페이지 제작",
+    "h2": [
+      "유통컨설팅 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "유통컨설팅 정보를 검색에서 이해할 수 있도록",
+      "유통컨설팅 홈페이지, 어떻게 문의로 이어지나",
+      "유통컨설팅 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "유통컨설팅 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/boheomdaerijeom/",
+    "h1": "보험대리점 홈페이지 제작",
+    "h2": [
+      "보험대리점 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "보험대리점 정보를 검색에서 이해할 수 있도록",
+      "보험대리점 홈페이지, 어떻게 문의로 이어지나",
+      "보험대리점 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "보험대리점 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sonhaesajeongsa/",
+    "h1": "손해사정사 홈페이지 제작",
+    "h2": [
+      "손해사정사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "손해사정사 정보를 검색에서 이해할 수 있도록",
+      "손해사정사 홈페이지, 어떻게 문의로 이어지나",
+      "손해사정사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "손해사정사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sinyongjeongbohoesa/",
+    "h1": "신용정보회사 홈페이지 제작",
+    "h2": [
+      "신용정보회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "신용정보회사 정보를 검색에서 이해할 수 있도록",
+      "신용정보회사 홈페이지, 어떻게 문의로 이어지나",
+      "신용정보회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "신용정보회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/chaegwonchusimeobche/",
+    "h1": "채권추심업체 홈페이지 제작",
+    "h2": [
+      "채권추심업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "채권추심업체 정보를 검색에서 이해할 수 있도록",
+      "채권추심업체 홈페이지, 어떻게 문의로 이어지나",
+      "채권추심업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "채권추심업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beonyeogsamuso/",
+    "h1": "번역사무소 홈페이지 제작",
+    "h2": [
+      "번역사무소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "번역사무소 정보를 검색에서 이해할 수 있도록",
+      "번역사무소 홈페이지, 어떻게 문의로 이어지나",
+      "번역사무소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "번역사무소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongcha-jeongbiso/",
+    "h1": "자동차 정비소 홈페이지 제작",
+    "h2": [
+      "자동차 정비소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차 정비소 정보를 검색에서 이해할 수 있도록",
+      "자동차 정비소 홈페이지, 어떻게 문의로 이어지나",
+      "자동차 정비소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차 정비소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongchagongeobsa/",
+    "h1": "자동차공업사 홈페이지 제작",
+    "h2": [
+      "자동차공업사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차공업사 정보를 검색에서 이해할 수 있도록",
+      "자동차공업사 홈페이지, 어떻게 문의로 이어지나",
+      "자동차공업사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차공업사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kasenteo/",
+    "h1": "카센터 홈페이지 제작",
+    "h2": [
+      "카센터 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "카센터 정보를 검색에서 이해할 수 있도록",
+      "카센터 홈페이지, 어떻게 문의로 이어지나",
+      "카센터 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "카센터 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/taieomaejang/",
+    "h1": "타이어매장 홈페이지 제작",
+    "h2": [
+      "타이어매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "타이어매장 정보를 검색에서 이해할 수 있도록",
+      "타이어매장 홈페이지, 어떻게 문의로 이어지나",
+      "타이어매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "타이어매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sechajang/",
+    "h1": "세차장 홈페이지 제작",
+    "h2": [
+      "세차장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "세차장 정보를 검색에서 이해할 수 있도록",
+      "세차장 홈페이지, 어떻게 문의로 이어지나",
+      "세차장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "세차장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sonsechajang/",
+    "h1": "손세차장 홈페이지 제작",
+    "h2": [
+      "손세차장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "손세차장 정보를 검색에서 이해할 수 있도록",
+      "손세차장 홈페이지, 어떻게 문의로 이어지나",
+      "손세차장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "손세차장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongchagwangtaegeobche/",
+    "h1": "자동차광택업체 홈페이지 제작",
+    "h2": [
+      "자동차광택업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차광택업체 정보를 검색에서 이해할 수 있도록",
+      "자동차광택업체 홈페이지, 어떻게 문의로 이어지나",
+      "자동차광택업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차광택업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongchatyuningsyab/",
+    "h1": "자동차튜닝샵 홈페이지 제작",
+    "h2": [
+      "자동차튜닝샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차튜닝샵 정보를 검색에서 이해할 수 있도록",
+      "자동차튜닝샵 홈페이지, 어떻게 문의로 이어지나",
+      "자동차튜닝샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차튜닝샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beulraegbagseumaejang/",
+    "h1": "블랙박스매장 홈페이지 제작",
+    "h2": [
+      "블랙박스매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "블랙박스매장 정보를 검색에서 이해할 수 있도록",
+      "블랙박스매장 홈페이지, 어떻게 문의로 이어지나",
+      "블랙박스매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "블랙박스매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jadongchayurieobche/",
+    "h1": "자동차유리업체 홈페이지 제작",
+    "h2": [
+      "자동차유리업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자동차유리업체 정보를 검색에서 이해할 수 있도록",
+      "자동차유리업체 홈페이지, 어떻게 문의로 이어지나",
+      "자동차유리업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자동차유리업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/junggochamaemaeeobche/",
+    "h1": "중고차매매업체 홈페이지 제작",
+    "h2": [
+      "중고차매매업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "중고차매매업체 정보를 검색에서 이해할 수 있도록",
+      "중고차매매업체 홈페이지, 어떻게 문의로 이어지나",
+      "중고차매매업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "중고차매매업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sinchadilreo/",
+    "h1": "신차딜러 홈페이지 제작",
+    "h2": [
+      "신차딜러 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "신차딜러 정보를 검색에서 이해할 수 있도록",
+      "신차딜러 홈페이지, 어떻게 문의로 이어지나",
+      "신차딜러 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "신차딜러 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/otobaimaejang/",
+    "h1": "오토바이매장 홈페이지 제작",
+    "h2": [
+      "오토바이매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "오토바이매장 정보를 검색에서 이해할 수 있도록",
+      "오토바이매장 홈페이지, 어떻게 문의로 이어지나",
+      "오토바이매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "오토바이매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jajeongeomaejang/",
+    "h1": "자전거매장 홈페이지 제작",
+    "h2": [
+      "자전거매장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "자전거매장 정보를 검색에서 이해할 수 있도록",
+      "자전거매장 홈페이지, 어떻게 문의로 이어지나",
+      "자전거매장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "자전거매장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hwamulunsongeobche/",
+    "h1": "화물운송업체 홈페이지 제작",
+    "h2": [
+      "화물운송업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "화물운송업체 정보를 검색에서 이해할 수 있도록",
+      "화물운송업체 홈페이지, 어떻게 문의로 이어지나",
+      "화물운송업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "화물운송업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/taegbaeeobche/",
+    "h1": "택배업체 홈페이지 제작",
+    "h2": [
+      "택배업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "택배업체 정보를 검색에서 이해할 수 있도록",
+      "택배업체 홈페이지, 어떻게 문의로 이어지나",
+      "택배업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "택배업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/kwigseobiseu/",
+    "h1": "퀵서비스 홈페이지 제작",
+    "h2": [
+      "퀵서비스 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "퀵서비스 정보를 검색에서 이해할 수 있도록",
+      "퀵서비스 홈페이지, 어떻게 문의로 이어지나",
+      "퀵서비스 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "퀵서비스 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yongdaleobche/",
+    "h1": "용달업체 홈페이지 제작",
+    "h2": [
+      "용달업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "용달업체 정보를 검색에서 이해할 수 있도록",
+      "용달업체 홈페이지, 어떻게 문의로 이어지나",
+      "용달업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "용달업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beoseuhoesa/",
+    "h1": "버스회사 홈페이지 제작",
+    "h2": [
+      "버스회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "버스회사 정보를 검색에서 이해할 수 있도록",
+      "버스회사 홈페이지, 어떻게 문의로 이어지나",
+      "버스회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "버스회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/juchajang/",
+    "h1": "주차장 홈페이지 제작",
+    "h2": [
+      "주차장 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "주차장 정보를 검색에서 이해할 수 있도록",
+      "주차장 홈페이지, 어떻게 문의로 이어지나",
+      "주차장 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "주차장 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wedinghol/",
+    "h1": "웨딩홀 홈페이지 제작",
+    "h2": [
+      "웨딩홀 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "웨딩홀 정보를 검색에서 이해할 수 있도록",
+      "웨딩홀 홈페이지, 어떻게 문의로 이어지나",
+      "웨딩홀 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "웨딩홀 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wedingpeulraeneo/",
+    "h1": "웨딩플래너 홈페이지 제작",
+    "h2": [
+      "웨딩플래너 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "웨딩플래너 정보를 검색에서 이해할 수 있도록",
+      "웨딩플래너 홈페이지, 어떻게 문의로 이어지나",
+      "웨딩플래너 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "웨딩플래너 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/wedingseutyudio/",
+    "h1": "웨딩스튜디오 홈페이지 제작",
+    "h2": [
+      "웨딩스튜디오 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "웨딩스튜디오 정보를 검색에서 이해할 수 있도록",
+      "웨딩스튜디오 홈페이지, 어떻게 문의로 이어지나",
+      "웨딩스튜디오 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "웨딩스튜디오 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/seutyudio/",
+    "h1": "스튜디오 홈페이지 제작",
+    "h2": [
+      "스튜디오 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "스튜디오 정보를 검색에서 이해할 수 있도록",
+      "스튜디오 홈페이지, 어떻게 문의로 이어지나",
+      "스튜디오 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "스튜디오 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sajingwan/",
+    "h1": "사진관 홈페이지 제작",
+    "h2": [
+      "사진관 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "사진관 정보를 검색에서 이해할 수 있도록",
+      "사진관 홈페이지, 어떻게 문의로 이어지나",
+      "사진관 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "사진관 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/doljanchieobche/",
+    "h1": "돌잔치업체 홈페이지 제작",
+    "h2": [
+      "돌잔치업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "돌잔치업체 정보를 검색에서 이해할 수 있도록",
+      "돌잔치업체 홈페이지, 어떻게 문의로 이어지나",
+      "돌잔치업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "돌잔치업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/chuljangbwipe/",
+    "h1": "출장뷔페 홈페이지 제작",
+    "h2": [
+      "출장뷔페 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "출장뷔페 정보를 검색에서 이해할 수 있도록",
+      "출장뷔페 홈페이지, 어떻게 문의로 이어지나",
+      "출장뷔페 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "출장뷔페 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/patirum/",
+    "h1": "파티룸 홈페이지 제작",
+    "h2": [
+      "파티룸 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "파티룸 정보를 검색에서 이해할 수 있도록",
+      "파티룸 홈페이지, 어떻게 문의로 이어지나",
+      "파티룸 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "파티룸 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/ibenteueobche/",
+    "h1": "이벤트업체 홈페이지 제작",
+    "h2": [
+      "이벤트업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "이벤트업체 정보를 검색에서 이해할 수 있도록",
+      "이벤트업체 홈페이지, 어떻게 문의로 이어지나",
+      "이벤트업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "이벤트업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/haengsadaehaengsa/",
+    "h1": "행사대행사 홈페이지 제작",
+    "h2": [
+      "행사대행사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "행사대행사 정보를 검색에서 이해할 수 있도록",
+      "행사대행사 홈페이지, 어떻게 문의로 이어지나",
+      "행사대행사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "행사대행사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeonsigihoegsa/",
+    "h1": "전시기획사 홈페이지 제작",
+    "h2": [
+      "전시기획사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "전시기획사 정보를 검색에서 이해할 수 있도록",
+      "전시기획사 홈페이지, 어떻게 문의로 이어지나",
+      "전시기획사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "전시기획사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gongyeongihoegsa/",
+    "h1": "공연기획사 홈페이지 제작",
+    "h2": [
+      "공연기획사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "공연기획사 정보를 검색에서 이해할 수 있도록",
+      "공연기획사 홈페이지, 어떻게 문의로 이어지나",
+      "공연기획사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "공연기획사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eumhyangeobche/",
+    "h1": "음향업체 홈페이지 제작",
+    "h2": [
+      "음향업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "음향업체 정보를 검색에서 이해할 수 있도록",
+      "음향업체 홈페이지, 어떻게 문의로 이어지나",
+      "음향업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "음향업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jomyeongeobche/",
+    "h1": "조명업체 홈페이지 제작",
+    "h2": [
+      "조명업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "조명업체 정보를 검색에서 이해할 수 있도록",
+      "조명업체 홈페이지, 어떻게 문의로 이어지나",
+      "조명업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "조명업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yeongsangjejageobche/",
+    "h1": "영상제작업체 홈페이지 제작",
+    "h2": [
+      "영상제작업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "영상제작업체 정보를 검색에서 이해할 수 있도록",
+      "영상제작업체 홈페이지, 어떻게 문의로 이어지나",
+      "영상제작업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "영상제작업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/deuronchwalyeongeobche/",
+    "h1": "드론촬영업체 홈페이지 제작",
+    "h2": [
+      "드론촬영업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "드론촬영업체 정보를 검색에서 이해할 수 있도록",
+      "드론촬영업체 홈페이지, 어떻게 문의로 이어지나",
+      "드론촬영업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "드론촬영업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/potobuseueobche/",
+    "h1": "포토부스업체 홈페이지 제작",
+    "h2": [
+      "포토부스업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "포토부스업체 정보를 검색에서 이해할 수 있도록",
+      "포토부스업체 홈페이지, 어떻게 문의로 이어지나",
+      "포토부스업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "포토부스업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/peulrawosyab/",
+    "h1": "플라워샵 홈페이지 제작",
+    "h2": [
+      "플라워샵 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "플라워샵 정보를 검색에서 이해할 수 있도록",
+      "플라워샵 홈페이지, 어떻게 문의로 이어지나",
+      "플라워샵 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "플라워샵 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dabryepumeobche/",
+    "h1": "답례품업체 홈페이지 제작",
+    "h2": [
+      "답례품업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "답례품업체 정보를 검색에서 이해할 수 있도록",
+      "답례품업체 홈페이지, 어떻게 문의로 이어지나",
+      "답례품업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "답례품업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/cheongcheobjangeobche/",
+    "h1": "청첩장업체 홈페이지 제작",
+    "h2": [
+      "청첩장업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "청첩장업체 정보를 검색에서 이해할 수 있도록",
+      "청첩장업체 홈페이지, 어떻게 문의로 이어지나",
+      "청첩장업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "청첩장업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/cheongsoeobche/",
+    "h1": "청소업체 홈페이지 제작",
+    "h2": [
+      "청소업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "청소·입주청소 고객이 비교하는 정보를 먼저 설계합니다",
+      "청소업체 정보를 검색에서 이해할 수 있도록",
+      "청소업체 홈페이지, 어떻게 문의로 이어지나",
+      "청소업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "청소업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bangyeogeobche/",
+    "h1": "방역업체 홈페이지 제작",
+    "h2": [
+      "방역업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "방역업체 정보를 검색에서 이해할 수 있도록",
+      "방역업체 홈페이지, 어떻게 문의로 이어지나",
+      "방역업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "방역업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sodogeobche/",
+    "h1": "소독업체 홈페이지 제작",
+    "h2": [
+      "소독업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "소독업체 정보를 검색에서 이해할 수 있도록",
+      "소독업체 홈페이지, 어떻게 문의로 이어지나",
+      "소독업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "소독업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/setagso/",
+    "h1": "세탁소 홈페이지 제작",
+    "h2": [
+      "세탁소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "세탁소 정보를 검색에서 이해할 수 있도록",
+      "세탁소 홈페이지, 어떻게 문의로 이어지나",
+      "세탁소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "세탁소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/koinsetagso/",
+    "h1": "코인세탁소 홈페이지 제작",
+    "h2": [
+      "코인세탁소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "코인세탁소 정보를 검색에서 이해할 수 있도록",
+      "코인세탁소 홈페이지, 어떻게 문의로 이어지나",
+      "코인세탁소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "코인세탁소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yeolsoeeobche/",
+    "h1": "열쇠업체 홈페이지 제작",
+    "h2": [
+      "열쇠업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "열쇠업체 정보를 검색에서 이해할 수 있도록",
+      "열쇠업체 홈페이지, 어떻게 문의로 이어지나",
+      "열쇠업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "열쇠업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/doeorageobche/",
+    "h1": "도어락업체 홈페이지 제작",
+    "h2": [
+      "도어락업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "도어락업체 정보를 검색에서 이해할 수 있도록",
+      "도어락업체 홈페이지, 어떻게 문의로 이어지나",
+      "도어락업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "도어락업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/boilreoeobche/",
+    "h1": "보일러업체 홈페이지 제작",
+    "h2": [
+      "보일러업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "보일러업체 정보를 검색에서 이해할 수 있도록",
+      "보일러업체 홈페이지, 어떻게 문의로 이어지나",
+      "보일러업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "보일러업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eeokeoneobche/",
+    "h1": "에어컨업체 홈페이지 제작",
+    "h2": [
+      "에어컨업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "에어컨 청소·설치 고객이 비교하는 정보를 먼저 설계합니다",
+      "에어컨업체 정보를 검색에서 이해할 수 있도록",
+      "에어컨업체 홈페이지, 어떻게 문의로 이어지나",
+      "에어컨업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "에어컨업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/nusutamjieobche/",
+    "h1": "누수탐지업체 홈페이지 제작",
+    "h2": [
+      "누수탐지업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "누수탐지·설비 고객이 비교하는 정보를 먼저 설계합니다",
+      "누수탐지업체 정보를 검색에서 이해할 수 있도록",
+      "누수탐지업체 홈페이지, 어떻게 문의로 이어지나",
+      "누수탐지업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "누수탐지업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hasugueobche/",
+    "h1": "하수구업체 홈페이지 제작",
+    "h2": [
+      "하수구업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "하수구업체 정보를 검색에서 이해할 수 있도록",
+      "하수구업체 홈페이지, 어떻게 문의로 이어지나",
+      "하수구업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "하수구업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/jeongsugieobche/",
+    "h1": "정수기업체 홈페이지 제작",
+    "h2": [
+      "정수기업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "정수기업체 정보를 검색에서 이해할 수 있도록",
+      "정수기업체 홈페이지, 어떻게 문의로 이어지나",
+      "정수기업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "정수기업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/bideeobche/",
+    "h1": "비데업체 홈페이지 제작",
+    "h2": [
+      "비데업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "비데업체 정보를 검색에서 이해할 수 있도록",
+      "비데업체 홈페이지, 어떻게 문의로 이어지나",
+      "비데업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "비데업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/rentaleobche/",
+    "h1": "렌탈업체 홈페이지 제작",
+    "h2": [
+      "렌탈업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "렌탈업체 정보를 검색에서 이해할 수 있도록",
+      "렌탈업체 홈페이지, 어떻게 문의로 이어지나",
+      "렌탈업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "렌탈업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/pyegimulcheorieobche/",
+    "h1": "폐기물처리업체 홈페이지 제작",
+    "h2": [
+      "폐기물처리업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "폐기물 수거·처리 고객이 비교하는 정보를 먼저 설계합니다",
+      "폐기물처리업체 정보를 검색에서 이해할 수 있도록",
+      "폐기물처리업체 홈페이지, 어떻게 문의로 이어지나",
+      "폐기물처리업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "폐기물처리업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/boaneobche/",
+    "h1": "보안업체 홈페이지 제작",
+    "h2": [
+      "보안업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "보안업체 정보를 검색에서 이해할 수 있도록",
+      "보안업체 홈페이지, 어떻게 문의로 이어지나",
+      "보안업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "보안업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gyeongbieobche/",
+    "h1": "경비업체 홈페이지 제작",
+    "h2": [
+      "경비업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "경비업체 정보를 검색에서 이해할 수 있도록",
+      "경비업체 홈페이지, 어떻게 문의로 이어지나",
+      "경비업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "경비업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/it-company/",
+    "h1": "IT기업 홈페이지 제작",
+    "h2": [
+      "IT기업 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "IT기업 정보를 검색에서 이해할 수 있도록",
+      "IT기업 홈페이지, 어떻게 문의로 이어지나",
+      "IT기업 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "IT기업 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/sopeuteuweeogaebalsa/",
+    "h1": "소프트웨어개발사 홈페이지 제작",
+    "h2": [
+      "소프트웨어개발사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "소프트웨어개발사 정보를 검색에서 이해할 수 있도록",
+      "소프트웨어개발사 홈페이지, 어떻게 문의로 이어지나",
+      "소프트웨어개발사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "소프트웨어개발사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/aebgaebaleobche/",
+    "h1": "앱개발업체 홈페이지 제작",
+    "h2": [
+      "앱개발업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "앱개발업체 정보를 검색에서 이해할 수 있도록",
+      "앱개발업체 홈페이지, 어떻게 문의로 이어지나",
+      "앱개발업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "앱개발업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/webeijeonsi/",
+    "h1": "웹에이전시 홈페이지 제작",
+    "h2": [
+      "웹에이전시 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "웹에이전시 정보를 검색에서 이해할 수 있도록",
+      "웹에이전시 홈페이지, 어떻게 문의로 이어지나",
+      "웹에이전시 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "웹에이전시 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/gwanggodaehaengsa/",
+    "h1": "광고대행사 홈페이지 제작",
+    "h2": [
+      "광고대행사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "광고대행사 정보를 검색에서 이해할 수 있도록",
+      "광고대행사 홈페이지, 어떻게 문의로 이어지나",
+      "광고대행사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "광고대행사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/maketingdaehaengsa/",
+    "h1": "마케팅대행사 홈페이지 제작",
+    "h2": [
+      "마케팅대행사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "마케팅대행사 정보를 검색에서 이해할 수 있도록",
+      "마케팅대행사 홈페이지, 어떻게 문의로 이어지나",
+      "마케팅대행사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "마케팅대행사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/dijainhoesa/",
+    "h1": "디자인회사 홈페이지 제작",
+    "h2": [
+      "디자인회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "디자인회사 정보를 검색에서 이해할 수 있도록",
+      "디자인회사 홈페이지, 어떻게 문의로 이어지나",
+      "디자인회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "디자인회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/beuraendinghoesa/",
+    "h1": "브랜딩회사 홈페이지 제작",
+    "h2": [
+      "브랜딩회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "브랜딩회사 정보를 검색에서 이해할 수 있도록",
+      "브랜딩회사 홈페이지, 어떻게 문의로 이어지나",
+      "브랜딩회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "브랜딩회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/chulpansa/",
+    "h1": "출판사 홈페이지 제작",
+    "h2": [
+      "출판사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "출판사 정보를 검색에서 이해할 수 있도록",
+      "출판사 홈페이지, 어떻게 문의로 이어지나",
+      "출판사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "출판사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/inswaeso/",
+    "h1": "인쇄소 홈페이지 제작",
+    "h2": [
+      "인쇄소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "인쇄소 정보를 검색에서 이해할 수 있도록",
+      "인쇄소 홈페이지, 어떻게 문의로 이어지나",
+      "인쇄소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "인쇄소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/eonronsa/",
+    "h1": "언론사 홈페이지 제작",
+    "h2": [
+      "언론사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "언론사 정보를 검색에서 이해할 수 있도록",
+      "언론사 홈페이지, 어떻게 문의로 이어지나",
+      "언론사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "언론사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yutyubeujejagsa/",
+    "h1": "유튜브제작사 홈페이지 제작",
+    "h2": [
+      "유튜브제작사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "유튜브제작사 정보를 검색에서 이해할 수 있도록",
+      "유튜브제작사 홈페이지, 어떻게 문의로 이어지나",
+      "유튜브제작사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "유튜브제작사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/mcn-agency/",
+    "h1": "MCN회사 홈페이지 제작",
+    "h2": [
+      "MCN회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "MCN회사 정보를 검색에서 이해할 수 있도록",
+      "MCN회사 홈페이지, 어떻게 문의로 이어지나",
+      "MCN회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "MCN회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/geimhoesa/",
+    "h1": "게임회사 홈페이지 제작",
+    "h2": [
+      "게임회사 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "게임회사 정보를 검색에서 이해할 수 있도록",
+      "게임회사 홈페이지, 어떻게 문의로 이어지나",
+      "게임회사 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "게임회사 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/solrusyeoneobche/",
+    "h1": "솔루션업체 홈페이지 제작",
+    "h2": [
+      "솔루션업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "솔루션업체 정보를 검색에서 이해할 수 있도록",
+      "솔루션업체 홈페이지, 어떻게 문의로 이어지나",
+      "솔루션업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "솔루션업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/hoseutingeobche/",
+    "h1": "호스팅업체 홈페이지 제작",
+    "h2": [
+      "호스팅업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "호스팅업체 정보를 검색에서 이해할 수 있도록",
+      "호스팅업체 홈페이지, 어떻게 문의로 이어지나",
+      "호스팅업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "호스팅업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/deiteoboggueobche/",
+    "h1": "데이터복구업체 홈페이지 제작",
+    "h2": [
+      "데이터복구업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "데이터복구업체 정보를 검색에서 이해할 수 있도록",
+      "데이터복구업체 홈페이지, 어떻게 문의로 이어지나",
+      "데이터복구업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "데이터복구업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/keompyuteosurieobche/",
+    "h1": "컴퓨터수리업체 홈페이지 제작",
+    "h2": [
+      "컴퓨터수리업체 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "컴퓨터수리업체 정보를 검색에서 이해할 수 있도록",
+      "컴퓨터수리업체 홈페이지, 어떻게 문의로 이어지나",
+      "컴퓨터수리업체 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "컴퓨터수리업체 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/teugheosamuso/",
+    "h1": "특허사무소 홈페이지 제작",
+    "h2": [
+      "특허사무소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "특허사무소 정보를 검색에서 이해할 수 있도록",
+      "특허사무소 홈페이지, 어떻게 문의로 이어지나",
+      "특허사무소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "특허사무소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  },
+  {
+    "url": "https://reumlab.com/website/yeonguso/",
+    "h1": "연구소 홈페이지 제작",
+    "h2": [
+      "연구소 홈페이지 페이지 구성",
+      "제작 전에 준비할 사진·자료",
+      "운영자가 갱신할 정보",
+      "소개 홈페이지와 업무 시스템의 범위",
+      "연구소 정보를 검색에서 이해할 수 있도록",
+      "연구소 홈페이지, 어떻게 문의로 이어지나",
+      "연구소 홈페이지 제작 자주 묻는 질문",
+      "함께 보면 좋은 서비스",
+      "다른 업종 홈페이지 제작",
+      "연구소 홈페이지, 꼭 필요한 페이지부터 시작하세요"
+    ],
+    "allEditorialSectionsPresent": true,
+    "jsonLdParsed": 1,
+    "validation": "React source server render; not deployed HTTP or visual verification"
+  }
+]

@@ -86,11 +86,16 @@ export default function SystemHubPage() {
               기능 이름으로 찾는 개발
             </h1>
             <p className="hub-intro">
-              상담은 대체로 업종이 아니라 기능 이름으로 시작합니다 — &ldquo;QR로 주문받게 해 주세요&rdquo;,
+              필요한 기능을 기준으로 찾아보세요 — &ldquo;QR로 주문받기&rdquo;,
               &ldquo;대기 손님을 앉히지 않고 부르고 싶어요&rdquo;, &ldquo;세탁물 정기배송을 자동으로 돌리고 싶어요&rdquo;.
               업종 페이지는 &ldquo;우리 업종에 무엇이 필요한가&rdquo;를, 이 페이지들은 &ldquo;그 기능을 어떻게 만드나&rdquo;를 다룹니다.
               각 페이지에 필요한 기능, 사용자별 화면, 관리자 범위, 기술 구조, 비용이 올라가는 조건, MVP 범위를 정리했습니다.
             </p>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>필요한 시스템을 고르는 기준</h2>
+            <p className="hub-intro">매장 주문 전달은 QR 주문, 순번 호출은 웨이팅, 시간 단위 공간 재고는 공간대여, 반복 회차 생성은 정기배송을 확인하세요. 현장 기록·집계는 업무관리, 서류·진행 상태의 거래처 공유는 무역 업무, 색상·부위 선택 후 견적은 차량 시뮬레이션으로 구분했습니다. 장비나 외부 시스템을 쓰고 있다면 제품명·연동 권한·자료 내보내기 가능 여부를 함께 알려 주세요.</p>
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
@@ -125,7 +130,7 @@ export default function SystemHubPage() {
           <div className="cta" style={{ marginTop: 24 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>찾는 기능이 목록에 없다면</h2>
             <p className="hub-intro">
-              여기 없는 기능도 대부분 만들 수 있습니다. 지금 어떤 방식으로 처리하고 계신지와 가장 불편한 지점을 알려 주시면
+              목록에 없는 기능은 현재 처리 방식과 제약부터 확인합니다. 지금 어떤 방식으로 처리하고 계신지와 가장 불편한 지점을 알려 주시면
               만들 수 있는지, 지금 만드는 게 맞는지부터 말씀드립니다.
             </p>
             <div className="cta-buttons">

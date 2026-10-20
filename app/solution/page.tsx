@@ -12,9 +12,9 @@ const LIST = INDUSTRIES.filter((i) => hasSolution(i.slug));
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: { absolute: '업종별 솔루션·시스템 구축 100개 업종 | 모듈·연동 — 름랩' },
+  title: { absolute: '업종별 솔루션·시스템 구축 | 모듈·연동 — 름랩' },
   description:
-    '병원·학원·헬스장·커머스부터 제조·전문서비스까지 100개 업종별 솔루션 구축 가이드. 업종마다 어떤 기능 모듈로, 어떤 기술 스택과 연동으로, 어떤 단계로 시스템을 구축하는지 정리했습니다. 소스코드 전체 이관·직접 운영.',
+    '병원·학원·헬스장·커머스부터 제조·전문서비스까지 업종별 솔루션 구축 가이드. 업종마다 어떤 기능 모듈로, 어떤 기술 스택과 연동으로, 어떤 단계로 시스템을 구축하는지 정리했습니다. 소스코드 전체 이관·직접 운영.',
   keywords: ['업종별 솔루션', '업종 시스템 구축', '업종별 관리 시스템', '디지털 전환', '업무 시스템 개발', '맞춤 솔루션 개발'],
   alternates: { canonical: CANONICAL },
   openGraph: {
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: CANONICAL,
     siteName: SITE.name,
-    title: '업종별 솔루션·시스템 구축 100개 업종 | 름랩',
+    title: '업종별 솔루션·시스템 구축 | 름랩',
     description: '업종마다 기능 모듈·기술 스택·연동·도입 단계를 정리한 업종별 솔루션 구축 인덱스.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 솔루션 구축 — 름랩' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '업종별 솔루션·시스템 구축 100개 업종 | 름랩',
+    title: '업종별 솔루션·시스템 구축 | 름랩',
     description: '업종마다 모듈·기술 스택·연동·도입 단계를 정리한 업종별 솔루션 구축 인덱스.',
     images: [SITE.defaultOgImage],
   },
@@ -78,7 +78,7 @@ export default function SolutionHubPage() {
           <div className="section-inner">
             <p className="section-tag">업종 솔루션 인덱스</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>
-              업종별 솔루션·시스템 구축 — 100개 업종 모듈·연동
+              업종별 솔루션·시스템 구축 — 업종 모듈·연동
             </h1>
             <p className="hub-intro" style={{ marginTop: 12 }}>
               &lsquo;무엇을 만드나&rsquo;(기능)나 &lsquo;얼마가 드나&rsquo;(비용)와 달리, 여기서는 업종마다 <strong>어떻게 구축하는지</strong>를 정리했습니다.
@@ -93,6 +93,11 @@ export default function SolutionHubPage() {
                 ✉️ 이메일 문의
               </a>
             </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>도입 검토에 필요한 자료</h2>
+            <p className="hub-intro">현재 업무 양식의 익명 샘플, 사용자별 열람·승인 범위, 기존 자료의 원본과 기준일, 연동할 시스템의 이름·이용권한을 준비하세요. 각 업종 페이지에서 데이터 흐름과 예외, 샘플 이관, 시험 운영·검수·인수인계 기준을 확인할 수 있습니다. API 공개 여부와 해당 고객의 이용권한을 확인한 뒤 연동 범위를 확정합니다.</p>
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>

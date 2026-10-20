@@ -181,15 +181,30 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
       </section>
 
       <p className="pfd-notice">
-        고객사 요청에 따라 실제 프로젝트명·고객사·서비스 URL은 비공개 처리했습니다. 위 내용은 름랩이
-        직접 설계하고 구현한 범위입니다.
+        프로젝트명·고객사·서비스 URL을 공개하지 않는 익명 범위 설명입니다.
+        홈 카드와 상세 모달의 화면은 예시 데이터로 만든 목업이며 실제 고객 화면이나 성과 자료가 아닙니다.
       </p>
+
+      {p.detail.designConsiderations && (
+        <section className="pfd-sec">
+          <h2>비슷한 서비스를 검토할 때</h2>
+          <p>{p.detail.designConsiderations}</p>
+          <p>위 내용은 유사 개발을 비교할 때의 판단 기준이며, 이 사례에서 실제 채택한 선택이나 측정 결과를 추가로 주장하는 내용은 아닙니다.</p>
+        </section>
+      )}
+      {p.detail.handoverChecks && (
+        <section className="pfd-sec">
+          <h2>운영·인수인계에서 확인할 항목</h2>
+          <p>{p.detail.handoverChecks}</p>
+        </section>
+      )}
 
       <section className="pfd-sec pfd-proof">
         <h2>검증 범위와 공개 한계</h2>
         <p>
-          이 페이지는 름랩의 단일 사례 데이터에서 문제, 서비스 구조, 기능, 기술, 납품 산출물을 불러와
-          표시합니다. 원본에 없는 고객명·서비스 URL·수행 날짜·성과 수치는 추정해 추가하지 않았습니다.
+          공개 범위는 문제, 서비스 구조, 기능, 기술과 납품 산출물의 설명입니다.
+          수행 날짜·고객별 사용량·매출·시간 절감 수치는 공개하지 않으므로, 기능 목록만으로 같은 성과를 기대하거나 비교하지 마세요.
+          실제 계약에서는 담당 범위와 인수인계 항목, 확인할 수 있는 자료를 별도로 정합니다.
         </p>
         {hasAdminArtifact ? (
           <p>

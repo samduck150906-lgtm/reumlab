@@ -5,6 +5,7 @@ import { SITE } from '@/lib/seo';
 import { getIndustry } from '@/lib/industries';
 import { COSTS, getCost, costCanonical, costDecision, costTitleName, costTitle, costDescription } from '@/lib/cost';
 import { hasSolution } from '@/lib/solution';
+import IndustryOperationalContent from '@/components/IndustryOperationalContent';
 import { systemsForIndustry } from '@/lib/systems';
 import { robotsFor } from '@/lib/index-quality';
 import { IndustryServiceJsonLd } from '@/components/JsonLd';
@@ -136,6 +137,8 @@ export default function CostPage({ params }: Props) {
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>완성 후 유지·운영비</h2>
             <p className="hub-intro">{c.running}</p>
           </div>
+
+          <IndustryOperationalContent slug={c.slug} kind="cost" firstPhase={c.tiers[0]?.scope} laterPhases={c.tiers.slice(1).map((tier) => tier.scope)} />
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>비용을 낮추는 방법</h2>

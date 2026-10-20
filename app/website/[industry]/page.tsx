@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
 import {
   WEBSITE_INDUSTRIES,
-  WEBSITE_ARCHETYPES,
   getWebsiteIndustry,
   websiteCanonical,
   websiteTitle,
@@ -19,6 +18,10 @@ import { ctaPrimary, operatorNote } from '@/lib/voice';
 import { pickSiblings } from '@/lib/sibling-picker';
 import { getSeoWebsiteIndustryByExistingSlug } from '@/lib/seo-website';
 import SeoWebsiteIndustryEnhancement from '@/components/SeoWebsiteIndustryEnhancement';
+import { WEBSITE_SERVICE_FAMILY } from '@/lib/website-editorial';
+import { getIndustry } from '@/lib/industries';
+import { hasCost } from '@/lib/cost';
+import { hasSolution } from '@/lib/solution';
 
 type Props = { params: { industry: string } };
 
@@ -70,7 +73,6 @@ export default function WebsiteIndustryPage({ params }: Props) {
   const d = getWebsiteIndustry(params.industry);
   if (!d) notFound();
 
-  const a = WEBSITE_ARCHETYPES[d.category];
   const c = buildWebsiteContent(d);
   const canonical = websiteCanonical(d.slug);
   const crumbs = [
@@ -80,6 +82,8 @@ export default function WebsiteIndustryPage({ params }: Props) {
   ];
   const others = pickSiblings(WEBSITE_INDUSTRIES, d.slug, 8);
   const seoWebsiteProfile = getSeoWebsiteIndustryByExistingSlug(d.slug);
+  const serviceSlug = WEBSITE_SERVICE_FAMILY[d.slug];
+  const relatedService = serviceSlug ? getIndustry(serviceSlug) : undefined;
 
   return (
     <>
@@ -102,7 +106,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
           </nav>
 
           <div className="section-inner">
-            <p className="section-tag">업종 × 홈페이지 제작 · {a.label}</p>
+            <p className="section-tag">업종별 홈페이지 제작 · 안내·문의 설계</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>
               {d.ko} 홈페이지 제작
             </h1>
@@ -131,10 +135,27 @@ export default function WebsiteIndustryPage({ params }: Props) {
             <p className="hub-intro" style={{ marginTop: 16 }}><strong>제작 비용·기간</strong> — {c.priceLine}</p>
           </div>
 
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>제작 전에 준비할 사진·자료</h2>
+            <p className="hub-intro">{c.editorial.materials} 자료를 준비합니다. 사진에는 대상과 제공 범위를 설명하고, 실제 사업자의 자료와 공개 권한이 확인된 이미지를 사용합니다. 공개할 수 없는 사례는 넣지 않고, 부족한 사진은 촬영할 대상부터 정합니다.</p>
+            <p className="hub-intro" style={{ marginTop: 12 }}>자료의 예시와 실제 판매·제공 조건이 다르면 차이를 설명합니다. 첨부 문서에만 중요한 내용을 넣지 않고 비교 기준과 이용 조건을 본문에도 제공합니다.</p>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>운영자가 갱신할 정보</h2>
+            <p className="hub-intro">수정 대상은 {c.editorial.maintain}입니다. 항목별 담당자와 갱신 시점을 정하고, 변경된 조건이 소개·문의 안내에도 함께 반영되도록 구성합니다. 직접 수정할 화면과 수정 시 필요한 검수 절차는 제작 범위를 정할 때 확인합니다.</p>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>소개 홈페이지와 업무 시스템의 범위</h2>
+            <p className="hub-intro">비교 정보와 문의 접수가 중심이면 소개 홈페이지의 범위를 먼저 정합니다. {c.editorial.system} 기능은 사용자 권한·데이터·업무 규칙이 필요한 별도 구축 범위입니다. 필요한 외부 서비스의 API와 이용 권한을 확인한 뒤 포함 기능과 비용을 협의합니다.</p>
+            <p className="hub-intro" style={{ marginTop: 12 }}>위 기능이 홈페이지 기본 패키지에 모두 포함되는 것은 아닙니다. 기존 서비스로 연결할지, 별도 화면과 데이터를 만들지 결정한 뒤 제작비·운영 실비·추가 개발을 구분합니다.</p>
+          </div>
+
           {seoWebsiteProfile ? <SeoWebsiteIndustryEnhancement profile={seoWebsiteProfile} /> : null}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
-            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{d.ko}, 검색에 잡히게 만들기</h2>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{d.ko} 정보를 검색에서 이해할 수 있도록</h2>
             <p className="hub-intro">{c.searchLine}</p>
           </div>
 
@@ -162,6 +183,13 @@ export default function WebsiteIndustryPage({ params }: Props) {
               <Link href="/website-agency/">홈페이지 제작 업체 — 선택 기준·비용</Link>
               <Link href="/seo-website/">검색 잘되는 홈페이지 제작 — 검색·문의 구조</Link>
               <Link href="/app-development/">앱개발 — 앱까지 필요할 때</Link>
+              {relatedService && (
+                <>
+                  <Link href={`/app/${relatedService.slug}/`}>{relatedService.ko} 앱 — 사용자·운영자 기능</Link>
+                  {hasCost(relatedService.slug) && <Link href={`/cost/${relatedService.slug}/`}>{relatedService.ko} 앱·시스템 비용 — 범위별 견적</Link>}
+                  {hasSolution(relatedService.slug) && <Link href={`/solution/${relatedService.slug}/`}>{relatedService.ko} 솔루션 — 운영 데이터·도입</Link>}
+                </>
+              )}
               {/* 검색 의도가 맞닿은 전용 서비스로 컨텍스트 내부링크 */}
               {d.category === 'education' && (
                 <Link href="/academy-shopping-mall/">학원 쇼핑몰 제작 — 수강신청·결제 구축</Link>

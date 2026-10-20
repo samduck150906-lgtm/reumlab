@@ -11,13 +11,15 @@
  *
  * 해결
  *  빌드 시 script.js 의 PROJECTS(단일 출처)를 읽어, renderPortfolio()가 만드는 것과
- *  같은 카드 마크업을 HTML에 미리 넣는다. 런타임 동작은 건드리지 않는다 —
- *  script.js 는 평소대로 같은 내용을 다시 렌더하므로 화면·필터·모달은 그대로다.
+ *  같은 카드 마크업과 목업을 HTML에 미리 넣는다. 런타임은 카드를 재생성하지
+ *  않고 필터·모달 이벤트만 연결해 불필요한 DOM 교체를 피한다.
  *  (크롤러가 보는 내용 = 사용자가 보는 내용 → 클로킹 아님)
  *
  * 데이터를 이 파일에 복제하지 않는다. script.js 가 바뀌면 여기 결과도 자동으로 따라간다.
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const SCRIPT = 'script.js';
 const TARGET = 'out/index.html';
@@ -51,14 +53,22 @@ function extractProjects(src) {
   return new Function(`return ${literal};`)();
 }
 
-function cardHtml(p) {
+function extractShotRenderer(src) {
+  const start = src.indexOf('  function shotHTML(type) {');
+  const end = src.indexOf('  /* ---------- 카드 렌더 ---------- */', start);
+  if (start === -1 || end === -1) throw new Error('script.js 에서 shotHTML 원본을 찾지 못했습니다.');
+  // PROJECTS와 마찬가지로 저장소가 소유한 함수만 읽는다. 외부 입력을 평가하지 않는다.
+  return new Function(`return (${src.slice(start, end).trim()});`)();
+}
+
+function cardHtml(p, shotHTML) {
   const feats = p.features
     .slice(0, 3)
     .map((f) => `<li>${esc(f)}</li>`)
     .join('');
   return (
     `<article class="pf-card2" data-cat="${esc(p.cat)}" data-id="${esc(p.id)}">` +
-    `<div class="pf-card2__shot shot shot--${esc(p.shot)}" aria-hidden="true"></div>` +
+    `<div class="pf-card2__shot shot shot--${esc(p.shot)}" aria-hidden="true">${shotHTML(p.shot)}</div>` +
     `<div class="pf-card2__body">` +
     `<span class="pf-chip">${esc(p.chip)}</span>` +
     `<h3 class="pf-card2__title">${esc(p.title)}</h3>` +
@@ -70,12 +80,19 @@ function cardHtml(p) {
   );
 }
 
+export function buildStaticPortfolio(src) {
+  const projects = extractProjects(src);
+  const shotHTML = extractShotRenderer(src);
+  return { count: projects.length, cards: projects.map((p) => cardHtml(p, shotHTML)).join('') };
+}
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
 if (!existsSync(TARGET)) {
   console.error(`✗ ${TARGET} 이 없습니다. next build → copy:home 이후에 실행하세요.`);
   process.exit(1);
 }
 
-const projects = extractProjects(readFileSync(SCRIPT, 'utf8'));
+const { count, cards } = buildStaticPortfolio(readFileSync(SCRIPT, 'utf8'));
 const html = readFileSync(TARGET, 'utf8');
 
 if (!html.includes(MARKER)) {
@@ -83,11 +100,11 @@ if (!html.includes(MARKER)) {
   process.exit(1);
 }
 
-const cards = projects.map(cardHtml).join('');
 const injected = html.replace(
   MARKER,
-  `${MARKER}\n<!-- 아래 카드는 scripts/inject-portfolio-static.mjs 가 script.js 의 PROJECTS 로부터 빌드 시 주입합니다. 직접 편집하지 마세요. -->\n${cards}`,
+  `${MARKER.replace('>', ' data-portfolio-rendered="true">')}\n<!-- 아래 카드는 scripts/inject-portfolio-static.mjs 가 script.js 의 PROJECTS와 shotHTML로부터 빌드 시 주입합니다. 직접 편집하지 마세요. -->\n${cards}`,
 );
 
 writeFileSync(TARGET, injected);
-console.log(`✓ 포트폴리오 정적 주입: ${projects.length}건 → ${TARGET}`);
+console.log(`✓ 포트폴리오 정적 주입: ${count}건 → ${TARGET}`);
+}

@@ -8,10 +8,10 @@
  * 전략(§4-2): 색인 대상 URL은 이미 `out/sitemap.xml`에 lastmod와 함께 들어 있다.
  *   sitemap.xml의 <loc>+<lastmod>를 읽어 커밋된 매니페스트(scripts/.indexnow-manifest.json)와
  *   비교해 **새 URL·lastmod가 바뀐 URL만** 제출한다.
- *   lastmod는 git 커밋 기준으로 안정화(lib/lastmod.ts)돼 있으므로, 같은 커밋을
- *   재배포하면 변경분이 0이라 호스트에 아무것도 보내지 않는다(스팸 신호 방지).
+ *   최종 lastmod는 content-manifest.mjs가 본문·메타·링크·구조화 데이터의
+ *   의미 있는 변경으로 결정한다. 검증된 매니페스트는 릴리스 때 보존한다.
  *
- * 폴백: out/sitemap.xml 이 없으면(빌드 전) 과거처럼 핵심 URL을 제출한다.
+ * out/sitemap.xml 이 없으면 실제 제출을 중단한다.
  * 플래그: --all = 전량 제출(매니페스트 무시), --dry-run = 제출 없이 변경분만 출력.
  *
  * 매니페스트는 커밋해 두면 배포 간 상태가 유지된다. CI에서 커밋하지 않으면
@@ -33,6 +33,7 @@ const ROOT = path.join(__dirname, '..');
 const SITE = 'https://reumlab.com';
 // IndexNow 규격(8~128자 16진수)에 맞춘 공개 소유권 키.
 const KEY = '67cc4ff3436125d6a5eb18de9bb63dd0';
+const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 const SITEMAP_PATH = path.join(ROOT, 'out', 'sitemap.xml');
 const MANIFEST_PATH = path.join(__dirname, '.indexnow-manifest.json');
 
@@ -111,10 +112,8 @@ function fallbackCoreUrls() {
 }
 
 async function submitToHost(host, urlList) {
-  // 키가 호스트 루트의 /{key}.txt에 있으므로 option 1을 사용한다.
-  // 루트 키에 keyLocation을 함께 보내면 Bing이 별도 경로(option 2) 검증으로 처리해
-  // SiteVerificationNotCompleted를 반환할 수 있다.
-  const body = JSON.stringify({ host: 'reumlab.com', key: KEY, urlList });
+  // 공개 키 파일의 정확한 위치를 명시하고, 실제 제출 전 응답을 검증한다.
+  const body = JSON.stringify({ host: 'reumlab.com', key: KEY, keyLocation: KEY_LOCATION, urlList });
   // 경로는 반드시 소문자 /indexnow — 네이버는 대소문자를 구분하며
   // /IndexNow(대문자)는 웹앱으로 라우팅돼 "invalid csrf token" 403을 반환한다.
   const url = `https://${host}/indexnow`;
@@ -123,13 +122,21 @@ async function submitToHost(host, urlList) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=utf-8' },
       body,
+      signal: AbortSignal.timeout(60000),
     });
+    const responseBody = await res.text();
+    const logDir = path.join(ROOT, 'docs', 'execution-20261020', 'submissions');
+    fs.mkdirSync(logDir, { recursive: true });
+    fs.appendFileSync(path.join(logDir, 'indexnow.jsonl'), JSON.stringify({
+      submittedAt: new Date().toISOString(), endpoint: url, host: 'reumlab.com',
+      keyLocation: KEY_LOCATION, urlList, status: res.status, responseBody,
+      state: res.status === 200 ? 'accepted; indexing not confirmed' : res.status === 202 ? 'accepted; key validation pending' : 'failed',
+    }) + '\n');
     console.log(`[IndexNow] ${host} → HTTP ${res.status} (${urlList.length} URLs)`);
     if (res.status >= 400) {
-      const text = await res.text().catch(() => '');
-      if (text) console.log(`[IndexNow] ${host} 응답: ${text.slice(0, 300)}`);
+      if (responseBody) console.log(`[IndexNow] ${host} 응답: ${responseBody.slice(0, 300)}`);
     }
-    return res.status < 400;
+    return res.status === 200 || res.status === 202;
   } catch (e) {
     console.warn(`[IndexNow] ${host} 실패:`, e.message);
     return false;
@@ -142,8 +149,8 @@ let urlList;
 let nextManifest = null;
 
 if (!sitemap) {
-  console.warn('[IndexNow] out/sitemap.xml 없음 → 핵심 URL 폴백 제출');
-  urlList = fallbackCoreUrls();
+  console.error('[IndexNow] out/sitemap.xml 없음 — 검증된 운영 대상 목록 없이 제출하지 않습니다.');
+  process.exit(1);
 } else {
   const manifest = SUBMIT_ALL ? {} : loadManifest();
   nextManifest = Object.fromEntries(sitemap.map((e) => [e.url, e.lastmod]));
@@ -173,6 +180,13 @@ urlList.forEach((u) => console.log(' ', u));
 if (DRY_RUN) {
   console.log('[IndexNow] --dry-run: 실제 제출은 하지 않음.');
   process.exit(0);
+}
+
+// The key is public verification material. Check the real canonical host before
+// notifying an engine; a local key file alone does not prove it is published.
+const keyResponse = await fetch(KEY_LOCATION, { signal: AbortSignal.timeout(30000) });
+if (keyResponse.status !== 200 || (await keyResponse.text()).trim() !== KEY) {
+  throw new Error('IndexNow public key validation failed; no URLs submitted');
 }
 
 // IndexNow는 요청당 최대 10,000 URL — 넉넉히 배치 처리

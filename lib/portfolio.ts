@@ -28,6 +28,10 @@ export interface ProjectDetail {
   tech: string[];
   /** 납품 산출물 */
   deliverables: string[];
+  /** 유사 서비스를 검토할 때의 조건부 판단 기준. 해당 사례의 수행 사실이 아니다. */
+  designConsiderations?: string;
+  /** 유사 계약에서 확인할 운영 인수인계 항목. 해당 프로젝트의 완료 증거가 아니다. */
+  handoverChecks?: string;
 }
 
 export interface Project {

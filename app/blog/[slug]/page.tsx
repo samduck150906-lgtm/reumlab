@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
       images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
@@ -91,7 +92,7 @@ export default function BlogPostPage({ params }: Props) {
         ]}
       />
       <main>
-        <article className="dynamic-page">
+        <article className="dynamic-page blog-article">
           <nav className="breadcrumb" aria-label="breadcrumb">
             <Link href="/">홈</Link>
             {' / '}
@@ -107,6 +108,7 @@ export default function BlogPostPage({ params }: Props) {
             </h1>
             <p className="hub-intro">
               <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+              {post.updatedAt && <> · <time dateTime={post.updatedAt}>{post.updatedAt} 수정</time></>}
               {' · '}
               읽는 시간 약 {post.readingMinutes}분
             </p>

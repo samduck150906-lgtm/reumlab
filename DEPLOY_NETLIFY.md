@@ -18,7 +18,7 @@
 
 3. **빌드 설정 확인** (저장소에 `netlify.toml` 있으면 자동 적용)
    - Build command: `npm run build`
-   - Publish directory: `public`
+   - Publish directory: `out`
 
 4. **배포 실행**
    - **Deploys** 탭으로 이동
@@ -42,7 +42,7 @@ npx netlify-cli link --name reumlab
 
 # 3) 빌드 후 배포
 npm run build
-npx netlify-cli deploy --prod --dir=public
+npx netlify-cli deploy --prod --dir=out
 ```
 
 `link` 할 때 목록에서 **reumlab** 사이트를 선택하면 됩니다.

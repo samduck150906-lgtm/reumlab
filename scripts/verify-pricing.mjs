@@ -62,6 +62,18 @@ const urlOf = (f) => '/' + path.relative(OUT, f).replace(/index\.html$/, '').rep
 const errors = [];
 const warn = [];
 
+// The HTML home is replaced after export, but internal navigation may render
+// the React twin. Check that second sales surface against the same price source.
+const reactHome = fs.readFileSync('components/ReumSalesLanding.tsx', 'utf8');
+const reactPackages = [...reactHome.matchAll(/tier:\s*'([^']+)'[\s\S]*?priceWon:\s*([\d_]+)/g)]
+  .map(m => ({ name: m[1], price: Number(m[2].replace(/_/g, '')) }));
+for (const p of PACKAGES) {
+  const twin = reactPackages.find(item => item.name === p.name);
+  if (!twin || twin.price !== p.price) {
+    errors.push(`[React 홈 요금표] ${p.name}: ${twin?.price ?? '누락'} (정본 ${p.price})`);
+  }
+}
+
 // ── 1) 폐기 가격 ──
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8');

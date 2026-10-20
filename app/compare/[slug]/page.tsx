@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: cmp.title,
       description: cmp.description,
       publishedTime: cmp.publishedAt,
+      modifiedTime: cmp.updatedAt,
       images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: cmp.title }],
     },
     twitter: { card: 'summary_large_image', title: cmp.title, description: cmp.description.slice(0, 200), images: [SITE.defaultOgImage] },
@@ -62,9 +63,11 @@ export default function ComparePage({ params }: Props) {
         description={cmp.description}
         url={canonical}
         publishedAt={cmp.publishedAt}
+        updatedAt={cmp.updatedAt}
         keywords={cmp.keywords}
         faqs={cmp.faqs}
         crumbs={crumbs}
+        citations={cmp.sources}
       />
       <main>
         <article className="dynamic-page">
@@ -79,6 +82,10 @@ export default function ComparePage({ params }: Props) {
           <div className="section-inner">
             <p className="section-tag">Compare · {cmp.optionA} vs {cmp.optionB}</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>{cmp.h1}</h1>
+            <p className="guide-byline">
+              작성 {SITE.name} · <time dateTime={cmp.publishedAt}>{cmp.publishedAt} 발행</time>
+              {cmp.updatedAt && <> · <time dateTime={cmp.updatedAt}>{cmp.updatedAt} 수정</time></>}
+            </p>
             <p className="hub-intro">{cmp.intro}</p>
 
             <div style={{ overflowX: 'auto', marginTop: 24 }}>
@@ -107,6 +114,20 @@ export default function ComparePage({ params }: Props) {
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>름랩의 결론</h2>
             <p className="hub-intro">{cmp.verdict}</p>
           </div>
+
+          {cmp.sections?.map(section => (
+            <section className="section-inner" style={{ paddingTop: 8 }} key={section.h}>
+              <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{section.h}</h2>
+              <p className="hub-intro">{section.body}</p>
+              <ul className="guide-checklist">{section.items.map(item => <li key={item}>{item}</li>)}</ul>
+            </section>
+          ))}
+          {cmp.sources?.length ? (
+            <section className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.3rem' }}>근거와 적용 범위</h2>
+              <ul>{cmp.sources.map(source => <li key={source.url}><a href={source.url}>{source.title}</a>{source.note && <> — {source.note}</>}</li>)}</ul>
+            </section>
+          ) : null}
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>자주 묻는 질문</h2>

@@ -144,6 +144,7 @@ export default function AutomationDomainPage({ params }: PageProps) {
 
           <section className="section-inner" id="workflow" aria-labelledby="workflow-title">
             <h2 id="workflow-title" className="section-title" style={H2}>구현 가능한 업무 흐름</h2>
+            <p className="section-desc">아래는 입력 자료와 승인·예외 처리를 설명하기 위한 설계 예시입니다. 실제 납품 실적이나 모든 도구의 기본 연동을 뜻하지 않으며, 고객 환경의 권한과 샘플 검증 결과에 따라 범위를 정합니다.</p>
             <div className="faq-grid">
               {domain.workflows.map((flow) => (
                 <article className="faq-item" key={flow.title}>

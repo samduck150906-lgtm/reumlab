@@ -17,12 +17,15 @@
  * 2.0MB 를 받아 확인한 뒤 폴백한다(실측으로 확인했다).
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
 const META = JSON.parse(readFileSync('public/fonts/subset.json', 'utf8'));
 const RANGE = META.unicode_range;
 const REST_RANGE = META.rest_unicode_range;
 const ORIG = '/fonts/PretendardVariable-1.3.9.woff2';
-const SUB = `/fonts/${META.subset}`;
+// Fonts use a year-long immutable cache. Change the URL when bytes change.
+const FONT_VERSION = createHash('sha256').update(readFileSync(`public/fonts/${META.subset}`)).digest('hex').slice(0, 12);
+const SUB = `/fonts/${META.subset}?v=${FONT_VERSION}`;
 const CHECK = process.argv.includes('--check');
 
 const TARGETS = [

@@ -410,7 +410,7 @@ export default function AiSearchOptimizationPage() {
                   className={pkg.recommended ? `${styles.priceCard} ${styles.priceCardRec}` : styles.priceCard}
                   aria-labelledby={`aisa-pkg-${pkg.id}`}
                 >
-                  {pkg.recommended ? <span className={styles.recBadge}>가장 많이 선택하는 범위</span> : null}
+                  {pkg.recommended ? <span className={styles.recBadge}>권장 구성</span> : null}
                   <h3 id={`aisa-pkg-${pkg.id}`}>{pkg.name}</h3>
                   <p className={styles.priceTagline}>{pkg.tagline}</p>
                   <p className={styles.priceAmount}>{fromText(pkg.priceWon)}</p>

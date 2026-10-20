@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
 import { SITE } from '@/lib/seo';
+import { SYSTEM_OPERATIONS } from '@/lib/system-operations';
 import {
   SYSTEMS,
   getSystem,
@@ -214,6 +215,13 @@ export default function SystemPage({ params }: Props) {
               <Link href="/portfolio/">개발 사례</Link>에서 확인하실 수 있습니다.
             </p>
           </div>
+
+          {(SYSTEM_OPERATIONS[s.slug] ?? []).map((section) => (
+            <section className="section-inner" style={{ paddingTop: 8 }} key={section.h}>
+              <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{section.h}</h2>
+              <p className="hub-intro">{section.body}</p>
+            </section>
+          ))}
 
           {/* 10. FAQ */}
           <div className="section-inner" style={{ paddingTop: 8 }}>

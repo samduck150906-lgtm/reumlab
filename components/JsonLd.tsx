@@ -212,7 +212,7 @@ export function ArticleJsonLd({ post, url }: { post: BlogPost; url: string }) {
         headline: post.title,
         description: post.description,
         datePublished: post.publishedAt,
-        dateModified: post.publishedAt,
+        dateModified: post.updatedAt || post.publishedAt,
         // 사이트 전역 그래프(루트 레이아웃)의 Organization 을 참조 — 별도 조직 노드를 만들지 않는다
         author: { '@id': SCHEMA_ID.organization },
         publisher: { '@id': SCHEMA_ID.organization },

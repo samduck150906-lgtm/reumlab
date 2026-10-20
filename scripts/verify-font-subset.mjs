@@ -20,6 +20,7 @@
  */
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const OUT = process.argv.find((a) => !a.startsWith('--') && a !== process.argv[0] && a !== process.argv[1]) || 'out';
 const META_PATH = 'public/fonts/subset.json';
@@ -34,6 +35,8 @@ if (!existsSync(META_PATH)) {
   process.exit(1);
 }
 const META = JSON.parse(readFileSync(META_PATH, 'utf8'));
+const fontHash = bytes => createHash('sha256').update(bytes).digest('hex');
+const fontVersion = fontHash(readFileSync(join('public/fonts', META.subset))).slice(0, 12);
 
 /** "U+0020-007E, U+00A0" → 코드포인트 Set */
 function parseRange(str) {
@@ -111,6 +114,7 @@ for (const f of DECL_FILES) {
   if (!existsSync(f)) { fail.push(`[decl] ${f} 없음`); continue; }
   const s = readFileSync(f, 'utf8');
   if (!s.includes(META.subset)) { fail.push(`[decl] ${f}: 서브셋 파일(${META.subset}) 참조 없음`); continue; }
+  if (!s.includes(`${META.subset}?v=${fontVersion}`)) { fail.push(`[decl] ${f}: 불변 캐시용 폰트 버전이 현재 파일과 다름`); continue; }
   if (!s.includes(META.unicode_range)) { fail.push(`[decl] ${f}: 서브셋 unicode-range 가 subset.json 과 다름`); continue; }
   if (!s.includes(META.rest_unicode_range)) { fail.push(`[decl] ${f}: 나머지 unicode-range 가 subset.json 과 다름`); continue; }
   declOk++;
@@ -120,6 +124,7 @@ for (const f of DECL_FILES) {
 for (const f of [META.subset, META.source]) {
   const p = join(OUT, 'fonts', f);
   if (!existsSync(p)) fail.push(`[file] ${p} 없음 — CSS 가 가리키는 폰트가 배포되지 않는다`);
+  else if (fontHash(readFileSync(p)) !== fontHash(readFileSync(join('public/fonts', f)))) fail.push(`[file] ${p}: 원본 소스와 배포 폰트 바이트가 다름`);
 }
 
 if (offenders.size) {

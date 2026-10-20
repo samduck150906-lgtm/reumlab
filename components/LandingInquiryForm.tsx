@@ -402,7 +402,8 @@ export default function LandingInquiryForm({
       form.reset();
       const eventCtx = pageContext(window.location.pathname);
       const w = window as any;
-      if (typeof w.fbq === 'function') w.fbq('track', 'Lead');
+      // 분석 도구의 오류가 이미 접수된 문의를 실패 화면으로 바꾸지 않도록 분리한다.
+      try { if (typeof w.fbq === 'function') w.fbq('track', 'Lead'); } catch {}
       if (!leadSentRef.current) {
         leadSentRef.current = true;
         // 기존 GTM 트리거가 쓰는 이름 — 바꾸면 운영 중인 전환이 끊기므로 유지한다.
