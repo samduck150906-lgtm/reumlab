@@ -1,0 +1,36 @@
+{
+  "phase": "LOCAL_RELEASE_CANDIDATE",
+  "release": 5,
+  "baseCommit": "e4e93f53aaa841276ca6fb7b267740a8f59b8445",
+  "allRequestedContentComplete": false,
+  "registeredPagesIncludingHub": 300,
+  "newDetailPagesSincePriorRelease": 77,
+  "existingCanonicalsPreserved": 823,
+  "sourceAudit": {
+    "status": "PASS",
+    "pairs": 336600
+  },
+  "renderedAudit": {
+    "status": "PASS",
+    "count": 300,
+    "issues": 0
+  },
+  "http": {
+    "status": "PASS",
+    "count": 300,
+    "origin": "http://127.0.0.1:8783"
+  },
+  "browser": {
+    "status": "PASS",
+    "changedPagesAt320px": 78,
+    "unchangedPriorVerified": 222
+  },
+  "tests": {
+    "namespace12TestsPassedForThisCandidate": true,
+    "existing240TestsPreviouslyPassed": true,
+    "productImplementationUnchanged": true,
+    "auditChange": "Distinguish glyph support from the existing font download performance gate; both must pass."
+  },
+  "deployment": "NOT_YET_DEPLOYED",
+  "searchSubmission": "NOT_YET_SUBMITTED"
+}
