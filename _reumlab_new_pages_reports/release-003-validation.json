@@ -1,0 +1,35 @@
+{
+  "phase": "LOCAL_RELEASE_CANDIDATE",
+  "release": 3,
+  "baseCommit": "7fce3a8bb99aaa8151a918ecb64ff7e2a5bcc671",
+  "allRequestedContentComplete": false,
+  "registeredPagesIncludingHub": 187,
+  "newDetailPagesSinceRelease002": 49,
+  "existingCanonicalsPreserved": 823,
+  "sourceAudit": {
+    "status": "PASS",
+    "pairs": 188683
+  },
+  "renderedAudit": {
+    "status": "PASS",
+    "count": 187,
+    "issues": 0
+  },
+  "http": {
+    "status": "PASS",
+    "count": 187,
+    "origin": "http://127.0.0.1:8783"
+  },
+  "browser": {
+    "status": "PASS",
+    "changedPagesAt320px": 50,
+    "unchangedPriorVerified": 137
+  },
+  "tests": {
+    "namespacePassed": 10,
+    "namespaceFailed": 0,
+    "existing240TestsPreviouslyPassed": true
+  },
+  "deployment": "NOT_YET_DEPLOYED",
+  "searchSubmission": "NOT_YET_SUBMITTED"
+}
