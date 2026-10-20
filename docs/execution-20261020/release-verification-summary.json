@@ -1,48 +1,147 @@
 {
+  "recordedAt": "2026-10-20T08:13:00.573274+00:00",
   "release": {
-    "commit": "f7cef7c1fc02bbe692adac7da2d0949abd21ed8d",
-    "pr": "https://github.com/samduck150906-lgtm/reumlab/pull/10",
-    "deployId": "6ad712b1de1be826243b81fa",
-    "deployUrl": "https://app.netlify.com/projects/reumlab/deploys/6ad712b1de1be826243b81fa",
-    "publishedAt": "2026-10-20T07:07:40.252Z",
+    "commit": "e2992eec616f518a919f90dfec1b307980d4bc9b",
+    "pr": "https://github.com/samduck150906-lgtm/reumlab/pull/12",
+    "mergedAt": "2026-10-20T07:57:06Z",
     "verified": true,
     "hostingState": "ready",
-    "hostingContext": "production",
     "site": "reumlab",
-    "verificationNote": "1779 fresh public routes captured, 823 canonical sitemap contracts and 35140 links pass. Raw release fingerprints match799;24 differ only in one proven equivalent Netlify HTML-link rewrite. Both asset endpoints have identical full HTML SHA256. Unresolved differences0."
+    "account": "samduck150906@gmail.com",
+    "initialRelease": {
+      "commit": "f7cef7c1fc02bbe692adac7da2d0949abd21ed8d",
+      "pr": "https://github.com/samduck150906-lgtm/reumlab/pull/10",
+      "deployId": "6ad712b1de1be826243b81fa",
+      "deployUrl": "https://app.netlify.com/projects/reumlab/deploys/6ad712b1de1be826243b81fa",
+      "publishedAt": "2026-10-20T07:07:40.252Z",
+      "verified": true,
+      "hostingState": "ready",
+      "hostingContext": "production",
+      "site": "reumlab",
+      "account": "samduck150906@gmail.com",
+      "verificationNote": "1779 fresh public routes captured, 823 canonical sitemap contracts and 35140 links pass. Raw release fingerprints match799;24 differ only in one proven equivalent Netlify HTML-link rewrite. Both asset endpoints have identical full HTML SHA256. Unresolved differences0.",
+      "evidencePaths": [
+        "work/netlify-deploy-status.json",
+        "work/production-verification.json",
+        "work/production-equivalence-verification.json",
+        "work/production-assets.json",
+        "work/production-ui.json"
+      ],
+      "evidencePr": "https://github.com/samduck150906-lgtm/reumlab/pull/11",
+      "evidenceCommit": "56f0374793b5c7e32d5f644d615cc3a147cce83e",
+      "evidenceCommitSkipsDeploy": true
+    },
+    "verificationNote": "All 823 deployed pages match the final release: 799 exact fingerprints and 24 with one independently verified target alias rewrite. Fresh full capture, canonical contracts, links, complete RSS and six public assets verified.",
+    "deployId": "6ad71ed3dce425c2fa4b1bad",
+    "deployUrl": "https://app.netlify.com/projects/reumlab/deploys/6ad71ed3dce425c2fa4b1bad",
+    "publishedAt": "2026-10-20T07:59:33.614Z",
+    "hostingContext": "production",
+    "evidencePaths": [
+      "work/netlify-deploy-status.json",
+      "work/production-verification.json",
+      "work/production-equivalence-verification.json",
+      "work/production-feed-verification.json",
+      "work/production-assets.json",
+      "work/policy-followup-ui-production.json"
+    ]
   },
   "counts": {
     "originalSitemap": 823,
     "individualEditorialReviews": 823,
-    "meaningfullyChanged": 812,
-    "unchanged": 11,
+    "meaningfullyChanged": 820,
+    "unchanged": 3,
     "allCapturedPaths": 1779,
     "internalLinkReferences": 35140
   },
   "productionChecks": {
-    "httpCanonicalRobotsMetadataSchema": "PASS823",
-    "rawFingerprintMatch": 799,
-    "verifiedEquivalentLinkRewrite": 24,
-    "unresolvedContentDifferences": 0,
+    "httpCanonicalRobotsMetadataSchema": "PASS",
+    "total": 823,
+    "exactMatch": 799,
+    "verifiedAliasMatch": 24,
+    "unresolved": 0,
     "rssItems": 59,
-    "rssBytes": 1088917,
-    "productionRepresentativeScreens": 8
+    "rssBytes": 1089293,
+    "publicAssets": 6,
+    "representativeUi": "Initial release 8 screens retained; final policy follow-up 6 screens verified separately"
   },
   "submissions": {
-    "googleSitemap": "Success;823discovered",
+    "googleSitemap": {
+      "url": "https://reumlab.com/sitemap.xml",
+      "status": "Sitemap submitted successfully; table status Success",
+      "submittedAt": "2026-10-20T08:01:25.400Z",
+      "discoveredPages": 823,
+      "evidence": "outputs/evidence/submissions/google-sitemap-final-success.png",
+      "note": "Final production release sitemap submission accepted. Table Success and 823 discovered do not confirm new indexing.",
+      "commit": "e2992eec616f518a919f90dfec1b307980d4bc9b"
+    },
     "googleAcceptedUrls": [
-      "https://reumlab.com/app/community/",
       "https://reumlab.com/",
+      "https://reumlab.com/app/community/",
       "https://reumlab.com/website/inswaeso/"
     ],
     "googlePendingCount": 7,
     "naverSearchAdvisor": "RSS CAPTCHA pending; sitemap and individual requests pending",
     "indexnow": {
-      "count": 812,
-      "naverStatus": 200,
-      "bingStatus": 200,
-      "manifestRetained": true
+      "uniqueUrls": 820,
+      "batches": [
+        {
+          "id": "initial",
+          "count": 812,
+          "submittedAt": "2026-10-20T07:32:24.000Z",
+          "commit": "f7cef7c1fc02bbe692adac7da2d0949abd21ed8d",
+          "status": "accepted; indexing not confirmed",
+          "results": [
+            {
+              "submittedAt": "2026-10-20T07:32:24.000Z",
+              "endpoint": "https://searchadvisor.naver.com/indexnow",
+              "host": "reumlab.com",
+              "keyLocation": "https://reumlab.com/67cc4ff3436125d6a5eb18de9bb63dd0.txt",
+              "status": 200,
+              "responseBody": "",
+              "state": "accepted; indexing not confirmed"
+            },
+            {
+              "submittedAt": "2026-10-20T07:32:24.539Z",
+              "endpoint": "https://www.bing.com/indexnow",
+              "host": "reumlab.com",
+              "keyLocation": "https://reumlab.com/67cc4ff3436125d6a5eb18de9bb63dd0.txt",
+              "status": 200,
+              "responseBody": "",
+              "state": "accepted; indexing not confirmed"
+            }
+          ],
+          "evidence": "work/reumlab/docs/execution-20261020/submissions/indexnow.jsonl"
+        },
+        {
+          "id": "metadata-followup",
+          "count": 820,
+          "submittedAt": "2026-10-20T08:12:44.333Z",
+          "commit": "e2992eec616f518a919f90dfec1b307980d4bc9b",
+          "status": "accepted; indexing not confirmed",
+          "results": [
+            {
+              "submittedAt": "2026-10-20T08:12:44.333Z",
+              "endpoint": "https://searchadvisor.naver.com/indexnow",
+              "host": "reumlab.com",
+              "keyLocation": "https://reumlab.com/67cc4ff3436125d6a5eb18de9bb63dd0.txt",
+              "status": 200,
+              "responseBody": "",
+              "state": "accepted; indexing not confirmed"
+            },
+            {
+              "submittedAt": "2026-10-20T08:12:45.099Z",
+              "endpoint": "https://www.bing.com/indexnow",
+              "host": "reumlab.com",
+              "keyLocation": "https://reumlab.com/67cc4ff3436125d6a5eb18de9bb63dd0.txt",
+              "status": 200,
+              "responseBody": "",
+              "state": "accepted; indexing not confirmed"
+            }
+          ],
+          "evidence": "work/reumlab/docs/execution-20261020/submissions/indexnow.jsonl"
+        }
+      ]
     }
   },
-  "caution": "Request receipt does not establish new indexing, rankings, AI citation or conversion improvement. Performance is a one-run lab observation; actual form storage was not submitted."
+  "caution": "Receipt does not establish new indexing, rankings, AI citation or conversion improvement. Historical Google community canonical needs follow-up. Form storage was not tested with an external submission."
 }
