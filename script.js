@@ -10,6 +10,12 @@
   }
   var fired = {}; // 1회성 이벤트 가드
   function once(key, obj) { if (fired[key]) return; fired[key] = true; pushDL(obj); }
+  document.addEventListener('click', function (event) {
+    var link = event.target.closest && event.target.closest('a');
+    if (link && /^https:\/\/(www\.)?hyunlab\.kr(?:\/|$)/.test(link.getAttribute('href') || '')) {
+      pushDL({ event: 'reumlab_to_hyunlab_click', page_type: document.body.dataset.pageType || 'home', cta_location: link.getAttribute('data-analytics') || 'body' });
+    }
+  }, true);
 
   /* 페이지 컨텍스트 — lib/analytics.ts 의 분류와 같은 값·같은 키를 쓴다.
      이 파일은 홈(index.html)과 목적별 랜딩 8개가 함께 쓰므로 page_type 을 여기서

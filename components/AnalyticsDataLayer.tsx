@@ -75,6 +75,13 @@ export function AnalyticsDataLayer() {
 
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
+      const href = target.closest('a')?.getAttribute('href') || '';
+      if (/^https:\/\/(www\.)?hyunlab\.kr(?:\/|$)/.test(href)) {
+        push({ event: 'reumlab_to_hyunlab_click', ...ctx, cta_location: target.closest('[data-analytics]')?.getAttribute('data-analytics') || 'body' });
+      }
+      if (window.location.pathname === '/marketing-linked-development/' && target.closest('[data-analytics]')) {
+        push({ event: 'marketing_development_cta_click', ...ctx });
+      }
 
       // 1) 기존 범용 클릭 이벤트 (data-analytics 속성)
       const tagged = target.closest('[data-analytics]');

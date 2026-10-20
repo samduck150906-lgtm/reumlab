@@ -6,11 +6,17 @@
  * 배포 직전에 out/ 에서 "있으면 안 되는 것"만 걷어낸다.
  * 페이지를 새로 만들거나 내용을 고치지 않는다 — 삭제만 한다.
  */
-import { existsSync, rmSync, readdirSync, rmdirSync } from 'node:fs';
+import { existsSync, rmSync, readdirSync, rmdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const OUT = process.argv[2] || 'out';
 const removed = [];
+// 모든 non-production context는 명시적으로 색인 제외한다. production에는 생성하지 않는다.
+if (process.env.CONTEXT !== 'production') {
+  writeFileSync(join(OUT, '_headers'), '/*\n  X-Robots-Tag: noindex, nofollow\n');
+} else if (existsSync(join(OUT, '_headers')) && readFileSync(join(OUT, '_headers'), 'utf8') === '/*\n  X-Robots-Tag: noindex, nofollow\n') {
+  rmSync(join(OUT, '_headers'));
+}
 
 /**
  * out/404/index.html 제거.

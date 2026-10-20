@@ -14,6 +14,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  experimental: { cpus: 4 },
   images: { unoptimized: true },
 };
 

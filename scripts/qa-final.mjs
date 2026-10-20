@@ -150,7 +150,8 @@ for (const p of pages) {
       schemaCount.set(t, (schemaCount.get(t) || 0) + 1);
       // 사이트 전역 엔티티는 페이지당 한 번만
       if (['Organization', 'LocalBusiness', 'WebSite'].includes(t)) {
-        seen.set(t, (seen.get(t) || 0) + 1);
+        const identity = n['@id'] || t;
+        seen.set(identity, (seen.get(identity) || 0) + 1);
       }
     }
     for (const [t, n] of seen) {
@@ -169,13 +170,21 @@ for (const p of pages) {
 }
 // 페이지 전체에서 전역 엔티티가 두 번 이상 렌더되는 경우(서로 다른 script 블록)
 for (const p of pages) {
-  for (const t of ['Organization', 'LocalBusiness', 'WebSite']) {
-    // 정적 홈(index.html)과 목적별 랜딩은 JSON 을 콜론 뒤 공백까지 넣어 포맷한다.
-    // 공백을 허용하지 않으면 그 문서들의 중복을 놓친다.
-    const n = (p.html.match(new RegExp(`"@type":\\s*"${t}"`, 'g')) || []).length;
-    if (n > 1) {
+  const identities = new Map();
+  for (const m of p.html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    try {
+      const data = JSON.parse(m[1]);
+      for (const node of [].concat(data['@graph'] || [data])) {
+        if (!['Organization', 'LocalBusiness', 'WebSite'].includes(node['@type'])) continue;
+        const id = node['@id'] || node['@type'];
+        identities.set(id, (identities.get(id) || 0) + 1);
+      }
+    } catch { /* 파싱 실패는 위에서 이미 보고한다 */ }
+  }
+  for (const [id, count] of identities) {
+    if (count > 1) {
       dupEntity++;
-      add(fail, 'json-ld', `${t} 가 페이지 전체에서 ${n}회 출력: ${p.pathname}`);
+      add(fail, 'json-ld', `${id} 가 페이지 전체에서 ${count}회 출력: ${p.pathname}`);
     }
   }
 }
