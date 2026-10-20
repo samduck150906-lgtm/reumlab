@@ -53,6 +53,11 @@ import { biotechPortalPage } from '@/content/development-agency/expanded/root-bi
 import { biotechManagementPage } from '@/content/development-agency/expanded/root-biotech/management';
 import { biotechFieldPage } from '@/content/development-agency/expanded/root-biotech/field';
 import { biotechAiPage } from '@/content/development-agency/expanded/root-biotech/ai';
+import { drugDevelopmentWebsitePage } from '@/content/development-agency/expanded/root-drug-development/website';
+import { drugDevelopmentPortalPage } from '@/content/development-agency/expanded/root-drug-development/portal';
+import { drugDevelopmentManagementPage } from '@/content/development-agency/expanded/root-drug-development/management';
+import { drugDevelopmentFieldPage } from '@/content/development-agency/expanded/root-drug-development/field';
+import { drugDevelopmentAiPage } from '@/content/development-agency/expanded/root-drug-development/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -96,6 +101,11 @@ export const agencyPages: readonly AgencyPage[] = [
   biotechManagementPage,
   biotechFieldPage,
   biotechAiPage,
+  drugDevelopmentWebsitePage,
+  drugDevelopmentPortalPage,
+  drugDevelopmentManagementPage,
+  drugDevelopmentFieldPage,
+  drugDevelopmentAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
