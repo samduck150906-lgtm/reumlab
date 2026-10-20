@@ -77,7 +77,9 @@
         userFlow: ["관리자가 수강생·클래스 등록", "출결·수납·상담을 한 화면에서 기록", "기록이 사용자 앱에 실시간 반영", "역할별 권한으로 열람 범위 제한"],
         operator: ["역할별 관리자 계정 발급", "수납·출결·상담 통합 조회", "데이터 내보내기"],
         tech: ["Flutter", "관리자 웹(React)", "PostgreSQL(Supabase)", "권한(RLS)", "알림"],
-        deliverables: ["전체 소스코드", "관리자 웹 + 사용자 앱", "실행·배포 문서", "관리자 계정 · 주요 권한 정리"]
+        deliverables: ["전체 소스코드", "관리자 웹 + 사용자 앱", "실행·배포 문서", "관리자 계정 · 주요 권한 정리"],
+        designConsiderations: "비슷한 교육기관 ERP를 검토할 때는 원생·보호자·반의 연결과 수납·출결의 수정 이력을 먼저 비교하세요. 역할별 권한과 실시간 연동은 어느 화면을 데이터 원본으로 삼고 잘못된 기록을 어떻게 정정하는지까지 정해야 합니다.",
+        handoverChecks: "수강생·반·수납 자료의 이관 대조표, 관리자 역할표, 사용자 앱 반영 확인 방법과 자료 내보내기·복원 절차를 확인할 항목으로 정리하세요."
       }
     },
     {
@@ -93,7 +95,9 @@
         userFlow: ["조건 입력 후 검색·필터", "지도·목록으로 결과 비교", "상세에서 리뷰·평점 확인", "관심 등록·문의 연결"],
         operator: ["콘텐츠·정보 등록/수정", "리뷰 신고 관리", "노출 정책 설정"],
         tech: ["Flutter", "검색·추천 로직", "지도 SDK", "PostgreSQL", "푸시 알림"],
-        deliverables: ["전체 소스코드", "iOS·Android 앱", "관리자", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "iOS·Android 앱", "관리자", "실행·배포 문서"],
+        designConsiderations: "지역 교육정보 탐색을 비교할 때는 지도·필터의 정확성과 정보 갱신 책임을 함께 확인하세요. 리뷰·평점은 신고·삭제·작성자 확인 범위가 필요하고, 맞춤 추천은 이용자의 선택 조건과 추천 근거를 구분해 검토합니다.",
+        handoverChecks: "교육정보 원본·갱신 방법, 지도 SDK 소유 계정, 리뷰 신고 처리 권한과 앱 배포·푸시 설정을 인수인계 목록에서 확인하세요."
       }
     },
     {
@@ -109,7 +113,9 @@
         userFlow: ["고객이 요청서 작성", "조건에 맞는 업체 매칭", "업체가 견적 제시·수락", "진행·정산 상태 추적"],
         operator: ["요청·배정 현황 관리", "업체·고객 관리", "정산 집계"],
         tech: ["Next.js", "모바일 앱", "PostgreSQL", "문자·카카오 알림"],
-        deliverables: ["전체 소스코드", "웹 + 앱 + 관리자", "알림 연동 설정", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "웹 + 앱 + 관리자", "알림 연동 설정", "실행·배포 문서"],
+        designConsiderations: "매칭 플랫폼은 요청 접수·업체 제안·수락을 별도 상태로 두는지 비교하세요. 업체 미응답이나 고객 취소, 작업 완료 이견이 생겼을 때 재배정·알림·정산 보류가 어떻게 연결되는지가 검토 기준입니다.",
+        handoverChecks: "요청 상태표, 업체 승인·권한, 정산 계산 기준, 메시지 발신 계정과 실패 재처리·자료 내보내기 방법을 확인하세요."
       }
     },
     {
@@ -125,7 +131,9 @@
         userFlow: ["파트너가 리드 등록", "단계별 진행 상태 업데이트", "본사 대시보드에 실시간 집계", "실적·정산 자동 계산"],
         operator: ["파트너·리드 관리", "실적·정산 리포트", "권한별 접근 제어"],
         tech: ["React Native/Expo", "Next.js 관리자", "공통(shared) 패키지", "PostgreSQL", "알림"],
-        deliverables: ["전체 소스코드(모노레포)", "앱 + 관리자", "실행·배포 문서", "계정·권한 정리"]
+        deliverables: ["전체 소스코드(모노레포)", "앱 + 관리자", "실행·배포 문서", "계정·권한 정리"],
+        designConsiderations: "파트너와 본사가 같은 리드를 볼 때는 파트너별 접근 분리와 중복 등록 판단 기준이 필요합니다. 리드 단계 정정이 실적·정산을 다시 계산하는지, 공통 모듈 변경이 앱과 관리자에 어떤 영향을 주는지 비교하세요.",
+        handoverChecks: "모노레포 실행 순서, 공통 패키지 버전, 파트너 권한표, 실적·정산 대조 방법과 앱/웹 배포 권한을 확인하세요."
       }
     },
     {
@@ -141,7 +149,9 @@
         userFlow: ["리드 업로드·정리", "시퀀스(단계별 메시지) 구성", "AI가 카피 초안 제안", "성과를 대시보드로 추적"],
         operator: ["플랜·요금 관리", "사용량·권한 제어", "레이트리밋 설정"],
         tech: ["Next.js(App Router)", "TypeScript", "AI 연동", "결제", "다국어(i18n)"],
-        deliverables: ["전체 소스코드", "관리자·요금 설정", "실행·배포 문서", "계정·키 정리"]
+        deliverables: ["전체 소스코드", "관리자·요금 설정", "실행·배포 문서", "계정·키 정리"],
+        designConsiderations: "AI 영업 도구를 검토할 때는 초안 생성과 실제 발송의 승인 단계를 분리하세요. 수신 대상의 적절성, 발송 중지·중복 방지, 사용량 제한과 플랜 변경 시 과금 처리가 비교 기준입니다. AI 초안이 영업 성과를 보장하지는 않습니다.",
+        handoverChecks: "시퀀스 중지·재시도 절차, 발송 채널 권한, AI 모델·사용량 설정, 결제 실패 처리와 고객 자료 삭제·내보내기를 확인하세요."
       }
     },
     {
@@ -157,7 +167,9 @@
         userFlow: ["가능한 시간 확인", "예약·결제 진행", "확정 안내 자동 발송", "운영자가 일정·정산 관리"],
         operator: ["예약 현황·차단 관리", "결제·환불 처리", "이용 안내 편집"],
         tech: ["Next.js", "TypeScript", "결제 연동", "PostgreSQL"],
-        deliverables: ["전체 소스코드", "예약 웹 + 관리자", "결제 연동 설정", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "예약 웹 + 관리자", "결제 연동 설정", "실행·배포 문서"],
+        designConsiderations: "예약 캘린더는 화면상 빈자리뿐 아니라 동시 결제·예약 임시 확보의 만료와 취소 후 재개방을 확인해야 합니다. 공간별 청소시간·차단시간, 날짜 변경과 부분환불 기준을 비교하세요.",
+        handoverChecks: "공간·요금·환불 규칙, 기준일의 확정 예약·잔액 대조, PG 계정, 관리자 차단·환불·복구 절차를 확인하세요."
       }
     },
     {
@@ -173,7 +185,9 @@
         userFlow: ["예약·고객 등록", "매출·정산 자동 집계", "매장별 데이터 분리 조회", "권한별 직원 접근"],
         operator: ["멀티 매장 관리", "권한·직원 관리", "정산 리포트"],
         tech: ["Next.js", "TypeScript", "PostgreSQL", "반응형 웹앱"],
-        deliverables: ["전체 소스코드", "운영 웹앱 + 관리자", "실행·배포 문서", "계정·권한 정리"]
+        deliverables: ["전체 소스코드", "운영 웹앱 + 관리자", "실행·배포 문서", "계정·권한 정리"],
+        designConsiderations: "여러 매장의 예약·고객·매출을 통합할 때는 매장별 자료 분리와 본사 집계의 경계를 비교하세요. 취소·환불·직원 권한 변경이 정산과 고객 이력에 함께 반영되는지 확인할 필요가 있습니다.",
+        handoverChecks: "매장·직원 권한표, 예약/매출 원본, 정산 대조표, 매장 추가·직원 퇴사·자료 내보내기 절차를 확인하세요."
       }
     },
     {
@@ -189,7 +203,9 @@
         userFlow: ["업무 템플릿 선택", "핵심 입력값 입력", "AI가 결과 초안 생성", "결과 저장·재사용"],
         operator: ["템플릿 관리", "사용량·과금 관리", "결과 이력 조회"],
         tech: ["Next.js", "TypeScript", "AI 연동", "스키마 검증", "레이트리밋"],
-        deliverables: ["전체 소스코드", "관리자·과금 설정", "실행·배포 문서", "API 키 정리"]
+        deliverables: ["전체 소스코드", "관리자·과금 설정", "실행·배포 문서", "API 키 정리"],
+        designConsiderations: "업무 템플릿 자동화는 입력 필수값, 결과 형식 검증과 사람의 검토 단계를 비교하세요. 생성 실패·재시도가 사용량을 중복 차감하는지, 조직별 결과물이 분리되는지도 확인해야 합니다.",
+        handoverChecks: "템플릿·입력 스키마, 모델·API 소유 계정, 사용량 집계·실패 재처리와 결과 보관·삭제 정책을 확인하세요."
       }
     },
     {
@@ -205,7 +221,9 @@
         userFlow: ["주제·톤 입력", "AI가 초안·문구 생성", "검토·수정", "발행 일정 등록"],
         operator: ["톤·브랜드 설정", "콘텐츠 이력 관리", "발행 캘린더 관리"],
         tech: ["Next.js", "TypeScript", "AI 연동", "이미지 처리"],
-        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서", "API 키 정리"]
+        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서", "API 키 정리"],
+        designConsiderations: "초안·이미지 생성과 채널에 실제 게시하는 기능은 범위가 다릅니다. 검토·수정·승인·일정 등록을 구분하고, 브랜드 표현과 이미지 사용 권리를 담당자가 확인할 수 있는지 비교하세요.",
+        handoverChecks: "톤·브랜드 설정, 초안 수정 이력, 콘텐츠 내보내기, 이미지 이용 조건과 API 사용량·키 교체 절차를 확인하세요."
       }
     },
     {
@@ -221,7 +239,9 @@
         userFlow: ["원하는 것을 자유롭게 입력", "AI가 조건을 되물어 좁힘", "조건 매칭 결과 제시", "핵심을 요약해 안내"],
         operator: ["데이터·인덱스 갱신", "질의 품질 모니터링"],
         tech: ["Next.js", "TypeScript(strict)", "AI 연동", "검증(zod)", "레이트리밋"],
-        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서", "API 키 정리"]
+        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서", "API 키 정리"],
+        designConsiderations: "공공정보 탐색은 질문을 좁히는 대화뿐 아니라 원문 출처·공고 시점·마감과 신청 자격을 확인할 수 있어야 합니다. 결과가 없거나 갱신이 늦을 때 추측 대신 원문 확인으로 안내하는지 비교하세요.",
+        handoverChecks: "정보 출처·이용 조건, 인덱스 갱신·실패 처리, 평가 질의와 답변 근거 확인 절차, API 제한·로그 보관을 확인하세요."
       }
     },
     {
@@ -237,7 +257,9 @@
         userFlow: ["상품 탐색·구매", "결제·다운로드", "판매자 정산 집계", "관리자에서 상품·배너 편집"],
         operator: ["상품·판매자 관리", "정산 처리", "콘텐츠 셀프 편집"],
         tech: ["Next.js", "결제 연동", "PostgreSQL", "CMS(셀프 편집)"],
-        deliverables: ["전체 소스코드", "커머스 웹 + 관리자", "결제 연동 설정", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "커머스 웹 + 관리자", "결제 연동 설정", "실행·배포 문서"],
+        designConsiderations: "디지털 상품은 결제와 다운로드 권한을 연결하고 환불·판매 중지 이후 접근 정책을 정해야 합니다. 판매자별 정산, 중복 결제 통지와 공유 링크의 만료·다운로드 제한이 비교 기준입니다.",
+        handoverChecks: "상품 파일·판매자 권한표, 결제/정산 대조, 다운로드 링크 정책, CMS 편집·반품 처리와 저장소 소유 권한을 확인하세요."
       }
     },
     {
@@ -253,7 +275,9 @@
         userFlow: ["항목·금액 입력", "템플릿·브랜딩 적용", "PDF 자동 생성", "발송·이력 관리"],
         operator: ["템플릿·브랜딩 관리", "발행 이력 조회"],
         tech: ["Next.js", "TypeScript", "문서 생성 로직", "PDF"],
-        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서"],
+        designConsiderations: "견적·청구 자동화는 세액·할인·반올림 규칙과 문서 버전을 비교하세요. 견적서, 청구서와 세금계산서는 목적이 다르므로 출력 문서의 역할을 구분하고 정정 발행·중복 발송을 확인합니다.",
+        handoverChecks: "금액 계산 예시, 템플릿·글꼴 사용권, 발행번호·수정 이력, PDF 재생성과 발송 계정·실패 재처리를 확인하세요."
       }
     },
     {
@@ -269,7 +293,9 @@
         userFlow: ["자료·주제 입력", "AI가 구조·초안 제안", "인용·근거 정리", "문서로 내보내기"],
         operator: ["자료·템플릿 관리", "결과 이력 관리"],
         tech: ["Next.js", "TypeScript", "AI 연동", "문서 처리"],
-        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서"]
+        deliverables: ["전체 소스코드", "관리자", "실행·배포 문서"],
+        designConsiderations: "자료 기반 작성 보조는 생성 문장과 원문 근거를 대조할 수 있는지 비교하세요. 인용이 원문에 실제로 있는지, 파일 판독 오류와 누락이 표시되는지 확인해야 하며 초안을 최종 검토 없이 연구 결과로 사용하지 않습니다.",
+        handoverChecks: "자료 업로드·삭제 기준, 인용 연결 방식, 문서 내보내기 형식, AI 제공자 전송 범위와 API 사용량 설정을 확인하세요."
       }
     },
     {
@@ -285,7 +311,9 @@
         userFlow: ["소스에서 자동 수집", "정제·중복 제거", "인덱싱", "검색 API로 조회"],
         operator: ["수집 스케줄 관리", "인덱스·품질 모니터링"],
         tech: ["수집 파이프라인", "인덱싱·검색", "데이터베이스", "API"],
-        deliverables: ["전체 소스코드", "수집·검색 시스템", "실행·배포 문서", "운영 가이드"]
+        deliverables: ["전체 소스코드", "수집·검색 시스템", "실행·배포 문서", "운영 가이드"],
+        designConsiderations: "수집 규모보다 각 소스의 이용 허가·갱신 주기와 중복 식별 기준을 먼저 비교하세요. 실패 재시도, 삭제 요청의 인덱스 반영과 검색 지연을 확인하고, 대규모·빠른 검색이라는 표현은 실제 데이터량·환경과 측정값으로 검증해야 합니다.",
+        handoverChecks: "수집 대상·허가 범위, 필드·식별키·정제 규칙, 스케줄 재실행·중복 방지, 인덱스 재구축과 운영 로그를 확인하세요."
       }
     },
     {
@@ -301,7 +329,9 @@
         userFlow: ["키워드 조합 정의", "페이지 자동 생성(빌드)", "허브로 내부 링크 클러스터링", "사이트맵·구조화 데이터 자동 생성"],
         operator: ["키워드·템플릿 관리", "색인 상태 모니터링"],
         tech: ["Next.js 정적 export", "Node 빌드 스크립트", "JSON-LD", "자동 sitemap/robots"],
-        deliverables: ["전체 소스코드", "빌드 자동화", "실행·배포 문서", "운영 가이드"]
+        deliverables: ["전체 소스코드", "빌드 자동화", "실행·배포 문서", "운영 가이드"],
+        designConsiderations: "페이지 자동화는 URL 수보다 각 페이지의 독립적인 질문·원본 정보·유지 책임이 있는지 비교하세요. 내용 없는 키워드 조합을 늘리기보다 기존 URL의 본문·canonical·색인 정책·실제 변경일을 검수하는 절차가 필요합니다.",
+        handoverChecks: "페이지 생성 원본, URL·리디렉션·비색인 목록, 본문 검수 기준, 사이트맵·스키마 검사와 변경 URL만 제출하는 절차를 확인하세요."
       }
     }
   ];
@@ -332,6 +362,8 @@
   function renderPortfolio() {
     var grid = document.getElementById("pfGrid");
     if (!grid) return;
+    // 빌드에서 목업까지 같은 원본으로 렌더한 카드는 그대로 사용한다.
+    if (grid.getAttribute("data-portfolio-rendered") === "true") return;
     var html = PROJECTS.map(function (p) {
       var feats = p.features.slice(0, 3).map(function (f) { return "<li>" + esc(f) + "</li>"; }).join("");
       return '<article class="pf-card2" data-cat="' + p.cat + '" data-id="' + p.id + '">' +
@@ -401,6 +433,9 @@
       '<div class="pm-sec"><h4>담당 범위</h4><p>' + esc(p.scope) + '</p></div>' +
       '<div class="pm-sec"><h4>사용 기술</h4>' + chips(d.tech) + '</div>' +
       '<div class="pm-sec"><h4>납품 산출물</h4>' + ul(d.deliverables) + '</div>' +
+      (d.designConsiderations ? '<div class="pm-sec"><h4>비슷한 서비스를 검토할 때</h4><p>' + esc(d.designConsiderations) + '</p><p>유사 개발을 비교할 때의 판단 기준이며 이 사례의 추가 수행 사실이나 측정 결과를 뜻하지 않습니다.</p></div>' : '') +
+      (d.handoverChecks ? '<div class="pm-sec"><h4>운영·인수인계에서 확인할 항목</h4><p>' + esc(d.handoverChecks) + '</p></div>' : '') +
+      '<p class="pm-note">화면은 예시 데이터 목업이며 실제 고객 화면이나 성과 증빙이 아닙니다. 고객명·서비스 URL·수행 날짜·측정 성과는 공개하지 않습니다.</p>' +
       '<div class="pm-cta"><a class="btn btn--primary" href="#contact" data-cta="apply" data-cta-loc="portfolio-modal" data-pm-close>이런 서비스로 상담받기</a></div>';
   }
 
@@ -590,9 +625,14 @@
         if (btn) { btn.disabled = true; btn.textContent = "요청 중…"; }
 
         var body = new URLSearchParams(new FormData(form)).toString();
+        var controller = typeof AbortController !== "undefined" ? new AbortController() : null;
+        var timer = controller ? setTimeout(function () { controller.abort(); }, 20000) : null;
+        var errorLabel = errEl ? (errEl.dataset.defaultMessage || errEl.textContent) : "";
+        if (errEl) errEl.dataset.defaultMessage = errorLabel;
         // Netlify가 감지한 정적 폼 스켈레톤으로 보내야 필드 스키마 검증을 확실히 통과한다.
-        fetch("/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body })
+        fetch("/__forms.html", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body, signal: controller ? controller.signal : undefined })
           .then(function (res) {
+            if (timer) clearTimeout(timer);
             if (!res.ok) throw new Error("status " + res.status);
             var card = form.closest(".af-card");
             var head = card ? card.querySelector(".af-head") : null;
@@ -610,7 +650,13 @@
             pushDL(withCtx({ event: "generate_lead", form_name: "main-apply", cta_type: "form", source_page: location.pathname }));
           })
           .catch(function (err) {
-            if (errEl) errEl.hidden = false;
+            if (timer) clearTimeout(timer);
+            if (errEl) {
+              errEl.hidden = false;
+              errEl.textContent = err && err.name === "AbortError"
+                ? "접수 확인 응답이 늦어지고 있어요. 이미 접수되었을 수 있으니 재전송 전에 010-8111-9370으로 확인해 주세요."
+                : errorLabel;
+            }
             /* 진단용 — 입력값·서버 메시지 원문은 싣지 않고 분류만 보낸다. */
             var m = (err && err.message) || "";
             pushDL(withCtx({ event: "form_error", form_name: "main-apply", error_type: m.indexOf("status") === 0 ? "server" : "network" }));

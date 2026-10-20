@@ -11,6 +11,7 @@ import { IndustryServiceJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import { ctaPrimary, operatorNote } from '@/lib/voice';
 import { pickSiblings } from '@/lib/sibling-picker';
+import IndustryOperationalContent from '@/components/IndustryOperationalContent';
 
 type Props = { params: { industry: string } };
 
@@ -148,6 +149,8 @@ export default function SolutionPage({ params }: Props) {
               ))}
             </div>
           </div>
+
+          <IndustryOperationalContent slug={s.slug} kind="solution" />
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{ind?.ko ?? ''} 솔루션 구축 자주 묻는 질문</h2>

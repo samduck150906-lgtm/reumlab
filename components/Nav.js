@@ -54,7 +54,7 @@ export default function Nav({ site }) {
   const closeMobile = () => setMobileOpen(false);
 
   const navLinks = [
-    { href: '/#solution', label: '특징', a: 'nav_solution' },
+    { href: '/#handover', label: '특징', a: 'nav_solution' },
     { href: '/#pricing', label: '패키지', a: 'nav_pricing' },
     // 실제 구축 사례는 문의 직전 판단 근거라, 블로그보다 앞에 둔다.
     { href: '/portfolio/', label: '개발 사례', a: 'nav_portfolio' },
@@ -157,7 +157,7 @@ export default function Nav({ site }) {
             ))}
           </div>
         </details>
-        <Link href="/#solution" onClick={closeMobile} data-analytics="nav_m_solution">특징</Link>
+        <Link href="/#handover" onClick={closeMobile} data-analytics="nav_m_solution">특징</Link>
         <Link href="/#pricing" onClick={closeMobile} data-analytics="nav_m_pricing">패키지</Link>
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/portfolio/" onClick={closeMobile} data-analytics="nav_m_portfolio">개발 사례</Link>

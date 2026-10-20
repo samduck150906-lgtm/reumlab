@@ -1,0 +1,54 @@
+{
+  "scope": "Final local export, not production",
+  "checks": [
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-sitemap.log",
+      "command": "node scripts/verify-sitemap.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-indexability.log",
+      "command": "node scripts/audit-indexability.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-schema.log",
+      "command": "node scripts/qa-final.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-conversion.log",
+      "command": "node scripts/verify-conversion.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-portfolio.log",
+      "command": "node scripts/verify-portfolio.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-service-menu.log",
+      "command": "node scripts/verify-service-menu.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-indexnow-config.log",
+      "command": "node scripts/verify-indexnow-config.mjs"
+    },
+    {
+      "result": "PASS",
+      "exitCode": 0,
+      "log": "docs/execution-20261020/final-feed.log",
+      "command": "pwsh -File scripts/verify-feed.ps1"
+    }
+  ],
+  "observedAt": "2026-10-20T06:48:48.7690021Z"
+}

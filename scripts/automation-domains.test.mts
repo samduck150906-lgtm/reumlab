@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { AUTOMATION_WORKFLOWS } from '../lib/automation-workflows.ts';
 import {
   AUTOMATION_DOMAINS,
   PRIORITY_S_DOMAINS,
@@ -19,7 +20,19 @@ test('Priority S 33개는 검색어 치환이 아닌 독립 업무 정보를 갖
   for (const domain of PRIORITY_S_DOMAINS) {
     assert.ok(domain.tools.length >= 5, `${domain.slug}: tools`);
     assert.ok(domain.tasks.length >= 5, `${domain.slug}: tasks`);
-    assert.ok(domain.workflows.length >= 5, `${domain.slug}: workflows`);
+    if (domain.publishMode === 'generated') {
+      assert.ok(AUTOMATION_WORKFLOWS[domain.slug], `${domain.slug}: individually authored workflows`);
+      assert.ok(domain.workflows.length >= 2, `${domain.slug}: complete workflows`);
+      assert.equal(new Set(domain.workflows.map(flow => flow.title)).size, domain.workflows.length, `${domain.slug}: distinct workflow titles`);
+      for (const flow of domain.workflows) {
+        for (const key of ['input', 'process', 'output', 'humanReview'] as const) {
+          assert.ok(flow[key].length >= 15, `${domain.slug}/${flow.title}: meaningful ${key}`);
+          assert.doesNotMatch(flow[key], /현재 사용하는 .* 자료와 처리 기준|규칙을 실행하고 처리 근거와 예외를 함께 기록|확신도가 낮거나 권한이 필요한 항목만 담당자가 확인/, `${domain.slug}: no keyword-substitution boilerplate`);
+        }
+      }
+    } else {
+      assert.ok(domain.workflows.length >= 5, `${domain.slug}: existing service research workflows`);
+    }
     assert.ok(domain.constraints.length >= 2, `${domain.slug}: constraints`);
     assert.ok(domain.faqs.length >= 6, `${domain.slug}: faqs`);
     assert.ok(domain.directAnswer.length >= 80, `${domain.slug}: directAnswer`);

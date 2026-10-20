@@ -147,7 +147,7 @@ export const SCOPE_AREAS: readonly ScopeArea[] = [
     key: 'answer',
     title: '질문과 답변',
     problem: '대상 고객·제공 범위·비용 조건·기간이 본문에 없어 방문자가 문의 전에 판단할 수 없습니다.',
-    work: '실제로 많이 묻는 질문을 기준으로 기존 페이지의 설명과 FAQ를 정비합니다.',
+    work: '고객 문의자료와 대상 고객의 핵심 질문을 기준으로 기존 페이지의 설명과 FAQ를 정비합니다.',
     deliverable: '기존 페이지의 설명 개선과 FAQ 정비본',
   },
   {

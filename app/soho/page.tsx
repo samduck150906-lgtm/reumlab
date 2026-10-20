@@ -5,7 +5,6 @@ import { SITE } from '@/lib/seo';
 import { LandingServiceJsonLd, FAQPageJsonLd } from '@/components/JsonLd';
 import BusinessFooter from '@/components/BusinessFooter';
 import SohoForm from './SohoForm';
-import SohoCountdown from './SohoCountdown';
 import './soho.css';
 import { guidesForService, resolveCluster } from '@/lib/content-cluster';
 import { getGuide } from '@/lib/guides';
@@ -16,9 +15,9 @@ const PAGE_URL = `${SITE.domain}/soho/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: { absolute: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB' },
+  title: { absolute: '소상공인 홈페이지 제작 49만원 | 름랩 REUMLAB' },
   description:
-    '광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음. 동탄·수원 거점 · 전국 어디서나 진행.',
+    '서비스·가격·위치·문의 정보를 정리하는 소상공인 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·유지보수 선택·외부 실비 별도. 동탄 사무실 · 전국 어디서나 진행.',
   keywords: [
     '소상공인 홈페이지',
     '자영업자 홈페이지 제작',
@@ -39,15 +38,15 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: PAGE_URL,
     siteName: SITE.name,
-    title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩',
+    title: '소상공인 홈페이지 제작 49만원 | 름랩',
     description:
-      '광고비 0원으로도 손님이 먼저 찾아오는 검색 최적화 홈페이지. 49만원부터 · 소스코드 전체 이관 · 월 관리비 없음.',
+      '서비스·가격·위치·문의 정보를 정리하는 소상공인 홈페이지. 49만원부터 · 소스코드 전체 이관 · 유지보수 선택·외부 실비 별도.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '검색 노출 소상공인 홈페이지 49만원' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '검색 노출되는 소상공인 홈페이지 제작 49만원 | 름랩',
-    description: '광고비 0원으로도 손님이 먼저 찾아오는 검색 최적화 홈페이지. 49만원부터.',
+    title: '소상공인 홈페이지 제작 49만원 | 름랩',
+    description: '서비스·가격·위치·문의 정보를 정리하는 소상공인 홈페이지. 49만원부터.',
     images: [SITE.defaultOgImage],
   },
   robots: { index: true, follow: true },
@@ -56,8 +55,8 @@ export const metadata: Metadata = {
 const FEATURES = [
   {
     no: '강점 01',
-    title: '검색에 잡히게 만드는 구조',
-    desc: '네이버·구글·AI 검색까지 고려한 구조로, 손님이 실제로 치는 키워드 조합에 내 업장이 먼저 뜨도록 설계합니다.',
+    title: '검색이 읽을 수 있는 정보 구조',
+    desc: '서비스 설명을 HTML 본문에 담고 제목·주소·내부 링크를 정리합니다. 검색 등록과 실제 색인·노출은 구분하며, 순위나 AI 추천은 보장하지 않습니다.',
   },
   {
     no: '강점 02',
@@ -67,20 +66,20 @@ const FEATURES = [
   {
     no: '강점 03',
     title: '간편한 수정·관리',
-    desc: '제작 후에도 AI 도구로 직접 수정이 가능해 운영 부담이 적습니다. 수정마다 비용이 청구되지 않습니다.',
+    desc: '텍스트·사진·연락처 수정과 배포 방법을 안내합니다. 직접 수정할 항목과 별도 개발이 필요한 기능 변경을 인수 때 구분합니다.',
   },
   {
     no: '강점 04',
     title: '합리적 가격',
-    desc: '검색 경쟁력은 갖추되 비용은 낮춥니다. 1회성 제작비만, 숨은 월정액 없이 투명하게.',
+    desc: '제작 범위와 금액을 먼저 정합니다. 호스팅·도메인 실비와 외부 서비스 사용료는 계약 전에 별도로 확인합니다.',
   },
 ];
 
 const INCLUDES = [
   { icon: 'mobile', title: '모바일 반응형 완전 지원', desc: '스마트폰·태블릿·PC에서 모두 깔끔하게' },
   { icon: 'search', title: '검색 노출 기본 세팅', desc: '메타 태그·구조화 데이터·사이트맵 기본 적용' },
-  { icon: 'code', title: '소스코드 전체 이관', desc: '완료 후 GitHub 저장소 + 소스코드 100% 이관' },
-  { icon: 'wallet', title: '월 관리비 없음', desc: '호스팅·도메인 외 별도 월정액 없음' },
+  { icon: 'code', title: '소스코드 전체 이관', desc: '완료 후 계약 범위의 GitHub 저장소·소스코드 이관' },
+  { icon: 'wallet', title: '유지보수 계약 선택', desc: '필수 월 유지보수 계약 없음 · 호스팅·도메인 등 외부 실비 별도' },
   { icon: 'edit', title: '직접 수정 교육 1회', desc: '텍스트·이미지·연락처 바꾸는 법 안내' },
   { icon: 'clock', title: '약 14일 납기', desc: '콘텐츠 확정 후 2주 내 오픈 목표' },
 ];
@@ -88,11 +87,11 @@ const INCLUDES = [
 const FAQS = [
   {
     q: '49만원에 정말 다 포함되나요?',
-    a: '490,000원입니다. 페이지 제작비·기본 디자인·검색 노출 기본 세팅·소스코드 이관·직접 수정 교육 1회가 포함됩니다. 호스팅·도메인은 실비로 별도이며 월 1~2만원 수준입니다.',
+    a: '490,000원입니다. 페이지 제작비·기본 디자인·검색 노출 기본 세팅·소스코드 이관·직접 수정 교육 1회가 포함됩니다. 호스팅·도메인은 선택한 업체와 요금제에 따른 실비로 별도입니다. 페이지 수·자료 작성·문의 처리 방식은 계약 전에 확정합니다.',
   },
   {
     q: '98만원 마케팅 패키지는 무엇이 다른가요?',
-    a: '기본 49만원 홈페이지에 더해, 지역·업종·분위기·가격 등 손님이 실제로 검색하는 키워드 조합을 분석해 검색 노출을 적극적으로 설계해 드립니다. 광고비 없이도 검색으로 손님이 찾아오는 구조를 한 번에 갖추고 싶은 분께 적합합니다.',
+    a: '기본 49만원 홈페이지에 더해 실제 서비스·지역 범위·비교 질문을 바탕으로 본문과 페이지 관계, 제목·설명·내부 링크를 설계합니다. 검색 등록 이후 색인과 문의 흐름을 확인할 항목을 정하며, 순위·유입·AI 추천을 보장하는 상품은 아닙니다.',
   },
   {
     q: '어떤 업종에 적합한가요?',
@@ -111,25 +110,25 @@ const FAQS = [
 /** '왜 름랩' 4대 설득 포인트 (유입 3초 설득) */
 const WHY_CHECKS = [
   { title: '추가금 없는 명확한 견적', desc: '처음 안내한 금액 그대로. 확정된 범위 안에서는 진행 중 비용이 늘지 않습니다.' },
-  { title: '검색노출을 고려한 구조 설계', desc: '예쁘기만 한 사이트가 아니라, 네이버·구글에 잡히도록 구조부터 설계합니다.' },
+  { title: '검색노출을 고려한 구조 설계', desc: '본문·제목·설명·내부 링크와 검색 등록에 필요한 구조를 확인합니다.' },
   { title: '직접 수정 가능한 홈페이지', desc: '소스코드 전체 이관 + 직접 수정 교육으로, 글자·이미지·연락처를 직접 고칩니다.' },
   { title: '문의가 생기는 동선 설계', desc: '방문자가 전화·예약까지 자연스럽게 이어지도록 전환 동선을 설계합니다.' },
 ];
 
-/** 성과 1위 비교 소재 — 일반 제작 vs 름랩 */
+/** 성과 1위 비교 소재 — 계약 전 확인할 항목 */
 const VS_ROWS = [
-  { other: '예쁜 디자인', reum: '문의 중심 설계' },
-  { other: '제작 후 끝', reum: '운영까지 고려' },
-  { other: '수정마다 비용', reum: '직접 수정 가능' },
-  { other: '검색 고려 X', reum: '검색노출 구조' },
-  { other: '기능 추가마다 비용', reum: '처음부터 필요한 기능 설계' },
+  { other: '페이지와 기능', reum: '페이지 수·자료 작성·문의 방식을 계약서에 명시' },
+  { other: '운영 인수', reum: '저장소 권한·배포·수정 방법 확인' },
+  { other: '변경 요청', reum: '포함 수정과 추가 기능의 견적 구분' },
+  { other: '검색 설정', reum: '본문·메타·사이트맵 확인, 노출 보장 제외' },
+  { other: '외부 비용', reum: '도메인·호스팅·외부 서비스 비용 확인' },
 ];
 
 const NP_POINTS = [
-  { title: '검색에 안 보이면 없는 가게나 마찬가지', desc: '직접 매장을 운영하며 가장 먼저 부딪힌 벽이었습니다' },
-  { title: '광고비만 매달 빠져나가는 부담', desc: '광고를 멈추면 손님도 끊기는 구조, 직접 겪어봤습니다' },
-  { title: '바빠서 홈페이지까지 챙길 시간이 없음', desc: '장사하면서 관리까지 하는 게 얼마나 버거운지 압니다' },
-  { title: '어려운 개발 용어는 하나도 안 와닿음', desc: '사장님 언어로 설명하고, 직접 고치기 쉽게 만듭니다' },
+  { title: '서비스·가격·영업시간 자료', desc: '공개할 메뉴와 가격 적용 조건, 휴무·예약 가능 시간을 준비합니다.' },
+  { title: '사진과 사용 권한', desc: '매장·상품·작업 사진의 원본과 게시 가능한 범위를 확인합니다.' },
+  { title: '문의 후 누가 답할지', desc: '전화·외부 예약 링크·문의 폼 중 필요한 경로와 응대 담당자를 정합니다.' },
+  { title: '변경과 인수 확인', desc: '연락처·사진 수정, 모바일 링크, 저장소 권한과 배포 방법을 함께 확인합니다.' },
 ];
 
 const SearchIcon = () => (
@@ -244,7 +243,7 @@ export default function SohoPage() {
     <>
       <LandingServiceJsonLd
         name="검색 노출되는 소상공인·자영업자 홈페이지 제작"
-        description="광고비 0원으로도 손님이 스스로 찾아오는 검색 최적화 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·월 관리비 없음."
+        description="서비스·가격·위치·문의 정보를 정리하는 소상공인 홈페이지. 소상공인·자영업자 전용 49만원부터, 검색 노출 설계 포함 마케팅 패키지 98만원. 소스코드 전체 이관·유지보수 선택·외부 실비 별도."
         serviceType="웹사이트 개발"
         url={PAGE_URL}
         crumbs={[
@@ -269,11 +268,11 @@ export default function SohoPage() {
                 둘째 줄에 같은 스타일로 유지 — 마크업 구조·클래스는 그대로다. */}
             <h1 className="s-h s-hero-h">
               소상공인 홈페이지 제작<br />
-              <span className="s-g">광고 없이 검색으로</span> 손님이 찾아오게
+              <span className="s-g">서비스·가격·위치를</span> 확인하고 문의하게
             </h1>
             <p className="s-lead">
-              광고비 0원으로도 손님이 스스로 찾아오는 구조,<br />
-              검색 최적화 홈페이지에서 시작됩니다.
+              메뉴와 이용 조건, 사진과 연락처를 한곳에.<br />
+              단일 브랜드 소개 홈페이지의 제작 범위를 함께 정합니다.
             </p>
 
             <div className="s-search" aria-hidden="true">
@@ -284,23 +283,17 @@ export default function SohoPage() {
             </div>
 
             <div className="s-chips">
-              {['소상공인 전용', '49만원 특가', '검색 노출 설계', '소스코드 이관', '월 관리비 없음'].map((t) => (
+              {['소상공인 전용', '49만원 특가', '검색 노출 설계', '소스코드 이관', '유지보수 선택·외부 실비 별도'].map((t) => (
                 <span key={t} className="s-chip">{t}</span>
               ))}
             </div>
 
             {/* 긴급성 프로모션 배너 + 카운트다운 (CTA 바로 위) */}
-            <div className="s-promo" role="note" aria-label="이번 달 한정 프로모션">
-              <Ico name="clock" className="s-promo-ic" />
-              <span className="s-promo-txt">
-                <b>이번 달 상담 고객 한정</b> · 정가 대비 <b className="s-promo-pct">50% 할인가</b>
-              </span>
-              <SohoCountdown />
-            </div>
+            <div className="s-promo" role="note" aria-label="패키지 범위 안내"><Ico name="clock" className="s-promo-ic" /><span className="s-promo-txt"><b>기본 49만원 · 마케팅 98만원</b> · 페이지와 자료 범위를 상담에서 확인합니다.</span></div>
 
             <div className="s-btns">
               <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_hero_apply">
-                지금 50% 할인가로 상담 신청
+                홈페이지 제작 범위 상담 신청
               </a>
               <a href={SITE.phoneHref} className="s-btn s-btn-ghost" data-analytics="cta_soho_hero_phone">
                 전화 상담
@@ -314,32 +307,16 @@ export default function SohoPage() {
           <div className="s-wrap">
             <p className="s-label">VISIBILITY</p>
             <h2 className="s-h">
-              검색에 안 보이는 업장은<br />
-              <span className="s-g">간판 없는 업장</span>입니다
+              방문자가 비교할 정보를<br />
+              <span className="s-g">먼저 확인하게</span> 만듭니다
             </h2>
-            <p className="s-lead">아무리 잘 만들어도, 안 보이면 없는 것과 같습니다.</p>
+            <p className="s-lead">방문자가 서비스와 이용 조건을 이해하고 문의할 수 있는지 확인합니다.</p>
 
-            <div className="s-ranks">
-              {[
-                { no: '1위', w: '88%', name: '경쟁 업장 A' },
-                { no: '2위', w: '72%', name: '경쟁 업장 B' },
-                { no: '3위', w: '58%', name: '경쟁 업장 C' },
-              ].map((r) => (
-                <div className="s-rank" key={r.no}>
-                  <span className="s-rank-no">{r.no}</span>
-                  <span className="s-rank-bar"><span style={{ width: r.w }} /></span>
-                  <span className="s-rank-name">{r.name}</span>
-                </div>
-              ))}
-              <div className="s-dots">· · ·</div>
-              <div className="s-rank is-us">
-                <span className="s-rank-no">48위</span>
-                <span className="s-rank-bar"><span style={{ width: '10%' }} /></span>
-                <span className="s-rank-name">우리 업장</span>
-              </div>
-            </div>
-          </div>
-        </section>
+            <div className="s-grid">
+              <article className="s-feat"><h3>서비스</h3><p>무엇을 제공하고 어떤 요청을 받지 않는지 구체적으로 설명합니다.</p></article>
+              <article className="s-feat"><h3>이용 조건</h3><p>가격에 포함된 범위·예약 방식·영업시간·위치를 표시합니다.</p></article>
+              <article className="s-feat"><h3>문의</h3><p>전화와 예약 링크를 모바일에서 확인하고 응대 담당자에게 연결합니다.</p></article>
+            </div></div></section>
 
         {/* ── 모든 검색어에 광고를 걸 수는 없습니다 ── */}
         <section className="s-sec t-light">
@@ -364,10 +341,10 @@ export default function SohoPage() {
           <div className="s-wrap">
             <p className="s-label">KEYWORD STRATEGY</p>
             <h2 className="s-h">
-              검색 키워드 조합으로<br />
-              <span className="s-g">노출 범위를 넓힙니다</span>
+              실제 서비스와 질문으로<br />
+              <span className="s-g">본문을 구성합니다</span>
             </h2>
-            <p className="s-lead">어떤 상황에서도 내 업장이 먼저 노출됩니다.</p>
+            <p className="s-lead">아래는 정보 구성 예시입니다. 실제 제공 지역·서비스·가격 조건을 작성하며 조합마다 중복 페이지를 만들지 않습니다.</p>
 
             <div className="s-combo">
               <div className="s-combo-col">
@@ -389,13 +366,13 @@ export default function SohoPage() {
             <div className="s-up">
               <div className="s-up-row">
                 <span className="s-up-tag">AI 검색</span>
-                <span className="s-up-desc">챗봇이 추천하는 업장으로 — 손님이 많이 묻는 곳</span>
-                <span className="s-up-badge">↑ UP</span>
+                <span className="s-up-desc">질문에 직접 답하고 사실을 확인할 근거와 출처 제공</span>
+                <span className="s-up-badge">구조 점검</span>
               </div>
               <div className="s-up-row">
                 <span className="s-up-tag">구글·네이버</span>
-                <span className="s-up-desc">지역 업종 검색 노출 선정 — 신규 유입을 끌어오는 곳</span>
-                <span className="s-up-badge">↑ UP</span>
+                <span className="s-up-desc">본문과 검색 설정 점검 · 색인과 노출은 검색 서비스가 결정</span>
+                <span className="s-up-badge">구조 점검</span>
               </div>
             </div>
           </div>
@@ -406,33 +383,17 @@ export default function SohoPage() {
           <div className="s-wrap">
             <p className="s-label">FELLOW OWNER</p>
             <h2 className="s-h">
-              직접 장사해본 개발자가,<br />
-              <span className="s-g">사장님 마음</span>으로 만듭니다
+              사업 자료로 범위를 정하고,<br />
+              <span className="s-g">운영 방법</span>을 넘깁니다
             </h2>
             <p className="s-lead">
-              옆의 네이버 플레이스, 제가 직접 운영하는 무인 렌탈스튜디오입니다. 저도 같은 자영업자라 검색에 안 보이는 답답함도, 광고비 부담도 직접 겪어봤습니다. 그래서 사장님 입장에서 꼭 필요한 것만 챙겨 만듭니다.
+              단일 브랜드 소개, 서비스 안내, 위치·문의 연결이 필요한 사업자에게 맞는 구성입니다. 준비된 자료와 운영 방식을 확인해 페이지 범위를 정합니다.
             </p>
 
             <div className="s-np-grid">
-              {/* 네이버 플레이스 검색 결과 스크린샷 (개발자 본인 매장) */}
-              <div className="np-shot-wrap">
-                <div className="np-shot">
-                  <img
-                    src="/soho/naver-place.png"
-                    alt="제가 직접 운영하는 무인 렌탈스튜디오 네이버 플레이스 노출 화면 (N pay·톡톡·24시간 영업·예약 할인 쿠폰·위치)"
-                    width={416}
-                    height={207}
-                    loading="lazy"
-                  />
-                </div>
-                <p className="np-cap">
-                  ↑ 제가 직접 운영하는 무인 렌탈스튜디오 — 검색 노출을 직접 만들어 본 매장입니다.
-                </p>
-              </div>
-
-              {/* 맞춤 체크리스트 */}
+              <div className="np-shot-wrap"><h3>소개 홈페이지와 업무 시스템은 범위가 다릅니다</h3><p>회원별 예약 현황, 실시간 재고, 온라인 결제·환불, 직원 권한 관리가 필요하면 별도 업무 시스템으로 범위와 견적을 확인합니다. 외부 예약 페이지로 이동하는 링크와 자체 예약 시스템 개발도 구분합니다.</p><p>홈페이지 인수 때는 휴대폰에서 메뉴·사진·전화 링크를 확인하고 수정 담당자와 계정 권한을 정합니다.</p></div>
               <ul className="np-points">
-                <li className="np-points-h">그래서, 사장님 마음을 압니다</li>
+                <li className="np-points-h">상담 전에 준비하면 좋은 자료</li>
                 {NP_POINTS.map((p) => (
                   <li className="np-point" key={p.title}>
                     <span className="np-ck" aria-hidden="true">✓</span>
@@ -455,7 +416,7 @@ export default function SohoPage() {
               <span className="s-nowrap">홈페이지는 한 번 쓰는 비용이 아니라</span><br />
               <span className="s-g">24시간 일하는 영업사원</span>입니다
             </h2>
-            <p className="s-lead">잘 만든 홈페이지는, 사장님이 자는 동안에도 손님을 데려옵니다.</p>
+            <p className="s-lead">영업시간 밖에도 서비스·가격·위치를 확인할 수 있도록 정보를 제공합니다.</p>
           </div>
         </section>
 
@@ -473,7 +434,7 @@ export default function SohoPage() {
               <div className="s-bubble left">“반응형이요? 도메인이요…?”</div>
               <div className="s-bubble right">“휴대폰에서도 잘 보이게 하고, 가게 주소처럼 쓰는 인터넷 주소예요.”</div>
               <div className="s-bubble left">“수정은 제가 못 하는데…”</div>
-              <div className="s-bubble right">“사진 한 장 바꾸듯 쉽게 고치실 수 있어요.”</div>
+              <div className="s-bubble right">“바꿀 항목과 배포 방법을 교육에서 함께 확인합니다.”</div>
             </div>
           </div>
         </section>
@@ -498,14 +459,14 @@ export default function SohoPage() {
           </div>
         </section>
 
-        {/* ── 왜 름랩 + 일반 제작 vs 름랩 비교 (성과 1위 소재) ── */}
+        {/* ── 왜 름랩 + 계약 전 확인할 항목 비교 (성과 1위 소재) ── */}
         <section className="s-sec t-light2 acc-green s-vs">
           <div className="s-wrap">
-            <p className="s-label">일반 제작 vs 름랩</p>
+            <p className="s-label">계약 전 확인할 항목</p>
             <h2 className="s-h">
               왜 <span className="s-g">름랩</span>이어야 할까요?
             </h2>
-            <p className="s-lead">수많은 홈페이지 제작 업체 중에, 름랩은 다르게 만듭니다.</p>
+            <p className="s-lead">업체를 비교할 때 같은 범위와 인수 조건을 기준으로 확인하세요.</p>
 
             <ul className="s-why-list">
               {WHY_CHECKS.map((c) => (
@@ -521,7 +482,7 @@ export default function SohoPage() {
 
             <div className="s-vs-board">
               <div className="s-vs-head">
-                <div className="s-vs-hc other">일반 제작</div>
+                <div className="s-vs-hc other">확인 항목</div>
                 <div className="s-vs-hc reum">
                   름랩<span className="s-vs-badge">REUMLAB</span>
                 </div>
@@ -529,7 +490,7 @@ export default function SohoPage() {
               {VS_ROWS.map((r) => (
                 <div className="s-vs-row" key={r.other}>
                   <div className="s-vs-cell other">
-                    <span className="s-vs-x" aria-hidden="true">✕</span>
+                    <span className="s-vs-x" aria-hidden="true">·</span>
                     {r.other}
                   </div>
                   <div className="s-vs-cell reum">
@@ -542,7 +503,7 @@ export default function SohoPage() {
 
             <div className="s-btns" style={{ marginTop: 30 }}>
               <a href="#apply" className="s-btn s-btn-main" data-analytics="cta_soho_vs_apply">
-                이번 달 한정 50% 할인가로 상담받기 →
+                페이지와 운영 범위 상담받기 →
               </a>
             </div>
           </div>
@@ -558,26 +519,17 @@ export default function SohoPage() {
             </h2>
 
             {/* 이번 달 한정 50% 할인 프로모션 + 카운트다운 */}
-            <div className="s-price-promo" role="note">
-              <Ico name="clock" className="s-promo-ic" />
-              <span>
-                <b>이번 달 상담 고객 한정</b> · 아래 가격은 정가 대비{' '}
-                <b className="s-promo-pct">50% 할인가</b>
-              </span>
-              <SohoCountdown className="s-cd--gold" />
-            </div>
+            <div className="s-price-promo" role="note"><span>페이지 수·자료 작성·외부 연동 범위를 확인한 뒤 최종 견적과 일정을 확정합니다.</span></div>
 
             <div className="s-prices">
               <div className="s-price">
                 <span className="s-price-tag">기본</span>
                 <h3>홈페이지 제작</h3>
-                <p className="s-price-sub">검색에 잘 잡히는 기본 웹사이트</p>
+                <p className="s-price-sub">서비스·위치·문의 정보와 기본 검색 설정</p>
                 <div className="s-price-amt">
-                  <span className="s-price-was">98만원</span>
                   <span className="s-price-now">49<small>만원</small></span>
-                  <span className="s-price-off">50%↓</span>
                 </div>
-                <p className="s-price-note">이번 달 한정가 · 1회성 · 호스팅·도메인 별도</p>
+                <p className="s-price-note">1회성 제작비 · 호스팅·도메인 별도</p>
               </div>
 
               <div className="s-price is-feature">
@@ -585,11 +537,9 @@ export default function SohoPage() {
                 <h3>홈페이지 + 검색 노출 설계</h3>
                 <p className="s-price-sub">네이버·구글·AI 검색까지 함께</p>
                 <div className="s-price-amt">
-                  <span className="s-price-was">196만원</span>
                   <span className="s-price-now">98<small>만원</small></span>
-                  <span className="s-price-off">50%↓</span>
                 </div>
-                <p className="s-price-note">이번 달 한정가 · 기본 대비 +49만원으로 노출까지 한 번에</p>
+                <p className="s-price-note">기본 대비 +49만원 · 본문과 검색 구조 설계</p>
               </div>
             </div>
 
@@ -653,9 +603,9 @@ export default function SohoPage() {
 
             <ul className="s-trust" aria-label="신뢰 포인트">
               <li><Ico name="chat" /> 상담 무료</li>
-              <li><Ico name="ban" /> 월 관리비 없음</li>
+              <li><Ico name="ban" /> 유지보수 선택·외부 실비 별도</li>
               <li><Ico name="code" /> 소스코드 이관</li>
-              <li><Ico name="store" /> 개발자가 직접 매장 운영</li>
+              <li><Ico name="store" /> 직접 수정 교육 1회</li>
             </ul>
 
             <SohoForm />

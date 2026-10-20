@@ -18,7 +18,7 @@ export default function LandingPage({ slug }) {
   const hub = landing.hubId ? getHubBySlug(landing.hubId) : null;
 
   const stats = [
-    ['100%', '소스코드 이관'],
+    ['계약 범위', '소스코드 이관'],
     ['0원', '월 관리비'],
     ['1:1', '단일 창구 소통'],
     ['전국', '어디서나 진행'],
@@ -92,7 +92,7 @@ export default function LandingPage({ slug }) {
       <section className="border-y border-slate-100 bg-slate-50 px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900 sm:text-3xl">
-            {c.serviceLabel}에 포함되는 것
+            {c.scopeHeading || `${c.serviceLabel}에 포함되는 것`}
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {c.deliverables.map((d) => (

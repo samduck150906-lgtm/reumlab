@@ -1,0 +1,72 @@
+{
+  "reviewedAt": "2026-10-20",
+  "scope": "reumlab repository only; local static out and source code",
+  "artifactStage": "first out before final merged content build",
+  "limitations": [
+    "These passing results describe the first out, not the final content build or deployed site.",
+    "The scripts' unsupported-claim checks use known patterns and do not establish factual evidence for customer achievements.",
+    "HTTP response status, Netlify form storage, email delivery, search-engine indexing and analytics ingestion were not verified.",
+    "No real form submissions, browser operations or external account changes were made."
+  ],
+  "checks": [
+    {
+      "command": "node scripts/audit-indexability.mjs out --json docs/execution-20261020/first-out-indexability.json",
+      "exitCode": 0,
+      "log": "first-out-indexability.log",
+      "inventory": "first-out-indexability.json",
+      "result": {"index":823,"noindex":566,"system":5,"sitemap":823,"canonicalErrors":0,"titleDuplicateGroups":0,"descriptionDuplicateGroups":0,"h1DuplicateGroups":0,"brokenInternalLinks":0,"orphanIndexPages":0,"redirectChains":0,"redirectLoops":0}
+    },
+    {
+      "command": "node scripts/qa-final.mjs out",
+      "exitCode": 0,
+      "log": "first-out-qa.log",
+      "result": {"jsonLdSyntaxErrors":0,"breadcrumbErrors":0,"brokenAnchors":0,"unreachableFromHome":0,"maxDepth":3,"hiddenTextFlags":0,"publicSensitiveFiles":0}
+    },
+    {
+      "command": "node scripts/verify-conversion.mjs out",
+      "exitCode": 0,
+      "log": "first-out-conversion.log",
+      "result": {"indexedPages":823,"pagesWithForms":56,"duplicateAnalyticsInstalls":0,"conversionBeforeSuccessFlags":0,"piiEventFlags":0,"staticFormSchemaIssues":0}
+    },
+    {
+      "command": "node scripts/verify-portfolio.mjs out",
+      "exitCode": 0,
+      "log": "first-out-portfolio.log",
+      "result": {"projects":15,"detailPages":15,"hubLinks":15,"missingOriginalFields":0,"consistencyErrors":0}
+    },
+    {
+      "command": "node scripts/verify-pricing.mjs out",
+      "exitCode": 0,
+      "log": "first-out-pricing.log",
+      "result": {"htmlPages":1394,"retiredPriceOccurrences":0,"homePricingConsistency":"passed"}
+    },
+    {
+      "command": "node scripts/verify-sitemap.mjs out",
+      "exitCode": 0,
+      "log": "first-out-sitemap.log",
+      "result": "Sitemap and robots checks passed"
+    }
+  ],
+  "sourceFormReview": {
+    "findings": [
+      "Both handlers require res.ok before success UI and conversion events.",
+      "The static form lacked a timeout and could leave the button locked on a stalled request.",
+      "The React form called fbq without isolation, so a pixel exception could change an already accepted submission into an error UI."
+    ],
+    "changes": [
+      "Static form aborts after 20 seconds, preserves user input and unlocks the button.",
+      "Timeout text says the request may already have been received and asks users to confirm before resubmitting.",
+      "React pixel exceptions no longer affect submission success."
+    ],
+    "tests": [
+      {"command":"node --import tsx --test scripts/inquiry-transport.test.mts","passed":8,"failed":0,"log":"inquiry-transport-test.log","method":"Execute real legacy and React submit handlers with mock DOM and mock fetch; exercise HTTP success, HTTP error, network rejection, timeout, duplicate click, pixel failure and input preservation."},
+      {"command":"node --import tsx --test scripts/seo-website-inquiry.test.mts scripts/multimodal-inquiry.test.mts scripts/enternal-ai-inquiry.test.mts","passed":8,"failed":0,"log":"inquiry-regression-test.log","method":"Existing form field, routing and privacy regressions."}
+    ],
+    "serverAcceptanceStatus": "Not tested against Netlify; mock HTTP success only. A 2xx code alone is not independent evidence that a production submission was stored."
+  },
+  "nextRequired": [
+    "Parent rebuilds final source and reruns relevant static audits.",
+    "Deployment and live response verification must be reported separately from source and first-out verification.",
+    "Portfolio performance and customer implementation evidence remains pending as recorded in portfolio-policy-review.json."
+  ]
+}

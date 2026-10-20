@@ -87,7 +87,7 @@ export default function CostHubPage() {
             <p className="hub-intro" style={{ marginTop: 12 }}>
               같은 &lsquo;앱 개발&rsquo;이라도 업종마다 비용을 좌우하는 요인이 다릅니다. 병원은 전자차트 연동, 커머스는 결제·정산, 학원은 알림 발송량이
               비용의 핵심 변수입니다. 아래에서 업종을 골라 간단형·표준형·고급형 가격대와 비용 요인, 절감 방법을 확인하세요. 모든 견적은 VAT 포함
-              정액으로 상담 단계에서 먼저 공개하고, 소스코드 이관·월 관리비 없음이 기본입니다.
+              기준으로 범위를 확인한 뒤 확정합니다. 소스코드 이관과 함께 운영 실비·선택 유지보수·추가 개발을 구분합니다.
             </p>
             <div className="cta-buttons" style={{ marginTop: 20 }}>
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_cost_hub_call">
@@ -97,6 +97,11 @@ export default function CostHubPage() {
                 패키지 요금 보기
               </Link>
             </div>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>같은 조건으로 견적을 비교하려면</h2>
+            <p className="hub-intro">사용자·운영자 화면, 1차에 처리할 업무, 취소·환불 같은 예외, 이전할 자료, 외부 API·장비를 함께 정리하세요. 각 업종 페이지의 가격대는 범위별 안내이며 시장 평균이나 모든 기능을 포함한 확정 총액이 아닙니다. 호스팅·도메인·문자·API·PG 수수료와 선택 유지보수는 제작비와 별도로 비교합니다.</p>
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
@@ -147,7 +152,7 @@ export default function CostHubPage() {
           </div>
 
           <div className="cta" style={{ marginTop: 24 }}>
-            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>정확한 견적, 30분이면 나옵니다</h2>
+            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>업무 범위를 확인한 뒤 견적을 안내합니다</h2>
             <p className="hub-intro">기획서가 없어도 업종과 꼭 필요한 기능만 알려 주시면 범위에 맞는 정액 견적을 안내해 드립니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_cost_hub_call_bottom">

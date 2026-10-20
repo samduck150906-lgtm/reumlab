@@ -97,7 +97,7 @@ export default function SeoWebsitePage() {
 
         <section className={styles.section}>
           <div className={styles.wrap}>
-            <header className={styles.sectionHeader}><h2>우리 업종에는 어떤 홈페이지가 필요할까요?</h2><p>기존에 살아 있는 업종 URL은 유지하고, 각 업종 고객이 실제로 비교할 정보만 보강합니다.</p></header>
+            <header className={styles.sectionHeader}><h2>우리 업종에는 어떤 홈페이지가 필요할까요?</h2><p>고객이 비교하는 서비스 범위, 준비 자료, 예약·견적 조건은 업종마다 다릅니다. 업종별 안내에서 필요한 페이지 구성과 문의 항목을 확인하세요.</p></header>
             <div className={styles.grid2}>{SEO_WEBSITE_INDUSTRIES.map((industry) => <article className={styles.card} key={industry.pageId}><h3>{industry.label} 홈페이지 제작</h3><p>{industry.summary}</p><Link href={industry.href}>{industry.label} 구성 확인하기 →</Link></article>)}</div>
           </div>
         </section>

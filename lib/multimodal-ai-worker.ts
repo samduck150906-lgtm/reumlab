@@ -115,7 +115,7 @@ export const MULTIMODAL_PERMISSIONS: MultimodalPermission[] = [
 ];
 
 export const MULTIMODAL_CONNECTIONS = [
-  { title: 'API 우선', detail: '공식 API가 있으면 인증·권한·오류 처리가 명확한 API 연동을 먼저 사용합니다.' },
+  { title: 'API 우선', detail: '공식 API의 계약상 허용 범위, 계정 권한·버전·호출 제한을 확인한 뒤 API 연동을 우선 검토합니다.' },
   { title: '데이터베이스·파일 연동', detail: '승인된 DB, 웹훅, CSV 또는 문서 저장소로 읽기·쓰기 범위를 분리합니다.' },
   { title: '조건부 Computer Use', detail: 'API가 없을 때만 제한된 계정과 단계별 확인을 두고 화면 조작을 검토합니다.' },
 ];

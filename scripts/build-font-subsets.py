@@ -88,6 +88,19 @@ def used_codepoints() -> set[int]:
                 for _, value in CSS_CONTENT.findall(path.read_text(encoding="utf-8", errors="ignore")):
                     seen.update(ord(ch) for ch in _unescape_css(value) if ord(ch) > 0x20)
     print(f"  검사한 산출물 {files:,}개")
+    # Include newly edited source before the next export. This optional preview
+    # prevents a second full build solely to add a handful of new Korean glyphs.
+    if "--include-sources" in sys.argv:
+        sources = [ROOT / "index.html", ROOT / "script.js",
+                   ROOT / "scripts/generate-purpose-landings.mjs"]
+        for folder in ("app", "components", "lib"):
+            sources.extend(p for p in (ROOT / folder).rglob("*")
+                           if p.suffix in (".ts", ".tsx", ".js", ".jsx"))
+        for source in sources:
+            if source.exists():
+                seen.update(ord(ch) for ch in source.read_text(encoding="utf-8")
+                            if ord(ch) > 0x20)
+        print(f"  새 콘텐츠 소스 {len(sources):,}개 포함")
     return seen
 
 
@@ -128,7 +141,11 @@ def main() -> None:
     sub = TTFont(DEST)
     axes = [(a.axisTag, a.minValue, a.maxValue) for a in sub["fvar"].axes]
     assert axes, "서브셋에서 가변 축(fvar)이 사라졌습니다"
-    assert set(sub.getBestCmap().keys()) == subset, "서브셋 cmap 이 요청한 집합과 다릅니다"
+    actual_subset = set(sub.getBestCmap().keys())
+    # fontTools may retain an extra Unicode alias through glyph closure.
+    # Every requested character must survive; CSS describes the actual cmap.
+    assert subset <= actual_subset <= full, "서브셋 cmap 에 요청한 글자가 없거나 원본 밖 글자가 있습니다"
+    subset = actual_subset
 
     # 원본 face 의 범위는 "폰트 cmap 전체"다. 서브셋을 뺀 차집합이 아니다.
     #   · 서브셋이 나중에 선언되므로 겹치는 글자는 서브셋이 이긴다(중복이 무해).

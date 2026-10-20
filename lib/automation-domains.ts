@@ -1,5 +1,6 @@
 import { decideFromContent, type IndexDecision } from './index-quality';
 import { SITE } from './seo';
+import { AUTOMATION_WORKFLOWS } from './automation-workflows';
 
 export type AutomationPriority = 'S' | 'A' | 'B';
 export type AutomationPublishMode = 'generated' | 'existing' | 'research-only';
@@ -159,7 +160,7 @@ function workflowsFor(name: string, tasks: string[], tools: string[]): Automatio
 function faqsFor(name: string, tools: string[], constraint: string): AutomationFaq[] {
   return [
     { q: `${name}은 어디까지 자동화할 수 있나요?`, a: `반복 규칙이 있고 입력과 결과를 확인할 수 있는 업무부터 자동화할 수 있습니다. ${tools.slice(0, 3).join('·')}의 실제 사용 과정과 예외를 확인한 뒤 자동 처리와 사람 검수 범위를 나눕니다.` },
-    { q: '현재 쓰는 프로그램을 바꿔야 하나요?', a: '대부분은 기존 프로그램을 유지하고 공식 API, SDK, 플러그인, 파일 import/export 순서로 연결 가능성을 검토합니다. 새 시스템은 기존 도구로 처리하기 어려운 단계에만 추가합니다.' },
+    { q: '현재 쓰는 프로그램을 바꿔야 하나요?', a: '기존 프로그램을 유지할 수 있는지 공식 API, SDK, 플러그인, 파일 import/export 순서로 연결 가능성을 검토합니다. 새 시스템은 기존 도구로 처리하기 어려운 단계에만 추가하며, 계약·라이선스와 계정 권한도 확인합니다.' },
     { q: '공식 API가 없어도 자동화할 수 있나요?', a: '가능한 경우가 있지만 먼저 파일 교환과 플러그인 방식을 검토합니다. 브라우저나 데스크톱 조작이 필요하면 화면 변경과 오류에 취약하므로 감시·중단·수동 복구 절차를 함께 둡니다.' },
     { q: 'AI가 결과를 전부 확정하나요?', a: '아닙니다. 분류·초안·후보 생성은 자동화하되 금액, 계약, 법적 판단, 외부 발송처럼 영향이 큰 단계는 확인 버튼이나 담당자 승인 뒤 실행하도록 설계합니다.' },
     { q: '개발 비용과 기간은 어떻게 정해지나요?', a: '연동할 프로그램, 입력 데이터 상태, 처리 건수, 예외 수, 승인 단계, 배포 환경을 확인한 뒤 견적과 기간을 산정합니다. 확인 전 임의의 고정 가격을 제시하지 않습니다.' },
@@ -195,7 +196,7 @@ function buildDomain(seed: DomainSeed): AutomationDomain {
     tools,
     tasks,
     implementationTypes: ['API·Webhook 연동', '웹·데스크톱 업무 도구', 'AI 분류·생성 + 사람 검수', '배치 처리·운영 로그'],
-    workflows: workflowsFor(name, tasks, tools),
+    workflows: AUTOMATION_WORKFLOWS[slug] ?? workflowsFor(name, tasks, tools),
     constraints,
     faqs: faqsFor(name, tools, domainConstraint),
     relatedDomains: relatedFor(seed),
@@ -242,6 +243,7 @@ export function automationDistinctiveBodyParts(domain: AutomationDomain): string
     ...domain.tools,
     ...domain.tasks,
     ...domain.constraints,
+    ...domain.workflows.flatMap((flow) => [flow.title, flow.input, flow.process, flow.output, flow.humanReview]),
   ];
 }
 

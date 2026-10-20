@@ -232,7 +232,7 @@ const WEB_PACKAGES: Pkg[] = [
     tier: '웹 스타터',
     summary: '원페이지로 가볍게 시작하는 분',
     bullets: ['원페이지 랜딩 · 모바일 반응형', '문의·예약 CTA 연결', '소스코드 이관 · AI 수정 교육 1회'],
-    priceWon: 490_000,
+    priceWon: 980_000,
     durationDays: 5,
   },
   {
@@ -240,7 +240,7 @@ const WEB_PACKAGES: Pkg[] = [
     tier: '웹 + 강력 마케팅',
     summary: '만들자마자 검색·광고로 손님을 부르고 싶은 분',
     bullets: ['전환 카피 설계 + 기본 SEO', 'GA·픽셀 세팅 + 광고 소재 1세트', '소스코드 이관 · AI 수정 교육 1회'],
-    priceWon: 980_000,
+    priceWon: 1_960_000,
     durationDays: 10,
     featured: true,
     badge: '대표 추천',
@@ -250,7 +250,7 @@ const WEB_PACKAGES: Pkg[] = [
     tier: '웹 비즈니스',
     summary: '페이지가 여러 개인 정식 비즈니스 웹',
     bullets: ['멀티페이지(5p 내외) + 블로그', '예약·문의 + 간단 CMS · 기본 SEO', '소스코드 이관 · AI 운영 1:1 교육'],
-    priceWon: 1_900_000,
+    priceWon: 3_800_000,
     durationDays: 14,
   },
   {
@@ -258,7 +258,7 @@ const WEB_PACKAGES: Pkg[] = [
     tier: '웹 프리미엄',
     summary: '관리자·외부 연동까지 필요한 웹앱',
     bullets: ['고도화 웹앱 + 관리자 페이지', '외부 연동(결제·지도·메일 1~2종)', '소스코드 이관 · AI 운영 교육'],
-    priceWon: 2_900_000,
+    priceWon: 5_800_000,
     durationDays: 21,
   },
 ];
@@ -270,7 +270,7 @@ const APP_PACKAGES: Pkg[] = [
     tier: '앱 라이트 MVP',
     summary: '앱도 부담 없이 시장부터 검증',
     bullets: ['핵심 화면 3~5개 · 기본 데이터 연동', '문의·예약 흐름', '소스코드 이관 · AI 운영 1:1 교육'],
-    priceWon: 2_900_000,
+    priceWon: 5_800_000,
     durationDays: 14,
   },
   {
@@ -278,17 +278,17 @@ const APP_PACKAGES: Pkg[] = [
     tier: '앱 스탠다드',
     summary: '회원·결제까지 갖춘 본격 앱 MVP',
     bullets: ['회원/로그인 + DB + 결제 또는 예약', '기본 관리자 + 실행·수정 가이드', '소스코드 이관 · AI 운영 1:1 교육'],
-    priceWon: 4_900_000,
+    priceWon: 9_800_000,
     durationDays: 21,
     featured: true,
-    badge: '가장 많이 선택',
+    badge: '회원·결제 구성',
   },
   {
     code: 'app-ai',
     tier: '앱 AI',
     summary: 'AI 기능으로 운영까지 자동화',
     bullets: ['스탠다드 + AI 기능 1종(챗봇·추천·요약)', '업무 자동화 협의', '소스코드 이관 · AI 운영 교육'],
-    priceWon: 6_900_000,
+    priceWon: 13_800_000,
     durationDays: 30,
   },
   {
@@ -296,18 +296,18 @@ const APP_PACKAGES: Pkg[] = [
     tier: '앱 프리미엄',
     summary: '다기능 · AI 고도화 + 외부 연동 다수',
     bullets: ['멀티 기능 + AI 고도화', '운영·관리자 흐름 + 외부 연동 다수', '소스코드 이관 · AI 운영 교육'],
-    priceWon: 9_900_000,
+    priceWon: 19_800_000,
     durationDays: 45,
   },
 ];
 
-/** 정액제 vs 일반 외주 — 범위·금액 선확정 비교 (사실 기반 포지셔닝) */
+/** 정액제 vs 계약 전 확인할 항목 — 범위·금액 선확정 비교 (사실 기반 포지셔닝) */
 const COMPARE_ROWS = [
-  { label: '가격 공개', reum: 'VAT 포함 정액 선공개', other: '견적 전까지 비공개' },
-  { label: '소스코드', reum: '전체 이관 · 대표님 소유', other: '미제공·부분 제공 잦음' },
-  { label: '수정 비용', reum: '직접 수정 교육으로 최소화', other: '수정마다 견적·과금' },
-  { label: '월 관리비', reum: '없음', other: '매월 고정 청구 잦음' },
-  { label: '납품 후', reum: '직접 운영 1:1 교육', other: '문의 시 추가 비용' },
+  { label: '가격 공개', reum: 'VAT 포함 정액 선공개', other: 'VAT·포함 범위·추가 비용' },
+  { label: '소스코드', reum: '전체 이관 · 대표님 소유', other: '소스·저장소·라이선스의 이관 범위' },
+  { label: '수정 비용', reum: '직접 수정 교육으로 최소화', other: '하자 수정과 추가 기능의 구분' },
+  { label: '운영 비용', reum: '외부 실비·선택 유지보수 별도', other: '호스팅·도메인·API 등 실비와 유지보수 계약' },
+  { label: '납품 후', reum: '직접 운영 1:1 교육', other: '지원 기간·유지보수 비용' },
 ] as const;
 
 /**
@@ -826,13 +826,13 @@ export default function ReumSalesLanding(_props: { site: Site }) {
             <PricingLine label="앱(App) 라인" caption="Flutter로 iOS·안드로이드 동시 — 기능 깊이로 선택" packages={APP_PACKAGES} />
           </div>
 
-          {/* 범위·금액 선확정 — 정액제 vs 일반 외주 비교 */}
+          {/* 범위·금액 선확정 — 정액제 vs 계약 전 확인할 항목 비교 */}
           <div className="mt-16">
             <h3 className="text-center font-display text-lg font-bold text-white sm:text-xl">정액제가 남기는 차이</h3>
             <p className="mt-2 text-center text-sm text-slate-300">같은 결과물이라도, 끝까지 남는 비용이 다릅니다.</p>
             <div className="mt-6 overflow-x-auto rounded-2xl border border-white/10 bg-navy-900/40">
               <table className="w-full min-w-[560px] border-collapse text-left text-sm">
-                <caption className="sr-only">름랩 정액제와 일반 외주 비교</caption>
+                <caption className="sr-only">름랩 정액제와 계약 전 확인할 항목 비교</caption>
                 <thead>
                   <tr className="border-b border-white/10 bg-navy-850/60">
                     <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
@@ -842,7 +842,7 @@ export default function ReumSalesLanding(_props: { site: Site }) {
                       름랩
                     </th>
                     <th scope="col" className="px-4 py-3 font-display text-xs font-semibold uppercase tracking-wider text-slate-400 sm:px-5">
-                      일반 외주
+                      계약 전 확인할 항목
                     </th>
                   </tr>
                 </thead>
@@ -890,7 +890,7 @@ export default function ReumSalesLanding(_props: { site: Site }) {
                 <span className="text-amber-700">VAT 포함 98만원</span> 홈페이지가 따로 있습니다
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-600 max-w-lg">
-                음식점·카페·학원·뷰티 등 단일 브랜드 자영업자 전용. 네이버·구글 검색 노출 설계 + 모바일 반응형 · 소스코드 전체 이관 · 월 관리비 없음.
+                음식점·카페·학원·뷰티 등 단일 브랜드 자영업자 전용. 네이버·구글 검색 노출 설계 + 모바일 반응형 · 소스코드 전체 이관. 외부 서비스 실비와 선택 유지보수는 별도입니다.
               </p>
             </div>
             <Link

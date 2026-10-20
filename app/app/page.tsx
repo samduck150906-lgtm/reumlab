@@ -15,9 +15,9 @@ const CANONICAL = `${SITE.domain}/app/`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.domain),
-  title: { absolute: '업종별 앱 개발 100개 업종 | 기능·비용·솔루션 한눈에 — 름랩' },
+  title: { absolute: '업종별 앱 개발 | 기능·비용·솔루션 한눈에 — 름랩' },
   description:
-    '병원·학원·헬스장·카페·쇼핑몰부터 법무·세무·부동산까지 100개 업종별 앱 개발 가이드. 업종마다 무엇을 만드나(기능)·얼마가 드나(비용)·어떻게 구축하나(솔루션)를 정리했습니다. Flutter MVP·소스코드 이관·직접 운영.',
+    '병원·학원·헬스장·카페·쇼핑몰부터 법무·세무·부동산까지 업종별 앱 개발 가이드. 업종마다 무엇을 만드나(기능)·얼마가 드나(비용)·어떻게 구축하나(솔루션)를 정리했습니다. Flutter MVP·소스코드 이관·직접 운영.',
   keywords: ['업종별 앱개발', '업종별 앱 제작', '업종 맞춤 앱', '앱개발 외주', '업종별 솔루션', 'MVP 개발'],
   alternates: { canonical: CANONICAL },
   openGraph: {
@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     url: CANONICAL,
     siteName: SITE.name,
-    title: '업종별 앱 개발 100개 업종 | 름랩',
+    title: '업종별 앱 개발 | 름랩',
     description: '업종마다 기능·비용·솔루션을 정리한 업종별 앱 개발 인덱스. Flutter MVP·소스코드 이관.',
     images: [{ url: SITE.defaultOgImage, width: 1200, height: 630, alt: '업종별 앱 개발 — 름랩' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '업종별 앱 개발 100개 업종 | 름랩',
+    title: '업종별 앱 개발 | 름랩',
     description: '업종마다 기능·비용·솔루션을 정리한 업종별 앱 개발 인덱스.',
     images: [SITE.defaultOgImage],
   },
@@ -86,11 +86,11 @@ export default function IndustryHubPage() {
           <div className="section-inner">
             <p className="section-tag">업종 인덱스</p>
             <h1 className="section-title" style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.1rem)' }}>
-              업종별 앱 개발 — 100개 업종 맞춤 MVP·솔루션
+              업종별 앱 개발 — 업종 맞춤 MVP·솔루션
             </h1>
             <p className="hub-intro" style={{ marginTop: 12 }}>
               름랩은 업종마다 실제 운영 흐름이 다르다는 전제에서 출발합니다. 병원·학원·헬스장·카페·쇼핑몰부터
-              법무·세무·부동산·제조까지, 100개 업종별로 무엇을 만들고(기능) 얼마가 들며(비용) 어떻게 구축하는지(솔루션)를
+              법무·세무·부동산·제조까지, 업종별로 무엇을 만들고(기능) 얼마가 들며(비용) 어떻게 구축하는지(솔루션)를
               나눠 정리했습니다. 아래에서 업종을 골라 세 관점을 함께 확인하세요.
             </p>
             <ul className="hub-intro" style={{ marginTop: 14, paddingLeft: 18, lineHeight: 2 }}>
