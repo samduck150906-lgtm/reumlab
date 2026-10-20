@@ -1,0 +1,1324 @@
+{
+  "updatedAt": "2026-10-20T10:44:08.633Z",
+  "pages": [
+    {
+      "url": "https://reumlab.com/development-agency/",
+      "clusterIds": [
+        "navigation-hub"
+      ],
+      "primaryKeyword": "업무별 개발 범위 안내",
+      "searchIntent": "특정 업무의 개발 안내를 찾아 필요한 자료·역할·오류 처리·인수 기준을 정하기",
+      "industry": "개발을 의뢰하는 사업자와 운영 담당자",
+      "serviceAxis": "업무별 개발 범위",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/cms-website-development/",
+      "clusterIds": [
+        "generic-cms"
+      ],
+      "primaryKeyword": "CMS 홈페이지 제작",
+      "searchIntent": "작성·검수·게시·복원까지 운영할 콘텐츠 관리 홈페이지의 구축 범위 결정",
+      "industry": "콘텐츠를 직접 운영하는 기업",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/multilingual-website-development/",
+      "clusterIds": [
+        "generic-multilingual-site"
+      ],
+      "primaryKeyword": "다국어 홈페이지 제작",
+      "searchIntent": "언어별 원고·주소·승인·문의 운영을 포함한 다국어 홈페이지 구축 범위 비교",
+      "industry": "여러 언어로 제품과 서비스를 안내하는 기업",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/headless-wordpress-development/",
+      "clusterIds": [
+        "generic-headless-wordpress"
+      ],
+      "primaryKeyword": "헤드리스 워드프레스 개발",
+      "searchIntent": "워드프레스 편집을 유지하며 공개 화면을 분리할 때의 이전·게시·복구 범위 판단",
+      "industry": "기존 WordPress 콘텐츠 운영 조직",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/server-hosting-migration/",
+      "clusterIds": [
+        "generic-server-migration"
+      ],
+      "primaryKeyword": "서버 이전 업체",
+      "searchIntent": "운영 서비스를 다른 호스팅으로 옮길 때 자료 동기화·전환·복귀·검수 범위 결정",
+      "industry": "운영 중인 웹·업무 시스템",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/existing-codebase-audit/",
+      "clusterIds": [
+        "generic-code-audit",
+        "generic-qa"
+      ],
+      "primaryKeyword": "기존 소스코드 점검",
+      "searchIntent": "서비스 인수·유지보수 전에 빌드와 대표 업무를 재현하고 결함·제약·수정 우선순위를 판단",
+      "industry": "외주 결과물을 인수하거나 기존 서비스를 이어받는 조직",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app-store-launch-support/",
+      "clusterIds": [
+        "generic-store-launch"
+      ],
+      "primaryKeyword": "앱스토어 등록 대행",
+      "searchIntent": "이미 개발된 앱의 빌드와 계정을 인수해 스토어 제출 범위와 책임을 정하는 구매 의도",
+      "industry": "공통",
+      "serviceAxis": "앱 출시·운영 인수",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/pwa-web-app-development/",
+      "clusterIds": [
+        "generic-pwa"
+      ],
+      "primaryKeyword": "PWA 개발",
+      "searchIntent": "기존 웹서비스의 설치·오프라인·자료 동기화·캐시 갱신 조건을 따로 설계하려는 구매 의도",
+      "industry": "공통",
+      "serviceAxis": "설치형 웹앱·오프라인",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/map-location-based-app-development/",
+      "clusterIds": [
+        "generic-map"
+      ],
+      "primaryKeyword": "지도기반앱개발",
+      "searchIntent": "주소·현재 위치·지도 검색을 기존 또는 신규 서비스에 연결할 때 자료 품질과 권한 및 검수 범위를 결정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "지도·위치 검색",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/social-login-integration/",
+      "clusterIds": [
+        "generic-social-login"
+      ],
+      "primaryKeyword": "소셜로그인연동",
+      "searchIntent": "기존 회원 자료를 보존하면서 외부 로그인 수단의 연결·해제·복구와 보안을 구현하려는 의도",
+      "industry": "공통",
+      "serviceAxis": "회원 인증·계정 연결",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/analytics-tracking-implementation/",
+      "clusterIds": [
+        "generic-analytics"
+      ],
+      "primaryKeyword": "GA4연동",
+      "searchIntent": "사이트의 행동과 실제 접수 결과를 구분하는 이벤트 계약과 동의·검수·게시 인수 체계를 구현하려는 의도",
+      "industry": "공통",
+      "serviceAxis": "이벤트 측정·태그 구현",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/api-integration-development/",
+      "clusterIds": [
+        "generic-api"
+      ],
+      "primaryKeyword": "API연동개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/contract-management-system-development/",
+      "clusterIds": [
+        "generic-contract-system"
+      ],
+      "primaryKeyword": "전자계약시스템개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/custom-crm-development/",
+      "clusterIds": [
+        "generic-crm"
+      ],
+      "primaryKeyword": "CRM개발업체",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/inventory-management-system-development/",
+      "clusterIds": [
+        "generic-inventory"
+      ],
+      "primaryKeyword": "재고관리시스템개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/order-management-system-development/",
+      "clusterIds": [
+        "generic-order-management"
+      ],
+      "primaryKeyword": "주문관리시스템개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/payment-gateway-integration-development/",
+      "clusterIds": [
+        "generic-payment"
+      ],
+      "primaryKeyword": "결제연동개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/b2b-partner-portal-development/",
+      "clusterIds": [
+        "generic-b2b-portal",
+        "generic-customer-portal"
+      ],
+      "primaryKeyword": "B2B포털개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai-recommendation-system-development/",
+      "clusterIds": [
+        "generic-ai-recommend"
+      ],
+      "primaryKeyword": "AI추천시스템개발",
+      "searchIntent": "AI도입",
+      "industry": "공통",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/reservation-platform-development/",
+      "clusterIds": [
+        "generic-reservation-platform"
+      ],
+      "primaryKeyword": "예약플랫폼개발",
+      "searchIntent": "제작의뢰",
+      "industry": "공통",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/settlement-system-development/",
+      "clusterIds": [
+        "generic-settlement"
+      ],
+      "primaryKeyword": "정산시스템개발",
+      "searchIntent": "기능개발",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/responsive-web-accessibility-review/",
+      "clusterIds": [
+        "generic-responsive-web"
+      ],
+      "primaryKeyword": "반응형웹제작",
+      "searchIntent": "기존 사이트의 화면 폭·입력 방식·보조 기술별 문제를 재현하고 개선 및 인수 범위를 정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/perplexity-crawl-citation-review/",
+      "clusterIds": [
+        "generic-perplexity-visibility"
+      ],
+      "primaryKeyword": "퍼플렉시티검색노출",
+      "searchIntent": "Perplexity의 공개 접근 조건과 특정 브랜드 질문의 출처·답변을 분리해 관찰하고 수정 가능한 문제를 정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/nextjs-rendering-migration/",
+      "clusterIds": [
+        "generic-nextjs"
+      ],
+      "primaryKeyword": "Next.js개발업체",
+      "searchIntent": "기존 웹의 공개 페이지와 회원 기능을 렌더링·캐시·배포 조건으로 분류하고 Next.js 전환 범위를 판단하는 의도",
+      "industry": "공통",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/supabase-permissions-migration/",
+      "clusterIds": [
+        "generic-supabase"
+      ],
+      "primaryKeyword": "Supabase개발업체",
+      "searchIntent": "Supabase의 회원·행 권한·파일 보관과 복구 범위를 구체화하고 기존 자료 이관의 검수 기준을 정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/firebase-data-rules-handover/",
+      "clusterIds": [
+        "generic-firebase"
+      ],
+      "primaryKeyword": "Firebase앱개발",
+      "searchIntent": "Firebase 앱의 문서 구조·조회·접근 규칙·사용량과 운영 인수 범위를 정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/web-app-security-review-scope/",
+      "clusterIds": [
+        "generic-security-audit"
+      ],
+      "primaryKeyword": "웹앱보안점검",
+      "searchIntent": "개발 단계의 기본 보안 검토와 전문 진단을 구분하고 대상·권한·증거·수정 확인의 발주 범위를 정하는 의도",
+      "industry": "공통",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/clinical-study-visit-management/",
+      "clusterIds": [
+        "ind-026-app",
+        "ind-026-booking",
+        "ind-026-management",
+        "ind-026-portal"
+      ],
+      "primaryKeyword": "임상시험 참여자 방문 관리 시스템",
+      "searchIntent": "임상시험 참여자·방문 관리의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "임상시험센터",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/pet-funeral-handover-management/",
+      "clusterIds": [
+        "ind-099-app",
+        "ind-099-booking",
+        "ind-099-management"
+      ],
+      "primaryKeyword": "반려동물장례업체 관리 프로그램",
+      "searchIntent": "장례 일정·개체 인계·인도 이력의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "반려동물장례업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/gift-card-redemption-system/",
+      "clusterIds": [
+        "ind-282-ecommerce",
+        "ind-282-app",
+        "ind-282-management",
+        "ind-283-ecommerce",
+        "ind-283-app",
+        "ind-283-management"
+      ],
+      "primaryKeyword": "상품권 기프트카드 관리 시스템",
+      "searchIntent": "발행·사용·취소 원장의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "상품권플랫폼",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/testing-certification-workflow/",
+      "clusterIds": [
+        "ind-319-management",
+        "ind-319-portal",
+        "ind-319-field"
+      ],
+      "primaryKeyword": "시험인증기관 업무 관리 시스템",
+      "searchIntent": "시험 의뢰·기준 버전·성적서 검토의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "시험인증기관",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/fulfillment-warehouse-operations/",
+      "clusterIds": [
+        "ind-447-app",
+        "ind-447-management",
+        "ind-447-field"
+      ],
+      "primaryKeyword": "풀필먼트 창고 운영 시스템 개발",
+      "searchIntent": "화주별 입고·피킹·반품 운영의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "풀필먼트업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/cold-chain-monitoring-system/",
+      "clusterIds": [
+        "ind-448-app",
+        "ind-448-management",
+        "ind-448-field"
+      ],
+      "primaryKeyword": "콜드체인 온도 이력 관리 시스템",
+      "searchIntent": "온도 이탈·인수 증빙 연결의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "콜드체인업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/international-freight-management/",
+      "clusterIds": [
+        "ind-449-app",
+        "ind-449-management",
+        "ind-449-field"
+      ],
+      "primaryKeyword": "국제물류 포워딩 관리 시스템",
+      "searchIntent": "포워딩 선적·서류·마감 관리의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "국제물류업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ev-charging-session-management/",
+      "clusterIds": [
+        "ind-453-app",
+        "ind-453-management",
+        "ind-453-field"
+      ],
+      "primaryKeyword": "전기차 충전 운영 관리 시스템",
+      "searchIntent": "충전 세션·기기 상태·정산 관리의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "전기차충전업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/heavy-equipment-rental-management/",
+      "clusterIds": [
+        "ind-455-booking",
+        "ind-455-app",
+        "ind-455-management",
+        "ind-455-field"
+      ],
+      "primaryKeyword": "중장비렌탈업체 관리 프로그램",
+      "searchIntent": "장비·운반·점검·가동 이력의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "중장비렌탈업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/carbon-activity-data-management/",
+      "clusterIds": [
+        "ind-593-app",
+        "ind-593-management"
+      ],
+      "primaryKeyword": "탄소관리업체 관리 프로그램",
+      "searchIntent": "활동자료·배출계수·검토 이력의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "탄소관리업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/laboratory-sample-management/",
+      "clusterIds": [
+        "ind-615-portal",
+        "ind-615-management",
+        "ind-615-field"
+      ],
+      "primaryKeyword": "실험실 시료 관리 시스템 개발",
+      "searchIntent": "시료·시험·장비 이력 관리의 자료·역할·상태·예외·검수 범위를 비교하고 개발을 의뢰",
+      "industry": "실험실관리업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/franchise-recruitment-website/",
+      "clusterIds": [
+        "audience-106"
+      ],
+      "primaryKeyword": "프랜차이즈 홈페이지 제작",
+      "searchIntent": "예비 점주의 가맹 검토와 본사의 개설 상담을 연결하는 공개 홈페이지 제작",
+      "industry": "프랜차이즈 본사",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/b2b-sales-support-ai-workflow/",
+      "clusterIds": [
+        "audience-115"
+      ],
+      "primaryKeyword": "B2B기업 AI 자동화",
+      "searchIntent": "고객사의 제안 요청과 도입 질문에 승인된 근거로 답변 초안을 만드는 AI 업무 구축",
+      "industry": "기업 고객에게 제품과 서비스를 판매하는 B2B 기업",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/marketplace-ai-operations/",
+      "clusterIds": [
+        "audience-119"
+      ],
+      "primaryKeyword": "플랫폼창업 AI 자동화",
+      "searchIntent": "플랫폼 상품·프로필·신고 내용을 운영 정책과 대조하고 검토 담당자에게 전달하는 AI 기능 구축",
+      "industry": "판매자와 이용자가 참여하는 플랫폼",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/marketplace-operations-backoffice/",
+      "clusterIds": [
+        "audience-120"
+      ],
+      "primaryKeyword": "플랫폼창업 ERP 개발",
+      "searchIntent": "입점·거래·취소·정산 예외를 담당자별 사건 기록으로 연결하는 플랫폼 운영 백오피스 구축",
+      "industry": "중개·거래 플랫폼 운영사",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-604-website"
+      ],
+      "primaryKeyword": "풍력발전업체 홈페이지 제작",
+      "searchIntent": "풍력 사업의 참여 역할과 공개 가능한 프로젝트 정보를 설명하고 사업 문의를 받는 홈페이지 제작",
+      "industry": "풍력발전업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-604-portal"
+      ],
+      "primaryKeyword": "풍력발전업체 고객 포털 개발",
+      "searchIntent": "발전단지 소유자·운영사·정비 협력사가 계약별 운영 보고와 검수 자료를 주고받는 외부 포털 개발",
+      "industry": "풍력발전업체",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-604-management"
+      ],
+      "primaryKeyword": "풍력발전업체 관리 프로그램",
+      "searchIntent": "풍력 설비의 운영 중단 사건과 정비 지시·부품 사용·보고 마감을 연결하는 내부 관리 프로그램 개발",
+      "industry": "풍력발전업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-604-field"
+      ],
+      "primaryKeyword": "풍력발전업체 현장 관리 앱",
+      "searchIntent": "풍력 정비 작업자가 배정된 설비의 승인 문서와 점검 증빙을 현장에서 확인·기록하고 동기화하는 앱 개발",
+      "industry": "풍력발전업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-604-ai"
+      ],
+      "primaryKeyword": "풍력발전업체 AI 자동화",
+      "searchIntent": "설비 사건과 정비 문서를 근거별로 정리하고 누락·충돌 후보를 검토자에게 제시하는 AI 업무 보조 개발",
+      "industry": "풍력발전업체",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%B9%98%EA%B3%BC/",
+      "clusterIds": [
+        "ind-004-ai"
+      ],
+      "primaryKeyword": "치과 AI 자동화",
+      "searchIntent": "치과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "치과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%B9%98%EA%B3%BC/",
+      "clusterIds": [
+        "ind-004-portal"
+      ],
+      "primaryKeyword": "치과 고객 포털 개발",
+      "searchIntent": "치과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "치과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%94%BC%EB%B6%80%EA%B3%BC/",
+      "clusterIds": [
+        "ind-006-ai"
+      ],
+      "primaryKeyword": "피부과 AI 자동화",
+      "searchIntent": "피부과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "피부과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%ED%94%BC%EB%B6%80%EA%B3%BC/",
+      "clusterIds": [
+        "ind-006-portal"
+      ],
+      "primaryKeyword": "피부과 고객 포털 개발",
+      "searchIntent": "피부과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "피부과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-002-ai"
+      ],
+      "primaryKeyword": "종합병원 AI 자동화",
+      "searchIntent": "종합병원 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "종합병원",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-002-app"
+      ],
+      "primaryKeyword": "종합병원 앱 개발",
+      "searchIntent": "종합병원 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "종합병원",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-002-booking"
+      ],
+      "primaryKeyword": "종합병원 예약 시스템 개발",
+      "searchIntent": "종합병원 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "종합병원",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-002-management"
+      ],
+      "primaryKeyword": "종합병원 관리 프로그램",
+      "searchIntent": "종합병원 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "종합병원",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-002-website"
+      ],
+      "primaryKeyword": "종합병원 홈페이지 제작",
+      "searchIntent": "종합병원 홈페이지 제작의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "종합병원",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-001-ai",
+        "ind-003-ai"
+      ],
+      "primaryKeyword": "병원 AI 자동화",
+      "searchIntent": "병원 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "병원",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EB%B3%91%EC%9B%90/",
+      "clusterIds": [
+        "ind-001-portal",
+        "ind-002-portal",
+        "ind-003-portal"
+      ],
+      "primaryKeyword": "병원 환자 포털 개발",
+      "searchIntent": "병원 환자 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "병원",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%95%9C%EC%9D%98%EC%9B%90/",
+      "clusterIds": [
+        "ind-005-ai"
+      ],
+      "primaryKeyword": "한의원 AI 자동화",
+      "searchIntent": "한의원 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "한의원",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%ED%95%9C%EC%9D%98%EC%9B%90/",
+      "clusterIds": [
+        "ind-005-portal"
+      ],
+      "primaryKeyword": "한의원 고객 포털 개발",
+      "searchIntent": "한의원 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "한의원",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%95%88%EA%B3%BC/",
+      "clusterIds": [
+        "ind-008-ai"
+      ],
+      "primaryKeyword": "안과 AI 자동화",
+      "searchIntent": "안과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "안과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%95%88%EA%B3%BC/",
+      "clusterIds": [
+        "ind-008-app"
+      ],
+      "primaryKeyword": "안과 앱 개발",
+      "searchIntent": "안과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "안과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%95%88%EA%B3%BC/",
+      "clusterIds": [
+        "ind-008-booking"
+      ],
+      "primaryKeyword": "안과 예약 시스템 개발",
+      "searchIntent": "안과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "안과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%95%88%EA%B3%BC/",
+      "clusterIds": [
+        "ind-008-management"
+      ],
+      "primaryKeyword": "안과 관리 프로그램",
+      "searchIntent": "안과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "안과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%95%88%EA%B3%BC/",
+      "clusterIds": [
+        "ind-008-portal"
+      ],
+      "primaryKeyword": "안과 고객 포털 개발",
+      "searchIntent": "안과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "안과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-007-ai"
+      ],
+      "primaryKeyword": "성형외과 AI 자동화",
+      "searchIntent": "성형외과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "성형외과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-007-portal"
+      ],
+      "primaryKeyword": "성형외과 고객 포털 개발",
+      "searchIntent": "성형외과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "성형외과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-app"
+      ],
+      "primaryKeyword": "전통주브랜드 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "전통주브랜드",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-booking"
+      ],
+      "primaryKeyword": "전통주브랜드 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "전통주브랜드",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ecommerce/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-ecommerce"
+      ],
+      "primaryKeyword": "전통주브랜드 쇼핑몰 제작",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "전통주브랜드",
+      "serviceAxis": "쇼핑몰·커머스",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-management"
+      ],
+      "primaryKeyword": "전통주브랜드 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "전통주브랜드",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/order/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-order"
+      ],
+      "primaryKeyword": "전통주브랜드 주문 앱 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "전통주브랜드",
+      "serviceAxis": "주문·배달",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
+      "clusterIds": [
+        "ind-211-website"
+      ],
+      "primaryKeyword": "전통주브랜드 홈페이지 제작",
+      "searchIntent": "리뉴얼 / 비용·견적 / 업체선정 / 제작의뢰 / 추천·비교",
+      "industry": "전통주브랜드",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%ED%98%B8%ED%85%94/",
+      "clusterIds": [
+        "ind-212-platform"
+      ],
+      "primaryKeyword": "호텔 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "호텔",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EB%AA%A8%ED%85%94/",
+      "clusterIds": [
+        "ind-213-platform"
+      ],
+      "primaryKeyword": "모텔 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "모텔",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
+      "clusterIds": [
+        "ind-214-booking"
+      ],
+      "primaryKeyword": "리조트 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "리조트",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
+      "clusterIds": [
+        "ind-214-platform"
+      ],
+      "primaryKeyword": "리조트 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "리조트",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%ED%8E%9C%EC%85%98/",
+      "clusterIds": [
+        "ind-215-platform"
+      ],
+      "primaryKeyword": "펜션 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "펜션",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EA%B2%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EC%9A%B0%EC%8A%A4/",
+      "clusterIds": [
+        "ind-216-platform"
+      ],
+      "primaryKeyword": "게스트하우스 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "게스트하우스",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%ED%92%80%EB%B9%8C%EB%9D%BC/",
+      "clusterIds": [
+        "ind-217-platform"
+      ],
+      "primaryKeyword": "풀빌라 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "풀빌라",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%ED%95%9C%EC%98%A5%EC%8A%A4%ED%85%8C%EC%9D%B4/",
+      "clusterIds": [
+        "ind-218-platform"
+      ],
+      "primaryKeyword": "한옥스테이 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "한옥스테이",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EC%BA%A0%ED%95%91%ED%8E%9C%EC%85%98/",
+      "clusterIds": [
+        "ind-219-platform"
+      ],
+      "primaryKeyword": "캠핑펜션 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "캠핑펜션",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EA%B8%80%EB%9E%A8%ED%95%91%EC%9E%A5/",
+      "clusterIds": [
+        "ind-220-platform"
+      ],
+      "primaryKeyword": "글램핑장 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "글램핑장",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EB%AF%BC%EB%B0%95/",
+      "clusterIds": [
+        "ind-221-platform"
+      ],
+      "primaryKeyword": "민박 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "민박",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EC%97%AC%ED%96%89%EC%82%AC/",
+      "clusterIds": [
+        "ind-222-platform"
+      ],
+      "primaryKeyword": "여행사 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "여행사",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-223-app"
+      ],
+      "primaryKeyword": "관광버스업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "관광버스업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-223-booking"
+      ],
+      "primaryKeyword": "관광버스업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "관광버스업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-223-management"
+      ],
+      "primaryKeyword": "관광버스업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "관광버스업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-223-platform"
+      ],
+      "primaryKeyword": "관광버스업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "관광버스업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-421-ai"
+      ],
+      "primaryKeyword": "프랜차이즈컨설팅업체 AI 자동화",
+      "searchIntent": "브랜드 자문 자료에서 근거 위치와 비교 항목을 추출하고 누락·불일치의 검토 초안을 만드는 보조 업무 구매 의도",
+      "industry": "프랜차이즈컨설팅업체",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-421-booking"
+      ],
+      "primaryKeyword": "프랜차이즈컨설팅업체 예약 시스템 개발",
+      "searchIntent": "상담 목적과 사전 자료, 복수 전문가·회의실·현장 방문 시간을 함께 확인해 자문 일정을 확정하는 구매 의도",
+      "industry": "프랜차이즈컨설팅업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-421-management"
+      ],
+      "primaryKeyword": "프랜차이즈컨설팅업체 관리 프로그램",
+      "searchIntent": "브랜드별 계약 산출물·수정 요청·전문가 업무·검수와 정산의 내부 원장을 만들려는 구매 의도",
+      "industry": "프랜차이즈컨설팅업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-421-portal"
+      ],
+      "primaryKeyword": "프랜차이즈컨설팅업체 고객 포털 개발",
+      "searchIntent": "컨설팅 의뢰 브랜드의 자료 제출·보완·검토본 확인과 고객별 접근 권한을 독립된 포털로 운영하려는 의도",
+      "industry": "프랜차이즈컨설팅업체",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-421-website"
+      ],
+      "primaryKeyword": "프랜차이즈컨설팅업체 홈페이지 제작",
+      "searchIntent": "가맹본부 준비·운영 개선·창업 검토 등 서로 다른 컨설팅 의뢰를 공개 서비스 설명과 문의 조건으로 구분하는 홈페이지 구매 의도",
+      "industry": "프랜차이즈컨설팅업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-425-app"
+      ],
+      "primaryKeyword": "타이어매장 앱 개발",
+      "searchIntent": "고객이 자기 차량별 장착 기록과 확인된 상품, 방문 요청·알림·사후 문의를 이어서 이용하는 앱 구매 의도",
+      "industry": "타이어매장",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-425-booking"
+      ],
+      "primaryKeyword": "타이어매장 예약 시스템 개발",
+      "searchIntent": "타이어 규격과 수량·입고 상태를 확인한 뒤 장착 공간과 담당자의 시간을 함께 확보하는 예약 구매 의도",
+      "industry": "타이어매장",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-425-field"
+      ],
+      "primaryKeyword": "타이어매장 현장 관리 앱",
+      "searchIntent": "입고 차량과 장착 지시를 확인하고 위치별 제품·점검 기록·이상 승인·출고 검수를 현장 기기로 남기려는 구매 의도",
+      "industry": "타이어매장",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-425-management"
+      ],
+      "primaryKeyword": "타이어매장 관리 프로그램",
+      "searchIntent": "규격별 타이어 상품·수량·상태와 판매·장착·이동·반품을 일관된 원장으로 관리하려는 구매 의도",
+      "industry": "타이어매장",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EB%B3%B8%EC%82%AC/",
+      "clusterIds": [
+        "ind-526-ai",
+        "audience-107"
+      ],
+      "primaryKeyword": "프랜차이즈본사 AI 자동화",
+      "searchIntent": "가맹점별로 유효한 매뉴얼과 공지만 검색하고 점주 질문의 근거와 본사 승인 경로를 연결하는 자동화 구매 의도",
+      "industry": "프랜차이즈본사",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    }
+  ]
+}

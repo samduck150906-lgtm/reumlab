@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-10-20T09:27:24.671943+00:00",
+  "existingCanonicalPages": 823,
+  "existingIntents": 823,
+  "inputKeywords": 18940,
+  "inputClusters": 3522,
+  "industries": 631,
+  "counts": {
+    "COVERED_EXISTING": 884,
+    "CREATE_NEW_DISTINCT": 31,
+    "DEFER_LOW_VALUE": 2453,
+    "MERGE_INTO_NEW_CLUSTER": 106,
+    "LOCAL_EVIDENCE_ONLY": 48
+  },
+  "newDetailCanonicals": 31,
+  "newNavigationHubs": 1,
+  "unresolved": 0,
+  "normalizationCrossTargets": 21,
+  "normalizationPolicy": "공백·앱 표기·회사/업체·영문 대소문자 정규화는 검색용 보조 열. 제작/개발/구축, 지역·업종 순서 및 도구 이름은 의미를 보존하고 최종 canonical 판정으로 통합한다. 자동 치환만으로 다른 업무 의도를 합치지 않는다.",
+  "statusMeaning": "counts와 newDetailCanonicals는 최초 비교 결과의 보존 기록이다. 현재 작업 판정은 expanded-build-queue의 현재작업상태와 currentScope를 따른다.",
+  "initialClassificationIsHistorical": true,
+  "currentUserInstruction": "기존 보류 2,453개도 모두 고유 내용을 조사·작성한다. 동일 의도는 병합하고 품질 검수 통과 원고부터 순차 공개한다.",
+  "currentScope": {
+    "allInitiallyDeferredRequired": 2453,
+    "expandedQueueRows": 2484,
+    "authoredQueueRowsInThisRelease": 102,
+    "unwrittenQueueRowsAtSnapshot": 2378,
+    "registeredDetailPagesInThisRelease": 98,
+    "navigationHubPages": 1,
+    "allRequestedContentComplete": false,
+    "deploymentAndSubmissionStatus": "PENDING_AFTER_LOCAL_QA"
+  }
+}

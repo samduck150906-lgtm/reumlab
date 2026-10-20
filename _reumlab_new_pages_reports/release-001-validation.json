@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-20T10:54:34.381647+00:00",
+  "phase": "LOCAL_RELEASE_CANDIDATE",
+  "allRequestedContentComplete": false,
+  "baseCommit": "203e45e24df1032e21e9be41102f323324db6357",
+  "registeredDetailPages": 98,
+  "newHubPages": 1,
+  "newSitemap": "https://reumlab.com/sitemap-development-agency.xml",
+  "sourceAudit": {
+    "status": "PASS",
+    "existingCompared": 823,
+    "exactPairs": 91179
+  },
+  "htmlAudit": {
+    "status": "PASS",
+    "renderedNew": 99,
+    "issues": 0
+  },
+  "httpAudit": {
+    "status": "PASS",
+    "origin": "http://127.0.0.1:8783",
+    "count": 99
+  },
+  "baseline": {
+    "status": "PASS",
+    "originalTrackedFiles": 490,
+    "existingCanonicalsEditorialEquivalent": 823,
+    "discoveryFilesByteEqual": 18
+  },
+  "tests": {
+    "existing": {
+      "passed": 240,
+      "failed": 0
+    },
+    "namespace": {
+      "passed": 10,
+      "failed": 0
+    }
+  },
+  "runtime": {
+    "status": "PASS",
+    "routes": 99,
+    "actualViewportWidth": 320,
+    "consoleErrorsOrWarnings": 0
+  },
+  "responsive": {
+    "status": "PASS",
+    "widths": [
+      320,
+      375,
+      768,
+      1280,
+      1440
+    ]
+  },
+  "deployment": "NOT_YET_DEPLOYED",
+  "searchSubmission": "NOT_YET_SUBMITTED",
+  "scope": {
+    "allInitiallyDeferredRequired": 2453,
+    "expandedQueueRows": 2484,
+    "authoredQueueRowsInThisRelease": 102,
+    "unwrittenQueueRowsAtSnapshot": 2378,
+    "registeredDetailPagesInThisRelease": 98,
+    "navigationHubPages": 1,
+    "allRequestedContentComplete": false,
+    "deploymentAndSubmissionStatus": "PENDING_AFTER_LOCAL_QA"
+  }
+}
