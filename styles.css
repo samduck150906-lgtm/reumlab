@@ -1357,6 +1357,7 @@ body.pm-open { overflow: hidden; }
 .nav-dd__btn svg { transition: transform .15s ease; }
 .nav-dd.open .nav-dd__btn svg, .nav-dd:hover .nav-dd__btn svg { transform: rotate(180deg); }
 .nav-dd__menu { position: absolute; top: 100%; left: -14px; margin-top: 6px; min-width: 264px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow-lg); padding: 8px; opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .16s ease, transform .16s ease, visibility .16s; z-index: 60; }
+.nav-dd__menu { max-height: calc(100vh - 100px); max-height: calc(100dvh - 100px); overflow-y: auto; overscroll-behavior: contain; }
 .nav-dd:hover .nav-dd__menu, .nav-dd:focus-within .nav-dd__menu, .nav-dd.open .nav-dd__menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .nav-dd__menu a { display: flex; flex-direction: column; gap: 1px; padding: 9px 12px; border-radius: 9px; }
 .nav-dd__menu a:hover { background: var(--bg-soft); }

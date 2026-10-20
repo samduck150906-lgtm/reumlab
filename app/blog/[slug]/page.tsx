@@ -92,7 +92,7 @@ export default function BlogPostPage({ params }: Props) {
         ]}
       />
       <main>
-        <article className="dynamic-page">
+        <article className="dynamic-page blog-article">
           <nav className="breadcrumb" aria-label="breadcrumb">
             <Link href="/">홈</Link>
             {' / '}
