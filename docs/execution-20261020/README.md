@@ -43,3 +43,13 @@
 이 커밋의 로컬 검사 통과만으로 운영 배포나 색인을 주장하지 않는다. 운영 커밋·Netlify 배포 ID, 공개 HTML 재수집 및 Google·네이버·IndexNow의 실제 응답은 배포 후 별도로 기록한다. 검색엔진 접수와 실제 색인·검색 노출은 서로 다른 상태다.
 
 기존 IndexNow 키·전송 스크립트를 재사용한다. 운영 공개와 키 파일 확인 후 변경분만 명시적으로 제출한다. 일반 서비스 페이지를 Google Indexing API에 보내지 않는다. 기존 GPTBot 학습 정책을 변경하지 않는다.
+
+## 운영 배포 및 실제 제출 확인 (2026-10-20)
+
+PR #10 병합 커밋 `f7cef7c1fc02bbe692adac7da2d0949abd21ed8d`가 Netlify production `6ad712b1de1be826243b81fa`로 07:07:40 UTC에 공개됐습니다. 1,779개 운영 경로 재수집 오류 0, 사이트맵 823개 HTTP·canonical·robots·메타·구조화 데이터와 내부 링크 35,140개 참조 검증을 통과했습니다.
+
+원본 콘텐츠 해시는 799개 일치, 나머지 24개는 동일 파일로 연결되는 Netlify의 관리자 안내 링크 확장자 정리만 달랐습니다. 두 안내 URL의 전체 HTML 해시·canonical·noindex가 같고, 해당 링크 한 개 외에는 본문·메타·스키마 차이가 없습니다.
+
+IndexNow는 실제 변경 812개를 네이버와 Bing에 전송해 양쪽 HTTP 200을 받았습니다. `submissions/indexnow.jsonl`에 요청 시각·URL 목록·응답을 보존하고 제출 manifest를 갱신했습니다. 이후 dry-run 대상은 0개입니다. Google 사이트맵은 재제출 Success, 개별 URL 3개 접수 후 연결 오류로 7개 대기입니다. 네이버 관리 화면 RSS는 보안문자 입력 대기이며 사이트맵·개별 수집 요청은 미완료입니다. 접수는 실제 색인·노출 완료를 뜻하지 않습니다.
+
+최종 검증 요약은 `release-verification-summary.json`에 있습니다. 이 후속 커밋은 증거와 제출 manifest만 보존하므로 `[skip netlify]`로 운영 재빌드를 생략합니다.

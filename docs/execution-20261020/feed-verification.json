@@ -1,11 +1,14 @@
 {
-  "checkedAt": "2026-10-20T06:29:17.467Z",
+  "checkedAt": "2026-10-20T07:00:28.813Z",
   "sourceGuidance": "https://searchadvisor.naver.com/guide/request-feed",
   "items": 59,
-  "bytes": 1088631,
+  "bytes": 1088917,
   "limitBytesExclusive": 10000000,
   "generation": "Complete rendered article; scripts/styles removed; URLs absolute; dates from content, never build time.",
   "xmlParserValidation": {
+    "parser": "System.Xml.XmlDocument (XmlResolver disabled)",
+    "checkedAt": "2026-10-20T07:05:32.2625777+00:00",
+    "status": "PASS",
     "assertions": [
       "XML well-formed",
       "CDATA round-trip",
@@ -15,10 +18,7 @@
       "original publication dates preserved",
       "absolute links",
       "under 10MB"
-    ],
-    "status": "PASS",
-    "checkedAt": "2026-10-20T06:48:48.5153651+00:00",
-    "parser": "System.Xml.XmlDocument (XmlResolver disabled)"
+    ]
   },
   "articles": [
     {
@@ -27,8 +27,8 @@
       "publishedAt": "2026-09-23",
       "updatedAt": "2026-10-20",
       "articleCharacters": 2898,
-      "articleBytes": 11267,
-      "articleSha256": "a53cfd484cb42aed92c19cbbd334c58b80ca13a9bbe557854423fec7377b4179",
+      "articleBytes": 11280,
+      "articleSha256": "f7071645c14e8bdf69cfa261a8c6208b115bec6cf73628859f28397d35cd2dfe",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -75,8 +75,8 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-10-20",
       "articleCharacters": 5472,
-      "articleBytes": 18731,
-      "articleSha256": "b472cb4cb0585c13acd9e92d42ab0dbd41bb9f77850b56bd5c6d318a4b392cea",
+      "articleBytes": 18744,
+      "articleSha256": "c5d98aab8c01173c61abf81da66326b3a0876e4fc7c09bdf78c4726a808fe018",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -171,8 +171,8 @@
       "publishedAt": "2026-07-02",
       "updatedAt": "2026-10-20",
       "articleCharacters": 2454,
-      "articleBytes": 10122,
-      "articleSha256": "5c28c7eb79956ad6fce7b098f4c4e1a322b6ef9b67ace2af9cc75609516354ea",
+      "articleBytes": 10135,
+      "articleSha256": "217e69251f04ac53182d6e53e1143370c414dd4d1e6a3d7ea819a9fb304950a8",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -183,8 +183,8 @@
       "publishedAt": "2026-07-02",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1902,
-      "articleBytes": 9140,
-      "articleSha256": "61917d42286fafe420294f16abcc738eae153460bec59d48bb2ec683ef356e44",
+      "articleBytes": 9153,
+      "articleSha256": "613984bfad6b9429cf96dd288b7784c6a100e2c77125ca762adfc3006f19aa2a",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -495,8 +495,8 @@
       "publishedAt": "2026-06-30",
       "updatedAt": "2026-10-20",
       "articleCharacters": 2057,
-      "articleBytes": 9028,
-      "articleSha256": "70a349acf8c80c584535893d522301e3971571b94b99910c2b538bc5b30b0dbd",
+      "articleBytes": 9041,
+      "articleSha256": "824b67b7c5abd57254f3fb193ca043aeb585bb66e58f2354eebcc10a054afed9",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -519,8 +519,8 @@
       "publishedAt": "2026-06-29",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1990,
-      "articleBytes": 9236,
-      "articleSha256": "21adcd7c9d540d9759e22aee3e06059aae263e55098c1fabb2ce88aaef70961e",
+      "articleBytes": 9249,
+      "articleSha256": "237c8213afbe24143a6dee10b6aa6ef37c0d7047af3b9106aceccfe55729cd66",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -531,8 +531,8 @@
       "publishedAt": "2026-06-28",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1888,
-      "articleBytes": 8607,
-      "articleSha256": "f65e99270c556ca1ff5e1456f984c26dfd9d0637ee3b3fe71e5e004b30101feb",
+      "articleBytes": 8620,
+      "articleSha256": "d4ba3c355930db3aecee6fb58ec34df29f87a05a2b037a3274eca9bcea0e9639",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -543,8 +543,8 @@
       "publishedAt": "2026-06-27",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1825,
-      "articleBytes": 8435,
-      "articleSha256": "d37c4f5f908c8cce1e9a97930e707b1abee6355086193346c380d0092a017087",
+      "articleBytes": 8448,
+      "articleSha256": "eac1a74cdd4480a3b15579fc4065cd992b18f6af8b80e14b3bdc22c4f70c83a0",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -555,8 +555,8 @@
       "publishedAt": "2026-06-26",
       "updatedAt": "2026-10-20",
       "articleCharacters": 2092,
-      "articleBytes": 8747,
-      "articleSha256": "aec2faa73862b37aeda06b2ac667eee4d6ecdfe66b210127451e8c8635150488",
+      "articleBytes": 8760,
+      "articleSha256": "eafeb117b316594b282bdc74e17721dc4ab3ca1270e97dd8dae4ca1c872f4988",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -567,8 +567,8 @@
       "publishedAt": "2026-06-25",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1925,
-      "articleBytes": 8687,
-      "articleSha256": "84877eba28bb68f4baec004dacce65db0258af82d5a593e91bf5d4f96d1fc546",
+      "articleBytes": 8700,
+      "articleSha256": "cf1791d5c628e84ec9578246ade200a062032ca1dc4eedbb2e8d4da04df47732",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
@@ -579,8 +579,8 @@
       "publishedAt": "2026-06-24",
       "updatedAt": "2026-10-20",
       "articleCharacters": 1928,
-      "articleBytes": 8684,
-      "articleSha256": "c6b272cdcc226a3931b576420d31e87862549e7e147bfd5e7b0794de7f28776e",
+      "articleBytes": 8697,
+      "articleSha256": "5eff412bbcbad27311f80e5bad7c535e59d8f0bdb3474d8b7770df8f4037e6fb",
       "fullBody": true,
       "canonicalMatch": true,
       "absoluteLinks": true
