@@ -1,0 +1,925 @@
+{
+  "pages": {
+    "https://reumlab.com/development-agency/": {
+      "sourceDigest": "f256234ba3c2d9839afd4afa8b3237439c7e03ac88e03450e83a38a3e32c80f4",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "525bbcafbf4651043d6be526a990c000989abcfb7a1f1884335ed39d65ceb898",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/cms-website-development/": {
+      "sourceDigest": "824912d48a4dacac838cc00b042c3c582cf3eb594ddc11ea5f2282d5db89b9ae",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "bc8a5244c67596b70acd62319119a3e47157bf88033e449b2a9e23fed62c068c",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/multilingual-website-development/": {
+      "sourceDigest": "bc71b34be9a7799ba955d7e87fd247bd9c1dcd8895f494c155937c24d643b239",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "945085bca95242362d1f566c6be8e99677b5109fb460e6b0601515bbe10f9e76",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/headless-wordpress-development/": {
+      "sourceDigest": "a06b4ce911e9fc6b5737aedb3d1d31ef17c261de9e490094dbc4c490c0e4742d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "37525258822a74184fc797991cc20b0436dd546338b567d50b5c7b238cd25654",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/server-hosting-migration/": {
+      "sourceDigest": "6d048ca5ddfcfba946fe29c52970365941a2fbe0c87faf7f8843ca897864830f",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "425cd35afbf09a4a7e1e57c9b6cdc9ef0be2edd5539051a059b87de550cb8824",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/existing-codebase-audit/": {
+      "sourceDigest": "5c626a44104a44b3f38fbbc8bee1b7117ce4b16e40b2476608c86c2cf0feb05c",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "c56e4ba6f1938ae252926324fa1ecc78f2874a4680afb5f019638c54ef8a41f4",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app-store-launch-support/": {
+      "sourceDigest": "11f6942070070431322205d107caf158b39766d0183d1f29a028fe871a8105c7",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "e88bcbe2940a7d380f20a9af82d324d06c4e19f7c9ba16fb9e0acc6d6b6dc20b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/pwa-web-app-development/": {
+      "sourceDigest": "7beb3b13b3865226a929010f3d116fe00a73e861fb640ed3e3fd72b9fd347dde",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8b55d050366bc6f95ec43b49bf6f4e313e4ec01c79850bd7d65d5c0ff4ece913",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/map-location-based-app-development/": {
+      "sourceDigest": "983908e4737a3cae0f23af090bbe05cbccab2a2733522e4deed5b9586c9ac66d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "f64fe0886acdf691a684d6077ab50e3651f68c03c553d79709f983d286ac55dd",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/social-login-integration/": {
+      "sourceDigest": "7802b6f25dcfba27a47c36cf1af5efdfe23658b3b847276ca595fc4f6569a8d2",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "0cf75f6e70c4842c5484d92f655813deb3b8e057d15e25a6a4a169e619b362f1",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/analytics-tracking-implementation/": {
+      "sourceDigest": "10ceb912d970d161f8030c0f78c8e17cb40356fa67c59d8b28a19d820a7e774e",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "008230fd3f95839c7406a09fe89782aa4f23a9b106cfa1f3911eba6982fd6668",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/api-integration-development/": {
+      "sourceDigest": "43fc308b68a314c4c29218bf063f5ec2aadb5021ad39a32ee7cb387975c0c23c",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "06ebd82b8ece490dbea32e0eef68bb5b1d56d5fd66094479e24181be1f4e3a3e",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/contract-management-system-development/": {
+      "sourceDigest": "15d740abd836a1cba2a518d20b84c17a37de912cba1efe94a9ed96f594d882cb",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8374eee5800bc063297972ae7f7d5f56bf17b9fa7512c0d3d58d17de0269ed72",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/custom-crm-development/": {
+      "sourceDigest": "fafab7d0441437b91d4e5339b5ce95af378f34e909a5ab635511e475b6073703",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "86e26c5fbcf2dd252bf848c12fb2fb3fb3459984e1e33f0f02763798a0e7589a",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/inventory-management-system-development/": {
+      "sourceDigest": "fcd75b3d4f680ccc8770c3a1e2287b8e28588937d002f7f9ed82c82844ed44fd",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "c129a96d8ca011fa8981daf5cd51f6f173f29047ed84c58abac7f56a2761e123",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/order-management-system-development/": {
+      "sourceDigest": "7a3e5816e25bb0a797dbe97e983c0096f90a85c532c451bbe5164b226dc83652",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ed21a446927f8ef1497e67f5eb13c627118246aa2e5381977afa39854981659c",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/payment-gateway-integration-development/": {
+      "sourceDigest": "af43d1b007c8ccbe7112e720b07a6348c2b3da71802de38b088678b0d55903f0",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "32d9ecfcafe0b2d477735492d2166e883bd1b63b6326b9e1a3ff20d600a526a1",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/b2b-partner-portal-development/": {
+      "sourceDigest": "2db79604f24126a2bc9d78c1485ef333becbc8920b9c79ee30b34578705f220b",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "4f004ec67ccd5b3101dd5f4d4b6a3bc69aa6581a03f8350958f4c8d0d4fd53af",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai-recommendation-system-development/": {
+      "sourceDigest": "7b094101df419dbf6e1d579d9de2eafc3130b9efdcf513332e0be8b48acde55b",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "6bbcf85b6956ee38326fa11ee45df0cebe4c9f4e497e694f6346c61e368b5296",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/reservation-platform-development/": {
+      "sourceDigest": "2576bd81de7432dd3e44e1dad8c3b59e1fc4fbf546c1961d1cbdaf227ca1dcd1",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "d84c99fadd8b01674e99b1b18b26e44705624ef1fc6d34d204f3bafd0b735f81",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/settlement-system-development/": {
+      "sourceDigest": "8c6ca8a105b42d13fa1550090a8b7f010326185e6a8eebd0e4a747c4001d9d71",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "7cf939184aad2b150691395c59c4efe91f7c62b0d0bddbd6f7dfc7cdab4b6cf7",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/responsive-web-accessibility-review/": {
+      "sourceDigest": "2d40dbdb8b47be71d86d3dbb67572da1f076e58f70a10225415d89db4fdcc712",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "26b7a4ba62c0c37c963dd5f77fc61a0da4a128c2cc53d04fee570cd237d35502",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/perplexity-crawl-citation-review/": {
+      "sourceDigest": "ab490b56587490cf39be30a6a92f3b66f89dd7dab96b28bef9e13e26c20f1796",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b58eff24c293d0e36eae0ab30423808d156c8e7f252da0736b3f91d7c748900b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/nextjs-rendering-migration/": {
+      "sourceDigest": "0d409c78c35042976de4dca71d6b3013b1a8a7fc97e6a077a6a2f8fcfab95f19",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "662eb8730b969a7252ccbc755a6b3aaada86d18e457c0c7b60381f812124da05",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/supabase-permissions-migration/": {
+      "sourceDigest": "7f9fbe1b5ba0e62611d8e6a1b4a0e024fad5856a51940223faf6c1608c7caaba",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "75601674690190bb88645eb77f67017d1d35557e7f74dc940391e0be13562165",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/firebase-data-rules-handover/": {
+      "sourceDigest": "465245ea7949d1390a481a5b1eb395af9bff2d1b55c80b0654cab2a6c8d94470",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b9bab8d67240f6e4fc5dcbb3ff1b363e12bf6afba961c5b24e8b7775a69d9c86",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/web-app-security-review-scope/": {
+      "sourceDigest": "b315f6f64579176e0e80f8bad5eca33479b9239473ed8f476eb11fb9f0aa8591",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "a2cf9b17fbccc683ed4d7a75bc957f22d3bf11e945628728dc17d16d47459615",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/clinical-study-visit-management/": {
+      "sourceDigest": "99b2d5fc9cae18cf23a9b70a45bc446bf09d2628a6441789ca01bccfd908070d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "959f7b127ac80fdaba32d15ed785cb0e8888865ce485b6e89909262bb7699238",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/pet-funeral-handover-management/": {
+      "sourceDigest": "d4274b9dae9d124d5a2b5210b28dc9c78a728e38432d512b03451d4bfcc0bb31",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8d5a6efe428606ac681f148f0c03931c7ead69aec662a0e24290c911613f7107",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/gift-card-redemption-system/": {
+      "sourceDigest": "5796d04fef2e2eb6b6c3cefa0c50200401478217e51db34f5707421aa888e1e6",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b11ebfa7894b0593da2e564be2e4d31e9fba023291294bcd613dd24043a267dc",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/testing-certification-workflow/": {
+      "sourceDigest": "98b716388b6e4197216586550fd7420982d819a63b5622712b8fd3f224c6f8ee",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ff22ae69514079b88055ef05b790ea20dd86eaa2488e3327dab52ea9e9657d7f",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/fulfillment-warehouse-operations/": {
+      "sourceDigest": "89848e952c41f8b1297662e2bb2d7d477e7e54abd9f1872c8fcb6fb5e75005ef",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "235f814bb4471e1cb3d459383e94f271e7c61b3a3ca6e126c79e5dbfc0cdd710",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/cold-chain-monitoring-system/": {
+      "sourceDigest": "9c282c3ceb667114cf50e19924e5a187538bdc4c7e10cd649a1ab0d4553102a0",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "a8b224dc20495c5318c76a4ab27b8395c970114c7207cdf32740e0a0a5f6b769",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/international-freight-management/": {
+      "sourceDigest": "750009aa4db842c5a23214f8bbaadadb57b737a7eda31226cd115595fa1e42df",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "3e9345831eb54ce81c660bfa3c91c990c7c03c765c267da6c0ad48d1e721fd7b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ev-charging-session-management/": {
+      "sourceDigest": "288c7136c6569519edce0817f7a68e3c384adf97f013f2407e69cefa74acbffa",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "77515c0a3f12600c88b5c323c3467098e10bd630b588bb84910027b3ecd16f7e",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/heavy-equipment-rental-management/": {
+      "sourceDigest": "49f9110084a999b9478fb2986d25d1701c5cc28c93c3d2d789765d1cdbfce1b3",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b7679293978c45aa9336115a731d17bc0886a1e5ec404f3ceac868180c8cb7c4",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/carbon-activity-data-management/": {
+      "sourceDigest": "e296aeefcaed3267772d7d7d6bf6759c02f10cef0914a89a14d9b48ee7453560",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "598773c000960b0ca0a37a9c37eaa1de93b5ba58b114003ed2791904602f6d68",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/laboratory-sample-management/": {
+      "sourceDigest": "2b329449a14eb58aa5fa189a3aee31f3e3f0093835439d8ecc8c584b4dbd3a2d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "89b019ea3de02784844baf1f0dee497481310d67fc16c28637b79c4b5d6ca502",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/franchise-recruitment-website/": {
+      "sourceDigest": "ad3adfa596238e77e0c64b139c158f16758b98dc62519a832bf05454ab3c5a01",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b7665743cb453b178bf3417e7cdda5613e8078ad6cd072bbc37f17b9498d5771",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/b2b-sales-support-ai-workflow/": {
+      "sourceDigest": "7060f7fd9413026fa02609e5a6f8776a7f8a0c4edc26e87ba2829d865fc701a2",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "7222f15166f5454c471517302763add21777289a55991e98681575d3075c1bbd",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/marketplace-ai-operations/": {
+      "sourceDigest": "a89fa227b74e26af1995dc9d62edaafaca698e1f10d895ecaeda60d4031964dc",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "13fc0a383a5dc4eb9fac29605a9344613d8c02490b5ecb3d51579c1e4c128bee",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/marketplace-operations-backoffice/": {
+      "sourceDigest": "393fe16c8cdcacd63a03e0a01dd8a30eb629a310118d324c70d5c980be8d926e",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "4a14a551a44580b5b428b00525824039af86164e50ed6c01ffca65ffaaee0082",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/website/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "8a14025b813dbace1fa802d1370962fe0cf833c9ca321e57053e9a7584b7a7be",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "7c0d7c979d7b72d30b958c3a14f20f29b819ae97e2b80e76c92af498fc8a5b86",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "269e5cfcb1e0b8e55ee4cff9d5789e6f18e1ceab024a768cec3b1c220843a002",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "22c3b041c153b4e2b00d7b3e0f446a5425d14cc4a61fde9ebfe081394e18de75",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "30e230f9cf1e1543cd3674e8005d6ae0e142d14265cac58d89551448a8e75e23",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "6096f53719fed1b5595208287439f656dfacbc902f5a0f668850d2fc752f6078",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/field/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "fdf63f18505c559a2776c2a746e09557c85d6d3b9a52d77c02af02d2a1b46df2",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ed4cc34b4eb4b9859360c8af54395a9cd8e3d3642d35d5652a14c33a96832214",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "73a9fd02a65826201462404838ba9931464daa087924acdffbae4167e6b6b471",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "15eec907b52c98d89977bc9f46db967de93d2024fd9c7050469c9be556fe5a18",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%EC%B9%98%EA%B3%BC/": {
+      "sourceDigest": "20c3fa8339939c022175575ac73c4dbdeedb772afae49084aee1e3fefbd65967",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "6dcfc47c01aa938cda49651c4c72939326b1d62df2a31b6c7f9420ccaae8f64e",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%EC%B9%98%EA%B3%BC/": {
+      "sourceDigest": "4ce210bcf3149ee4a2639768b9b031c345a82565f3fdc445648eae516008ec7f",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "b3a560a0a339c7186ef35bbd006f882e8fd9c5e8c85de6163350f8224d9895d9",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%ED%94%BC%EB%B6%80%EA%B3%BC/": {
+      "sourceDigest": "b05ce84e8d58cf8fe7716b602c99351734dad4fc6c16ca8089e2d29589ecfa50",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "7d342973601dec95139b96be07e1c4b14f49c757ed9e0360782e335c0a9658ca",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%ED%94%BC%EB%B6%80%EA%B3%BC/": {
+      "sourceDigest": "c17bf76738f4b0c3f28e00c44c1387b1ed543e59860042444f0ed73b14a31d4b",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "9ed05868a0fc9203511ef498c003ea7c56107ed46903e20d0ea4ae165b3ca2ad",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "c7e5132612efbbac0d89b66c63b5bc790e3a183e39f4082303a9b9c28b32b4fe",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "bd4344419f278c5a5e54c8f02d448e49b2a7ccb7a0f54b5ad17b5f0cd4952cb0",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "4fc956c8a0ad9922cf59951dd89a0d994100c40efd1ba56efe845f867eb60299",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ca289244e6aafb48586b3ed18edea6657d6bf1a47a382d7539da0913503b2423",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "1be1ed84f97a85432d68c209438ceedb6809e5c45ca6310890186a501572afbe",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "3ccf225412fcb5cf3b2eac61fcb556191cac853c49e16fa97127ebec6b9e9bd6",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "bfdd1e08ff2ed941ae190588fa04f49c17d4f6f18863dbee1338406fa469ecbc",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ef12c95232bd185b281b3696b975d91a274d795342eeaf225572dd8a932930c7",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/website/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "fef62b21ed0e48905c431d72a6dff95c95a4152e4c11f2258838726562d75736",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "79c245277d94a98eb5c486cf4872c309d36ae0e1b5707e0909ee1a84ad7c106a",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "15b9ff10216a99635bc267de6698fdf071a9ffc88bdfd26c00f41cd9d098121d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "d1b918579e9f904b55eac3d73b1deebe1f11706e96b2bb90e669850888be576c",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%EB%B3%91%EC%9B%90/": {
+      "sourceDigest": "7dc0bcebbed6f48eeee0ce19920f615b31ce39228ae10fc8ca5f062e29307034",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "e906f5aa4c15020c6a68225ab24d207bc24015ac4f55717416df78daaebf0af1",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%ED%95%9C%EC%9D%98%EC%9B%90/": {
+      "sourceDigest": "ca815ecb484c892816d36c1a5ec2e1b9a040aea5fffadae8e5588d33e10f2338",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "e78d14b222df05534d3fad6802512cb49b5323bc9a4260230843eb77b274be3b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%ED%95%9C%EC%9D%98%EC%9B%90/": {
+      "sourceDigest": "83ec930931368829cae81aad270ec28d640674bb02aae92ab80cb1c0c05977d3",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "ab382175a2b98fa5d697b1ec6046975a1dde21ca718317991edbcb31cf943056",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%EC%95%88%EA%B3%BC/": {
+      "sourceDigest": "70af62481291256e209be21d728f2ec93ff5eac715e00f98dc674e61ccaffe74",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8824c27ff40ea742d9f2201a00b5c47618d43319bfc10f58dabef7d150a28927",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app/%EC%95%88%EA%B3%BC/": {
+      "sourceDigest": "38b485c1cd4913f9f1a5be2375c0ef6e4f8d7e274adbce54ea58f464d96b31be",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "1f94f89a9a131e870fcb9a4086fd2053e26e24d064903d3c365350fe4631af9d",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%EC%95%88%EA%B3%BC/": {
+      "sourceDigest": "59687564995f2f4e9b32609ad953b041950e7600d0f62144776748bebdae8bd6",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "25deaa0781f452167707b15d6aa01da4bc89b80fa2666b36f4e5ce1a6d204d79",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%EC%95%88%EA%B3%BC/": {
+      "sourceDigest": "a1341322540463879acaf93307ac45aee49ed0eb12497a7504051a4f5eb15089",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "e55a29e91af3fa8f548ffcfc8519901f80d76e2e7a3ff13e8faa5e9b4674c069",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%EC%95%88%EA%B3%BC/": {
+      "sourceDigest": "fa12bd90d877fb8434f890e2d72fad8bbcf7aac7bef009b47738a22eb77f7efc",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "2c6723c46e65e5fcbc50fd150154fbddf6bc2dce157bfad34524aff7378152a2",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/": {
+      "sourceDigest": "694f3e6fd3107b59d2b6e1e29f9047d531c4fd08f05f6a193bf65d1e31aa318c",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "88540a63fec832ba2eeef4b4e46371e026fbe488c7d6f5eb96ae6534199ab308",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/": {
+      "sourceDigest": "f7d66e997e1fc004327fa66b6bc86619c9d8e388112a020e4a13b0cf8c7eb10d",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "fbbe53bdee2b501abdb1ec5a73366f27cfdca1e87f1facc55783ad800e6b6c28",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "cfe798872e90bc90d31277300e748f477380347dab459a9fcbb13e75928b8ad9",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "28d206e09c827bd8c10a79b4c08810ac41f6fda09e8529e32f1265e5aead5ee0",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "fb874f3192900cbd9c4f92b1ced7beca2db5d788cd636ce957c7e91bbd4d3032",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "0a231cac95bff34c9b5848f3d536a15c36d501fd4eb7a3871aab61a3945610a6",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ecommerce/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "f50b2133bfb673ac8e029521542a156ff1dad7422912b4040287620b4a7aed04",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "57ce92a73b1595b03e32e5b4850ce7404e892b5924ae5ba840752861c15844f0",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "83d2ac0cc172cca2f936da25e9777414d13be4f53e83a11a46fc31f9c53cef6c",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "70cd087200160d3d4d9d9cbe9a77d29ae7a09abf24d554ea73c6eed1f25ac7ae",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/order/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "c9346009a8cfdb2fefcddcafde5e22c0bb2fe4a2817fdc1d658e40ae8e93035e",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "d4fb8d3a8c1b386dc021fc47aa76ee31f8d4482c9a1a3fc0491f2582810e4473",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/website/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/": {
+      "sourceDigest": "76e6aec098e95199d28bbcd317b0041e60dc6b400e261cbcc7d4833a6269ce12",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "40cb2c970a723023ab48f688e19b9adbc8c82d32f1eb0d88e8e785b2529286d6",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%ED%98%B8%ED%85%94/": {
+      "sourceDigest": "3470dd50643f2c53e65001f6210a85853ef3a0d1bc1939886b7067f61037482e",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "f21b089c54cd9ff395fb8272be2da17c9127bf519f9db46740885074ff549b79",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EB%AA%A8%ED%85%94/": {
+      "sourceDigest": "8b46a6abc141f68b20c11ceb3ff0074b3c2592d1849d69693877e19ce8d9a737",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8f3bc1ffbb45ed921b4b7188da7a0b6cc04f096f6611105d412803fb15c8b78a",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%EB%A6%AC%EC%A1%B0%ED%8A%B8/": {
+      "sourceDigest": "2bf58b6fd1d164c1cbb6d4f63e5273d9a768f4fb0ed9e146bf0353e77b3d9cba",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "2834075df907691caf51e6b66be62a7323405e6504522711381e5b7784e54611",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EB%A6%AC%EC%A1%B0%ED%8A%B8/": {
+      "sourceDigest": "7f4bbab18125e6bb4aed601d27753308e05cb318cf4d9cf729676fa194b0fbff",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "c05444783cc2fb270be74a495f9685461d7e7c8f7ca5c112b8f00d6c60e23156",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%ED%8E%9C%EC%85%98/": {
+      "sourceDigest": "19c2e81d72df9ba3c72a582e9f543cd2d323c6e89144698f7e3de6a3e0803371",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "0f93afce6c32160b88c0d228a4e2764bf28e71e83bfec7967aeb3ac2a4eced8b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EA%B2%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EC%9A%B0%EC%8A%A4/": {
+      "sourceDigest": "c9d2480bc39c9917fc0ba9dd2211c9757fb5c7eed40d14da8df435a00219b3e7",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "578f31c422a1f5e6878fe90a4c5f79f404aded12ca1ac02ca2a95859a33d8575",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%ED%92%80%EB%B9%8C%EB%9D%BC/": {
+      "sourceDigest": "921c15f80fb7625f275b086df2c08141fb996b5d79d926e6bd19c1a246c12640",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "bab050a5a39a8b66705291738040759beacba02905ffd1afdfa8835962a0185c",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%ED%95%9C%EC%98%A5%EC%8A%A4%ED%85%8C%EC%9D%B4/": {
+      "sourceDigest": "78a47dc505b57097a674513273109d3814dfc1229555cedcc1ed70694f60d291",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "fe5f07387ef3be657178b768e61daaebd08389dddbdbc4b80d8196ddb9d6aa97",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EC%BA%A0%ED%95%91%ED%8E%9C%EC%85%98/": {
+      "sourceDigest": "5d21dbd9479ad7384c1737739474898929ace04e5042e3dd9f6690b7e455145f",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "0182ca69638241091764df45f6465c1fad35552c54a95f9a6aca6bfba7903ec1",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EA%B8%80%EB%9E%A8%ED%95%91%EC%9E%A5/": {
+      "sourceDigest": "b3fdd50d8dcfb928ca1288b7d05898f153626bd36140de2f020661698ee4cc19",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "9dd0bf23c9f757ea2fa41403d361df79e001f640e19adf09da8d73d298481f4b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EB%AF%BC%EB%B0%95/": {
+      "sourceDigest": "9852599ae0e693f1a0192d1ccad5c4c6537e3a35fa3b42372069d69a4561861f",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "cc133b29e5baf6334513ddbae86988a9b40fd67ec52dd9525cf7251be6d58d3e",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EC%97%AC%ED%96%89%EC%82%AC/": {
+      "sourceDigest": "d038a0ed2afbcdf89c52ddeda62555dacba3ae28514e5ce208cbdc7dd65ef93e",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "bb260a41e9e917e385a363919d07894359c380f3cf5f133baaa1d9d7eb9fda59",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "78d14669d0f8f0412300b7f3f83fb38eb06a3d82273aac8ef88e95322f7a25b1",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "8dba0739fe18a7975be9b0f9403a72f84b359e5232eb19d0cfb315f616f92e61",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "079781108173814afe939670acb0ab964b42a5eeb21ae5d6f29b5081f35bc440",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "392584dd0e98bd2af8549499b959cd126202d813086eb18d6e4bf33028ef2c57",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "e114aa8e3f4388088f062e7af1b14ce5de6a0840071e0a4c06f108b11b616adc",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "bb8bc6dbd9edd5098a2a917e23317f7fb832a3f05008af73e44ece0faa2eed59",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/platform/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "22211b76ea07d9e27d2d5798cfa567fd9e37823b824ff4ea2bd9528454d7dead",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "36951918f4918cb3f767833b0cb0db67e173eb1b83c12cd695ba1330179254fd",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "40c91944ff564ba12d9325684b971229bc8589daaffd3d269a4c91bd2b1519a5",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "71288e71462769cbb5cc556faf3be9b637bd7ef4b753e3b0cae764d03487c733",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "d3ce11e2bf492ff20a0a1083768be8efac5c07d612f3386086f2d7e20e3ea3e1",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "9341a7873b6ba162672ea8e4e24e2fa96dde6a9bcd526427122b003bf6beb07d",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "c968db092adc5b2baa6cff0d53023dcb4471b70cf3d274e8d55552e22872f089",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "fb6ecbd3c81ec71520de5c2d13b7d5d056c5083d748aa18aff5191447888da3b",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/portal/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "911abff0ca55890f1f466a091aa036d9d594184fabfca66185afd915e314f930",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "376122143d141d746f65f1771c84dab8949ae505a2ff08ff2ec841833dc43b9a",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/website/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/": {
+      "sourceDigest": "f4cdfb22e1970f3701f394e8b9fa3a699237649cf6ecf8eb6525589d61d50807",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "17314ab879885a1736e4b440fc2d38c66b3642e47453b3ecfbecbdff3c9854c4",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/app/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/": {
+      "sourceDigest": "4fb212d80305612708970f2a8ca12f1aa247379dd0a9b24807c9ec9d6f47dadb",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "383158eacfc2d15d02650bfa0710de35a03824281d6db9a84478c09e1811b449",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/booking/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/": {
+      "sourceDigest": "7374d24d96b47abc6f72a2be7d0a61d93bf5492f85f49a134b4e992889be6251",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "861f40fe9755d406122f08a672ea69a18c2e5ddc36af2a182bc5199044a1eb1c",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/field/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/": {
+      "sourceDigest": "cb496707cf5bb80881e346d7c1a940bd1adf52ec4b178ac3f01fc496c48f840b",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "160b7f3070348d4fbbaff1d159d1909e0565b91fad9475db887a85dc34fab4de",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/management/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/": {
+      "sourceDigest": "c8a4c4d74ca9bd8c6aa3ba5760ff2ee43e01fa29afa5502f9a0a122a5693795b",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "a32db59c9902532f750b185207ae27ed81538652fbacd3eb66d03c45fd5f7bbd",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    },
+    "https://reumlab.com/development-agency/ai/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EB%B3%B8%EC%82%AC/": {
+      "sourceDigest": "f7aa2c76280ce1ef495331a4439ab9ff02f696022612d72131b0caa22a50ebc6",
+      "deploymentId": "6ad74a570ea02a6265191222",
+      "commit": "bfc166f441822af58ddac15e17cac4322b3d641a",
+      "verifiedAt": "2026-10-20T11:06:00.263Z",
+      "fingerprint": "168d0e1a24529432e5d80b11ef6dcd8b94355017c085ae89d79c1f3d1f4c154a",
+      "httpStatus": 200,
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED"
+    }
+  },
+  "updatedAt": "2026-10-20T11:06:00.263Z",
+  "release": {
+    "pullRequest": "https://github.com/samduck150906-lgtm/reumlab/pull/15",
+    "id": "6ad74a570ea02a6265191222",
+    "state": "ready",
+    "context": "production",
+    "commit_ref": "bfc166f441822af58ddac15e17cac4322b3d641a",
+    "created_at": "2026-10-20T11:02:47.898Z",
+    "published_at": "2026-10-20T11:05:19.434Z",
+    "error_message": null,
+    "title": "Merge pull request #15 from samduck150906-lgtm/codex/reumlab-agency-batch-01-20261020\n\n업무별 개발 안내 98개와 신규 허브·사이트맵 추가",
+    "deploy_ssl_url": "https://main--reumlab.netlify.app"
+  },
+  "searchSubmissionEvidence": {
+    "observedAt": "2026-10-20T11:07:50.499Z",
+    "site": "https://reumlab.com",
+    "sitemap": "https://reumlab.com/sitemap-development-agency.xml",
+    "google": {
+      "account": "ceo@eternalsix.com",
+      "status": "SITEMAP_PROCESSED_SUCCESSFULLY",
+      "discoveredPages": 99,
+      "indexingConfirmed": false
+    },
+    "naver": {
+      "account": "ute",
+      "status": "SITEMAP_REGISTERED",
+      "registeredAtKst": "2026-10-20 20:06:48",
+      "indexingConfirmed": false
+    }
+  }
+}
