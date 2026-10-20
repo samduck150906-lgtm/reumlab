@@ -29,6 +29,20 @@ import { electricalManagementPage } from '@/content/development-agency/expanded/
 import { electricalFieldPage } from '@/content/development-agency/expanded/root-electrical/field';
 import { electricalAiPage } from '@/content/development-agency/expanded/root-electrical/ai';
 import { storageWebsitePage } from '@/content/development-agency/expanded/root-storage/website';
+import { storagePortalPage } from '@/content/development-agency/expanded/root-storage/portal';
+import { storageManagementPage } from '@/content/development-agency/expanded/root-storage/management';
+import { storageFieldPage } from '@/content/development-agency/expanded/root-storage/field';
+import { storageAiPage } from '@/content/development-agency/expanded/root-storage/ai';
+import { evBatteryWebsitePage } from '@/content/development-agency/expanded/root-ev-battery/website';
+import { evBatteryPortalPage } from '@/content/development-agency/expanded/root-ev-battery/portal';
+import { evBatteryManagementPage } from '@/content/development-agency/expanded/root-ev-battery/management';
+import { evBatteryFieldPage } from '@/content/development-agency/expanded/root-ev-battery/field';
+import { evBatteryAiPage } from '@/content/development-agency/expanded/root-ev-battery/ai';
+import { semiconductorWebsitePage } from '@/content/development-agency/expanded/root-semiconductor/website';
+import { semiconductorPortalPage } from '@/content/development-agency/expanded/root-semiconductor/portal';
+import { semiconductorManagementPage } from '@/content/development-agency/expanded/root-semiconductor/management';
+import { semiconductorFieldPage } from '@/content/development-agency/expanded/root-semiconductor/field';
+import { semiconductorAiPage } from '@/content/development-agency/expanded/root-semiconductor/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -48,6 +62,20 @@ export const agencyPages: readonly AgencyPage[] = [
   electricalFieldPage,
   electricalAiPage,
   storageWebsitePage,
+  storagePortalPage,
+  storageManagementPage,
+  storageFieldPage,
+  storageAiPage,
+  evBatteryWebsitePage,
+  evBatteryPortalPage,
+  evBatteryManagementPage,
+  evBatteryFieldPage,
+  evBatteryAiPage,
+  semiconductorWebsitePage,
+  semiconductorPortalPage,
+  semiconductorManagementPage,
+  semiconductorFieldPage,
+  semiconductorAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };

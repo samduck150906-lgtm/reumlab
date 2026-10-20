@@ -3,6 +3,7 @@ import path from 'node:path';
 import { agencyHub, agencyPages } from '../../lib/development-agency/catalog';
 import { agencyHref, assertAgencyPages } from '../../lib/development-agency/types';
 import { fiveGrams, sentenceUnits, gramPostings, exactOverlaps } from './verify.mts';
+import { readAgencyFontCoverage } from './font-coverage.mts';
 
 // Source audit supplements the rendered-HTML and browser checks; it does not
 // label unbuilt pages deployed, submitted or indexed.
@@ -12,12 +13,7 @@ if (!baseline || !output) throw new Error('Usage: source-audit.mts <existing-pag
 const old = JSON.parse(fs.readFileSync(baseline, 'utf8').replace(/^\uFEFF/, ''));
 const pages = [agencyHub, ...agencyPages];
 assertAgencyPages(pages);
-const font = JSON.parse(fs.readFileSync('public/fonts/subset.json', 'utf8'));
-const supported = new Set<number>();
-for (const part of font.unicode_range.split(',')) {
-  const m = /U\+([0-9a-f]+)(?:-([0-9a-f]+))?/i.exec(part);
-  if (m) for (let n = parseInt(m[1],16); n <= parseInt(m[2] || m[1],16); n++) supported.add(n);
-}
+const { supported, subset } = readAgencyFontCoverage();
 const records = [
   ...old.map((p: any) => ({url: p.url, text: p.body, title:p.title, description:p.description, h1:Array.isArray(p.h1)?p.h1[0]:p.h1})),
   ...pages.map(p => ({
@@ -55,12 +51,16 @@ const rows = pages.map((p,k)=>{
   const unique = r.sentences.filter(s=>sentenceOwners.get(s)!.size===1&&frequencies.get(s)===1).length;
   const korean=(r.text.match(/[가-힣]/g)||[]).length, nonspace=[...r.text.replace(/\s/gu,'')].length;
   const outsideFont=[...new Set([...JSON.stringify(p)].filter(c=>/[가-힣]/.test(c)&&!supported.has(c.codePointAt(0)!)))];
+  const fullFontFallbackGlyphs=[...new Set([...JSON.stringify(p)].filter(c=>/[가-힣]/.test(c)&&!subset.has(c.codePointAt(0)!)&&supported.has(c.codePointAt(0)!)))];
+  // Existing npm build rejects the 2 MB fallback for performance even when
+  // the glyph renders correctly. Preserve that gate; distinguish its cause.
+  const fontPerformancePass=fullFontFallbackGlyphs.length===0;
   const badLinks=p.relatedRoutes.filter(l=>!urls.has(new URL(l.href,'https://reumlab.com').href));
   const metadataCollisions=records.filter((other,j)=>i!==j&&(other.title===r.title||other.description===r.description||other.h1===r.h1)).map(o=>o.url);
   const uniqueSentenceRatio=unique/r.sentences.length;
   const placeholder=/\b(?:TODO|TBD|lorem\s+ipsum|placeholder)\b|추후\s*작성|내용\s*준비\s*중/iu.test(r.text);
-  const status=korean>=3500&&nonspace>=3500&&p.sections.length>=12&&p.faq.length>=6&&uniqueSentenceRatio>=.65&&nearest.similarity<.72&&!outsideFont.length&&!badLinks.length&&!metadataCollisions.length&&!placeholder?'PASS':'FAIL';
-  return {url:r.url,clusterIds:p.clusterIds,korean,nonspace,sections:p.sections.length,faq:p.faq.length,uniqueSentenceRatio,nearest,outsideFont,badLinks,metadataCollisions,placeholder,status};
+  const status=korean>=3500&&nonspace>=3500&&p.sections.length>=12&&p.faq.length>=6&&uniqueSentenceRatio>=.65&&nearest.similarity<.72&&!outsideFont.length&&fontPerformancePass&&!badLinks.length&&!metadataCollisions.length&&!placeholder?'PASS':'FAIL';
+  return {url:r.url,clusterIds:p.clusterIds,korean,nonspace,sections:p.sections.length,faq:p.faq.length,uniqueSentenceRatio,nearest,outsideFont,fullFontFallbackGlyphs,fontPerformancePass,badLinks,metadataCollisions,placeholder,status};
 });
 const report={checkedAt:new Date().toISOString(),scope:'Registered completed source manuscripts versus all existing canonical main texts and each other. HTML, HTTP, runtime and deployment are separate checks.',status:rows.every(r=>r.status==='PASS')?'PASS':'FAIL',existing:old.length,registered:pages.length,measuredPairs,rows};
 fs.mkdirSync(path.dirname(output),{recursive:true});

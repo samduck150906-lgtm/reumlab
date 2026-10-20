@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T12:08:21.909Z",
+  "updatedAt": "2026-10-20T13:07:20.425Z",
   "pages": [
     {
       "url": "https://reumlab.com/development-agency/",
@@ -11,11 +11,11 @@
       "industry": "개발을 의뢰하는 사업자와 운영 담당자",
       "serviceAxis": "업무별 개발 범위",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "sourceDigest": "10e9d9c285687c0af0a41fe7b3bd4096d75d7335d9de21e6760b7f1a8039c554",
+      "sourceDigest": "50bddcf7bbb5c62df38d0b1389119bcc708aacf9a633d096fea6f7c953d3433a",
       "deploymentStatus": "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED",
       "searchSubmissionStatus": "CURRENT_SOURCE_NOT_SUBMITTED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/cms-website-development/",
@@ -30,8 +30,8 @@
       "sourceDigest": "824912d48a4dacac838cc00b042c3c582cf3eb594ddc11ea5f2282d5db89b9ae",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/multilingual-website-development/",
@@ -46,8 +46,8 @@
       "sourceDigest": "bc71b34be9a7799ba955d7e87fd247bd9c1dcd8895f494c155937c24d643b239",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/headless-wordpress-development/",
@@ -62,8 +62,8 @@
       "sourceDigest": "a06b4ce911e9fc6b5737aedb3d1d31ef17c261de9e490094dbc4c490c0e4742d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/server-hosting-migration/",
@@ -78,8 +78,8 @@
       "sourceDigest": "6d048ca5ddfcfba946fe29c52970365941a2fbe0c87faf7f8843ca897864830f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/existing-codebase-audit/",
@@ -95,8 +95,8 @@
       "sourceDigest": "5c626a44104a44b3f38fbbc8bee1b7117ce4b16e40b2476608c86c2cf0feb05c",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app-store-launch-support/",
@@ -111,8 +111,8 @@
       "sourceDigest": "11f6942070070431322205d107caf158b39766d0183d1f29a028fe871a8105c7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/pwa-web-app-development/",
@@ -127,8 +127,8 @@
       "sourceDigest": "7beb3b13b3865226a929010f3d116fe00a73e861fb640ed3e3fd72b9fd347dde",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/map-location-based-app-development/",
@@ -143,8 +143,8 @@
       "sourceDigest": "983908e4737a3cae0f23af090bbe05cbccab2a2733522e4deed5b9586c9ac66d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/social-login-integration/",
@@ -159,8 +159,8 @@
       "sourceDigest": "7802b6f25dcfba27a47c36cf1af5efdfe23658b3b847276ca595fc4f6569a8d2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/analytics-tracking-implementation/",
@@ -175,8 +175,8 @@
       "sourceDigest": "10ceb912d970d161f8030c0f78c8e17cb40356fa67c59d8b28a19d820a7e774e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/api-integration-development/",
@@ -191,8 +191,8 @@
       "sourceDigest": "43fc308b68a314c4c29218bf063f5ec2aadb5021ad39a32ee7cb387975c0c23c",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/contract-management-system-development/",
@@ -207,8 +207,8 @@
       "sourceDigest": "15d740abd836a1cba2a518d20b84c17a37de912cba1efe94a9ed96f594d882cb",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/custom-crm-development/",
@@ -223,8 +223,8 @@
       "sourceDigest": "fafab7d0441437b91d4e5339b5ce95af378f34e909a5ab635511e475b6073703",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/inventory-management-system-development/",
@@ -239,8 +239,8 @@
       "sourceDigest": "fcd75b3d4f680ccc8770c3a1e2287b8e28588937d002f7f9ed82c82844ed44fd",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/order-management-system-development/",
@@ -255,8 +255,8 @@
       "sourceDigest": "7a3e5816e25bb0a797dbe97e983c0096f90a85c532c451bbe5164b226dc83652",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/payment-gateway-integration-development/",
@@ -271,8 +271,8 @@
       "sourceDigest": "af43d1b007c8ccbe7112e720b07a6348c2b3da71802de38b088678b0d55903f0",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/b2b-partner-portal-development/",
@@ -288,8 +288,8 @@
       "sourceDigest": "2db79604f24126a2bc9d78c1485ef333becbc8920b9c79ee30b34578705f220b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai-recommendation-system-development/",
@@ -304,8 +304,8 @@
       "sourceDigest": "7b094101df419dbf6e1d579d9de2eafc3130b9efdcf513332e0be8b48acde55b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/reservation-platform-development/",
@@ -320,8 +320,8 @@
       "sourceDigest": "2576bd81de7432dd3e44e1dad8c3b59e1fc4fbf546c1961d1cbdaf227ca1dcd1",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/settlement-system-development/",
@@ -336,8 +336,8 @@
       "sourceDigest": "8c6ca8a105b42d13fa1550090a8b7f010326185e6a8eebd0e4a747c4001d9d71",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/responsive-web-accessibility-review/",
@@ -352,8 +352,8 @@
       "sourceDigest": "2d40dbdb8b47be71d86d3dbb67572da1f076e58f70a10225415d89db4fdcc712",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/perplexity-crawl-citation-review/",
@@ -368,8 +368,8 @@
       "sourceDigest": "ab490b56587490cf39be30a6a92f3b66f89dd7dab96b28bef9e13e26c20f1796",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/nextjs-rendering-migration/",
@@ -384,8 +384,8 @@
       "sourceDigest": "0d409c78c35042976de4dca71d6b3013b1a8a7fc97e6a077a6a2f8fcfab95f19",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/supabase-permissions-migration/",
@@ -400,8 +400,8 @@
       "sourceDigest": "7f9fbe1b5ba0e62611d8e6a1b4a0e024fad5856a51940223faf6c1608c7caaba",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/firebase-data-rules-handover/",
@@ -416,8 +416,8 @@
       "sourceDigest": "465245ea7949d1390a481a5b1eb395af9bff2d1b55c80b0654cab2a6c8d94470",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/web-app-security-review-scope/",
@@ -432,8 +432,8 @@
       "sourceDigest": "b315f6f64579176e0e80f8bad5eca33479b9239473ed8f476eb11fb9f0aa8591",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/clinical-study-visit-management/",
@@ -451,8 +451,8 @@
       "sourceDigest": "99b2d5fc9cae18cf23a9b70a45bc446bf09d2628a6441789ca01bccfd908070d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/pet-funeral-handover-management/",
@@ -469,8 +469,8 @@
       "sourceDigest": "d4274b9dae9d124d5a2b5210b28dc9c78a728e38432d512b03451d4bfcc0bb31",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/gift-card-redemption-system/",
@@ -490,8 +490,8 @@
       "sourceDigest": "5796d04fef2e2eb6b6c3cefa0c50200401478217e51db34f5707421aa888e1e6",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/testing-certification-workflow/",
@@ -508,8 +508,8 @@
       "sourceDigest": "98b716388b6e4197216586550fd7420982d819a63b5622712b8fd3f224c6f8ee",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/fulfillment-warehouse-operations/",
@@ -526,8 +526,8 @@
       "sourceDigest": "89848e952c41f8b1297662e2bb2d7d477e7e54abd9f1872c8fcb6fb5e75005ef",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/cold-chain-monitoring-system/",
@@ -544,8 +544,8 @@
       "sourceDigest": "9c282c3ceb667114cf50e19924e5a187538bdc4c7e10cd649a1ab0d4553102a0",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/international-freight-management/",
@@ -562,8 +562,8 @@
       "sourceDigest": "750009aa4db842c5a23214f8bbaadadb57b737a7eda31226cd115595fa1e42df",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ev-charging-session-management/",
@@ -580,8 +580,8 @@
       "sourceDigest": "288c7136c6569519edce0817f7a68e3c384adf97f013f2407e69cefa74acbffa",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/heavy-equipment-rental-management/",
@@ -599,8 +599,8 @@
       "sourceDigest": "49f9110084a999b9478fb2986d25d1701c5cc28c93c3d2d789765d1cdbfce1b3",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/carbon-activity-data-management/",
@@ -616,8 +616,8 @@
       "sourceDigest": "e296aeefcaed3267772d7d7d6bf6759c02f10cef0914a89a14d9b48ee7453560",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/laboratory-sample-management/",
@@ -634,8 +634,8 @@
       "sourceDigest": "2b329449a14eb58aa5fa189a3aee31f3e3f0093835439d8ecc8c584b4dbd3a2d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/franchise-recruitment-website/",
@@ -650,8 +650,8 @@
       "sourceDigest": "ad3adfa596238e77e0c64b139c158f16758b98dc62519a832bf05454ab3c5a01",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/b2b-sales-support-ai-workflow/",
@@ -666,8 +666,8 @@
       "sourceDigest": "7060f7fd9413026fa02609e5a6f8776a7f8a0c4edc26e87ba2829d865fc701a2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/marketplace-ai-operations/",
@@ -682,8 +682,8 @@
       "sourceDigest": "a89fa227b74e26af1995dc9d62edaafaca698e1f10d895ecaeda60d4031964dc",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/marketplace-operations-backoffice/",
@@ -698,8 +698,8 @@
       "sourceDigest": "393fe16c8cdcacd63a03e0a01dd8a30eb629a310118d324c70d5c980be8d926e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -714,8 +714,8 @@
       "sourceDigest": "8a14025b813dbace1fa802d1370962fe0cf833c9ca321e57053e9a7584b7a7be",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -730,8 +730,8 @@
       "sourceDigest": "269e5cfcb1e0b8e55ee4cff9d5789e6f18e1ceab024a768cec3b1c220843a002",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -746,8 +746,8 @@
       "sourceDigest": "30e230f9cf1e1543cd3674e8005d6ae0e142d14265cac58d89551448a8e75e23",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -762,8 +762,8 @@
       "sourceDigest": "fdf63f18505c559a2776c2a746e09557c85d6d3b9a52d77c02af02d2a1b46df2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -778,8 +778,8 @@
       "sourceDigest": "73a9fd02a65826201462404838ba9931464daa087924acdffbae4167e6b6b471",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%88%98%EC%86%8C%EC%97%90%EB%84%88%EC%A7%80%EC%97%85%EC%B2%B4/",
@@ -794,8 +794,8 @@
       "sourceDigest": "259235263b2cc9efed2cd7f9304b240c510430a1ec81354ae25291b3787c4395",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%88%98%EC%86%8C%EC%97%90%EB%84%88%EC%A7%80%EC%97%85%EC%B2%B4/",
@@ -810,8 +810,8 @@
       "sourceDigest": "65b987fe4fd61da02e8de400d9fd77eff6a1f70f2ab7739dad7caeb01c88bc6d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%88%98%EC%86%8C%EC%97%90%EB%84%88%EC%A7%80%EC%97%85%EC%B2%B4/",
@@ -826,8 +826,8 @@
       "sourceDigest": "1a82f3478b001e2a95b6a8149a74bb3dad4c51d8f8821487918a79960b4e0389",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%88%98%EC%86%8C%EC%97%90%EB%84%88%EC%A7%80%EC%97%85%EC%B2%B4/",
@@ -842,8 +842,8 @@
       "sourceDigest": "0b4ce44abd2276c1220527ec223f137493dfc8b128af4419fb7a1f110a4abb63",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%88%98%EC%86%8C%EC%97%90%EB%84%88%EC%A7%80%EC%97%85%EC%B2%B4/",
@@ -856,10 +856,10 @@
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "733810249c4429e450adbed62702552a892989a910fb238091dd138c9d13db7b",
-      "deploymentStatus": "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED",
-      "searchSubmissionStatus": "CURRENT_SOURCE_NOT_SUBMITTED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%A0%84%EB%A0%A5%EC%84%A4%EB%B9%84%EC%97%85%EC%B2%B4/",
@@ -872,8 +872,10 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "d100ea41bac41dff5a159efa41cd8ec64349ca904b404521d7014c218ad13eb6",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%A0%84%EB%A0%A5%EC%84%A4%EB%B9%84%EC%97%85%EC%B2%B4/",
@@ -886,8 +888,10 @@
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "24c8c65d496e823eef1e5d57f2c6861e075b119d4c05feb3c5e91652a84cca8a",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A0%84%EB%A0%A5%EC%84%A4%EB%B9%84%EC%97%85%EC%B2%B4/",
@@ -900,8 +904,10 @@
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "f42fe5277a19e5c36d0f928518266b128316508bbf8bb0fa1f11863d0835c757",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%A0%84%EB%A0%A5%EC%84%A4%EB%B9%84%EC%97%85%EC%B2%B4/",
@@ -914,8 +920,10 @@
       "serviceAxis": "현장·작업 관리",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "419528832b876df1d0fa3ebd1bb2bdb90e0634f60efa4fe3d066cafb412d510f",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%A0%84%EB%A0%A5%EC%84%A4%EB%B9%84%EC%97%85%EC%B2%B4/",
@@ -928,8 +936,10 @@
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "1340087d24978a7bb323809a551661c0ac30c8f567de93d5de90e32a4e51be80",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%97%90%EB%84%88%EC%A7%80%EC%A0%80%EC%9E%A5%EC%9E%A5%EC%B9%98%EC%97%85%EC%B2%B4/",
@@ -942,6 +952,204 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "456b58dc7e791ddad0ef8940597609732c180094ac8256ab38bd4299da90c4d0",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%97%90%EB%84%88%EC%A7%80%EC%A0%80%EC%9E%A5%EC%9E%A5%EC%B9%98%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-607-portal"
+      ],
+      "primaryKeyword": "에너지저장장치업체 고객 포털 개발",
+      "searchIntent": "고객 사업장별 에너지저장장치의 승인된 기간 보고서와 정정본을 공개하고 원본 근거에 연결된 자료 문의를 처리하기",
+      "industry": "에너지저장장치업체",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "e8a9239d9f78256e12e8c224233e13260a8b6ec9505fc2ceed0db25632f023e1",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%97%90%EB%84%88%EC%A7%80%EC%A0%80%EC%9E%A5%EC%9E%A5%EC%B9%98%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-607-management"
+      ],
+      "primaryKeyword": "에너지저장장치업체 관리 프로그램",
+      "searchIntent": "설치된 에너지저장장치의 구성·계약을 기준으로 서비스 사건과 부품 교체·보증 회신·반품 등 후속 업무를 추적하기",
+      "industry": "에너지저장장치업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "7c86030ca6f9545b79daeccb4daf884df70170f103ed045dc425ea12151ee31e",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%97%90%EB%84%88%EC%A7%80%EC%A0%80%EC%9E%A5%EC%9E%A5%EC%B9%98%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-607-field"
+      ],
+      "primaryKeyword": "에너지저장장치업체 현장 관리 앱",
+      "searchIntent": "승인된 현장 방문에서 장치별 관찰·사진·표시값과 원격 자료의 대상·시점을 연결하고 미확인 자료와 후속 요청을 인계하기",
+      "industry": "에너지저장장치업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "778e076e7030eb15c8dc5002dd1b83920312f947f85bdc30048ea13562b637ad",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%97%90%EB%84%88%EC%A7%80%EC%A0%80%EC%9E%A5%EC%9E%A5%EC%B9%98%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-607-ai"
+      ],
+      "primaryKeyword": "에너지저장장치업체 AI 자동화",
+      "searchIntent": "확인된 에너지저장장치 집계표와 공개 가능한 운영 메모를 근거로 기간 보고서 설명·질문 초안을 만들고 수치와 해석을 사람이 검토하기",
+      "industry": "에너지저장장치업체",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "4381f69d3994436dc7dc71e580f1bc0a9c9fcca2e482a04879f7025b899d929a",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%A0%84%EA%B8%B0%EC%B0%A8%EB%B0%B0%ED%84%B0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-608-website"
+      ],
+      "primaryKeyword": "전기차배터리업체 홈페이지 제작",
+      "searchIntent": "전기차 배터리 업체의 실제 공급 단위와 공개 제품 단계·자료를 구분해 기술 문의로 연결하는 홈페이지 제작 범위 비교",
+      "industry": "전기차배터리업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "280ee00675d57c0007d9d272daed7df08d390627b1d5f464536df47064cb06d1",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%A0%84%EA%B8%B0%EC%B0%A8%EB%B0%B0%ED%84%B0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-608-portal"
+      ],
+      "primaryKeyword": "전기차배터리업체 고객 포털 개발",
+      "searchIntent": "전기차 배터리 샘플과 규격 개정·고객 평가 자료를 연결하고 외부 조직의 질문·재제출·검토 회신을 관리하는 포털 개발",
+      "industry": "전기차배터리업체",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c76858129238cb4baf7cb989cf8bf3be4cfb61ee26494af0af1d72f558112b93",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%A0%84%EA%B8%B0%EC%B0%A8%EB%B0%B0%ED%84%B0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-608-management"
+      ],
+      "primaryKeyword": "전기차배터리업체 관리 프로그램",
+      "searchIntent": "전기차 배터리의 자재·제품 구성 관계와 보류·해제·출하 기록을 원본 시스템에 연결하는 관리 프로그램의 범위 비교",
+      "industry": "전기차배터리업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "88b5a88a939020d9053ae4440a9e6389e5e8c14af35eb6062783ef8b8ed06d79",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%A0%84%EA%B8%B0%EC%B0%A8%EB%B0%B0%ED%84%B0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-608-field"
+      ],
+      "primaryKeyword": "전기차배터리업체 현장 관리 앱",
+      "searchIntent": "전기차 배터리 샘플·반환 대상의 현장 식별과 부분 인수·담당자 인계 기록을 연결하는 모바일 앱 개발 범위",
+      "industry": "전기차배터리업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "71279543df8d20e8bbbf8a48b994096fb398ec1245e62d8add776713a1cb1740",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%A0%84%EA%B8%B0%EC%B0%A8%EB%B0%B0%ED%84%B0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-608-ai"
+      ],
+      "primaryKeyword": "전기차배터리업체 AI 자동화",
+      "searchIntent": "전기차 배터리 규격 문서의 개정 전후 조항·수치·조건 변경 후보를 출처와 함께 찾아 기술 담당자의 검토 목록으로 정리하기",
+      "industry": "전기차배터리업체",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "3756f2cf02774c6ed1546c64a1b9b23e3dc3b0a80e21e722db7ee307f8b58319",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EB%B0%98%EB%8F%84%EC%B2%B4%EC%9E%A5%EB%B9%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-609-website"
+      ],
+      "primaryKeyword": "반도체장비업체 홈페이지 제작",
+      "searchIntent": "반도체 장비의 공정 기능·제품군·모델 탐색과 신규 장비·기존 장비 지원 문의를 구분하는 홈페이지 제작 범위",
+      "industry": "반도체장비업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "468dd1c32cf71e740d613a9ffc3a305951dc62dfd394f377881f1ead8c1beb45",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EB%B0%98%EB%8F%84%EC%B2%B4%EC%9E%A5%EB%B9%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-609-portal"
+      ],
+      "primaryKeyword": "반도체장비업체 고객 포털 개발",
+      "searchIntent": "고객의 반도체 설치 장비 구성에 맞는 문서 접근과 기술 지원 요청·공개 답변을 연결하는 포털 개발",
+      "industry": "반도체장비업체",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b9007edf071b6e15f5819aadf3e6229b88aa88337f920e01c735610c85df4aa6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EB%B0%98%EB%8F%84%EC%B2%B4%EC%9E%A5%EB%B9%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-609-management"
+      ],
+      "primaryKeyword": "반도체장비업체 관리 프로그램",
+      "searchIntent": "반도체 장비 서비스 부품의 개별 식별과 출고·교환·반환·수리 상태를 고객 지원 사건에 연결하는 관리 프로그램",
+      "industry": "반도체장비업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "64628a68706796743131ce8f1a091e65eed6e06afd1f2609e5e352284b3698fa",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EB%B0%98%EB%8F%84%EC%B2%B4%EC%9E%A5%EB%B9%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-609-field"
+      ],
+      "primaryKeyword": "반도체장비업체 현장 관리 앱",
+      "searchIntent": "반도체 장비 현장 서비스의 대상·절차 버전·사용 부품·미완료 항목을 고객 보안 조건에 맞춰 기록하고 인계하는 앱 개발",
+      "industry": "반도체장비업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "8ece8cae4887013d072641a06acc7bdfaf6c56277fcb043009fe4978f07341e7",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EB%B0%98%EB%8F%84%EC%B2%B4%EC%9E%A5%EB%B9%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-609-ai"
+      ],
+      "primaryKeyword": "반도체장비업체 AI 자동화",
+      "searchIntent": "반도체 장비 지원 사건의 허용된 로그·현장 메모·고객 설명을 출처와 시각 기준에 따라 정리해 기술 검토와 인계를 지원하기",
+      "industry": "반도체장비업체",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "20d898e977555ab6306e14ce8e3ddcbe9ad43b136f34b7600932a24b9100cfd7",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -958,8 +1166,8 @@
       "sourceDigest": "20c3fa8339939c022175575ac73c4dbdeedb772afae49084aee1e3fefbd65967",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%B9%98%EA%B3%BC/",
@@ -974,8 +1182,8 @@
       "sourceDigest": "4ce210bcf3149ee4a2639768b9b031c345a82565f3fdc445648eae516008ec7f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%94%BC%EB%B6%80%EA%B3%BC/",
@@ -990,8 +1198,8 @@
       "sourceDigest": "b05ce84e8d58cf8fe7716b602c99351734dad4fc6c16ca8089e2d29589ecfa50",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%94%BC%EB%B6%80%EA%B3%BC/",
@@ -1006,8 +1214,8 @@
       "sourceDigest": "c17bf76738f4b0c3f28e00c44c1387b1ed543e59860042444f0ed73b14a31d4b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
@@ -1022,8 +1230,8 @@
       "sourceDigest": "8a07927fdfa2c4bbd1e24f016e5cd98796d6ac9e9b0ff37e2e5d7cbaa8f3c44b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
@@ -1038,8 +1246,8 @@
       "sourceDigest": "b0509fb92f24f2388d6502960492e0bbe7908e2f67dce574adb122471d4d4326",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
@@ -1054,8 +1262,8 @@
       "sourceDigest": "9d1e6a41e43ae89306fc8d5d0d7b4d35a7c6afa0a4a64b265e022d59a3050e5b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
@@ -1070,8 +1278,8 @@
       "sourceDigest": "aae72715fa86ac2824370215021822f09a09a62a5682f9abf13dc1cafeae51d7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
@@ -1086,8 +1294,8 @@
       "sourceDigest": "f6f9d37cbe65047643c0c2ef771259bf39e63ab29980616d871f15bc35525e3a",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -1102,8 +1310,8 @@
       "sourceDigest": "c7e5132612efbbac0d89b66c63b5bc790e3a183e39f4082303a9b9c28b32b4fe",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -1118,8 +1326,8 @@
       "sourceDigest": "4fc956c8a0ad9922cf59951dd89a0d994100c40efd1ba56efe845f867eb60299",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -1134,8 +1342,8 @@
       "sourceDigest": "1be1ed84f97a85432d68c209438ceedb6809e5c45ca6310890186a501572afbe",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -1150,8 +1358,8 @@
       "sourceDigest": "bfdd1e08ff2ed941ae190588fa04f49c17d4f6f18863dbee1338406fa469ecbc",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -1166,8 +1374,8 @@
       "sourceDigest": "fef62b21ed0e48905c431d72a6dff95c95a4152e4c11f2258838726562d75736",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EB%B3%91%EC%9B%90/",
@@ -1183,8 +1391,8 @@
       "sourceDigest": "15b9ff10216a99635bc267de6698fdf071a9ffc88bdfd26c00f41cd9d098121d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EB%B3%91%EC%9B%90/",
@@ -1201,8 +1409,8 @@
       "sourceDigest": "7dc0bcebbed6f48eeee0ce19920f615b31ce39228ae10fc8ca5f062e29307034",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EB%82%B4%EA%B3%BC/",
@@ -1217,8 +1425,8 @@
       "sourceDigest": "f99806b44743dd302d518902affda4b7d0ee4317c2d5aab3708e74e69abce153",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EB%82%B4%EA%B3%BC/",
@@ -1233,8 +1441,8 @@
       "sourceDigest": "c475c854da181a0057e637bc570ab36bcb4ce5eeefb905d30d2da54d52b2b228",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EB%82%B4%EA%B3%BC/",
@@ -1249,8 +1457,8 @@
       "sourceDigest": "e894706c2c31196d6caa14b74e3d41cd1ff54c7dcf77c76d123fb02652e7459f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EB%82%B4%EA%B3%BC/",
@@ -1265,8 +1473,8 @@
       "sourceDigest": "ff2872ed2ded25a200d45a9143a09cd3f0361a718b5a10a9e34b7bac1e968162",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EB%82%B4%EA%B3%BC/",
@@ -1281,8 +1489,8 @@
       "sourceDigest": "0799f99d7f78903ddc8407d0e88e3e03e51607ffe659e7903aa4cb025d3c7a04",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%95%9C%EC%9D%98%EC%9B%90/",
@@ -1297,8 +1505,8 @@
       "sourceDigest": "ca815ecb484c892816d36c1a5ec2e1b9a040aea5fffadae8e5588d33e10f2338",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%95%9C%EC%9D%98%EC%9B%90/",
@@ -1313,8 +1521,78 @@
       "sourceDigest": "83ec930931368829cae81aad270ec28d640674bb02aae92ab80cb1c0c05977d3",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-017-ai"
+      ],
+      "primaryKeyword": "신경외과 AI 자동화",
+      "searchIntent": "신경외과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "신경외과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "5d40bfe4927e955460277cade141a58e819308ac6d45c5ed12b62b17c9c224ae",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-017-app"
+      ],
+      "primaryKeyword": "신경외과 앱 개발",
+      "searchIntent": "신경외과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "신경외과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c02c5204338d2f4e90a7d13826d6b93e723ff085ca065f7d1f8f01c544c70f9c",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-017-booking"
+      ],
+      "primaryKeyword": "신경외과 예약 시스템 개발",
+      "searchIntent": "신경외과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "신경외과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b5bf0822ea9101ed815582a93e5132dff1cd23419adceb5a270c1e6afa50352a",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-017-management"
+      ],
+      "primaryKeyword": "신경외과 관리 프로그램",
+      "searchIntent": "신경외과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "신경외과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "93756dfe8877bed6cbee58de4229ea4fc9e5b8ec5cad3a1df7706d08eb3ac0dc",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-017-portal"
+      ],
+      "primaryKeyword": "신경외과 고객 포털 개발",
+      "searchIntent": "신경외과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "신경외과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "f24e1a62a787f299d56a4d77ce5c51643dfb5b7b5137bc8fb6940d93bbb2d3e4",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC/",
@@ -1329,8 +1607,8 @@
       "sourceDigest": "faf6c33db80d3297aea11ccf0bb2ce842548d94d12c74d64f53352eb31d7f3bb",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC/",
@@ -1345,8 +1623,8 @@
       "sourceDigest": "58551c1bfc173540493b1e6b99d5504fa2a1ac7f9148aa01cfb9bc7e58518a54",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC/",
@@ -1361,8 +1639,8 @@
       "sourceDigest": "60933bbe0d2923136620b8c306290a9a76a78914a042a7fe7f350cba21194a05",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC/",
@@ -1377,8 +1655,8 @@
       "sourceDigest": "59ab194be21b71cd48610d1a2e3531fe3ced3db88b0cfe1875382971a16ba5d6",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC/",
@@ -1393,8 +1671,8 @@
       "sourceDigest": "4313124abf712f2cf698b2e8ad9ab0f121cc7a9eee1f9ab82b7cb3bfa8426ec7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%95%88%EA%B3%BC/",
@@ -1409,8 +1687,8 @@
       "sourceDigest": "70af62481291256e209be21d728f2ec93ff5eac715e00f98dc674e61ccaffe74",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%95%88%EA%B3%BC/",
@@ -1425,8 +1703,8 @@
       "sourceDigest": "38b485c1cd4913f9f1a5be2375c0ef6e4f8d7e274adbce54ea58f464d96b31be",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%95%88%EA%B3%BC/",
@@ -1441,8 +1719,8 @@
       "sourceDigest": "678e97787ed1e5de56fec1f4b36c9326e84d0f17c9379b5d5e7a041f51c9af3d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%95%88%EA%B3%BC/",
@@ -1457,8 +1735,8 @@
       "sourceDigest": "9cad8b13f9d78f722b8ebbc458d158ad17889b9c5ee45b347452aaf0eef6578f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%95%88%EA%B3%BC/",
@@ -1473,8 +1751,8 @@
       "sourceDigest": "fa12bd90d877fb8434f890e2d72fad8bbcf7aac7bef009b47738a22eb77f7efc",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1489,8 +1767,8 @@
       "sourceDigest": "dcb175513716e05fbacb5c8719d876bc488404d1c053b343c302801e2cd161f2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1505,8 +1783,8 @@
       "sourceDigest": "0cb85a2b740baf4815596c344d963e3bd95911e80626be8e746bcae0d7396dff",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1521,8 +1799,8 @@
       "sourceDigest": "b282c5efca1bd3b54a5ec3dc370ee7d9447af5eeccaec2069c816055c52c4c14",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1537,8 +1815,8 @@
       "sourceDigest": "c277e5410a528de995571eee8d53f680cc0e67b155f0be30a26f5b7cd192df01",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1553,8 +1831,78 @@
       "sourceDigest": "adaf5051cad04c3cbeef61de6b52b0055096e1470b2ff94e3f8c963fb60d4de6",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-018-ai"
+      ],
+      "primaryKeyword": "통증의학과 AI 자동화",
+      "searchIntent": "통증의학과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "통증의학과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "7cc660a04b45c5794d710455ed0a2e6488163c4206af3ab1c6a7f30389797ad2",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-018-app"
+      ],
+      "primaryKeyword": "통증의학과 앱 개발",
+      "searchIntent": "통증의학과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "통증의학과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "a38545db6970c85187c12d85f6622996f1451da81872467ae33602b09263d5e6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-018-booking"
+      ],
+      "primaryKeyword": "통증의학과 예약 시스템 개발",
+      "searchIntent": "통증의학과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "통증의학과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "6d57e6e8bad14f0dea0005f992b5514dd57e297b170202137ffec30f5721365e",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-018-management"
+      ],
+      "primaryKeyword": "통증의학과 관리 프로그램",
+      "searchIntent": "통증의학과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "통증의학과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "08fa5df3542ce478690eae533fe438f384ed8724e1b43902e062097b3e2674af",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%ED%86%B5%EC%A6%9D%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-018-portal"
+      ],
+      "primaryKeyword": "통증의학과 플랫폼 개발",
+      "searchIntent": "통증의학과 플랫폼 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "통증의학과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "6624a3cd20b0430fd0d1d0207b4eb7f8d232ab03ce5d4fcabf20225b15d2cf31",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%86%8C%EC%95%84%EA%B3%BC/",
@@ -1569,8 +1917,8 @@
       "sourceDigest": "4834f38166d95d1e036bd67bcdb0b3c9148ca533f8755ce340775fc3b9d65b25",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%86%8C%EC%95%84%EA%B3%BC/",
@@ -1585,8 +1933,8 @@
       "sourceDigest": "3a7ad3bc1325741b0e25745554ab6c7d2d8655c70c1c17720c1e483480dddf65",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%86%8C%EC%95%84%EA%B3%BC/",
@@ -1601,8 +1949,8 @@
       "sourceDigest": "49811e5f9c2349f0c301f18489fea14eeb5a196eb70f2f2a46b0509d45e01af1",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%86%8C%EC%95%84%EA%B3%BC/",
@@ -1617,8 +1965,8 @@
       "sourceDigest": "0c22457f2fc22606cde4966b967bb80f004bd2fc8601b28fe79db7018ecd3a47",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%86%8C%EC%95%84%EA%B3%BC/",
@@ -1633,8 +1981,8 @@
       "sourceDigest": "ae83abe9d930fd7ad22bd5e2b064d29a488c1809e4a9e108d38445f69bcf6391",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1649,8 +1997,8 @@
       "sourceDigest": "694f3e6fd3107b59d2b6e1e29f9047d531c4fd08f05f6a193bf65d1e31aa318c",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -1665,8 +2013,8 @@
       "sourceDigest": "f7d66e997e1fc004327fa66b6bc86619c9d8e388112a020e4a13b0cf8c7eb10d",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC/",
@@ -1679,8 +2027,10 @@
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "82c4e5f6a78fe9c21874a744815fe500ca3287d79ae00f63d02dd57b80abb0c4",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC/",
@@ -1693,8 +2043,10 @@
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "8f9b7fbac78ed6f9bee537fb2ca9bd438f734e013ac07e2531b91289aa4b3a48",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC/",
@@ -1707,8 +2059,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "1653b3e73f5e85e5bbd24b8b4e0d6be8a677397c52327109f07d34f47bcc5e38",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC/",
@@ -1721,8 +2075,10 @@
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "4a57a56b73fd84a4fa8959e9cd77687c73ad8a663b999cad8e65fc318c308ed6",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC/",
@@ -1735,6 +2091,162 @@
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "449ecf24bd643076c5a684f7b3311a6054f0e2aa3cebd2c5a11cb141799fd8af",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-ai"
+      ],
+      "primaryKeyword": "영상의학과 AI 자동화",
+      "searchIntent": "영상의학과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "65a7de78a0b55fa521031e7c725e18bc1bcb30b7abf2f9839686ac50e0dd966d",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-app"
+      ],
+      "primaryKeyword": "영상의학과 앱 개발",
+      "searchIntent": "영상의학과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "f956edfb34b81e5846920b30d3e7410f77a978b97cce96d9cf4b6e3cd8b5a392",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-booking"
+      ],
+      "primaryKeyword": "영상의학과 예약 시스템 개발",
+      "searchIntent": "영상의학과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "db3402f00f6bff2e4409e48a2eb5b3b650e39c5a4337b413aa7d3ead2c704435",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-management"
+      ],
+      "primaryKeyword": "영상의학과 관리 프로그램",
+      "searchIntent": "영상의학과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "dfa1d6c0852b9e2413e51b97a934e9d583eb2d3c4aa964bbdd1fb08689fef60f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-portal"
+      ],
+      "primaryKeyword": "영상의학과 고객 포털 개발",
+      "searchIntent": "영상의학과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "ef7d53fad0342c762e3c79df93920edd84758ecbf46ef185222ff2b2800027ab",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%98%81%EC%83%81%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-019-website"
+      ],
+      "primaryKeyword": "영상의학과 홈페이지 제작",
+      "searchIntent": "영상의학과 홈페이지 제작의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "영상의학과",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "33f96672ea8b6b3d9dc2809b219c883a855bcf280ba07d0956b48dfbb37e27d5",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-016-ai"
+      ],
+      "primaryKeyword": "재활의학과 AI 자동화",
+      "searchIntent": "재활의학과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "재활의학과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "90e972f36bba702de4c58cc380168d60d00ea1b55ebfefddf04c97c65e6726f5",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-016-app"
+      ],
+      "primaryKeyword": "재활의학과 앱 개발",
+      "searchIntent": "재활의학과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "재활의학과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "96553054f9f34529ad70d04be0419f13ced447af3b13ca6a5ee92fd6af04461b",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-016-booking"
+      ],
+      "primaryKeyword": "재활의학과 예약 시스템 개발",
+      "searchIntent": "재활의학과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "재활의학과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "5d76942f4e26b75fe0e8f10b0fcbe3365ec1c9a14c12860078253c28040cfed9",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-016-management"
+      ],
+      "primaryKeyword": "재활의학과 관리 프로그램",
+      "searchIntent": "재활의학과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "재활의학과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "9e5aa3b5cfb503884b94d714db3890210665fe05bbb6f8f3abca6cf2e45e1f71",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC/",
+      "clusterIds": [
+        "ind-016-portal"
+      ],
+      "primaryKeyword": "재활의학과 고객 포털 개발",
+      "searchIntent": "재활의학과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "재활의학과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "f419cb2430f2bd441d77ea39debb247c36540caafc8bace6b98ede3f2359611c",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -1749,8 +2261,10 @@
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "bc83d72eb9b77d21fd7909b563c15a5d7bb5ccd9cce5b6fe4474a84117191326",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC/",
@@ -1763,8 +2277,10 @@
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "a8b582ec588f196f533ee217ba0a22701865dbe2636c8b8063bec147ac8688e5",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC/",
@@ -1777,8 +2293,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "b1579649084472e24c74d5c751b4c823cb13d3f3dbb315b20aeccd07b918f41a",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC/",
@@ -1791,8 +2309,10 @@
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "9bf3d62ba838cbecee927a4c4370c3e7a0ecf5e9c612b55149d5022075893874",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC/",
@@ -1805,8 +2325,10 @@
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "99c907ac628f29f7a076d6e85f986163da6912ee8746084db33e3642d1905969",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1821,8 +2343,8 @@
       "sourceDigest": "cfe798872e90bc90d31277300e748f477380347dab459a9fcbb13e75928b8ad9",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1837,8 +2359,8 @@
       "sourceDigest": "fb874f3192900cbd9c4f92b1ced7beca2db5d788cd636ce957c7e91bbd4d3032",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/ecommerce/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1853,8 +2375,8 @@
       "sourceDigest": "f50b2133bfb673ac8e029521542a156ff1dad7422912b4040287620b4a7aed04",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1869,8 +2391,8 @@
       "sourceDigest": "83d2ac0cc172cca2f936da25e9777414d13be4f53e83a11a46fc31f9c53cef6c",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/order/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1885,8 +2407,8 @@
       "sourceDigest": "c9346009a8cfdb2fefcddcafde5e22c0bb2fe4a2817fdc1d658e40ae8e93035e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -1901,8 +2423,8 @@
       "sourceDigest": "76e6aec098e95199d28bbcd317b0041e60dc6b400e261cbcc7d4833a6269ce12",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%98%B8%ED%85%94/",
@@ -1917,8 +2439,8 @@
       "sourceDigest": "3470dd50643f2c53e65001f6210a85853ef3a0d1bc1939886b7067f61037482e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%AA%A8%ED%85%94/",
@@ -1933,8 +2455,8 @@
       "sourceDigest": "8b46a6abc141f68b20c11ceb3ff0074b3c2592d1849d69693877e19ce8d9a737",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
@@ -1949,8 +2471,8 @@
       "sourceDigest": "2bf58b6fd1d164c1cbb6d4f63e5273d9a768f4fb0ed9e146bf0353e77b3d9cba",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
@@ -1965,8 +2487,8 @@
       "sourceDigest": "7f4bbab18125e6bb4aed601d27753308e05cb318cf4d9cf729676fa194b0fbff",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%8E%9C%EC%85%98/",
@@ -1981,8 +2503,8 @@
       "sourceDigest": "19c2e81d72df9ba3c72a582e9f543cd2d323c6e89144698f7e3de6a3e0803371",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B2%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EC%9A%B0%EC%8A%A4/",
@@ -1997,8 +2519,8 @@
       "sourceDigest": "c9d2480bc39c9917fc0ba9dd2211c9757fb5c7eed40d14da8df435a00219b3e7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%92%80%EB%B9%8C%EB%9D%BC/",
@@ -2013,8 +2535,8 @@
       "sourceDigest": "921c15f80fb7625f275b086df2c08141fb996b5d79d926e6bd19c1a246c12640",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%95%9C%EC%98%A5%EC%8A%A4%ED%85%8C%EC%9D%B4/",
@@ -2029,8 +2551,8 @@
       "sourceDigest": "78a47dc505b57097a674513273109d3814dfc1229555cedcc1ed70694f60d291",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%BA%A0%ED%95%91%ED%8E%9C%EC%85%98/",
@@ -2045,8 +2567,8 @@
       "sourceDigest": "5d21dbd9479ad7384c1737739474898929ace04e5042e3dd9f6690b7e455145f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B8%80%EB%9E%A8%ED%95%91%EC%9E%A5/",
@@ -2061,8 +2583,8 @@
       "sourceDigest": "b3fdd50d8dcfb928ca1288b7d05898f153626bd36140de2f020661698ee4cc19",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%AF%BC%EB%B0%95/",
@@ -2077,8 +2599,8 @@
       "sourceDigest": "9852599ae0e693f1a0192d1ccad5c4c6537e3a35fa3b42372069d69a4561861f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%97%AC%ED%96%89%EC%82%AC/",
@@ -2093,8 +2615,8 @@
       "sourceDigest": "d038a0ed2afbcdf89c52ddeda62555dacba3ae28514e5ce208cbdc7dd65ef93e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -2109,8 +2631,8 @@
       "sourceDigest": "78d14669d0f8f0412300b7f3f83fb38eb06a3d82273aac8ef88e95322f7a25b1",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -2125,8 +2647,8 @@
       "sourceDigest": "079781108173814afe939670acb0ab964b42a5eeb21ae5d6f29b5081f35bc440",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -2141,8 +2663,8 @@
       "sourceDigest": "e114aa8e3f4388088f062e7af1b14ce5de6a0840071e0a4c06f108b11b616adc",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -2157,8 +2679,8 @@
       "sourceDigest": "22211b76ea07d9e27d2d5798cfa567fd9e37823b824ff4ea2bd9528454d7dead",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%A0%8C%ED%84%B0%EC%B9%B4%EC%97%85%EC%B2%B4/",
@@ -2173,8 +2695,8 @@
       "sourceDigest": "2d03ac7f0c2a9438b301225e9117ca0183893cf588a678a5f3b57848cfa95944",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
@@ -2189,8 +2711,8 @@
       "sourceDigest": "c7811b1a8e73182ad9ed5199ae0e5a7ce52e123edbb4455889693fb07af711b4",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
@@ -2205,8 +2727,8 @@
       "sourceDigest": "079649ff0c436f1bb154bbe8931c0424878c854b8f8acfaddc17e0479908f94b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
@@ -2221,8 +2743,8 @@
       "sourceDigest": "38f09f708426ec266712d827f0a202f696f9ba6b080eb270615607110004cc98",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
@@ -2237,8 +2759,8 @@
       "sourceDigest": "448513de7e8cc2c84f5af1b8b77282a414c7fb7f519bd4fde32db7c9bda840e0",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
@@ -2253,8 +2775,8 @@
       "sourceDigest": "b0c1339cf7d7b18b6c0b1da255c387d44ba1458ff624b823fe46d38afafb6bb7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
@@ -2269,8 +2791,8 @@
       "sourceDigest": "76c38e60563b7a199ca0189cab9872c917df4807040f9d1c5206106b457dedfb",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
@@ -2285,8 +2807,8 @@
       "sourceDigest": "fd147275b90801834d885e1fb90b5303e80815fe66fb31e5b075b262aedcb544",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
@@ -2301,8 +2823,8 @@
       "sourceDigest": "906845b0ae6af8a049a64c483d979c215cd24cb5b9f1c1505327f83f8b62f256",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
@@ -2317,8 +2839,8 @@
       "sourceDigest": "2cc10cfb4ab315532d0b737db85ea9edb92657b99ee626cedb72310381df50ea",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
@@ -2333,8 +2855,8 @@
       "sourceDigest": "613185b29c753c71f52a8c42d431ec7427963a092729b3759526ef2db3d41410",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
@@ -2349,8 +2871,8 @@
       "sourceDigest": "fd2aba262c697e1a9a810a1c5419ae27e2889cf385e59f47afe41f9e0b5b5704",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
@@ -2365,8 +2887,8 @@
       "sourceDigest": "d75a8cfeb87cb52478cc29da22944569f008ac3c03b4a61e0a33a1dfbe35f48e",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%B2%B4%ED%97%98%EB%A7%88%EC%9D%84/",
@@ -2381,8 +2903,8 @@
       "sourceDigest": "35add0905948f8767d388df868a0df5330830a5b9adb16e9bcf43a4a1db8c3bc",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%B2%B4%ED%97%98%EB%A7%88%EC%9D%84/",
@@ -2397,8 +2919,8 @@
       "sourceDigest": "5ab5ecc652b5609e4dd8bc68ffad74e902e585459bb02682973451c4f194c9d8",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%B2%B4%ED%97%98%EB%A7%88%EC%9D%84/",
@@ -2413,8 +2935,8 @@
       "sourceDigest": "c742f523ac5781ff560c7ecf9bb0a42ffcdc70c53e4744ab55ba13b3fd89ddbd",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%B2%B4%ED%97%98%EB%A7%88%EC%9D%84/",
@@ -2429,8 +2951,8 @@
       "sourceDigest": "014194fd470004ba53991c632ff58e47b3986fc091537e203dfc4440d1c13a18",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9B%8C%ED%84%B0%ED%8C%8C%ED%81%AC/",
@@ -2445,8 +2967,8 @@
       "sourceDigest": "9e021b708b0f68e786a804f5fd770ef043f1ffe96a7fce28d4d17d8e45560716",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%9B%8C%ED%84%B0%ED%8C%8C%ED%81%AC/",
@@ -2461,8 +2983,8 @@
       "sourceDigest": "0624a24190f3e06fcbae1169e66a71889ba40b547fd08c07a15b50fa304681d2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC/",
@@ -2477,8 +2999,8 @@
       "sourceDigest": "3d35c3780b0d710920d86173d398dab59147808a7267f200f8a24544b16be16b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC/",
@@ -2493,8 +3015,8 @@
       "sourceDigest": "f823b440216d189742c2e990dd6d10a87e30ff52443388f1e482fb58e4158f41",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC/",
@@ -2509,8 +3031,8 @@
       "sourceDigest": "b511824f0d498f7b4d2b1dde8519606d038148374bee77ee01575356c52edec6",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC/",
@@ -2525,8 +3047,8 @@
       "sourceDigest": "2ae60fcf3e44d13ddfcb879fc4c902b4f7b1e76250e5d44c6a00f1a53092c75a",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%ED%9C%B4%EC%96%91%EB%A6%BC/",
@@ -2541,8 +3063,8 @@
       "sourceDigest": "9f1c9fadf3ed99cf6b48c6869a9040e32288917e505c12df76fcad35854c7468",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%9C%B4%EC%96%91%EB%A6%BC/",
@@ -2557,8 +3079,8 @@
       "sourceDigest": "4592287c75fcf4033631e3916d868b335f1c4c68e9ea579a48db62e126769a29",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%9C%B4%EC%96%91%EB%A6%BC/",
@@ -2573,8 +3095,8 @@
       "sourceDigest": "6b2f31a0f90441d822990818207f27d25b54cd09f3df3b1123118925669ff059",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%9C%B4%EC%96%91%EB%A6%BC/",
@@ -2589,8 +3111,8 @@
       "sourceDigest": "38a2516809eba23964156ef8fe81b3c661b5654dcac44eca62639ed0c61b86d0",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%9B%8C%EC%BC%80%EC%9D%B4%EC%85%98%EC%88%99%EC%86%8C/",
@@ -2603,8 +3125,10 @@
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "1736d7076db8000f6f3dbc4680bb2ed3526f8e24ef2cccd8542fc714dccb2708",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%9B%8C%EC%BC%80%EC%9D%B4%EC%85%98%EC%88%99%EC%86%8C/",
@@ -2619,8 +3143,8 @@
       "sourceDigest": "507995c0d3b85b3cef8d1f3add90fa1541dea610c6cf3d6c4a561f091357d78f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%95%A0%EA%B2%AC%ED%8E%9C%EC%85%98/",
@@ -2633,8 +3157,10 @@
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "e08838c9ad4233b65a2ce44e8134422003f7070efc379b63fb3bb66e03a38c4c",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%95%A0%EA%B2%AC%ED%8E%9C%EC%85%98/",
@@ -2647,8 +3173,10 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "f025140ebaa475b5b68a96475b31015a6bbd88b97c2a76deba83fafa36230298",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%82%A4%EC%A6%88%ED%8E%9C%EC%85%98/",
@@ -2661,8 +3189,10 @@
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "b2de5aa87a14d173992dfea02edab24e4ac65b38d98d6d1546c735e2d8c9d72f",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%82%A4%EC%A6%88%ED%8E%9C%EC%85%98/",
@@ -2675,8 +3205,10 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "f3752b8b56a2db5c39b278db43ceb32b1a875ab7fe67e0f12d44f4c285467b07",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%95%9C%EB%8B%AC%EC%82%B4%EA%B8%B0%EC%88%99%EC%86%8C/",
@@ -2689,8 +3221,10 @@
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "9c62cf84101a8890d1a9aa4c663f25126bba08e0de23e6970d0137a8b22e8877",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%95%9C%EB%8B%AC%EC%82%B4%EA%B8%B0%EC%88%99%EC%86%8C/",
@@ -2703,8 +3237,10 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "6655dec7b6e23d9bd749860f8b003888954017788769f8294a4140c06a880806",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
@@ -2717,8 +3253,10 @@
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "49a6fecee597a8b75508368bb90247917dbcf2b3f0249b2aa17c86d5328f10cd",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
@@ -2731,6 +3269,22 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "6d0a881d28b1e52361a73d4b11c02f1ebb5ef3b6745ce11519ef02411aacc88f",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%ED%88%AC%EC%96%B4%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-236-management"
+      ],
+      "primaryKeyword": "투어예약업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "투어예약업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "644972dfbc88f01e46379e15c12554b6aeb08282e8a49343d08330cee9bde630",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -2745,6 +3299,274 @@
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "6aad4ae4a8593035a4bdbaa8bee6917acc667e864d1895edf732010fa8fa09ad",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-237-app"
+      ],
+      "primaryKeyword": "액티비티예약업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "액티비티예약업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "e6cf9b30462481d6862a3413d61bed483aea0128ca5edfb3bbaf1f728770b712",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-237-booking"
+      ],
+      "primaryKeyword": "액티비티예약업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "액티비티예약업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "465dd91d3b538f61b3546ba16a31881ebfda2e79553982a9d649b5bd03f9e1b8",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-237-management"
+      ],
+      "primaryKeyword": "액티비티예약업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "액티비티예약업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "d7809e8eeff0fe3ebaeac5d1116e8b30157d13ea50eedea18c65b738af004d7f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%95%A1%ED%8B%B0%EB%B9%84%ED%8B%B0%EC%98%88%EC%95%BD%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-237-website"
+      ],
+      "primaryKeyword": "액티비티예약업체 홈페이지 제작",
+      "searchIntent": "리뉴얼 / 비용·견적 / 업체선정 / 제작의뢰 / 추천·비교",
+      "industry": "액티비티예약업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "4b573773ec7a88cf311755fa558e4349354e2a9562605e5cb1853273164e9e1e",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%A7%80%EC%97%AD%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-238-app"
+      ],
+      "primaryKeyword": "지역관광업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "지역관광업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "1f3b364a75d80d9ff54264b3edc6e11d7c6247db89ee880c4dcedb4f8956363f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%A7%80%EC%97%AD%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-238-booking"
+      ],
+      "primaryKeyword": "지역관광업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "지역관광업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "8e884e1e2ac062ec5f6328d394c752fac09e1534a994db156a980a9fdd5564e6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%A7%80%EC%97%AD%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-238-management"
+      ],
+      "primaryKeyword": "지역관광업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "지역관광업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "9bd347af26272d29e3c5fa383ea9e157197cded5fe7a190665abd9e753302ef6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EC%A7%80%EC%97%AD%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-238-platform"
+      ],
+      "primaryKeyword": "지역관광업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "지역관광업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "d9669c61d338c3edadb4c38c695d765ffb935a3b5fc80fe745fc86ebe69fe07a",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%A7%80%EC%97%AD%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-238-website"
+      ],
+      "primaryKeyword": "지역관광업체 홈페이지 제작",
+      "searchIntent": "리뉴얼 / 비용·견적 / 업체선정 / 제작의뢰 / 추천·비교",
+      "industry": "지역관광업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "e05ccdcf1f5186562c859b786923c3c207f81520b76b3bcc3ebff40f03ad4a01",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EA%B3%A8%ED%94%84%EC%97%AC%ED%96%89%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-239-app"
+      ],
+      "primaryKeyword": "골프여행업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "골프여행업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "e30a45aebb62b49ca7bed632b55be8007d4918dff3cec0ec83f156e536d05148",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EA%B3%A8%ED%94%84%EC%97%AC%ED%96%89%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-239-booking"
+      ],
+      "primaryKeyword": "골프여행업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "골프여행업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "bccd4a0e4d19b565af6f341b0fd72504080ee3758b06e32433309f365aab2bd6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EA%B3%A8%ED%94%84%EC%97%AC%ED%96%89%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-239-management"
+      ],
+      "primaryKeyword": "골프여행업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "골프여행업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "5020c24b33376370048d2297752a839ea134afc4d49a198fbddcba6ef7507ad9",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EA%B3%A8%ED%94%84%EC%97%AC%ED%96%89%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-239-platform"
+      ],
+      "primaryKeyword": "골프여행업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "골프여행업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0d4907037a4c63fca6f03ae8ee8a7f685e97092c6ea2c9f20e200ac44367834c",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EA%B3%A8%ED%94%84%EC%97%AC%ED%96%89%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-239-website"
+      ],
+      "primaryKeyword": "골프여행업체 홈페이지 제작",
+      "searchIntent": "리뉴얼 / 비용·견적 / 업체선정 / 제작의뢰 / 추천·비교",
+      "industry": "골프여행업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "802d8da8a07619313ab73aace2c0623c23234db08e29a573c47c7c28b9f16d24",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9D%98%EB%A3%8C%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-240-app"
+      ],
+      "primaryKeyword": "의료관광업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "의료관광업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0d0ff6052c179ef91d3fdfc81f33dbe88406fa7bfbc60a265fd510700cc2b48d",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9D%98%EB%A3%8C%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-240-booking"
+      ],
+      "primaryKeyword": "의료관광업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "의료관광업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "5810410af9f4ff3ff99d948ea72f4904e89e97e2d23a832fa3aea37124e7f6de",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9D%98%EB%A3%8C%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-240-management"
+      ],
+      "primaryKeyword": "의료관광업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "의료관광업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "d486db9b0793467cc67fa851c527c1d23ddcaadf051deaf521ea8b48ecb912ce",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EC%9D%98%EB%A3%8C%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-240-platform"
+      ],
+      "primaryKeyword": "의료관광업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "의료관광업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "02b9c128e6b24b4447c221c84750e7f9e4b96ebeafa87c0f2f9060dd8cbc5ec1",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%9D%98%EB%A3%8C%EA%B4%80%EA%B4%91%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-240-website"
+      ],
+      "primaryKeyword": "의료관광업체 홈페이지 제작",
+      "searchIntent": "리뉴얼 / 비용·견적 / 업체선정 / 제작의뢰 / 추천·비교",
+      "industry": "의료관광업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "d36961b155d38e77c78b3ffeb82aec320103ceca3819c5dc76ba9a1b3a25d70c",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -2761,8 +3583,8 @@
       "sourceDigest": "40c91944ff564ba12d9325684b971229bc8589daaffd3d269a4c91bd2b1519a5",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -2777,8 +3599,8 @@
       "sourceDigest": "d3ce11e2bf492ff20a0a1083768be8efac5c07d612f3386086f2d7e20e3ea3e1",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -2793,8 +3615,8 @@
       "sourceDigest": "c968db092adc5b2baa6cff0d53023dcb4471b70cf3d274e8d55552e22872f089",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -2809,8 +3631,8 @@
       "sourceDigest": "911abff0ca55890f1f466a091aa036d9d594184fabfca66185afd915e314f930",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -2825,8 +3647,8 @@
       "sourceDigest": "f4cdfb22e1970f3701f394e8b9fa3a699237649cf6ecf8eb6525589d61d50807",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -2841,8 +3663,8 @@
       "sourceDigest": "4fb212d80305612708970f2a8ca12f1aa247379dd0a9b24807c9ec9d6f47dadb",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -2857,8 +3679,8 @@
       "sourceDigest": "7374d24d96b47abc6f72a2be7d0a61d93bf5492f85f49a134b4e992889be6251",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -2873,8 +3695,8 @@
       "sourceDigest": "cb496707cf5bb80881e346d7c1a940bd1adf52ec4b178ac3f01fc496c48f840b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -2889,8 +3711,8 @@
       "sourceDigest": "c8a4c4d74ca9bd8c6aa3ba5760ff2ee43e01fa29afa5502f9a0a122a5693795b",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%84%B8%EC%B0%A8%EC%9E%A5/",
@@ -2905,8 +3727,8 @@
       "sourceDigest": "1a9c19cba6445bd916bfabeac7bc635bdbefd6d6ceeea5c32a5270441f827ff4",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%86%90%EC%84%B8%EC%B0%A8%EC%9E%A5/",
@@ -2921,8 +3743,8 @@
       "sourceDigest": "d02ff27f6a407d280eaab2d5ff549cdedef4d9a1555efae3df75498f6a4bb5ef",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
@@ -2937,8 +3759,8 @@
       "sourceDigest": "45f540657e33863c440945b1c850056bc598307f19671f10037160ea39bda160",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
@@ -2953,8 +3775,8 @@
       "sourceDigest": "0b606205cebff05f85f403ee0960cf31a1cefabb92b4b5655ebe3e0592095d42",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
@@ -2969,8 +3791,8 @@
       "sourceDigest": "4f64ae541fa812d39547a1acdaaefdf73cd9602caf31e1f1ae979024386ae6e2",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
@@ -2985,8 +3807,8 @@
       "sourceDigest": "6c7275ad27ae47ab00fdc15ebbe7d36e9ab43e016561a3aaf9c3baf1f4d584d5",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
@@ -3001,8 +3823,8 @@
       "sourceDigest": "0a8ef11f90fc3ab6433fcdeeb0a9fe31daca1b6ff2d79fa4ee25e2e7cdc5feed",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
@@ -3017,8 +3839,8 @@
       "sourceDigest": "6df1ea87278d6fd912f8cbd6b15ea247ad11a73229fc08b9c2afb83ba41ef109",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
@@ -3033,8 +3855,8 @@
       "sourceDigest": "95e14c7fd74de84d383dad001795f3efbde0e9af7f847c37d084ba7bbd9d64a3",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
@@ -3049,8 +3871,8 @@
       "sourceDigest": "8d3a031a5f9633c9eb5b92337fc958cc3bb0425bb416965e20eccd678e8b349f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
@@ -3065,8 +3887,8 @@
       "sourceDigest": "951bed9b5493cc9f5d92b375705df82e3de6690882e99438f8fc74abe7fceb22",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
@@ -3081,8 +3903,8 @@
       "sourceDigest": "15352094b5d4fca6c46c3dc2a1a149e18de6eba779eb310938eda68c310e9d4f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
@@ -3097,8 +3919,8 @@
       "sourceDigest": "7da84d86fbb7259cb060c10109b6ac88c0967ac40b22254f98f6a7fb14661790",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
@@ -3113,8 +3935,8 @@
       "sourceDigest": "28336adc448de60914bc10116a7da1e9fd552e7fd3d0202eb60910fdbe604e7c",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
@@ -3129,8 +3951,8 @@
       "sourceDigest": "2996bdf5e1edfe2b6bf600c1cfa8a3eddf41177c3603338346767ee394c752b7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
@@ -3145,8 +3967,8 @@
       "sourceDigest": "882135c6676fbd89f49c72b7c65acf6465da90c38635bb2b2ac89e7c72e305f8",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
@@ -3161,8 +3983,8 @@
       "sourceDigest": "b1a03765441ce7609aa2671f67cadb529e3b19856b781d4976682b0b70a8c335",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
@@ -3177,8 +3999,8 @@
       "sourceDigest": "99f4cd6d60d9aa4ee06c6c8eda764fda6ff282973c9cc86ca56cff398b799d9f",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A4%91%EA%B3%A0%EC%B0%A8%EB%A7%A4%EB%A7%A4%EC%97%85%EC%B2%B4/",
@@ -3193,8 +4015,8 @@
       "sourceDigest": "85892ced51535b0af3a8479faf059dba655c58de12a39ddcf57a02b32c574a36",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%A4%91%EA%B3%A0%EC%B0%A8%EB%A7%A4%EB%A7%A4%EC%97%85%EC%B2%B4/",
@@ -3209,8 +4031,8 @@
       "sourceDigest": "3820a31d1cc966cc4e825f70af1fb63d3b37003b1819b6a47d6804567fbe1373",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%8B%A0%EC%B0%A8%EB%94%9C%EB%9F%AC/",
@@ -3225,8 +4047,8 @@
       "sourceDigest": "b3a63b6c8c3744a416edee5a38b7d821514e53b13617b32fc7025c6ae5c573d7",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%8B%A0%EC%B0%A8%EB%94%9C%EB%9F%AC/",
@@ -3241,8 +4063,8 @@
       "sourceDigest": "fc5247a29af87d310077d62a8518f802ffef1a79c446690b272f84cb48486c68",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%8B%A0%EC%B0%A8%EB%94%9C%EB%9F%AC/",
@@ -3257,8 +4079,8 @@
       "sourceDigest": "02c5424b6c815120b3e20191e8fe337ccb3a9aaa89fc71e8f98e29de192fa939",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%8B%A0%EC%B0%A8%EB%94%9C%EB%9F%AC/",
@@ -3273,8 +4095,8 @@
       "sourceDigest": "cc761e8ed306e22a534593791ff34b8fe64b92a51034640bfe6b5e7bebb95d75",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%98%A4%ED%86%A0%EB%B0%94%EC%9D%B4%EB%A7%A4%EC%9E%A5/",
@@ -3289,8 +4111,8 @@
       "sourceDigest": "657b6793bb16cbe7e63cf226ed0b86ea88728f1f3a4b9d6ea870e627b22556d9",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%98%A4%ED%86%A0%EB%B0%94%EC%9D%B4%EB%A7%A4%EC%9E%A5/",
@@ -3305,8 +4127,8 @@
       "sourceDigest": "1cfebeca5e7716348642c0f05e5206e279a0610d5d0ea79890abe48183991394",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%98%A4%ED%86%A0%EB%B0%94%EC%9D%B4%EB%A7%A4%EC%9E%A5/",
@@ -3321,8 +4143,8 @@
       "sourceDigest": "9769255aced9fd988765001576b0bddc9e19709e2ded7117d35c1c716beb9132",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%98%A4%ED%86%A0%EB%B0%94%EC%9D%B4%EB%A7%A4%EC%9E%A5/",
@@ -3337,8 +4159,8 @@
       "sourceDigest": "6e14b6a11e03ee519d8a68153c8a8d9d10fb0dfb1a3a5a5c607cdf5920add682",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EC%A0%84%EA%B1%B0%EB%A7%A4%EC%9E%A5/",
@@ -3353,8 +4175,8 @@
       "sourceDigest": "91b836b6b3f29b21654c917bbd9d8b7c25a72dcb832970f559ce4778b6d24ccd",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EC%A0%84%EA%B1%B0%EB%A7%A4%EC%9E%A5/",
@@ -3369,8 +4191,8 @@
       "sourceDigest": "bec957734a91afb321d4571c0b7be4c0a8f95a9c55832e0d30a085cf9d354327",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EC%A0%84%EA%B1%B0%EB%A7%A4%EC%9E%A5/",
@@ -3383,8 +4205,10 @@
       "serviceAxis": "현장·작업 관리",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "27bc69d99d9a4bacb943005c9ff51a47490ae3f6e40b6ca7fe3f0be59201a471",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EC%A0%84%EA%B1%B0%EB%A7%A4%EC%9E%A5/",
@@ -3397,8 +4221,10 @@
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "0dfde5856b7b873dca2ef09367a8dbf90bc810465a24d385dbb5094dbe3f6673",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%99%94%EB%AC%BC%EC%9A%B4%EC%86%A1%EC%97%85%EC%B2%B4/",
@@ -3411,8 +4237,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "9306e66f8ed792ede86b8794bec81fb558ac65abaabd10d572bbd22a919fcc04",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%83%9D%EB%B0%B0%EC%97%85%EC%B2%B4/",
@@ -3425,8 +4253,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "8515d3544964ebc207c1ffa3b2ffb99b0ca97146bdcff4dd2a5bbf43b2ed90de",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%80%B5%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -3439,8 +4269,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "3648342422cf33b7959541e1d7b61e1266c5632350350c653fb2475abad82777",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%9A%A9%EB%8B%AC%EC%97%85%EC%B2%B4/",
@@ -3453,8 +4285,10 @@
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "8997b5176f7ec3592b2dae348d8601ca27b31358017ca7d12beb18081eda67ed",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%9A%A9%EB%8B%AC%EC%97%85%EC%B2%B4/",
@@ -3467,8 +4301,10 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "35e341c3e4acff743d0b2aee824cb5787a41ee99022da96169cb6df23c855ecc",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%EC%9A%A9%EB%8B%AC%EC%97%85%EC%B2%B4/",
@@ -3481,8 +4317,10 @@
       "serviceAxis": "현장·작업 관리",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "ad69a8e22c5a0cc41e53a86c382c31b429008ad3ae8a0681129f76871481e160",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%9A%A9%EB%8B%AC%EC%97%85%EC%B2%B4/",
@@ -3495,6 +4333,22 @@
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "98a948abf42025159488775a84111571bc7f4b274bec3fb234be6d2de210f39e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EB%B2%84%EC%8A%A4%ED%9A%8C%EC%82%AC/",
+      "clusterIds": [
+        "ind-440-app"
+      ],
+      "primaryKeyword": "버스회사 앱 개발",
+      "searchIntent": "단체 담당자와 인솔자·이용자가 자신의 운행과 차량·승하차 안내, 일정 변경과 문의·합류 확인을 역할별로 확인할 단체 이용 앱 구매 의도",
+      "industry": "버스회사",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0bedf40081fdb8dfa38188eb31c14dcf7b68a476c8c204dca642ed2c74a89cb8",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -3509,6 +4363,302 @@
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
       "sourceDigest": "c83d3fb990d7673e3db7a8c598fd6ca7d0474421bfe45f7be972145b972084bf",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EB%B2%84%EC%8A%A4%ED%9A%8C%EC%82%AC/",
+      "clusterIds": [
+        "ind-440-field"
+      ],
+      "primaryKeyword": "버스회사 현장 관리 앱",
+      "searchIntent": "기사와 운영자가 실제 차량·현재 운행 지시·출고 확인·승하차 지점 변경·발견 사항·복귀와 인계를 기록할 현장 앱 구매 의도",
+      "industry": "버스회사",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "289fdc2d9c72572e1b606f310704684d47e49b70e9a3bf7965fe5c6609ba2af6",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EB%B2%84%EC%8A%A4%ED%9A%8C%EC%82%AC/",
+      "clusterIds": [
+        "ind-440-management"
+      ],
+      "primaryKeyword": "버스회사 관리 프로그램",
+      "searchIntent": "버스 차량·기사 기준정보와 계약·계획·실제 운행, 정비 사용 제한과 확인 자료·수입·협력 비용을 대조하는 내부 관리 프로그램 구매 의도",
+      "industry": "버스회사",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "2ef99bb5861ce5aa439d9628fa51130de06dd77204ccf9f091014d3d462fd6f2",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%A3%BC%EC%B0%A8%EC%9E%A5/",
+      "clusterIds": [
+        "ind-441-booking"
+      ],
+      "primaryKeyword": "주차장 예약 시스템 개발",
+      "searchIntent": "시간대 주차 상품과 실제 확보 용량·차량 조건·등록 번호·입출차 기록을 대조하고 지각·초과·취소·만차 예외를 관리할 주차 예약 시스템 구매 의도",
+      "industry": "주차장",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fae371334c2b40c65f3e5d0e7a4225ca52f15f46b42127e9f7d366274e0d46b0",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%A3%BC%EC%B0%A8%EC%9E%A5/",
+      "clusterIds": [
+        "ind-441-field"
+      ],
+      "primaryKeyword": "주차장 현장 관리 앱",
+      "searchIntent": "현장 직원이 구역·출입·정산 기기의 상태와 실제 차량을 확인하고 이상 보고·사용 제한·전문 조치·번호 정정·교대를 연결할 현장 앱 구매 의도",
+      "industry": "주차장",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "870d0cf6cda9ce92e7a3f0aae5af850743d084b45a93ed9a860e8e0b7377dd2f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EB%B2%95%EC%9D%B8%EC%B0%A8%EB%9F%89%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-442-app"
+      ],
+      "primaryKeyword": "법인차량관리업체 앱 개발",
+      "searchIntent": "임직원이 현재 소속과 배정 차량에 맞는 인수·반납 안내, 이용 기록 보완·증빙·정비 지원 문의와 변경 확인을 수행할 이용자 앱 구매 의도",
+      "industry": "법인차량관리업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "a18b5837a646cf86915d3fc7a5e8d9b76855383a4bf0835aeefae4b778899fa5",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EB%B2%95%EC%9D%B8%EC%B0%A8%EB%9F%89%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-442-booking"
+      ],
+      "primaryKeyword": "법인차량관리업체 예약 시스템 개발",
+      "searchIntent": "고객 기업의 공용 차량과 임직원 이용 규정·부서 승인·정비 제한·인수 반납 준비를 대조하여 중복과 지연·대체를 관리할 예약 시스템 구매 의도",
+      "industry": "법인차량관리업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "22daa36f63611def8263b378238a49874a4807a4dc0e3306b10856f492a72081",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EB%B2%95%EC%9D%B8%EC%B0%A8%EB%9F%89%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-442-field"
+      ],
+      "primaryKeyword": "법인차량관리업체 현장 관리 앱",
+      "searchIntent": "고객 기업의 차량을 방문 인수하고 정비·지원업체에 인계한 뒤 반환하는 과정에서 실제 차량·계약 조건·열쇠·부속품·관찰·추가 승인·사용 가능 상태를 대조할 현장 업무 앱 구매 의도",
+      "industry": "법인차량관리업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "60fc03e1145bdbc8f3bcf4fb16e6c74b5f42f314abaafb793757bb45eff5c3ea",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EB%B2%95%EC%9D%B8%EC%B0%A8%EB%9F%89%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-442-management"
+      ],
+      "primaryKeyword": "법인차량관리업체 관리 프로그램",
+      "searchIntent": "고객사별 차량 소유·임차·관리 계약과 부서·이용자 관계, 정비·지원·운행 증빙과 공급 청구·비용 배부·월 보고를 대조할 내부 관리 프로그램 구매 의도",
+      "industry": "법인차량관리업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "02ee4780ad410f353426ff085632f10394b1f5ef888caadba7f70ecff6378419",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EB%B2%95%EC%9D%B8%EC%B0%A8%EB%9F%89%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-442-website"
+      ],
+      "primaryKeyword": "법인차량관리업체 홈페이지 제작",
+      "searchIntent": "법인 고객이 차량 조달·정비 지원·공용차 운영·자료 관리의 제공 범위와 책임·도입 조건을 비교하고 적절한 자료로 상담할 공개 홈페이지 제작 의도",
+      "industry": "법인차량관리업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "8ac644f9ed16231d4d2acb8adea132edfa3b5b6cdb9b536dccb5ba02e0c07d70",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%B0%A8%EB%9F%89%EA%B3%B5%EC%9C%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-443-app"
+      ],
+      "primaryKeyword": "차량 공유업체 앱 개발",
+      "searchIntent": "예약한 고객이 실제 거점과 차량을 찾고 이용 권한·차량 상태를 확인한 뒤 지원 장비로 차량에 접근하며 이용 중 문의와 반환 결과·미처리 항목을 확인할 모바일 이용 앱 구매 의도",
+      "industry": "차량 공유업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "bfc50fa6756a3399cae4bbb3d8b9a9e92b68dbe63ee0fe7cfca0ea50d49f5bc4",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%B0%A8%EB%9F%89%EA%B3%B5%EC%9C%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-443-booking"
+      ],
+      "primaryKeyword": "차량 공유업체 예약 시스템 개발",
+      "searchIntent": "회원의 이용 조건과 실제 차량·거점·시간 재고를 확인하고 결제 중 임시 점유·확정·연장·차량 대체·반납 지연·후속 예약 영향을 일관되게 처리할 차량 공유 예약 시스템 구매 의도",
+      "industry": "차량 공유업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "cbaf2132b277c10cd6484a85c74701a7265ed6bab6dcd377c2d42e8551da5651",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%B0%A8%EB%9F%89%EA%B3%B5%EC%9C%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-443-field"
+      ],
+      "primaryKeyword": "차량 공유업체 현장 관리 앱",
+      "searchIntent": "거점의 공유 차량을 실제 확인하고 청소·충전·이동·회수·분실물 작업을 배정해 결과와 남은 사용 제한을 검토한 뒤 다음 이용 가능 상태에 반영할 현장 운영 앱 구매 의도",
+      "industry": "차량 공유업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c5486fe7c0205eb74a26de6c24a409b4878c15118fdac0b83bfcddfbdc37e9e9",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%B0%A8%EB%9F%89%EA%B3%B5%EC%9C%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-443-management"
+      ],
+      "primaryKeyword": "차량 공유업체 관리 프로그램",
+      "searchIntent": "공유 차량의 운영 거점·소유 관계와 예약·실제 이용, 요금 기준·측정 출처·결제·환불·조정 및 차량 준비 비용을 대조해 기간별 정산과 보고를 마감할 내부 관리 프로그램 구매 의도",
+      "industry": "차량 공유업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "7e0a07c99474d24f6903827021046be798500592e8a987cb01d7c89fe36c8b8c",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EC%B0%A8%EB%9F%89%EA%B3%B5%EC%9C%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-443-website"
+      ],
+      "primaryKeyword": "차량 공유업체 홈페이지 제작",
+      "searchIntent": "이용자가 차량 공유의 가입·이용 조건과 왕복·편도·구독 등 실제 상품 차이, 거점 접근과 반환 방법·요금 확인·앱 연결을 이해하고 기업·거점 제휴 문의를 구분할 공개 홈페이지 제작 의도",
+      "industry": "차량 공유업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "3435a63b6a439f64b9bcdb5b76d60688caf332895660fd77f0ee08d0d0863abe",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EB%8C%80%EB%A6%AC%EC%9A%B4%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-444-app"
+      ],
+      "primaryKeyword": "대리운전업체 앱 개발",
+      "searchIntent": "고객이 자신 또는 다른 이용자를 위한 대리운전을 요청하고 실제 차량·만날 장소와 기사 배정·연락, 변경·운행·도착 후 내역과 문의를 확인할 모바일 고객 앱 구매 의도",
+      "industry": "대리운전업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "a498e31e355039c2e1f1137c4befd1df9da1ae80849c62c9051ce58b94cf3279",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EB%8C%80%EB%A6%AC%EC%9A%B4%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-444-booking"
+      ],
+      "primaryKeyword": "대리운전업체 예약 시스템 개발",
+      "searchIntent": "고객 차량과 실제 이용자·만날 장소·출발 조건을 확인하고 즉시 호출 또는 사전 요청을 기사 제안·수락·도착·운행 시작·재배정과 연결할 대리운전 예약 시스템 구매 의도",
+      "industry": "대리운전업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "f5c142fa4223c16092adf4ae823023667806b32f319588c517abe502ca5aa47c",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EB%8C%80%EB%A6%AC%EC%9A%B4%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-444-field"
+      ],
+      "primaryKeyword": "대리운전업체 현장 관리 앱",
+      "searchIntent": "배정된 기사가 실제 고객·차량·이용 조건을 만나 확인하고 도착·대기·출발·경유 변경·최종 주차·열쇠 인계를 근거와 함께 기록해 운영 확인과 정산으로 넘길 현장 업무 앱 구매 의도",
+      "industry": "대리운전업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fde8edc044adfa410a7db01fd789bb91b3f15e20fb9f35e6807237717c5e3530",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EB%8C%80%EB%A6%AC%EC%9A%B4%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-444-management"
+      ],
+      "primaryKeyword": "대리운전업체 관리 프로그램",
+      "searchIntent": "원본 대리운전 요청과 실제 수행 기사·변경 조건을 고객 청구·수납·기사 정산·법인 보고에 연결하고 중복 오더·현금 대조·환불·마감 후 조정을 관리할 내부 프로그램 구매 의도",
+      "industry": "대리운전업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fc1fc827826d4c714567dd65ecb73dbc8a744fc08d228370cebe2d0103e44f63",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EB%8C%80%EB%A6%AC%EC%9A%B4%EC%A0%84%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-444-website"
+      ],
+      "primaryKeyword": "대리운전업체 홈페이지 제작",
+      "searchIntent": "개인 고객과 기업 구매 담당자가 대리운전의 실제 이용 지역·시간·차량 조건과 호출·사전 예약·법인 계약의 차이, 요금과 고객 지원 범위를 확인하고 적절한 접수 채널로 이동할 공개 홈페이지 제작 의도",
+      "industry": "대리운전업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "a85405a0a6af094be3de75ce0be3144d09e8e5e4335e46f7c7176835eae876b9",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EB%B0%B0%EC%B0%A8%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-445-booking"
+      ],
+      "primaryKeyword": "배차관리업체 예약 시스템 개발",
+      "searchIntent": "화주와 운송사의 원본 주문을 배차 요청으로 받아 차량·장비·상하차 시간 조건을 검토하고 운송사 제안·수락·부분 배정·변경·재배정을 연결할 예약 접수 시스템 구매 의도",
+      "industry": "배차관리업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "a24dbf9b78d1f879ab5bb833fb923da0359f9505dde15478a14cb6c334d4fa45",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/website/%EB%B0%B0%EC%B0%A8%EA%B4%80%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-445-website"
+      ],
+      "primaryKeyword": "배차관리업체 홈페이지 제작",
+      "searchIntent": "화주·운송사의 구매 담당자가 배차 업무 위탁의 실제 범위와 직접 운송·프로그램 공급의 차이, 고객·운송사 권한과 예외 대응·자료 전달·도입 조건을 비교할 공개 홈페이지 제작 의도",
+      "industry": "배차관리업체",
+      "serviceAxis": "홈페이지·웹사이트",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fd47fbbd38efecdaa8343b449a64f8864b2c4e01df05792de92cf51ce81575d7",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -3526,8 +4676,8 @@
       "sourceDigest": "f7aa2c76280ce1ef495331a4439ab9ff02f696022612d72131b0caa22a50ebc6",
       "deploymentStatus": "DEPLOYED_VERIFIED",
       "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
-      "deployedAt": "2026-10-20T11:59:34.808Z",
-      "deploymentId": "6ad756ab4e2e5682f0d8c327"
+      "deployedAt": "2026-10-20T12:23:02.425Z",
+      "deploymentId": "6ad75c42fc95e813c42bf6fb"
     }
   ]
 }
