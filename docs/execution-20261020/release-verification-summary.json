@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-20T08:13:00.573274+00:00",
+  "recordedAt": "2026-10-20T08:34:19.924412+00:00",
   "release": {
     "commit": "e2992eec616f518a919f90dfec1b307980d4bc9b",
     "pr": "https://github.com/samduck150906-lgtm/reumlab/pull/12",
@@ -43,7 +43,10 @@
       "work/production-feed-verification.json",
       "work/production-assets.json",
       "work/policy-followup-ui-production.json"
-    ]
+    ],
+    "evidencePr": "https://github.com/samduck150906-lgtm/reumlab/pull/13",
+    "evidenceCommit": "06f12dca43ff66daf45dee6413afa9afde48685e",
+    "evidenceCommitSkipsDeploy": true
   },
   "counts": {
     "originalSitemap": 823,
@@ -80,7 +83,36 @@
       "https://reumlab.com/website/inswaeso/"
     ],
     "googlePendingCount": 7,
-    "naverSearchAdvisor": "RSS CAPTCHA pending; sitemap and individual requests pending",
+    "naverSearchAdvisor": {
+      "rss": {
+        "url": "https://reumlab.com/feed.xml",
+        "status": "accepted; registration timestamp confirmed in UI; indexing not confirmed",
+        "submittedAt": "2026-10-20T17:25:21+09:00",
+        "evidence": "outputs/evidence/submissions/naver-rss-success.png",
+        "note": "User completed the security challenge; RSS table now shows 26.10.20 17:25:21."
+      },
+      "sitemap": {
+        "url": "https://reumlab.com/sitemap.xml",
+        "status": "accepted; registration timestamp confirmed in UI; indexing not confirmed",
+        "submittedAt": "2026-10-20T17:29:22+09:00",
+        "evidence": "outputs/evidence/submissions/naver-sitemap-success.png",
+        "note": "Sitemap table shows 26.10.20 17:29:22; existing enterprise AI sitemap preserved."
+      },
+      "acceptedUrls": [
+        "https://reumlab.com/",
+        "https://reumlab.com/app/community/",
+        "https://reumlab.com/website/inswaeso/",
+        "https://reumlab.com/website/rentaleobche/",
+        "https://reumlab.com/app/academy/",
+        "https://reumlab.com/guide/mvp-cost/",
+        "https://reumlab.com/ai-automation/music-daw/",
+        "https://reumlab.com/ai-development/",
+        "https://reumlab.com/enterprise-ai/",
+        "https://reumlab.com/seo-website/"
+      ],
+      "pendingCount": 0,
+      "note": "Search Advisor receipts are separate from IndexNow. Receipt does not confirm crawling or indexing."
+    },
     "indexnow": {
       "uniqueUrls": 820,
       "batches": [

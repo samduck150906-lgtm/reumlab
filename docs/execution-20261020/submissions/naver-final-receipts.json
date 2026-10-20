@@ -1,0 +1,90 @@
+{
+  "scope": "Naver Search Advisor request receipts for https://reumlab.com only",
+  "property": "https://reumlab.com/",
+  "observedAt": "2026-10-20T08:32:15.405Z",
+  "status": "RSS, sitemap and 10 URL requests accepted; crawl and indexing not confirmed",
+  "securityChallenge": "User completed the previously pending security challenge before the accepted requests.",
+  "rss": {
+    "url": "https://reumlab.com/feed.xml",
+    "status": "accepted; registration timestamp confirmed in UI; indexing not confirmed",
+    "submittedAt": "2026-10-20T17:25:21+09:00",
+    "evidence": "outputs/evidence/submissions/naver-rss-success.png"
+  },
+  "sitemap": {
+    "url": "https://reumlab.com/sitemap.xml",
+    "status": "accepted; registration timestamp confirmed in UI; indexing not confirmed",
+    "submittedAt": "2026-10-20T17:29:22+09:00",
+    "evidence": "outputs/evidence/submissions/naver-sitemap-success.png"
+  },
+  "urlCount": 10,
+  "urls": [
+    {
+      "url": "https://reumlab.com/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:29:47+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/app/community/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:30:25+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/website/inswaeso/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:30:48+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/website/rentaleobche/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:00+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/app/academy/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:09+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/guide/mvp-cost/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:19+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/ai-automation/music-daw/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:26+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/ai-development/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:36+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/enterprise-ai/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:31:56+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    },
+    {
+      "url": "https://reumlab.com/seo-website/",
+      "status": "accepted",
+      "submittedAt": "2026-10-20T17:32:04+09:00",
+      "evidence": "outputs/evidence/submissions/naver-individual-10-success.png"
+    }
+  ],
+  "pendingUrlCount": 0,
+  "interpretation": "Receipt timestamps are registration history shown in Naver Search Advisor. They do not demonstrate completed crawling, indexing, ranking or AI citation.",
+  "historicalEvidence": "Earlier CAPTCHA screenshots remain historical evidence and no longer describe the latest submission status.",
+  "excluded": [
+    "account identifier",
+    "full management DOM",
+    "authentication/session data"
+  ]
+}
