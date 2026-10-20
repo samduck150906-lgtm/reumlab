@@ -1,0 +1,48 @@
+{
+  "release": {
+    "commit": "f7cef7c1fc02bbe692adac7da2d0949abd21ed8d",
+    "pr": "https://github.com/samduck150906-lgtm/reumlab/pull/10",
+    "deployId": "6ad712b1de1be826243b81fa",
+    "deployUrl": "https://app.netlify.com/projects/reumlab/deploys/6ad712b1de1be826243b81fa",
+    "publishedAt": "2026-10-20T07:07:40.252Z",
+    "verified": true,
+    "hostingState": "ready",
+    "hostingContext": "production",
+    "site": "reumlab",
+    "verificationNote": "1779 fresh public routes captured, 823 canonical sitemap contracts and 35140 links pass. Raw release fingerprints match799;24 differ only in one proven equivalent Netlify HTML-link rewrite. Both asset endpoints have identical full HTML SHA256. Unresolved differences0."
+  },
+  "counts": {
+    "originalSitemap": 823,
+    "individualEditorialReviews": 823,
+    "meaningfullyChanged": 812,
+    "unchanged": 11,
+    "allCapturedPaths": 1779,
+    "internalLinkReferences": 35140
+  },
+  "productionChecks": {
+    "httpCanonicalRobotsMetadataSchema": "PASS823",
+    "rawFingerprintMatch": 799,
+    "verifiedEquivalentLinkRewrite": 24,
+    "unresolvedContentDifferences": 0,
+    "rssItems": 59,
+    "rssBytes": 1088917,
+    "productionRepresentativeScreens": 8
+  },
+  "submissions": {
+    "googleSitemap": "Success;823discovered",
+    "googleAcceptedUrls": [
+      "https://reumlab.com/app/community/",
+      "https://reumlab.com/",
+      "https://reumlab.com/website/inswaeso/"
+    ],
+    "googlePendingCount": 7,
+    "naverSearchAdvisor": "RSS CAPTCHA pending; sitemap and individual requests pending",
+    "indexnow": {
+      "count": 812,
+      "naverStatus": 200,
+      "bingStatus": 200,
+      "manifestRetained": true
+    }
+  },
+  "caution": "Request receipt does not establish new indexing, rankings, AI citation or conversion improvement. Performance is a one-run lab observation; actual form storage was not submitted."
+}
