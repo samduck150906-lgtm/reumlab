@@ -21,26 +21,16 @@
   "initialClassificationIsHistorical": true,
   "currentUserInstruction": "최초 보류 2453개도 모두 고유 내용을 조사·작성한다. 같은 의도는 병합하며 품질 검수를 통과한 페이지부터 공개한다.",
   "currentScope": {
-    "updatedAt": "2026-10-20T11:42:11.956Z",
-    "registeredDetailPages": 186,
+    "updatedAt": "2026-10-20T12:08:21.909Z",
+    "registeredDetailPages": 222,
     "registeredHubPages": 1,
     "expandedQueueRows": 2484,
     "queueCounts": {
-      "AUTHORED_AWAITING_RELEASE_QA": 190,
-      "AUTHORING_REQUIRED": 2290,
+      "AUTHORED_AWAITING_RELEASE_QA": 226,
+      "AUTHORING_REQUIRED": 2254,
       "MERGED_SYNONYM": 4
     },
     "nextUnwritten": [
-      "ind-014-app",
-      "ind-014-booking",
-      "ind-014-management",
-      "ind-014-ai",
-      "ind-014-portal",
-      "ind-015-app",
-      "ind-015-booking",
-      "ind-015-management",
-      "ind-015-ai",
-      "ind-015-portal",
       "ind-016-app",
       "ind-016-booking",
       "ind-016-management",
@@ -50,10 +40,20 @@
       "ind-017-booking",
       "ind-017-management",
       "ind-017-ai",
-      "ind-017-portal"
+      "ind-017-portal",
+      "ind-018-app",
+      "ind-018-booking",
+      "ind-018-management",
+      "ind-018-ai",
+      "ind-018-portal",
+      "ind-019-website",
+      "ind-019-app",
+      "ind-019-booking",
+      "ind-019-management",
+      "ind-019-ai"
     ],
     "allRequestedContentComplete": false,
-    "deployedCurrentSource": 137,
-    "sourceChangedAfterDeployment": 1
+    "deployedCurrentSource": 185,
+    "sourceChangedAfterDeployment": 2
   }
 }
