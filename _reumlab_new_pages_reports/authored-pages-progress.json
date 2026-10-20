@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T10:44:08.633Z",
+  "updatedAt": "2026-10-20T11:08:16.914Z",
   "pages": [
     {
       "url": "https://reumlab.com/development-agency/",
@@ -11,8 +11,11 @@
       "industry": "개발을 의뢰하는 사업자와 운영 담당자",
       "serviceAxis": "업무별 개발 범위",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "d7ce584707c605dc8f6b814b47a67aa52e53f2d0c6d8f1ff3a46b1e4afba8c41",
+      "deploymentStatus": "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED",
+      "searchSubmissionStatus": "CURRENT_SOURCE_NOT_SUBMITTED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/cms-website-development/",
@@ -24,8 +27,11 @@
       "industry": "콘텐츠를 직접 운영하는 기업",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "824912d48a4dacac838cc00b042c3c582cf3eb594ddc11ea5f2282d5db89b9ae",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/multilingual-website-development/",
@@ -37,8 +43,11 @@
       "industry": "여러 언어로 제품과 서비스를 안내하는 기업",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "bc71b34be9a7799ba955d7e87fd247bd9c1dcd8895f494c155937c24d643b239",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/headless-wordpress-development/",
@@ -50,8 +59,11 @@
       "industry": "기존 WordPress 콘텐츠 운영 조직",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "a06b4ce911e9fc6b5737aedb3d1d31ef17c261de9e490094dbc4c490c0e4742d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/server-hosting-migration/",
@@ -63,8 +75,11 @@
       "industry": "운영 중인 웹·업무 시스템",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "6d048ca5ddfcfba946fe29c52970365941a2fbe0c87faf7f8843ca897864830f",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/existing-codebase-audit/",
@@ -77,8 +92,11 @@
       "industry": "외주 결과물을 인수하거나 기존 서비스를 이어받는 조직",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "5c626a44104a44b3f38fbbc8bee1b7117ce4b16e40b2476608c86c2cf0feb05c",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app-store-launch-support/",
@@ -90,8 +108,11 @@
       "industry": "공통",
       "serviceAxis": "앱 출시·운영 인수",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "11f6942070070431322205d107caf158b39766d0183d1f29a028fe871a8105c7",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/pwa-web-app-development/",
@@ -103,8 +124,11 @@
       "industry": "공통",
       "serviceAxis": "설치형 웹앱·오프라인",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7beb3b13b3865226a929010f3d116fe00a73e861fb640ed3e3fd72b9fd347dde",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/map-location-based-app-development/",
@@ -116,8 +140,11 @@
       "industry": "공통",
       "serviceAxis": "지도·위치 검색",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "983908e4737a3cae0f23af090bbe05cbccab2a2733522e4deed5b9586c9ac66d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/social-login-integration/",
@@ -129,8 +156,11 @@
       "industry": "공통",
       "serviceAxis": "회원 인증·계정 연결",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7802b6f25dcfba27a47c36cf1af5efdfe23658b3b847276ca595fc4f6569a8d2",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/analytics-tracking-implementation/",
@@ -142,8 +172,11 @@
       "industry": "공통",
       "serviceAxis": "이벤트 측정·태그 구현",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "10ceb912d970d161f8030c0f78c8e17cb40356fa67c59d8b28a19d820a7e774e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/api-integration-development/",
@@ -155,8 +188,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "43fc308b68a314c4c29218bf063f5ec2aadb5021ad39a32ee7cb387975c0c23c",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/contract-management-system-development/",
@@ -168,8 +204,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "15d740abd836a1cba2a518d20b84c17a37de912cba1efe94a9ed96f594d882cb",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/custom-crm-development/",
@@ -181,8 +220,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "fafab7d0441437b91d4e5339b5ce95af378f34e909a5ab635511e475b6073703",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/inventory-management-system-development/",
@@ -194,8 +236,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "fcd75b3d4f680ccc8770c3a1e2287b8e28588937d002f7f9ed82c82844ed44fd",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/order-management-system-development/",
@@ -207,8 +252,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7a3e5816e25bb0a797dbe97e983c0096f90a85c532c451bbe5164b226dc83652",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/payment-gateway-integration-development/",
@@ -220,8 +268,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "af43d1b007c8ccbe7112e720b07a6348c2b3da71802de38b088678b0d55903f0",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/b2b-partner-portal-development/",
@@ -234,8 +285,11 @@
       "industry": "공통",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "2db79604f24126a2bc9d78c1485ef333becbc8920b9c79ee30b34578705f220b",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai-recommendation-system-development/",
@@ -247,8 +301,11 @@
       "industry": "공통",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7b094101df419dbf6e1d579d9de2eafc3130b9efdcf513332e0be8b48acde55b",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/reservation-platform-development/",
@@ -260,8 +317,11 @@
       "industry": "공통",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "2576bd81de7432dd3e44e1dad8c3b59e1fc4fbf546c1961d1cbdaf227ca1dcd1",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/settlement-system-development/",
@@ -273,8 +333,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "8c6ca8a105b42d13fa1550090a8b7f010326185e6a8eebd0e4a747c4001d9d71",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/responsive-web-accessibility-review/",
@@ -286,8 +349,11 @@
       "industry": "공통",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "2d40dbdb8b47be71d86d3dbb67572da1f076e58f70a10225415d89db4fdcc712",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/perplexity-crawl-citation-review/",
@@ -299,8 +365,11 @@
       "industry": "공통",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "ab490b56587490cf39be30a6a92f3b66f89dd7dab96b28bef9e13e26c20f1796",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/nextjs-rendering-migration/",
@@ -312,8 +381,11 @@
       "industry": "공통",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "0d409c78c35042976de4dca71d6b3013b1a8a7fc97e6a077a6a2f8fcfab95f19",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/supabase-permissions-migration/",
@@ -325,8 +397,11 @@
       "industry": "공통",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7f9fbe1b5ba0e62611d8e6a1b4a0e024fad5856a51940223faf6c1608c7caaba",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/firebase-data-rules-handover/",
@@ -338,8 +413,11 @@
       "industry": "공통",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "465245ea7949d1390a481a5b1eb395af9bff2d1b55c80b0654cab2a6c8d94470",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/web-app-security-review-scope/",
@@ -351,8 +429,11 @@
       "industry": "공통",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "b315f6f64579176e0e80f8bad5eca33479b9239473ed8f476eb11fb9f0aa8591",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/clinical-study-visit-management/",
@@ -367,8 +448,11 @@
       "industry": "임상시험센터",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "99b2d5fc9cae18cf23a9b70a45bc446bf09d2628a6441789ca01bccfd908070d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/pet-funeral-handover-management/",
@@ -382,8 +466,11 @@
       "industry": "반려동물장례업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "d4274b9dae9d124d5a2b5210b28dc9c78a728e38432d512b03451d4bfcc0bb31",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/gift-card-redemption-system/",
@@ -400,8 +487,11 @@
       "industry": "상품권플랫폼",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "5796d04fef2e2eb6b6c3cefa0c50200401478217e51db34f5707421aa888e1e6",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/testing-certification-workflow/",
@@ -415,8 +505,11 @@
       "industry": "시험인증기관",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "98b716388b6e4197216586550fd7420982d819a63b5622712b8fd3f224c6f8ee",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/fulfillment-warehouse-operations/",
@@ -430,8 +523,11 @@
       "industry": "풀필먼트업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "89848e952c41f8b1297662e2bb2d7d477e7e54abd9f1872c8fcb6fb5e75005ef",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/cold-chain-monitoring-system/",
@@ -445,8 +541,11 @@
       "industry": "콜드체인업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "9c282c3ceb667114cf50e19924e5a187538bdc4c7e10cd649a1ab0d4553102a0",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/international-freight-management/",
@@ -460,8 +559,11 @@
       "industry": "국제물류업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "750009aa4db842c5a23214f8bbaadadb57b737a7eda31226cd115595fa1e42df",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ev-charging-session-management/",
@@ -475,8 +577,11 @@
       "industry": "전기차충전업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "288c7136c6569519edce0817f7a68e3c384adf97f013f2407e69cefa74acbffa",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/heavy-equipment-rental-management/",
@@ -491,8 +596,11 @@
       "industry": "중장비렌탈업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "49f9110084a999b9478fb2986d25d1701c5cc28c93c3d2d789765d1cdbfce1b3",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/carbon-activity-data-management/",
@@ -505,8 +613,11 @@
       "industry": "탄소관리업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "e296aeefcaed3267772d7d7d6bf6759c02f10cef0914a89a14d9b48ee7453560",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/laboratory-sample-management/",
@@ -520,8 +631,11 @@
       "industry": "실험실관리업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "2b329449a14eb58aa5fa189a3aee31f3e3f0093835439d8ecc8c584b4dbd3a2d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/franchise-recruitment-website/",
@@ -533,8 +647,11 @@
       "industry": "프랜차이즈 본사",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "ad3adfa596238e77e0c64b139c158f16758b98dc62519a832bf05454ab3c5a01",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/b2b-sales-support-ai-workflow/",
@@ -546,8 +663,11 @@
       "industry": "기업 고객에게 제품과 서비스를 판매하는 B2B 기업",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7060f7fd9413026fa02609e5a6f8776a7f8a0c4edc26e87ba2829d865fc701a2",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/marketplace-ai-operations/",
@@ -559,8 +679,11 @@
       "industry": "판매자와 이용자가 참여하는 플랫폼",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "a89fa227b74e26af1995dc9d62edaafaca698e1f10d895ecaeda60d4031964dc",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/marketplace-operations-backoffice/",
@@ -572,8 +695,11 @@
       "industry": "중개·거래 플랫폼 운영사",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "393fe16c8cdcacd63a03e0a01dd8a30eb629a310118d324c70d5c980be8d926e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -585,8 +711,11 @@
       "industry": "풍력발전업체",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "8a14025b813dbace1fa802d1370962fe0cf833c9ca321e57053e9a7584b7a7be",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -598,8 +727,11 @@
       "industry": "풍력발전업체",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "269e5cfcb1e0b8e55ee4cff9d5789e6f18e1ceab024a768cec3b1c220843a002",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -611,8 +743,11 @@
       "industry": "풍력발전업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "30e230f9cf1e1543cd3674e8005d6ae0e142d14265cac58d89551448a8e75e23",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -624,8 +759,11 @@
       "industry": "풍력발전업체",
       "serviceAxis": "현장·작업 관리",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "fdf63f18505c559a2776c2a746e09557c85d6d3b9a52d77c02af02d2a1b46df2",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%92%8D%EB%A0%A5%EB%B0%9C%EC%A0%84%EC%97%85%EC%B2%B4/",
@@ -637,8 +775,11 @@
       "industry": "풍력발전업체",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "73a9fd02a65826201462404838ba9931464daa087924acdffbae4167e6b6b471",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%B9%98%EA%B3%BC/",
@@ -650,8 +791,11 @@
       "industry": "치과",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "20c3fa8339939c022175575ac73c4dbdeedb772afae49084aee1e3fefbd65967",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%B9%98%EA%B3%BC/",
@@ -663,8 +807,11 @@
       "industry": "치과",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "4ce210bcf3149ee4a2639768b9b031c345a82565f3fdc445648eae516008ec7f",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%94%BC%EB%B6%80%EA%B3%BC/",
@@ -676,8 +823,11 @@
       "industry": "피부과",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "b05ce84e8d58cf8fe7716b602c99351734dad4fc6c16ca8089e2d29589ecfa50",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%94%BC%EB%B6%80%EA%B3%BC/",
@@ -689,6 +839,79 @@
       "industry": "피부과",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c17bf76738f4b0c3f28e00c44c1387b1ed543e59860042444f0ed73b14a31d4b",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
+      "clusterIds": [
+        "ind-009-ai"
+      ],
+      "primaryKeyword": "이비인후과 AI 자동화",
+      "searchIntent": "이비인후과 AI 자동화의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "이비인후과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "8a07927fdfa2c4bbd1e24f016e5cd98796d6ac9e9b0ff37e2e5d7cbaa8f3c44b",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
+      "clusterIds": [
+        "ind-009-app"
+      ],
+      "primaryKeyword": "이비인후과 앱 개발",
+      "searchIntent": "이비인후과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "이비인후과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b0509fb92f24f2388d6502960492e0bbe7908e2f67dce574adb122471d4d4326",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
+      "clusterIds": [
+        "ind-009-booking"
+      ],
+      "primaryKeyword": "이비인후과 예약 시스템 개발",
+      "searchIntent": "이비인후과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "이비인후과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "9d1e6a41e43ae89306fc8d5d0d7b4d35a7c6afa0a4a64b265e022d59a3050e5b",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
+      "clusterIds": [
+        "ind-009-management"
+      ],
+      "primaryKeyword": "이비인후과 관리 프로그램",
+      "searchIntent": "이비인후과 관리 프로그램의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "이비인후과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "aae72715fa86ac2824370215021822f09a09a62a5682f9abf13dc1cafeae51d7",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC/",
+      "clusterIds": [
+        "ind-009-portal"
+      ],
+      "primaryKeyword": "이비인후과 고객 포털 개발",
+      "searchIntent": "이비인후과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "이비인후과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "f6f9d37cbe65047643c0c2ef771259bf39e63ab29980616d871f15bc35525e3a",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -702,8 +925,11 @@
       "industry": "종합병원",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "c7e5132612efbbac0d89b66c63b5bc790e3a183e39f4082303a9b9c28b32b4fe",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -715,8 +941,11 @@
       "industry": "종합병원",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "4fc956c8a0ad9922cf59951dd89a0d994100c40efd1ba56efe845f867eb60299",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -728,8 +957,11 @@
       "industry": "종합병원",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "1be1ed84f97a85432d68c209438ceedb6809e5c45ca6310890186a501572afbe",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -741,8 +973,11 @@
       "industry": "종합병원",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "bfdd1e08ff2ed941ae190588fa04f49c17d4f6f18863dbee1338406fa469ecbc",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%A2%85%ED%95%A9%EB%B3%91%EC%9B%90/",
@@ -754,8 +989,11 @@
       "industry": "종합병원",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "fef62b21ed0e48905c431d72a6dff95c95a4152e4c11f2258838726562d75736",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EB%B3%91%EC%9B%90/",
@@ -768,8 +1006,11 @@
       "industry": "병원",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "15b9ff10216a99635bc267de6698fdf071a9ffc88bdfd26c00f41cd9d098121d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EB%B3%91%EC%9B%90/",
@@ -783,8 +1024,11 @@
       "industry": "병원",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7dc0bcebbed6f48eeee0ce19920f615b31ce39228ae10fc8ca5f062e29307034",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%ED%95%9C%EC%9D%98%EC%9B%90/",
@@ -796,8 +1040,11 @@
       "industry": "한의원",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "ca815ecb484c892816d36c1a5ec2e1b9a040aea5fffadae8e5588d33e10f2338",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%95%9C%EC%9D%98%EC%9B%90/",
@@ -809,8 +1056,11 @@
       "industry": "한의원",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "83ec930931368829cae81aad270ec28d640674bb02aae92ab80cb1c0c05977d3",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ai/%EC%95%88%EA%B3%BC/",
@@ -822,8 +1072,11 @@
       "industry": "안과",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "70af62481291256e209be21d728f2ec93ff5eac715e00f98dc674e61ccaffe74",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%95%88%EA%B3%BC/",
@@ -835,8 +1088,11 @@
       "industry": "안과",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "38b485c1cd4913f9f1a5be2375c0ef6e4f8d7e274adbce54ea58f464d96b31be",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%95%88%EA%B3%BC/",
@@ -848,8 +1104,11 @@
       "industry": "안과",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "678e97787ed1e5de56fec1f4b36c9326e84d0f17c9379b5d5e7a041f51c9af3d",
+      "deploymentStatus": "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED",
+      "searchSubmissionStatus": "CURRENT_SOURCE_NOT_SUBMITTED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%95%88%EA%B3%BC/",
@@ -861,8 +1120,11 @@
       "industry": "안과",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "9cad8b13f9d78f722b8ebbc458d158ad17889b9c5ee45b347452aaf0eef6578f",
+      "deploymentStatus": "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED",
+      "searchSubmissionStatus": "CURRENT_SOURCE_NOT_SUBMITTED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%95%88%EA%B3%BC/",
@@ -874,6 +1136,79 @@
       "industry": "안과",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fa12bd90d877fb8434f890e2d72fad8bbcf7aac7bef009b47738a22eb77f7efc",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/ai/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-010-ai"
+      ],
+      "primaryKeyword": "정형외과 AI 자동화 개발",
+      "searchIntent": "정형외과 AI 자동화 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "정형외과",
+      "serviceAxis": "AI·GPT 자동화",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "dcb175513716e05fbacb5c8719d876bc488404d1c053b343c302801e2cd161f2",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-010-app"
+      ],
+      "primaryKeyword": "정형외과 앱 개발",
+      "searchIntent": "정형외과 앱 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "정형외과",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0cb85a2b740baf4815596c344d963e3bd95911e80626be8e746bcae0d7396dff",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-010-booking"
+      ],
+      "primaryKeyword": "정형외과 예약 시스템 개발",
+      "searchIntent": "정형외과 예약 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "정형외과",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b282c5efca1bd3b54a5ec3dc370ee7d9447af5eeccaec2069c816055c52c4c14",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-010-management"
+      ],
+      "primaryKeyword": "정형외과 관리 시스템 개발",
+      "searchIntent": "정형외과 관리 시스템 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "정형외과",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c277e5410a528de995571eee8d53f680cc0e67b155f0be30a26f5b7cd192df01",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/portal/%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC/",
+      "clusterIds": [
+        "ind-010-portal"
+      ],
+      "primaryKeyword": "정형외과 고객 포털 개발",
+      "searchIntent": "정형외과 고객 포털 개발의 운영 흐름·권한·예외·인수 조건을 비교하여 개발 범위를 결정",
+      "industry": "정형외과",
+      "serviceAxis": "고객·파트너 포털",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "adaf5051cad04c3cbeef61de6b52b0055096e1470b2ff94e3f8c963fb60d4de6",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -887,8 +1222,11 @@
       "industry": "성형외과",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "694f3e6fd3107b59d2b6e1e29f9047d531c4fd08f05f6a193bf65d1e31aa318c",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC/",
@@ -900,8 +1238,11 @@
       "industry": "성형외과",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "f7d66e997e1fc004327fa66b6bc86619c9d8e388112a020e4a13b0cf8c7eb10d",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -913,8 +1254,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "cfe798872e90bc90d31277300e748f477380347dab459a9fcbb13e75928b8ad9",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -926,8 +1270,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "fb874f3192900cbd9c4f92b1ced7beca2db5d788cd636ce957c7e91bbd4d3032",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/ecommerce/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -939,8 +1286,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "쇼핑몰·커머스",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "f50b2133bfb673ac8e029521542a156ff1dad7422912b4040287620b4a7aed04",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -952,8 +1302,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "83d2ac0cc172cca2f936da25e9777414d13be4f53e83a11a46fc31f9c53cef6c",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/order/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -965,8 +1318,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "주문·배달",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "c9346009a8cfdb2fefcddcafde5e22c0bb2fe4a2817fdc1d658e40ae8e93035e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%EC%A0%84%ED%86%B5%EC%A3%BC%EB%B8%8C%EB%9E%9C%EB%93%9C/",
@@ -978,8 +1334,11 @@
       "industry": "전통주브랜드",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "76e6aec098e95199d28bbcd317b0041e60dc6b400e261cbcc7d4833a6269ce12",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%98%B8%ED%85%94/",
@@ -991,8 +1350,11 @@
       "industry": "호텔",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "3470dd50643f2c53e65001f6210a85853ef3a0d1bc1939886b7067f61037482e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%AA%A8%ED%85%94/",
@@ -1004,8 +1366,11 @@
       "industry": "모텔",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "8b46a6abc141f68b20c11ceb3ff0074b3c2592d1849d69693877e19ce8d9a737",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
@@ -1017,8 +1382,11 @@
       "industry": "리조트",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "2bf58b6fd1d164c1cbb6d4f63e5273d9a768f4fb0ed9e146bf0353e77b3d9cba",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%A6%AC%EC%A1%B0%ED%8A%B8/",
@@ -1030,8 +1398,11 @@
       "industry": "리조트",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7f4bbab18125e6bb4aed601d27753308e05cb318cf4d9cf729676fa194b0fbff",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%8E%9C%EC%85%98/",
@@ -1043,8 +1414,11 @@
       "industry": "펜션",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "19c2e81d72df9ba3c72a582e9f543cd2d323c6e89144698f7e3de6a3e0803371",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B2%8C%EC%8A%A4%ED%8A%B8%ED%95%98%EC%9A%B0%EC%8A%A4/",
@@ -1056,8 +1430,11 @@
       "industry": "게스트하우스",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "c9d2480bc39c9917fc0ba9dd2211c9757fb5c7eed40d14da8df435a00219b3e7",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%92%80%EB%B9%8C%EB%9D%BC/",
@@ -1069,8 +1446,11 @@
       "industry": "풀빌라",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "921c15f80fb7625f275b086df2c08141fb996b5d79d926e6bd19c1a246c12640",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%ED%95%9C%EC%98%A5%EC%8A%A4%ED%85%8C%EC%9D%B4/",
@@ -1082,8 +1462,11 @@
       "industry": "한옥스테이",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "78a47dc505b57097a674513273109d3814dfc1229555cedcc1ed70694f60d291",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%BA%A0%ED%95%91%ED%8E%9C%EC%85%98/",
@@ -1095,8 +1478,11 @@
       "industry": "캠핑펜션",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "5d21dbd9479ad7384c1737739474898929ace04e5042e3dd9f6690b7e455145f",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B8%80%EB%9E%A8%ED%95%91%EC%9E%A5/",
@@ -1108,8 +1494,11 @@
       "industry": "글램핑장",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "b3fdd50d8dcfb928ca1288b7d05898f153626bd36140de2f020661698ee4cc19",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EB%AF%BC%EB%B0%95/",
@@ -1121,8 +1510,11 @@
       "industry": "민박",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "9852599ae0e693f1a0192d1ccad5c4c6537e3a35fa3b42372069d69a4561861f",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EC%97%AC%ED%96%89%EC%82%AC/",
@@ -1134,8 +1526,11 @@
       "industry": "여행사",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "d038a0ed2afbcdf89c52ddeda62555dacba3ae28514e5ce208cbdc7dd65ef93e",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -1147,8 +1542,11 @@
       "industry": "관광버스업체",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "78d14669d0f8f0412300b7f3f83fb38eb06a3d82273aac8ef88e95322f7a25b1",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -1160,8 +1558,11 @@
       "industry": "관광버스업체",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "079781108173814afe939670acb0ab964b42a5eeb21ae5d6f29b5081f35bc440",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -1173,8 +1574,11 @@
       "industry": "관광버스업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "e114aa8e3f4388088f062e7af1b14ce5de6a0840071e0a4c06f108b11b616adc",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/platform/%EA%B4%80%EA%B4%91%EB%B2%84%EC%8A%A4%EC%97%85%EC%B2%B4/",
@@ -1186,6 +1590,163 @@
       "industry": "관광버스업체",
       "serviceAxis": "플랫폼·중개",
       "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "22211b76ea07d9e27d2d5798cfa567fd9e37823b824ff4ea2bd9528454d7dead",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EB%A0%8C%ED%84%B0%EC%B9%B4%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-224-platform"
+      ],
+      "primaryKeyword": "렌터카업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "렌터카업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "2d03ac7f0c2a9438b301225e9117ca0183893cf588a678a5f3b57848cfa95944",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-225-app"
+      ],
+      "primaryKeyword": "공항픽업업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "공항픽업업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c7811b1a8e73182ad9ed5199ae0e5a7ce52e123edbb4455889693fb07af711b4",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-225-booking"
+      ],
+      "primaryKeyword": "공항픽업업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "공항픽업업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "079649ff0c436f1bb154bbe8931c0424878c854b8f8acfaddc17e0479908f94b",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-225-management"
+      ],
+      "primaryKeyword": "공항픽업업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "공항픽업업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "38f09f708426ec266712d827f0a202f696f9ba6b080eb270615607110004cc98",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EA%B3%B5%ED%95%AD%ED%94%BD%EC%97%85%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-225-platform"
+      ],
+      "primaryKeyword": "공항픽업업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "공항픽업업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "448513de7e8cc2c84f5af1b8b77282a414c7fb7f519bd4fde32db7c9bda840e0",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-226-app"
+      ],
+      "primaryKeyword": "유람선업체 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "유람선업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b0c1339cf7d7b18b6c0b1da255c387d44ba1458ff624b823fe46d38afafb6bb7",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-226-booking"
+      ],
+      "primaryKeyword": "유람선업체 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "유람선업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "76c38e60563b7a199ca0189cab9872c917df4807040f9d1c5206106b457dedfb",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-226-management"
+      ],
+      "primaryKeyword": "유람선업체 관리 프로그램",
+      "searchIntent": "기능개발",
+      "industry": "유람선업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "fd147275b90801834d885e1fb90b5303e80815fe66fb31e5b075b262aedcb544",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/platform/%EC%9C%A0%EB%9E%8C%EC%84%A0%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-226-platform"
+      ],
+      "primaryKeyword": "유람선업체 플랫폼 개발",
+      "searchIntent": "제작의뢰",
+      "industry": "유람선업체",
+      "serviceAxis": "플랫폼·중개",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "906845b0ae6af8a049a64c483d979c215cd24cb5b9f1c1505327f83f8b62f256",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
+      "clusterIds": [
+        "ind-227-app"
+      ],
+      "primaryKeyword": "관광농원 앱 개발",
+      "searchIntent": "비용·견적 / 업체선정 / 제작의뢰",
+      "industry": "관광농원",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "2cc10cfb4ab315532d0b737db85ea9edb92657b99ee626cedb72310381df50ea",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90/",
+      "clusterIds": [
+        "ind-227-booking"
+      ],
+      "primaryKeyword": "관광농원 예약 시스템 개발",
+      "searchIntent": "기능개발 / 제작의뢰",
+      "industry": "관광농원",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "613185b29c753c71f52a8c42d431ec7427963a092729b3759526ef2db3d41410",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -1199,8 +1760,11 @@
       "industry": "프랜차이즈컨설팅업체",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "40c91944ff564ba12d9325684b971229bc8589daaffd3d269a4c91bd2b1519a5",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -1212,8 +1776,11 @@
       "industry": "프랜차이즈컨설팅업체",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "d3ce11e2bf492ff20a0a1083768be8efac5c07d612f3386086f2d7e20e3ea3e1",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -1225,8 +1792,11 @@
       "industry": "프랜차이즈컨설팅업체",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "c968db092adc5b2baa6cff0d53023dcb4471b70cf3d274e8d55552e22872f089",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/portal/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -1238,8 +1808,11 @@
       "industry": "프랜차이즈컨설팅업체",
       "serviceAxis": "고객·파트너 포털",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "911abff0ca55890f1f466a091aa036d9d594184fabfca66185afd915e314f930",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/website/%ED%94%84%EB%9E%9C%EC%B0%A8%EC%9D%B4%EC%A6%88%EC%BB%A8%EC%84%A4%ED%8C%85%EC%97%85%EC%B2%B4/",
@@ -1251,8 +1824,11 @@
       "industry": "프랜차이즈컨설팅업체",
       "serviceAxis": "홈페이지·웹사이트",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "f4cdfb22e1970f3701f394e8b9fa3a699237649cf6ecf8eb6525589d61d50807",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/app/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -1264,8 +1840,11 @@
       "industry": "타이어매장",
       "serviceAxis": "앱·어플",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "4fb212d80305612708970f2a8ca12f1aa247379dd0a9b24807c9ec9d6f47dadb",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/booking/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -1277,8 +1856,11 @@
       "industry": "타이어매장",
       "serviceAxis": "예약·일정",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "7374d24d96b47abc6f72a2be7d0a61d93bf5492f85f49a134b4e992889be6251",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/field/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -1290,8 +1872,11 @@
       "industry": "타이어매장",
       "serviceAxis": "현장·작업 관리",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "cb496707cf5bb80881e346d7c1a940bd1adf52ec4b178ac3f01fc496c48f840b",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     },
     {
       "url": "https://reumlab.com/development-agency/management/%ED%83%80%EC%9D%B4%EC%96%B4%EB%A7%A4%EC%9E%A5/",
@@ -1303,6 +1888,261 @@
       "industry": "타이어매장",
       "serviceAxis": "관리 프로그램·ERP",
       "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "c8a4c4d74ca9bd8c6aa3ba5760ff2ee43e01fa29afa5502f9a0a122a5693795b",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%84%B8%EC%B0%A8%EC%9E%A5/",
+      "clusterIds": [
+        "ind-426-field"
+      ],
+      "primaryKeyword": "세차장 현장 관리 앱",
+      "searchIntent": "셀프세차장의 베이·결제 단말·공용 시설 상태를 순회 점검하고 장애 이용 건과 복구 승인을 연결할 현장 앱을 의뢰하려는 의도",
+      "industry": "세차장",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "1a9c19cba6445bd916bfabeac7bc635bdbefd6d6ceeea5c32a5270441f827ff4",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%86%90%EC%84%B8%EC%B0%A8%EC%9E%A5/",
+      "clusterIds": [
+        "ind-427-field"
+      ],
+      "primaryKeyword": "손세차장 현장 관리 앱",
+      "searchIntent": "직원이 차량을 인수해 손세차하는 매장에서 사전 상태·고객 물품·작업 항목·교대 인계·출고 확인을 차량별로 기록하려는 구매 의도",
+      "industry": "손세차장",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "d02ff27f6a407d280eaab2d5ff549cdedef4d9a1555efae3df75498f6a4bb5ef",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-428-app"
+      ],
+      "primaryKeyword": "자동차광택업체 앱 개발",
+      "searchIntent": "광택·코팅 고객에게 차량별 승인 견적과 시공 자료, 관리 안내와 보증 문의를 제공하는 전용 앱을 의뢰하려는 구매 의도",
+      "industry": "자동차광택업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "45f540657e33863c440945b1c850056bc598307f19671f10037160ea39bda160",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-428-booking"
+      ],
+      "primaryKeyword": "자동차광택업체 예약 시스템 개발",
+      "searchIntent": "광택·코팅업체의 사전 차량 확인과 작업자·실내 공간·보관 기간을 분리해 입고부터 인도까지 예약하는 시스템 구매 의도",
+      "industry": "자동차광택업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0b606205cebff05f85f403ee0960cf31a1cefabb92b4b5655ebe3e0592095d42",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-428-field"
+      ],
+      "primaryKeyword": "자동차광택업체 현장 관리 앱",
+      "searchIntent": "차량 부위별 상태와 승인된 광택·코팅 공정을 현장 작업자가 기록하고 예외 보류·책임자 검수·출고 확인으로 이어가려는 의도",
+      "industry": "자동차광택업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "4f64ae541fa812d39547a1acdaaefdf73cd9602caf31e1f1ae979024386ae6e2",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%EA%B4%91%ED%83%9D%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-428-management"
+      ],
+      "primaryKeyword": "자동차광택업체 관리 프로그램",
+      "searchIntent": "광택·코팅 업체의 확정 견적과 실제 시공 항목, 제품 사용과 외주 비용, 재작업과 사후 문서를 연결할 내부 관리 프로그램 구매 의도",
+      "industry": "자동차광택업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "6c7275ad27ae47ab00fdc15ebbe7d36e9ab43e016561a3aaf9c3baf1f4d584d5",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
+      "clusterIds": [
+        "ind-429-app"
+      ],
+      "primaryKeyword": "자동차튜닝샵 앱 개발",
+      "searchIntent": "튜닝 고객이 차량 자료를 제출하고 제안 사양·견적 변경·준비 상태·시공 문서와 사후 문의를 차량별로 확인할 앱 구매 의도",
+      "industry": "자동차튜닝샵",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "0a8ef11f90fc3ab6433fcdeeb0a9fe31daca1b6ff2d79fa4ee25e2e7cdc5feed",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
+      "clusterIds": [
+        "ind-429-booking"
+      ],
+      "primaryKeyword": "자동차튜닝샵 예약 시스템 개발",
+      "searchIntent": "차량 사양·부품 준비·필요 서류 확인을 조건으로 튜닝 입고와 작업자·설비를 확정하고 일정 변경을 관리하려는 구매 의도",
+      "industry": "자동차튜닝샵",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "6df1ea87278d6fd912f8cbd6b15ea247ad11a73229fc08b9c2afb83ba41ef109",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
+      "clusterIds": [
+        "ind-429-field"
+      ],
+      "primaryKeyword": "자동차튜닝샵 현장 관리 앱",
+      "searchIntent": "튜닝 현장에서 승인 사양과 실제 차량·부품을 대조하고 착수·예외 보류·변경 지시·검수·인도 기록을 연결하려는 앱 구매 의도",
+      "industry": "자동차튜닝샵",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "95e14c7fd74de84d383dad001795f3efbde0e9af7f847c37d084ba7bbd9d64a3",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%ED%8A%9C%EB%8B%9D%EC%83%B5/",
+      "clusterIds": [
+        "ind-429-management"
+      ],
+      "primaryKeyword": "자동차튜닝샵 관리 프로그램",
+      "searchIntent": "차량별 승인 사양과 부품 발주·배정·실제 장착, 탈거품 인계와 외주 비용·변경 정산을 추적하는 내부 원장 구매 의도",
+      "industry": "자동차튜닝샵",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "8d3a031a5f9633c9eb5b92337fc958cc3bb0425bb416965e20eccd678e8b349f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-430-app"
+      ],
+      "primaryKeyword": "블랙박스매장 앱 개발",
+      "searchIntent": "고객이 설치 기기의 모델·식별 정보·작업 내역과 공식 사용 안내를 확인하고 증상 문의·수리 진행·재방문을 이어가는 매장 앱 구매 의도",
+      "industry": "블랙박스매장",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "951bed9b5493cc9f5d92b375705df82e3de6690882e99438f8fc74abe7fceb22",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-430-booking"
+      ],
+      "primaryKeyword": "블랙박스매장 예약 시스템 개발",
+      "searchIntent": "블랙박스 신규 설치·차량 간 이전·증상 점검을 구분하고 기기와 구성품 준비, 설치 기사·작업 공간·재방문 일정을 예약하는 시스템 구매 의도",
+      "industry": "블랙박스매장",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "15352094b5d4fca6c46c3dc2a1a149e18de6eba779eb310938eda68c310e9d4f",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-430-field"
+      ],
+      "primaryKeyword": "블랙박스매장 현장 관리 앱",
+      "searchIntent": "설치 기사가 차량·실제 기기·구성품을 확인하고 승인된 장착과 설정, 시험 결과·이상 보류·고객 안내를 기록할 현장 앱 구매 의도",
+      "industry": "블랙박스매장",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "7da84d86fbb7259cb060c10109b6ac88c0967ac40b22254f98f6a7fb14661790",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EB%B8%94%EB%9E%99%EB%B0%95%EC%8A%A4%EB%A7%A4%EC%9E%A5/",
+      "clusterIds": [
+        "ind-430-management"
+      ],
+      "primaryKeyword": "블랙박스매장 관리 프로그램",
+      "searchIntent": "판매 제품의 개체 식별과 차량 장착, 고객 수리품 입출고·제조사 의뢰·교환품·부속·정산을 하나의 추적 원장으로 관리하려는 의도",
+      "industry": "블랙박스매장",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "28336adc448de60914bc10116a7da1e9fd552e7fd3d0202eb60910fdbe604e7c",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/app/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-431-app"
+      ],
+      "primaryKeyword": "자동차유리업체 앱 개발",
+      "searchIntent": "고객이 차량 유리 교체 범위와 공개된 작업·보정 자료, 인도 후 안내와 증상 문의·재점검을 이어갈 전용 앱을 구매하려는 의도",
+      "industry": "자동차유리업체",
+      "serviceAxis": "앱·어플",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "2996bdf5e1edfe2b6bf600c1cfa8a3eddf41177c3603338346767ee394c752b7",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/booking/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-431-booking"
+      ],
+      "primaryKeyword": "자동차유리업체 예약 시스템 개발",
+      "searchIntent": "차량 유리의 사양과 부품 확보를 확인하고 교체 작업·제품 조건에 따른 대기·필요한 보정·인도 자원을 분리해 예약하려는 구매 의도",
+      "industry": "자동차유리업체",
+      "serviceAxis": "예약·일정",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "882135c6676fbd89f49c72b7c65acf6465da90c38635bb2b2ac89e7c72e305f8",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/field/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-431-field"
+      ],
+      "primaryKeyword": "자동차유리업체 현장 관리 앱",
+      "searchIntent": "실제 차량과 유리의 대조, 작업에 사용한 제품과 확인 조건, 예외 보류·보정 결과·책임자 인도 확인을 현장 기록으로 연결하려는 의도",
+      "industry": "자동차유리업체",
+      "serviceAxis": "현장·작업 관리",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "b1a03765441ce7609aa2671f67cadb529e3b19856b781d4976682b0b70a8c335",
+      "deploymentStatus": "NOT_DEPLOYED",
+      "searchSubmissionStatus": "NOT_SUBMITTED"
+    },
+    {
+      "url": "https://reumlab.com/development-agency/management/%EC%9E%90%EB%8F%99%EC%B0%A8%EC%9C%A0%EB%A6%AC%EC%97%85%EC%B2%B4/",
+      "clusterIds": [
+        "ind-431-management"
+      ],
+      "primaryKeyword": "자동차유리업체 관리 프로그램",
+      "searchIntent": "차량별 확인된 유리 사양과 발주·실물 수령·배정·파손·반품, 교체 작업과 외부 보정 비용·고객 및 기타 청구를 대조하려는 원장 구매 의도",
+      "industry": "자동차유리업체",
+      "serviceAxis": "관리 프로그램·ERP",
+      "sourceStatus": "REGISTERED_AUTHORED",
+      "sourceDigest": "99f4cd6d60d9aa4ee06c6c8eda764fda6ff282973c9cc86ca56cff398b799d9f",
       "deploymentStatus": "NOT_DEPLOYED",
       "searchSubmissionStatus": "NOT_SUBMITTED"
     },
@@ -1317,8 +2157,11 @@
       "industry": "프랜차이즈본사",
       "serviceAxis": "AI·GPT 자동화",
       "sourceStatus": "REGISTERED_AUTHORED",
-      "deploymentStatus": "NOT_DEPLOYED",
-      "searchSubmissionStatus": "NOT_SUBMITTED"
+      "sourceDigest": "f7aa2c76280ce1ef495331a4439ab9ff02f696022612d72131b0caa22a50ebc6",
+      "deploymentStatus": "DEPLOYED_VERIFIED",
+      "searchSubmissionStatus": "SUBMITTED_INDEXING_NOT_CONFIRMED",
+      "deployedAt": "2026-10-20T11:06:00.263Z",
+      "deploymentId": "6ad74a570ea02a6265191222"
     }
   ]
 }
