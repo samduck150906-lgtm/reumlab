@@ -1,0 +1,58 @@
+{
+  "status": "FIVE_SAME_INTENTS_RESOLVED_NO_PAGE_SOURCE_CHANGE",
+  "checkedAt": "2026-10-21T18:32:33.142832+00:00",
+  "mapping": [
+    {
+      "clusterId": "ind-095-website",
+      "state": "MERGED_SYNONYM",
+      "canonical": "https://reumlab.com/website/juganbohosenteo/",
+      "canonicalOwner": "https://reumlab.com/website/juganbohosenteo/"
+    },
+    {
+      "clusterId": "ind-095-app",
+      "state": "MERGED_TO_AUTHORED_CANONICAL",
+      "canonical": "https://reumlab.com/development-agency/app/%EC%A3%BC%EA%B0%84%EB%B3%B4%ED%98%B8%EC%84%BC%ED%84%B0/",
+      "canonicalOwner": "ind-077-app"
+    },
+    {
+      "clusterId": "ind-095-booking",
+      "state": "MERGED_TO_AUTHORED_CANONICAL",
+      "canonical": "https://reumlab.com/development-agency/booking/%EC%A3%BC%EA%B0%84%EB%B3%B4%ED%98%B8%EC%84%BC%ED%84%B0/",
+      "canonicalOwner": "ind-077-booking"
+    },
+    {
+      "clusterId": "ind-095-management",
+      "state": "MERGED_TO_AUTHORED_CANONICAL",
+      "canonical": "https://reumlab.com/development-agency/management/%EC%A3%BC%EA%B0%84%EB%B3%B4%ED%98%B8%EC%84%BC%ED%84%B0/",
+      "canonicalOwner": "ind-077-management"
+    },
+    {
+      "clusterId": "ind-095-ai",
+      "state": "MERGED_TO_AUTHORED_CANONICAL",
+      "canonical": "https://reumlab.com/development-agency/ai/%EC%A3%BC%EA%B0%84%EB%B3%B4%ED%98%B8%EC%84%BC%ED%84%B0/",
+      "canonicalOwner": "ind-077-ai"
+    }
+  ],
+  "officialSource": "https://news.seoul.go.kr/welfare/archives/50506",
+  "primaryBodyReviewedByRoot": "Elderly day/evening facility category and named day-care/주간보호 list; no scheme eligibility, hours, grants or certification claims adopted.",
+  "context": "Original095 queue compares /solution/senior/ and attendance/transport/guardian/dayhandover/billing. Childcare/generaldaycare and Seoul additionalcertification remain outside this synonym decision.",
+  "oldWebsiteEntireBodyReadByRoot": true,
+  "oldWebsiteActualProductionExact200": true,
+  "newWebsite3500BodyClaim": false,
+  "fourExpandedOwnersAlreadyFullyReadAndCompared": "Prior105/55 staticreviews and exact current1146 target objects; v2 individual original/source hashes preserved.",
+  "queueRowsBefore": 2484,
+  "queueRowsAfter": 2484,
+  "onlyChangedQueueRows": 5,
+  "other2479RowsExact": true,
+  "original490ByteExact": true,
+  "allExisting077PageObjectsAndKeywordMetadataUntouched": true,
+  "frozen018019AndPR26Untouched": true,
+  "beforeSha256": "eb5015845ac0c690e397bce544b0a72857f95a0e1ab151b103c3693eba1af07c",
+  "afterSha256": "f64411601e60d6c8ebc8ecd73713930f6228777c4ee73f85c50b71386266d67d",
+  "newAuthoredPages": 0,
+  "newIntentAliasesToAuthored": 4,
+  "existingCanonicalSynonym": 1,
+  "scopeDropped": 0,
+  "latestFrozenReportingStillHistoricalUntilNewReportingSnapshot": true,
+  "allRequestedContentComplete": false
+}
