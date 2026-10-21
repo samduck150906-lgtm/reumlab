@@ -70,6 +70,11 @@ import { researchEquipmentFieldPage } from '@/content/development-agency/expande
 import { researchEquipmentAiPage } from '@/content/development-agency/expanded/root-research-equipment/ai';
 import { laboratoryOperationsWebsitePage } from '@/content/development-agency/expanded/root-laboratory-operations/website';
 import { laboratoryOperationsAiPage } from '@/content/development-agency/expanded/root-laboratory-operations/ai';
+import { digitalTwinWebsitePage } from '@/content/development-agency/expanded/root-digital-twin/website';
+import { digitalTwinPortalPage } from '@/content/development-agency/expanded/root-digital-twin/portal';
+import { digitalTwinManagementPage } from '@/content/development-agency/expanded/root-digital-twin/management';
+import { digitalTwinFieldPage } from '@/content/development-agency/expanded/root-digital-twin/field';
+import { digitalTwinAiPage } from '@/content/development-agency/expanded/root-digital-twin/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -130,6 +135,7 @@ export const agencyPages: readonly AgencyPage[] = [
   researchEquipmentAiPage,
   laboratoryOperationsWebsitePage,
   laboratoryOperationsAiPage,
+  digitalTwinWebsitePage, digitalTwinPortalPage, digitalTwinManagementPage, digitalTwinFieldPage, digitalTwinAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };

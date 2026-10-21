@@ -1,11 +1,11 @@
 {
   "phase": "DRAFT_BROWSER_QA_PENDING",
-  "candidatePagesIncludingHub": 517,
-  "newDetailsSinceProduction": 129,
-  "newDetailsSincePreviousDraft": 49,
+  "candidatePagesIncludingHub": 565,
+  "newDetailsSinceProduction": 177,
+  "newDetailsSincePreviousDraft": 48,
   "previouslyPublishedDetailsRevised": 115,
   "localSourceRenderedHttpPreservation": "PASS",
-  "sourceComparisons": 692263,
+  "sourceComparisons": 783655,
   "namespaceTestsPassed": 15,
   "projectTestsPassed": 240,
   "typescriptDiagnostics": 0,
@@ -14,9 +14,20 @@
   "existingCanonicalsPreserved": 823,
   "originalDiscoveryFilesByteExact": 18,
   "browser": "PENDING_ACCESS_BLOCKED",
-  "browserRuntimeTargetsAt320px": 245,
+  "additionalPerUrl320CoveragePlan": 293,
+  "browserMinimumRequired": {
+    "viewports": [
+      320,
+      375,
+      768,
+      1280,
+      1440
+    ],
+    "coverage": "Representative screenshots and keyboard/accessibility checks",
+    "verifiedForCurrentSnapshot": false
+  },
   "mergeAllowed": false,
-  "previewHttp": "NOT_STARTED_FOR_THIS_HEAD",
+  "previewHttp": "PENDING_AT_COMMIT_TIME",
   "productionDeployment": "NOT_STARTED",
   "searchSubmission": "NOT_STARTED_FOR_CURRENT_CANDIDATE",
   "allRequestedContentComplete": false
