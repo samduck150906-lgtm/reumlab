@@ -1,0 +1,23 @@
+{
+  "phase": "DRAFT_BROWSER_QA_PENDING",
+  "immutableInput": "development-agency-validation-011",
+  "baseCommit": "7232f2916926a83191d1e104d365a4f15c60ce5d",
+  "candidatePagesIncludingHub": 880,
+  "newDetailPagesSinceProduction": 93,
+  "changedPreviouslyPublishedDetails": 0,
+  "unchangedPreviouslyVerifiedDetails": 786,
+  "browserRuntimeTargetsAt320px": 94,
+  "localSourceRenderedHttpPreservation": "PASS",
+  "independentFullNewManuscriptsReviewedInPriorVersion": 93,
+  "subsequentP3CorrectionsExactlyVerifiedByRoot": 2,
+  "namespaceTestsPassed": 15,
+  "projectTestsPassed": 240,
+  "typescriptDiagnostics": 0,
+  "originalTrackedFilesPreserved": 490,
+  "existingCanonicalsPreserved": 823,
+  "browser": "PENDING_FOR880_SNAPSHOT",
+  "mergeAllowed": false,
+  "productionDeployment": "NOT_STARTED",
+  "searchSubmission": "NOT_STARTED_FOR_CURRENT_CANDIDATE",
+  "allRequestedContentComplete": false
+}
