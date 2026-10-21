@@ -1,0 +1,27 @@
+{
+  "status": "SOURCE_EXACT1443_ACTUAL1372_LEDGER_REFRESHED_BROWSER_PENDING",
+  "checkedAt": "2026-10-21T22:45:02.818444+00:00",
+  "baseCommit": "6d62cfa12134fd9f78efb3be93dc14b2a732b153",
+  "candidatePagesIncludingHub": 1443,
+  "newDetailPages": 71,
+  "productionParentPages": 1372,
+  "parentProductionDeploy": "6ad93c639f42fbe8e8624b7d",
+  "ledgerSha256": "45414933bffab2b018015fafdc98477053a11247636bd2fb67b5fa9f3891dfd6",
+  "all1443ObjectsExactReviewed027": true,
+  "normalizedNamespaceFilesChecked": 1053,
+  "original490PathsUnchanged": true,
+  "deploymentStatusCounts": {
+    "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED": 1,
+    "NOT_DEPLOYED": 71,
+    "DEPLOYED_VERIFIED": 1371
+  },
+  "fullSemanticReads": {
+    "new027": 71,
+    "web32": 32,
+    "ops39": 39,
+    "retainedPrior025Full31WithoutFreshReread": true
+  },
+  "browserTargets": 72,
+  "mergeAllowed": false,
+  "allRequestedContentComplete": false
+}
