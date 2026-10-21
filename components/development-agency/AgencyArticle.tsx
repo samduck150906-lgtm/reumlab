@@ -3,6 +3,7 @@ import { AGENCY_BASE, AGENCY_DOMAIN, agencyHref } from '@/lib/development-agency
 import { SITE } from '@/lib/seo';
 import BusinessFooter from '@/components/BusinessFooter';
 import styles from './agency.module.css';
+import AgencyContactVisibility from './AgencyContactVisibility';
 
 export default function AgencyArticle({ page, directory }: { page: AgencyPage; directory?: readonly AgencyPage[] }) {
   const isHub = page.slug === '';
@@ -46,10 +47,11 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
   };
   return (
     <>
+      <AgencyContactVisibility pageKey={page.slug} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, '\\u003c') }} />
       <a href="#agency-main" className={styles.skip}>본문으로 이동</a>
       <main id="agency-main" tabIndex={-1} className={styles.page}>
-        <header className={styles.hero}>
+        <header id="agency-hero" className={styles.hero}>
           <nav aria-label="현재 위치" className={styles.breadcrumb}>
             <a href="/">름랩</a><span aria-hidden="true">/</span>
             {isHub ? <span>개발 의뢰 범위 안내</span> : <><a href={AGENCY_BASE}>개발 의뢰 범위 안내</a><span aria-hidden="true">/</span><span>{page.primaryKeyword}</span></>}
