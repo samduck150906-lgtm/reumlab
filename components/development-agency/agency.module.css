@@ -83,3 +83,10 @@
 @media (prefers-reduced-motion: reduce) {
   .page { scroll-behavior: auto; }
 }
+
+/* The shared control returns after the mobile introduction leaves the viewport. */
+@media (max-width: 767px) {
+  :global(body):has(.page):not([data-agency-hero-clear="true"]) :global(.floating-contact) {
+    display: none !important;
+  }
+}

@@ -245,254 +245,307 @@ import { page as manuscript240 } from '@/content/development-agency/expanded/ind
 import { page as manuscript241 } from '@/content/development-agency/expanded/industry-211-420/ind-283-ai';
 import { page as manuscript242 } from '@/content/development-agency/expanded/industry-211-420/ind-283-platform';
 import { page as manuscript243 } from '@/content/development-agency/expanded/industry-211-420/ind-283-website';
-import { page as manuscript244 } from '@/content/development-agency/expanded/industry-421-631/ind-421-ai';
-import { page as manuscript245 } from '@/content/development-agency/expanded/industry-421-631/ind-421-booking';
-import { page as manuscript246 } from '@/content/development-agency/expanded/industry-421-631/ind-421-management';
-import { page as manuscript247 } from '@/content/development-agency/expanded/industry-421-631/ind-421-portal';
-import { page as manuscript248 } from '@/content/development-agency/expanded/industry-421-631/ind-421-website';
-import { page as manuscript249 } from '@/content/development-agency/expanded/industry-421-631/ind-425-app';
-import { page as manuscript250 } from '@/content/development-agency/expanded/industry-421-631/ind-425-booking';
-import { page as manuscript251 } from '@/content/development-agency/expanded/industry-421-631/ind-425-field';
-import { page as manuscript252 } from '@/content/development-agency/expanded/industry-421-631/ind-425-management';
-import { page as manuscript253 } from '@/content/development-agency/expanded/industry-421-631/ind-426-field';
-import { page as manuscript254 } from '@/content/development-agency/expanded/industry-421-631/ind-427-field';
-import { page as manuscript255 } from '@/content/development-agency/expanded/industry-421-631/ind-428-app';
-import { page as manuscript256 } from '@/content/development-agency/expanded/industry-421-631/ind-428-booking';
-import { page as manuscript257 } from '@/content/development-agency/expanded/industry-421-631/ind-428-field';
-import { page as manuscript258 } from '@/content/development-agency/expanded/industry-421-631/ind-428-management';
-import { page as manuscript259 } from '@/content/development-agency/expanded/industry-421-631/ind-429-app';
-import { page as manuscript260 } from '@/content/development-agency/expanded/industry-421-631/ind-429-booking';
-import { page as manuscript261 } from '@/content/development-agency/expanded/industry-421-631/ind-429-field';
-import { page as manuscript262 } from '@/content/development-agency/expanded/industry-421-631/ind-429-management';
-import { page as manuscript263 } from '@/content/development-agency/expanded/industry-421-631/ind-430-app';
-import { page as manuscript264 } from '@/content/development-agency/expanded/industry-421-631/ind-430-booking';
-import { page as manuscript265 } from '@/content/development-agency/expanded/industry-421-631/ind-430-field';
-import { page as manuscript266 } from '@/content/development-agency/expanded/industry-421-631/ind-430-management';
-import { page as manuscript267 } from '@/content/development-agency/expanded/industry-421-631/ind-431-app';
-import { page as manuscript268 } from '@/content/development-agency/expanded/industry-421-631/ind-431-booking';
-import { page as manuscript269 } from '@/content/development-agency/expanded/industry-421-631/ind-431-field';
-import { page as manuscript270 } from '@/content/development-agency/expanded/industry-421-631/ind-431-management';
-import { page as manuscript271 } from '@/content/development-agency/expanded/industry-421-631/ind-432-booking';
-import { page as manuscript272 } from '@/content/development-agency/expanded/industry-421-631/ind-432-field';
-import { page as manuscript273 } from '@/content/development-agency/expanded/industry-421-631/ind-433-app';
-import { page as manuscript274 } from '@/content/development-agency/expanded/industry-421-631/ind-433-booking';
-import { page as manuscript275 } from '@/content/development-agency/expanded/industry-421-631/ind-433-field';
-import { page as manuscript276 } from '@/content/development-agency/expanded/industry-421-631/ind-433-management';
-import { page as manuscript277 } from '@/content/development-agency/expanded/industry-421-631/ind-434-app';
-import { page as manuscript278 } from '@/content/development-agency/expanded/industry-421-631/ind-434-booking';
-import { page as manuscript279 } from '@/content/development-agency/expanded/industry-421-631/ind-434-field';
-import { page as manuscript280 } from '@/content/development-agency/expanded/industry-421-631/ind-434-management';
-import { page as manuscript281 } from '@/content/development-agency/expanded/industry-421-631/ind-435-app';
-import { page as manuscript282 } from '@/content/development-agency/expanded/industry-421-631/ind-435-booking';
-import { page as manuscript283 } from '@/content/development-agency/expanded/industry-421-631/ind-435-field';
-import { page as manuscript284 } from '@/content/development-agency/expanded/industry-421-631/ind-435-management';
-import { page as manuscript285 } from '@/content/development-agency/expanded/industry-421-631/ind-436-booking';
-import { page as manuscript286 } from '@/content/development-agency/expanded/industry-421-631/ind-437-booking';
-import { page as manuscript287 } from '@/content/development-agency/expanded/industry-421-631/ind-438-booking';
-import { page as manuscript288 } from '@/content/development-agency/expanded/industry-421-631/ind-439-app';
-import { page as manuscript289 } from '@/content/development-agency/expanded/industry-421-631/ind-439-booking';
-import { page as manuscript290 } from '@/content/development-agency/expanded/industry-421-631/ind-439-field';
-import { page as manuscript291 } from '@/content/development-agency/expanded/industry-421-631/ind-439-management';
-import { page as manuscript292 } from '@/content/development-agency/expanded/industry-421-631/ind-440-app';
-import { page as manuscript293 } from '@/content/development-agency/expanded/industry-421-631/ind-440-booking';
-import { page as manuscript294 } from '@/content/development-agency/expanded/industry-421-631/ind-440-field';
-import { page as manuscript295 } from '@/content/development-agency/expanded/industry-421-631/ind-440-management';
-import { page as manuscript296 } from '@/content/development-agency/expanded/industry-421-631/ind-441-booking';
-import { page as manuscript297 } from '@/content/development-agency/expanded/industry-421-631/ind-441-field';
-import { page as manuscript298 } from '@/content/development-agency/expanded/industry-421-631/ind-442-app';
-import { page as manuscript299 } from '@/content/development-agency/expanded/industry-421-631/ind-442-booking';
-import { page as manuscript300 } from '@/content/development-agency/expanded/industry-421-631/ind-442-field';
-import { page as manuscript301 } from '@/content/development-agency/expanded/industry-421-631/ind-442-management';
-import { page as manuscript302 } from '@/content/development-agency/expanded/industry-421-631/ind-442-website';
-import { page as manuscript303 } from '@/content/development-agency/expanded/industry-421-631/ind-443-app';
-import { page as manuscript304 } from '@/content/development-agency/expanded/industry-421-631/ind-443-booking';
-import { page as manuscript305 } from '@/content/development-agency/expanded/industry-421-631/ind-443-field';
-import { page as manuscript306 } from '@/content/development-agency/expanded/industry-421-631/ind-443-management';
-import { page as manuscript307 } from '@/content/development-agency/expanded/industry-421-631/ind-443-website';
-import { page as manuscript308 } from '@/content/development-agency/expanded/industry-421-631/ind-444-app';
-import { page as manuscript309 } from '@/content/development-agency/expanded/industry-421-631/ind-444-booking';
-import { page as manuscript310 } from '@/content/development-agency/expanded/industry-421-631/ind-444-field';
-import { page as manuscript311 } from '@/content/development-agency/expanded/industry-421-631/ind-444-management';
-import { page as manuscript312 } from '@/content/development-agency/expanded/industry-421-631/ind-444-website';
-import { page as manuscript313 } from '@/content/development-agency/expanded/industry-421-631/ind-445-booking';
-import { page as manuscript314 } from '@/content/development-agency/expanded/industry-421-631/ind-445-website';
-import { page as manuscript315 } from '@/content/development-agency/expanded/industry-421-631/ind-446-app';
-import { page as manuscript316 } from '@/content/development-agency/expanded/industry-421-631/ind-446-booking';
-import { page as manuscript317 } from '@/content/development-agency/expanded/industry-421-631/ind-446-field';
-import { page as manuscript318 } from '@/content/development-agency/expanded/industry-421-631/ind-446-management';
-import { page as manuscript319 } from '@/content/development-agency/expanded/industry-421-631/ind-446-website';
-import { page as manuscript320 } from '@/content/development-agency/expanded/industry-421-631/ind-447-booking';
-import { page as manuscript321 } from '@/content/development-agency/expanded/industry-421-631/ind-447-website';
-import { page as manuscript322 } from '@/content/development-agency/expanded/industry-421-631/ind-448-booking';
-import { page as manuscript323 } from '@/content/development-agency/expanded/industry-421-631/ind-448-website';
-import { page as manuscript324 } from '@/content/development-agency/expanded/industry-421-631/ind-449-booking';
-import { page as manuscript325 } from '@/content/development-agency/expanded/industry-421-631/ind-449-website';
-import { page as manuscript326 } from '@/content/development-agency/expanded/industry-421-631/ind-450-app';
-import { page as manuscript327 } from '@/content/development-agency/expanded/industry-421-631/ind-450-booking';
-import { page as manuscript328 } from '@/content/development-agency/expanded/industry-421-631/ind-450-field';
-import { page as manuscript329 } from '@/content/development-agency/expanded/industry-421-631/ind-450-management';
-import { page as manuscript330 } from '@/content/development-agency/expanded/industry-421-631/ind-450-website';
-import { page as manuscript331 } from '@/content/development-agency/expanded/industry-421-631/ind-451-booking';
-import { page as manuscript332 } from '@/content/development-agency/expanded/industry-421-631/ind-451-website';
-import { page as manuscript333 } from '@/content/development-agency/expanded/industry-421-631/ind-452-app';
-import { page as manuscript334 } from '@/content/development-agency/expanded/industry-421-631/ind-452-booking';
-import { page as manuscript335 } from '@/content/development-agency/expanded/industry-421-631/ind-452-field';
-import { page as manuscript336 } from '@/content/development-agency/expanded/industry-421-631/ind-452-management';
-import { page as manuscript337 } from '@/content/development-agency/expanded/industry-421-631/ind-452-website';
-import { page as manuscript338 } from '@/content/development-agency/expanded/industry-421-631/ind-453-booking';
-import { page as manuscript339 } from '@/content/development-agency/expanded/industry-421-631/ind-453-website';
-import { page as manuscript340 } from '@/content/development-agency/expanded/industry-421-631/ind-454-app';
-import { page as manuscript341 } from '@/content/development-agency/expanded/industry-421-631/ind-454-booking';
-import { page as manuscript342 } from '@/content/development-agency/expanded/industry-421-631/ind-454-field';
-import { page as manuscript343 } from '@/content/development-agency/expanded/industry-421-631/ind-454-management';
-import { page as manuscript344 } from '@/content/development-agency/expanded/industry-421-631/ind-454-website';
-import { page as manuscript345 } from '@/content/development-agency/expanded/industry-421-631/ind-455-website';
-import { page as manuscript346 } from '@/content/development-agency/expanded/industry-421-631/ind-456-booking';
-import { page as manuscript347 } from '@/content/development-agency/expanded/industry-421-631/ind-456-ecommerce';
-import { page as manuscript348 } from '@/content/development-agency/expanded/industry-421-631/ind-457-app';
-import { page as manuscript349 } from '@/content/development-agency/expanded/industry-421-631/ind-457-booking';
-import { page as manuscript350 } from '@/content/development-agency/expanded/industry-421-631/ind-457-ecommerce';
-import { page as manuscript351 } from '@/content/development-agency/expanded/industry-421-631/ind-457-management';
-import { page as manuscript352 } from '@/content/development-agency/expanded/industry-421-631/ind-458-app';
-import { page as manuscript353 } from '@/content/development-agency/expanded/industry-421-631/ind-458-booking';
-import { page as manuscript354 } from '@/content/development-agency/expanded/industry-421-631/ind-458-ecommerce';
-import { page as manuscript355 } from '@/content/development-agency/expanded/industry-421-631/ind-458-management';
-import { page as manuscript356 } from '@/content/development-agency/expanded/industry-421-631/ind-458-website';
-import { page as manuscript357 } from '@/content/development-agency/expanded/industry-421-631/ind-459-ecommerce';
-import { page as manuscript358 } from '@/content/development-agency/expanded/industry-421-631/ind-460-booking';
-import { page as manuscript359 } from '@/content/development-agency/expanded/industry-421-631/ind-460-ecommerce';
-import { page as manuscript360 } from '@/content/development-agency/expanded/industry-421-631/ind-461-booking';
-import { page as manuscript361 } from '@/content/development-agency/expanded/industry-421-631/ind-461-ecommerce';
-import { page as manuscript362 } from '@/content/development-agency/expanded/industry-421-631/ind-462-ecommerce';
-import { page as manuscript363 } from '@/content/development-agency/expanded/industry-421-631/ind-463-booking';
-import { page as manuscript364 } from '@/content/development-agency/expanded/industry-421-631/ind-463-ecommerce';
-import { page as manuscript365 } from '@/content/development-agency/expanded/industry-421-631/ind-464-booking';
-import { page as manuscript366 } from '@/content/development-agency/expanded/industry-421-631/ind-464-ecommerce';
-import { page as manuscript367 } from '@/content/development-agency/expanded/industry-421-631/ind-465-app';
-import { page as manuscript368 } from '@/content/development-agency/expanded/industry-421-631/ind-465-booking';
-import { page as manuscript369 } from '@/content/development-agency/expanded/industry-421-631/ind-465-ecommerce';
-import { page as manuscript370 } from '@/content/development-agency/expanded/industry-421-631/ind-465-management';
-import { page as manuscript371 } from '@/content/development-agency/expanded/industry-421-631/ind-466-app';
-import { page as manuscript372 } from '@/content/development-agency/expanded/industry-421-631/ind-466-booking';
-import { page as manuscript373 } from '@/content/development-agency/expanded/industry-421-631/ind-466-ecommerce';
-import { page as manuscript374 } from '@/content/development-agency/expanded/industry-421-631/ind-466-management';
-import { page as manuscript375 } from '@/content/development-agency/expanded/industry-421-631/ind-467-app';
-import { page as manuscript376 } from '@/content/development-agency/expanded/industry-421-631/ind-467-booking';
-import { page as manuscript377 } from '@/content/development-agency/expanded/industry-421-631/ind-467-ecommerce';
-import { page as manuscript378 } from '@/content/development-agency/expanded/industry-421-631/ind-467-management';
-import { page as manuscript379 } from '@/content/development-agency/expanded/industry-421-631/ind-468-app';
-import { page as manuscript380 } from '@/content/development-agency/expanded/industry-421-631/ind-468-booking';
-import { page as manuscript381 } from '@/content/development-agency/expanded/industry-421-631/ind-468-ecommerce';
-import { page as manuscript382 } from '@/content/development-agency/expanded/industry-421-631/ind-468-management';
-import { page as manuscript383 } from '@/content/development-agency/expanded/industry-421-631/ind-469-app';
-import { page as manuscript384 } from '@/content/development-agency/expanded/industry-421-631/ind-469-booking';
-import { page as manuscript385 } from '@/content/development-agency/expanded/industry-421-631/ind-469-ecommerce';
-import { page as manuscript386 } from '@/content/development-agency/expanded/industry-421-631/ind-469-management';
-import { page as manuscript387 } from '@/content/development-agency/expanded/industry-421-631/ind-470-app';
-import { page as manuscript388 } from '@/content/development-agency/expanded/industry-421-631/ind-470-booking';
-import { page as manuscript389 } from '@/content/development-agency/expanded/industry-421-631/ind-470-ecommerce';
-import { page as manuscript390 } from '@/content/development-agency/expanded/industry-421-631/ind-470-management';
-import { page as manuscript391 } from '@/content/development-agency/expanded/industry-421-631/ind-471-app';
-import { page as manuscript392 } from '@/content/development-agency/expanded/industry-421-631/ind-471-booking';
-import { page as manuscript393 } from '@/content/development-agency/expanded/industry-421-631/ind-471-ecommerce';
-import { page as manuscript394 } from '@/content/development-agency/expanded/industry-421-631/ind-471-management';
-import { page as manuscript395 } from '@/content/development-agency/expanded/industry-421-631/ind-472-booking';
-import { page as manuscript396 } from '@/content/development-agency/expanded/industry-421-631/ind-473-app';
-import { page as manuscript397 } from '@/content/development-agency/expanded/industry-421-631/ind-473-booking';
-import { page as manuscript398 } from '@/content/development-agency/expanded/industry-421-631/ind-473-ecommerce';
-import { page as manuscript399 } from '@/content/development-agency/expanded/industry-421-631/ind-473-management';
-import { page as manuscript400 } from '@/content/development-agency/expanded/industry-421-631/ind-474-booking';
-import { page as manuscript401 } from '@/content/development-agency/expanded/industry-421-631/ind-474-ecommerce';
-import { page as manuscript402 } from '@/content/development-agency/expanded/industry-421-631/ind-475-app';
-import { page as manuscript403 } from '@/content/development-agency/expanded/industry-421-631/ind-475-booking';
-import { page as manuscript404 } from '@/content/development-agency/expanded/industry-421-631/ind-475-ecommerce';
-import { page as manuscript405 } from '@/content/development-agency/expanded/industry-421-631/ind-475-management';
-import { page as manuscript406 } from '@/content/development-agency/expanded/industry-421-631/ind-476-app';
-import { page as manuscript407 } from '@/content/development-agency/expanded/industry-421-631/ind-476-booking';
-import { page as manuscript408 } from '@/content/development-agency/expanded/industry-421-631/ind-476-ecommerce';
-import { page as manuscript409 } from '@/content/development-agency/expanded/industry-421-631/ind-476-management';
-import { page as manuscript410 } from '@/content/development-agency/expanded/industry-421-631/ind-477-app';
-import { page as manuscript411 } from '@/content/development-agency/expanded/industry-421-631/ind-477-booking';
-import { page as manuscript412 } from '@/content/development-agency/expanded/industry-421-631/ind-477-ecommerce';
-import { page as manuscript413 } from '@/content/development-agency/expanded/industry-421-631/ind-477-management';
-import { page as manuscript414 } from '@/content/development-agency/expanded/industry-421-631/ind-478-booking';
-import { page as manuscript415 } from '@/content/development-agency/expanded/industry-421-631/ind-478-ecommerce';
-import { page as manuscript416 } from '@/content/development-agency/expanded/industry-421-631/ind-479-app';
-import { page as manuscript417 } from '@/content/development-agency/expanded/industry-421-631/ind-479-booking';
-import { page as manuscript418 } from '@/content/development-agency/expanded/industry-421-631/ind-479-ecommerce';
-import { page as manuscript419 } from '@/content/development-agency/expanded/industry-421-631/ind-479-management';
-import { page as manuscript420 } from '@/content/development-agency/expanded/industry-421-631/ind-480-booking';
-import { page as manuscript421 } from '@/content/development-agency/expanded/industry-421-631/ind-480-ecommerce';
-import { page as manuscript422 } from '@/content/development-agency/expanded/industry-421-631/ind-481-booking';
-import { page as manuscript423 } from '@/content/development-agency/expanded/industry-421-631/ind-481-ecommerce';
-import { page as manuscript424 } from '@/content/development-agency/expanded/industry-421-631/ind-482-app';
-import { page as manuscript425 } from '@/content/development-agency/expanded/industry-421-631/ind-482-booking';
-import { page as manuscript426 } from '@/content/development-agency/expanded/industry-421-631/ind-482-ecommerce';
-import { page as manuscript427 } from '@/content/development-agency/expanded/industry-421-631/ind-482-management';
-import { page as manuscript428 } from '@/content/development-agency/expanded/industry-421-631/ind-483-app';
-import { page as manuscript429 } from '@/content/development-agency/expanded/industry-421-631/ind-483-booking';
-import { page as manuscript430 } from '@/content/development-agency/expanded/industry-421-631/ind-483-ecommerce';
-import { page as manuscript431 } from '@/content/development-agency/expanded/industry-421-631/ind-483-management';
-import { page as manuscript432 } from '@/content/development-agency/expanded/industry-421-631/ind-483-website';
-import { page as manuscript433 } from '@/content/development-agency/expanded/industry-421-631/ind-484-app';
-import { page as manuscript434 } from '@/content/development-agency/expanded/industry-421-631/ind-484-booking';
-import { page as manuscript435 } from '@/content/development-agency/expanded/industry-421-631/ind-484-ecommerce';
-import { page as manuscript436 } from '@/content/development-agency/expanded/industry-421-631/ind-484-management';
-import { page as manuscript437 } from '@/content/development-agency/expanded/industry-421-631/ind-484-website';
-import { page as manuscript438 } from '@/content/development-agency/expanded/industry-421-631/ind-485-app';
-import { page as manuscript439 } from '@/content/development-agency/expanded/industry-421-631/ind-485-booking';
-import { page as manuscript440 } from '@/content/development-agency/expanded/industry-421-631/ind-485-ecommerce';
-import { page as manuscript441 } from '@/content/development-agency/expanded/industry-421-631/ind-485-management';
-import { page as manuscript442 } from '@/content/development-agency/expanded/industry-421-631/ind-485-website';
-import { page as manuscript443 } from '@/content/development-agency/expanded/industry-421-631/ind-486-app';
-import { page as manuscript444 } from '@/content/development-agency/expanded/industry-421-631/ind-486-booking';
-import { page as manuscript445 } from '@/content/development-agency/expanded/industry-421-631/ind-486-ecommerce';
-import { page as manuscript446 } from '@/content/development-agency/expanded/industry-421-631/ind-486-management';
-import { page as manuscript447 } from '@/content/development-agency/expanded/industry-421-631/ind-486-website';
-import { page as manuscript448 } from '@/content/development-agency/expanded/industry-421-631/ind-487-app';
-import { page as manuscript449 } from '@/content/development-agency/expanded/industry-421-631/ind-487-booking';
-import { page as manuscript450 } from '@/content/development-agency/expanded/industry-421-631/ind-487-ecommerce';
-import { page as manuscript451 } from '@/content/development-agency/expanded/industry-421-631/ind-487-management';
-import { page as manuscript452 } from '@/content/development-agency/expanded/industry-421-631/ind-487-website';
-import { page as manuscript453 } from '@/content/development-agency/expanded/industry-421-631/ind-488-app';
-import { page as manuscript454 } from '@/content/development-agency/expanded/industry-421-631/ind-488-booking';
-import { page as manuscript455 } from '@/content/development-agency/expanded/industry-421-631/ind-488-ecommerce';
-import { page as manuscript456 } from '@/content/development-agency/expanded/industry-421-631/ind-488-management';
-import { page as manuscript457 } from '@/content/development-agency/expanded/industry-421-631/ind-488-website';
-import { page as manuscript458 } from '@/content/development-agency/expanded/industry-421-631/ind-489-app';
-import { page as manuscript459 } from '@/content/development-agency/expanded/industry-421-631/ind-489-booking';
-import { page as manuscript460 } from '@/content/development-agency/expanded/industry-421-631/ind-489-ecommerce';
-import { page as manuscript461 } from '@/content/development-agency/expanded/industry-421-631/ind-489-management';
-import { page as manuscript462 } from '@/content/development-agency/expanded/industry-421-631/ind-489-website';
-import { page as manuscript463 } from '@/content/development-agency/expanded/industry-421-631/ind-490-app';
-import { page as manuscript464 } from '@/content/development-agency/expanded/industry-421-631/ind-490-booking';
-import { page as manuscript465 } from '@/content/development-agency/expanded/industry-421-631/ind-490-website';
-import { page as manuscript466 } from '@/content/development-agency/expanded/industry-421-631/ind-526-ai';
-import { page as manuscript467 } from '@/content/development-agency/expanded/industry-421-631/ind-616-ai';
-import { page as manuscript468 } from '@/content/development-agency/expanded/industry-421-631/ind-616-field';
-import { page as manuscript469 } from '@/content/development-agency/expanded/industry-421-631/ind-616-management';
-import { page as manuscript470 } from '@/content/development-agency/expanded/industry-421-631/ind-616-portal';
-import { page as manuscript471 } from '@/content/development-agency/expanded/industry-421-631/ind-616-website';
-import { page as manuscript472 } from '@/content/development-agency/expanded/industry-421-631/ind-617-ai';
-import { page as manuscript473 } from '@/content/development-agency/expanded/industry-421-631/ind-617-field';
-import { page as manuscript474 } from '@/content/development-agency/expanded/industry-421-631/ind-617-management';
-import { page as manuscript475 } from '@/content/development-agency/expanded/industry-421-631/ind-617-portal';
-import { page as manuscript476 } from '@/content/development-agency/expanded/industry-421-631/ind-617-website';
-import { page as manuscript477 } from '@/content/development-agency/expanded/industry-421-631/ind-618-ai';
-import { page as manuscript478 } from '@/content/development-agency/expanded/industry-421-631/ind-618-field';
-import { page as manuscript479 } from '@/content/development-agency/expanded/industry-421-631/ind-618-management';
-import { page as manuscript480 } from '@/content/development-agency/expanded/industry-421-631/ind-618-portal';
-import { page as manuscript481 } from '@/content/development-agency/expanded/industry-421-631/ind-618-website';
-import { page as manuscript482 } from '@/content/development-agency/expanded/industry-421-631/ind-619-ai';
-import { page as manuscript483 } from '@/content/development-agency/expanded/industry-421-631/ind-619-field';
-import { page as manuscript484 } from '@/content/development-agency/expanded/industry-421-631/ind-619-management';
-import { page as manuscript485 } from '@/content/development-agency/expanded/industry-421-631/ind-619-portal';
-import { page as manuscript486 } from '@/content/development-agency/expanded/industry-421-631/ind-619-website';
-import { page as manuscript487 } from '@/content/development-agency/expanded/industry-421-631/ind-620-ai';
-import { page as manuscript488 } from '@/content/development-agency/expanded/industry-421-631/ind-620-field';
-import { page as manuscript489 } from '@/content/development-agency/expanded/industry-421-631/ind-620-management';
-import { page as manuscript490 } from '@/content/development-agency/expanded/industry-421-631/ind-620-portal';
-import { page as manuscript491 } from '@/content/development-agency/expanded/industry-421-631/ind-620-website';
+import { page as manuscript244 } from '@/content/development-agency/expanded/industry-211-420/ind-284-ai';
+import { page as manuscript245 } from '@/content/development-agency/expanded/industry-211-420/ind-284-field';
+import { page as manuscript246 } from '@/content/development-agency/expanded/industry-211-420/ind-285-ai';
+import { page as manuscript247 } from '@/content/development-agency/expanded/industry-211-420/ind-285-field';
+import { page as manuscript248 } from '@/content/development-agency/expanded/industry-211-420/ind-286-ai';
+import { page as manuscript249 } from '@/content/development-agency/expanded/industry-211-420/ind-286-field';
+import { page as manuscript250 } from '@/content/development-agency/expanded/industry-211-420/ind-286-management';
+import { page as manuscript251 } from '@/content/development-agency/expanded/industry-211-420/ind-287-ai';
+import { page as manuscript252 } from '@/content/development-agency/expanded/industry-211-420/ind-287-field';
+import { page as manuscript253 } from '@/content/development-agency/expanded/industry-211-420/ind-287-management';
+import { page as manuscript254 } from '@/content/development-agency/expanded/industry-211-420/ind-288-ai';
+import { page as manuscript255 } from '@/content/development-agency/expanded/industry-211-420/ind-288-field';
+import { page as manuscript256 } from '@/content/development-agency/expanded/industry-211-420/ind-288-management';
+import { page as manuscript257 } from '@/content/development-agency/expanded/industry-211-420/ind-289-ai';
+import { page as manuscript258 } from '@/content/development-agency/expanded/industry-211-420/ind-289-field';
+import { page as manuscript259 } from '@/content/development-agency/expanded/industry-211-420/ind-289-management';
+import { page as manuscript260 } from '@/content/development-agency/expanded/industry-211-420/ind-290-ai';
+import { page as manuscript261 } from '@/content/development-agency/expanded/industry-211-420/ind-290-field';
+import { page as manuscript262 } from '@/content/development-agency/expanded/industry-211-420/ind-290-management';
+import { page as manuscript263 } from '@/content/development-agency/expanded/industry-211-420/ind-291-ai';
+import { page as manuscript264 } from '@/content/development-agency/expanded/industry-211-420/ind-291-field';
+import { page as manuscript265 } from '@/content/development-agency/expanded/industry-211-420/ind-291-management';
+import { page as manuscript266 } from '@/content/development-agency/expanded/industry-421-631/ind-421-ai';
+import { page as manuscript267 } from '@/content/development-agency/expanded/industry-421-631/ind-421-booking';
+import { page as manuscript268 } from '@/content/development-agency/expanded/industry-421-631/ind-421-management';
+import { page as manuscript269 } from '@/content/development-agency/expanded/industry-421-631/ind-421-portal';
+import { page as manuscript270 } from '@/content/development-agency/expanded/industry-421-631/ind-421-website';
+import { page as manuscript271 } from '@/content/development-agency/expanded/industry-421-631/ind-425-app';
+import { page as manuscript272 } from '@/content/development-agency/expanded/industry-421-631/ind-425-booking';
+import { page as manuscript273 } from '@/content/development-agency/expanded/industry-421-631/ind-425-field';
+import { page as manuscript274 } from '@/content/development-agency/expanded/industry-421-631/ind-425-management';
+import { page as manuscript275 } from '@/content/development-agency/expanded/industry-421-631/ind-426-field';
+import { page as manuscript276 } from '@/content/development-agency/expanded/industry-421-631/ind-427-field';
+import { page as manuscript277 } from '@/content/development-agency/expanded/industry-421-631/ind-428-app';
+import { page as manuscript278 } from '@/content/development-agency/expanded/industry-421-631/ind-428-booking';
+import { page as manuscript279 } from '@/content/development-agency/expanded/industry-421-631/ind-428-field';
+import { page as manuscript280 } from '@/content/development-agency/expanded/industry-421-631/ind-428-management';
+import { page as manuscript281 } from '@/content/development-agency/expanded/industry-421-631/ind-429-app';
+import { page as manuscript282 } from '@/content/development-agency/expanded/industry-421-631/ind-429-booking';
+import { page as manuscript283 } from '@/content/development-agency/expanded/industry-421-631/ind-429-field';
+import { page as manuscript284 } from '@/content/development-agency/expanded/industry-421-631/ind-429-management';
+import { page as manuscript285 } from '@/content/development-agency/expanded/industry-421-631/ind-430-app';
+import { page as manuscript286 } from '@/content/development-agency/expanded/industry-421-631/ind-430-booking';
+import { page as manuscript287 } from '@/content/development-agency/expanded/industry-421-631/ind-430-field';
+import { page as manuscript288 } from '@/content/development-agency/expanded/industry-421-631/ind-430-management';
+import { page as manuscript289 } from '@/content/development-agency/expanded/industry-421-631/ind-431-app';
+import { page as manuscript290 } from '@/content/development-agency/expanded/industry-421-631/ind-431-booking';
+import { page as manuscript291 } from '@/content/development-agency/expanded/industry-421-631/ind-431-field';
+import { page as manuscript292 } from '@/content/development-agency/expanded/industry-421-631/ind-431-management';
+import { page as manuscript293 } from '@/content/development-agency/expanded/industry-421-631/ind-432-booking';
+import { page as manuscript294 } from '@/content/development-agency/expanded/industry-421-631/ind-432-field';
+import { page as manuscript295 } from '@/content/development-agency/expanded/industry-421-631/ind-433-app';
+import { page as manuscript296 } from '@/content/development-agency/expanded/industry-421-631/ind-433-booking';
+import { page as manuscript297 } from '@/content/development-agency/expanded/industry-421-631/ind-433-field';
+import { page as manuscript298 } from '@/content/development-agency/expanded/industry-421-631/ind-433-management';
+import { page as manuscript299 } from '@/content/development-agency/expanded/industry-421-631/ind-434-app';
+import { page as manuscript300 } from '@/content/development-agency/expanded/industry-421-631/ind-434-booking';
+import { page as manuscript301 } from '@/content/development-agency/expanded/industry-421-631/ind-434-field';
+import { page as manuscript302 } from '@/content/development-agency/expanded/industry-421-631/ind-434-management';
+import { page as manuscript303 } from '@/content/development-agency/expanded/industry-421-631/ind-435-app';
+import { page as manuscript304 } from '@/content/development-agency/expanded/industry-421-631/ind-435-booking';
+import { page as manuscript305 } from '@/content/development-agency/expanded/industry-421-631/ind-435-field';
+import { page as manuscript306 } from '@/content/development-agency/expanded/industry-421-631/ind-435-management';
+import { page as manuscript307 } from '@/content/development-agency/expanded/industry-421-631/ind-436-booking';
+import { page as manuscript308 } from '@/content/development-agency/expanded/industry-421-631/ind-437-booking';
+import { page as manuscript309 } from '@/content/development-agency/expanded/industry-421-631/ind-438-booking';
+import { page as manuscript310 } from '@/content/development-agency/expanded/industry-421-631/ind-439-app';
+import { page as manuscript311 } from '@/content/development-agency/expanded/industry-421-631/ind-439-booking';
+import { page as manuscript312 } from '@/content/development-agency/expanded/industry-421-631/ind-439-field';
+import { page as manuscript313 } from '@/content/development-agency/expanded/industry-421-631/ind-439-management';
+import { page as manuscript314 } from '@/content/development-agency/expanded/industry-421-631/ind-440-app';
+import { page as manuscript315 } from '@/content/development-agency/expanded/industry-421-631/ind-440-booking';
+import { page as manuscript316 } from '@/content/development-agency/expanded/industry-421-631/ind-440-field';
+import { page as manuscript317 } from '@/content/development-agency/expanded/industry-421-631/ind-440-management';
+import { page as manuscript318 } from '@/content/development-agency/expanded/industry-421-631/ind-441-booking';
+import { page as manuscript319 } from '@/content/development-agency/expanded/industry-421-631/ind-441-field';
+import { page as manuscript320 } from '@/content/development-agency/expanded/industry-421-631/ind-442-app';
+import { page as manuscript321 } from '@/content/development-agency/expanded/industry-421-631/ind-442-booking';
+import { page as manuscript322 } from '@/content/development-agency/expanded/industry-421-631/ind-442-field';
+import { page as manuscript323 } from '@/content/development-agency/expanded/industry-421-631/ind-442-management';
+import { page as manuscript324 } from '@/content/development-agency/expanded/industry-421-631/ind-442-website';
+import { page as manuscript325 } from '@/content/development-agency/expanded/industry-421-631/ind-443-app';
+import { page as manuscript326 } from '@/content/development-agency/expanded/industry-421-631/ind-443-booking';
+import { page as manuscript327 } from '@/content/development-agency/expanded/industry-421-631/ind-443-field';
+import { page as manuscript328 } from '@/content/development-agency/expanded/industry-421-631/ind-443-management';
+import { page as manuscript329 } from '@/content/development-agency/expanded/industry-421-631/ind-443-website';
+import { page as manuscript330 } from '@/content/development-agency/expanded/industry-421-631/ind-444-app';
+import { page as manuscript331 } from '@/content/development-agency/expanded/industry-421-631/ind-444-booking';
+import { page as manuscript332 } from '@/content/development-agency/expanded/industry-421-631/ind-444-field';
+import { page as manuscript333 } from '@/content/development-agency/expanded/industry-421-631/ind-444-management';
+import { page as manuscript334 } from '@/content/development-agency/expanded/industry-421-631/ind-444-website';
+import { page as manuscript335 } from '@/content/development-agency/expanded/industry-421-631/ind-445-booking';
+import { page as manuscript336 } from '@/content/development-agency/expanded/industry-421-631/ind-445-website';
+import { page as manuscript337 } from '@/content/development-agency/expanded/industry-421-631/ind-446-app';
+import { page as manuscript338 } from '@/content/development-agency/expanded/industry-421-631/ind-446-booking';
+import { page as manuscript339 } from '@/content/development-agency/expanded/industry-421-631/ind-446-field';
+import { page as manuscript340 } from '@/content/development-agency/expanded/industry-421-631/ind-446-management';
+import { page as manuscript341 } from '@/content/development-agency/expanded/industry-421-631/ind-446-website';
+import { page as manuscript342 } from '@/content/development-agency/expanded/industry-421-631/ind-447-booking';
+import { page as manuscript343 } from '@/content/development-agency/expanded/industry-421-631/ind-447-website';
+import { page as manuscript344 } from '@/content/development-agency/expanded/industry-421-631/ind-448-booking';
+import { page as manuscript345 } from '@/content/development-agency/expanded/industry-421-631/ind-448-website';
+import { page as manuscript346 } from '@/content/development-agency/expanded/industry-421-631/ind-449-booking';
+import { page as manuscript347 } from '@/content/development-agency/expanded/industry-421-631/ind-449-website';
+import { page as manuscript348 } from '@/content/development-agency/expanded/industry-421-631/ind-450-app';
+import { page as manuscript349 } from '@/content/development-agency/expanded/industry-421-631/ind-450-booking';
+import { page as manuscript350 } from '@/content/development-agency/expanded/industry-421-631/ind-450-field';
+import { page as manuscript351 } from '@/content/development-agency/expanded/industry-421-631/ind-450-management';
+import { page as manuscript352 } from '@/content/development-agency/expanded/industry-421-631/ind-450-website';
+import { page as manuscript353 } from '@/content/development-agency/expanded/industry-421-631/ind-451-booking';
+import { page as manuscript354 } from '@/content/development-agency/expanded/industry-421-631/ind-451-website';
+import { page as manuscript355 } from '@/content/development-agency/expanded/industry-421-631/ind-452-app';
+import { page as manuscript356 } from '@/content/development-agency/expanded/industry-421-631/ind-452-booking';
+import { page as manuscript357 } from '@/content/development-agency/expanded/industry-421-631/ind-452-field';
+import { page as manuscript358 } from '@/content/development-agency/expanded/industry-421-631/ind-452-management';
+import { page as manuscript359 } from '@/content/development-agency/expanded/industry-421-631/ind-452-website';
+import { page as manuscript360 } from '@/content/development-agency/expanded/industry-421-631/ind-453-booking';
+import { page as manuscript361 } from '@/content/development-agency/expanded/industry-421-631/ind-453-website';
+import { page as manuscript362 } from '@/content/development-agency/expanded/industry-421-631/ind-454-app';
+import { page as manuscript363 } from '@/content/development-agency/expanded/industry-421-631/ind-454-booking';
+import { page as manuscript364 } from '@/content/development-agency/expanded/industry-421-631/ind-454-field';
+import { page as manuscript365 } from '@/content/development-agency/expanded/industry-421-631/ind-454-management';
+import { page as manuscript366 } from '@/content/development-agency/expanded/industry-421-631/ind-454-website';
+import { page as manuscript367 } from '@/content/development-agency/expanded/industry-421-631/ind-455-website';
+import { page as manuscript368 } from '@/content/development-agency/expanded/industry-421-631/ind-456-booking';
+import { page as manuscript369 } from '@/content/development-agency/expanded/industry-421-631/ind-456-ecommerce';
+import { page as manuscript370 } from '@/content/development-agency/expanded/industry-421-631/ind-457-app';
+import { page as manuscript371 } from '@/content/development-agency/expanded/industry-421-631/ind-457-booking';
+import { page as manuscript372 } from '@/content/development-agency/expanded/industry-421-631/ind-457-ecommerce';
+import { page as manuscript373 } from '@/content/development-agency/expanded/industry-421-631/ind-457-management';
+import { page as manuscript374 } from '@/content/development-agency/expanded/industry-421-631/ind-458-app';
+import { page as manuscript375 } from '@/content/development-agency/expanded/industry-421-631/ind-458-booking';
+import { page as manuscript376 } from '@/content/development-agency/expanded/industry-421-631/ind-458-ecommerce';
+import { page as manuscript377 } from '@/content/development-agency/expanded/industry-421-631/ind-458-management';
+import { page as manuscript378 } from '@/content/development-agency/expanded/industry-421-631/ind-458-website';
+import { page as manuscript379 } from '@/content/development-agency/expanded/industry-421-631/ind-459-ecommerce';
+import { page as manuscript380 } from '@/content/development-agency/expanded/industry-421-631/ind-460-booking';
+import { page as manuscript381 } from '@/content/development-agency/expanded/industry-421-631/ind-460-ecommerce';
+import { page as manuscript382 } from '@/content/development-agency/expanded/industry-421-631/ind-461-booking';
+import { page as manuscript383 } from '@/content/development-agency/expanded/industry-421-631/ind-461-ecommerce';
+import { page as manuscript384 } from '@/content/development-agency/expanded/industry-421-631/ind-462-ecommerce';
+import { page as manuscript385 } from '@/content/development-agency/expanded/industry-421-631/ind-463-booking';
+import { page as manuscript386 } from '@/content/development-agency/expanded/industry-421-631/ind-463-ecommerce';
+import { page as manuscript387 } from '@/content/development-agency/expanded/industry-421-631/ind-464-booking';
+import { page as manuscript388 } from '@/content/development-agency/expanded/industry-421-631/ind-464-ecommerce';
+import { page as manuscript389 } from '@/content/development-agency/expanded/industry-421-631/ind-465-app';
+import { page as manuscript390 } from '@/content/development-agency/expanded/industry-421-631/ind-465-booking';
+import { page as manuscript391 } from '@/content/development-agency/expanded/industry-421-631/ind-465-ecommerce';
+import { page as manuscript392 } from '@/content/development-agency/expanded/industry-421-631/ind-465-management';
+import { page as manuscript393 } from '@/content/development-agency/expanded/industry-421-631/ind-466-app';
+import { page as manuscript394 } from '@/content/development-agency/expanded/industry-421-631/ind-466-booking';
+import { page as manuscript395 } from '@/content/development-agency/expanded/industry-421-631/ind-466-ecommerce';
+import { page as manuscript396 } from '@/content/development-agency/expanded/industry-421-631/ind-466-management';
+import { page as manuscript397 } from '@/content/development-agency/expanded/industry-421-631/ind-467-app';
+import { page as manuscript398 } from '@/content/development-agency/expanded/industry-421-631/ind-467-booking';
+import { page as manuscript399 } from '@/content/development-agency/expanded/industry-421-631/ind-467-ecommerce';
+import { page as manuscript400 } from '@/content/development-agency/expanded/industry-421-631/ind-467-management';
+import { page as manuscript401 } from '@/content/development-agency/expanded/industry-421-631/ind-468-app';
+import { page as manuscript402 } from '@/content/development-agency/expanded/industry-421-631/ind-468-booking';
+import { page as manuscript403 } from '@/content/development-agency/expanded/industry-421-631/ind-468-ecommerce';
+import { page as manuscript404 } from '@/content/development-agency/expanded/industry-421-631/ind-468-management';
+import { page as manuscript405 } from '@/content/development-agency/expanded/industry-421-631/ind-469-app';
+import { page as manuscript406 } from '@/content/development-agency/expanded/industry-421-631/ind-469-booking';
+import { page as manuscript407 } from '@/content/development-agency/expanded/industry-421-631/ind-469-ecommerce';
+import { page as manuscript408 } from '@/content/development-agency/expanded/industry-421-631/ind-469-management';
+import { page as manuscript409 } from '@/content/development-agency/expanded/industry-421-631/ind-470-app';
+import { page as manuscript410 } from '@/content/development-agency/expanded/industry-421-631/ind-470-booking';
+import { page as manuscript411 } from '@/content/development-agency/expanded/industry-421-631/ind-470-ecommerce';
+import { page as manuscript412 } from '@/content/development-agency/expanded/industry-421-631/ind-470-management';
+import { page as manuscript413 } from '@/content/development-agency/expanded/industry-421-631/ind-471-app';
+import { page as manuscript414 } from '@/content/development-agency/expanded/industry-421-631/ind-471-booking';
+import { page as manuscript415 } from '@/content/development-agency/expanded/industry-421-631/ind-471-ecommerce';
+import { page as manuscript416 } from '@/content/development-agency/expanded/industry-421-631/ind-471-management';
+import { page as manuscript417 } from '@/content/development-agency/expanded/industry-421-631/ind-472-booking';
+import { page as manuscript418 } from '@/content/development-agency/expanded/industry-421-631/ind-473-app';
+import { page as manuscript419 } from '@/content/development-agency/expanded/industry-421-631/ind-473-booking';
+import { page as manuscript420 } from '@/content/development-agency/expanded/industry-421-631/ind-473-ecommerce';
+import { page as manuscript421 } from '@/content/development-agency/expanded/industry-421-631/ind-473-management';
+import { page as manuscript422 } from '@/content/development-agency/expanded/industry-421-631/ind-474-booking';
+import { page as manuscript423 } from '@/content/development-agency/expanded/industry-421-631/ind-474-ecommerce';
+import { page as manuscript424 } from '@/content/development-agency/expanded/industry-421-631/ind-475-app';
+import { page as manuscript425 } from '@/content/development-agency/expanded/industry-421-631/ind-475-booking';
+import { page as manuscript426 } from '@/content/development-agency/expanded/industry-421-631/ind-475-ecommerce';
+import { page as manuscript427 } from '@/content/development-agency/expanded/industry-421-631/ind-475-management';
+import { page as manuscript428 } from '@/content/development-agency/expanded/industry-421-631/ind-476-app';
+import { page as manuscript429 } from '@/content/development-agency/expanded/industry-421-631/ind-476-booking';
+import { page as manuscript430 } from '@/content/development-agency/expanded/industry-421-631/ind-476-ecommerce';
+import { page as manuscript431 } from '@/content/development-agency/expanded/industry-421-631/ind-476-management';
+import { page as manuscript432 } from '@/content/development-agency/expanded/industry-421-631/ind-477-app';
+import { page as manuscript433 } from '@/content/development-agency/expanded/industry-421-631/ind-477-booking';
+import { page as manuscript434 } from '@/content/development-agency/expanded/industry-421-631/ind-477-ecommerce';
+import { page as manuscript435 } from '@/content/development-agency/expanded/industry-421-631/ind-477-management';
+import { page as manuscript436 } from '@/content/development-agency/expanded/industry-421-631/ind-478-booking';
+import { page as manuscript437 } from '@/content/development-agency/expanded/industry-421-631/ind-478-ecommerce';
+import { page as manuscript438 } from '@/content/development-agency/expanded/industry-421-631/ind-479-app';
+import { page as manuscript439 } from '@/content/development-agency/expanded/industry-421-631/ind-479-booking';
+import { page as manuscript440 } from '@/content/development-agency/expanded/industry-421-631/ind-479-ecommerce';
+import { page as manuscript441 } from '@/content/development-agency/expanded/industry-421-631/ind-479-management';
+import { page as manuscript442 } from '@/content/development-agency/expanded/industry-421-631/ind-480-booking';
+import { page as manuscript443 } from '@/content/development-agency/expanded/industry-421-631/ind-480-ecommerce';
+import { page as manuscript444 } from '@/content/development-agency/expanded/industry-421-631/ind-481-booking';
+import { page as manuscript445 } from '@/content/development-agency/expanded/industry-421-631/ind-481-ecommerce';
+import { page as manuscript446 } from '@/content/development-agency/expanded/industry-421-631/ind-482-app';
+import { page as manuscript447 } from '@/content/development-agency/expanded/industry-421-631/ind-482-booking';
+import { page as manuscript448 } from '@/content/development-agency/expanded/industry-421-631/ind-482-ecommerce';
+import { page as manuscript449 } from '@/content/development-agency/expanded/industry-421-631/ind-482-management';
+import { page as manuscript450 } from '@/content/development-agency/expanded/industry-421-631/ind-483-app';
+import { page as manuscript451 } from '@/content/development-agency/expanded/industry-421-631/ind-483-booking';
+import { page as manuscript452 } from '@/content/development-agency/expanded/industry-421-631/ind-483-ecommerce';
+import { page as manuscript453 } from '@/content/development-agency/expanded/industry-421-631/ind-483-management';
+import { page as manuscript454 } from '@/content/development-agency/expanded/industry-421-631/ind-483-website';
+import { page as manuscript455 } from '@/content/development-agency/expanded/industry-421-631/ind-484-app';
+import { page as manuscript456 } from '@/content/development-agency/expanded/industry-421-631/ind-484-booking';
+import { page as manuscript457 } from '@/content/development-agency/expanded/industry-421-631/ind-484-ecommerce';
+import { page as manuscript458 } from '@/content/development-agency/expanded/industry-421-631/ind-484-management';
+import { page as manuscript459 } from '@/content/development-agency/expanded/industry-421-631/ind-484-website';
+import { page as manuscript460 } from '@/content/development-agency/expanded/industry-421-631/ind-485-app';
+import { page as manuscript461 } from '@/content/development-agency/expanded/industry-421-631/ind-485-booking';
+import { page as manuscript462 } from '@/content/development-agency/expanded/industry-421-631/ind-485-ecommerce';
+import { page as manuscript463 } from '@/content/development-agency/expanded/industry-421-631/ind-485-management';
+import { page as manuscript464 } from '@/content/development-agency/expanded/industry-421-631/ind-485-website';
+import { page as manuscript465 } from '@/content/development-agency/expanded/industry-421-631/ind-486-app';
+import { page as manuscript466 } from '@/content/development-agency/expanded/industry-421-631/ind-486-booking';
+import { page as manuscript467 } from '@/content/development-agency/expanded/industry-421-631/ind-486-ecommerce';
+import { page as manuscript468 } from '@/content/development-agency/expanded/industry-421-631/ind-486-management';
+import { page as manuscript469 } from '@/content/development-agency/expanded/industry-421-631/ind-486-website';
+import { page as manuscript470 } from '@/content/development-agency/expanded/industry-421-631/ind-487-app';
+import { page as manuscript471 } from '@/content/development-agency/expanded/industry-421-631/ind-487-booking';
+import { page as manuscript472 } from '@/content/development-agency/expanded/industry-421-631/ind-487-ecommerce';
+import { page as manuscript473 } from '@/content/development-agency/expanded/industry-421-631/ind-487-management';
+import { page as manuscript474 } from '@/content/development-agency/expanded/industry-421-631/ind-487-website';
+import { page as manuscript475 } from '@/content/development-agency/expanded/industry-421-631/ind-488-app';
+import { page as manuscript476 } from '@/content/development-agency/expanded/industry-421-631/ind-488-booking';
+import { page as manuscript477 } from '@/content/development-agency/expanded/industry-421-631/ind-488-ecommerce';
+import { page as manuscript478 } from '@/content/development-agency/expanded/industry-421-631/ind-488-management';
+import { page as manuscript479 } from '@/content/development-agency/expanded/industry-421-631/ind-488-website';
+import { page as manuscript480 } from '@/content/development-agency/expanded/industry-421-631/ind-489-app';
+import { page as manuscript481 } from '@/content/development-agency/expanded/industry-421-631/ind-489-booking';
+import { page as manuscript482 } from '@/content/development-agency/expanded/industry-421-631/ind-489-ecommerce';
+import { page as manuscript483 } from '@/content/development-agency/expanded/industry-421-631/ind-489-management';
+import { page as manuscript484 } from '@/content/development-agency/expanded/industry-421-631/ind-489-website';
+import { page as manuscript485 } from '@/content/development-agency/expanded/industry-421-631/ind-490-app';
+import { page as manuscript486 } from '@/content/development-agency/expanded/industry-421-631/ind-490-booking';
+import { page as manuscript487 } from '@/content/development-agency/expanded/industry-421-631/ind-490-ecommerce';
+import { page as manuscript488 } from '@/content/development-agency/expanded/industry-421-631/ind-490-management';
+import { page as manuscript489 } from '@/content/development-agency/expanded/industry-421-631/ind-490-website';
+import { page as manuscript490 } from '@/content/development-agency/expanded/industry-421-631/ind-491-app';
+import { page as manuscript491 } from '@/content/development-agency/expanded/industry-421-631/ind-491-booking';
+import { page as manuscript492 } from '@/content/development-agency/expanded/industry-421-631/ind-491-ecommerce';
+import { page as manuscript493 } from '@/content/development-agency/expanded/industry-421-631/ind-491-management';
+import { page as manuscript494 } from '@/content/development-agency/expanded/industry-421-631/ind-491-website';
+import { page as manuscript495 } from '@/content/development-agency/expanded/industry-421-631/ind-492-app';
+import { page as manuscript496 } from '@/content/development-agency/expanded/industry-421-631/ind-492-booking';
+import { page as manuscript497 } from '@/content/development-agency/expanded/industry-421-631/ind-492-ecommerce';
+import { page as manuscript498 } from '@/content/development-agency/expanded/industry-421-631/ind-492-management';
+import { page as manuscript499 } from '@/content/development-agency/expanded/industry-421-631/ind-492-website';
+import { page as manuscript500 } from '@/content/development-agency/expanded/industry-421-631/ind-493-app';
+import { page as manuscript501 } from '@/content/development-agency/expanded/industry-421-631/ind-493-booking';
+import { page as manuscript502 } from '@/content/development-agency/expanded/industry-421-631/ind-493-ecommerce';
+import { page as manuscript503 } from '@/content/development-agency/expanded/industry-421-631/ind-493-management';
+import { page as manuscript504 } from '@/content/development-agency/expanded/industry-421-631/ind-493-website';
+import { page as manuscript505 } from '@/content/development-agency/expanded/industry-421-631/ind-494-app';
+import { page as manuscript506 } from '@/content/development-agency/expanded/industry-421-631/ind-494-booking';
+import { page as manuscript507 } from '@/content/development-agency/expanded/industry-421-631/ind-494-ecommerce';
+import { page as manuscript508 } from '@/content/development-agency/expanded/industry-421-631/ind-494-management';
+import { page as manuscript509 } from '@/content/development-agency/expanded/industry-421-631/ind-494-website';
+import { page as manuscript510 } from '@/content/development-agency/expanded/industry-421-631/ind-495-app';
+import { page as manuscript511 } from '@/content/development-agency/expanded/industry-421-631/ind-495-booking';
+import { page as manuscript512 } from '@/content/development-agency/expanded/industry-421-631/ind-495-ecommerce';
+import { page as manuscript513 } from '@/content/development-agency/expanded/industry-421-631/ind-495-management';
+import { page as manuscript514 } from '@/content/development-agency/expanded/industry-421-631/ind-495-website';
+import { page as manuscript515 } from '@/content/development-agency/expanded/industry-421-631/ind-496-ai';
+import { page as manuscript516 } from '@/content/development-agency/expanded/industry-421-631/ind-496-app';
+import { page as manuscript517 } from '@/content/development-agency/expanded/industry-421-631/ind-496-management';
+import { page as manuscript518 } from '@/content/development-agency/expanded/industry-421-631/ind-497-management';
+import { page as manuscript519 } from '@/content/development-agency/expanded/industry-421-631/ind-526-ai';
+import { page as manuscript520 } from '@/content/development-agency/expanded/industry-421-631/ind-616-ai';
+import { page as manuscript521 } from '@/content/development-agency/expanded/industry-421-631/ind-616-field';
+import { page as manuscript522 } from '@/content/development-agency/expanded/industry-421-631/ind-616-management';
+import { page as manuscript523 } from '@/content/development-agency/expanded/industry-421-631/ind-616-portal';
+import { page as manuscript524 } from '@/content/development-agency/expanded/industry-421-631/ind-616-website';
+import { page as manuscript525 } from '@/content/development-agency/expanded/industry-421-631/ind-617-ai';
+import { page as manuscript526 } from '@/content/development-agency/expanded/industry-421-631/ind-617-field';
+import { page as manuscript527 } from '@/content/development-agency/expanded/industry-421-631/ind-617-management';
+import { page as manuscript528 } from '@/content/development-agency/expanded/industry-421-631/ind-617-portal';
+import { page as manuscript529 } from '@/content/development-agency/expanded/industry-421-631/ind-617-website';
+import { page as manuscript530 } from '@/content/development-agency/expanded/industry-421-631/ind-618-ai';
+import { page as manuscript531 } from '@/content/development-agency/expanded/industry-421-631/ind-618-field';
+import { page as manuscript532 } from '@/content/development-agency/expanded/industry-421-631/ind-618-management';
+import { page as manuscript533 } from '@/content/development-agency/expanded/industry-421-631/ind-618-portal';
+import { page as manuscript534 } from '@/content/development-agency/expanded/industry-421-631/ind-618-website';
+import { page as manuscript535 } from '@/content/development-agency/expanded/industry-421-631/ind-619-ai';
+import { page as manuscript536 } from '@/content/development-agency/expanded/industry-421-631/ind-619-field';
+import { page as manuscript537 } from '@/content/development-agency/expanded/industry-421-631/ind-619-management';
+import { page as manuscript538 } from '@/content/development-agency/expanded/industry-421-631/ind-619-portal';
+import { page as manuscript539 } from '@/content/development-agency/expanded/industry-421-631/ind-619-website';
+import { page as manuscript540 } from '@/content/development-agency/expanded/industry-421-631/ind-620-ai';
+import { page as manuscript541 } from '@/content/development-agency/expanded/industry-421-631/ind-620-field';
+import { page as manuscript542 } from '@/content/development-agency/expanded/industry-421-631/ind-620-management';
+import { page as manuscript543 } from '@/content/development-agency/expanded/industry-421-631/ind-620-portal';
+import { page as manuscript544 } from '@/content/development-agency/expanded/industry-421-631/ind-620-website';
 
 export const expandedAgencyPages: readonly AgencyPage[] = [
   ...expandedIndustry001210Pages,
@@ -987,4 +1040,57 @@ export const expandedAgencyPages: readonly AgencyPage[] = [
   manuscript489,
   manuscript490,
   manuscript491,
+  manuscript492,
+  manuscript493,
+  manuscript494,
+  manuscript495,
+  manuscript496,
+  manuscript497,
+  manuscript498,
+  manuscript499,
+  manuscript500,
+  manuscript501,
+  manuscript502,
+  manuscript503,
+  manuscript504,
+  manuscript505,
+  manuscript506,
+  manuscript507,
+  manuscript508,
+  manuscript509,
+  manuscript510,
+  manuscript511,
+  manuscript512,
+  manuscript513,
+  manuscript514,
+  manuscript515,
+  manuscript516,
+  manuscript517,
+  manuscript518,
+  manuscript519,
+  manuscript520,
+  manuscript521,
+  manuscript522,
+  manuscript523,
+  manuscript524,
+  manuscript525,
+  manuscript526,
+  manuscript527,
+  manuscript528,
+  manuscript529,
+  manuscript530,
+  manuscript531,
+  manuscript532,
+  manuscript533,
+  manuscript534,
+  manuscript535,
+  manuscript536,
+  manuscript537,
+  manuscript538,
+  manuscript539,
+  manuscript540,
+  manuscript541,
+  manuscript542,
+  manuscript543,
+  manuscript544,
 ];

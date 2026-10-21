@@ -107,6 +107,14 @@ import { fintechFieldPage } from '@/content/development-agency/expanded/root-fin
 import { fintechAiPage } from '@/content/development-agency/expanded/root-fintech/ai';
 import { proptechWebsitePage } from '@/content/development-agency/expanded/root-proptech/website';
 import { proptechPortalPage } from '@/content/development-agency/expanded/root-proptech/portal';
+import { proptechManagementPage } from '@/content/development-agency/expanded/root-proptech/management';
+import { proptechFieldPage } from '@/content/development-agency/expanded/root-proptech/field';
+import { proptechAiPage } from '@/content/development-agency/expanded/root-proptech/ai';
+import { edtechWebsitePage } from '@/content/development-agency/expanded/root-edtech/website';
+import { edtechPortalPage } from '@/content/development-agency/expanded/root-edtech/portal';
+import { edtechManagementPage } from '@/content/development-agency/expanded/root-edtech/management';
+import { edtechFieldPage } from '@/content/development-agency/expanded/root-edtech/field';
+import { edtechAiPage } from '@/content/development-agency/expanded/root-edtech/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -198,6 +206,14 @@ export const agencyPages: readonly AgencyPage[] = [
   fintechAiPage,
   proptechWebsitePage,
   proptechPortalPage,
+  proptechManagementPage,
+  proptechFieldPage,
+  proptechAiPage,
+  edtechWebsitePage,
+  edtechPortalPage,
+  edtechManagementPage,
+  edtechFieldPage,
+  edtechAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
