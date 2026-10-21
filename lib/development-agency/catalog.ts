@@ -80,6 +80,17 @@ import { iotPortalPage } from '@/content/development-agency/expanded/root-iot/po
 import { iotManagementPage } from '@/content/development-agency/expanded/root-iot/management';
 import { iotFieldPage } from '@/content/development-agency/expanded/root-iot/field';
 import { iotAiPage } from '@/content/development-agency/expanded/root-iot/ai';
+import { arvrWebsitePage } from '@/content/development-agency/expanded/root-arvr/website';
+import { arvrPortalPage } from '@/content/development-agency/expanded/root-arvr/portal';
+import { arvrManagementPage } from '@/content/development-agency/expanded/root-arvr/management';
+import { arvrFieldPage } from '@/content/development-agency/expanded/root-arvr/field';
+import { arvrAiPage } from '@/content/development-agency/expanded/root-arvr/ai';
+import { agriTechWebsitePage } from '@/content/development-agency/expanded/root-agritech/website';
+import { agriTechPortalPage } from '@/content/development-agency/expanded/root-agritech/portal';
+import { agriTechManagementPage } from '@/content/development-agency/expanded/root-agritech/management';
+import { agriTechFieldPage } from '@/content/development-agency/expanded/root-agritech/field';
+import { agriTechAiPage } from '@/content/development-agency/expanded/root-agritech/ai';
+import { metaverseWebsitePage } from '@/content/development-agency/expanded/root-metaverse/website';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -145,6 +156,16 @@ export const agencyPages: readonly AgencyPage[] = [
   iotPortalPage,
   iotManagementPage,
   iotFieldPage, iotAiPage,
+  arvrWebsitePage,
+  arvrPortalPage,
+  arvrManagementPage,
+  arvrFieldPage, arvrAiPage,
+  agriTechWebsitePage,
+  agriTechPortalPage,
+  agriTechManagementPage,
+  agriTechFieldPage,
+  agriTechAiPage,
+  metaverseWebsitePage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
