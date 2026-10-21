@@ -74,5 +74,16 @@ export function assertAgencyPages(pages: readonly AgencyPage[]): void {
       }
     }
     if (page.relatedRoutes.some(link => link.href === agencyHref(page))) throw new Error(`Self-related link: ${page.slug}`);
+    for (const source of page.evidenceSources) {
+      let webAddress = false;
+      try {
+        const url = new URL(source.url);
+        webAddress = (url.protocol === 'https:' || url.protocol === 'http:') && Boolean(url.hostname);
+      } catch { /* Report the page and reference instead of exporting a broken link. */ }
+      if (!webAddress || typeof source.title !== 'string' || !source.title.trim()
+        || typeof source.use !== 'string' || !source.use.trim()) {
+        throw new Error(`Invalid evidence source: ${page.slug} (${source.url})`);
+      }
+    }
   }
 }
