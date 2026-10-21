@@ -1,0 +1,21 @@
+{
+  "phase": "DRAFT_BROWSER_QA_PENDING",
+  "baseCommit": "0678e473f7dc05845da7ce651437a852efdf3b2d",
+  "candidatePagesIncludingHub": 787,
+  "newDetailPagesSinceProduction": 55,
+  "reviewedPriorConjunctionCorrection": 1,
+  "unchangedPreviouslyVerifiedPages": 730,
+  "browserRuntimeTargetsAt320px": 57,
+  "localSourceRenderedHttpPreservation": "PASS",
+  "independentFullNewManuscriptsReviewed": 55,
+  "namespaceTestsPassed": 15,
+  "projectTestsPassed": 240,
+  "typescriptDiagnostics": 0,
+  "originalTrackedFilesPreserved": 490,
+  "existingCanonicalsPreserved": 823,
+  "browser": "PENDING_FOR787_SNAPSHOT",
+  "mergeAllowed": false,
+  "productionDeployment": "NOT_STARTED",
+  "searchSubmission": "NOT_STARTED_FOR_CURRENT_CANDIDATE",
+  "allRequestedContentComplete": false
+}

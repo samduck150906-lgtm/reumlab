@@ -91,6 +91,15 @@ import { agriTechManagementPage } from '@/content/development-agency/expanded/ro
 import { agriTechFieldPage } from '@/content/development-agency/expanded/root-agritech/field';
 import { agriTechAiPage } from '@/content/development-agency/expanded/root-agritech/ai';
 import { metaverseWebsitePage } from '@/content/development-agency/expanded/root-metaverse/website';
+import { metaversePortalPage } from '@/content/development-agency/expanded/root-metaverse/portal';
+import { metaverseManagementPage } from '@/content/development-agency/expanded/root-metaverse/management';
+import { metaverseFieldPage } from '@/content/development-agency/expanded/root-metaverse/field';
+import { metaverseAiPage } from '@/content/development-agency/expanded/root-metaverse/ai';
+import { blockchainWebsitePage } from '@/content/development-agency/expanded/root-blockchain/website';
+import { blockchainPortalPage } from '@/content/development-agency/expanded/root-blockchain/portal';
+import { blockchainManagementPage } from '@/content/development-agency/expanded/root-blockchain/management';
+import { blockchainFieldPage } from '@/content/development-agency/expanded/root-blockchain/field';
+import { blockchainAiPage } from '@/content/development-agency/expanded/root-blockchain/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -166,6 +175,15 @@ export const agencyPages: readonly AgencyPage[] = [
   agriTechFieldPage,
   agriTechAiPage,
   metaverseWebsitePage,
+  metaversePortalPage,
+  metaverseManagementPage,
+  metaverseFieldPage,
+  metaverseAiPage,
+  blockchainWebsitePage,
+  blockchainPortalPage,
+  blockchainManagementPage,
+  blockchainFieldPage,
+  blockchainAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
