@@ -100,6 +100,13 @@ import { blockchainPortalPage } from '@/content/development-agency/expanded/root
 import { blockchainManagementPage } from '@/content/development-agency/expanded/root-blockchain/management';
 import { blockchainFieldPage } from '@/content/development-agency/expanded/root-blockchain/field';
 import { blockchainAiPage } from '@/content/development-agency/expanded/root-blockchain/ai';
+import { fintechWebsitePage } from '@/content/development-agency/expanded/root-fintech/website';
+import { fintechPortalPage } from '@/content/development-agency/expanded/root-fintech/portal';
+import { fintechManagementPage } from '@/content/development-agency/expanded/root-fintech/management';
+import { fintechFieldPage } from '@/content/development-agency/expanded/root-fintech/field';
+import { fintechAiPage } from '@/content/development-agency/expanded/root-fintech/ai';
+import { proptechWebsitePage } from '@/content/development-agency/expanded/root-proptech/website';
+import { proptechPortalPage } from '@/content/development-agency/expanded/root-proptech/portal';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -184,6 +191,13 @@ export const agencyPages: readonly AgencyPage[] = [
   blockchainManagementPage,
   blockchainFieldPage,
   blockchainAiPage,
+  fintechWebsitePage,
+  fintechPortalPage,
+  fintechManagementPage,
+  fintechFieldPage,
+  fintechAiPage,
+  proptechWebsitePage,
+  proptechPortalPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
