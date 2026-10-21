@@ -75,6 +75,11 @@ import { digitalTwinPortalPage } from '@/content/development-agency/expanded/roo
 import { digitalTwinManagementPage } from '@/content/development-agency/expanded/root-digital-twin/management';
 import { digitalTwinFieldPage } from '@/content/development-agency/expanded/root-digital-twin/field';
 import { digitalTwinAiPage } from '@/content/development-agency/expanded/root-digital-twin/ai';
+import { iotWebsitePage } from '@/content/development-agency/expanded/root-iot/website';
+import { iotPortalPage } from '@/content/development-agency/expanded/root-iot/portal';
+import { iotManagementPage } from '@/content/development-agency/expanded/root-iot/management';
+import { iotFieldPage } from '@/content/development-agency/expanded/root-iot/field';
+import { iotAiPage } from '@/content/development-agency/expanded/root-iot/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -136,6 +141,10 @@ export const agencyPages: readonly AgencyPage[] = [
   laboratoryOperationsWebsitePage,
   laboratoryOperationsAiPage,
   digitalTwinWebsitePage, digitalTwinPortalPage, digitalTwinManagementPage, digitalTwinFieldPage, digitalTwinAiPage,
+  iotWebsitePage,
+  iotPortalPage,
+  iotManagementPage,
+  iotFieldPage, iotAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
