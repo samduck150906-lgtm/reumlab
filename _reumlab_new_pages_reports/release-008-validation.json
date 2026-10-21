@@ -1,11 +1,11 @@
 {
   "phase": "DRAFT_BROWSER_QA_PENDING",
-  "candidatePagesIncludingHub": 565,
-  "newDetailsSinceProduction": 177,
-  "newDetailsSincePreviousDraft": 48,
+  "candidatePagesIncludingHub": 596,
+  "newDetailsSinceProduction": 208,
+  "newDetailsSincePreviousDraft": 31,
   "previouslyPublishedDetailsRevised": 115,
   "localSourceRenderedHttpPreservation": "PASS",
-  "sourceComparisons": 783655,
+  "sourceComparisons": 845128,
   "namespaceTestsPassed": 15,
   "projectTestsPassed": 240,
   "typescriptDiagnostics": 0,
@@ -14,7 +14,7 @@
   "existingCanonicalsPreserved": 823,
   "originalDiscoveryFilesByteExact": 18,
   "browser": "PENDING_ACCESS_BLOCKED",
-  "additionalPerUrl320CoveragePlan": 293,
+  "additionalPerUrl320CoveragePlan": 324,
   "browserMinimumRequired": {
     "viewports": [
       320,
