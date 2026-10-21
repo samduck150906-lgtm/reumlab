@@ -115,6 +115,16 @@ import { edtechPortalPage } from '@/content/development-agency/expanded/root-edt
 import { edtechManagementPage } from '@/content/development-agency/expanded/root-edtech/management';
 import { edtechFieldPage } from '@/content/development-agency/expanded/root-edtech/field';
 import { edtechAiPage } from '@/content/development-agency/expanded/root-edtech/ai';
+import { renewableWebsitePage } from '@/content/development-agency/expanded/root-renewable/website';
+import { renewablePortalPage } from '@/content/development-agency/expanded/root-renewable/portal';
+import { renewableManagementPage } from '@/content/development-agency/expanded/root-renewable/management';
+import { renewableFieldPage } from '@/content/development-agency/expanded/root-renewable/field';
+import { renewableAiPage } from '@/content/development-agency/expanded/root-renewable/ai';
+import { solarOperatorWebsitePage } from '@/content/development-agency/expanded/root-solar-operator/website';
+import { solarOperatorPortalPage } from '@/content/development-agency/expanded/root-solar-operator/portal';
+import { solarOperatorManagementPage } from '@/content/development-agency/expanded/root-solar-operator/management';
+import { solarOperatorFieldPage } from '@/content/development-agency/expanded/root-solar-operator/field';
+import { solarOperatorAiPage } from '@/content/development-agency/expanded/root-solar-operator/ai';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -214,6 +224,16 @@ export const agencyPages: readonly AgencyPage[] = [
   edtechManagementPage,
   edtechFieldPage,
   edtechAiPage,
+  renewableWebsitePage,
+  renewablePortalPage,
+  renewableManagementPage,
+  renewableFieldPage,
+  renewableAiPage,
+  solarOperatorWebsitePage,
+  solarOperatorPortalPage,
+  solarOperatorManagementPage,
+  solarOperatorFieldPage,
+  solarOperatorAiPage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };
