@@ -56,11 +56,14 @@ const rows = pages.map((p,k)=>{
   // the glyph renders correctly. Preserve that gate; distinguish its cause.
   const fontPerformancePass=fullFontFallbackGlyphs.length===0;
   const badLinks=p.relatedRoutes.filter(l=>!urls.has(new URL(l.href,'https://reumlab.com').href));
+  const relatedRouteCount=p.relatedRoutes.length;
+  const relatedDocuments=p.relatedRoutes.map(l=>{const u=new URL(l.href,'https://reumlab.com');u.search='';u.hash='';return u.href;});
+  const relatedNavigationPass=relatedRouteCount>=5&&relatedRouteCount<=10&&new Set(relatedDocuments).size===relatedRouteCount&&!relatedDocuments.includes(r.url);
   const metadataCollisions=records.filter((other,j)=>i!==j&&(other.title===r.title||other.description===r.description||other.h1===r.h1)).map(o=>o.url);
   const uniqueSentenceRatio=unique/r.sentences.length;
   const placeholder=/\b(?:TODO|TBD|lorem\s+ipsum|placeholder)\b|추후\s*작성|내용\s*준비\s*중/iu.test(r.text);
-  const status=korean>=3500&&nonspace>=3500&&p.sections.length>=12&&p.faq.length>=6&&uniqueSentenceRatio>=.65&&nearest.similarity<.72&&!outsideFont.length&&fontPerformancePass&&!badLinks.length&&!metadataCollisions.length&&!placeholder?'PASS':'FAIL';
-  return {url:r.url,clusterIds:p.clusterIds,korean,nonspace,sections:p.sections.length,faq:p.faq.length,uniqueSentenceRatio,nearest,outsideFont,fullFontFallbackGlyphs,fontPerformancePass,badLinks,metadataCollisions,placeholder,status};
+  const status=korean>=3500&&nonspace>=3500&&p.sections.length>=12&&p.faq.length>=6&&uniqueSentenceRatio>=.65&&nearest.similarity<.72&&!outsideFont.length&&fontPerformancePass&&!badLinks.length&&relatedNavigationPass&&!metadataCollisions.length&&!placeholder?'PASS':'FAIL';
+  return {url:r.url,clusterIds:p.clusterIds,korean,nonspace,sections:p.sections.length,faq:p.faq.length,uniqueSentenceRatio,nearest,outsideFont,fullFontFallbackGlyphs,fontPerformancePass,badLinks,relatedRouteCount,relatedNavigationPass,metadataCollisions,placeholder,status};
 });
 const report={checkedAt:new Date().toISOString(),scope:'Registered completed source manuscripts versus all existing canonical main texts and each other. HTML, HTTP, runtime and deployment are separate checks.',status:rows.every(r=>r.status==='PASS')?'PASS':'FAIL',existing:old.length,registered:pages.length,measuredPairs,rows};
 fs.mkdirSync(path.dirname(output),{recursive:true});

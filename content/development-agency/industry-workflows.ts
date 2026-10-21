@@ -216,6 +216,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/website/yeonguso/",
         "label": "연구소 홈페이지 제작",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/reservation-platform-development/",
+        "label": "예약 플랫폼 개발",
+        "reason": "연구별 허용 방문 기간을 다루는 일정표와 일반 예약의 취소·변경 구조를 비교합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "비식별 참여자 기록의 기관별 접근과 다운로드 이력을 검수할 범위를 정합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "승인된 연구 시스템의 식별자와 방문 상태를 교환하는 연결 범위를 확인합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 기관이 승인한 프로토콜·방문표의 비식별 샘플, 권한표, 동의·철회 절차, 보관·삭제 기준를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -439,6 +454,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/pet/",
         "label": "펫·반려동물 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/reservation-platform-development/",
+        "label": "예약 플랫폼 개발",
+        "reason": "인수 예정 시간·추모 일정의 변경과 실제 인수인계 완료를 구분합니다."
+      },
+      {
+        "href": "/development-agency/payment-gateway-integration-development/",
+        "label": "결제 연동 개발",
+        "reason": "서비스 변경·부분 취소와 결제 취소의 대응 관계를 검토합니다."
+      },
+      {
+        "href": "/development-agency/pwa-web-app-development/",
+        "label": "PWA 개발",
+        "reason": "현장 인계 담당자가 이동 중 확인할 기록과 연결 복구 후 동기화 범위를 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 식별·인계 양식, 서비스·시설 일정, 보호자 승인 절차, 공개·보관 기준를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -669,6 +699,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/subscription/",
         "label": "구독 서비스 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/payment-gateway-integration-development/",
+        "label": "결제 연동 개발",
+        "reason": "상품권 발급·사용·취소 상태와 실제 결제 승인·취소의 차이를 비교합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "판매 채널과 사용처의 중복 요청·재시도에 대한 식별자 규칙을 정합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "사용 코드 노출과 무단 재사용을 막는 권한·로그 검수 항목을 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 상품권 종류, 잔액/취소 정책, 가맹점 구조, 발행·사용 샘플를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -893,6 +938,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/manufacturing/",
         "label": "제조·공장 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/laboratory-sample-management/",
+        "label": "시험실 시료 관리",
+        "reason": "시험 의뢰 접수부터 실제 시료 인수·분할·잔여물 처리까지 연결할 기록을 확인합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "의뢰·시험·성적서 시스템 사이에서 전송할 상태와 승인본 식별자를 구분합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "고객별 시험 자료 접근과 승인된 성적서 다운로드의 검수 범위를 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 의뢰·시료 양식, 시험 코드와 기준 버전, 성적서 예시, 검토·재발행 절차를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -1117,6 +1177,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/ai-automation/wms/",
         "label": "WMS·창고 자동화 프로그램 개발",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/marketplace-operations-backoffice/",
+        "label": "플랫폼 운영 관리",
+        "reason": "판매 주문의 정산 상태와 창고의 입고·피킹·출고 상태를 분리해 비교합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "주문 중복 수신과 송장 재전송에서 같은 출고 작업이 반복되지 않도록 연동 범위를 정합니다."
+      },
+      {
+        "href": "/development-agency/pwa-web-app-development/",
+        "label": "PWA 개발",
+        "reason": "창고 현장에서 스캔과 검수 기록을 남길 모바일 작업 범위를 검토합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 화주별 상품 마스터, 입출고 샘플, 로케이션 체계, 작업·보관료 단가표를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -1341,6 +1416,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/ai-automation/logistics/",
         "label": "물류·배차 자동화 프로그램 개발",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/fulfillment-warehouse-operations/",
+        "label": "풀필먼트 창고 운영",
+        "reason": "온도 이탈 기록을 입고·보관·출고의 실제 작업 번호와 연결하는 경계를 확인합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "센서의 늦은 전송·중복 측정과 수집 실패를 구분할 연결 규칙을 정합니다."
+      },
+      {
+        "href": "/development-agency/pwa-web-app-development/",
+        "label": "PWA 개발",
+        "reason": "현장 담당자의 이탈 확인·조치 기록을 이동 중 입력하는 화면 범위를 검토합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 센서 데이터 샘플, 품목별 운영 기준, 이탈 대응표, 통신 불가 사례를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -1569,6 +1659,16 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/website/muyeoghoesa/",
         "label": "무역회사 홈페이지 제작",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "운송사 이벤트의 중복·지연과 내부 선적 상태의 갱신 규칙을 검토합니다."
+      },
+      {
+        "href": "/development-agency/marketplace-operations-backoffice/",
+        "label": "플랫폼 운영 관리",
+        "reason": "화주별 운임 정산과 운송 단계별 업무 기록을 분리해 설계합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 선적·서류 양식, 마감 기준, 운임·부대비용표, 파트너별 데이터 교환 방식를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -1793,6 +1893,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/parking/",
         "label": "주차장 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/payment-gateway-integration-development/",
+        "label": "결제 연동 개발",
+        "reason": "충전 종료·사용량 확정과 사전 승인·실제 청구·환불의 차이를 검토합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "충전기 통신 중단과 늦게 도착한 세션 이벤트의 처리 범위를 정합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "사업자별 충전기 제어 권한과 정산 자료 접근의 검수 항목을 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 충전기 통신 사양, 세션·미터 샘플, 요금 규칙, 장애 처리 기준를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -2024,6 +2139,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/construction/",
         "label": "건설·현장관리 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/reservation-platform-development/",
+        "label": "예약 플랫폼 개발",
+        "reason": "장비 예약·배정과 실제 출고·반납·정비 대기 상태의 차이를 확인합니다."
+      },
+      {
+        "href": "/development-agency/pwa-web-app-development/",
+        "label": "PWA 개발",
+        "reason": "현장 장비 인수·반납 시 상태 사진과 미확인 항목을 기록할 화면을 검토합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "계약·배차·회계 자료를 연결할 장비와 작업 식별자 규칙을 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 장비 사양·개체번호, 운반 제약, 점검표, 가동시간·정산 기준를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -2245,6 +2375,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/ai-automation/excel/",
         "label": "Excel 자동화 프로그램 개발",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "사업장별 활동 자료의 수집 시점·단위·원천 버전을 연결하는 범위를 정합니다."
+      },
+      {
+        "href": "/development-agency/existing-codebase-audit/",
+        "label": "기존 소스코드 점검",
+        "reason": "기존 산식·계수 적용 코드와 정정 이력의 확인 가능 범위를 검토합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "사업장 입력·검토·확정 권한과 근거 문서 열람 이력을 검수합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 승인된 산정 기준, 활동자료 샘플, 계수 출처/적용 버전, 검토 절차를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",
@@ -2474,6 +2619,21 @@ export const industryWorkflowPages: AgencyPage[] = [
         "href": "/solution/manufacturing/",
         "label": "제조·공장 솔루션 구축",
         "reason": "새 시스템의 원장·역할과 비교할 기존 업무 범위입니다."
+      },
+      {
+        "href": "/development-agency/testing-certification-workflow/",
+        "label": "시험·인증 업무 관리",
+        "reason": "시료 접수·분할·보관 기록과 의뢰·시험·승인 문서의 연결 경계를 비교합니다."
+      },
+      {
+        "href": "/development-agency/api-integration-development/",
+        "label": "API 연동 개발",
+        "reason": "시료 번호와 장비 결과·의뢰 자료를 교환할 식별자 및 중복 처리 규칙을 정합니다."
+      },
+      {
+        "href": "/development-agency/web-app-security-review-scope/",
+        "label": "웹앱 보안 점검 범위",
+        "reason": "고객별 시료 자료와 시험 결과의 조회·정정 권한을 검수할 범위를 정합니다."
       }
     ],
     "ctaContext": "개발 범위 검토에는 시료·시험 코드표, 접수/반려 양식, 결과 검토 절차, 장비 연동 사양를 개인정보와 비공개 식별정보를 제거한 표본으로 준비해 주세요. 실제 제공 기능과 연결 가능성은 확인 후 계약 범위로 정합니다.",

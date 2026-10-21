@@ -1,0 +1,43 @@
+{
+  "phase": "DRAFT_BROWSER_QA_PENDING",
+  "candidatePagesIncludingHub": 732,
+  "newDetailsSinceProduction": 344,
+  "newDetailsSincePrevious638Draft": 94,
+  "newDetailsSincePrevious687Snapshot": 45,
+  "previous687DetailsExact": 684,
+  "reviewedPreviousParticleCorrections": 2,
+  "previouslyPublishedDetailsRevised": 115,
+  "localSourceRenderedHttpPreservation": "PASS",
+  "sourceComparisons": 1137528,
+  "namespaceTestsPassed": 15,
+  "projectTestsPassed": 240,
+  "typescriptDiagnostics": 0,
+  "independentReview": "NO_P0_P1_P2_ONE_P3_RECORDED",
+  "nonBlockingCopyFinding": {
+    "file": "content/development-agency/expanded/industry-001-210/pages.ts",
+    "line": 47303,
+    "slug": "membership/유학원",
+    "scope": "One conjunction is awkward; exact fix is validated in later LIVE source, outside frozen732."
+  },
+  "originalTrackedFilesPreserved": 490,
+  "existingCanonicalsPreserved": 823,
+  "originalDiscoveryFilesByteExact": 18,
+  "browser": "PENDING_ACCESS_BLOCKED",
+  "additionalPerUrl320CoveragePlan": 460,
+  "browserMinimumRequired": {
+    "viewports": [
+      320,
+      375,
+      768,
+      1280,
+      1440
+    ],
+    "coverage": "Representative screenshots and keyboard/accessibility checks",
+    "verifiedForCurrentSnapshot": false
+  },
+  "mergeAllowed": false,
+  "previewHttp": "PENDING_AT_COMMIT_TIME",
+  "productionDeployment": "NOT_STARTED",
+  "searchSubmission": "NOT_STARTED_FOR_CURRENT_CANDIDATE",
+  "allRequestedContentComplete": false
+}

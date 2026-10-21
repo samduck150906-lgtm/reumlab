@@ -58,6 +58,39 @@ import { drugDevelopmentPortalPage } from '@/content/development-agency/expanded
 import { drugDevelopmentManagementPage } from '@/content/development-agency/expanded/root-drug-development/management';
 import { drugDevelopmentFieldPage } from '@/content/development-agency/expanded/root-drug-development/field';
 import { drugDevelopmentAiPage } from '@/content/development-agency/expanded/root-drug-development/ai';
+import { clinicalDataWebsitePage } from '@/content/development-agency/expanded/root-clinical-data/website';
+import { clinicalDataPortalPage } from '@/content/development-agency/expanded/root-clinical-data/portal';
+import { clinicalDataManagementPage } from '@/content/development-agency/expanded/root-clinical-data/management';
+import { clinicalDataFieldPage } from '@/content/development-agency/expanded/root-clinical-data/field';
+import { clinicalDataAiPage } from '@/content/development-agency/expanded/root-clinical-data/ai';
+import { researchEquipmentWebsitePage } from '@/content/development-agency/expanded/root-research-equipment/website';
+import { researchEquipmentPortalPage } from '@/content/development-agency/expanded/root-research-equipment/portal';
+import { researchEquipmentManagementPage } from '@/content/development-agency/expanded/root-research-equipment/management';
+import { researchEquipmentFieldPage } from '@/content/development-agency/expanded/root-research-equipment/field';
+import { researchEquipmentAiPage } from '@/content/development-agency/expanded/root-research-equipment/ai';
+import { laboratoryOperationsWebsitePage } from '@/content/development-agency/expanded/root-laboratory-operations/website';
+import { laboratoryOperationsAiPage } from '@/content/development-agency/expanded/root-laboratory-operations/ai';
+import { digitalTwinWebsitePage } from '@/content/development-agency/expanded/root-digital-twin/website';
+import { digitalTwinPortalPage } from '@/content/development-agency/expanded/root-digital-twin/portal';
+import { digitalTwinManagementPage } from '@/content/development-agency/expanded/root-digital-twin/management';
+import { digitalTwinFieldPage } from '@/content/development-agency/expanded/root-digital-twin/field';
+import { digitalTwinAiPage } from '@/content/development-agency/expanded/root-digital-twin/ai';
+import { iotWebsitePage } from '@/content/development-agency/expanded/root-iot/website';
+import { iotPortalPage } from '@/content/development-agency/expanded/root-iot/portal';
+import { iotManagementPage } from '@/content/development-agency/expanded/root-iot/management';
+import { iotFieldPage } from '@/content/development-agency/expanded/root-iot/field';
+import { iotAiPage } from '@/content/development-agency/expanded/root-iot/ai';
+import { arvrWebsitePage } from '@/content/development-agency/expanded/root-arvr/website';
+import { arvrPortalPage } from '@/content/development-agency/expanded/root-arvr/portal';
+import { arvrManagementPage } from '@/content/development-agency/expanded/root-arvr/management';
+import { arvrFieldPage } from '@/content/development-agency/expanded/root-arvr/field';
+import { arvrAiPage } from '@/content/development-agency/expanded/root-arvr/ai';
+import { agriTechWebsitePage } from '@/content/development-agency/expanded/root-agritech/website';
+import { agriTechPortalPage } from '@/content/development-agency/expanded/root-agritech/portal';
+import { agriTechManagementPage } from '@/content/development-agency/expanded/root-agritech/management';
+import { agriTechFieldPage } from '@/content/development-agency/expanded/root-agritech/field';
+import { agriTechAiPage } from '@/content/development-agency/expanded/root-agritech/ai';
+import { metaverseWebsitePage } from '@/content/development-agency/expanded/root-metaverse/website';
 import { assertAgencyPages, type AgencyPage } from './types';
 
 // This explicit registry contains completed manuscripts only. The build queue
@@ -106,6 +139,33 @@ export const agencyPages: readonly AgencyPage[] = [
   drugDevelopmentManagementPage,
   drugDevelopmentFieldPage,
   drugDevelopmentAiPage,
+  clinicalDataWebsitePage,
+  clinicalDataPortalPage,
+  clinicalDataManagementPage,
+  clinicalDataFieldPage,
+  clinicalDataAiPage,
+  researchEquipmentWebsitePage,
+  researchEquipmentPortalPage,
+  researchEquipmentManagementPage,
+  researchEquipmentFieldPage,
+  researchEquipmentAiPage,
+  laboratoryOperationsWebsitePage,
+  laboratoryOperationsAiPage,
+  digitalTwinWebsitePage, digitalTwinPortalPage, digitalTwinManagementPage, digitalTwinFieldPage, digitalTwinAiPage,
+  iotWebsitePage,
+  iotPortalPage,
+  iotManagementPage,
+  iotFieldPage, iotAiPage,
+  arvrWebsitePage,
+  arvrPortalPage,
+  arvrManagementPage,
+  arvrFieldPage, arvrAiPage,
+  agriTechWebsitePage,
+  agriTechPortalPage,
+  agriTechManagementPage,
+  agriTechFieldPage,
+  agriTechAiPage,
+  metaverseWebsitePage,
   ...expandedAgencyPages,
 ];
 export { agencyHub };

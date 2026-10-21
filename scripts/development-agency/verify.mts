@@ -107,8 +107,11 @@ function localFile(root: string, url: string): string | null {
 }
 export function validDate(value: string): boolean {
   if (!/^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2}))?$/.test(value)) return false;
-  const stamp = Date.parse(value);
-  if (!Number.isFinite(stamp) || stamp > Date.now() + 1000) return false;
+  // Date-only content is published on the site's Korean calendar day.
+  // Explicit timestamps still represent their actual instant, including UTC.
+  const dateOnly = value.length === 10;
+  const stamp = Date.parse(dateOnly ? value + 'T00:00:00+09:00' : value);
+  if (!Number.isFinite(stamp) || stamp > Date.now() + (dateOnly ? 0 : 1000)) return false;
   const day = value.slice(0, 10);
   const dayStamp = new Date(day + 'T00:00:00Z');
   return dayStamp.toISOString().slice(0, 10) === day;
@@ -226,8 +229,18 @@ function validateCatalog(page: AgencyPage, url: string, add: (check: string, det
   const ids = (page.sections ?? []).map(section => section.id);
   if (new Set(ids).size !== ids.length) add('section-id', 'Duplicate section id');
   for (const id of ids) if (!/^[a-z][a-z0-9-]*$/.test(id)) add('section-id', `Unsafe section id ${id}`);
+  const relatedCount = page.relatedRoutes?.length ?? 0;
+  if (relatedCount < 5 || relatedCount > 10) add('related-route-count', `Expected 5–10 related documents, got ${relatedCount}`);
+  const relatedDocuments = new Set<string>();
   for (const link of page.relatedRoutes ?? []) {
-    try { if (normalizedUrl(link.href) === url) add('self-related-link', link.href); }
+    try {
+      const target = new URL(link.href, ORIGIN);
+      target.search = ''; target.hash = '';
+      const document = target.href;
+      if (document === url) add('self-related-link', link.href);
+      if (relatedDocuments.has(document)) add('duplicate-related-route', link.href);
+      relatedDocuments.add(document);
+    }
     catch { add('invalid-related-link', link.href); }
   }
 }
