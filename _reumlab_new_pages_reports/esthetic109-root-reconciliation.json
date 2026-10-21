@@ -1,0 +1,37 @@
+{
+  "status": "TWO_BOUNDED_SAME_INTENTS_COVERED_BY108_NO_PAGE_SOURCE_CHANGE",
+  "checkedAt": "2026-10-21T20:15:19.534903+00:00",
+  "mapping": [
+    {
+      "clusterId": "ind-109-ai",
+      "canonicalOwner": "ind-108-ai",
+      "canonical": "https://reumlab.com/development-agency/ai/피부관리샵/"
+    },
+    {
+      "clusterId": "ind-109-ecommerce",
+      "canonicalOwner": "ind-108-ecommerce",
+      "canonical": "https://reumlab.com/development-agency/ecommerce/피부관리샵/"
+    }
+  ],
+  "proposalSha256": "b37a7d720aeb37fa25e6215f693767634b0410b6b7f3fd49a99e9115cd1ffbe0",
+  "queueRowsBefore": 2484,
+  "queueRowsAfter": 2484,
+  "onlyChangedQueueRows": 2,
+  "other2482RowsExact": true,
+  "original490ByteExact": true,
+  "canonical108WholeObjectsFreshlyCompared": true,
+  "all108KeywordMetadataAndPageObjectsUntouched": true,
+  "scopeDropped": 0,
+  "newAuthoredPages": 0,
+  "newIntentAliasesToAuthored": 2,
+  "beforeSha256": "9391ad1ba01ac5e0659bf4fc88fc94e0ec896fbca32552f2f347d6345a1e7723",
+  "afterSha256": "61149aff89d856fc7c34471567c01f67f761106ce8210e77abb176bdc26780a5",
+  "primarySource": "https://www.easylaw.go.kr/CSP/EasyLawInfoR.laf?csmSeq=1012&easySeq=3747",
+  "primaryScope": "Root actually retrieved officialskin-care card imagealt146 and boundednamingcontext. This supports naming overlap in originalnonmedicalbusinessintents, not currentproviderqualification, medical/spa/licensing equivalence.",
+  "originalScopeFieldsNotIdentical": true,
+  "rootActuallyRead": "Bothfulloriginalqueue rows and both108summary/audience/actualProblems/workflows/coreFeatures/dataEntities/edgeCases/all6FAQ. Theycovercustomer-specificcare records, contract/session use/deduction corrections and service/physicalcommerce cancellation/refund flows. Full15fieldreview remainsnext024, notclaimedhere.",
+  "allLegacyBodiesIndependentlyReadByRoot": false,
+  "canonical108IntegrationReviewAndDeployment": "PENDING_NEXT024_SOURCE443_ONLY_NOT_CURRENT023",
+  "frozenSnapshotsAndCurrentPR28Untouched": true,
+  "allRequestedContentComplete": false
+}

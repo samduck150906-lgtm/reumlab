@@ -1,0 +1,35 @@
+{
+  "status": "TWO_QUEUE_IDENTICAL_SALON_INTENTS_MAPPED_NO_PAGE_SOURCE_CHANGE",
+  "checkedAt": "2026-10-21T19:52:06.115436+00:00",
+  "mapping": [
+    {
+      "clusterId": "ind-105-ai",
+      "canonicalOwner": "ind-104-ai",
+      "canonical": "https://reumlab.com/development-agency/ai/미용실/"
+    },
+    {
+      "clusterId": "ind-105-ecommerce",
+      "canonicalOwner": "ind-104-ecommerce",
+      "canonical": "https://reumlab.com/development-agency/ecommerce/미용실/"
+    }
+  ],
+  "proposalSha256": "89e6a7ebb62eea9d22e4da9f8d47eaa4b65c51b9899e1a58d636070ec782fc91",
+  "queueRowsBefore": 2484,
+  "queueRowsAfter": 2484,
+  "onlyChangedQueueRows": 2,
+  "other2482RowsExact": true,
+  "original490ByteExact": true,
+  "canonical104WholeObjectsFreshlyCompared": true,
+  "all104KeywordMetadataAndPageObjectsUntouched": true,
+  "scopeDropped": 0,
+  "newAuthoredPages": 0,
+  "newIntentAliasesToAuthored": 2,
+  "beforeSha256": "f64411601e60d6c8ebc8ecd73713930f6228777c4ee73f85c50b71386266d67d",
+  "afterSha256": "9391ad1ba01ac5e0659bf4fc88fc94e0ec896fbca32552f2f347d6345a1e7723",
+  "primarySource": "https://www.korean.go.kr/nkview/nklife/1998_2/1998_0206.pdf",
+  "primaryScope": "Root actually retrieved official historical language paper and PDF pageindex3: hairshop/hairsalon naming of salon trade. This supports bounded naming equivalence only, not currentlaw/licensing or sameness of allhairbusinesses. Original two queue rows are independently substitution-exact. Barber106 remains separate.",
+  "proposalPageLabelCorrection": "Proposal says printed106; retrieved text footer of pageindex3 is107. Pageindex3 and lines63-73 identify actualpassage; originalproposalunchanged.",
+  "canonical104IntegrationReviewAndDeployment": "PENDING_NEXT_CHECKPOINT_SOURCE433_ONLY_NOT_CURRENT022",
+  "frozenSnapshotsAndCurrentPR27Untouched": true,
+  "allRequestedContentComplete": false
+}
