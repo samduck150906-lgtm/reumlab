@@ -1,0 +1,26 @@
+{
+  "status": "SOURCE_EXACT1579_ACTUAL1534_LEDGER_REFRESHED_BUILD_HTTP_RUNTIME_BROWSER_PENDING",
+  "checkedAt": "2026-10-22T02:16:37.009476+00:00",
+  "baseCommit": "05bf6831517d9a6050f193c445fe9b9587c58bee",
+  "candidatePagesIncludingHub": 1579,
+  "newDetailPagesVsProduction": 45,
+  "newDetailManuscriptsAfter031": 14,
+  "correctedPriorWholeContexts": 1,
+  "productionParentPages": 1534,
+  "parentProductionDeploy": "6ad95f68c0b14ad9ad4e1986",
+  "ledgerSha256": "b98e051969f68f7f92a894a70b355f82c81b37d11cced518cc1ec293cffabf4e",
+  "all1579ObjectsExactReviewed032": true,
+  "normalizedNamespaceFilesChecked": 1126,
+  "original490PathsUnchanged": true,
+  "deploymentStatusCounts": {
+    "PREVIOUS_VERSION_DEPLOYED_SOURCE_CHANGED": 1,
+    "NOT_DEPLOYED": 45,
+    "DEPLOYED_VERIFIED": 1533
+  },
+  "changedFileCount": 31,
+  "githubCliAuthenticated": false,
+  "accountIdentityMustBeVerifiedBeforePushOrPR": true,
+  "mergeAllowed": false,
+  "searchSubmissionForThisRelease": "NOT_STARTED",
+  "allRequestedContentComplete": false
+}
