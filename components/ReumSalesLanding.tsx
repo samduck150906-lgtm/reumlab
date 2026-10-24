@@ -556,6 +556,41 @@ export default function ReumSalesLanding(_props: { site: Site }) {
         </div>
       </section>
 
+      {/* 마케팅 제휴 띠 — 현랩. index.html 의 .partner-band 와 같은 내용·같은 위치(현랩 코랄 팔레트). */}
+      <aside
+        aria-label="마케팅 제휴 — 현랩"
+        className="relative overflow-hidden border-t border-[#fce1dd] bg-[radial-gradient(380px_110px_at_4%_50%,rgba(252,88,68,0.2),transparent_70%),linear-gradient(90deg,#fff0ed_0%,#fff8f6_55%,#ffffff_100%)] after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-[linear-gradient(90deg,#fc5844,#fda094_50%,transparent)] after:content-['']"
+      >
+        <div className="mx-auto max-w-6xl px-5 sm:px-6 lg:px-8">
+          <a
+            href="https://hyunlab.kr/?utm_source=reumlab&utm_medium=referral&utm_campaign=partner_band"
+            target="_blank"
+            rel="noopener"
+            data-analytics="cta_partner_hyunlab"
+            className="group relative z-[1] flex items-center gap-3.5 py-3 text-[#16181d] no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#c42d1c]"
+          >
+            <span
+              aria-hidden="true"
+              className="grid h-[38px] w-[38px] shrink-0 place-items-center rounded-[11px] bg-white shadow-[0_0_0_1px_#fce1dd,0_6px_18px_rgba(252,88,68,0.22)]"
+            >
+              <img src="/assets/partners/hyunlab-mark.png" alt="" width={22} height={21} decoding="async" className="block h-auto w-[22px]" />
+            </span>
+            <span className="hidden shrink-0 rounded-full border border-[#fcc5bd] bg-white px-2.5 py-0.5 text-[12.5px] font-bold text-[#c42d1c] sm:inline">
+              마케팅 제휴
+            </span>
+            <span className="flex min-w-0 flex-1 flex-col gap-px break-keep text-[13px] leading-[1.45] sm:flex-row sm:flex-wrap sm:items-baseline sm:gap-x-3 sm:text-[15px]">
+              <strong className="text-[15px] font-extrabold tracking-[-0.01em]">현랩 HYUNLAB</strong>
+              <span className="text-[#4a4f59]"><span className="hidden sm:inline">만든 서비스에 고객이 찾아오게 — </span><span className="whitespace-nowrap">검색·콘텐츠·데이터</span> 자동화 그로스 마케팅</span>
+            </span>
+            <span className="inline-flex shrink-0 items-center gap-1.5 rounded-[10px] bg-[#fc5844] px-[11px] py-2 text-[13px] font-bold transition-colors group-hover:bg-[#fb3921] sm:px-[15px] sm:py-[9px] sm:text-[14.5px]">
+              현랩 바로가기
+              <span aria-hidden="true" className="inline-block transition-transform group-hover:translate-x-[3px]">→</span>
+              <span className="sr-only">(새 창)</span>
+            </span>
+          </a>
+        </div>
+      </aside>
+
       {/* 신뢰 지표 (사실 기반 — 지어낸 수치 없음) */}
       <section aria-label="름랩 제공 조건" className="border-b border-slate-100 bg-white py-6 sm:py-7">
         <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8">
