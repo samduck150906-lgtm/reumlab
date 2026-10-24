@@ -1,0 +1,72 @@
+{
+  "status": "ALL_LOCAL_GATES_PASS_IN_INDEPENDENT_RELEASE_CLONE",
+  "checkedAt": "2026-10-24T06:13:28.184193+00:00",
+  "release": "021",
+  "checkout": "agency-release-021",
+  "baseCommit": "b620b10f3d802a92a231f613f1246e21a0c80818",
+  "immutableInput": "work/reumlab namespace directories as of 2026-10-24 (duplicate-manuscript rewrite 034)",
+  "pages": 1796,
+  "newPagesVersusProduction": 217,
+  "httpOrigin": "http://127.0.0.1:58115",
+  "httpStatus": "PASS",
+  "sitemap": {
+    "status": 200,
+    "contentType": "text/xml",
+    "exactBody": true
+  },
+  "nonOkStatuses": 0,
+  "canonicalMismatches": 0,
+  "fingerprintMismatches": 0,
+  "noindexFound": 0,
+  "existingCanonicalsEditoriallyEqual": 823,
+  "discoveryFilesByteEqual": 19,
+  "protectedOriginals": 490,
+  "protectedOriginalsCleanAgainstBase": true,
+  "protectedOriginalsContentDeltas": 0,
+  "protectedOriginalsLineEndingOnlyDifferences": 455,
+  "preserveBaselineRawStatusNotUsableInLfClone": "FAIL",
+  "preserveBaselineRawSourceChangeRows": 64,
+  "commands": [
+    {
+      "label": "npm-ci",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T06:10:13.846921+00:00"
+    },
+    {
+      "label": "tsc",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T06:10:13.846921+00:00"
+    },
+    {
+      "label": "build",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T06:10:13.846921+00:00"
+    },
+    {
+      "label": "verify-namespace",
+      "exitCode": 0,
+      "finishedAt": "2026-10-24T06:10:13.846921+00:00"
+    },
+    {
+      "label": "preservation",
+      "startedAt": "2026-10-24T06:11:46.317765+00:00",
+      "finishedAt": "2026-10-24T06:11:49.921163+00:00",
+      "exitCode": 1
+    },
+    {
+      "label": "http",
+      "startedAt": "2026-10-24T06:12:05.772955+00:00",
+      "finishedAt": "2026-10-24T06:13:27.722924+00:00",
+      "exitCode": 0
+    }
+  ],
+  "allCommandExitCodesZero": false,
+  "nonZeroExitCommands": [
+    "preservation"
+  ],
+  "nonZeroExitExplanation": "preserve-baseline raw-hash section only, if listed; editorial and discovery sections asserted above.",
+  "browserRuntimeVerification": "NOT_PERFORMED_IN_LOCAL_STEP",
+  "pushPrMergeDeploySearch": "NOT_STARTED",
+  "mergeAllowed": false,
+  "allRequestedContentComplete": false
+}
