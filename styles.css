@@ -1053,6 +1053,21 @@ br.br-pc { display: inline; }
 /* ---- HERO 신뢰 문구(칩) ---- */
 .hero__trust { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .hero__trust li { display: inline-flex; align-items: center; font-size: 13.5px; font-weight: 700; color: var(--ink); background: var(--white); border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 14px; box-shadow: var(--shadow-sm); }
+/* 마케팅 제휴 칩 — 현랩 코랄(#FC5844)과 웜 페이퍼. 칩 전체가 링크다. */
+.hero__trust li.hero__trust-partner { padding: 0; background: #fff0ed; border-color: #fcc5bd; }
+.hero__trust-partner a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; width: 100%;
+  padding: 7px 14px; border-radius: inherit; color: #c42d1c; text-decoration: none;
+  transition: background-color .16s ease, color .16s ease;
+}
+.hero__trust-partner img { width: 15px; height: auto; display: block; }
+.hero__trust-partner a:hover,
+.hero__trust-partner a:focus-visible { background: #fc5844; color: #16181d; }
+.hero__trust-partner a:focus-visible { outline: 2px solid #c42d1c; outline-offset: 2px; }
+.hero__trust-partner .sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
 .hero__note b { color: var(--ink); font-weight: 800; }
 
 /* ---- HERO 비주얼: 익명 화면 목업 ---- */
@@ -1616,6 +1631,8 @@ body[data-page-type="home"] .metric__label small { color: rgba(241, 245, 253, .5
     line-height: 1.35;
     word-break: keep-all;
   }
+  body[data-page-type="home"] .hero__trust li.hero__trust-partner { padding: 0; }
+  body[data-page-type="home"] .hero__trust-partner a { padding-inline: 12px; }
   body[data-page-type="home"] .hero__note { font-size: 13.5px; }
   body[data-page-type="home"] .metric { padding: 26px 18px; }
 }

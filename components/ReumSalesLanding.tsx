@@ -522,12 +522,6 @@ export default function ReumSalesLanding(_props: { site: Site }) {
                 Flutter로 iOS·안드로이드를 한 번에. 가격은 먼저 공개하고, 결과물은 소스코드까지 전부 넘깁니다.
                 <strong className="font-semibold text-white"> 게다가 직접 수정·운영하는 법까지 1:1로 알려드립니다.</strong>
               </p>
-              {/* 엔티티 정의문 — index.html 히어로와 동일 문장을 유지한다(README "홈페이지·배포 구조"). */}
-              <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-slate-400 lg:mx-0">
-                <strong className="text-slate-200">름랩(REUMLAB)</strong>은 앱, 웹사이트, 관리자 페이지와 MVP를 기획부터
-                개발·배포까지 구축하는 <strong className="text-slate-200">앱·웹 개발 스튜디오</strong>입니다. 동탄·수원·화성을
-                거점으로 전국 비대면 진행합니다.
-              </p>
               <div className="mt-9 flex flex-col items-center gap-3 lg:items-start">
                 <a
                   href={TEL_HREF}
