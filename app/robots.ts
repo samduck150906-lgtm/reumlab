@@ -44,6 +44,10 @@ const AI_CRAWLERS = [
   'ClaudeBot', // Anthropic 크롤러
   'Claude-SearchBot', // Claude 검색 색인
   'PerplexityBot', // Perplexity 색인
+  'Perplexity-User', // Perplexity 사용자 요청 시 실시간 조회
+  'Claude-User', // Claude 사용자 요청 시 실시간 조회
+  'Google-Extended', // Gemini·AI 개요 학습·근거 사용 정책 제어
+  'Applebot-Extended', // Apple Intelligence 학습 정책 제어
 ];
 
 export default function robots(): MetadataRoute.Robots {

@@ -92,6 +92,31 @@ export function organizationNode() {
     },
     // 실제로 개설·운영 중인 채널만. 추정 URL 금지(lib/seo.ts SITE.sameAs 가 단일 출처).
     sameAs: SITE.sameAs,
+    /*
+      실제로 제공하는 개발 영역만(llms.txt "제공 서비스"와 같은 범위). 생성형 엔진이
+      "무엇을 하는 회사인가"를 주제 단위로 매칭하는 자리다. 마케팅 운영 업무는 넣지 않는다 —
+      그건 같은 사업자의 현랩(hyunlab.kr) 영역이다.
+      ⚠️ index.html · scripts/generate-purpose-landings.mjs 의 Organization 에도 같은 목록이 있다. 함께 고칠 것.
+    */
+    knowsAbout: [
+      '앱 개발',
+      'Flutter 앱 개발',
+      'iOS·Android 크로스플랫폼 앱 개발',
+      'MVP 개발',
+      '웹사이트 제작',
+      '홈페이지 제작',
+      '랜딩페이지 제작',
+      'Next.js 웹 개발',
+      '관리자 페이지 개발',
+      'ERP·업무 시스템 개발',
+      '예약·중개·O2O 플랫폼 개발',
+      'AI 챗봇 개발',
+      'AI 업무 자동화',
+      '사내 AI·RAG 구축',
+      'AI 음성 상담 개발',
+      '앱·웹 유지보수',
+      '소스코드 이관',
+    ],
   };
 }
 

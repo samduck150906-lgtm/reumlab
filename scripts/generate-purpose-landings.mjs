@@ -764,6 +764,26 @@ const SITE_ENTITY_NODES = [
     },
     identifier: { '@type': 'PropertyValue', name: '사업자등록번호', value: '303-28-65658' },
     sameAs: SAME_AS,
+    // lib/schema.ts organizationNode().knowsAbout 와 같은 목록 — 함께 고칠 것.
+    knowsAbout: [
+      '앱 개발',
+      'Flutter 앱 개발',
+      'iOS·Android 크로스플랫폼 앱 개발',
+      'MVP 개발',
+      '웹사이트 제작',
+      '홈페이지 제작',
+      '랜딩페이지 제작',
+      'Next.js 웹 개발',
+      '관리자 페이지 개발',
+      'ERP·업무 시스템 개발',
+      '예약·중개·O2O 플랫폼 개발',
+      'AI 챗봇 개발',
+      'AI 업무 자동화',
+      '사내 AI·RAG 구축',
+      'AI 음성 상담 개발',
+      '앱·웹 유지보수',
+      '소스코드 이관',
+    ],
   },
   {
     // 타입 근거는 lib/schema.ts businessNode() 주석 참고(ProfessionalService deprecated → LocalBusiness).
