@@ -251,11 +251,12 @@ br.br-pc { display: inline; }
 .hero h1 .hl { color: var(--accent); position: relative; white-space: nowrap; }
 .hero__sub { margin-top: 24px; font-size: 19px; line-height: 1.72; color: var(--ink-2); max-width: 560px; text-wrap: pretty; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 34px; }
+/* 문장 단락이다 — flex 로 두면 <b> 마다 별도 항목이 되어 문장 중간에서 줄이 끊긴다. */
 .hero__note {
-  margin-top: 22px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-top: 22px; display: block; line-height: 1.7;
   font-size: 14.5px; color: var(--ink-3); font-weight: 500;
 }
-.hero__note .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--line-2); }
+.hero__note .sep { display: inline-block; vertical-align: middle; margin: 0 8px; width: 4px; height: 4px; border-radius: 50%; background: var(--line-2); }
 .hero__note a { color: var(--ink-2); font-weight: 700; }
 
 /* hero stacked visual */
@@ -1604,26 +1605,21 @@ body[data-page-type="home"] .metric__label small { color: rgba(241, 245, 253, .5
     line-height: 1.68;
   }
   body[data-page-type="home"] .hero__cta { margin-top: 28px; }
-  body[data-page-type="home"] .hero__trust {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-  }
+  /* 같은 폭 2열 그리드는 긴 칩("상담부터 배포까지 단일 창구")을 글자 중간에서 끊었다.
+     칩이 제 글자 폭을 갖고, 남는 폭만 나눠 갖게 한다. */
+  body[data-page-type="home"] .hero__trust { gap: 8px; }
   body[data-page-type="home"] .hero__trust li {
+    flex: 1 1 auto;
     justify-content: center;
-    padding-inline: 10px;
+    padding-inline: 12px;
     text-align: center;
     line-height: 1.35;
+    word-break: keep-all;
   }
-  body[data-page-type="home"] .hero__trust li:last-child { grid-column: 1 / -1; }
   body[data-page-type="home"] .hero__note { font-size: 13.5px; }
   body[data-page-type="home"] .metric { padding: 26px 18px; }
 }
 
-@media (max-width: 380px) {
-  body[data-page-type="home"] .hero__trust { grid-template-columns: 1fr; }
-  body[data-page-type="home"] .hero__trust li:last-child { grid-column: auto; }
-}
 
 /* ============================================================
    마케팅 제휴 띠 — 현랩(HYUNLAB)으로 가는 문
