@@ -19,6 +19,7 @@ import { AI_WORKER_CANONICAL, aiWorkerDecision, WORKERS, workerCanonical, worker
 import { MULTIMODAL_CANONICAL, multimodalDecision } from '@/lib/multimodal-ai-worker';
 import { GENERATED_AUTOMATION_DOMAINS, automationCanonical, automationDecision } from '@/lib/automation-domains';
 import { SEO_WEBSITE_GUIDES, SEO_WEBSITE_PAGES } from '@/lib/seo-website';
+import { ANSWER_TOPICS, ANSWERS_HUB, answerCanonical, answerDecision } from '@/lib/answers';
 import { gitLastModified } from '../lib/lastmod';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -346,6 +347,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly',
     priority: 0.78,
   });
+
+  // 질문별 답변(/answers/) — 검색어 873개를 질문 유형 11개로 묶은 답변 페이지(lib/answers.ts).
+  // 색인 게이트를 통과한 토픽만 싣는다. 허브는 토픽 목록이라 항상 싣는다.
+  const answersMod = gitLastModified('lib/answers.ts');
+  out.push({ url: ANSWERS_HUB, lastModified: answersMod, changeFrequency: 'monthly', priority: 0.8 });
+  for (const t of ANSWER_TOPICS) {
+    if (!answerDecision(t.slug)?.inSitemap) continue;
+    out.push({ url: answerCanonical(t.slug), lastModified: answersMod, changeFrequency: 'monthly', priority: 0.78 });
+  }
 
   // 3축 — 비용·견적·가이드 (색인 게이트 통과분만 포함)
   for (const g of GUIDES) {

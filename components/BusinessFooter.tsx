@@ -33,6 +33,7 @@ export default function BusinessFooter({ topExtra }: Props) {
           (블로그 허브는 여기에 있어 1,400여 개). 발견 경로를 같은 수준으로 맞춘다.
         */}
         <nav className="footer-info" aria-label="자료" style={{ marginBottom: 14, display: 'flex', flexWrap: 'wrap', gap: '8px 16px' }}>
+          <Link href="/answers/">질문별 답변</Link>
           <Link href="/guide/">개발 가이드</Link>
           <Link href="/portfolio/">개발 사례</Link>
           <Link href="/cost/">업종별 개발 비용</Link>

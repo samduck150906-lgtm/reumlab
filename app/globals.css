@@ -2354,3 +2354,7 @@ body,
 body *:not(code):not(pre):not(kbd):not(samp) {
   font-family: var(--font-sans) !important;
 }
+
+/* 질문별 답변(/answers/) — 답변이 다루는 검색어를 화면에 그대로 보인다(숨김 텍스트 금지) */
+.answer-keywords-label { margin: 10px 0 4px; font-size: 12.5px; font-weight: 700; color: var(--text-dim); }
+.answer-keywords { margin: 0; font-size: 13.5px; line-height: 1.8; color: var(--text-sub); word-break: keep-all; overflow-wrap: anywhere; }

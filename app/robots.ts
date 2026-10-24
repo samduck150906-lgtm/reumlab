@@ -61,6 +61,9 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: '*', ...policy },
       // 네이버 Yeti — 서치어드바이저가 명시 그룹을 권장한다.
       { userAgent: 'Yeti', ...policy },
+      // Bing — ChatGPT 검색·Copilot 이 Bing 색인을 근거로 쓴다. Bing 웹마스터 도구 소유 확인(BingSiteAuth.xml)과
+      // IndexNow(netlify/plugins/indexnow-after-deploy)를 이미 쓰고 있어, 크롤러 그룹도 명시해 둔다.
+      { userAgent: ['bingbot', 'msnbot', 'BingPreview'], ...policy },
       { userAgent: AI_CRAWLERS, ...policy },
     ],
     sitemap: `${SITE.domain}/sitemap.xml`,

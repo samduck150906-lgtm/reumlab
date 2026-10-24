@@ -66,6 +66,8 @@ const GROUPS = [
   // 아래 regions('지역×서비스') 규칙에 먼저 걸린다. 그 앞에서 잡아 두지 않으면
   // 서치콘솔에 지역 페이지로 분류돼 클러스터 성과를 따로 볼 수 없다.
   { name: 'ai-worker', label: 'AI Worker 클러스터', test: (p) => /^\/ai-worker\/([^/]+\/)?$/.test(p) },
+  // 질문별 답변 — /answers/<topic>/ 2단 경로라 regions 규칙보다 먼저 잡는다.
+  { name: 'answers', label: '질문별 답변', test: (p) => p.startsWith('/answers/') },
   { name: 'guides', label: '가이드·비교', test: (p) => p.startsWith('/guide/') || p.startsWith('/compare/') },
   { name: 'blog', label: '블로그', test: (p) => p.startsWith('/blog/') },
   { name: 'portfolio', label: '개발 사례', test: (p) => p.startsWith('/portfolio/') },
