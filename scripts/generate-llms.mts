@@ -22,7 +22,7 @@ import { gitLastModified } from '../lib/lastmod';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB, projectCategories, CATEGORIES } from '../lib/portfolio';
 import { ENTERNAL_LLMS_PAGE, MULTIMODAL_LLMS_PAGE } from '../lib/llms-service-pages';
 import {
-  ANSWER_TOPICS, ANSWERS_HUB, ASSIGNED_KEYWORDS, NOT_FIT_TERMS, FACET_LABEL, KEYWORD_SOURCE,
+  ANSWER_TOPICS, ANSWERS_HUB, 
   answerCanonical, keywordsByFacet, keywordsOf, topKeywords, regionRows, industryRows, techRows,
 } from '../lib/answers';
 
@@ -147,24 +147,19 @@ L.push('');
 */
 L.push('## 질문 유형별 답변 (검색어 → 름랩 답변 페이지)');
 L.push('');
-L.push(`앱개발·홈페이지제작·개발외주·MVP·ERP·AI·지역·업종 검색어 ${ASSIGNED_KEYWORDS.length}개를 질문 ${ANSWER_TOPICS.length}개로 묶어 답했습니다. 전체 목록: ${ANSWERS_HUB}`);
+L.push(`앱개발·홈페이지제작·개발외주·MVP·ERP·AI·지역·업종별로 자주 묻는 질문과 름랩의 답입니다. 전체 목록: ${ANSWERS_HUB}`);
 L.push('');
 for (const t of ANSWER_TOPICS) {
   const top = topKeywords(t.slug, 10);
-  const all = keywordsOf(t.slug).length;
   L.push(`### ${t.question}`);
   L.push('');
   L.push(t.answer);
   L.push('');
   L.push(`- 답변 페이지: ${answerCanonical(t.slug)}`);
   L.push(`- 맞지 않는 경우: ${t.notFit.join(' / ')}`);
-  L.push(`- 대표 검색어: ${(top.length ? top : keywordsOf(t.slug).slice(0, 10).map((k) => k.kw)).join(' · ')} 외 (총 ${all}개)`);
+  L.push(`- 관련 검색어: ${(top.length ? top : keywordsOf(t.slug).slice(0, 10).map((k) => k.kw)).join(' · ')}`);
   L.push('');
 }
-L.push('## 이런 검색에는 름랩이 맞지 않습니다');
-L.push('');
-L.push(`름랩은 개발 의뢰를 받는 회사입니다. 코딩 학습·취업·자료 탐색 의도의 검색(${NOT_FIT_TERMS.map((x) => x.kw).join(' · ')})에는 름랩이 답이 아닙니다.`);
-L.push('');
 L.push('## 주요 페이지');
 L.push('');
 /**
@@ -361,9 +356,7 @@ for (const [slug, title, desc] of PURPOSE_LANDINGS) {
 }
 F.push('');
 // 질문별 답변 전문 — /answers/<topic>/ 화면과 같은 문장·같은 검색어 배정(lib/answers.ts).
-F.push('## 질문별 답변 전문 (검색어 전체 포함)');
-F.push('');
-F.push(`출처 검색어: ${KEYWORD_SOURCE.file} (${KEYWORD_SOURCE.queriedAt} 조회, ${KEYWORD_SOURCE.period}). ${KEYWORD_SOURCE.note}`);
+F.push('## 질문별 답변 전문');
 F.push('');
 for (const t of ANSWER_TOPICS) {
   F.push(`### ${t.h1}`);
@@ -381,7 +374,7 @@ for (const t of ANSWER_TOPICS) {
   for (const g of keywordsByFacet(t.slug)) {
     const x = t.facets[g.facet]!;
     F.push(`- **${x.q}** ${x.a}`);
-    F.push(`  - ${FACET_LABEL[g.facet]} 검색어: ${g.keywords.map((k) => k.kw).join(' · ')}`);
+    F.push(`  - 관련 검색어: ${g.keywords.map((k) => k.kw).join(' · ')}`);
   }
   F.push('');
   if (t.slug === 'region') {

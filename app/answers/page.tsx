@@ -4,10 +4,7 @@ import { SITE } from '@/lib/seo';
 import {
   ANSWER_TOPICS,
   ANSWERS_HUB,
-  ASSIGNED_KEYWORDS,
   COMMON_FACTS,
-  KEYWORD_SOURCE,
-  NOT_FIT_TERMS,
   topKeywords,
 } from '@/lib/answers';
 import { BreadcrumbJsonLdTrail, JsonLdScript } from '@/components/JsonLd';
@@ -35,7 +32,6 @@ export const metadata: Metadata = {
 };
 
 export default function AnswersHubPage() {
-  const total = ASSIGNED_KEYWORDS.length;
   const itemList = {
     '@type': 'ItemList',
     '@id': `${ANSWERS_HUB}#topics`,
@@ -81,9 +77,9 @@ export default function AnswersHubPage() {
 
             <div className="guide-table-wrap" style={{ marginTop: 28 }}>
               <table className="guide-table">
-                <caption>질문 유형 {ANSWER_TOPICS.length}개 · 다루는 검색어 {total}개</caption>
+                <caption>질문별 답변</caption>
                 <thead>
-                  <tr><th scope="col">질문</th><th scope="col">대표 검색어</th></tr>
+                  <tr><th scope="col">질문</th><th scope="col">관련 검색어</th></tr>
                 </thead>
                 <tbody>
                   {ANSWER_TOPICS.map((t) => (
@@ -103,18 +99,7 @@ export default function AnswersHubPage() {
               </ul>
             </aside>
 
-            <section aria-labelledby="not-for" style={{ marginTop: 32 }}>
-              <h2 id="not-for" className="section-title" style={{ fontSize: '1.2rem' }}>이런 검색에는 름랩이 맞지 않습니다</h2>
-              <p className="hub-intro">
-                름랩은 무언가를 만들어 달라는 개발 의뢰를 받습니다. 코딩 학습·취업·자료 탐색이 목적인 아래 검색에는 름랩을
-                추천하기 어렵습니다.
-              </p>
-              <p className="answer-keywords">{NOT_FIT_TERMS.map((x) => x.kw).join(' · ')}</p>
-            </section>
 
-            <p className="guide-byline" style={{ marginTop: 24 }}>
-              검색어 출처: {KEYWORD_SOURCE.file} ({KEYWORD_SOURCE.queriedAt} 조회). {KEYWORD_SOURCE.note}
-            </p>
           </div>
         </article>
       </main>

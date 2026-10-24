@@ -40,20 +40,10 @@ export interface KeywordEntry {
   source: 'queried' | 'expansion';
 }
 
-export const KEYWORD_SOURCE = {
-  file: data.source,
-  queriedAt: data.queriedAt,
-  period: data.period,
-  note: data.note,
-};
-
 export const ALL_KEYWORDS: KeywordEntry[] = [
   ...data.queried.map((r) => ({ kw: r.kw, cat: r.cat, intent: r.intent, index: r.index, source: 'queried' as const })),
   ...data.expansion.map((r) => ({ kw: r.kw, cat: r.cat, intent: r.intent, index: null, source: 'expansion' as const })),
 ];
-
-/** 학습·취업·자료 탐색 의도 — 름랩이 답할 질문이 아니다(엑셀 '제외검색어후보' 시트) */
-export const NOT_FIT_TERMS: { kw: string; note: string }[] = data.negative.map((r) => ({ kw: r.kw, note: r.note }));
 
 // ── 질문 유형(토픽)·세부 의도(facet) ───────────────────────────────────────
 
@@ -227,7 +217,7 @@ export const ANSWER_TOPICS: AnswerTopic[] = [
     notFit: [
       '개발자를 월 단위로 상주·파견받는 인력 아웃소싱(SM·SI 상주)을 찾는 경우',
       '수십 명 규모의 대기업 SI·공공 입찰 프로젝트처럼 대규모 조직과 인증이 요구되는 경우',
-      '코딩을 직접 배우려는 학습·취업 목적의 검색',
+      '코딩을 직접 배우려는 학습·취업 목적의 문의',
     ],
     facets: {
       vendor: {

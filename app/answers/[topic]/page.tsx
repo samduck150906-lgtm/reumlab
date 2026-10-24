@@ -6,7 +6,6 @@ import {
   ANSWER_TOPICS,
   CHOOSING_CRITERIA,
   COMMON_FACTS,
-  FACET_LABEL,
   answerCanonical,
   answerDecision,
   getAnswerTopic,
@@ -135,14 +134,14 @@ export default function AnswerTopicPage({ params }: Props) {
             </section>
 
             <section aria-labelledby="facets" style={{ marginTop: 32 }}>
-              <h2 id="facets" className="section-title" style={{ fontSize: '1.2rem' }}>검색어별 답변</h2>
+              <h2 id="facets" className="section-title" style={{ fontSize: '1.2rem' }}>자주 묻는 질문</h2>
               {groups.map((g) => {
                 const x = t.facets[g.facet]!;
                 return (
                   <div key={g.facet} style={{ marginTop: 20 }}>
                     <h3 id={`facet-${g.facet}`} style={{ fontSize: '1.05rem', scrollMarginTop: 80 }}>{x.q}</h3>
                     <p className="hub-intro">{x.a}</p>
-                    <p className="answer-keywords-label">{FACET_LABEL[g.facet]} · 이 답변이 다루는 검색어 {g.keywords.length}개</p>
+                    <p className="answer-keywords-label">관련 검색어</p>
                     <KeywordList keywords={g.keywords.map((k) => k.kw)} />
                   </div>
                 );
@@ -154,7 +153,7 @@ export default function AnswerTopicPage({ params }: Props) {
                 <table className="guide-table">
                   <caption>지역별 진행 방식 — 름랩 사업장은 화성 동탄 한 곳입니다</caption>
                   <thead>
-                    <tr><th scope="col">지역</th><th scope="col">진행 방식</th><th scope="col">지역 안내 페이지</th><th scope="col">검색어</th></tr>
+                    <tr><th scope="col">지역</th><th scope="col">진행 방식</th><th scope="col">지역 안내 페이지</th><th scope="col">관련 검색어</th></tr>
                   </thead>
                   <tbody>
                     {regionRows().map((r) => (
@@ -175,7 +174,7 @@ export default function AnswerTopicPage({ params }: Props) {
                 <table className="guide-table">
                   <caption>업종·기능별 안내 페이지</caption>
                   <thead>
-                    <tr><th scope="col">업종·기능</th><th scope="col">구분</th><th scope="col">관련 페이지</th><th scope="col">검색어</th></tr>
+                    <tr><th scope="col">업종·기능</th><th scope="col">구분</th><th scope="col">관련 페이지</th><th scope="col">관련 검색어</th></tr>
                   </thead>
                   <tbody>
                     {industryRows().map((r) => (
@@ -196,7 +195,7 @@ export default function AnswerTopicPage({ params }: Props) {
                 <table className="guide-table">
                   <caption>기술별 름랩 대응</caption>
                   <thead>
-                    <tr><th scope="col">기술</th><th scope="col">대응</th><th scope="col">설명</th><th scope="col">관련 페이지</th><th scope="col">검색어</th></tr>
+                    <tr><th scope="col">기술</th><th scope="col">대응</th><th scope="col">설명</th><th scope="col">관련 페이지</th><th scope="col">관련 검색어</th></tr>
                   </thead>
                   <tbody>
                     {techRows().map((r) => (

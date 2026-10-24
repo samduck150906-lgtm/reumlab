@@ -51,6 +51,16 @@ if (!llms.includes('## 질문 유형별 답변')) fail.push('llms.txt 에 질문
 const fullMissing = keywords.filter((k) => !full.includes(k));
 if (fullMissing.length) fail.push(`llms-full.txt 에 없는 검색어 ${fullMissing.length}개: ${fullMissing.slice(0, 10).join(', ')}`);
 
+// 5) 내부 분석 자료가 공개 산출물에 새지 않는다 — 원본 파일명·조회 메모·제외 검색어 목록.
+//    out/ 의 모든 HTML·txt·xml 을 훑는다(답변 페이지만이 아니라 사이트 전체).
+const LEAKS = ['.xlsx', 'ReumLab_App_Web_Keywords', 'geo-keywords', '검색어 출처', '참고지수', '데이터랩 미조회', '수요 미검증', 'expansion 은', '제외검색어', '이런 검색에는 름랩이 맞지 않습니다'];
+const walk = (d) => readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(join(d, e.name)) : [join(d, e.name)]));
+for (const f of walk(OUT)) {
+  if (!/\.(html|txt|xml|json)$/.test(f) || f.includes('_next')) continue;
+  const body = readFileSync(f, 'utf8');
+  for (const w of LEAKS) if (body.includes(w)) fail.push(`내부 자료 노출 "${w}": ${f}`);
+}
+
 if (fail.length) {
   console.error('✖ 질문별 답변 검사 실패');
   for (const f of fail.slice(0, 40)) console.error('  -', f);
