@@ -56,7 +56,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
             <a href="/">름랩</a><span aria-hidden="true">/</span>
             {isHub ? <span>개발 의뢰 범위 안내</span> : <><a href={AGENCY_BASE}>개발 의뢰 범위 안내</a><span aria-hidden="true">/</span><span>{page.primaryKeyword}</span></>}
           </nav>
-          <p className={styles.eyebrow}>{page.serviceAxis} · 기획과 검수 기준</p>
+          <p className={styles.eyebrow}>개발사 름랩 · {page.serviceAxis} 개발 범위</p>
           <h1>{page.h1}</h1>
           <p className={styles.summary}>{page.summary}</p>
           <div className={styles.actions}>
@@ -71,6 +71,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
               <strong>이 글에서 확인할 내용</strong>
               <ol>
                 {directory && <li><a href="#agency-directory">업무별 개발 범위 찾기</a></li>}
+                {!isHub && <li><a href="#agency-scope">름랩이 맡는 개발 범위</a></li>}
                 {page.sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.heading}</a></li>)}
                 <li><a href="#agency-faq">자주 묻는 질문</a></li>
                 <li><a href="#agency-related">함께 검토할 개발 범위</a></li>
@@ -90,6 +91,17 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
                 </li>)}</ul>
               </details>)}
               </nav>
+            </section>}
+            {!isHub && <section id="agency-scope" className={styles.section}>
+              <h2>{page.primaryKeyword}, 름랩이 맡는 개발 범위</h2>
+              <p>름랩은 {page.industry} {page.serviceAxis} 개발을 맡아 화면과 권한·예외·연동 범위를 글로 먼저 확정한 뒤 만듭니다. 이 글에 적은 {page.sections.length}개 항목이 그대로 {page.industry} {page.serviceAxis} 견적 근거이자 검수 기준이 되고, 합의하지 않은 기능은 넣지 않습니다.</p>
+              <ul className={styles.cards}>
+                <li><strong>진행 순서</strong> — {page.industry}에서 지금 쓰는 양식과 담당자 확인 순서를 받고, 공식 자료를 확인하고, {page.serviceAxis} 범위를 글로 확정한 뒤 개발하고, 검수 기준으로 함께 확인하고 인수합니다.</li>
+                <li><strong>드리는 산출물</strong> — {page.primaryKeyword} 범위에서 동작하는 화면과 권한표, 예외 처리 목록, 연동 항목과 실패 처리, 검수 기준표, 인수 문서를 함께 드립니다.</li>
+                <li><strong>설계 전에 확인한 자료</strong> — {page.industry} {page.serviceAxis} 설계에 앞서 공식 자료 {page.evidenceSources.length}건을 읽고, 쓴 범위와 쓰지 않은 범위를 이 글 아래에 그대로 적었습니다.</li>
+                <li><strong>범위에 넣지 않는 것</strong> — {page.industry} 운영 대행과 콘텐츠 작성·광고 집행은 {page.serviceAxis} 개발 범위에 넣지 않고, 법령 해당 여부를 화면이 판정하게 만들지 않습니다.</li>
+              </ul>
+              <p>지금 {page.primaryKeyword} 범위를 정하는 중이라면 쓰고 있는 양식과 자주 되돌아가는 예외를 알려 주시면 름랩이 그 자료로 범위를 좁혀 드립니다.</p>
             </section>}
             {page.sections.map((section, index) => {
               const paragraphs = section.fields.flatMap(field => [...page[field]]);
