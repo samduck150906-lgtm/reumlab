@@ -124,6 +124,19 @@ export default function LandingPage({ slug }) {
         </div>
       </section>
 
+      {c.additionalSections.length > 0 && (
+        <section className="border-y border-slate-100 bg-slate-50 px-5 py-16 sm:px-6 sm:py-20">
+          <div className="mx-auto max-w-3xl space-y-10">
+            {c.additionalSections.map(({ h, body }) => (
+              <div key={h}>
+                <h2 className="font-display text-2xl font-bold tracking-tight text-navy-900">{h}</h2>
+                <p className="mt-5 text-[15px] leading-relaxed text-slate-600 sm:text-base">{body}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ── 가격 가이드 ── */}
       <section className="bg-navy-950 px-5 py-16 sm:px-6 sm:py-20">
         <div className="mx-auto max-w-5xl">

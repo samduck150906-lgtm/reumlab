@@ -149,6 +149,14 @@ export default function HubPage({ hubSlug }) {
               </div>
             ))}
 
+            {content.relatedLinks?.length > 0 && (
+              <ul className="space-y-3 text-sm text-accent-deep">
+                {content.relatedLinks.map(({ href, label }) => (
+                  <li key={href}><Link href={href} className="underline underline-offset-4">{label} →</Link></li>
+                ))}
+              </ul>
+            )}
+
             <h2 className="mt-12 font-display text-xl font-bold tracking-tight text-navy-900 sm:text-2xl">
               자주 묻는 질문
             </h2>
