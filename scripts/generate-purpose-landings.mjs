@@ -870,6 +870,9 @@ const BASE_REGIONS = [
   { slug: 'dongtan', ko: '동탄' },
   { slug: 'hwaseong', ko: '화성' },
   { slug: 'suwon', ko: '수원' },
+  // lib/pseo.ts INDEXED_REGION_SLUGS 와 같은 집합 (Next 번들 밖이라 손으로 맞춘다)
+  { slug: 'seongnam', ko: '성남' },
+  { slug: 'bundang', ko: '분당' },
 ];
 /**
  * 이 랜딩이 덮어쓰는 Next 서비스 허브가 연결하던 하위 업종 페이지.
