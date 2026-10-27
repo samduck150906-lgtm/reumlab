@@ -66,7 +66,9 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: ['bingbot', 'msnbot', 'BingPreview'], ...policy },
       { userAgent: AI_CRAWLERS, ...policy },
     ],
-    sitemap: `${SITE.domain}/sitemap.xml`,
+    // sitemap-development-agency.xml(개발사 페이지 약 1,800개)은 sitemap.xml 인덱스와 분리된
+    // 독립 사이트맵이라, 여기서 선언하지 않으면 콘솔에 직접 제출하지 않는 한 크롤러가 찾지 못한다.
+    sitemap: [`${SITE.domain}/sitemap.xml`, `${SITE.domain}/sitemap-development-agency.xml`],
     host: SITE.domain.replace(/^https?:\/\//, ''),
   };
 }
