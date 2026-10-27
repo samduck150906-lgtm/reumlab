@@ -273,7 +273,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     canonical: 'https://reumlab.com/플랫폼개발/',
   },
 
-  기업용ERP: {
+  기업용erp: {
     title: '맞춤형 ERP·관리자 시스템 개발 외주 | 업무 자동화 — 름랩 REUMLAB',
     description:
       'CRM, 사내 시스템, 관리자 웹 고도화. 기존 데이터를 통합하여 업무 효율을 혁신합니다.',
@@ -291,7 +291,7 @@ export const PAGE_SEO_MAP: Record<string, PageSeo> = {
     secondary: ['CRM 시스템', '백오피스 구축', '관리자 페이지 고도화'],
     intent: '정보/전환',
     funnel: '중간',
-    canonical: 'https://reumlab.com/기업용ERP/',
+    canonical: 'https://reumlab.com/기업용erp/',
   },
 
   // ─── 영문 서비스 URL (구글 광고 랜딩 + 영문 검색) ───
@@ -1091,7 +1091,7 @@ for (const [slug, section] of Object.entries(SERVICE_ACCEPTANCE)) {
 }
 
 export const REDIRECTED_PILLAR_SLUGS = new Set(['스타트업MVP', '앱개발', '솔루션SaaS']);
-export const NOINDEX_PILLAR_SLUGS = new Set(['웹개발', '플랫폼개발', '기업용ERP']);
+export const NOINDEX_PILLAR_SLUGS = new Set(['웹개발', '플랫폼개발', '기업용erp']);
 
 export const ALL_SLUGS = Object.keys(PAGE_SEO_MAP).filter(
   (s) => s !== '' && !REDIRECTED_PILLAR_SLUGS.has(s),
@@ -1108,7 +1108,7 @@ export const PILLAR_SERVICE_TYPE: Record<string, string> = {
   // 한글 필러 (현재 noindex 이지만 렌더는 되므로 스키마도 함께 유지)
   웹개발: '웹사이트 개발',
   플랫폼개발: '플랫폼 개발',
-  기업용ERP: 'ERP 시스템 개발',
+  기업용erp: 'ERP 시스템 개발',
   // 영문 랜딩
   'app-development': '모바일 앱 개발',
   'web-development': '웹사이트 개발',

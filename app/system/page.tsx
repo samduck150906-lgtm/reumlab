@@ -122,7 +122,7 @@ export default function SystemHubPage() {
               <Link href="/cost/">업종별 앱 개발 비용 — 얼마가 드나</Link>
               <Link href="/solution/">업종별 솔루션 구축 — 어떻게 구축하나</Link>
               <Link href="/website/">업종별 홈페이지 제작</Link>
-              <Link href="/기업용ERP/">맞춤형 ERP·업무 시스템</Link>
+              <Link href="/기업용erp/">맞춤형 ERP·업무 시스템</Link>
               <Link href="/admin-page-development/">관리자 페이지 개발</Link>
             </div>
           </div>

@@ -194,7 +194,7 @@ export const SYSTEMS: SystemDef[] = [
       { href: '/app/restaurant/', label: '식당 앱 기능 구성 보기' },
       { href: '/cost/restaurant/', label: '식당 앱 개발 비용' },
       { href: '/app/cafe/', label: '카페 모바일 오더 기능' },
-      { href: '/기업용ERP/', label: '매장 운영 관리 시스템' },
+      { href: '/기업용erp/', label: '매장 운영 관리 시스템' },
     ],
   },
   {
@@ -392,7 +392,7 @@ export const SYSTEMS: SystemDef[] = [
       { q: '통신이 안 되는 현장에서도 쓸 수 있나요?', a: '입력한 내용을 단말에 먼저 저장하고 연결이 복구되면 자동 전송하는 방식으로 대응합니다. 범위에 따라 비용이 올라가므로 실제로 통신이 끊기는 현장이 있는지 먼저 확인합니다.' },
     ],
     related: [
-      { href: '/기업용ERP/', label: '맞춤형 ERP·업무 시스템 개발' },
+      { href: '/기업용erp/', label: '맞춤형 ERP·업무 시스템 개발' },
       { href: '/admin-page-development/', label: '관리자 페이지 개발' },
       { href: '/solution/construction/', label: '건설·시공 관리 시스템 구축' },
       { href: '/solution/labor-hr/', label: '노무·인사 솔루션 구축' },
@@ -459,7 +459,7 @@ export const SYSTEMS: SystemDef[] = [
       { q: '지금 쓰는 엑셀 자료를 옮길 수 있나요?', a: '가능합니다. 다만 항목 구조가 정리돼 있을수록 이전이 빠릅니다. 현재 쓰시는 양식을 먼저 보고 이전 범위와 일정을 산정합니다.' },
     ],
     related: [
-      { href: '/기업용ERP/', label: '기업 업무 시스템 개발' },
+      { href: '/기업용erp/', label: '기업 업무 시스템 개발' },
       { href: '/admin-page-development/', label: '백오피스·관리자 구축' },
       { href: '/solution/logistics/', label: '물류 관리 시스템 구축' },
       { href: '/solution/wholesale/', label: '도소매·유통 시스템 구축' },
