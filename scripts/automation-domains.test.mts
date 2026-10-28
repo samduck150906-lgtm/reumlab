@@ -34,7 +34,9 @@ test('Priority S 33개는 검색어 치환이 아닌 독립 업무 정보를 갖
       assert.ok(domain.workflows.length >= 5, `${domain.slug}: existing service research workflows`);
     }
     assert.ok(domain.constraints.length >= 2, `${domain.slug}: constraints`);
-    assert.ok(domain.faqs.length >= 6, `${domain.slug}: faqs`);
+    // 공개 분야(generated)는 분야 고유 질문 4개만 갖는다 — 공통 질문(비용·기간·보안 등)은 /ai-automation/ 허브 FAQ 로 옮겨
+    // 30개 페이지가 같은 FAQ 를 반복하지 않도록 했다(scripts/generate-purpose-landings.mjs FAQ_BY_SLUG).
+    assert.ok(domain.faqs.length >= (domain.publishMode === 'generated' ? 4 : 6), `${domain.slug}: faqs`);
     assert.ok(domain.directAnswer.length >= 80, `${domain.slug}: directAnswer`);
     assert.ok(domain.description.length >= 70, `${domain.slug}: description`);
     assert.ok(domain.implementationTypes.length >= 3, `${domain.slug}: implementationTypes`);

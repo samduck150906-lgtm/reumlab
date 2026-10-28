@@ -121,7 +121,7 @@ export default function RegionServicePage({ params }: Props) {
   // 이전에는 "{지역}에서 {서비스}, 어떻게 진행되나요?" 라는 지역명 치환 질문이
   // 335개 페이지에 똑같이 깔려 있었다.
   const combinedFaq = profile?.faq ?? service.faq2;
-  const faqs = [region.faq, service.faq, combinedFaq];
+  const faqs = profile ? [region.faq, service.faq, combinedFaq, profile.faq2] : [region.faq, service.faq, combinedFaq];
 
   // 같은 지역의 다른 서비스 — 지역 페이지가 서비스 허브 하나로만 이어지던 고립을 푼다.
   // 거점 지역이면 이 링크들도 모두 색인 대상이라 지역 단위 클러스터가 만들어진다.
@@ -236,6 +236,7 @@ export default function RegionServicePage({ params }: Props) {
             {profile ? (
               <>
                 <p className="hub-intro">{profile.lead}</p>
+                <p className="hub-intro" style={{ marginTop: 12 }}>{profile.scene}</p>
                 {service.useCases.map((u) => (
                   <div key={u.h} style={{ marginTop: 16 }}>
                     <h3 className="section-title" style={{ fontSize: '1.05rem', marginBottom: 6 }}>{u.h}</h3>
@@ -264,6 +265,17 @@ export default function RegionServicePage({ params }: Props) {
               ))}
             </ul>
           </div>
+
+          {profile && (
+            <div className="section-inner" style={{ paddingTop: 8 }}>
+              <h2 className="section-title" style={{ fontSize: '1.3rem' }}>상담 전에 정해 오면 견적이 빨라지는 것</h2>
+              <ul className="hub-intro" style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
+                {profile.checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* 비대면 진행 — 거리에 따라 실제로 달라지는 내용만 다르게 쓴다 */}
           <div className="section-inner" style={{ paddingTop: 8 }}>

@@ -1,3 +1,4 @@
+import extraRaw from '../content/region-service-copy.json';
 /**
  * 지역 × 서비스 "조합" 고유 콘텐츠.
  *
@@ -25,10 +26,19 @@ export interface RegionServiceProfile {
   lead: string;
   /** 조합 고유 FAQ 1개 */
   faq: { q: string; a: string };
+  /**
+   * 2026-10 사이트 전체 유사문서 보고 후 보강(content/region-service-copy.json):
+   * 거점 25조합이 lead·faq 한 쌍 말고는 서비스 틀 문장을 공유해 분당↔성남 앱개발이 Jaccard 0.50 이었다.
+   * 조합마다 따로 쓴 상황·체크리스트·질문 하나를 더 둔다. 사업장은 화성 동탄 한 곳 — 지점처럼 읽히는 표현 금지.
+   */
+  scene: string;
+  checklist: string[];
+  faq2: { q: string; a: string };
 }
+type ProfileSeed = Pick<RegionServiceProfile, 'lead' | 'faq'>;
 
 /** key = `${regionSlug}:${serviceSlug}` */
-export const REGION_SERVICE_PROFILES: Record<string, RegionServiceProfile> = {
+const PROFILE_SEEDS: Record<string, ProfileSeed> = {
   // ───────────────────────── 동탄 (현지 사업장) ─────────────────────────
   'dongtan:app-development': {
     lead: '동탄에서 매장용 앱을 준비한다면 고객의 예약 신청과 직원의 예약 확정을 구분하세요. 사업장 대면 상담이 필요하면 먼저 일정을 협의하고, 상담에는 현재 예약대장과 취소·변경 규칙을 준비하면 화면 범위를 정하는 데 도움이 됩니다.',
@@ -213,6 +223,16 @@ export const REGION_SERVICE_PROFILES: Record<string, RegionServiceProfile> = {
     },
   },
 };
+
+const EXTRA = extraRaw as unknown as Record<string, Pick<RegionServiceProfile, 'scene' | 'checklist'> & { faq: RegionServiceProfile['faq2'] }>;
+
+export const REGION_SERVICE_PROFILES: Record<string, RegionServiceProfile> = Object.fromEntries(
+  Object.entries(PROFILE_SEEDS).map(([key, seed]) => {
+    const extra = EXTRA[key];
+    if (!extra) throw new Error(`Missing region-service copy: ${key} (content/region-service-copy.json)`);
+    return [key, { ...seed, scene: extra.scene, checklist: extra.checklist, faq2: extra.faq }];
+  }),
+);
 
 export function regionServiceProfile(
   regionSlug: string,
