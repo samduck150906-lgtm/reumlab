@@ -109,6 +109,8 @@ export function organizationNode() {
       'Next.js 웹 개발',
       '관리자 페이지 개발',
       'ERP·업무 시스템 개발',
+      '결제·PG 연동 개발',
+      '토스페이먼츠 결제 연동',
       '예약·중개·O2O 플랫폼 개발',
       'AI 챗봇 개발',
       'AI 업무 자동화',

@@ -80,6 +80,10 @@ export default function AnswerTopicPage({ params }: Props) {
   const canonical = answerCanonical(t.slug);
   const faqs = topicFaqs(t);
   const groups = keywordsByFacet(t.slug);
+  // FAQPage 스키마(topicFaqs)에는 있는데 배정된 검색어가 없어 화면에 안 나오던 질문 —
+  // 스키마와 화면이 어긋나면 검색엔진이 구조화 데이터를 신뢰하지 않는다. 검색어 목록 없이 함께 보여 준다.
+  const shownFacetQs = new Set(groups.map((g) => t.facets[g.facet]!.q));
+  const extraFaqs = faqs.slice(1).filter((f) => !shownFacetQs.has(f.q));
   const crumbs = [
     { name: '홈', url: `${SITE.domain}/` },
     { name: '질문별 답변', url: `${SITE.domain}/answers/` },
@@ -146,6 +150,12 @@ export default function AnswerTopicPage({ params }: Props) {
                   </div>
                 );
               })}
+              {extraFaqs.map((f) => (
+                <div key={f.q} style={{ marginTop: 20 }}>
+                  <h3 style={{ fontSize: '1.05rem' }}>{f.q}</h3>
+                  <p className="hub-intro">{f.a}</p>
+                </div>
+              ))}
             </section>
 
             {t.slug === 'region' && (
