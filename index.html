@@ -47,7 +47,8 @@ window.dataLayer=window.dataLayer||[];
      단일 출처는 lib/schema.ts 다. 이 파일은 Next 레이아웃을 타지 않는 정적 홈이라 같은 값을 손으로
      맞춰 둔다. lib/schema.ts 의 @id·값을 바꾸면 여기와 scripts/generate-purpose-landings.mjs 도 함께 고칠 것.
      사업장은 동탄 한 곳뿐 — 지역 페이지가 많다는 이유로 사업체 노드를 복제하지 않는다.
-     가격표(hasOfferCatalog)는 실제 가격 섹션이 렌더되는 이 홈에서만 선언한다. -->
+     가격표(hasOfferCatalog)는 실제 가격 섹션이 렌더되는 이 홈에서만 선언한다.
+     끝의 운영 주체(이터널식스)·브랜드(름랩·현랩) 노드는 config/brand-entities.json 과 같아야 한다. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,6 +65,8 @@ window.dataLayer=window.dataLayer||[];
     {
       "@type": "Organization",
       "@id": "https://reumlab.com/#organization",
+      "parentOrganization": {"@id": "https://reumlab.com/#legal-organization"},
+      "brand": {"@id": "https://reumlab.com/#brand"},
       "name": "름랩",
       "alternateName": "REUMLAB",
       "url": "https://reumlab.com/",
@@ -163,7 +166,10 @@ window.dataLayer=window.dataLayer||[];
         {"@type": "Question", "name": "계약 후 추가 비용이 발생할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "계약서에 확정된 개발 범위는 추가 비용 없이 진행합니다. 범위 밖의 신규 기능, 외부 서비스 실비(호스팅·결제·스토어 계정 등)는 진행 전 비용과 일정을 먼저 안내드립니다."}},
         {"@type": "Question", "name": "실제 고객사와 서비스명이 공개되지 않은 이유는 무엇인가요?", "acceptedAnswer": {"@type": "Answer", "text": "일부 프로젝트명과 고객사 URL은 공개하지 않습니다. 공개 가능한 개발 범위와 주요 기능, 화면 구성 예시를 익명화된 사례로 제공합니다. 사례 카드와 모달의 화면은 예시 데이터 목업이며 실제 고객 화면이나 성과 증빙이 아닙니다."}}
       ]
-    }
+    },
+    {"@type": "Organization", "@id": "https://reumlab.com/#legal-organization", "name": "이터널식스", "legalName": "이터널식스", "url": "https://reumlab.com/", "identifier": {"@type": "PropertyValue", "name": "사업자등록번호", "value": "303-28-65658"}, "brand": [{"@id": "https://reumlab.com/#brand"}, {"@id": "https://hyunlab.kr/#brand"}]},
+    {"@type": "Brand", "@id": "https://reumlab.com/#brand", "name": "름랩", "alternateName": "REUMLAB", "url": "https://reumlab.com/", "description": "개발 브랜드 — 앱·웹사이트·MVP·관리자 페이지·ERP·AI 기능 개발"},
+    {"@type": "Brand", "@id": "https://hyunlab.kr/#brand", "name": "현랩", "alternateName": ["HYUN LAB", "HYUNLAB"], "url": "https://hyunlab.kr/", "description": "그로스 마케팅 브랜드 — 검색(SEO·GEO)·콘텐츠·데이터 계측·리드 자동화"}
   ]
 }
 </script>

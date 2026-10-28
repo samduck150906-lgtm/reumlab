@@ -134,7 +134,9 @@ for (const p of indexed) {
   const og = p.html.match(/<meta property="og:site_name" content="([^"]*)"/i);
   if (og) siteNames.add(og[1]);
   for (const m of p.html.matchAll(/"@type":"WebSite","@id":"[^"]*","url":"[^"]*","name":"([^"]*)"/g)) schemaWebsiteNames.add(m[1]);
-  for (const m of p.html.matchAll(/"@type":"Organization","@id":"[^"]*","name":"([^"]*)"/g)) schemaOrgNames.add(m[1]);
+  // 사이트명 신호는 브랜드 조직(#organization)만 본다. 법적 운영 주체(#legal-organization, 이터널식스)는
+  // 상호라서 사이트명과 다른 것이 정상이다.
+  for (const m of p.html.matchAll(/"@type":"Organization","@id":"[^"]*\/#organization","name":"([^"]*)"/g)) schemaOrgNames.add(m[1]);
   const t = (p.html.match(/<title>([^<]*)<\/title>/) || [, ''])[1];
   if (t && !t.includes(BRAND)) {
     noBrandTitle++;

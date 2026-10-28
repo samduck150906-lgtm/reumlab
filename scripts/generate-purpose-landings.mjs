@@ -755,6 +755,9 @@ const POSTAL_ADDRESS = {
 const BUSINESS_DESC =
   '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 화성 동탄에 소재하며 수원을 포함한 전국 프로젝트를 비대면으로 진행합니다. 토스페이먼츠 협력사로서 결제(PG) 가입부터 연동·테스트까지 함께 진행하고, 출시 후 마케팅은 같은 사업자의 현랩(HYUNLAB)과 이어져 개발부터 결제·마케팅까지 한 곳에서 맡길 수 있습니다.';
 
+/** 법적 운영 주체(이터널식스)와 두 브랜드(름랩·현랩) — lib/schema.ts 와 같은 JSON 을 읽는다 */
+const BRAND_ENTITIES = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/brand-entities.json'), 'utf8'));
+
 const SITE_ENTITY_NODES = [
   {
     '@type': 'WebSite',
@@ -768,6 +771,8 @@ const SITE_ENTITY_NODES = [
   {
     '@type': 'Organization',
     '@id': SCHEMA_ID.organization,
+    parentOrganization: { '@id': 'https://reumlab.com/#legal-organization' },
+    brand: { '@id': 'https://reumlab.com/#brand' },
     name: '름랩',
     alternateName: 'REUMLAB',
     url: DOMAIN + '/',
@@ -833,6 +838,7 @@ const SITE_ENTITY_NODES = [
     parentOrganization: { '@id': SCHEMA_ID.organization },
     sameAs: SAME_AS,
   },
+  ...BRAND_ENTITIES,
 ];
 
 /** JSON-LD 안전 직렬화 — 값에 `</script>` 가 섞여 script 가 조기 종료되는 것을 막는다 */

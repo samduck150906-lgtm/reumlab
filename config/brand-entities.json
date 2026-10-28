@@ -1,0 +1,27 @@
+[
+  {
+    "@type": "Organization",
+    "@id": "https://reumlab.com/#legal-organization",
+    "name": "이터널식스",
+    "legalName": "이터널식스",
+    "url": "https://reumlab.com/",
+    "identifier": { "@type": "PropertyValue", "name": "사업자등록번호", "value": "303-28-65658" },
+    "brand": [{ "@id": "https://reumlab.com/#brand" }, { "@id": "https://hyunlab.kr/#brand" }]
+  },
+  {
+    "@type": "Brand",
+    "@id": "https://reumlab.com/#brand",
+    "name": "름랩",
+    "alternateName": "REUMLAB",
+    "url": "https://reumlab.com/",
+    "description": "개발 브랜드 — 앱·웹사이트·MVP·관리자 페이지·ERP·AI 기능 개발"
+  },
+  {
+    "@type": "Brand",
+    "@id": "https://hyunlab.kr/#brand",
+    "name": "현랩",
+    "alternateName": ["HYUN LAB", "HYUNLAB"],
+    "url": "https://hyunlab.kr/",
+    "description": "그로스 마케팅 브랜드 — 검색(SEO·GEO)·콘텐츠·데이터 계측·리드 자동화"
+  }
+]

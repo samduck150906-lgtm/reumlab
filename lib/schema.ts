@@ -19,6 +19,7 @@
  * 각 파일 주석에 이 파일을 출처로 적어 두었다. @id 문자열을 바꾸면 그 두 곳도 함께 고칠 것.
  */
 import { SITE } from './seo';
+import BRAND_ENTITIES from '../config/brand-entities.json';
 
 /** 사이트 전역 엔티티의 고정 @id — 페이지가 달라도 이 값은 절대 변하지 않는다. */
 export const SCHEMA_ID = {
@@ -26,6 +27,12 @@ export const SCHEMA_ID = {
   organization: `${SITE.domain}/#organization`,
   /** 사업체(ProfessionalService) 노드. 지점이 아니라 단 하나의 사업장이다. */
   business: `${SITE.domain}/#business`,
+  /**
+   * 법적 운영 주체(이터널식스)와 두 브랜드. 노드 정의는 config/brand-entities.json.
+   * hyunlab.kr 도 같은 @id 를 쓴다 — 두 사이트가 같은 엔티티를 가리키게 문자열을 바꾸지 말 것.
+   */
+  legalOrganization: 'https://reumlab.com/#legal-organization',
+  brand: 'https://reumlab.com/#brand',
 } as const;
 
 /**
@@ -69,6 +76,9 @@ export function organizationNode() {
   return {
     '@type': 'Organization',
     '@id': SCHEMA_ID.organization,
+    // 름랩은 이터널식스가 운영하는 브랜드다(같은 운영 주체가 현랩도 운영한다).
+    parentOrganization: { '@id': SCHEMA_ID.legalOrganization },
+    brand: { '@id': SCHEMA_ID.brand },
     name: SITE.name,
     alternateName: SITE.nameEn,
     // SITE.company는 서비스 설명이지 법적 상호가 아니다. 확인 전에는 legalName을 내지 않는다.
@@ -173,7 +183,7 @@ export function businessNode(description: string = SITE.description) {
  * 섞이면 같은 @id 노드가 페이지마다 다른 소개 문장을 갖게 된다.
  */
 export function siteGraph(description: string = SITE.description) {
-  return [websiteNode(), organizationNode(), businessNode(description)];
+  return [websiteNode(), organizationNode(), businessNode(description), ...BRAND_ENTITIES];
 }
 
 export interface ServiceNodeInput {
