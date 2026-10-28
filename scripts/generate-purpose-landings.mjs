@@ -10,7 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { TOSS_BANNER_HTML } from '../lib/toss-banner.mjs';
+import { TOSS_BANNER_HTML, TOSS_SECTION_HTML } from '../lib/toss-banner.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -1141,6 +1141,7 @@ ${regionLinks(land)}
 ${faqSection(land)}
 ${contactSection(land)}
 </main>
+${TOSS_SECTION_HTML}
 ${FOOTER}
 </body>
 </html>

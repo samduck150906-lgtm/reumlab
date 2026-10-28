@@ -1,6 +1,7 @@
 import Link from '@/components/SiteLink';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
+import TossPartnerSection from '@/components/TossPartnerSection';
 import { getService, REGIONS, INDEXED_REGION_SLUGS } from '@/lib/pseo';
 import { FAQPageJsonLd } from '@/components/JsonLd';
 import { projectsForService, CATEGORIES, projectCategories } from '@/lib/portfolio';
@@ -382,7 +383,9 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
         </div>
       </section>
 
-      <footer className="footer" style={{ marginTop: 48 }}>
+      {/* 본문과의 48px 간격은 원래 푸터가 갖고 있었다 — 협력사 섹션이 푸터 위로 들어오며 섹션 쪽으로 옮겼다 */}
+      <TossPartnerSection style={{ marginTop: 48 }} />
+      <footer className="footer">
         <div className="container">
           <p className="footer-info">
             상호: {SITE.legalName} <span>|</span> 대표자: {SITE.representative} <span>|</span> 사업자등록번호: {SITE.bizNo}
