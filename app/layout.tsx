@@ -101,6 +101,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Nav site={site} />
         {children}
         <FloatingContact />
+        {/* 토스페이먼츠 협력사 안내 팝업 — load 이후 JS 로만 붙는다(원문 HTML·SEO 무변경). public/toss-popup.js 참고 */}
+        <script src="/toss-popup.js" defer />
       </body>
     </html>
   );

@@ -1140,6 +1140,7 @@ ${faqSection(land)}
 ${contactSection(land)}
 </main>
 ${FOOTER}
+<script src="/toss-popup.js" defer></script>
 </body>
 </html>
 `;
