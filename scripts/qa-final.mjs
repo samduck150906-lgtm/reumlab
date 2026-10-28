@@ -148,9 +148,11 @@ for (const p of pages) {
       const t = n['@type'];
       if (!t) continue;
       schemaCount.set(t, (schemaCount.get(t) || 0) + 1);
-      // 사이트 전역 엔티티는 페이지당 한 번만
+      // 사이트 전역 엔티티는 페이지당 한 번만 — 같은 @id 기준.
+      // 운영 주체(#legal-organization)는 #organization 과 다른 엔티티라 함께 있어도 된다.
       if (['Organization', 'LocalBusiness', 'WebSite'].includes(t)) {
-        seen.set(t, (seen.get(t) || 0) + 1);
+        const key = `${t} ${n['@id'] ?? '(no @id)'}`;
+        seen.set(key, (seen.get(key) || 0) + 1);
       }
     }
     for (const [t, n] of seen) {
@@ -172,10 +174,17 @@ for (const p of pages) {
   for (const t of ['Organization', 'LocalBusiness', 'WebSite']) {
     // 정적 홈(index.html)과 목적별 랜딩은 JSON 을 콜론 뒤 공백까지 넣어 포맷한다.
     // 공백을 허용하지 않으면 그 문서들의 중복을 놓친다.
-    const n = (p.html.match(new RegExp(`"@type":\\s*"${t}"`, 'g')) || []).length;
-    if (n > 1) {
-      dupEntity++;
-      add(fail, 'json-ld', `${t} 가 페이지 전체에서 ${n}회 출력: ${p.pathname}`);
+    // 같은 @id 로 다시 정의된 것만 중복이다(@id 없는 노드는 하나로 묶어 센다).
+    const counts = new Map();
+    for (const m of p.html.matchAll(new RegExp(`"@type":\\s*"${t}"(?:,\\s*"@id":\\s*"([^"]*)")?`, 'g'))) {
+      const id = m[1] ?? '(no @id)';
+      counts.set(id, (counts.get(id) || 0) + 1);
+    }
+    for (const [id, n] of counts) {
+      if (n > 1) {
+        dupEntity++;
+        add(fail, 'json-ld', `${t}(${id}) 가 페이지 전체에서 ${n}회 출력: ${p.pathname}`);
+      }
     }
   }
 }

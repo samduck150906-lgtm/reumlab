@@ -145,9 +145,11 @@ if (service && service.url !== canonical) add(fail, 'schema', 'Service.url 이 c
 if (webpage && service && webpage.mainEntity?.['@id'] !== service['@id']) {
   add(fail, 'schema', 'WebPage.mainEntity 가 Service 를 가리키지 않는다');
 }
-// 전역 엔티티는 참조만 하고 이 페이지에서 다시 정의하지 않는다
+// 전역 엔티티는 참조만 하고 이 페이지에서 다시 정의하지 않는다.
+// 같은 @id 가 두 번 나오는지로 본다 — 운영 주체(#legal-organization)는 #organization 과 다른 엔티티다.
 for (const t of ['WebSite', 'Organization', 'LocalBusiness']) {
-  if (byType(t).length > 1) add(fail, 'schema', `전역 ${t} 가 ${byType(t).length}번 선언됐다`);
+  const ids = byType(t).map((n) => n['@id']);
+  if (new Set(ids).size !== ids.length) add(fail, 'schema', `전역 ${t} 가 같은 @id 로 ${ids.length}번 선언됐다`);
 }
 if (service && service.provider?.['@id'] !== `${DOMAIN}/#business`) {
   add(fail, 'schema', `Service.provider 가 사업체 @id 를 참조하지 않는다: ${JSON.stringify(service?.provider)}`);
