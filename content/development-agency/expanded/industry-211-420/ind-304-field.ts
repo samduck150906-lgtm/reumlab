@@ -1,7 +1,7 @@
 import type { AgencyPage } from '@/lib/development-agency/types';
 
 export const page: AgencyPage = {
-  "slug": "field/3-프린팅업체",
+  "slug": "field/3d프린팅업체",
   "clusterIds": [
     "ind-304-field"
   ],

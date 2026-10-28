@@ -196,3 +196,27 @@
 /blog/flutter-14/    /flutter/           301
 /blog/mvp-22         /mvp/               301
 /blog/mvp-22/        /mvp/               301
+
+# 개발사 상세 페이지 주소 정정 (2026-10): 슬러그 생성 규칙이 영문 대문자를 버려 B2B몰→2-몰, D2C브랜드→2-브랜드,
+# 3D프린팅업체→3-프린팅업체 로 나갔던 10개 주소를 b2b몰·d2c브랜드·3d프린팅업체 로 바꿨다. 옛 주소는 새 주소로 301.
+# (원고 파일: content/development-agency/expanded/industry-211-420/ind-267·278·304-*.ts)
+/development-agency/website/2-몰   /development-agency/website/b2b몰/   301
+/development-agency/website/2-몰/  /development-agency/website/b2b몰/   301
+/development-agency/platform/2-몰   /development-agency/platform/b2b몰/   301
+/development-agency/platform/2-몰/  /development-agency/platform/b2b몰/   301
+/development-agency/ai/2-몰   /development-agency/ai/b2b몰/   301
+/development-agency/ai/2-몰/  /development-agency/ai/b2b몰/   301
+/development-agency/platform/2-브랜드   /development-agency/platform/d2c브랜드/   301
+/development-agency/platform/2-브랜드/  /development-agency/platform/d2c브랜드/   301
+/development-agency/ai/2-브랜드   /development-agency/ai/d2c브랜드/   301
+/development-agency/ai/2-브랜드/  /development-agency/ai/d2c브랜드/   301
+/development-agency/website/2-브랜드   /development-agency/website/d2c브랜드/   301
+/development-agency/website/2-브랜드/  /development-agency/website/d2c브랜드/   301
+/development-agency/website/3-프린팅업체   /development-agency/website/3d프린팅업체/   301
+/development-agency/website/3-프린팅업체/  /development-agency/website/3d프린팅업체/   301
+/development-agency/field/3-프린팅업체   /development-agency/field/3d프린팅업체/   301
+/development-agency/field/3-프린팅업체/  /development-agency/field/3d프린팅업체/   301
+/development-agency/ai/3-프린팅업체   /development-agency/ai/3d프린팅업체/   301
+/development-agency/ai/3-프린팅업체/  /development-agency/ai/3d프린팅업체/   301
+/development-agency/management/3-프린팅업체   /development-agency/management/3d프린팅업체/   301
+/development-agency/management/3-프린팅업체/  /development-agency/management/3d프린팅업체/   301

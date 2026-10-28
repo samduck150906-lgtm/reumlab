@@ -5,14 +5,19 @@ import BusinessFooter from '@/components/BusinessFooter';
 import styles from './agency.module.css';
 import AgencyContactVisibility from './AgencyContactVisibility';
 import { agencySiblings } from '@/lib/development-agency/siblings';
+import { AGENCY_CATEGORIES, AGENCY_UNCATEGORIZED, agencyCardSummary, agencyCategoryHref, agencyCategoryOf, agencyCategoryPages } from '@/lib/development-agency/categories';
 
 export default function AgencyArticle({ page, directory }: { page: AgencyPage; directory?: readonly AgencyPage[] }) {
   const isHub = page.slug === '';
   // 같은 업종의 다른 범위·같은 범위의 이웃 업종 — 허브 한 곳에만 매달린 상세 페이지를 서로 잇는다(siblings.ts 참고)
   const siblings = isHub ? null : agencySiblings(page);
-  const directoryGroups = directory ? [...new Set(directory.map(item => item.serviceAxis))].map(axis => ({
-    axis, pages: directory.filter(item => item.serviceAxis === axis).sort((a, b) => a.primaryKeyword.localeCompare(b.primaryKeyword, 'ko')),
-  })) : [];
+  /*
+    루트 허브는 범위 10개(하위 허브)와 범위 밖 안내만 싣는다. 예전에는 directory(상세 1,795개 전부)를
+    접힌 목록으로 여기 다 그려 HTML 이 2.4MB 였다 — lib/development-agency/categories.ts 머리말 참고.
+    directory 는 "루트 허브로 렌더한다"는 표시로만 쓴다.
+  */
+  const uncategorized = directory ? [...AGENCY_UNCATEGORIZED].sort((a, b) => a.primaryKeyword.localeCompare(b.primaryKeyword, 'ko')) : [];
+  const category = isHub ? undefined : agencyCategoryOf(page);
   const canonical = `${AGENCY_DOMAIN}${agencyHref(page)}`;
   const graph = {
     '@context': 'https://schema.org',
@@ -36,7 +41,8 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: '름랩', item: `${AGENCY_DOMAIN}/` },
           { '@type': 'ListItem', position: 2, name: '개발 의뢰 범위 안내', item: `${AGENCY_DOMAIN}${AGENCY_BASE}` },
-          ...(!isHub ? [{ '@type': 'ListItem', position: 3, name: page.h1, item: canonical }] : []),
+          ...(category ? [{ '@type': 'ListItem', position: 3, name: category.label, item: `${AGENCY_DOMAIN}${agencyCategoryHref(category)}` }] : []),
+          ...(!isHub ? [{ '@type': 'ListItem', position: category ? 4 : 3, name: page.h1, item: canonical }] : []),
         ],
       },
       {
@@ -57,7 +63,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
         <header id="agency-hero" className={styles.hero}>
           <nav aria-label="현재 위치" className={styles.breadcrumb}>
             <a href="/">름랩</a><span aria-hidden="true">/</span>
-            {isHub ? <span>개발 의뢰 범위 안내</span> : <><a href={AGENCY_BASE}>개발 의뢰 범위 안내</a><span aria-hidden="true">/</span><span>{page.primaryKeyword}</span></>}
+            {isHub ? <span>개발 의뢰 범위 안내</span> : <><a href={AGENCY_BASE}>개발 의뢰 범위 안내</a><span aria-hidden="true">/</span>{category && <><a href={agencyCategoryHref(category)}>{category.label}</a><span aria-hidden="true">/</span></>}<span>{page.primaryKeyword}</span></>}
           </nav>
           <p className={styles.eyebrow}>개발사 름랩 · {page.serviceAxis} 개발 범위</p>
           <h1>{page.h1}</h1>
@@ -84,16 +90,19 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
           <article className={styles.article} aria-label={page.h1}>
             {directory && <section id="agency-directory" className={styles.section}>
               <h2>업무별 개발 범위 찾기</h2>
-              <p>서비스별 목록을 펼쳐 지금 결정해야 할 운영 문제를 선택하세요. 각 안내에서 필요한 자료와 역할, 실패 상황, 검수·인수 항목을 확인할 수 있습니다.</p>
-              <nav aria-label="업무별 개발 안내">
-              {directoryGroups.map(group => <details key={group.axis} className={styles.directoryGroup}>
-                <summary><span>{group.axis}</span><span className={styles.directoryCount}>{group.pages.length}개 안내</span></summary>
-                <ul className={styles.hubGrid}>{group.pages.map(item => <li key={item.slug} className={styles.hubCard}>
-                  <h3><a href={agencyHref(item)}>{item.primaryKeyword}</a></h3>
-                  <p>{item.description}</p>
+              <p>개발 범위를 먼저 고르고, 그 안에서 업종을 찾으세요. 각 범위 안내에 업종별 상세 {directory.length - uncategorized.length}건이 나뉘어 있고, 상세마다 필요한 자료와 역할, 실패 상황, 검수·인수 항목을 확인할 수 있습니다.</p>
+              <nav aria-label="개발 범위별 안내">
+                <ul className={styles.hubGrid}>{AGENCY_CATEGORIES.map(c => <li key={c.key} className={styles.hubCard}>
+                  <h3><a href={agencyCategoryHref(c)}>{c.label} 개발 범위 — 업종별 {agencyCategoryPages(c.key).length}건</a></h3>
+                  <p>{c.intro}</p>
                 </li>)}</ul>
-              </details>)}
               </nav>
+              <h3 style={{ marginTop: 32 }}>범위에 묶이지 않는 기술·운영 주제 {uncategorized.length}건</h3>
+              <p>특정 업종보다 기술 선택과 운영 인수에 관한 안내입니다. 기존 코드 점검, 서버 이전, 다국어·CMS 홈페이지, 앱 출시·운영 인수처럼 업종을 가리지 않는 주제를 모았습니다.</p>
+              <ul className={styles.hubGrid}>{uncategorized.map(item => <li key={item.slug} className={styles.hubCard}>
+                <h3><a href={agencyHref(item)}>{item.primaryKeyword}</a></h3>
+                <p>{agencyCardSummary(item.description)}</p>
+              </li>)}</ul>
             </section>}
             {!isHub && <section id="agency-scope" className={styles.section}>
               <h2>{page.primaryKeyword}, 름랩이 맡는 개발 범위</h2>
@@ -130,6 +139,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
               <h2>함께 검토할 개발 범위</h2>
               <ul className={styles.related}>
                 {page.relatedRoutes.map(link => <li key={link.href}><a href={link.href}>{link.label}</a><p>{link.reason}</p></li>)}
+                {category && <li><a href={agencyCategoryHref(category)}>{category.label} 개발 범위 안내 — 업종별 {agencyCategoryPages(category.key).length}건</a><p>{page.industry} 외 다른 업종의 {category.label} 개발 범위를 한 목록에서 볼 수 있습니다.</p></li>}
               </ul>
             </section>
             {siblings && siblings.sameIndustry.length > 0 && <section className={styles.section} aria-labelledby="agency-same-industry">
