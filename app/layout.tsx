@@ -8,6 +8,7 @@ import FloatingContact from '../components/FloatingContact';
 import { getSite } from '../lib/data';
 import { PAGE_SEO_MAP, SITE } from '@/lib/seo';
 import { SiteEntityJsonLd } from '@/components/JsonLd';
+import { TOSS_BANNER_ID, TOSS_BANNER_SCRIPT } from '@/lib/toss-banner.mjs';
 
 const home = PAGE_SEO_MAP[''];
 
@@ -99,10 +100,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Analytics />
         <AnalyticsDataLayer />
         <Nav site={site} />
+        {/*
+          토스페이먼츠 협력사 띠배너 — 헤더 바로 아래. 원문 HTML 에는 빈 자리표시자와 인라인 스크립트뿐이고,
+          스크립트가 첫 페인트 전에 채운다(본문·SEO 무변경, CLS 없음). <Nav> 뒤에 있어야 헤더 높이를 잴 수 있다.
+          dangerouslySetInnerHTML 을 빈 값으로 두어 React 가 채워진 자식을 하이드레이션하지 않게 한다.
+          lib/toss-banner.mjs 참고.
+        */}
+        <div id={TOSS_BANNER_ID} data-nosnippet="" dangerouslySetInnerHTML={{ __html: '' }} />
+        <script dangerouslySetInnerHTML={{ __html: TOSS_BANNER_SCRIPT }} />
         {children}
         <FloatingContact />
-        {/* 토스페이먼츠 협력사 안내 팝업 — load 이후 JS 로만 붙는다(원문 HTML·SEO 무변경). public/toss-popup.js 참고 */}
-        <script src="/toss-popup.js" defer />
       </body>
     </html>
   );
