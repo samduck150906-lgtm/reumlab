@@ -1,6 +1,5 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { registerHooks } from 'node:module';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import {
@@ -14,20 +13,8 @@ import {
 
 (globalThis as unknown as { React: typeof React }).React = React;
 
-// Node의 단위 테스트 러너에는 Next.js CSS Module 로더가 없으므로 스타일 값만 대체한다.
-// 실제 CSS 번들링은 npm run build에서 별도로 검증한다.
-registerHooks({
-  load(url, context, nextLoad) {
-    if (url.endsWith('.module.css')) {
-      return {
-        format: 'module',
-        source: "export default new Proxy({}, { get: (_target, property) => String(property) });",
-        shortCircuit: true,
-      };
-    }
-    return nextLoad(url, context);
-  },
-});
+// CSS Module 대체 + CommonJS 패키지 로드 훅 (scripts/test-support/register-page-source-hooks.mts)
+await import('./test-support/register-page-source-hooks.mts');
 
 const [{ default: MultimodalPage, metadata }, { default: MultimodalIndustrySelector }] = await Promise.all([
   import('../app/ai-worker/multimodal/page'),
