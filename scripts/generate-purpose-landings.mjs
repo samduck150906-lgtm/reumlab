@@ -675,6 +675,7 @@ const FOOTER = `<footer class="footer">
         <p class="footer__local">화성 동탄(동탄첨단산업단지)에 위치한 앱·웹·AI 개발 스튜디오입니다. 경기 남부 전역과 전국 어디서든 의뢰하실 수 있습니다.</p>
         <nav class="footer__links" aria-label="제작 목적" style="margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 16px;font-size:13px;">
 ${PURPOSES.map((p) => `          <a href="/${p.slug}/">${esc(p.label)}</a>`).join('\n')}
+          <a href="/payment-integration/">결제·PG 연동 (토스페이먼츠 협력사)</a>
           <a href="/portfolio/">개발 사례</a>
           <a href="/">메인 허브</a>
         </nav>
@@ -731,7 +732,7 @@ const POSTAL_ADDRESS = {
 };
 /** lib/seo.ts SITE.description 과 같은 문장 — 사업 설명 단일 출처(수동 동기화) */
 const BUSINESS_DESC =
-  '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 화성 동탄에 소재하며 수원을 포함한 전국 프로젝트를 비대면으로 진행합니다.';
+  '름랩(REUMLAB)은 경기 화성 동탄에 있는 소프트웨어 개발 스튜디오입니다. Flutter 앱, Next.js 웹사이트·랜딩페이지, MVP, 관리자 페이지·ERP 같은 업무 시스템, AI 챗봇·업무 자동화를 기획부터 개발·배포까지 구축하고, 완성 후 소스코드와 운영 권한을 고객에게 이관합니다. VAT 포함 정액으로 가격과 기간을 먼저 공개하며, 화성 동탄에 소재하며 수원을 포함한 전국 프로젝트를 비대면으로 진행합니다. 토스페이먼츠 협력사로서 결제(PG) 가입부터 연동·테스트까지 함께 진행하고, 출시 후 마케팅은 같은 사업자의 현랩(HYUNLAB)과 이어져 개발부터 결제·마케팅까지 한 곳에서 맡길 수 있습니다.';
 
 const SITE_ENTITY_NODES = [
   {
@@ -777,6 +778,8 @@ const SITE_ENTITY_NODES = [
       'Next.js 웹 개발',
       '관리자 페이지 개발',
       'ERP·업무 시스템 개발',
+      '결제·PG 연동 개발',
+      '토스페이먼츠 결제 연동',
       '예약·중개·O2O 플랫폼 개발',
       'AI 챗봇 개발',
       'AI 업무 자동화',

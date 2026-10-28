@@ -17,6 +17,7 @@ function Footer() {
             <a href="/portfolio/" style={{ color: '#374151', textDecoration: 'none' }}>개발 사례</a>
             <a href="/blog/" style={{ color: '#374151', textDecoration: 'none' }}>블로그</a>
             <a href="/cost/" style={{ color: '#374151', textDecoration: 'none' }}>업종별 개발 비용</a>
+            <a href="/payment-integration/" style={{ color: '#374151', textDecoration: 'none' }}>결제·PG 연동 (토스페이먼츠 협력사)</a>
           </nav>
           <div style={{ marginBottom: '16px', display: 'flex', gap: '16px', flexWrap: 'wrap', fontWeight: 'bold' }}>
             <a href="/terms/" style={{ color: '#374151', textDecoration: 'none' }}>이용약관</a>

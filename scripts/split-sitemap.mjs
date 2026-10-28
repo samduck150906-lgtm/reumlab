@@ -112,7 +112,23 @@ for (const g of GROUPS) {
   written.push({ file, count: list.length, label: g.label, lastmod: lastmods[lastmods.length - 1] || '' });
 }
 
-const index = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${written
+/*
+  개발사 상세 페이지 사이트맵(sitemap-development-agency.xml, 약 1,800 URL)도 색인 파일의 자식으로 싣는다.
+  이 파일은 app/sitemap-development-agency.xml/route.ts 가 따로 만들고 robots.txt 에만 선언돼 있었다.
+  서치어드바이저·서치콘솔에 sitemap.xml 하나만 제출하면 전체 색인 대상의 약 70%가 사이트맵으로
+  발견되지 않는다. 별도 생성 규칙은 그대로 두고 색인 파일에 연결만 한다(아래 무손실 검증은
+  위 그룹들 대상이라 영향이 없다). robots.txt 의 별도 선언도 유지한다 — 중복 선언은 무해하다.
+*/
+const AGENCY_SITEMAP = 'sitemap-development-agency.xml';
+const linked = [...written];
+if (existsSync(join(OUT, AGENCY_SITEMAP))) {
+  const agencyLastmods = [...readFileSync(join(OUT, AGENCY_SITEMAP), 'utf8').matchAll(/<lastmod>([^<]+)<\/lastmod>/g)]
+    .map((m) => m[1])
+    .sort();
+  linked.push({ file: AGENCY_SITEMAP, lastmod: agencyLastmods[agencyLastmods.length - 1] || '' });
+}
+
+const index = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${linked
   .map(
     (w) =>
       `<sitemap><loc>${origin}/${w.file}</loc>${w.lastmod ? `<lastmod>${w.lastmod}</lastmod>` : ''}</sitemap>`,

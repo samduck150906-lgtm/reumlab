@@ -4,9 +4,12 @@ import { SITE } from '@/lib/seo';
 import BusinessFooter from '@/components/BusinessFooter';
 import styles from './agency.module.css';
 import AgencyContactVisibility from './AgencyContactVisibility';
+import { agencySiblings } from '@/lib/development-agency/siblings';
 
 export default function AgencyArticle({ page, directory }: { page: AgencyPage; directory?: readonly AgencyPage[] }) {
   const isHub = page.slug === '';
+  // 같은 업종의 다른 범위·같은 범위의 이웃 업종 — 허브 한 곳에만 매달린 상세 페이지를 서로 잇는다(siblings.ts 참고)
+  const siblings = isHub ? null : agencySiblings(page);
   const directoryGroups = directory ? [...new Set(directory.map(item => item.serviceAxis))].map(axis => ({
     axis, pages: directory.filter(item => item.serviceAxis === axis).sort((a, b) => a.primaryKeyword.localeCompare(b.primaryKeyword, 'ko')),
   })) : [];
@@ -129,6 +132,18 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
                 {page.relatedRoutes.map(link => <li key={link.href}><a href={link.href}>{link.label}</a><p>{link.reason}</p></li>)}
               </ul>
             </section>
+            {siblings && siblings.sameIndustry.length > 0 && <section className={styles.section} aria-labelledby="agency-same-industry">
+              <h2 id="agency-same-industry">{page.industry} — 다른 개발 범위</h2>
+              <ul className={styles.related}>
+                {siblings.sameIndustry.map(item => <li key={item.slug}><a href={agencyHref(item)}>{item.primaryKeyword}</a><p>{item.serviceAxis}</p></li>)}
+              </ul>
+            </section>}
+            {siblings && siblings.sameAxis.length > 0 && <section className={styles.section} aria-labelledby="agency-same-axis">
+              <h2 id="agency-same-axis">{page.serviceAxis} — 다른 업종</h2>
+              <ul className={styles.related}>
+                {siblings.sameAxis.map(item => <li key={item.slug}><a href={agencyHref(item)}>{item.primaryKeyword}</a><p>{item.industry}</p></li>)}
+              </ul>
+            </section>}
             {page.evidenceSources.length > 0 && <section className={styles.sources} aria-label="설계 전 확인할 공식 자료">
               <h2>설계 전 확인할 공식 자료</h2>
               <ul>{page.evidenceSources.map(source => <li key={source.url}><a href={source.url} rel="noopener noreferrer" target="_blank">{source.title}</a><p>{source.use}</p></li>)}</ul>
