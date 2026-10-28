@@ -25,7 +25,11 @@ const REPORT = args.includes('--report');
 /** [묶음 이름, 경로 판정, 실패 임계(평균 Jaccard) — null 이면 보고만] */
 const FAMILIES = [
   ['website', (p) => /^website\/[^/]+\/index\.html$/.test(p), 0.35],
-  ['ai-automation', (p) => /^ai-automation\/[^/]+\/index\.html$/.test(p), null],
+  ['ai-automation', (p) => /^ai-automation\/[^/]+\/index\.html$/.test(p), 0.35],
+  // 색인 키워드 랜딩(/l/) — 쇼핑몰·웹 계열이 틀을 공유했다(2026-10 보고)
+  ['landings', (p) => /^l\/[^/]+\/index\.html$/.test(p), 0.35],
+  // 거점 지역×서비스 25조합 — 같은 서비스의 다른 지역끼리 비교
+  ['region-service', (p) => /^(app-development|web-development|mvp|flutter|ai-development)\/[^/]+\/index\.html$/.test(p), 0.35],
   ['cost', (p) => /^cost\/[^/]+\/index\.html$/.test(p), null],
   ['solution', (p) => /^solution\/[^/]+\/index\.html$/.test(p), null],
   ['app', (p) => /^app\/[^/]+\/index\.html$/.test(p), null],

@@ -65,7 +65,8 @@ const NOTE = {
 
 export default function AutomationDomainPage({ params }: PageProps) {
   const domain = getAutomationDomain(params.slug);
-  if (!domain || domain.publishMode !== 'generated') notFound();
+  if (!domain || domain.publishMode !== 'generated' || !domain.copy) notFound();
+  const copy = domain.copy;
 
   const canonical = automationCanonical(domain);
   const h1 = `${domain.name} 프로그램 개발`;
@@ -117,29 +118,30 @@ export default function AutomationDomainPage({ params }: PageProps) {
             </div>
           </section>
 
+          <section className="section-inner" aria-labelledby="scene">
+            <h2 id="scene" className="section-title" style={H2}>지금 반복되는 장면</h2>
+            <p className="hub-intro">{copy.scene}</p>
+          </section>
+
           <section className="section-inner" aria-labelledby="tasks">
             <h2 id="tasks" className="section-title" style={H2}>이런 작업을 자동화할 수 있습니다</h2>
             <div className="faq-grid">
               {domain.tasks.map((task, index) => (
                 <div className="faq-item" key={task}>
                   <p className="faq-q">{task}</p>
-                  <p className="faq-a">
-                    {domain.tools[index % domain.tools.length]}에서 쓰는 입력과 규칙을 확인하고, 처리 결과와 예외 목록을 함께 남깁니다.
-                  </p>
+                  <p className="faq-a">{copy.taskNotes[task]}</p>
                 </div>
               ))}
             </div>
           </section>
 
           <section className="section-inner" aria-labelledby="keep-tools">
-            <h2 id="keep-tools" className="section-title" style={H2}>기존 프로그램을 버릴 필요가 없습니다</h2>
-            <p className="hub-intro">
-              먼저 현재 사용 중인 도구에서 공식 API·SDK·플러그인·Webhook·파일 import/export가 가능한지 확인합니다.
-              별도 웹앱이나 데스크톱 프로그램은 기존 도구가 맡기 어려운 승인·통합·이력 관리 단계에만 추가합니다.
-            </p>
+            {/* 연결 방식의 일반 원칙(API·플러그인·파일 순서 검토, 화면 조작의 한계, 개발 절차, 비용 고지)은 /ai-automation/ 허브가 맡는다 */}
+            <h2 id="keep-tools" className="section-title" style={H2}>지금 쓰는 프로그램과 연결합니다</h2>
             <ul style={LIST}>
               {domain.tools.map((tool) => <li key={tool}>{tool}</li>)}
             </ul>
+            <p className="hub-intro" style={{ marginTop: 12 }}>{copy.pitfalls}</p>
           </section>
 
           <section className="section-inner" id="workflow" aria-labelledby="workflow-title">
@@ -163,10 +165,6 @@ export default function AutomationDomainPage({ params }: PageProps) {
             <div className="link-grid">
               {domain.implementationTypes.map((type) => <span key={type}>{type}</span>)}
             </div>
-            <p className="hub-intro" style={{ marginTop: 16 }}>
-              공식 연결 방식이 없을 때만 브라우저·데스크톱 자동화를 검토합니다. 화면 조작 방식은 UI 변경에 취약하므로
-              감시, 중단, 재처리와 사람 이관이 포함돼야 합니다.
-            </p>
           </section>
 
           <section className="section-inner" aria-labelledby="constraints">
@@ -178,17 +176,11 @@ export default function AutomationDomainPage({ params }: PageProps) {
           </section>
 
           <section className="section-inner" aria-labelledby="process">
-            <h2 id="process" className="section-title" style={H2}>개발 진행 과정</h2>
-            <ol style={LIST}>
-              <li><strong>업무 관찰</strong> — 실제 화면·파일·처리 순서·예외를 확인합니다.</li>
-              <li><strong>PoC</strong> — 작은 샘플로 연결 가능성과 오류 유형을 확인합니다.</li>
-              <li><strong>권한 설계</strong> — 자동 실행, 확인 버튼, 사람 전용 단계를 나눕니다.</li>
-              <li><strong>개발·QA</strong> — 정상 데이터뿐 아니라 누락·중복·연동 실패를 시험합니다.</li>
-              <li><strong>배포·이관</strong> — 소스코드, 운영 방법, 예외 처리 기준을 전달합니다.</li>
-            </ol>
+            <h2 id="process" className="section-title" style={H2}>진행과 비용</h2>
             <p className="hub-intro">
-              개발 비용과 기간은 연동할 프로그램 수, 데이터 상태, 처리 건수, 예외와 승인 단계에 따라 달라집니다.
-              실제 범위를 확인하기 전 임의의 고정 가격이나 절감률을 약속하지 않습니다.
+              업무 관찰 → 작은 PoC → 권한 설계 → 개발·QA → 소스코드·운영 방법 이관 순서로 진행합니다. 비용과 기간은 연동할 프로그램 수,
+              데이터 상태, 처리 건수, 예외와 승인 단계에 따라 달라지며 범위를 확인하기 전 고정 가격이나 절감률을 약속하지 않습니다.
+              단계별 설명은 <Link href="/ai-automation/#process">AI 업무자동화 진행 절차</Link>에 있습니다.
             </p>
           </section>
 
@@ -217,10 +209,7 @@ export default function AutomationDomainPage({ params }: PageProps) {
 
           <section className="section-inner" id="inquiry" aria-labelledby="inquiry-title">
             <h2 id="inquiry-title" className="section-title" style={H2}>지금 반복하는 업무를 설명해 주세요</h2>
-            <p className="hub-intro">
-              사용 중인 프로그램, 한 건을 처리하는 순서, 자주 생기는 예외, 원하는 결과물을 적어 주시면
-              가능한 연결 방식과 PoC 범위를 검토합니다.
-            </p>
+            <p className="hub-intro">{copy.cta}</p>
             <div style={{ marginTop: 22 }}>
               <LandingInquiryForm
                 landingSlug={`ai-automation/${domain.slug}`}

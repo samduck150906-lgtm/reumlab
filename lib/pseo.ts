@@ -1324,6 +1324,9 @@ export function regionServiceDecision(
       service.deliverables,
       // 라우트가 실제로 렌더하는 블록들 — 점수가 화면과 어긋나지 않게 함께 센다
       profile?.lead,
+      profile?.scene,
+      profile?.checklist,
+      profile?.faq2.a,
       // 거점(profile 보유)만 useCases 본문을 펼치고, 그 외는 제목 목록만 렌더한다 — 화면과 동일하게 센다
       profile
         ? service.useCases.map((u) => `${u.h} ${u.body}`)

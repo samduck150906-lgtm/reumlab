@@ -1,6 +1,7 @@
 import { decideFromContent, type IndexDecision } from './index-quality';
 import { SITE } from './seo';
 import { AUTOMATION_WORKFLOWS } from './automation-workflows';
+import { AUTOMATION_COPY, type AutomationCopy } from './automation-copy';
 
 export type AutomationPriority = 'S' | 'A' | 'B';
 export type AutomationPublishMode = 'generated' | 'existing' | 'research-only';
@@ -36,6 +37,8 @@ export interface AutomationDomain {
   faqs: AutomationFaq[];
   relatedDomains: string[];
   metadata: { title: string; description: string };
+  /** 공개(generated) 분야의 고유 문구 — lib/automation-copy.ts. research-only·existing 은 없다. */
+  copy?: AutomationCopy;
 }
 
 type DomainSeed = readonly [
@@ -177,7 +180,10 @@ function buildDomain(seed: DomainSeed): AutomationDomain {
   const publishMode: AutomationPublishMode = priority !== 'S' ? 'research-only' : EXISTING_TARGETS[slug] ? 'existing' : 'generated';
   const shortDescription = `${tools.slice(0, 2).join('·')}에서 반복하는 ${tasks.slice(0, 2).join('·')} 업무를 줄이는 맞춤 개발`;
   const description = `${name} 개발은 ${tools.slice(0, 4).join(', ')}에서 사람이 반복하는 ${tasks.slice(0, 3).join(', ')} 과정을 분석하고, 가능한 단계만 API·플러그인·파일 연동·AI로 연결하는 서비스입니다.`;
-  const directAnswer = `${name}은 모든 화면을 무리하게 자동 조작하는 일이 아닙니다. ${tools.slice(0, 3).join(', ')}에서 데이터로 제어할 수 있는 ${tasks.slice(0, 3).join(', ')}부터 연결하고, 권한이 필요하거나 결과가 불확실한 단계는 담당자가 확인하도록 만듭니다.`;
+  // 공개 분야는 분야마다 따로 쓴 직답(lib/automation-copy.ts)을 쓴다 — 틀 문장은 비공개 분야의 자리표시자다.
+  const copy = publishMode === 'generated' ? AUTOMATION_COPY[slug] : undefined;
+  if (publishMode === 'generated' && !copy) throw new Error(`Missing automation copy: ${slug} (content/automation-copy.json)`);
+  const directAnswer = copy?.directAnswer ?? `${name}은 모든 화면을 무리하게 자동 조작하는 일이 아닙니다. ${tools.slice(0, 3).join(', ')}에서 데이터로 제어할 수 있는 ${tasks.slice(0, 3).join(', ')}부터 연결하고, 권한이 필요하거나 결과가 불확실한 단계는 담당자가 확인하도록 만듭니다.`;
   const constraints = [domainConstraint, '외부 서비스 권한·라이선스·개인정보 범위를 확인하고, 실패 시 중단·재처리·사람 이관 경로를 함께 설계한다.'];
   const metadata = {
     title: `${name} 프로그램 개발 | 반복 업무 맞춤 자동화 | 름랩`,
@@ -198,9 +204,12 @@ function buildDomain(seed: DomainSeed): AutomationDomain {
     implementationTypes: ['API·Webhook 연동', '웹·데스크톱 업무 도구', 'AI 분류·생성 + 사람 검수', '배치 처리·운영 로그'],
     workflows: AUTOMATION_WORKFLOWS[slug] ?? workflowsFor(name, tasks, tools),
     constraints,
-    faqs: faqsFor(name, tools, domainConstraint),
+    // 공개 분야: 분야 질문(틀 1 + 제약 1) + 따로 쓴 질문 2. 일반 질문 4개(프로그램 교체·API 부재·AI 확정·비용)는
+    // 30개 페이지에 똑같이 깔려 있어 /ai-automation/ 허브 FAQ 로 옮겼다(scripts/generate-purpose-landings.mjs).
+    faqs: copy ? [faqsFor(name, tools, domainConstraint)[0], ...copy.faqs, faqsFor(name, tools, domainConstraint)[5]] : faqsFor(name, tools, domainConstraint),
     relatedDomains: relatedFor(seed),
     metadata,
+    ...(copy ? { copy } : {}),
   };
 }
 
@@ -222,6 +231,7 @@ export function automationBodyParts(domain: AutomationDomain): string[] {
   return [
     domain.directAnswer,
     domain.description,
+    ...(domain.copy ? [domain.copy.scene, domain.copy.pitfalls, domain.copy.cta, ...Object.values(domain.copy.taskNotes)] : []),
     `자동화 대상 업무: ${domain.tasks.join(', ')}.`,
     `연결 검토 도구: ${domain.tools.join(', ')}.`,
     `구현 방식: ${domain.implementationTypes.join(', ')}.`,
@@ -240,6 +250,7 @@ export function automationDistinctiveBodyParts(domain: AutomationDomain): string
   return [
     domain.directAnswer,
     domain.description,
+    ...(domain.copy ? [domain.copy.scene, domain.copy.pitfalls, ...Object.values(domain.copy.taskNotes)] : []),
     ...domain.tools,
     ...domain.tasks,
     ...domain.constraints,
