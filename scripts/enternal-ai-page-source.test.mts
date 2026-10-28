@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { registerHooks } from 'node:module';
 import { inflateSync } from 'node:zlib';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -13,16 +12,8 @@ import {
 } from '../lib/enternal-ai';
 
 (globalThis as unknown as { React: typeof React }).React = React;
-registerHooks({
-  load(url, context, nextLoad) {
-    if (url.endsWith('.module.css')) return {
-      format: 'module',
-      source: "export default new Proxy({}, { get: (_target, property) => String(property) });",
-      shortCircuit: true,
-    };
-    return nextLoad(url, context);
-  },
-});
+// CSS Module 대체 + CommonJS 패키지 로드 훅 (scripts/test-support/register-page-source-hooks.mts)
+await import('./test-support/register-page-source-hooks.mts');
 
 const { default: EnternalAiPage, metadata } = await import('../app/enternal-ai/page');
 

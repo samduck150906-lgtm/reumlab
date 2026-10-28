@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { registerHooks } from 'node:module';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import {
@@ -11,18 +10,8 @@ import {
 } from '../lib/seo-website.ts';
 
 (globalThis as unknown as { React: typeof React }).React = React;
-registerHooks({
-  load(url, context, nextLoad) {
-    if (url.endsWith('.module.css')) {
-      return {
-        format: 'module',
-        source: "export default new Proxy({}, { get: (_target, property) => String(property) });",
-        shortCircuit: true,
-      };
-    }
-    return nextLoad(url, context);
-  },
-});
+// CSS Module 대체 + CommonJS 패키지 로드 훅 (scripts/test-support/register-page-source-hooks.mts)
+await import('./test-support/register-page-source-hooks.mts');
 
 const [mainModule, detailModule, guideModule, enhancementModule] = await Promise.all([
   import('../app/seo-website/page'),
