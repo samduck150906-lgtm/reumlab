@@ -1,7 +1,7 @@
 import type { AgencyPage } from '@/lib/development-agency/types';
 
 export const page: AgencyPage = {
-  "slug": "website/2-몰",
+  "slug": "website/b2b몰",
   "clusterIds": [
     "ind-267-website"
   ],
