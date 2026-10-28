@@ -136,20 +136,24 @@ export default function WebsiteIndustryPage({ params }: Props) {
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{d.ko} 홈페이지에서 자주 놓치는 점</h2>
+            <p className="hub-intro">{c.pitfalls}</p>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>제작 전에 준비할 사진·자료</h2>
-            <p className="hub-intro">{c.editorial.materials} 자료를 준비합니다. 사진에는 대상과 제공 범위를 설명하고, 실제 사업자의 자료와 공개 권한이 확인된 이미지를 사용합니다. 공개할 수 없는 사례는 넣지 않고, 부족한 사진은 촬영할 대상부터 정합니다.</p>
-            <p className="hub-intro" style={{ marginTop: 12 }}>자료의 예시와 실제 판매·제공 조건이 다르면 차이를 설명합니다. 첨부 문서에만 중요한 내용을 넣지 않고 비교 기준과 이용 조건을 본문에도 제공합니다.</p>
+            {/* 자료 공개 권한·첨부 문서 같은 공통 원칙은 /website/ 허브 "모든 업종에 공통인 제작 원칙"에 한 번만 적는다 */}
+            <p className="hub-intro">{c.editorial.materials} 자료를 준비합니다. 공개 권한이 확인된 실제 자료만 쓰고, 부족한 사진은 촬영할 대상부터 정합니다.</p>
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>운영자가 갱신할 정보</h2>
-            <p className="hub-intro">수정 대상은 {c.editorial.maintain}입니다. 항목별 담당자와 갱신 시점을 정하고, 변경된 조건이 소개·문의 안내에도 함께 반영되도록 구성합니다. 직접 수정할 화면과 수정 시 필요한 검수 절차는 제작 범위를 정할 때 확인합니다.</p>
+            <p className="hub-intro">수정 대상은 {c.editorial.maintain}입니다. 항목별 담당자와 갱신 시점을 정하고, 바뀐 조건이 소개·문의 안내에도 함께 반영되게 구성합니다.</p>
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.3rem' }}>소개 홈페이지와 업무 시스템의 범위</h2>
-            <p className="hub-intro">비교 정보와 문의 접수가 중심이면 소개 홈페이지의 범위를 먼저 정합니다. {c.editorial.system} 기능은 사용자 권한·데이터·업무 규칙이 필요한 별도 구축 범위입니다. 필요한 외부 서비스의 API와 이용 권한을 확인한 뒤 포함 기능과 비용을 협의합니다.</p>
-            <p className="hub-intro" style={{ marginTop: 12 }}>위 기능이 홈페이지 기본 패키지에 모두 포함되는 것은 아닙니다. 기존 서비스로 연결할지, 별도 화면과 데이터를 만들지 결정한 뒤 제작비·운영 실비·추가 개발을 구분합니다.</p>
+            <p className="hub-intro">{c.editorial.system} 기능은 사용자 권한·데이터·업무 규칙이 필요한 별도 구축 범위입니다. 홈페이지 기본 패키지에 포함되지 않으며, 기존 서비스로 연결할지 별도 화면을 만들지 정한 뒤 비용을 구분합니다.</p>
           </div>
 
           {seoWebsiteProfile ? <SeoWebsiteIndustryEnhancement profile={seoWebsiteProfile} /> : null}

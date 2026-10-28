@@ -4,7 +4,8 @@ import {parseUnicodeRange, readAgencyFontCoverage} from './font-coverage.mts';
 
 test('declared full-font fallback covers an industry name outside the compact subset', () => {
   const coverage = readAgencyFontCoverage();
-  const code = '셰'.codePointAt(0)!;
+  // 2026-10: 업종 홈페이지 고유 문구에 '셰' 가 들어오며 서브셋 안으로 옮겨 갔다. 사이트 문구에 쓰일 일이 없는 글자로 바꾼다.
+  const code = '뷁'.codePointAt(0)!;
   assert.equal(coverage.subset.has(code), false);
   assert.equal(coverage.supported.has(code), true);
   assert.equal(coverage.supported.has(0x10ffff), false);
