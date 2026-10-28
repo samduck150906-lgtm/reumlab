@@ -10,6 +10,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { TOSS_BANNER_HTML } from '../lib/toss-banner.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -1087,6 +1088,7 @@ ${PIXEL}
 <body data-page-type="service"${SERVICE_AXIS[land.slug] ? ` data-service="${SERVICE_AXIS[land.slug]}"` : ''}>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHLMP8ZD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 ${header(land.slug)}
+${TOSS_BANNER_HTML}
 <main>
 <section class="hero hero--lx">
   <div class="wrap hero__grid">
@@ -1140,7 +1142,6 @@ ${faqSection(land)}
 ${contactSection(land)}
 </main>
 ${FOOTER}
-<script src="/toss-popup.js" defer></script>
 </body>
 </html>
 `;

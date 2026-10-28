@@ -80,7 +80,7 @@
     "build": "node scripts/prepare-next-public.mjs && next build && npm run copy:home && node scripts/generate-purpose-landings.mjs && npm run gen:llms && node scripts/split-sitemap.mjs && node scripts/finalize-out.mjs && npm run gen:feed && node scripts/content-manifest.mjs && npm run seo:verify:automation && npm run seo:verify:home-guide && npm run seo:verify:ai-search && npm run seo:verify:ai-voice && npm run seo:verify:multimodal-ai-worker && npm run seo:verify:enternal-ai && npm run seo:verify:seo-website && npm run seo:verify:font && npm run seo:verify:naver && npm run neo:protect:index && npm run seo:verify:experience && npm run seo:verify:pricing && npm run seo:verify:answers && npm run seo:verify:bing",
     "gen:llms": "tsx scripts/generate-llms.mts",
     "gen:purpose": "node scripts/generate-purpose-landings.mjs",
-    "copy:home": "node scripts/copy-home-assets.mjs && node scripts/inject-portfolio-static.mjs && node scripts/inject-service-menu.mjs",
+    "copy:home": "node scripts/copy-home-assets.mjs && node scripts/inject-portfolio-static.mjs && node scripts/inject-service-menu.mjs && node scripts/inject-toss-banner.mjs",
     "start": "next start",
     "gen:landings": "node scripts/generate-landings.mjs",
     "build:legacy": "npm run prebuild && npm run build:hubs && npm run build:landings && npm run copy:main && npm run gen:sitemaps && npm run gen:robots",

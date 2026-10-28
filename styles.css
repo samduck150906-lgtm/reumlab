@@ -1072,43 +1072,8 @@ br.br-pc { display: inline; }
 
 /* ---- HERO 비주얼: 익명 화면 목업 ---- */
 .hero__stage { position: relative; width: 100%; max-width: 520px; margin-left: auto; z-index: 1; }
-.mock { background: #fff; border: 1px solid var(--line-2); border-radius: 14px; box-shadow: var(--shadow-lg); overflow: hidden; }
-.mock__chrome { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #f2f5fb; border-bottom: 1px solid var(--line); }
-.mock__dot { width: 8px; height: 8px; border-radius: 50%; background: #cdd6e6; }
-.mock__url { margin-left: 8px; font-size: 11px; color: var(--ink-3); background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 2px 10px; letter-spacing: -0.01em; }
-.mock--erp { position: relative; width: 100%; }
-.mock__body { display: flex; min-height: 210px; }
-.mock__side { width: 30%; background: var(--navy); padding: 16px 12px; display: flex; flex-direction: column; gap: 10px; }
-.mock__logo { width: 40%; height: 10px; border-radius: 4px; background: var(--accent); }
-.mock__nav { height: 9px; border-radius: 4px; background: rgba(255,255,255,.16); }
-.mock__nav.is-on { background: rgba(255,255,255,.5); }
-.mock__main { flex: 1; padding: 16px 15px; display: flex; flex-direction: column; gap: 13px; }
-.mock__kpis { display: flex; gap: 8px; }
-.mock__kpis span { flex: 1; background: var(--bg-soft); border: 1px solid var(--line); border-radius: 8px; padding: 8px 6px; font-size: 10px; color: var(--ink-3); text-align: center; line-height: 1.3; }
-.mock__kpis b { display: block; font-size: 13px; color: var(--ink); font-weight: 800; }
-.mock__chart { display: flex; align-items: flex-end; gap: 7px; height: 62px; padding-top: 4px; }
-.mock__chart i { flex: 1; background: linear-gradient(180deg, var(--accent), #7aa2ff); border-radius: 4px 4px 0 0; }
-.mock__rows { display: flex; flex-direction: column; gap: 6px; }
-.mock__rows i { height: 8px; border-radius: 4px; background: var(--line); }
-.mock__rows i:nth-child(2) { width: 82%; } .mock__rows i:nth-child(3) { width: 64%; }
-.mock--phone { position: absolute; bottom: -22px; left: -20px; width: 132px; z-index: 3; border-radius: 20px; padding: 8px; background: #0b1830; }
-.mock__notch { width: 40%; height: 5px; border-radius: 3px; background: #33415c; margin: 2px auto 8px; }
-.mock__pbody { background: #fff; border-radius: 13px; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
-.mock__psearch { height: 12px; border-radius: 6px; background: var(--bg-soft); border: 1px solid var(--line); }
-.mock__pcard { display: flex; align-items: center; gap: 6px; }
-.mock__pthumb { width: 26px; height: 26px; border-radius: 7px; background: var(--accent-soft); flex: none; }
-.mock__pcard em { flex: 1; height: 7px; border-radius: 4px; background: var(--line-2); }
-.mock__pcard i { width: 20px; height: 7px; border-radius: 4px; background: var(--lime); }
-.mock__ptab { display: flex; gap: 8px; margin-top: 3px; padding-top: 7px; border-top: 1px solid var(--line); }
-.mock__ptab b { flex: 1; height: 5px; border-radius: 3px; background: var(--line); }
-.mock__ptab b:first-child { background: var(--accent); }
-.mock--cal { position: absolute; top: -18px; right: -12px; width: 168px; z-index: 3; padding: 12px; }
-.mock__caltop { font-size: 11px; font-weight: 800; color: var(--ink); margin-bottom: 8px; }
-.mock__calgrid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
-.mock__calgrid s { aspect-ratio: 1; border-radius: 4px; background: var(--bg-soft); border: 1px solid var(--line); }
-.mock__calgrid s.on { background: var(--accent); border-color: var(--accent); }
 @media (max-width: 1080px) { .hero__stage { margin: 0 auto; } }
-@media (max-width: 560px) { .mock--phone, .mock--cal { display: none; } .hero__stage { max-width: 400px; } }
+@media (max-width: 560px) { .hero__stage { max-width: 400px; } }
 
 /* ---- 핵심 신뢰 지표(편집형) ---- */
 .metrics-sec { padding-top: 60px; padding-bottom: 60px; }
@@ -1564,11 +1529,12 @@ body[data-page-type="home"] .hero {
   padding: 86px 0 104px;
   background: linear-gradient(180deg, #fff 0%, #f8faff 100%);
 }
+/* 홈 히어로는 텍스트 단일 열 — 오른쪽 화면 목업(가상 PC·폰·캘린더)은 걷어냈다. */
 body[data-page-type="home"] .hero__grid {
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, .92fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 68px;
 }
-body[data-page-type="home"] .hero__text { min-width: 0; }
+body[data-page-type="home"] .hero__text { min-width: 0; max-width: 860px; }
 body[data-page-type="home"] .hero h1 {
   max-width: 720px;
   font-size: clamp(42px, 4.7vw, 64px);
@@ -1580,7 +1546,6 @@ body[data-page-type="home"] .hero h1 {
 body[data-page-type="home"] .hero h1 .hl { white-space: normal; }
 body[data-page-type="home"] .hero__sub,
 body[data-page-type="home"] .hero__note { word-break: keep-all; }
-body[data-page-type="home"] .hero__stage { filter: drop-shadow(0 20px 34px rgba(11, 27, 51, .08)); }
 
 body[data-page-type="home"] .metrics-sec {
   padding: 0;
