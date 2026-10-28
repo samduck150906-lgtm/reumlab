@@ -16,6 +16,7 @@ import { decideFromContent, fingerprint, type IndexDecision } from './index-qual
 import { PACKAGES, manwonText } from './pricing';
 import { buildWebsiteTitle, buildWebsiteDescription, websiteProfile, type IntentProfile } from './search-intent';
 import { WEBSITE_EDITORIAL, type WebsiteEditorial } from './website-editorial';
+import { getWebsiteCopy, type WebsiteCopy } from './website-copy';
 
 export type WebsiteCategory =
   | 'medical' | 'care' | 'funeral' | 'education' | 'fitness' | 'beauty'
@@ -45,6 +46,10 @@ export interface WebsiteContent {
   priceLine: string;
   faqs: { q: string; a: string }[];
   editorial: WebsiteEditorial;
+  /** 업종별 고유 문구(content/website-copy.json) */
+  copy: WebsiteCopy;
+  /** 흔히 놓치는 점 — 페이지 섹션 */
+  pitfalls: string;
 }
 
 // ── 업종 데이터 (파워링크 키워드 294종) ──
@@ -400,23 +405,30 @@ export function buildWebsiteContent(d: WebsiteIndustryDef): WebsiteContent {
   const editorial = WEBSITE_EDITORIAL[d.slug];
   if (!editorial) throw new Error(`Missing website editorial: ${d.slug}`);
   const exception = editorial.exception.replace(/하기$/, '합니다').replace(/않기$/, '않습니다');
-  const intro = `름랩은 ${ko} 사업자를 위한 홈페이지를 제작합니다. 이 홈페이지의 비교 기준은 ${editorial.compare}입니다. 실제 제공 범위와 이용 조건을 확인한 뒤 안내·자료·문의 페이지를 구성합니다. 아래 구성은 설계 예시이며, 기능과 연동의 계약 범위는 상담에서 정합니다.`;
-  const scenario = `문의 입력 예시는 ${editorial.inquiry}입니다. 방문자가 관련 안내를 읽고 필요한 항목을 선택한 뒤 연락 가능한 방법을 남기도록 구성합니다. 접수 → 담당자 확인 → 가능한 조건과 일정 회신의 순서를 안내하고, 접수 완료를 계약·예약 확정으로 표시하지 않습니다. 상세 개인정보나 비공개 자료가 필요한 단계는 초기 공개 문의와 분리합니다.`;
+  /*
+    2026-10 유사문서 정비: 294개가 공유하던 문장 틀(소개·접수 절차·검색 구조 설명)은 /website/ 허브 한 곳으로
+    옮기고, 여기에는 업종마다 따로 쓴 문구(copy)와 그 업종의 기획 메모(editorial)만 남긴다.
+    계약 범위·정액·실비 같은 조건은 priceLine 과 하단 안내가 그대로 말한다.
+  */
+  const copy = getWebsiteCopy(d.slug);
+  const intro = copy.lead;
+  const scenario = `문의 입력 예시는 ${editorial.inquiry}입니다. 접수 뒤 담당자가 확인해 가능한 조건과 일정을 회신하며, 접수 완료를 계약·예약 확정으로 표시하지 않습니다.`;
   const features = [
     `비교 안내 페이지: ${editorial.compare}. 제공 항목과 조건을 함께 볼 수 있도록 구성합니다.`,
-    `이용 조건 페이지: ${exception}. 처음 문의하는 고객도 상담 전에 적용 범위를 판단할 수 있도록 설명합니다.`,
-    `문의 페이지: ${editorial.inquiry}. 문의 목적에 따라 필요한 항목을 선택하고 회신 절차를 확인할 수 있게 합니다.`,
+    `이용 조건 페이지: ${exception}. 상담 전에 적용 범위를 판단할 수 있도록 설명합니다.`,
+    `문의 페이지: ${editorial.inquiry}. 문의 목적에 따라 필요한 항목을 고르고 회신 절차를 확인할 수 있게 합니다.`,
+    ...copy.pages,
   ];
-  const searchLine = `${kc}의 제목과 본문에 실제 비교 정보(${editorial.compare})를 담고, 관련 자료와 문의 페이지를 연결합니다. 검색에 필요한 설명을 이미지 안에만 넣지 않고 읽을 수 있는 본문으로 제공합니다. 검색 순위는 검색엔진이 정하므로 보장하지 않지만, 검색엔진이 페이지 내용을 정확히 읽을 수 있는 구조를 기본으로 갖춥니다.`;
+  const searchLine = `${kc}의 제목과 본문에 실제 비교 정보(${editorial.compare})를 담고 관련 자료와 문의 페이지를 연결합니다. 검색 순위는 검색엔진이 정하므로 보장하지 않습니다.`;
   const priceLine = `원페이지 ${koN(kc)} VAT 포함 ${starter}부터(${WEB_STARTER.duration}), 예약·다페이지 구성은 ${business}부터(${WEB_BUSINESS.duration})입니다. 유지보수 계약은 선택이며 호스팅·도메인·문자·API 등 외부 운영 실비는 별도입니다. 호스팅·도메인은 대표님 명의로 보유합니다.`;
   const faqs = [
     { q: `${kc} 제작 비용은 얼마인가요?`, a: `원페이지는 VAT 포함 ${starter}부터, 예약·다페이지 구성은 ${business}부터입니다. 계약 범위는 정액으로 진행하며 외부 실비·선택 유지보수·추가 개발은 별도입니다. 상담에서 ${ko}에 필요한 페이지 범위를 정한 뒤 견적을 먼저 안내합니다.` },
     { q: `${kc}도 검색에 노출되도록 만들어 주나요?`, a: `검색 순위는 검색엔진이 정하므로 보장할 수 없습니다. 대신 ${ko} 고객이 쓰는 검색어에 맞춘 제목·설명, 구조화 데이터, 사이트맵, 모바일 반응형을 제작 범위에 기본으로 포함합니다. 문의 전 비교할 항목(${editorial.compare})을 본문에 담습니다.` },
-    { q: `만든 뒤 ${ko} 정보를 직접 수정할 수 있나요?`, a: `네. 소스코드를 이관하고, 가격·소식·이미지를 대표님이 직접 고칠 수 있도록 관리 화면과 1:1 교육을 제공합니다. 수정할 때마다 제작사에 요청하지 않아도 됩니다.` },
-    { q: `${kc}와 별도 업무 시스템은 어떻게 구분하나요?`, a: `비교 정보와 문의 접수가 중심이면 소개 홈페이지의 범위를 먼저 정합니다. ${editorial.system} 기능은 사용자 권한·데이터·업무 규칙이 필요한 별도 구축 범위입니다. 필요한 외부 서비스의 API와 이용 권한을 확인한 뒤 포함 기능과 비용을 협의합니다.` },
+    // 직접 수정·시스템 구분 질문(294개 공통)은 /website/ 허브 FAQ 로 옮겼다. 업종 질문 2개가 그 자리를 맡는다.
+    ...copy.faqs,
   ];
 
-  return { intro, features, searchLine, scenario, priceLine, faqs, editorial };
+  return { intro, features, searchLine, scenario, priceLine, faqs, editorial, copy, pitfalls: copy.pitfalls };
 }
 
 const BY_SLUG: Record<string, WebsiteIndustryDef> = Object.fromEntries(
@@ -498,7 +510,7 @@ export function websiteDecision(slug: string): IndexDecision | null {
     title: websiteTitle(d),
     description: websiteDescription(d),
     h1: `${d.ko} 홈페이지 제작`,
-    bodyParts: [c.intro, c.features, c.searchLine, c.scenario, c.priceLine, ...c.faqs.map((f) => f.a)],
+    bodyParts: [c.intro, c.features, c.pitfalls, c.searchLine, c.scenario, c.priceLine, ...c.faqs.map((f) => f.a)],
     faqQuestions: c.faqs.map((f) => f.q),
     // 브레드크럼(홈·홈페이지 제작) 2 + 다른 업종 8 + 함께보기 2 = 12
     internalLinks: 2 + 8 + 2,
