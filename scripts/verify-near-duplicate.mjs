@@ -13,7 +13,7 @@
  * 무엇을 보나
  *  <main> 안의 보이는 글자(스크립트·스타일·태그 제외)에서 h1 의 업종명을 ■ 로 바꾸고 5어절 슁글 집합을 만든다.
  *  묶음 안 모든 쌍의 Jaccard 평균·0.5 이상 비율·페이지 고유 슁글 비율을 낸다.
- *  임계는 묶음마다 다르다 — 업종 홈페이지는 고유 문단을 넣은 뒤 기준(0.35)으로 잠근다.
+ *  색인 제외(noindex) 페이지는 묶음에서 뺀다. 임계는 묶음마다 다르다 — 고유 문단을 넣은 뒤 기준(0.35)으로 잠근다.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -79,7 +79,10 @@ const fail = [];
 console.log(`\n템플릿 유사문서 검사 (${OUT}/) — 5어절 슁글, 업종명 가림`);
 console.log('─'.repeat(72));
 for (const [name, test, limit] of FAMILIES) {
-  const pages = files.filter(test).map((f) => ({ f, s: shingles(mainText(readFileSync(join(OUT, f), 'utf8'))) }));
+  // 색인 제외(noindex) 페이지는 검색에 나가지 않으므로 유사문서 판정 대상이 아니다 — 묶음에서 뺀다
+  const pages = files.filter(test).map((f) => ({ f, html: readFileSync(join(OUT, f), 'utf8') }))
+    .filter((p) => !/<meta name="robots" content="[^"]*noindex/.test(p.html))
+    .map(({ f, html }) => ({ f, s: shingles(mainText(html)) }));
   if (pages.length < 2) continue;
   let sum = 0, n = 0, hi = 0;
   const freq = new Map();
