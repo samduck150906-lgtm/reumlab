@@ -1,9 +1,9 @@
 /**
  * 색인 가능한 홈페이지 업종 링크 추출 (prebuild 단계)
  *
- * 정적 /website/ 랜딩은 Next가 만든 업종 인덱스를 마지막에 덮어쓴다. 따라서
- * lib/website-industries.ts의 색인 판정을 JSON으로 내려 정적 생성기도 같은 목록을
- * 쓰게 한다. 업종을 추가하거나 색인 판정이 바뀌어도 허브 링크가 자동으로 맞춰진다.
+ * /website/ 는 정적 목적 랜딩(scripts/generate-purpose-landings.mjs)이 유일한 페이지다(예전에는 Next 가 만든
+ * 업종 인덱스를 덮어썼고, 그 그림자 Next 허브는 2026-10 에 지웠다). lib/website-industries.ts 의 색인 판정을
+ * JSON 으로 내려 정적 생성기가 같은 업종 목록을 쓰게 한다. 업종을 추가하거나 색인 판정이 바뀌어도 허브 링크가 자동으로 맞춰진다.
  */
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';

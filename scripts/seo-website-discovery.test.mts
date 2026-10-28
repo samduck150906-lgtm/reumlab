@@ -39,7 +39,9 @@ test('the shared service menu and business footer expose the service hub', async
 test('homepage and adjacent service pages provide a crawlable discovery path', async () => {
   const files = await Promise.all([
     readFile(new URL('../index.html', import.meta.url), 'utf8'),
-    readFile(new URL('../app/website/page.tsx', import.meta.url), 'utf8'),
+    // /website/ 는 목적 랜딩(scripts/generate-purpose-landings.mjs)이 서빙한다 — Next 허브 app/website/page.tsx 는
+    // 빌드 마지막에 늘 덮어써지던 그림자 페이지라 2026-10 에 지웠다. 랜딩의 헤더 메뉴가 /seo-website/ 를 잇는다.
+    readFile(new URL('../scripts/generate-purpose-landings.mjs', import.meta.url), 'utf8'),
     readFile(new URL('../app/geo-website/page.tsx', import.meta.url), 'utf8'),
   ]);
   for (const source of files) assert.match(source, /\/seo-website\//);

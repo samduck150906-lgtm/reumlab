@@ -50,6 +50,14 @@ export interface WebsiteContent {
   copy: WebsiteCopy;
   /** 흔히 놓치는 점 — 페이지 섹션 */
   pitfalls: string;
+  /** 이 업종에서 홈페이지가 바꾸는 장면 */
+  why: string;
+  /** 방문자가 문의까지 가는 3단계 */
+  journey: string[];
+  /** 이 업종에 맞는 제작 범위 3가지 */
+  scope: string[];
+  /** 업종 맞춤 상담 유도 */
+  cta: string;
 }
 
 // ── 업종 데이터 (파워링크 키워드 294종) ──
@@ -428,7 +436,7 @@ export function buildWebsiteContent(d: WebsiteIndustryDef): WebsiteContent {
     ...copy.faqs,
   ];
 
-  return { intro, features, searchLine, scenario, priceLine, faqs, editorial, copy, pitfalls: copy.pitfalls };
+  return { intro, features, searchLine, scenario, priceLine, faqs, editorial, copy, pitfalls: copy.pitfalls, why: copy.why, journey: copy.journey, scope: copy.scope, cta: copy.cta };
 }
 
 const BY_SLUG: Record<string, WebsiteIndustryDef> = Object.fromEntries(
@@ -510,7 +518,7 @@ export function websiteDecision(slug: string): IndexDecision | null {
     title: websiteTitle(d),
     description: websiteDescription(d),
     h1: `${d.ko} 홈페이지 제작`,
-    bodyParts: [c.intro, c.features, c.pitfalls, c.searchLine, c.scenario, c.priceLine, ...c.faqs.map((f) => f.a)],
+    bodyParts: [c.intro, c.why, c.features, c.journey, c.scope, c.pitfalls, c.searchLine, c.scenario, c.priceLine, c.cta, ...c.faqs.map((f) => f.a)],
     faqQuestions: c.faqs.map((f) => f.q),
     // 브레드크럼(홈·홈페이지 제작) 2 + 다른 업종 8 + 함께보기 2 = 12
     internalLinks: 2 + 8 + 2,

@@ -325,8 +325,8 @@ const LANDINGS = [
       { title: '제작 유형', type: 'chips', items: ['원페이지 랜딩', '기업 홈페이지', '서비스 소개 사이트', '예약형 홈페이지', '쇼핑몰·결제 사이트', '콘텐츠·SEO 사이트'] },
       /*
         업종별 홈페이지(/website/<업종>/) 294개가 똑같이 되풀이하던 공통 원칙을 허브인 이 페이지 한 곳으로 옮겼다
-        (2026-10 유사문서 정비, lib/website-copy.ts 머리말). /website/ 는 app/website/page.tsx 가 아니라 이 랜딩이
-        서빙된다(빌드 마지막에 이 생성기가 out/website/index.html 을 덮어쓴다).
+        (2026-10 유사문서 정비, lib/website-copy.ts 머리말). /website/ 는 이 랜딩이 유일한 페이지다
+        (그림자였던 Next 허브 app/website/page.tsx 는 지웠다).
       */
       { title: '업종 홈페이지 공통 제작 원칙', type: 'list', items: [
         '실제 제공 범위와 이용 조건을 확인한 뒤 안내·자료·문의 페이지를 구성합니다. 업종별 페이지의 구성은 설계 예시이며, 기능과 연동의 계약 범위는 상담에서 정합니다.',
@@ -896,7 +896,7 @@ const BASE_REGIONS = [
   { slug: 'bundang', ko: '분당' },
 ];
 /**
- * 이 랜딩이 덮어쓰는 Next 서비스 허브가 연결하던 하위 업종 페이지.
+ * /website/ 랜딩이 연결하는 하위 업종 페이지(예전 Next 서비스 허브가 하던 역할 — 그 허브는 2026-10 에 지웠다).
  * lib/pseo.ts 의 SERVICES[].industryLinks 와 같은 역할 — 이 파일은 Next 번들 밖이라
  * import 할 수 없어 같은 URL 을 손으로 맞춘다. (실재 여부는 빌드 후 검증 스크립트가 확인)
  */

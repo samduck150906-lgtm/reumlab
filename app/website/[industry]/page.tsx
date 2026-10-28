@@ -114,6 +114,8 @@ export default function WebsiteIndustryPage({ params }: Props) {
             <p className="hub-intro" style={{ marginTop: 12, fontSize: '0.95rem', color: 'var(--muted, #667085)', borderLeft: '3px solid var(--green)', paddingLeft: 12 }}>
               {operatorNote('web-' + d.slug)}
             </p>
+            <h2 className="section-title" style={{ fontSize: '1.3rem', marginTop: 28 }}>{d.ko} 홈페이지가 바꾸는 것</h2>
+            <p className="hub-intro">{c.why}</p>
 
             <div className="cta-buttons" style={{ marginTop: 24 }}>
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_website_call">
@@ -130,6 +132,24 @@ export default function WebsiteIndustryPage({ params }: Props) {
             <ul className="hub-intro" style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
               {c.features.map((f) => (
                 <li key={f}>{f}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>방문자가 문의까지 가는 흐름</h2>
+            <ol className="hub-intro" style={{ marginTop: 8, paddingLeft: 22, lineHeight: 2 }}>
+              {c.journey.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="section-inner" style={{ paddingTop: 8 }}>
+            <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{d.ko}에 맞는 제작 범위</h2>
+            <ul className="hub-intro" style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
+              {c.scope.map((item) => (
+                <li key={item}>{item}</li>
               ))}
             </ul>
             <p className="hub-intro" style={{ marginTop: 16 }}><strong>제작 비용·기간</strong> — {c.priceLine}</p>
@@ -216,7 +236,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
 
           <div className="cta" style={{ marginTop: 24 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>{d.ko} 홈페이지, 꼭 필요한 페이지부터 시작하세요</h2>
-            <p className="hub-intro">전체를 한 번에 만들지 않아도 됩니다. 원페이지로 작게 시작해 검증 후 확장할 수 있습니다. 확정된 제작 범위는 정액으로 진행하며 선택 유지보수·외부 실비는 별도입니다.</p>
+            <p className="hub-intro">{c.cta} 확정된 제작 범위는 정액으로 진행하며 선택 유지보수·외부 실비는 별도입니다.</p>
             <div className="cta-buttons">
               <a href={SITE.phoneHref} className="btn-primary" data-analytics="cta_website_call_bottom">
                 {ctaPrimary('web-' + d.slug)}

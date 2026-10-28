@@ -45,6 +45,7 @@
     "seo:verify:experience": "node scripts/verify-sitewide-experience.mjs",
     "seo:verify:cannibalization": "node scripts/verify-cannibalization.mjs",
     "seo:verify:near-duplicate": "node scripts/verify-near-duplicate.mjs",
+    "seo:report:similarity": "node scripts/report-similarity.mjs",
     "typecheck": "tsc --noEmit",
     "geo:inventory": "node scripts/geo-inventory.mjs",
     "geo:check-entities": "tsx scripts/verify-entities.mts",
