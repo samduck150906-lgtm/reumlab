@@ -22,7 +22,7 @@ function hasBatchim(ch: string): boolean {
 function allText(slug: string): string {
   const d = WEBSITE_INDUSTRIES.find((x) => x.slug === slug)!;
   const c = buildWebsiteContent(d);
-  return [c.intro, ...c.features, c.searchLine, c.scenario, c.priceLine, ...c.faqs.flatMap((f) => [f.q, f.a])].join('\n');
+  return [c.intro, c.why, ...c.features, ...c.journey, ...c.scope, c.pitfalls, c.searchLine, c.scenario, c.priceLine, c.cta, ...c.faqs.flatMap((f) => [f.q, f.a])].join('\n');
 }
 
 test('업종 홈페이지 본문에 업종명 붙임 키워드가 없다', () => {

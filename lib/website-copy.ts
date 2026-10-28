@@ -8,6 +8,7 @@ import raw from '../content/website-copy.json';
  *  네이버 유사문서로 묶일 위험이 컸다. lib/website-editorial.ts 의 기획 메모 6칸은 문장 틀에 끼워 넣는
  *  짧은 구절이라 틀 자체의 반복을 없애지 못한다. 업종마다 따로 쓴 문단(머리글·업종 특유 페이지 3개·
  *  놓치기 쉬운 점·업종 질문 2개)을 본문에 넣고, 294개 공통 문장은 /website/ 허브 한 곳으로 옮겼다.
+ *  2차 보강(why·journey·scope·cta·질문 1개 추가): 구체성으로 설득한다 — 업종의 실제 장면, 홈페이지가 바꾸는 것.
  *  회귀 게이트: scripts/verify-near-duplicate.mjs (빌드 체인), scripts/website-industry-copy.test.mts.
  *
  * 작성 규칙(문구를 고칠 때도 같다): 새 사실·금액·기간·실적 없음, 보장·우위 표현 없음, 의료·법률 효과 단정 없음,
@@ -20,11 +21,20 @@ export interface WebsiteCopy {
   pages: string[];
   /** 2문장 — 흔히 놓치는 점과 대신 어떻게 구성할지 */
   pitfalls: string;
-  /** 업종 질문 2개 — 비용·기간·이관·검색·직접 수정은 공통 FAQ 가 맡는다 */
+  /** 업종 질문 3개 — 비용·기간·이관·검색·직접 수정은 공통 FAQ 가 맡는다 */
   faqs: { q: string; a: string }[];
+  /** 2~3문장 — 이 업종에서 홈페이지가 문의·방문 흐름의 어느 장면을 바꾸는지 (2차 보강) */
+  why: string;
+  /** 방문자가 문의·예약·방문까지 가는 3단계 — "단계명: 설명" */
+  journey: string[];
+  /** 이 업종에 보통 맞는 제작 범위 3가지 — "구성명: 설명" */
+  scope: string[];
+  /** 업종 맞춤 상담 유도 1~2문장 */
+  cta: string;
 }
 
-export const WEBSITE_COPY: Record<string, WebsiteCopy> = raw as Record<string, WebsiteCopy>;
+// JSON 의 추론 타입은 필드가 늘 때마다 달라진다 — 형태는 scripts/website-industry-copy.test.mts 가 검증한다.
+export const WEBSITE_COPY: Record<string, WebsiteCopy> = raw as unknown as Record<string, WebsiteCopy>;
 
 export function getWebsiteCopy(slug: string): WebsiteCopy {
   const c = WEBSITE_COPY[slug];
