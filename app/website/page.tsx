@@ -132,40 +132,6 @@ export default function WebsiteHubPage() {
             );
           })}
 
-          {/*
-            294개 업종 페이지가 똑같이 되풀이하던 공통 원칙·공통 FAQ 를 여기 한 곳으로 옮겼다(2026-10 유사문서 정비).
-            업종 페이지에는 그 업종의 문구만 남는다 — lib/website-copy.ts 머리말 참고.
-          */}
-          <div className="section-inner" style={{ paddingTop: 8 }}>
-            <h2 className="section-title" style={{ fontSize: '1.25rem' }}>모든 업종에 공통인 제작 원칙</h2>
-            <ul className="hub-intro" style={{ marginTop: 8, paddingLeft: 18, lineHeight: 2 }}>
-              <li>실제 제공 범위와 이용 조건을 확인한 뒤 안내·자료·문의 페이지를 구성합니다. 각 업종 페이지의 구성은 설계 예시이며, 기능과 연동의 계약 범위는 상담에서 정합니다.</li>
-              <li>사진에는 대상과 제공 범위를 설명하고, 실제 사업자의 자료와 공개 권한이 확인된 이미지만 씁니다. 공개할 수 없는 사례는 넣지 않습니다.</li>
-              <li>자료의 예시와 실제 판매·제공 조건이 다르면 차이를 설명합니다. 첨부 문서에만 중요한 내용을 넣지 않고 비교 기준과 이용 조건을 본문에도 제공합니다.</li>
-              <li>문의는 방문자가 안내를 읽고 필요한 항목을 고른 뒤 연락 방법을 남기도록 구성합니다. 접수 완료를 계약·예약 확정으로 표시하지 않고, 상세 개인정보나 비공개 자료가 필요한 단계는 초기 공개 문의와 분리합니다.</li>
-              <li>검색에 필요한 설명을 이미지 안에만 넣지 않고 읽을 수 있는 본문으로 제공합니다. 검색 순위는 검색엔진이 정하므로 보장하지 않지만, 검색엔진이 내용을 정확히 읽을 수 있는 구조를 기본으로 갖춥니다.</li>
-              <li>예약·결제·회원 같은 업무 기능은 사용자 권한·데이터·업무 규칙이 필요한 별도 구축 범위입니다. 기존 서비스로 연결할지 별도 화면과 데이터를 만들지 정한 뒤 제작비·운영 실비·추가 개발을 구분합니다.</li>
-            </ul>
-          </div>
-
-          <div className="section-inner" style={{ paddingTop: 8 }}>
-            <h2 className="section-title" style={{ fontSize: '1.25rem' }}>업종 홈페이지 공통 질문</h2>
-            <div className="faq-grid">
-              <div className="faq-item">
-                <p className="faq-q">만든 뒤 정보를 직접 수정할 수 있나요?</p>
-                <p className="faq-a">네. 소스코드를 이관하고, 가격·소식·이미지를 대표님이 직접 고칠 수 있도록 관리 화면과 1:1 교육을 제공합니다. 수정할 때마다 제작사에 요청하지 않아도 됩니다.</p>
-              </div>
-              <div className="faq-item">
-                <p className="faq-q">소개 홈페이지와 별도 업무 시스템은 어떻게 구분하나요?</p>
-                <p className="faq-a">비교 정보와 문의 접수가 중심이면 소개 홈페이지의 범위를 먼저 정합니다. 예약·결제·회원·진료기록처럼 권한과 데이터가 필요한 기능은 별도 구축 범위이며, 필요한 외부 서비스의 API와 이용 권한을 확인한 뒤 포함 기능과 비용을 협의합니다.</p>
-              </div>
-              <div className="faq-item">
-                <p className="faq-q">결제가 필요한 홈페이지도 만들 수 있나요?</p>
-                <p className="faq-a">네. 름랩은 토스페이먼츠 협력사로, 결제가 필요하면 가입부터 연동·테스트까지 개발 과정에서 함께 진행합니다. 름랩 고객사는 가입비·수수료 혜택을 받을 수 있습니다.</p>
-              </div>
-            </div>
-          </div>
-
           <div className="section-inner" style={{ paddingTop: 8 }}>
             <h2 className="section-title" style={{ fontSize: '1.15rem' }}>관련 인덱스·서비스</h2>
             <div className="link-grid">
