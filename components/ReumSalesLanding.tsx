@@ -995,6 +995,7 @@ export default function ReumSalesLanding(_props: { site: Site }) {
       <footer className="border-t border-slate-200 bg-white py-10">
         <div className="mx-auto max-w-5xl px-5 text-center text-xs leading-relaxed text-slate-600 sm:px-6 lg:px-8 sm:text-sm">
           <p className="font-display font-semibold text-navy-900">REUMLAB · 름랩</p>
+          <p className="mt-3"><a href="/development-agency/" className="text-accent-deep underline-offset-2 hover:underline">업종별 개발 의뢰 가이드</a></p>
           <div className="mt-4 space-y-1.5 text-[13px] leading-relaxed sm:text-sm">
             <p>
               상호: {SITE.legalName} | 대표자: {SITE.representative} | 사업자등록번호: {SITE.bizNo}
