@@ -466,6 +466,8 @@ export function websiteTitle(d: WebsiteIndustryDef): string {
     chigwa: '치과 홈페이지 제작 | 의료진·진료·예약·검색 노출 — 름랩',
     byeongwon: '병원 홈페이지 제작 | 의료진·진료과목·예약·검색 노출 — 름랩',
     yutyubeujejagsa: '영상·유튜브 제작사 홈페이지 | 포트폴리오·견적 문의 설계 — 름랩',
+    aebgaebaleobche: '앱개발 회사 홈페이지 제작 | 포트폴리오·견적 문의 — 름랩',
+    interieosopumsyab: '인테리어 소품샵 홈페이지 제작 | 상품 소개·배송·문의 — 름랩',
   };
   if (ctrTitle[d.slug]) return ctrTitle[d.slug]!;
   return buildWebsiteTitle(d.ko, WEBSITE_EDITORIAL[d.slug].compare.split('·'), d.slug);
@@ -491,6 +493,8 @@ export function websiteDescription(d: WebsiteIndustryDef): string {
     chigwa: '치과 소개·의료진·진료과목·진료시간·오시는 길·예약 상담을 갖춘 검색 노출형 치과 홈페이지를 정액으로 제작합니다.',
     byeongwon: '병원 소개·의료진·진료과목·진료시간·위치·예약 상담을 환자 검색 흐름에 맞춰 구성하는 병원 홈페이지 제작 안내입니다.',
     yutyubeujejagsa: '영상·유튜브 제작사의 포트폴리오, 제작 과정, 패키지, 고객 사례와 견적 문의를 하나의 전환 흐름으로 연결합니다.',
+    aebgaebaleobche: '앱개발 회사가 서비스 범위와 공개 가능한 포트폴리오를 소개하고 견적 문의를 받는 홈페이지 제작 안내입니다. 앱 자체 개발은 별도 범위입니다.',
+    interieosopumsyab: '인테리어 소품의 사진·치수·소재와 배송 조건을 보여주고 상품 문의를 받는 홈페이지 제작 안내입니다. 주문·재고 기능은 별도 범위로 확인합니다.',
   };
   if (ctrDescription[d.slug]) return ctrDescription[d.slug]!;
   const c = buildWebsiteContent(d);

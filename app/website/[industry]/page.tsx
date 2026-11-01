@@ -111,6 +111,12 @@ export default function WebsiteIndustryPage({ params }: Props) {
               {d.ko} 홈페이지 제작
             </h1>
             <p className="hub-intro">{c.intro}</p>
+            {d.slug === 'aebgaebaleobche' && (
+              <p className="hub-intro" style={{ marginTop: 12 }}>
+                이 페이지는 앱개발 회사의 소개 홈페이지를 만드는 안내입니다. 앱 제작을 맡길 업체를 찾고 있다면{' '}
+                <Link href="/app-agency/">앱개발 업체 선택 기준과 비용 안내</Link>를 확인하세요.
+              </p>
+            )}
             <p className="hub-intro" style={{ marginTop: 12, fontSize: '0.95rem', color: 'var(--muted, #667085)', borderLeft: '3px solid var(--green)', paddingLeft: 12 }}>
               {operatorNote('web-' + d.slug)}
             </p>
