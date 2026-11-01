@@ -121,8 +121,15 @@ for (const g of GROUPS) {
 */
 const AGENCY_SITEMAP = 'sitemap-development-agency.xml';
 const linked = [...written];
-if (existsSync(join(OUT, AGENCY_SITEMAP))) {
-  const agencyLastmods = [...readFileSync(join(OUT, AGENCY_SITEMAP), 'utf8').matchAll(/<lastmod>([^<]+)<\/lastmod>/g)]
+if (!existsSync(join(OUT, AGENCY_SITEMAP))) {
+  throw new Error(`split-sitemap: ${AGENCY_SITEMAP}이 없습니다. 개발사 페이지가 사이트맵에서 누락됩니다.`);
+}
+{
+  const agencyXml = readFileSync(join(OUT, AGENCY_SITEMAP), 'utf8');
+  if (!agencyXml.includes('<urlset') || !agencyXml.includes('</urlset>') || !/<url>[\s\S]*?<loc>[^<]+<\/loc>[\s\S]*?<\/url>/.test(agencyXml)) {
+    throw new Error(`split-sitemap: ${AGENCY_SITEMAP}이 비었거나 잘못된 형식입니다.`);
+  }
+  const agencyLastmods = [...agencyXml.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)]
     .map((m) => m[1])
     .sort();
   linked.push({ file: AGENCY_SITEMAP, lastmod: agencyLastmods[agencyLastmods.length - 1] || '' });
