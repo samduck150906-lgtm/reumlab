@@ -5,9 +5,8 @@
  * 검증: node scripts/submit-indexnow.mjs --dry-run
  * Naver(searchadvisor.naver.com)와 Bing(www.bing.com)에 동시 제출.
  *
- * 전략(§4-2): 색인 대상 URL은 이미 `out/sitemap.xml`에 lastmod와 함께 들어 있다.
- *   sitemap.xml의 <loc>+<lastmod>를 읽어 커밋된 매니페스트(scripts/.indexnow-manifest.json)와
- *   비교해 **새 URL·lastmod가 바뀐 URL만** 제출한다.
+ * 전략(§4-2): 사이트맵의 URL 중 콘텐츠 지문이 바뀐 URL과 이전에 전송하지 못한
+ *   대기열을 선정하고, 이미 같은 lastmod로 전송한 URL은 제외한다.
  *   최종 lastmod는 content-manifest.mjs가 본문·메타·링크·구조화 데이터의
  *   의미 있는 변경으로 결정한다. 검증된 매니페스트는 릴리스 때 보존한다.
  *
@@ -24,6 +23,7 @@
  */
 import fs from 'fs';
 import { readSitemapXml } from './read-sitemap.mjs';
+import { selectIndexNowUrls } from './indexnow-candidates.mjs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -36,6 +36,8 @@ const KEY = '67cc4ff3436125d6a5eb18de9bb63dd0';
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 const SITEMAP_PATH = path.join(ROOT, 'out', 'sitemap.xml');
 const MANIFEST_PATH = path.join(__dirname, '.indexnow-manifest.json');
+const CHANGES_PATH = path.join(ROOT, 'docs', 'execution-20261020', 'content-changes.json');
+const PENDING_PATH = path.join(ROOT, '.indexnow-pending.json');
 
 const args = new Set(process.argv.slice(2));
 const SUBMIT_ALL = args.has('--all');
@@ -153,9 +155,19 @@ if (!sitemap) {
   process.exit(1);
 } else {
   const manifest = SUBMIT_ALL ? {} : loadManifest();
-  nextManifest = Object.fromEntries(sitemap.map((e) => [e.url, e.lastmod]));
-  urlList = sitemap.filter((e) => manifest[e.url] !== e.lastmod).map((e) => e.url);
-  const kind = SUBMIT_ALL ? '전량' : '변경분';
+  nextManifest = manifest;
+  let changes = [];
+  let pending = [];
+  if (!SUBMIT_ALL) {
+    if (!fs.existsSync(CHANGES_PATH)) throw new Error('콘텐츠 변경 목록이 없습니다. 빌드 후 다시 실행하세요.');
+    changes = JSON.parse(fs.readFileSync(CHANGES_PATH, 'utf8'));
+    pending = fs.existsSync(PENDING_PATH) ? JSON.parse(fs.readFileSync(PENDING_PATH, 'utf8')) : [];
+    if (!Array.isArray(changes) || !Array.isArray(pending)) throw new Error('콘텐츠 변경 목록 또는 대기열 형식이 잘못되었습니다.');
+  }
+  urlList = selectIndexNowUrls(sitemap, changes, pending, manifest, SUBMIT_ALL);
+  // 전송 실패나 대량 배치 보류 시 다음 공개 배포에서 다시 시도할 수 있도록 보존한다.
+  if (!DRY_RUN) fs.writeFileSync(PENDING_PATH, JSON.stringify(urlList, null, 2) + '\n');
+  const kind = SUBMIT_ALL ? '전량' : '변경·대기분';
   console.log(`[IndexNow] 사이트맵 ${sitemap.length}개 중 ${kind} ${urlList.length}개 제출 대상`);
 }
 
@@ -203,7 +215,10 @@ for (let i = 0; i < urlList.length; i += BATCH) {
 
 // 제출 성공 후 매니페스트 갱신 (다음 배포의 변경분 판정 기준). 커밋해 두면 상태 유지.
 if (nextManifest && !submissionFailed) {
+  const sent = new Set(urlList);
+  for (const e of sitemap) if (sent.has(e.url)) nextManifest[e.url] = e.lastmod;
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(nextManifest, null, 2) + '\n');
+  fs.writeFileSync(PENDING_PATH, '[]\n');
   console.log(`[IndexNow] 매니페스트 갱신: ${path.relative(ROOT, MANIFEST_PATH)} (커밋 권장)`);
 }
 

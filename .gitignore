@@ -13,6 +13,9 @@ public/feed.xml
 
 # Local Netlify folder
 .netlify
+.content-manifest.cache.json
+.indexnow-manifest.cache.json
+.indexnow-pending.json
 
 # Generated output files (marketing campaigns, reports)
 .output/

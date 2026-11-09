@@ -12,6 +12,17 @@ export function mergeManifests(committed = {}, cached = {}) {
   return out;
 }
 
+/** 최신 성공 배포와 커밋된 기준 중 페이지별로 더 최근에 확인된 내용을 사용한다. */
+export function mergeContentManifests(committed = {}, cached = {}) {
+  const out = { ...committed };
+  for (const [url, item] of Object.entries(cached)) {
+    if (!item || typeof item.hash !== 'string' || !Number.isFinite(Date.parse(item.lastmod))) continue;
+    const previous = out[url];
+    if (!previous || Date.parse(item.lastmod) > Date.parse(previous.lastmod)) out[url] = item;
+  }
+  return out;
+}
+
 export function readJson(file) {
   try {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
