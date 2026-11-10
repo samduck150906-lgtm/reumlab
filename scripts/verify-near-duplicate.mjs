@@ -16,7 +16,7 @@
  *  색인 제외(noindex) 페이지는 묶음에서 뺀다. 임계는 묶음마다 다르다 — 고유 문단을 넣은 뒤 기준(0.35)으로 잠근다.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative, sep } from 'node:path';
 
 const args = process.argv.slice(2);
 const OUT = args.find((a) => !a.startsWith('--')) || 'out';
@@ -39,7 +39,7 @@ function walk(dir, base = dir, out = []) {
   for (const n of readdirSync(dir)) {
     const p = join(dir, n);
     if (statSync(p).isDirectory()) walk(p, base, out);
-    else if (p.endsWith('.html')) out.push(p.slice(base.length + 1));
+    else if (p.endsWith('.html')) out.push(relative(base, p).split(sep).join('/'));
   }
   return out;
 }
@@ -76,6 +76,7 @@ if (!existsSync(OUT)) {
 }
 const files = walk(OUT);
 const fail = [];
+let comparedFamilies = 0;
 console.log(`\n템플릿 유사문서 검사 (${OUT}/) — 5어절 슁글, 업종명 가림`);
 console.log('─'.repeat(72));
 for (const [name, test, limit] of FAMILIES) {
@@ -84,6 +85,7 @@ for (const [name, test, limit] of FAMILIES) {
     .filter((p) => !/<meta name="robots" content="[^"]*noindex/.test(p.html))
     .map(({ f, html }) => ({ f, s: shingles(mainText(html)) }));
   if (pages.length < 2) continue;
+  comparedFamilies++;
   let sum = 0, n = 0, hi = 0;
   const freq = new Map();
   for (const p of pages) for (const x of p.s) freq.set(x, (freq.get(x) || 0) + 1);
@@ -112,6 +114,7 @@ for (const [name, test, limit] of FAMILIES) {
   }
 }
 console.log('─'.repeat(72));
+if (comparedFamilies === 0) fail.push('비교할 페이지 묶음이 없습니다. 출력 경로와 빌드 산출물을 확인하세요.');
 if (fail.length) {
   for (const f of fail) console.error('✗ ' + f);
   process.exit(1);

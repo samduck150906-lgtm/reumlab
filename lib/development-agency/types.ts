@@ -30,6 +30,10 @@ export interface AgencyPage extends Record<ContentField, TextList> {
   h1: string;
   summary: string;
   updatedAt: string;
+  acceptanceExamples?: {
+    intro: string;
+    rows: readonly { scenario: string; input: string; expected: string }[];
+  };
   sections: readonly AgencySection[];
   faq: readonly [AgencyFaq, AgencyFaq, AgencyFaq, AgencyFaq, AgencyFaq, AgencyFaq, ...AgencyFaq[]];
   relatedRoutes: readonly { href: string; label: string; reason: string }[];
