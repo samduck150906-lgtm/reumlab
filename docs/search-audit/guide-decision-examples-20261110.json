@@ -1,0 +1,320 @@
+{
+  "batch": "guide-decision-examples-20261110",
+  "base_commit": "2356b9ad1ce1871f6a814e37a23298a1022f3320",
+  "public_material_only": true,
+  "content_scope": "37 individually reviewed existing guides, 111 authored scenario/comparison rows. The seven pre-existing guide tables and the regional guide are outside this batch.",
+  "preserved": [
+    "title",
+    "description",
+    "H1",
+    "existing body and FAQ",
+    "price/VAT/scope",
+    "CTA",
+    "canonical/robots",
+    "existing table content on other guides"
+  ],
+  "evidence_basis": "Each existing guide and its preparation/exception section. Hypothetical editorial examples, not customer evidence or standard contract terms.",
+  "pages": [
+    {
+      "url": "https://reumlab.com/guide/outsourcing-cost/",
+      "source_slug": "outsourcing-cost",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "외주 비용 비교를 위한 가상 요청서 — 금액 대신 포함·추가 작업의 경계를 확인하는 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/web-cost/",
+      "source_slug": "web-cost",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "웹 제작 범위를 나누는 가상 요구 예시 — 공개 패키지의 확정 포함 기능을 뜻하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/chatbot-cost/",
+      "source_slug": "chatbot-cost",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "배송 안내 챗봇의 가상 검수 질문 — 실제 배송 정책·고객 정보를 사용하지 않은 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/flutter-cost/",
+      "source_slug": "flutter-cost",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "Flutter 견적 전에 실행할 가상 기기 시험 — OS·SDK별 실제 지원 확인이 필요한 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/quote/",
+      "source_slug": "quote",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "예약 서비스 견적 요청의 가상 작성본 — 빈칸을 구체화하는 방법의 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/non-developer-app/",
+      "source_slug": "non-developer-app",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "비개발자 대표가 직접 해 볼 가상 데모 검수 — 실제 고객 데이터 없이 수행하는 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/startup-mvp/",
+      "source_slug": "startup-mvp",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "MVP 실험 설계의 가상 비교 — 성공률·수요·투자 성과를 예측하는 표가 아님",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/hospital-app-guide/",
+      "source_slug": "hospital-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "병원 접수 앱의 가상 상태 검수 — 의료적 판단·진료 지침을 제공하는 예시가 아님",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/dental-app-guide/",
+      "source_slug": "dental-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "치과 리콜 안내의 가상 운영 검수 — 다음 내원일과 연락 기준은 의료기관이 지정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/fitness-app-guide/",
+      "source_slug": "fitness-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "회원권·PT 회차의 가상 계산 검수 — 휴회·환불·차감 규칙은 매장과 별도 합의",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/academy-app-guide/",
+      "source_slug": "academy-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "학원 출결·보호자 연결의 가상 검수 — 아동의 실제 정보나 안전 확인을 대신하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/cafe-app-guide/",
+      "source_slug": "cafe-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "카페 모바일 오더의 가상 주문 검수 — 실제 판매·적립 정책은 매장에서 확정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/restaurant-app-guide/",
+      "source_slug": "restaurant-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "식당 테이블 주문의 가상 주방 검수 — 피크 시간에 직접 재현해 볼 예시",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/hair-salon-app-guide/",
+      "source_slug": "hair-salon-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "미용실 시간·담당자 예약의 가상 검수 — 시술 시간은 매장이 지정하는 시험값",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/booking-app-guide/",
+      "source_slug": "booking-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "소규모 예약의 가상 자원 잠금 예시 — 예약금·취소 조건은 별도 합의",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/shopping-app-guide/",
+      "source_slug": "shopping-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "자사몰 주문·반품의 가상 검수 — 수수료·환불액은 계약한 정책과 별도로 대조",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/delivery-app-guide/",
+      "source_slug": "delivery-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "단일 매장 배달 주문의 가상 상태 검수 — 실제 배달대행 가능 범위를 보장하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/pet-app-guide/",
+      "source_slug": "pet-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "여러 반려동물 기록의 가상 연결 검수 — 처치·접종 일정은 수의사 또는 기관이 지정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/lodging-app-guide/",
+      "source_slug": "lodging-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "숙박 직접 예약의 가상 객실 검수 — 채널 연동·취소 요금의 실제 조건은 별도 확인",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/realestate-app-guide/",
+      "source_slug": "realestate-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "부동산 매물 공개·문의의 가상 검수 — 표시 의무와 실제 권리는 별도 확인 필요",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/community-app-guide/",
+      "source_slug": "community-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "커뮤니티 운영 도구의 가상 검수 — 실제 운영 규칙과 이용자 고지에 맞춰 조정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/subscription-app-guide/",
+      "source_slug": "subscription-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "구독 결제·이용 권한의 가상 검수 — 유예·해지·환불 조건은 실제 플랜에서 확정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/manufacturing-app-guide/",
+      "source_slug": "manufacturing-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "수주·생산·재고 연결의 가상 수량 검수 — 실제 원가·품질 기준과 다른 단순 시험값",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/wholesale-app-guide/",
+      "source_slug": "wholesale-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "B2B 단가·단위의 가상 주문 검수 — 가격과 포장 수량은 계산 방법을 보이는 시험값",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/interior-app-guide/",
+      "source_slug": "interior-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "인테리어 변경 공사·사진 일지의 가상 승인 검수 — 실제 공사 계약을 대체하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/pilates-app-guide/",
+      "source_slug": "pilates-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "필라테스 정원·대기·회차의 가상 검수 — 차감 시점과 취소 기한은 센터가 정함",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/studycafe-app-guide/",
+      "source_slug": "studycafe-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "스터디카페 시간 차감의 가상 검수 — 과금 단위·외출 정책은 매장과 별도 합의",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/taekwondo-app-guide/",
+      "source_slug": "taekwondo-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "태권도 차량·출결 기록의 가상 검수 — 알림은 현장 탑승·하차 확인을 대신하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/kids-cafe-app-guide/",
+      "source_slug": "kids-cafe-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "키즈카페 입장·파티룸의 가상 자원 검수 — 정원·요금·안전 운영 기준은 매장이 확정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/wedding-app-guide/",
+      "source_slug": "wedding-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "웨딩 홀 가예약·옵션의 가상 검수 — 보증 인원·대금·취소 조건은 실제 계약에서 확인",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/cleaning-app-guide/",
+      "source_slug": "cleaning-app-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "청소 예약·추가 작업의 가상 현장 검수 — 실제 작업비·촬영 동의 조건은 별도 확정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/b2b-saas-guide/",
+      "source_slug": "b2b-saas-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "B2B SaaS 조직·퇴사·내보내기의 가상 권한 검수 — 실제 고객 자료 없이 시험",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/app-duration/",
+      "source_slug": "app-duration",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "출시 일정 의존 작업의 가상 점검표 — 기간·스토어 승인일을 보장하는 표가 아님",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/dev-process/",
+      "source_slug": "dev-process",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "개발 단계 인수의 가상 확인 예시 — 계약별 산출물·책임 범위에 맞춰 조정",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/agency-choice/",
+      "source_slug": "agency-choice",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "두 개발 업체의 가상 견적 대조 예시 — 특정 업체의 실제 조건이나 우열을 뜻하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/erp-cost/",
+      "source_slug": "erp-cost",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "ERP 데이터 이관의 가상 검수 예시 — 실제 고객·재고·거래 금액을 사용하지 않음",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    },
+    {
+      "url": "https://reumlab.com/guide/ai-automation-guide/",
+      "source_slug": "ai-automation-guide",
+      "gap": "기존 기능·준비사항을 실제 검수 입력과 기대 결과로 대조할 구체적 예시가 부족",
+      "addition": "문의 분류·전달 자동화의 가상 승인 검수 — 실제 분류 정확도나 시간 절감 성과가 아님",
+      "rows": 3,
+      "benefit": "독자가 자기 업무의 예외 입력과 통과 기준을 작성할 수 있음"
+    }
+  ],
+  "validation": {
+    "source_comparison": "All 45 guides compared: only 37 table fields and meaningful modification dates changed.",
+    "expected_live_verification": "All sitemap URLs after production deploy; raw requests retained in execution evidence.",
+    "full_task_complete": false
+  }
+}
