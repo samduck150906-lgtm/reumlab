@@ -4,6 +4,7 @@
  * 각 가이드는 고유 본문(섹션) + FAQ를 가짐. JSON-LD: Article + FAQPage + BreadcrumbList.
  */
 import { SITE } from './seo';
+import { GUIDE_DECISION_EXAMPLES } from './guide-decision-examples';
 import { decideFromContent, fingerprint, type IndexDecision } from './index-quality';
 
 export interface GuideSection {
@@ -143,6 +144,7 @@ export const GUIDES: GuideDef[] = [
   },
   {
     slug: 'outsourcing-cost',
+    table: GUIDE_DECISION_EXAMPLES['outsourcing-cost'],
     title: '앱개발 외주 비용: 정액 패키지와 숨은 비용 없는 견적',
     h1: '앱개발 외주 비용, 숨은 비용 없이 잡는 법',
     description:
@@ -170,7 +172,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'mvp-cost',
@@ -242,6 +244,7 @@ export const GUIDES: GuideDef[] = [
   },
   {
     slug: 'web-cost',
+    table: GUIDE_DECISION_EXAMPLES['web-cost'],
     title: '홈페이지 제작 비용 | 98만원부터, 항목별 견적 기준',
     h1: '웹사이트 제작 비용, 어떻게 책정될까',
     description:
@@ -270,10 +273,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/soho/', label: '소상공인 홈페이지 제작' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'chatbot-cost',
+    table: GUIDE_DECISION_EXAMPLES['chatbot-cost'],
     title: 'AI 챗봇 개발 비용: 최소 기능부터 단계별로',
     h1: 'AI 챗봇 개발 비용, 단계별로 접근하기',
     description:
@@ -300,10 +304,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/guide/quote', label: '견적 빨리 받는 법' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'flutter-cost',
+    table: GUIDE_DECISION_EXAMPLES['flutter-cost'],
     title: 'Flutter 앱개발 비용: 크로스플랫폼으로 줄이는 비용',
     h1: 'Flutter 앱개발 비용이 합리적인 이유',
     description:
@@ -332,10 +337,11 @@ export const GUIDES: GuideDef[] = [
     ],
     sources: [{"title":"Flutter architectural overview","url":"https://docs.flutter.dev/resources/architectural-overview","publisher":"Flutter","note":"공유 코드·플랫폼 연결 구조 참고. 비용 절감률의 근거가 아님."}],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'quote',
+    table: GUIDE_DECISION_EXAMPLES['quote'],
     title: '앱개발 외주 견적, 빨리 받는 4가지 준비물',
     h1: '앱개발 외주 견적을 빨리 받는 법',
     description:
@@ -364,10 +370,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/source-handover/', label: '소스코드 이관 — 외주 종속 피하기' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'non-developer-app',
+    table: GUIDE_DECISION_EXAMPLES['non-developer-app'],
     title: '비개발자 대표를 위한 앱개발 외주 가이드',
     h1: '비개발자 대표의 앱개발 외주 가이드',
     description:
@@ -395,10 +402,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/guide/quote', label: '견적 빨리 받는 법' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'startup-mvp',
+    table: GUIDE_DECISION_EXAMPLES['startup-mvp'],
     title: '스타트업 MVP 개발: 투자·검증용 빠른 출시 전략',
     h1: '스타트업 MVP 개발, 빠른 검증을 위한 전략',
     description:
@@ -426,7 +434,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/compare/outsourcing-vs-inhouse', label: '외주 vs 자체개발 비교' },
     ],
     publishedAt: '2026-06-22',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'dongtan-hwaseong',
@@ -463,6 +471,7 @@ export const GUIDES: GuideDef[] = [
   },
   {
     slug: 'hospital-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['hospital-app-guide'],
     title: '병원 앱 만들기 가이드: 기획 없이 예약·문진부터 시작하는 법',
     h1: '병원 앱 만들기, 무엇부터 준비할까',
     description: '병원·의원 앱을 처음 만들 때 무엇부터 정하고 어떤 순서로 진행하는지, 예약·문진·리콜 우선순위와 자주 하는 실수를 정리했습니다.',
@@ -489,10 +498,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'dental-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['dental-app-guide'],
     title: '치과 앱 만들기 가이드: 정기검진 리콜부터 챙기는 법',
     h1: '치과 앱 만들기, 리콜을 먼저 설계하라',
     description: '치과 앱을 만들 때 예약·문진보다 정기검진 리콜과 교정 회차 관리를 먼저 설계해야 하는 이유와 준비 순서, 실수를 정리했습니다.',
@@ -519,10 +529,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'fitness-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['fitness-app-guide'],
     title: '헬스장 앱 만들기 가이드: 회원권·출석·PT 예약부터',
     h1: '헬스장 앱 만들기, 데스크 문의부터 줄여라',
     description: '헬스장 앱을 만들 때 회원권·출석·PT 예약을 우선하고 정기결제·다지점은 나중에 붙여야 하는 이유와 준비 순서를 정리했습니다.',
@@ -549,10 +560,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'academy-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['academy-app-guide'],
     title: '학원 앱 만들기 가이드: 등하원 알림부터 자동화하는 법',
     h1: '학원 앱 만들기, 등하원 알림이 먼저다',
     description: '학원 앱을 만들 때 등하원 알림·출결을 먼저 자동화하고 결제·리포트를 나중에 붙여야 하는 이유와 준비 순서, 실수를 정리했습니다.',
@@ -579,10 +591,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'cafe-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['cafe-app-guide'],
     title: '카페 앱 만들기 가이드: 모바일 오더·스탬프로 단골 잡기',
     h1: '카페 앱 만들기, 주문·적립 흐름부터 정하라',
     description: '카페 앱을 만들 때 모바일 오더·스탬프를 먼저 넣어 주문·적립 데이터와 결제·운영비를 함께 확인하는 법과 준비 순서를 정리했습니다.',
@@ -609,10 +622,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'restaurant-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['restaurant-app-guide'],
     title: '식당 앱 만들기 가이드: 테이블 오더로 인건비 줄이기',
     h1: '식당 앱 만들기, 테이블 오더와 웨이팅부터',
     description: '식당 앱을 만들 때 테이블 오더·원격 웨이팅을 먼저 넣어 홀 인건비와 대기 이탈을 줄이는 법과 포스 연동 시점을 정리했습니다.',
@@ -639,10 +653,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'hair-salon-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['hair-salon-app-guide'],
     title: '미용실 앱 만들기 가이드: 지정 예약·시술 이력·리콜',
     h1: '미용실 앱 만들기, 지정 손님 재방문을 설계하라',
     description: '미용실 앱을 만들 때 디자이너 지정 예약·시술 이력·재방문 리콜을 먼저 설계해야 하는 이유와 준비 순서를 정리했습니다.',
@@ -669,10 +684,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'booking-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['booking-app-guide'],
     title: '예약 앱 만들기 가이드: 미용·네일·공방 노쇼 줄이기',
     h1: '예약 앱 만들기, 노쇼와 응대를 함께 줄여라',
     description: '미용·네일·공방 같은 소규모 매장의 예약 앱을 만들 때 노쇼 방지와 단골 관리를 어떻게 설계하는지, 준비 순서와 실수를 정리했습니다.',
@@ -699,10 +715,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'shopping-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['shopping-app-guide'],
     title: '쇼핑몰 앱 만들기 가이드: 결제·배송 먼저 검증하기',
     h1: '쇼핑몰 앱 만들기, 매출 흐름부터 검증하라',
     description: '자사몰 앱을 만들 때 상품·결제·배송 핵심 흐름을 먼저 검증하고 쿠폰·물류를 나중에 붙여야 하는 이유와 준비 순서를 정리했습니다.',
@@ -729,10 +746,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'delivery-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['delivery-app-guide'],
     title: '배달 앱 만들기 가이드: 자체 주문 채널의 범위와 운영비',
     h1: '배달 앱 만들기, 주문 흐름과 운영비부터 확인하라',
     description: '자체 배달·주문 앱을 만들 때 메뉴·주문·결제를 먼저 검증하고 실시간 배차는 나중에 붙여야 하는 이유와 준비 순서를 정리했습니다.',
@@ -759,10 +777,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'pet-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['pet-app-guide'],
     title: '반려동물 앱 만들기 가이드: 예약·건강 기록·접종 알림',
     h1: '반려동물 앱 만들기, 매일 여는 이유를 만들어라',
     description: '반려동물 앱을 만들 때 보호자가 매일 쓰는 예약·건강 기록·접종 알림을 먼저 넣고 커머스는 나중에 붙여야 하는 이유를 정리했습니다.',
@@ -789,10 +808,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'lodging-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['lodging-app-guide'],
     title: '펜션·숙박 앱 만들기 가이드: 자체 예약으로 수수료 줄이기',
     h1: '숙박 앱 만들기, 직접 예약을 키워라',
     description: '펜션·숙박 앱을 만들 때 날짜·객실 예약과 결제를 먼저 넣고 채널 매니저 연동은 나중에 붙여야 하는 이유와 준비 순서를 정리했습니다.',
@@ -819,10 +839,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'realestate-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['realestate-app-guide'],
     title: '부동산 앱 만들기 가이드: 지도·매물·문의 우선순위',
     h1: '부동산 앱 만들기, 지도 비용부터 이해하라',
     description: '부동산 중개 앱을 만들 때 매물·지도·문의를 먼저 넣고 외부 매물 연동은 나중에 붙여야 하는 이유와 지도 API 비용을 정리했습니다.',
@@ -849,10 +870,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'community-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['community-app-guide'],
     title: '커뮤니티 앱 만들기 가이드: 게시판·알림부터 활동 모으기',
     h1: '커뮤니티 앱 만들기, 기능보다 활동이 먼저다',
     description: '커뮤니티 앱을 만들 때 게시판·알림·운영도구부터 넣고 실시간 채팅은 나중에 붙여야 하는 이유와 서버 비용 고려사항을 정리했습니다.',
@@ -880,10 +902,11 @@ export const GUIDES: GuideDef[] = [
     ],
     sources: [{"title":"App Review Guidelines","url":"https://developer.apple.com/app-store/review/guidelines/","publisher":"Apple","note":"사용자 생성 콘텐츠의 신고·차단·운영 조치 및 앱 심사 참고."}],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'subscription-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['subscription-app-guide'],
     title: '구독 서비스 앱 만들기 가이드: 갱신·해지 흐름부터',
     h1: '구독 앱 만들기, 결제보다 갱신·해지가 어렵다',
     description: '구독 서비스 앱을 만들 때 핵심 플랜으로 갱신·해지 흐름을 먼저 검증하고 자동 정기결제를 나중에 붙여야 하는 이유를 정리했습니다.',
@@ -911,10 +934,11 @@ export const GUIDES: GuideDef[] = [
     ],
     sources: [{"title":"App Review Guidelines","url":"https://developer.apple.com/app-store/review/guidelines/","publisher":"Apple","note":"디지털 상품·구독 결제는 앱 대상과 판매 방식별 정책 확인 필요."}],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'manufacturing-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['manufacturing-app-guide'],
     title: '제조 관리 시스템 만들기 가이드: ERP 대신 핵심 흐름부터',
     h1: '제조 시스템 만들기, ERP를 다 만들지 마라',
     description: '제조·공장 관리 시스템을 만들 때 수주·생산·재고 핵심 흐름부터 구축하고 정산·연동은 나중에 붙여야 하는 이유를 정리했습니다.',
@@ -941,10 +965,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'wholesale-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['wholesale-app-guide'],
     title: '도소매 B2B 주문 시스템 만들기 가이드: 거래처 단가부터',
     h1: 'B2B 주문 시스템 만들기, 차등 단가부터 자동화하라',
     description: '도소매 B2B 주문 시스템을 만들 때 거래처별 차등 단가와 직접 주문을 먼저 넣고 미수·정산은 나중에 붙여야 하는 이유를 정리했습니다.',
@@ -971,10 +996,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'interior-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['interior-app-guide'],
     title: '인테리어 앱 만들기 가이드: 시공 일지로 클레임 줄이기',
     h1: '인테리어 앱 만들기, 진행을 투명하게 공유하라',
     description: '인테리어 앱을 만들 때 견적·시공 사진 일지·대금 단계를 먼저 넣어 클레임과 대금 분쟁을 줄이는 법과 준비 순서를 정리했습니다.',
@@ -1001,10 +1027,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'pilates-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['pilates-app-guide'],
     title: '필라테스·요가 앱 만들기 가이드: 정원·회차 관리부터',
     h1: '필라테스 앱 만들기, 정원과 회차를 먼저 잡아라',
     description: '필라테스·요가 앱을 만들 때 그룹 수업 정원·회원권 회차·대기자 배정을 먼저 넣어야 하는 이유와 준비 순서를 정리했습니다.',
@@ -1031,10 +1058,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'studycafe-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['studycafe-app-guide'],
     title: '스터디카페 무인 시스템 만들기 가이드: 좌석·시간권·출입',
     h1: '스터디카페 무인 시스템, 과금 흐름부터 잡아라',
     description: '스터디카페 무인 시스템을 만들 때 좌석 예약·시간권 충전·자동 정산을 먼저 검증하고 출입 하드웨어는 나중에 연동하는 순서를 정리했습니다.',
@@ -1061,10 +1089,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'taekwondo-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['taekwondo-app-guide'],
     title: '태권도 체육관 앱 만들기 가이드: 차량·출결·승급',
     h1: '태권도 앱 만들기, 차량 안전 알림이 먼저다',
     description: '태권도·체육관 앱을 만들 때 차량 탑승·등하원 알림과 승급 관리를 먼저 넣어야 하는 이유와 준비 순서를 정리했습니다.',
@@ -1090,10 +1119,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'kids-cafe-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['kids-cafe-app-guide'],
     title: '키즈카페 앱 만들기 가이드: 입장 예약·생일파티',
     h1: '키즈카페 앱 만들기, 주말 혼잡부터 관리하라',
     description: '키즈카페 앱을 만들 때 입장 예약·정원 관리와 생일파티 예약을 어떻게 설계하는지, 준비 순서와 실수를 정리했습니다.',
@@ -1119,10 +1149,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'wedding-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['wedding-app-guide'],
     title: '웨딩·돌잔치 앱 만들기 가이드: 홀 예약·견적·하객',
     h1: '웨딩 앱 만들기, 중복 예약과 견적부터 잡아라',
     description: '웨딩·돌잔치 앱을 만들 때 홀·날짜 예약 중복 방지와 패키지 견적, 하객 관리를 어떻게 설계하는지 준비 순서를 정리했습니다.',
@@ -1148,10 +1179,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'cleaning-app-guide',
+    table: GUIDE_DECISION_EXAMPLES['cleaning-app-guide'],
     title: '청소·홈서비스 앱 만들기 가이드: 예약·기사 배정',
     h1: '청소 앱 만들기, 준비된 방문을 만들어라',
     description: '청소·홈서비스 앱을 만들 때 방문 예약·기사 배정과 정기 구독을 어떻게 설계하는지, 준비 순서와 실수를 정리했습니다.',
@@ -1178,10 +1210,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'b2b-saas-guide',
+    table: GUIDE_DECISION_EXAMPLES['b2b-saas-guide'],
     title: 'B2B SaaS 만들기 가이드: 핵심 기능부터 검증하는 법',
     h1: 'B2B SaaS 만들기, 한 팀의 문제부터 풀어라',
     description: 'B2B SaaS를 만들 때 한 팀의 반복 업무를 줄이는 핵심 기능부터 검증하고 연동·정산을 나중에 붙여야 하는 이유를 정리했습니다.',
@@ -1208,7 +1241,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/app-development', label: '앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-07-01',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   /*
     아래 5건은 12단계에서 추가한 의사결정 가이드다.
@@ -1222,6 +1255,7 @@ export const GUIDES: GuideDef[] = [
   */
   {
     slug: 'app-duration',
+    table: GUIDE_DECISION_EXAMPLES['app-duration'],
     title: '앱개발 기간은 어떻게 정해질까 — 일정을 늘리는 5가지 요인',
     h1: '앱개발 기간은 무엇으로 정해질까',
     description:
@@ -1282,10 +1316,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/flutter', label: 'Flutter 앱개발 외주 서비스 보기' },
     ],
     publishedAt: '2026-08-10',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'dev-process',
+    table: GUIDE_DECISION_EXAMPLES['dev-process'],
     title: '외주 개발 진행 과정 8단계 | 견적·계약·검수·소스 이관',
     h1: '외주 개발은 어떤 순서로 진행될까',
     description:
@@ -1351,10 +1386,11 @@ export const GUIDES: GuideDef[] = [
     ],
     sources: [{"title":"App Review Guidelines","url":"https://developer.apple.com/app-store/review/guidelines/","publisher":"Apple","note":"앱 심사는 개발·검수 완료와 별도 절차."}],
     publishedAt: '2026-08-10',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'agency-choice',
+    table: GUIDE_DECISION_EXAMPLES['agency-choice'],
     title: '앱·웹 개발 업체 고르는 기준 8가지 — 견적서에서 확인할 것',
     h1: '개발 업체를 고를 때 무엇을 확인해야 할까',
     description:
@@ -1422,10 +1458,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/compare/outsourcing-vs-inhouse', label: '외주개발 vs 자체개발 비교' },
     ],
     publishedAt: '2026-08-10',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'erp-cost',
+    table: GUIDE_DECISION_EXAMPLES['erp-cost'],
     title: '맞춤형 ERP·업무 시스템 구축 비용은 어떻게 정해질까',
     h1: '맞춤형 ERP 구축 비용, 무엇이 가격을 결정할까',
     description:
@@ -1486,10 +1523,11 @@ export const GUIDES: GuideDef[] = [
       { href: '/guide/dev-process', label: '외주 개발 진행 과정' },
     ],
     publishedAt: '2026-08-10',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   {
     slug: 'ai-automation-guide',
+    table: GUIDE_DECISION_EXAMPLES['ai-automation-guide'],
     title: 'AI 업무 자동화란? 적용 업무·비용·도입 순서',
     h1: 'AI 업무 자동화, 어떤 업무부터 적용할 수 있을까',
     description:
@@ -1550,7 +1588,7 @@ export const GUIDES: GuideDef[] = [
       { href: '/portfolio/ai-work-hub', label: 'AI 업무 자동화 허브 개발 사례' },
     ],
     publishedAt: '2026-08-10',
-    updatedAt: '2026-10-20',
+    updatedAt: '2026-11-10',
   },
   /*
     아래 2건은 14단계에서 추가한 "인용 대상" 자산이다.
