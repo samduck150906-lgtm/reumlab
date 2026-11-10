@@ -1,4 +1,10 @@
 .page { --agency-ink: #142b49; --agency-muted: #52627a; --agency-accent: #2555d8; color: var(--agency-ink); background: #f6f8fc; padding: 108px 24px 84px; overflow-wrap: anywhere; }
+.tableScroll { max-width: 100%; overflow-x: auto; margin-top: 20px; }
+.tableScroll:focus-visible { outline: 3px solid var(--agency-accent); outline-offset: 4px; }
+.acceptanceTable { border-collapse: collapse; width: 100%; min-width: 540px; line-height: 1.7; }
+.acceptanceTable caption { text-align: left; font-weight: 700; margin-bottom: 12px; }
+.acceptanceTable th, .acceptanceTable td { border: 1px solid #dce4f0; padding: 14px; text-align: left; vertical-align: top; }
+.acceptanceTable thead th { background: #edf2fc; }
 .page *, .page *::before, .page *::after { box-sizing: border-box; }
 .page a:focus-visible, .page summary:focus-visible { outline: 3px solid #b14b00; outline-offset: 5px; border-radius: 4px; }
 .skip { position: fixed; left: 16px; top: -100px; z-index: 9999; padding: 12px 20px; background: #fff; color: #142b49; }

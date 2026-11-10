@@ -82,6 +82,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
                 {directory && <li><a href="#agency-directory">업무별 개발 범위 찾기</a></li>}
                 {!isHub && <li><a href="#agency-scope">름랩이 맡는 개발 범위</a></li>}
                 {page.sections.map(section => <li key={section.id}><a href={`#${section.id}`}>{section.heading}</a></li>)}
+                {page.acceptanceExamples && <li><a href="#agency-acceptance">검수 시나리오 예시</a></li>}
                 <li><a href="#agency-faq">자주 묻는 질문</a></li>
                 <li><a href="#agency-related">함께 검토할 개발 범위</a></li>
               </ol>
@@ -129,6 +130,17 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
                 </section>
               );
             })}
+            {page.acceptanceExamples && <section id="agency-acceptance" className={styles.section}>
+              <h2>{page.primaryKeyword} 검수 시나리오 예시</h2>
+              <p>{page.acceptanceExamples.intro}</p>
+              <div className={styles.tableScroll} role="region" aria-label="검수 시나리오 표" tabIndex={0}>
+                <table className={styles.acceptanceTable}>
+                  <caption>가명 자료로 확인할 입력과 기대 결과</caption>
+                  <thead><tr><th scope="col">확인할 상황</th><th scope="col">시험 입력·행동</th><th scope="col">화면·기록에서 확인할 결과</th></tr></thead>
+                  <tbody>{page.acceptanceExamples.rows.map(row => <tr key={row.scenario}><th scope="row">{row.scenario}</th><td>{row.input}</td><td>{row.expected}</td></tr>)}</tbody>
+                </table>
+              </div>
+            </section>}
             <section id="agency-faq" className={styles.section}>
               <h2>{page.primaryKeyword} 자주 묻는 질문</h2>
               <div className={styles.faq}>

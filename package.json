@@ -20,6 +20,7 @@
     "seo:report:aeo": "node scripts/generate-seo-aeo-deliverables.mjs",
     "seo:indexnow": "node --use-system-ca scripts/submit-indexnow.mjs --submit",
     "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:audit:static": "node scripts/audit-static-site.mjs",
     "seo:verify": "node scripts/verify-sitemap.mjs",
     "seo:verify:regions": "node scripts/verify-region-pages.mjs",
     "seo:verify:services": "node scripts/verify-service-hubs.mjs",

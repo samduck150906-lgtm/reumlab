@@ -60,6 +60,11 @@ test('IndexNow blocks an unexpected automatic large batch unless it is explicitl
     mkdirSync(path.join(fixtureRoot, 'out'));
     copyFileSync(path.join(ROOT, 'scripts', 'submit-indexnow.mjs'), path.join(fixtureRoot, 'scripts', 'submit-indexnow.mjs'));
     copyFileSync(path.join(ROOT, 'scripts', 'read-sitemap.mjs'), path.join(fixtureRoot, 'scripts', 'read-sitemap.mjs'));
+    copyFileSync(path.join(ROOT, 'scripts', 'indexnow-candidates.mjs'), path.join(fixtureRoot, 'scripts', 'indexnow-candidates.mjs'));
+    mkdirSync(path.join(fixtureRoot, 'docs', 'execution-20261020'), { recursive: true });
+    writeFileSync(path.join(fixtureRoot, 'docs', 'execution-20261020', 'content-changes.json'), JSON.stringify(
+      ['one', 'two', 'three'].map(slug => ({ url: `https://reumlab.com/${slug}/`, action: 'changed' })),
+    ));
     writeFileSync(
       path.join(fixtureRoot, 'out', 'sitemap.xml'),
       `<?xml version="1.0" encoding="UTF-8"?>
@@ -89,7 +94,7 @@ test('IndexNow blocks an unexpected automatic large batch unless it is explicitl
     const approvedOutput = `${approved.stdout}\n${approved.stderr}`;
     assert.equal(approved.status, 0, approvedOutput);
     assert.doesNotMatch(approvedOutput, /대량 제출 차단/);
-    assert.match(approvedOutput, /변경분 3개 제출 대상/);
+    assert.match(approvedOutput, /변경·대기분 3개 제출 대상/);
   } finally {
     rmSync(fixtureRoot, { recursive: true, force: true });
   }
