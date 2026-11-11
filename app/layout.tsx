@@ -72,6 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         {/* Pretendard is self-hosted with font-display: swap; no remote font dependency. */}
         <meta name="theme-color" content="#0f1f3a" />
+        <link rel="stylesheet" href="/assets/public-page-review.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         <link
           rel="alternate"

@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import Link from '@/components/SiteLink';
@@ -670,6 +671,7 @@ export default function SohoPage() {
             </p>
           </div>
         </section>
+        <PublicPageReview path={'/soho/'} />
       </main>
 
       <BusinessFooter />

@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import './portfolio.css';
@@ -144,6 +145,7 @@ export default function PortfolioHub() {
           <li><Link href="/data-seo/">데이터·SEO 시스템 구축</Link></li>
         </ul>
       </nav>
+        <PublicPageReview path={'/portfolio/'} />
       </main>
       <BusinessFooter />
     </>

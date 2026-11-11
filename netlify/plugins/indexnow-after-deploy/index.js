@@ -67,7 +67,18 @@ export const onSuccess = async ({ utils }) => {
     }
     liveVerified = true;
     console.log(`[indexnow-after-deploy] 새 배포 공개 확인(${live.attempt}회차) — 변경 URL 제출 시작`);
-    await utils.run.command('node --use-system-ca scripts/submit-indexnow.mjs --submit');
+    // This release was explicitly requested for all 2,842 remaining public pages.
+    // Allow its verified URL set through the ordinary 50-URL automatic limit.
+    const review = readJson('docs/search-audit/remaining-public-review-verification.json');
+    const changes = readJson('docs/execution-20261020/content-changes.json') ?? [];
+    const pending = readJson(PENDING) ?? [];
+    const verifiedPaths = new Set((review?.rows ?? []).map(row => row.path));
+    const reviewedBatch = review?.page_count === 2842 && verifiedPaths.size === 2842 && changes.length > 50
+      && changes.every(change => change.action === 'changed'
+        && verifiedPaths.has(decodeURIComponent(new URL(change.url).pathname)))
+      && pending.every(url => verifiedPaths.has(decodeURIComponent(new URL(url).pathname)));
+    const command = 'node --use-system-ca scripts/submit-indexnow.mjs --submit';
+    await utils.run.command(command + (reviewedBatch ? ' --allow-large-batch' : ''));
   } catch (e) {
     console.warn('[indexnow-after-deploy] 제출 단계 오류(배포에는 영향 없음):', e.shortMessage ?? e.message);
   } finally {

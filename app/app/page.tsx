@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
@@ -180,6 +181,7 @@ export default function IndustryHubPage() {
             </div>
           </div>
         </article>
+        <PublicPageReview path={'/app/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/app-development">← 앱개발 서비스로</Link>} />
     </>

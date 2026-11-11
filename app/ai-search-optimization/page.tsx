@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -742,6 +743,7 @@ export default function AiSearchOptimizationPage() {
             </div>
           </div>
         </section>
+        <PublicPageReview path={'/ai-search-optimization/'} />
       </main>
 
       <BusinessFooter topExtra={<Link href="/geo-website/">← 홈페이지를 새로 만들어야 한다면 GEO 홈페이지 제작</Link>} />

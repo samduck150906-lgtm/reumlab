@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import LandingInquiryForm from '@/components/LandingInquiryForm';
@@ -376,6 +377,7 @@ export default function GeoWebsitePage() {
             </nav>
           </div>
         </section>
+        <PublicPageReview path={'/geo-website/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/website/">← 홈페이지 제작 서비스 비교하기</Link>} />
     </>

@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -275,6 +276,7 @@ export default function AnswerTopicPage({ params }: Props) {
             </div>
           </div>
         </article>
+        <PublicPageReview path={`/answers/${params.topic}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/answers/">← 질문별 답변</Link>} />
     </>

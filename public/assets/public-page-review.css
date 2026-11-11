@@ -1,0 +1,26 @@
+.public-page-review {
+  box-sizing: border-box;
+  max-width: 48rem;
+  margin: 2.5rem auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid #ced9e8;
+  border-radius: .75rem;
+  background: #f5f8fc;
+  color: #172c48;
+  overflow-wrap: anywhere;
+}
+.public-page-review h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 700;
+}
+.public-page-review dl, .public-page-review dd { margin: 0; }
+.public-page-review dt { margin-top: .85rem; font-weight: 700; }
+.public-page-review p { margin: .35rem 0; line-height: 1.65; }
+.public-page-review ul { margin: 0; padding-inline-start: 1.25rem; list-style: disc; }
+.public-page-review li + li { margin-top: .55rem; }
+.public-page-review a { color: #16478c; text-decoration: underline; text-underline-offset: .2em; }
+.public-page-review .public-page-review-basis { color: #455873; font-size: .9rem; }
+@media (max-width: 52rem) {
+  .public-page-review { margin-inline: 1rem; }
+}

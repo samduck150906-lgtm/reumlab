@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { AgencyPage } from '@/lib/development-agency/types';
 import { AGENCY_BASE, AGENCY_DOMAIN, agencyHref } from '@/lib/development-agency/types';
 import { SITE } from '@/lib/seo';
@@ -141,6 +142,7 @@ export default function AgencyArticle({ page, directory }: { page: AgencyPage; d
                 </table>
               </div>
             </section>}
+            <PublicPageReview path={agencyHref(page)} />
             <section id="agency-faq" className={styles.section}>
               <h2>{page.primaryKeyword} 자주 묻는 질문</h2>
               <div className={styles.faq}>

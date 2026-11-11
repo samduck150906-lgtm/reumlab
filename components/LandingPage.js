@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import Link from '@/components/SiteLink';
 import { getSite, getLandingBySlug, getHubBySlug } from '../lib/data';
 import { buildLandingContent } from '../lib/landing-content';
@@ -344,6 +345,7 @@ export default function LandingPage({ slug }) {
         </div>
       </section>
 
+        <PublicPageReview path={`/l/${slug}/`} />
       </main>
       <BusinessFooter />
     </>

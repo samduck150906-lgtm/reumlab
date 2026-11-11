@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -159,6 +160,7 @@ export default function ComparePage({ params }: Props) {
             </div>
           </div>
         </article>
+        <PublicPageReview path={`/compare/${params.slug}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/">← 메인으로</Link>} />
     </>

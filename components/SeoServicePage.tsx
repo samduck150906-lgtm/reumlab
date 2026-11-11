@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import Link from '@/components/SiteLink';
 import type { PageSeo } from '@/lib/seo';
 import { SITE } from '@/lib/seo';
@@ -385,6 +386,7 @@ export default function SeoServicePage({ seo, pageSlug }: { seo: PageSeo; pageSl
 
       {/* 본문과의 48px 간격은 원래 푸터가 갖고 있었다 — 협력사 섹션이 푸터 위로 들어오며 섹션 쪽으로 옮겼다 */}
       <TossPartnerSection style={{ marginTop: 48 }} />
+      <PublicPageReview path={pageSlug ? `/${pageSlug}/` : '/'} />
       <footer className="footer">
         <div className="container">
           <p className="footer-info">

@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -324,6 +325,7 @@ export default function EnternalAiPage() {
             submitLabel="Enternal AI PoC 검토 요청하기"
           />
         </section>
+        <PublicPageReview path={'/enternal-ai/'} />
       </main>
 
       <BusinessFooter topExtra={<Link href="/enterprise-ai/">← 현재 가능한 사내 AI 구축으로</Link>} />

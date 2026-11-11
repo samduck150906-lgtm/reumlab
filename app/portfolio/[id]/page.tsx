@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import '../portfolio.css';
@@ -267,6 +268,7 @@ export default function PortfolioDetail({ params }: { params: { id: string } }) 
           </a>
         </p>
       </section>
+        <PublicPageReview path={`/portfolio/${params.id}/`} />
       </main>
       <BusinessFooter />
     </>

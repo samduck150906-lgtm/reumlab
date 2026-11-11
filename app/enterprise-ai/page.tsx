@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
@@ -546,6 +547,7 @@ export default function EnterpriseAiPage() {
             </div>
           </div>
         </article>
+        <PublicPageReview path={'/enterprise-ai/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/ai-automation/">← AI 업무 자동화로</Link>} />
     </>

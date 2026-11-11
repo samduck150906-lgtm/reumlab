@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -232,6 +233,7 @@ export default function BlogPostPage({ params }: Props) {
             )}
           </div>
         </article>
+        <PublicPageReview path={`/blog/${params.slug}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/blog/">← 블로그 목록</Link>} />
     </>
