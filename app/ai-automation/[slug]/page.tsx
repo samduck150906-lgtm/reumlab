@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import React from 'react';
@@ -219,6 +220,7 @@ export default function AutomationDomainPage({ params }: PageProps) {
             </div>
           </section>
         </article>
+        <PublicPageReview path={`/ai-automation/${params.slug}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/ai-automation/">AI 업무자동화 전체 분야 보기</Link>} />
     </>

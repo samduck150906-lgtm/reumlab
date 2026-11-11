@@ -1,5 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 
 // @ts-ignore — 플러그인은 Netlify 빌드에서 그대로 실행되는 JS 모듈이다.
 import { mergeManifests, mergeContentManifests, waitForLiveBuild } from '../netlify/plugins/indexnow-after-deploy/lib.js';
@@ -49,4 +52,42 @@ test('production 이 아닌 컨텍스트에서는 아무 명령도 실행하지 
     if (prev === undefined) delete process.env.CONTEXT; else process.env.CONTEXT = prev;
   }
   assert.equal(ran, false);
+});
+
+test('large reviewed release is allowed only when changed and pending URLs belong to the verified set', async () => {
+  const folder = fs.mkdtempSync(path.join(os.tmpdir(), 'reumlab-reviewed-indexnow-'));
+  const previousDirectory = process.cwd();
+  const previousContext = process.env.CONTEXT;
+  const previousFetch = globalThis.fetch;
+  const commands: string[] = [];
+  try {
+    process.chdir(folder);
+    process.env.CONTEXT = 'production';
+    globalThis.fetch = (async () => ({ status: 200 })) as typeof fetch;
+    fs.mkdirSync('.next');
+    fs.writeFileSync('.next/BUILD_ID', 'reviewed-release');
+    fs.mkdirSync('docs/search-audit', { recursive: true });
+    fs.mkdirSync('docs/execution-20261020', { recursive: true });
+    const rows = Array.from({ length: 2842 }, (_, index) => ({ path: '/reviewed-' + index + '/' }));
+    fs.writeFileSync('docs/search-audit/remaining-public-review-verification.json', JSON.stringify({ page_count: 2842, rows }));
+    fs.writeFileSync('docs/execution-20261020/content-changes.json', JSON.stringify(rows.slice(0, 51).map(row => ({
+      url: 'https://reumlab.com' + row.path, action: 'changed',
+    }))));
+    const utils = {
+      run: { command: async (command: string) => { commands.push(command); } },
+      cache: { save: async () => true },
+    };
+    await onSuccess({ utils });
+    assert.ok(commands[0].endsWith(' --allow-large-batch'));
+    fs.writeFileSync('.indexnow-pending.json', JSON.stringify(['https://reumlab.com/outside-reviewed-set/']));
+    await onSuccess({ utils });
+    assert.equal(commands[1], 'node --use-system-ca scripts/submit-indexnow.mjs --submit');
+  } finally {
+    process.chdir(previousDirectory);
+    globalThis.fetch = previousFetch;
+    if (previousContext === undefined) delete process.env.CONTEXT;
+    else process.env.CONTEXT = previousContext;
+    assert.ok(path.resolve(folder).startsWith(path.resolve(os.tmpdir()) + path.sep));
+    fs.rmSync(folder, { recursive: true, force: true });
+  }
 });

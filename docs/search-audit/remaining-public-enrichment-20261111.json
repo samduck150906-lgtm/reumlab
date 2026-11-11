@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-11",
+  "base_commit": "00b9f386969f9c1568c84e318c47eb1a19911398",
+  "requested_pages": 2842,
+  "by_type": {
+    "cost": 112,
+    "industries": 112,
+    "website": 294,
+    "solutions": 112,
+    "systems": 7,
+    "enterprise-ai": 4,
+    "ai-worker": 5,
+    "answers": 12,
+    "guides": 9,
+    "blog": 12,
+    "portfolio": 16,
+    "landings": 210,
+    "regions": 58,
+    "pages": 75,
+    "development-agency": 1804
+  },
+  "waiting_pages_excluded": 325,
+  "method": "Public-source paragraphs and published preparation guides are matched to editorial verification procedures, then stored per URL. Clause navigation is generated from the existing policy headings. All sources and link destinations are checked during the build. Visual and semantic review is sampled.",
+  "rendering": "Native React server pages plus the same component for 12 existing static-source pages.",
+  "preservation": "Original response content matched after removing the added section on every selected page. Meta fields and scope were checked across 3213 HTML routes.",
+  "evidence_records": 2842,
+  "source_fact_checks": 4861,
+  "tests_passed": 252,
+  "rss_updated_articles": 22
+}

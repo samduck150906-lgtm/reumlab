@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -151,6 +152,7 @@ export default function SeoWebsitePage() {
             <div className={styles.links} style={{ marginTop: 20 }}><a href={SITE.phoneHref}>전화 {SITE.phone}</a><a href={`mailto:${SITE.email}`}>이메일 문의</a></div>
           </div>
         </section>
+        <PublicPageReview path={'/seo-website/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/website/">일반 업종별 홈페이지 제작과 비교하기</Link>} />
     </>

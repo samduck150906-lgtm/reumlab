@@ -481,7 +481,8 @@ if (h1s.length !== 1) add(fail, 'a11y', `h1 이 ${h1s.length}개`);
 const dupIds = ids.filter((id, i) => ids.indexOf(id) !== i);
 if (dupIds.length) add(fail, 'a11y', `중복 id: ${[...new Set(dupIds)].join(', ')}`);
 const sections = all('main section');
-if (sections.length !== 14) add(fail, 'structure', `섹션이 ${sections.length}개 (명세 14개)`);
+const serviceSections = sections.filter(section => !section.classList.contains('public-page-review'));
+if (serviceSections.length !== 14) add(fail, 'structure', `서비스 섹션이 ${serviceSections.length}개 (명세 14개)`);
 for (const s of sections) {
   const labelled = s.getAttribute('aria-labelledby');
   if (labelled && !ids.includes(labelled)) add(fail, 'a11y', `aria-labelledby 대상이 없다: ${labelled}`);

@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -320,6 +321,7 @@ export default function AiWorkerRolePage({ params }: Props) {
             </div>
           </div>
         </article>
+        <PublicPageReview path={`/ai-worker/${params.role}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/ai-worker/">← AI Worker 구축으로</Link>} />
     </>

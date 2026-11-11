@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -389,6 +390,7 @@ export default function RegionServicePage({ params }: Props) {
             </div>
           </div>
         </article>
+        <PublicPageReview path={`/${params.slug}/${params.region}/`} />
       </main>
       <BusinessFooter topExtra={<Link href={service.hubHref}>← {service.ko} 허브로</Link>} />
     </>

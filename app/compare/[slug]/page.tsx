@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -158,6 +159,7 @@ export default function ComparePage({ params }: Props) {
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_compare_pricing">패키지 요금 보기</Link>
             </div>
           </div>
+        <PublicPageReview path={`/compare/${params.slug}/`} />
         </article>
       </main>
       <BusinessFooter topExtra={<Link href="/">← 메인으로</Link>} />

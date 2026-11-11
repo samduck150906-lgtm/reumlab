@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { indexableBlogPosts } from '@/lib/blog-posts';
@@ -94,6 +95,7 @@ export default function BlogIndexPage() {
             </p>
           </div>
         </section>
+        <PublicPageReview path={'/blog/'} />
       </main>
       <BusinessFooter />
     </>

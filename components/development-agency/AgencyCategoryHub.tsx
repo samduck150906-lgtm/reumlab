@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import { SITE } from '@/lib/seo';
 import BusinessFooter from '@/components/BusinessFooter';
 import { AGENCY_BASE, AGENCY_DOMAIN, agencyHref } from '@/lib/development-agency/types';
@@ -92,6 +93,7 @@ export default function AgencyCategoryHub({ category }: { category: AgencyCatego
             <p className={styles.phone}><a href={SITE.phoneHref}>{SITE.phone}</a></p>
           </section>
         </div>
+        <PublicPageReview path={agencyCategoryHref(category)} />
       </main>
       <BusinessFooter topExtra={<a href={AGENCY_BASE}>← 개발 의뢰 범위 안내로</a>} />
     </>

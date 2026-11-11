@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
@@ -164,6 +165,7 @@ export default function CostHubPage() {
             </div>
           </div>
         </article>
+        <PublicPageReview path={'/cost/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/app/">← 업종별 앱개발 인덱스로</Link>} />
     </>

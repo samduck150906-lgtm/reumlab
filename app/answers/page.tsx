@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { SITE } from '@/lib/seo';
@@ -102,6 +103,7 @@ export default function AnswersHubPage() {
 
           </div>
         </article>
+        <PublicPageReview path={'/answers/'} />
       </main>
       <BusinessFooter topExtra={<Link href="/">← 메인으로</Link>} />
     </>

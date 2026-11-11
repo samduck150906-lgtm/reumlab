@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import LandingInquiryForm from '@/components/LandingInquiryForm';
@@ -816,6 +817,7 @@ export default function AiVoiceDevelopmentPage() {
             <p className={styles.assurance}>{INQUIRY_ASSURANCE}</p>
           </div>
         </section>
+        <PublicPageReview path={'/ai-voice-development/'} />
       </main>
 
       <BusinessFooter />

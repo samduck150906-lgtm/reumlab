@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from '@/components/SiteLink';
@@ -55,6 +56,7 @@ export default function SeoWebsiteDetailPage({ params }: Props) {
       {page.pageId === 'REGIONAL' ? <RegionalContent /> : page.pageId === 'COST' ? <CostContent /> : <StaffingContent />}
       <section className={styles.section}><div className={styles.wrap}><header className={styles.sectionHeader}><h2>자주 묻는 질문</h2></header><div className={styles.faq}>{page.faqs.map((faq) => <details key={faq.q}><summary>{faq.q}</summary><p>{faq.a}</p></details>)}</div></div></section>
       <section className={styles.inquiry} id="inquiry" tabIndex={-1}><div className={styles.wrap}><header className={styles.sectionHeader}><h2>업종과 필요한 범위를 알려주세요.</h2><p>현재 홈페이지 유무와 실제 서비스 지역을 확인해 포함·제외 항목을 안내합니다.</p></header><LandingInquiryForm landingSlug={`seo-website/${page.slug}`} defaultServiceType="검색 잘되는 홈페이지 제작" variant="seo-website" defaultIndustry={page.pageId === 'STAFFING' ? '인력' : undefined} submitLabel="제작 범위 검토 요청하기" /></div></section>
+      <PublicPageReview path={`/seo-website/${params.slug}/`} />
     </main>
     <BusinessFooter topExtra={<Link href="/seo-website/">← 검색 잘되는 홈페이지 제작</Link>} />
   </>;

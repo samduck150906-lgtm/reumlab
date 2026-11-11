@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from '@/components/SiteLink';
@@ -33,6 +34,7 @@ export default function SeoWebsiteGuidePage({ params }: Props) {
           <section className={styles.section}><header className={styles.sectionHeader}><h2>다음 단계</h2><p>새 홈페이지가 필요하면 서비스 범위를, 기존 홈페이지가 검색되지 않으면 현재 구조 개선 범위를 확인하세요.</p></header><div className={styles.links}><Link href="/seo-website/">검색 잘되는 홈페이지 제작</Link><Link href="/seo-website/cost/">제작 비용과 포함 범위</Link><Link href="/ai-search-optimization/">기존 홈페이지 검색 구조 개선</Link></div></section>
         </div>
       </article>
+      <PublicPageReview path={`/seo-website/guides/${params.slug}/`} />
     </main>
     <BusinessFooter topExtra={<Link href="/seo-website/">← 검색 잘되는 홈페이지 제작</Link>} />
   </>;

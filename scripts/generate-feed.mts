@@ -25,13 +25,18 @@ const itemXml = items.filter(it => {
   const published = validContentDate(it.publishedAt);
   const modified = validContentDate('updatedAt' in it && it.updatedAt ? it.updatedAt : it.publishedAt);
   if (modified < published) throw new Error(`Modification predates publication: ${it.link}`);
-  dates.push(modified);
   const path = join('out', decodeURIComponent(new URL(it.link).pathname), 'index.html');
   const page = parse(readFileSync(path, 'utf8'));
+  const reviewDate = page.querySelector('main article .public-page-review')?.getAttribute('data-reviewed-at');
+  const articleModified = reviewDate ? new Date(Math.max(modified.getTime(), validContentDate(reviewDate).getTime())) : modified;
+  dates.push(articleModified);
   if (page.querySelector('link[rel="canonical"]')?.getAttribute('href') !== it.link) throw new Error(`Feed canonical mismatch: ${it.link}`);
   if (page.querySelectorAll('meta[name="robots"]').some(m => /noindex/i.test(m.getAttribute('content') || ''))) throw new Error(`Feed contains noindex URL: ${it.link}`);
   const html = articleForFeed(page, it.link);
-  reports.push({ url: it.link, source: path, publishedAt: it.publishedAt, updatedAt: modified.toISOString().slice(0, 10), articleCharacters: parse(html).textContent.length, articleBytes: Buffer.byteLength(html), articleSha256: createHash('sha256').update(html).digest('hex'), fullBody: true, canonicalMatch: true, absoluteLinks: true });
+  if (page.querySelector('main .public-page-review') && !html.includes('class="public-page-review"')) {
+    throw new Error(`RSS omitted the page review section: ${it.link}`);
+  }
+  reports.push({ url: it.link, source: path, publishedAt: it.publishedAt, updatedAt: articleModified.toISOString().slice(0, 10), articleCharacters: parse(html).textContent.length, articleBytes: Buffer.byteLength(html), articleSha256: createHash('sha256').update(html).digest('hex'), fullBody: true, canonicalMatch: true, absoluteLinks: true });
   return `    <item>
       <title>${escapeXml(it.title)}</title>
       <link>${escapeXml(it.link)}</link>

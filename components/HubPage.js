@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import Link from '@/components/SiteLink';
 import {
   getSite,
@@ -192,6 +193,7 @@ export default function HubPage({ hubSlug }) {
         </div>
       </section>
 
+        <PublicPageReview path={`/h/${hubSlug}/`} />
       </main>
       <BusinessFooter />
     </>

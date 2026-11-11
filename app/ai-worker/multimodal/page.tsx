@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import BusinessFooter from '@/components/BusinessFooter';
@@ -288,6 +289,7 @@ export default function MultimodalAiWorkerPage() {
             />
           </section>
         </article>
+        <PublicPageReview path={'/ai-worker/multimodal/'} />
       </main>
 
       <BusinessFooter topExtra={<Link href="/ai-worker/">← AI Worker 전체 서비스로</Link>} />

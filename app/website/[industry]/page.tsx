@@ -1,3 +1,4 @@
+import PublicPageReview from '@/components/PublicPageReview';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -253,6 +254,7 @@ export default function WebsiteIndustryPage({ params }: Props) {
             </div>
           </div>
         </article>
+        <PublicPageReview path={`/website/${params.industry}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/web-development">← 웹사이트 제작 서비스로</Link>} />
     </>
