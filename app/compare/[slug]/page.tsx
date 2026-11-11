@@ -159,8 +159,8 @@ export default function ComparePage({ params }: Props) {
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_compare_pricing">패키지 요금 보기</Link>
             </div>
           </div>
-        </article>
         <PublicPageReview path={`/compare/${params.slug}/`} />
+        </article>
       </main>
       <BusinessFooter topExtra={<Link href="/">← 메인으로</Link>} />
     </>

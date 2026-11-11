@@ -11,8 +11,9 @@ export default function PublicPageReview({ path }: { path: string }) {
   const record = reviews[decodeURIComponent(path).normalize('NFC')];
   if (!record) return null;
   return (
-    <section className="public-page-review" aria-labelledby="public-page-review-title">
+    <section className="public-page-review" aria-labelledby="public-page-review-title" data-reviewed-at="2026-11-11">
       <h2 id="public-page-review-title">{record.heading}</h2>
+      <p className="public-page-review-basis"><time dateTime="2026-11-11">2026-11-11 확인 항목 보강</time></p>
       {record.rows.length > 0 && <dl>
         {record.rows.map(row => <div key={row.label}>
           <dt>{row.label}</dt>

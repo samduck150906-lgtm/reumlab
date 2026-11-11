@@ -232,8 +232,8 @@ export default function BlogPostPage({ params }: Props) {
               </div>
             )}
           </div>
-        </article>
         <PublicPageReview path={`/blog/${params.slug}/`} />
+        </article>
       </main>
       <BusinessFooter topExtra={<Link href="/blog/">← 블로그 목록</Link>} />
     </>

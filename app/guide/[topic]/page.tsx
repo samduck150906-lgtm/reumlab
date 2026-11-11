@@ -262,8 +262,8 @@ export default function GuidePage({ params }: Props) {
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_guide_pricing">패키지 요금 보기</Link>
             </div>
           </div>
-        </article>
         <PublicPageReview path={`/guide/${params.topic}/`} />
+        </article>
       </main>
       <BusinessFooter topExtra={<Link href="/">← 메인으로</Link>} />
     </>

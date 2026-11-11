@@ -25,5 +25,6 @@
   "preservation": "Original response content matched after removing the added section on every selected page. Meta fields and scope were checked across 3213 HTML routes.",
   "evidence_records": 2842,
   "source_fact_checks": 4861,
-  "tests_passed": 252
+  "tests_passed": 252,
+  "rss_updated_articles": 22
 }
