@@ -5,9 +5,24 @@ import os from 'node:os';
 import path from 'node:path';
 
 // @ts-ignore — 플러그인은 Netlify 빌드에서 그대로 실행되는 JS 모듈이다.
-import { mergeManifests, mergeContentManifests, waitForLiveBuild } from '../netlify/plugins/indexnow-after-deploy/lib.js';
+import { mergeManifests, mergeContentManifests, waitForLiveBuild, verifiedGeoRelease } from '../netlify/plugins/indexnow-after-deploy/lib.js';
 // @ts-ignore
 import { onSuccess } from '../netlify/plugins/indexnow-after-deploy/index.js';
+
+test('GEO release allows only changed, build-verified URLs on the canonical host', () => {
+  const paths = Array.from({ length: 2881 }, (_, i) => `/완료-${i}/`);
+  const report = { completed_page_coverage: 2881, article_pages: 59, covered_paths: paths };
+  const changes = paths.slice(0, 51).map(p => ({ action: 'changed', url: new URL(p, 'https://reumlab.com').href }));
+  assert.equal(verifiedGeoRelease(report, changes, [changes[0].url]), true);
+  for (const outside of ['https://example.com/완료-0/', 'https://reumlab.com/자료대기/', 'http://reumlab.com/완료-0/', changes[0].url + '?x=1', 'invalid']) {
+    assert.equal(verifiedGeoRelease(report, changes, [outside]), false);
+    assert.equal(verifiedGeoRelease(report, [{ ...changes[0], url: outside }, ...changes.slice(1)], []), false);
+  }
+  assert.equal(verifiedGeoRelease(report, [{ ...changes[0], action: 'added' }, ...changes.slice(1)], []), false);
+  assert.equal(verifiedGeoRelease({ ...report, covered_paths: paths.slice(1) }, changes, []), false);
+  assert.equal(verifiedGeoRelease({ ...report, article_pages: 0 }, changes, []), false);
+  assert.equal(verifiedGeoRelease(null, changes, []), false);
+});
 
 test('캐시 매니페스트와 커밋본을 합칠 때 URL별로 더 최근 lastmod 를 남긴다', () => {
   const merged = mergeManifests(

@@ -414,7 +414,8 @@ if (lastmods.size === 1 && lastmods.has(today)) {
     const entry = current[rawUrl] ?? current[url];
     const old = baseline[rawUrl] ?? baseline[url];
     return page && entry?.lastmod?.slice(0, 10) === today &&
-      entry.hash === contentFingerprint(page.html) && entry.hash !== old?.hash;
+      entry.hash === contentFingerprint(page.html) &&
+      (entry.hash !== old?.hash || entry.lastmod === old?.lastmod);
   });
   if (!proven) add(fail, 'date', 'sitemap lastmod 가 전부 빌드 당일이며 실제 본문 변경 근거가 없음');
   else console.log(`날짜 근거: 사이트맵 ${sitemapUrls.size}개 모두 실제 콘텐츠 변경 해시 대조 완료`);

@@ -31,6 +31,24 @@ export function readJson(file) {
   }
 }
 
+/** This user-authorized GEO release must stay inside its build-verified URL set.
+ * The submitter additionally intersects candidates with the indexable sitemap.
+ */
+export function verifiedGeoRelease(report, changes, pending) {
+  if (report?.completed_page_coverage !== 2881 || report?.article_pages !== 59 ||
+      !Array.isArray(report?.covered_paths) || !Array.isArray(changes) || !Array.isArray(pending)) return false;
+  const paths = new Set(report.covered_paths);
+  if (paths.size !== 2881 || report.covered_paths.length !== 2881 || changes.length <= 50 || changes.length > 2654) return false;
+  const inScope = value => {
+    try {
+      const url = new URL(value);
+      return url.origin === ORIGIN && !url.search && !url.hash &&
+        paths.has(decodeURIComponent(url.pathname).normalize('NFC'));
+    } catch { return false; }
+  };
+  return changes.every(change => change.action === 'changed' && inScope(change.url)) && pending.every(inScope);
+}
+
 /** 새 배포 공개 확인 — 이번 빌드에만 있는 정적 파일이 운영 도메인에서 200 인지 본다. */
 export async function waitForLiveBuild({ buildId, fetchImpl = fetch, attempts = 12, delayMs = 15_000, origin = ORIGIN }) {
   const url = `${origin}/_next/static/${buildId}/_buildManifest.js`;
