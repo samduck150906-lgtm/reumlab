@@ -1,28 +1,29 @@
 import React from 'react';
 import publishedReviews from '../content/public-page-review.json';
+import { publicEvidence, type PublicReview } from '../lib/public-evidence';
+import { JsonLdScript } from './JsonLd';
 
-type ReviewRow = { label: string; basis: string; check: string; source: string; href: string };
-type ReviewLink = { label: string; href: string; basis?: string; check?: string };
-type Review = { heading: string; rows: ReviewRow[]; navigation: ReviewLink[] };
-
-const reviews: Readonly<Record<string, Review>> = publishedReviews;
+const reviews: Readonly<Record<string, PublicReview>> = publishedReviews;
 
 export default function PublicPageReview({ path }: { path: string }) {
   const record = reviews[decodeURIComponent(path).normalize('NFC')];
   if (!record) return null;
+  const evidence = publicEvidence(path, record);
+  const reviewedAt = record.reviewedAt ?? '2026-11-11';
   return (
-    <section className="public-page-review" aria-labelledby="public-page-review-title" data-reviewed-at="2026-11-11">
+    <section id="public-page-review" className="public-page-review" aria-labelledby="public-page-review-title" data-reviewed-at={reviewedAt}>
+      <JsonLdScript data={evidence.schema} />
       <h2 id="public-page-review-title">{record.heading}</h2>
-      <p className="public-page-review-basis"><time dateTime="2026-11-11">2026-11-11 확인 항목 보강</time></p>
+      <p className="public-page-review-basis"><time dateTime={reviewedAt}>{reviewedAt} 확인 항목 보강</time></p>
       {record.rows.length > 0 && <dl>
-        {record.rows.map(row => <div key={row.label}>
-          <dt>{row.label}</dt>
+        {evidence.parts.map(row => <div id={row.id} key={row.id}>
+          <dt><a className="public-evidence-permalink" href={`#${row.id}`} aria-label={`${row.label} 항목의 고정 주소`}>{row.label}</a></dt>
           <dd>
+            <blockquote className="public-evidence-excerpt" cite={row.sourceUrl}>
+              <p>{row.basis}</p>
+              <cite><a href={row.sourceUrl}>{row.source}</a></cite>
+            </blockquote>
             <p>{row.check}</p>
-            <p className="public-page-review-basis">
-              {row.href ? <a href={row.href}>{row.source}</a> : <strong>{row.source}</strong>}
-              {' · '}{row.basis}
-            </p>
           </dd>
         </div>)}
       </dl>}

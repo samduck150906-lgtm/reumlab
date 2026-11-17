@@ -18,7 +18,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { mergeManifests, mergeContentManifests, readJson, waitForLiveBuild } from './lib.js';
+import { mergeManifests, mergeContentManifests, readJson, waitForLiveBuild, verifiedGeoRelease } from './lib.js';
 
 const MANIFEST = 'scripts/.indexnow-manifest.json';
 const CACHE_COPY = '.indexnow-manifest.cache.json';
@@ -78,7 +78,8 @@ export const onSuccess = async ({ utils }) => {
         && verifiedPaths.has(decodeURIComponent(new URL(change.url).pathname)))
       && pending.every(url => verifiedPaths.has(decodeURIComponent(new URL(url).pathname)));
     const command = 'node --use-system-ca scripts/submit-indexnow.mjs --submit';
-    await utils.run.command(command + (reviewedBatch ? ' --allow-large-batch' : ''));
+    const geoBatch = verifiedGeoRelease(readJson('docs/search-audit/geo-evidence-verification.json'), changes, pending);
+    await utils.run.command(command + (reviewedBatch || geoBatch ? ' --allow-large-batch' : ''));
   } catch (e) {
     console.warn('[indexnow-after-deploy] 제출 단계 오류(배포에는 영향 없음):', e.shortMessage ?? e.message);
   } finally {

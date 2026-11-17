@@ -111,6 +111,14 @@ export function topicOf(e: Pick<KeywordEntry, 'kw' | 'cat' | 'intent'>): TopicSl
 
 // ── 공통 사실 (사이트에 게시된 값만) ──────────────────────────────────────
 
+/** Public primary sources; shared by the visible answer hub and its text export. */
+export const ANSWER_EVIDENCE_SOURCES = [
+  { id: 'package-prices', title: 'VAT 포함 패키지 요금과 포함 범위', href: '/#pricing', scope: '가격과 표준 기간은 공개 패키지 범위의 기준입니다. 추가 기능과 외부 서비스 실비는 계약 범위에서 따로 확인합니다.' },
+  { id: 'source-handover', title: '소스코드·문서·운영 계정 인계', href: '/source-handover/', scope: '인계 대상과 계정 소유권을 확인할 수 있습니다. 실제 인계 범위는 계약서와 프로젝트별 인계 목록으로 확정합니다.' },
+  { id: 'published-projects', title: '공개 개발 사례와 공개 범위', href: '/portfolio/', scope: '게시된 사례의 문제·구현 범위·산출물만 확인합니다. 익명 사례를 고객 실명이나 공개되지 않은 매출·전환율 성과로 확대하지 않습니다.' },
+  { id: 'editorial-policy', title: '가이드 작성·검수 원칙', href: '/guide/#editorial-policy', scope: '자체 서비스 조건과 외부 운영사의 정책을 구분하고, 외부 정책은 연결된 공식 문서의 최신 조건으로 확인합니다.' },
+] as const;
+
 const pkg = (name: string) => {
   const p = PACKAGES.find((x) => x.name === name);
   if (!p) throw new Error(`answers: 패키지 "${name}" 이 lib/pricing.ts 에 없습니다`);

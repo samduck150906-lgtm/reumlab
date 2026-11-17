@@ -102,6 +102,12 @@ export default function AnswerTopicPage({ params }: Props) {
         keywords={groups.flatMap((g) => g.keywords.map((k) => k.kw)).slice(0, 30)}
         faqs={faqs}
         crumbs={crumbs}
+        citations={t.links.map(link => ({ title: link.label, url: new URL(link.href, SITE.domain).href }))}
+        sections={[
+          { id: 'answer', name: t.question, text: t.answer },
+          { id: 'fit', name: '름랩이 맞는 경우', text: t.fit.join('\n') },
+          { id: 'not-fit', name: '다른 선택이 나은 경우', text: t.notFit.join('\n') },
+        ]}
       />
       <main>
         <article className="dynamic-page">
@@ -120,6 +126,7 @@ export default function AnswerTopicPage({ params }: Props) {
               작성 {SITE.name}({SITE.nameEn})
               <span aria-hidden="true"> · </span>
               <time dateTime={PUBLISHED}>{PUBLISHED} 발행</time>
+              {' · '}<Link href="/answers/#answer-evidence-policy">근거·작성 기준</Link>
             </p>
 
             <aside className="guide-answer" aria-label="한눈에 보는 답">
@@ -251,7 +258,7 @@ export default function AnswerTopicPage({ params }: Props) {
           </div>
 
           <div className="section-inner" style={{ paddingTop: 8 }}>
-            <h2 className="section-title" style={{ fontSize: '1.15rem' }}>범위·가격·FAQ를 자세히 보기</h2>
+            <h2 id="answer-sources" className="section-title" style={{ fontSize: '1.15rem', scrollMarginTop: 80 }}>범위·가격·FAQ를 자세히 보기</h2>
             <div className="link-grid">
               {t.links.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
             </div>
