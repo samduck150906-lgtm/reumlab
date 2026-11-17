@@ -21,6 +21,20 @@
 .public-page-review li + li { margin-top: .55rem; }
 .public-page-review a { color: #16478c; text-decoration: underline; text-underline-offset: .2em; }
 .public-page-review .public-page-review-basis { color: #455873; font-size: .9rem; }
+.public-page-review [id], .public-page-review[id] { scroll-margin-top: 6rem; }
+.public-page-review .public-evidence-permalink { color: inherit; text-decoration-style: dotted; }
+.public-page-review a:focus-visible { outline: 3px solid #16478c; outline-offset: 4px; }
+.public-evidence-excerpt { margin: .65rem 0; padding: .6rem 1rem; border-inline-start: 3px solid #8aa4c7; background: #fff; }
+.public-evidence-excerpt cite { font-size: .9rem; font-style: normal; }
+.geo-practical-evidence { box-sizing: border-box; max-width: 64rem; margin: 2.5rem auto; padding: 1.5rem; color: var(--text, #172c48); overflow-wrap: anywhere; }
+.geo-practical-evidence h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.geo-practical-evidence [id] { scroll-margin-top: 6rem; }
+.geo-practical-evidence p { line-height: 1.7; margin: .75rem 0; }
+.geo-practical-evidence .geo-evidence-note { font-size: .9rem; color: var(--text-dim, #455873); }
+.geo-practical-evidence .guide-table-wrap { overflow-x: auto; margin: 1.5rem 0; }
+.geo-practical-evidence th, .geo-practical-evidence td { padding: .8rem; text-align: left; vertical-align: top; }
+.geo-practical-evidence a { text-decoration: underline; text-underline-offset: .2em; }
+.geo-practical-evidence a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 @media (max-width: 52rem) {
   .public-page-review { margin-inline: 1rem; }
 }

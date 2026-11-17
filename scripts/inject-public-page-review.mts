@@ -19,7 +19,7 @@ for (const pathname of staticPaths) {
   let html = readFileSync(file, 'utf8');
   const review = reviews[pathname as keyof typeof reviews];
   if (!review) continue;
-  html = html.replace(/<section class="public-page-review"[\s\S]*?<\/section>/, '');
+  html = html.replace(/<section\b(?=[^>]*\bclass="public-page-review")[^>]*>[\s\S]*?<\/section>/, '');
   if (['/privacy/', '/terms/', '/refund/'].includes(pathname)) {
     const headings = parse(html).querySelectorAll('main h2');
     if (JSON.stringify(headings.map(node => node.textContent.trim())) !==

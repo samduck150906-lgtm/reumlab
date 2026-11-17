@@ -209,15 +209,16 @@ const evidencePriorityGuides = new Set([
   '/guide/outsourcing-checklist/',
 ]);
 for (const p of guides) {
-  const ids = new Set([...p.html.matchAll(/<h[1-6][^>]*\sid="([^"]+)"/g)].map((m) => m[1]));
-  // 페이지 안의 #앵커 링크가 실제 heading 을 가리키는가 (목차·인용 링크가 죽으면 안 된다)
+  const headingIds = new Set([...p.html.matchAll(/<h[1-6][^>]*\sid="([^"]+)"/g)].map((m) => m[1]));
+  const ids = new Set([...p.html.matchAll(/<[a-zA-Z][^>]*\sid="([^"]+)"/g)].map((m) => m[1]));
+  // 목차는 heading, 인용 링크는 표의 행 등 실제 ID가 있는 요소를 가리킬 수 있다.
   for (const m of p.html.matchAll(/href="#([a-zA-Z0-9_-]+)"/g)) {
     if (m[1] === 'top' || ids.has(m[1])) continue;
     brokenAnchor++;
     add(fail, 'anchor', `깨진 앵커: ${p.pathname}#${m[1]}`);
   }
   // 외부에서 특정 섹션만 인용하려면 H2 에 안정적인 ID 가 있어야 한다
-  if (!ids.size) {
+  if (!headingIds.size) {
     noAnchor++;
     add(fail, 'anchor', `섹션 앵커가 하나도 없음(특정 항목 링크 불가): ${p.pathname}`);
   }

@@ -6,6 +6,7 @@ import {
   ANSWER_TOPICS,
   ANSWERS_HUB,
   COMMON_FACTS,
+  ANSWER_EVIDENCE_SOURCES,
   topKeywords,
 } from '@/lib/answers';
 import { BreadcrumbJsonLdTrail, JsonLdScript } from '@/components/JsonLd';
@@ -102,6 +103,23 @@ export default function AnswersHubPage() {
 
 
           </div>
+          <section className="section-inner guide-sources" aria-labelledby="answer-evidence-policy">
+            <h2 id="answer-evidence-policy" className="section-title" style={{ fontSize: '1.2rem', scrollMarginTop: 80 }}>답변의 근거와 적용 범위</h2>
+            <p className="hub-intro">
+              작성·게시 주체는 {SITE.name}({SITE.nameEn})이며 운영 사업자는 {SITE.legalName}입니다.
+              서비스 조건은 아래 공개 원문을 기준으로 안내합니다. 일반적인 개발 판단 기준은 개별 프로젝트의 납품 실적이나 확정 견적을 뜻하지 않습니다.
+            </p>
+            <dl>
+              {ANSWER_EVIDENCE_SOURCES.map(source => <div key={source.id} id={source.id} style={{ marginTop: 16, scrollMarginTop: 80 }}>
+                <dt><a href={source.href}>{source.title}</a></dt>
+                <dd style={{ margin: '6px 0 0' }}>{source.scope}</dd>
+              </div>)}
+            </dl>
+            <p className="hub-intro" style={{ marginTop: 20 }}>
+              본문과 출처를 실제로 수정한 경우에만 갱신일을 바꾸며, 고객명·성과 수치·작성자 경력은 공개 근거가 있을 때만 표시합니다.
+              정정할 내용이 있으면 <a href={`mailto:${SITE.email}`}>{SITE.email}</a>로 해당 페이지 주소와 확인할 내용을 알려 주세요.
+            </p>
+          </section>
         </article>
         <PublicPageReview path={'/answers/'} />
       </main>

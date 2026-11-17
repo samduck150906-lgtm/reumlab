@@ -1,4 +1,5 @@
 import PublicPageReview from '@/components/PublicPageReview';
+import GeoPracticalEvidence from '@/components/GeoPracticalEvidence';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -273,6 +274,7 @@ export default function SystemPage({ params }: Props) {
             </div>
           </div>
         </article>
+        <GeoPracticalEvidence path={`/system/${params.slug}/`} />
         <PublicPageReview path={`/system/${params.slug}/`} />
       </main>
       <BusinessFooter topExtra={<Link href="/system/">← 시스템·기능별 개발로</Link>} />

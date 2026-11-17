@@ -25,6 +25,7 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { readSitemapXml } from './read-sitemap.mjs';
+import { contentFingerprint } from './content-manifest.mjs';
 
 const OUT = process.argv[2] || 'out';
 const DOMAIN = 'https://reumlab.com';
@@ -32,6 +33,9 @@ const fail = [];
 const warn = [];
 const add = (a, kind, msg) => a.push(`[${kind}] ${msg}`);
 const read = (p) => readFileSync(p, 'utf8');
+// Compare Korean paths in the same form as filesystem paths, without decoding
+// reserved separators (e.g. %2F) into different routes.
+const normalizeUrl = (value) => decodeURI(value).normalize('NFC');
 
 // ─── 페이지 수집
 const NOT_A_PAGE = /^\/(404\.html|__forms\.html|google[\w-]*\.html|naver[\w-]*\.html)$/;
@@ -58,7 +62,7 @@ const byPath = new Map(pages.map((p) => [p.pathname, p]));
 // 사이트맵
 // 사이트맵은 빌드 마지막에 index 로 분할된다 — 자식까지 합쳐 읽는다(scripts/read-sitemap.mjs).
 const sitemapXml = readSitemapXml(OUT);
-const sitemapUrls = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]));
+const sitemapUrls = new Set([...sitemapXml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => normalizeUrl(m[1])));
 
 // 리다이렉트 출발지
 const redirectFrom = new Set();
@@ -71,9 +75,9 @@ if (existsSync(join(OUT, '_redirects'))) {
     // 경로를 그대로 넣는다. 예전엔 끝에 슬래시를 붙여 정규화했는데, 그러면
     // `/portfolio → /portfolio/ 301` 규칙 때문에 실제 파일이 있는 /portfolio/ 까지
     // "리다이렉트 대상"으로 오판했다(경고 4,291건). Netlify 는 파일이 있으면 파일을 먼저 서빙한다.
-    if (from) redirectFrom.add(from);
+    if (from) redirectFrom.add(normalizeUrl(from));
     // `!` 가 붙은 강제 규칙은 파일보다 우선한다 — 실제 페이지를 덮으면 색인 URL 이 사라진다.
-    if (from && /\d{3}!\s*$/.test(t)) redirectForce.add(from);
+    if (from && /\d{3}!\s*$/.test(t)) redirectForce.add(normalizeUrl(from));
   }
 }
 
@@ -81,9 +85,9 @@ if (existsSync(join(OUT, '_redirects'))) {
 let urlConflict = 0;
 for (const p of indexed) {
   const expect = DOMAIN + p.pathname;
-  const canon = (p.html.match(/<link rel="canonical" href="([^"]*)"/) || [, ''])[1];
-  const ogUrl = (p.html.match(/<meta property="og:url" content="([^"]*)"/) || [, ''])[1];
-  const schemaUrls = [...p.html.matchAll(/"@type":"(?:Service|Article|BlogPosting)","@id":"([^"#]+)#/g)].map((m) => m[1]);
+  const canon = normalizeUrl((p.html.match(/<link rel="canonical" href="([^"]*)"/) || [, ''])[1]);
+  const ogUrl = normalizeUrl((p.html.match(/<meta property="og:url" content="([^"]*)"/) || [, ''])[1]);
+  const schemaUrls = [...p.html.matchAll(/"@type":"(?:Service|Article|BlogPosting)","@id":"([^"#]+)#/g)].map((m) => normalizeUrl(m[1]));
   const inSitemap = sitemapUrls.has(expect);
 
   const problems = [];
@@ -106,8 +110,9 @@ const inbound = new Map();
 for (const p of pages) {
   const body = (p.html.match(/<body[\s\S]*<\/body>/) || [p.html])[0];
   for (const m of body.matchAll(/<a\b[^>]*\shref="(\/[^"#?]*)"/g)) {
-    if (m[1] === p.pathname) continue;
-    inbound.set(m[1], (inbound.get(m[1]) || 0) + 1);
+    const target = normalizeUrl(m[1]);
+    if (target === p.pathname) continue;
+    inbound.set(target, (inbound.get(target) || 0) + 1);
   }
 }
 for (const p of pages) {
@@ -192,7 +197,7 @@ for (const p of indexed) {
         add(fail, 'breadcrumb', `position 순서 오류(${it[1]} ≠ ${expectPos}): ${p.pathname}`);
       }
       expectPos++;
-      const target = it[2].replace(DOMAIN, '');
+      const target = normalizeUrl(it[2].replace(DOMAIN, ''));
       if (!target.startsWith('/')) continue;
       const tp = byPath.get(target);
       if (!tp) {
@@ -200,7 +205,7 @@ for (const p of indexed) {
         add(fail, 'breadcrumb', `존재하지 않는 URL 을 가리킴: ${it[2]} (출처 ${p.pathname})`);
       } else {
         const c = (tp.html.match(/<link rel="canonical" href="([^"]*)"/) || [, ''])[1];
-        if (c && c !== it[2]) {
+        if (c && normalizeUrl(c) !== normalizeUrl(it[2])) {
           crumbBad++;
           add(fail, 'breadcrumb', `item(${it[2]}) 이 대상의 canonical(${c}) 과 다름: ${p.pathname}`);
         }
@@ -224,7 +229,7 @@ for (const p of pages) {
       }
       continue;
     }
-    const clean = path.split('?')[0];
+    const clean = normalizeUrl(path.split('?')[0]);
     if (/\.[a-z0-9]{2,5}$/i.test(clean)) {
       if (!existsSync(join(OUT, clean.replace(/^\//, '')))) {
         broken++;
@@ -252,7 +257,7 @@ for (const p of pages) {
 const graph = new Map();
 for (const p of pages) {
   const body = (p.html.match(/<body[\s\S]*<\/body>/) || [p.html])[0];
-  graph.set(p.pathname, new Set([...body.matchAll(/<a\b[^>]*\shref="(\/[^"#?]*)"/g)].map((m) => m[1])));
+  graph.set(p.pathname, new Set([...body.matchAll(/<a\b[^>]*\shref="(\/[^"#?]*)"/g)].map((m) => normalizeUrl(m[1]))));
 }
 const depth = new Map([['/', 0]]);
 const queue = ['/'];
@@ -323,7 +328,9 @@ const CLAIMS = [
   /누적\s*(프로젝트|고객)\s*[\d,]+\s*(건|개|곳|명)/,
   /[\d,]+\s*(개|건|곳)\s*(이상)?\s*(기업|고객사|프로젝트)와?\s*(함께|진행)/,
   /경력\s*[\d]+\s*년/,
-  /수상|대상 수상|어워드/,
+  // Detect an award claim, rather than water sports (수상레저) or advice about
+  // a client's award photos and profiles.
+  /(?:대상|최우수상|우수상)\s*수상|(?:수상|어워드)(?:을|를)?\s*(?:했|하였|한\s*(?:경력|이력)|경력|이력\s*(?:보유|[0-9]))/,
   /[\d.]+\s*%\s*(증가|향상|절감|단축|상승)/,
   /사용자\s*[\d,]+\s*만\s*명/,
 ];
@@ -394,7 +401,24 @@ for (const p of pages) {
 if (pub.size === 1 && pub.has(today)) add(fail, 'date', 'datePublished 가 전부 빌드 당일 — 실제 날짜를 쓰지 않고 있음');
 if (mod.size === 1 && mod.has(today)) add(fail, 'date', 'dateModified 가 전부 빌드 당일 — 빌드마다 갱신되는 구현');
 const lastmods = new Set([...sitemapXml.matchAll(/<lastmod>([^<]{10})/g)].map((m) => m[1]));
-if (lastmods.size === 1 && lastmods.has(today)) add(fail, 'date', 'sitemap lastmod 가 전부 빌드 당일');
+if (lastmods.size === 1 && lastmods.has(today)) {
+  // A release can really change every indexable page (e.g. visible citations).
+  // Permit that only with actual content fingerprints, not a build-time stamp.
+  const manifestFile = 'docs/execution-20261020/content-manifest-after.json';
+  const baselineFile = 'config/content-manifest.json';
+  const current = existsSync(manifestFile) ? JSON.parse(read(manifestFile)) : {};
+  const baseline = existsSync(baselineFile) ? JSON.parse(read(baselineFile)) : {};
+  const proven = [...sitemapUrls].every(url => {
+    const page = byPath.get(url.slice(DOMAIN.length));
+    const rawUrl = new URL(url).href;
+    const entry = current[rawUrl] ?? current[url];
+    const old = baseline[rawUrl] ?? baseline[url];
+    return page && entry?.lastmod?.slice(0, 10) === today &&
+      entry.hash === contentFingerprint(page.html) && entry.hash !== old?.hash;
+  });
+  if (!proven) add(fail, 'date', 'sitemap lastmod 가 전부 빌드 당일이며 실제 본문 변경 근거가 없음');
+  else console.log(`날짜 근거: 사이트맵 ${sitemapUrls.size}개 모두 실제 콘텐츠 변경 해시 대조 완료`);
+}
 
 // ─── 11. 공개 경로 민감 파일
 const SENSITIVE = /(^|\/)(\.env|\.git|id_rsa|secret|credential|\.pem|\.key)|\.(csv|xlsx|sql|log|bak)$/i;

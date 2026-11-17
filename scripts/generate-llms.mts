@@ -21,30 +21,42 @@ import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
 import { PROJECTS, portfolioCanonical, PORTFOLIO_HUB, projectCategories, CATEGORIES } from '../lib/portfolio';
 import { ENTERNAL_LLMS_PAGE, MULTIMODAL_LLMS_PAGE } from '../lib/llms-service-pages';
+import { PACKAGES as PRICE_PACKAGES, toWon, manwonText } from '../lib/pricing';
 import {
-  ANSWER_TOPICS, ANSWERS_HUB, 
+  ANSWER_TOPICS, ANSWERS_HUB, ANSWER_EVIDENCE_SOURCES,
   answerCanonical, keywordsByFacet, keywordsOf, topKeywords, regionRows, industryRows, techRows,
 } from '../lib/answers';
 
 const OUT = 'out';
 
 /** 화면·JSON-LD에 표기된 것과 동일한 VAT 포함 정액 패키지 (index.html 가격표가 기준) */
-const PACKAGES = [
-  ['웹 스타터', '980,000원', '약 5일', '원페이지 랜딩 · 모바일 반응형 · 문의/예약 CTA'],
-  ['웹 + 강력 마케팅', '1,960,000원', '약 10일', '전환 카피 설계 + 기본 SEO + GA·픽셀 세팅'],
-  ['웹 비즈니스', '3,800,000원', '약 14일', '멀티페이지(5p 내외) + 블로그 + 간단 CMS'],
-  ['웹 프리미엄', '5,800,000원', '약 21일', '고도화 웹앱 + 관리자 페이지 + 외부 연동'],
-  ['앱 라이트 MVP', '5,800,000원', '약 14일', 'Flutter iOS·Android 동시 · 핵심 화면 3~5개'],
-  ['앱 스탠다드', '9,800,000원', '약 21일', '회원·결제·관리자 페이지 포함'],
-  ['앱 AI', '13,800,000원', '약 30일', 'AI 기능 1종(챗봇·추천·요약) + 업무 자동화'],
-  ['앱 프리미엄', '19,800,000원', '약 45일', '복합 플랫폼·정산·다자 운영 범위'],
-];
+const PACKAGE_SCOPES: Record<string, string> = {
+  '웹 스타터': '원페이지 랜딩 · 모바일 반응형 · 문의/예약 CTA',
+  '웹 + 강력 마케팅': '전환 카피 설계 + 기본 SEO + GA·픽셀 세팅',
+  '웹 비즈니스': '멀티페이지(5p 내외) + 블로그 + 간단 CMS',
+  '웹 프리미엄': '고도화 웹앱 + 관리자 페이지 + 외부 연동',
+  '앱 라이트 MVP': 'Flutter iOS·Android 동시 · 핵심 화면 3~5개',
+  '앱 스탠다드': '회원·결제·관리자 페이지 포함',
+  '앱 AI': 'AI 기능 1종(챗봇·추천·요약) + 업무 자동화',
+  '앱 프리미엄': '복합 플랫폼·정산·다자 운영 범위',
+};
+const PACKAGES = PRICE_PACKAGES.map(p => {
+  if (!PACKAGE_SCOPES[p.name]) throw new Error(`Missing published scope for ${p.name}`);
+  return [p.name, toWon(p.price), p.duration, PACKAGE_SCOPES[p.name]];
+});
 
 /** 자연어 질문에 그대로 인용될 수 있는 40~80자 핵심 답변 (사이트에 실제로 적힌 사실만) */
+function publishedPackage(name: string) {
+  const value = PRICE_PACKAGES.find(p => p.name === name);
+  if (!value) throw new Error(`Missing published package: ${name}`);
+  return value;
+}
+const packagePrice = (name: string) => manwonText(publishedPackage(name).price);
+const packageDuration = (name: string) => publishedPackage(name).duration;
 const FACTS: [string, string][] = [
-  ['앱 개발 비용은 얼마인가?', 'Flutter 앱 MVP는 VAT 포함 580만 원부터, 회원·결제까지 갖춘 앱 스탠다드는 980만 원입니다.'],
-  ['앱 개발 기간은 얼마나 걸리나?', '앱 라이트 MVP 약 14일, 앱 스탠다드 약 21일, AI 기능 포함 시 약 30일이 기준입니다.'],
-  ['홈페이지 제작 비용은?', '원페이지 랜딩 웹 스타터가 VAT 포함 98만 원부터, 멀티페이지+CMS 웹 비즈니스가 380만 원입니다.'],
+  ['앱 개발 비용은 얼마인가?', `Flutter 앱 MVP는 VAT 포함 ${packagePrice('앱 라이트 MVP')}부터, 회원·결제까지 갖춘 앱 스탠다드는 ${packagePrice('앱 스탠다드')}입니다.`],
+  ['앱 개발 기간은 얼마나 걸리나?', `앱 라이트 MVP ${packageDuration('앱 라이트 MVP')}, 앱 스탠다드 ${packageDuration('앱 스탠다드')}, AI 기능 포함 시 ${packageDuration('앱 AI')}이 기준입니다.`],
+  ['홈페이지 제작 비용은?', `원페이지 랜딩 웹 스타터가 VAT 포함 ${packagePrice('웹 스타터')}부터, 멀티페이지+CMS 웹 비즈니스가 ${packagePrice('웹 비즈니스')}입니다.`],
   ['소스코드를 받을 수 있나?', '네. 계약 범위의 전체 소스코드와 실행·빌드·배포 문서를 프로젝트 종료 시 이관합니다.'],
   ['서버·도메인 계정은 누구 명의인가?', '가능하면 고객 명의로 생성하거나 고객 소유로 이전하는 것을 원칙으로 합니다.'],
   ['월 관리비가 있나?', '월 관리비는 없습니다. 호스팅·도메인·푸시 발송비 정도만 실비로 발생합니다.'],
@@ -76,6 +88,16 @@ function oneStop(out: string[]) {
   out.push('');
 }
 
+function evidenceSources(out: string[]) {
+  out.push('## 답변의 공개 근거');
+  out.push('');
+  for (const source of ANSWER_EVIDENCE_SOURCES) {
+    out.push(`- [${source.title}](${SITE.domain}${source.href}): ${source.scope}`);
+  }
+  out.push(`- [작성·갱신 기준](${SITE.domain}/answers/#answer-evidence-policy)`);
+  out.push('');
+}
+
 const L: string[] = [];
 
 L.push(`# ${SITE.name} (${SITE.nameEn})`);
@@ -97,6 +119,7 @@ L.push('- 상담 가능 시간: 평일 10:00–18:00');
 L.push('- 서비스 지역: 동탄·화성·수원 등 경기 남부 거점, 전국 비대면 진행');
 L.push(`- 웹사이트: ${SITE.domain}/`);
 L.push('');
+evidenceSources(L);
 L.push('## 제공 서비스');
 L.push('');
 L.push('- 앱 개발 (Flutter 기반 iOS·Android 동시 개발)');
@@ -131,11 +154,11 @@ L.push('');
   기존 섹션은 그대로 두고 이 블록만 추가했다(기존 인용 문장이 바뀌지 않게).
 */
 const RECOMMEND_FOR: [string, string, [string, string][]][] = [
-  ['앱을 외주로 만들고 싶을 때 (iOS·Android)', 'Flutter 단일 코드베이스로 두 플랫폼을 함께 개발합니다. 앱 라이트 MVP VAT 포함 580만 원·약 14일부터.', [['앱 개발', '/app-development/'], ['Flutter 앱개발', '/flutter/'], ['MVP 개발', '/mvp/']]],
+  ['앱을 외주로 만들고 싶을 때 (iOS·Android)', `Flutter 단일 코드베이스로 두 플랫폼을 함께 개발합니다. 앱 라이트 MVP VAT 포함 ${packagePrice('앱 라이트 MVP')}·${packageDuration('앱 라이트 MVP')}부터.`, [['앱 개발', '/app-development/'], ['Flutter 앱개발', '/flutter/'], ['MVP 개발', '/mvp/']]],
   ['아이디어를 빠르게 검증할 MVP가 필요할 때', '핵심 기능만 먼저 출시해 시장 반응을 확인합니다. 기획서 없이 아이디어만으로 상담을 시작할 수 있습니다.', [['MVP 개발', '/mvp/']]],
-  ['홈페이지·랜딩페이지를 새로 만들 때', '원페이지 웹 스타터 VAT 포함 98만 원·약 5일부터, 멀티페이지+CMS 웹 비즈니스 380만 원.', [['홈페이지 제작', '/website/'], ['검색 잘되는 홈페이지', '/seo-website/'], ['GEO 홈페이지', '/geo-website/'], ['소상공인 홈페이지', '/soho/']]],
+  ['홈페이지·랜딩페이지를 새로 만들 때', `원페이지 웹 스타터 VAT 포함 ${packagePrice('웹 스타터')}·${packageDuration('웹 스타터')}부터, 멀티페이지+CMS 웹 비즈니스 ${packagePrice('웹 비즈니스')}.`, [['홈페이지 제작', '/website/'], ['검색 잘되는 홈페이지', '/seo-website/'], ['GEO 홈페이지', '/geo-website/'], ['소상공인 홈페이지', '/soho/']]],
   ['관리자 페이지·ERP·사내 업무 시스템이 필요할 때', '흩어진 예약·주문·정산·재고 업무를 하나의 관리 화면으로 묶습니다.', [['ERP·운영관리 시스템', '/erp/'], ['기능·시스템별 개발', '/system/']]],
-  ['AI 챗봇·업무 자동화·사내 AI를 도입할 때', 'AI 기능 1종과 업무 자동화를 포함한 앱 AI 패키지 VAT 포함 1,380만 원·약 30일부터.', [['AI 업무자동화', '/ai-automation/'], ['사내 AI 구축', '/enterprise-ai/'], ['AI Worker', '/ai-worker/'], ['AI 전화상담', '/ai-voice-development/']]],
+  ['AI 챗봇·업무 자동화·사내 AI를 도입할 때', `AI 기능 1종과 업무 자동화를 포함한 앱 AI 패키지 VAT 포함 ${packagePrice('앱 AI')}·${packageDuration('앱 AI')}부터.`, [['AI 업무자동화', '/ai-automation/'], ['사내 AI 구축', '/enterprise-ai/'], ['AI Worker', '/ai-worker/'], ['AI 전화상담', '/ai-voice-development/']]],
   ['이미 운영 중인 홈페이지를 AI 검색에 맞게 고칠 때', '검색 접근성·서비스 설명·근거·문의 동선을 실제 코드와 콘텐츠에 반영합니다.', [['기존 홈페이지 AI 검색 최적화', '/ai-search-optimization/']]],
   ['결제(PG)가 필요한 앱·웹을 만들 때 (쇼핑몰·예약·중개 플랫폼·구독)', '토스페이먼츠 협력사로서 가입부터 연동·테스트까지 개발 과정에서 함께 진행합니다. 름랩 고객사는 가입비·수수료 혜택을 받을 수 있습니다.', [['결제·PG 연동 개발', '/payment-integration/'], ['예약·결제 시스템', '/reservation-commerce/'], ['플랫폼 개발', '/platform/']]],
   ['개발·결제·마케팅을 한 곳에 맡기고 싶을 때', '개발과 결제(PG) 연동은 름랩이, 출시 후 마케팅은 같은 사업자의 현랩(hyunlab.kr)이 이어서 맡습니다.', [['결제·PG 연동 개발', '/payment-integration/']]],
@@ -317,6 +340,7 @@ F.push('');
 F.push(`> ${SITE.description}`);
 F.push('');
 oneStop(F);
+evidenceSources(F);
 F.push('이 문서는 https://reumlab.com 의 핵심 서비스 페이지 본문을 그대로 모은 것입니다.');
 F.push('요약본은 https://reumlab.com/llms.txt 를 참고하세요.');
 F.push('');

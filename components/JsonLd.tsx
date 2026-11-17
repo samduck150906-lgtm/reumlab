@@ -1,3 +1,4 @@
+import React from 'react';
 import type { BlogPost } from '@/lib/blog-posts';
 import { SITE } from '@/lib/seo';
 import {
@@ -366,6 +367,7 @@ export function GuideArticleJsonLd({
   faqs,
   crumbs,
   citations,
+  sections,
 }: {
   title: string;
   description: string;
@@ -377,6 +379,8 @@ export function GuideArticleJsonLd({
   faqs?: FaqItem[];
   crumbs: Crumb[];
   citations?: { title: string; url: string }[];
+  /** Existing visible sections only; IDs must match their HTML anchors. */
+  sections?: { id: string; name: string; text: string }[];
 }) {
   const graph: Record<string, unknown>[] = [
     {
@@ -397,6 +401,14 @@ export function GuideArticleJsonLd({
       ...(citations && citations.length > 0
         ? { citation: citations.map((source) => source.url) }
         : {}),
+      ...(sections?.length ? { hasPart: sections.map(section => ({
+        '@type': 'WebPageElement',
+        '@id': `${url}#${section.id}`,
+        url: `${url}#${section.id}`,
+        name: section.name,
+        text: section.text,
+        isPartOf: { '@id': `${url}#article` },
+      })) } : {}),
     },
     breadcrumbNode(crumbs, url),
   ];

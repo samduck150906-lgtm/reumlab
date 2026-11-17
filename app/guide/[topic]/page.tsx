@@ -1,4 +1,5 @@
 import PublicPageReview from '@/components/PublicPageReview';
+import GeoPracticalEvidence from '@/components/GeoPracticalEvidence';
 import type { Metadata } from 'next';
 import Link from '@/components/SiteLink';
 import { notFound } from 'next/navigation';
@@ -66,6 +67,7 @@ export default function GuidePage({ params }: Props) {
         faqs={guide.faqs}
         crumbs={crumbs}
         citations={guide.sources}
+        sections={guide.sections.map((section, i) => ({ id: sectionAnchor(section, i), name: section.h, text: [section.body, ...(section.items ?? [])].join('\n') }))}
       />
       <main>
         <article className="dynamic-page">
@@ -262,6 +264,7 @@ export default function GuidePage({ params }: Props) {
               <Link href="/#pricing" className="btn-outline" data-analytics="cta_guide_pricing">패키지 요금 보기</Link>
             </div>
           </div>
+        <GeoPracticalEvidence path={`/guide/${params.topic}/`} />
         <PublicPageReview path={`/guide/${params.topic}/`} />
         </article>
       </main>

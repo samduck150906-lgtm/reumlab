@@ -69,6 +69,7 @@ export default function ComparePage({ params }: Props) {
         faqs={cmp.faqs}
         crumbs={crumbs}
         citations={cmp.sources}
+        sections={cmp.sections?.map((section, i) => ({ id: `comparison-detail-${i + 1}`, name: section.h, text: [section.body, ...section.items].join('\n') }))}
       />
       <main>
         <article className="dynamic-page">
@@ -116,9 +117,9 @@ export default function ComparePage({ params }: Props) {
             <p className="hub-intro">{cmp.verdict}</p>
           </div>
 
-          {cmp.sections?.map(section => (
+          {cmp.sections?.map((section, i) => (
             <section className="section-inner" style={{ paddingTop: 8 }} key={section.h}>
-              <h2 className="section-title" style={{ fontSize: '1.3rem' }}>{section.h}</h2>
+              <h2 id={`comparison-detail-${i + 1}`} className="section-title" style={{ fontSize: '1.3rem', scrollMarginTop: 80 }}><a href={`#comparison-detail-${i + 1}`}>{section.h}</a></h2>
               <p className="hub-intro">{section.body}</p>
               <ul className="guide-checklist">{section.items.map(item => <li key={item}>{item}</li>)}</ul>
             </section>

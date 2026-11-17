@@ -21,6 +21,20 @@ for (const [pathname, record] of Object.entries(records)) {
   const sections = doc.querySelectorAll('section.public-page-review');
   if (sections.length !== 1) throw new Error('Review count ' + sections.length + ' on ' + pathname);
   const section = sections[0];
+  if (section.querySelector('time')?.getAttribute('datetime') !== (record.reviewedAt ?? '2026-11-11')) throw new Error('Evidence review date changed on ' + pathname);
+  const canonical = doc.querySelector('link[rel="canonical"]')?.getAttribute('href');
+  const pageUrl = new URL(pathname, 'https://reumlab.com').href;
+  const noindex = /noindex/i.test(doc.querySelector('meta[name="robots"]')?.getAttribute('content') ?? '');
+  const evidence = section.querySelectorAll('script[type="application/ld+json"]')
+    .map(node => JSON.parse(node.textContent)).find(node => node['@type'] === 'WebPageElement');
+  // A noindex alias keeps its existing preferred canonical. Its fragment still
+  // identifies the HTML actually containing the quote, never a different page.
+  if (!canonical || (!noindex && canonical !== pageUrl) || !evidence || evidence['@id'] !== `${pageUrl}#public-page-review` || section.id !== 'public-page-review') {
+    throw new Error('Missing canonical evidence section on ' + pathname);
+  }
+  if (evidence.name !== record.heading || evidence.hasPart.length !== record.rows.length) {
+    throw new Error('Evidence graph does not describe visible review on ' + pathname);
+  }
   if (normalized(section.querySelector('h2')?.textContent ?? '') !== normalized(record.heading)) {
     throw new Error('Missing review title on ' + pathname);
   }
@@ -30,9 +44,22 @@ for (const [pathname, record] of Object.entries(records)) {
       throw new Error('Missing procedure or evidence on ' + pathname);
     }
     const source = new URL(row.href || pathname, 'https://reumlab.com' + pathname);
+    const parts = evidence.hasPart.filter(part => part.name === row.label);
+    if (parts.length !== 1 || parts[0].citation !== source.href ||
+        normalized(parts[0].text) !== normalized(row.basis + row.check)) {
+      throw new Error('Evidence text or source mismatch on ' + pathname + ': ' + row.label);
+    }
+    const partUrl = new URL(parts[0]['@id']);
+    const partId = decodeURIComponent(partUrl.hash.slice(1));
+    const renderedPart = section.querySelectorAll('[id]').find(node => node.id === partId);
+    if (partUrl.origin + partUrl.pathname !== new URL(pageUrl).origin + new URL(pageUrl).pathname ||
+        !renderedPart || !renderedPart.querySelector(`a[href="#${partId}"]`) ||
+        !renderedPart.querySelectorAll('a[href]').some(link => new URL(link.getAttribute('href'), pageUrl).href === source.href)) {
+      throw new Error('Evidence permalink or visible citation missing on ' + pathname);
+    }
     const sourceDoc = documentFor(source.pathname);
     const original = parse((sourceDoc.querySelector('main') ?? sourceDoc.querySelector('body')).innerHTML);
-    original.querySelectorAll('.public-page-review,script,style,nav,footer').forEach(node => node.remove());
+    original.querySelectorAll('.public-page-review,.geo-practical-evidence,script,style,nav,footer').forEach(node => node.remove());
     if (!normalized(original.textContent).includes(normalized(row.basis))) {
       throw new Error('Quoted basis absent outside new review on ' + pathname + ': ' + row.basis);
     }
@@ -44,9 +71,9 @@ for (const [pathname, record] of Object.entries(records)) {
       throw new Error('Missing anchor ' + target.href + ' on ' + pathname);
     }
   }
-  results.push({ path: pathname, rendered: true, rows: record.rows.length, source_facts_verified: true, links_verified: true });
+  results.push({ path: pathname, rendered: true, rows: record.rows.length, source_facts_verified: true, links_verified: true, canonical_evidence_graph_verified: true });
 }
-if (results.length !== 2842) throw new Error('Unexpected scope count: ' + results.length);
+if (results.length !== 2844) throw new Error('Unexpected scope count: ' + results.length);
 fs.mkdirSync('docs/search-audit', { recursive: true });
 fs.writeFileSync('docs/search-audit/remaining-public-review-verification.json', JSON.stringify({
   checked_at: new Date().toISOString(),
