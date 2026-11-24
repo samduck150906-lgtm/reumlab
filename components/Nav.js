@@ -4,6 +4,7 @@ import Link from '@/components/SiteLink';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import serviceMenu from '../content/service-menu.json';
+import languagePairs from '../content/language-pairs.json';
 
 // 정적 HTML 로 덮어써지는 경로 판단과 prefetch 정책은 components/SiteLink 가 맡는다.
 // 예전에는 여기서 별도 Set 을 들고 prefetch 를 켜고 껐는데, Next 라우트 쪽 메뉴 항목은
@@ -12,6 +13,7 @@ import serviceMenu from '../content/service-menu.json';
 
 export default function Nav({ site }) {
   const pathname = usePathname();
+  const englishHref = languagePairs[(pathname || '/').replace(/\/?$/, '/')] || '/en/';
   const isEnternal = pathname === '/enternal-ai' || pathname?.startsWith('/enternal-ai/');
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -111,6 +113,7 @@ export default function Nav({ site }) {
                   <Link href={l.href} data-analytics={l.a}>{l.label}</Link>
                 </li>
               ))}
+              <li><a href={englishHref} hrefLang="en" lang="en">English</a></li>
               <li>
                 <a href="tel:01081119370" className="nav-cta" data-analytics="nav_cta_call">
                   📞 전화 상담
@@ -162,6 +165,7 @@ export default function Nav({ site }) {
         <Link href="/#prepare" onClick={closeMobile} data-analytics="nav_m_prepare">준비사항</Link>
         <Link href="/portfolio/" onClick={closeMobile} data-analytics="nav_m_portfolio">개발 사례</Link>
         <Link href="/blog/" onClick={closeMobile} data-analytics="nav_m_blog">블로그</Link>
+        <a href={englishHref} hrefLang="en" lang="en" onClick={closeMobile}>English</a>
         <Link href="/#faq" onClick={closeMobile} data-analytics="nav_m_faq">FAQ</Link>
         <a href="tel:01081119370" className="btn-primary" style={{ fontSize: '15px', padding: '13px 28px' }} onClick={closeMobile} data-analytics="nav_m_cta_call">
           📞 전화 상담

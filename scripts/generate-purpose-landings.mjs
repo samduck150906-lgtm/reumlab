@@ -471,6 +471,7 @@ ${items}
       <a href="#pricing">가격</a>
       <a href="#process">진행 방식</a>
       <a href="#faq">FAQ</a>
+      <a href="/en/" hreflang="en" lang="en">English</a>
     </nav>
     <div class="header__cta">
       <a class="btn btn--ghost" href="tel:01081119370" data-cta="call" data-cta-loc="header">010-8111-9370</a>
@@ -490,6 +491,7 @@ ${macc}
   <a href="#pricing">가격</a>
   <a href="#process">진행 방식</a>
   <a href="#faq">FAQ</a>
+  <a href="/en/" hreflang="en" lang="en">English</a>
   <a class="btn btn--kakao btn--block" href="https://pf.kakao.com/_xkxjQxgn" target="_blank" rel="noopener noreferrer" data-cta="kakao" data-cta-loc="mobile-nav" style="margin-top:14px;">${KAKAO_SVG}카카오톡 상담</a>
   <a class="btn btn--primary btn--block" href="#contact">프로젝트 상담하기</a>
 </div>`;

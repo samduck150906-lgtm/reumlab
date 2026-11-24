@@ -16,6 +16,7 @@
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { SITE, PAGE_SEO_MAP, REDIRECTED_PILLAR_SLUGS, NOINDEX_PILLAR_SLUGS } from '../lib/seo';
+import { ENGLISH_INDEXABLE, englishUrl, englishTextExport } from '../lib/english';
 import { GUIDES, guideCanonical, guideDecision } from '../lib/guides';
 import { COMPARES, compareCanonical, compareDecision } from '../lib/compare';
 import { gitLastModified } from '../lib/lastmod';
@@ -318,7 +319,8 @@ L.push(`- 최종 갱신: ${gitLastModified('lib/seo.ts').toISOString().slice(0, 
 L.push('');
 
 const txt = L.join('\n');
-writeFileSync(join(OUT, 'llms.txt'), txt);
+const englishIndex = '\n## English services and project inquiries\n\n'+ENGLISH_INDEXABLE.map(p=>`- [${p.label}](${englishUrl(p.path)}): ${p.answer}`).join('\n')+'\n\nEnglish text overview: '+englishUrl('/en/llms.txt')+'\n';
+writeFileSync(join(OUT, 'llms.txt'), txt+englishIndex);
 console.log(`✓ llms.txt generated: ${txt.length} bytes → out/llms.txt`);
 
 /* ────────────────────────────────────────────────────────────────────────────
@@ -450,5 +452,5 @@ F.push(`- 최종 갱신: ${gitLastModified('lib/seo.ts').toISOString().slice(0, 
 F.push('');
 
 const full = F.join('\n');
-writeFileSync(join(OUT, 'llms-full.txt'), full);
+writeFileSync(join(OUT, 'llms-full.txt'), full+'\n'+englishTextExport());
 console.log(`✓ llms-full.txt generated: ${full.length} bytes → out/llms-full.txt`);

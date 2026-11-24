@@ -21,9 +21,11 @@ import { GENERATED_AUTOMATION_DOMAINS, automationCanonical, automationDecision }
 import { SEO_WEBSITE_GUIDES, SEO_WEBSITE_PAGES } from '@/lib/seo-website';
 import { ANSWER_TOPICS, ANSWERS_HUB, answerCanonical, answerDecision } from '@/lib/answers';
 import { gitLastModified } from '../lib/lastmod';
+import { ENGLISH_INDEXABLE, englishUrl } from '../lib/english';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
+  for (const page of ENGLISH_INDEXABLE) out.push({ url: englishUrl(page.path), lastModified: gitLastModified('lib/english.ts'), changeFrequency: 'monthly', priority: page.path === '/en/' ? 0.85 : 0.7 });
 
   // lastmod는 빌드시각(new Date())이 아니라 각 콘텐츠 소스의 git 커밋 날짜를 쓴다.
   // → 같은 커밋을 재배포해도 lastmod가 그대로라 크롤 예산 churn이 없다(§4-1).

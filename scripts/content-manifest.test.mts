@@ -15,6 +15,13 @@ test('content and destination changes refresh editorial lastmod', () => {
   assert.notEqual(original,contentFingerprint(page('<p>권한을 확인합니다.</p><a href="/app/">비용</a>')));
 });
 
+test('new reciprocal language mappings are meaningful changes; absence preserves old hashes', () => {
+  const original=page('<p>Unchanged content</p>');
+  const alternate=(href:string)=>original.replace('</head>',`<link rel="alternate" hreflang="en" href="${href}"></head>`);
+  assert.notEqual(contentFingerprint(original),contentFingerprint(alternate('https://reumlab.com/en/')));
+  assert.notEqual(contentFingerprint(alternate('https://reumlab.com/en/')),contentFingerprint(alternate('https://reumlab.com/en/app-development/')));
+});
+
 test('final child dates replace stale sitemap-index dates and remain stable on repeat', () => {
   const dir = mkdtempSync(join(tmpdir(), 'reumlab-sitemap-dates-'));
   try {
