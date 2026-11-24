@@ -55,6 +55,7 @@ if (!entries.length) {
  * 이름은 서치콘솔 목록에서 사람이 바로 읽을 수 있게 짓는다.
  */
 const GROUPS = [
+  { name: 'english', label: 'English services and resources', test: (p) => p.startsWith('/en/') },
   { name: 'cost', label: '업종별 비용·견적', test: (p) => p.startsWith('/cost/') && p !== '/cost/' },
   { name: 'industries', label: '업종별 앱개발', test: (p) => p.startsWith('/app/') && p !== '/app/' },
   { name: 'website', label: '업종별 홈페이지 제작', test: (p) => p.startsWith('/website/') && p !== '/website/' },

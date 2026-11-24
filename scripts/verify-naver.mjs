@@ -136,7 +136,7 @@ for (const p of indexed) {
   for (const m of p.html.matchAll(/"@type":"WebSite","@id":"[^"]*","url":"[^"]*","name":"([^"]*)"/g)) schemaWebsiteNames.add(m[1]);
   for (const m of p.html.matchAll(/"@type":"Organization","@id":"[^"]*","name":"([^"]*)"/g)) schemaOrgNames.add(m[1]);
   const t = (p.html.match(/<title>([^<]*)<\/title>/) || [, ''])[1];
-  if (t && !t.includes(BRAND)) {
+  if (t && !t.includes(p.pathname.startsWith('/en/') ? 'REUMLAB' : BRAND)) {
     noBrandTitle++;
     add(warn, 'sitename', `title 에 대표 상호("${BRAND}")가 없다: ${p.pathname} — ${t}`);
   }
@@ -173,8 +173,10 @@ for (const p of indexed) {
   const missing = OG_REQUIRED.filter((k) => !p.html.includes(`property="${k}"`));
   if (missing.length) { ogMissing++; add(fail, 'og', `${missing.join(', ')} 누락: ${p.pathname}`); }
   const locale = p.html.match(/<meta property="og:locale" content="([^"]*)"/);
-  if (locale && locale[1] !== 'ko_KR') add(fail, 'og', `og:locale 이 ko_KR 이 아님(${locale[1]}): ${p.pathname}`);
-  if (!/<html lang="ko"/.test(p.html)) { badLang++; add(fail, 'lang', `lang="ko" 아님: ${p.pathname}`); }
+  const language = p.pathname.startsWith('/en/') ? 'en' : 'ko';
+  const expectedLocale = language === 'en' ? 'en_US' : 'ko_KR';
+  if (locale && locale[1] !== expectedLocale) add(fail, 'og', `og:locale 이 ${expectedLocale} 이 아님(${locale[1]}): ${p.pathname}`);
+  if (!p.html.includes(`<html lang="${language}"`)) { badLang++; add(fail, 'lang', `lang="${language}" 아님: ${p.pathname}`); }
 }
 
 // ─── 7. RSS

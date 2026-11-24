@@ -19,6 +19,7 @@ export function contentFingerprint(html) {
   const schema = document.querySelectorAll('script[type="application/ld+json"]').map(n => {
     try { return JSON.parse(n.textContent); } catch { return n.textContent; }
   });
+  const languages = document.querySelectorAll('link[rel="alternate"][hreflang]').map(n => [n.getAttribute('hreflang'), n.getAttribute('href')]).sort();
   return crypto.createHash('sha256').update(JSON.stringify({
     title: clean(document.querySelector('title')?.textContent),
     description: document.querySelector('meta[name="description"]')?.getAttribute('content') ?? '',
@@ -27,6 +28,7 @@ export function contentFingerprint(html) {
     body: clean(content.textContent),
     links: content.querySelectorAll('a[href]').map(n => [clean(n.textContent), n.getAttribute('href')]),
     schema,
+    ...(languages.length ? { languages } : {}),
   })).digest('hex');
 }
 

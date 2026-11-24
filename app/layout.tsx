@@ -81,12 +81,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href={`${SITE.domain}/feed.xml`}
         />
         {/*
-          hreflang 없음 — 이 사이트는 한국어 단일 언어다.
-          이전에는 여기서 모든 페이지에 `hreflang="ko" href="https://reumlab.com/"` 를 뿌렸는데,
-          그러면 /app-development/ 같은 페이지가 "내 한국어 버전은 홈이다" 라고 말하는 셈이라
-          1,400여 페이지에서 잘못된 신호가 나갔다. hreflang 은 자기참조 + 실제 대체 언어판이
-          있을 때만 의미가 있다. 영문 title 페이지들도 lang="ko" 의 한국어 본문이라 별도
-          언어판이 아니다. 실제 /en/ 같은 구조가 생기면 그때 페이지별 자기참조로 선언할 것.
+          이 레이아웃은 한국어 페이지 전용이다. /en/ 문서는 generate-english.mts가
+          별도 lang="en" HTML로 출력하며, 실제 번역 대응 페이지에만 양방향 hreflang을 넣는다.
+          모든 한국어 URL을 영문 홈과 연결하는 전역 hreflang은 사용하지 않는다.
         */}
       </head>
       <body>
